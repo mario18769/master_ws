@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="Estun">
+    <xacro:arg name="initial_positions_file" default="initial_positions.yaml" />
+
+    <!-- Import Estun urdf file -->
+    <xacro:include filename="$(find Estun_description)/urdf/Estun.xacro" />
+
+    <!-- Import control_xacro -->
+    <xacro:include filename="Estun.ros2_control.xacro" />
+
+
+    <xacro:Estun_ros2_control name="GazeboSimSystem" initial_positions_file="$(arg initial_positions_file)"/>
+
+
+
+
+</robot>

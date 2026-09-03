@@ -1,0 +1,149 @@
+[0.202s] Invoking command in '/home/mario/master_ws/build/estun_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/mario/master_ws/src/estun_control -DCMAKE_INSTALL_PREFIX=/home/mario/master_ws/install/estun_control
+[0.285s] -- The C compiler identification is GNU 13.3.0
+[0.337s] -- The CXX compiler identification is GNU 13.3.0
+[0.356s] -- Detecting C compiler ABI info
+[0.445s] -- Detecting C compiler ABI info - done
+[0.453s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.454s] -- Detecting C compile features
+[0.454s] -- Detecting C compile features - done
+[0.463s] -- Detecting CXX compiler ABI info
+[0.555s] -- Detecting CXX compiler ABI info - done
+[0.563s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.563s] -- Detecting CXX compile features
+[0.564s] -- Detecting CXX compile features - done
+[0.575s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.714s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.842s] -- Found rclcpp: 28.1.21 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.911s] -- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.933s] -- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.958s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.985s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.091s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.097s] -- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.203s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[1.224s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[1.245s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.358s] -- Found moveit: 2.12.4 (/opt/ros/jazzy/share/moveit/cmake)
+[1.362s] -- Found std_msgs: 5.3.8 (/opt/ros/jazzy/share/std_msgs/cmake)
+[1.381s] -- Found moveit_msgs: 2.6.0 (/opt/ros/jazzy/share/moveit_msgs/cmake)
+[1.662s] -- Found moveit_ros_planning_interface: 2.12.4 (/opt/ros/jazzy/share/moveit_ros_planning_interface/cmake)
+[1.800s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: date_time filesystem program_options system thread 
+[1.834s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+[1.927s] -- Found parameter_traits: 0.7.3 (/opt/ros/jazzy/share/parameter_traits/cmake)
+[1.948s] [0mCMake Deprecation Warning at /opt/ros/jazzy/share/tl_expected/cmake/tl_expectedConfig.cmake:37 (message):
+[1.949s]   Package 'tl_expected' is deprecated (This package will be removed in ROS 2
+[1.949s]   Lyrical Luth.
+[1.949s] 
+[1.949s]         Use tl/expected.hpp from libexpected-dev,
+[1.949s]         or rcpputils/tl_expected/expected.hpp if the system header is not available)
+[1.949s] Call Stack (most recent call first):
+[1.949s]   /opt/ros/jazzy/share/parameter_traits/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[1.949s]   /opt/ros/jazzy/share/parameter_traits/cmake/parameter_traitsConfig.cmake:41 (include)
+[1.949s]   /opt/ros/jazzy/share/generate_parameter_library/cmake/generate_parameter_library-extras.cmake:30 (find_package)
+[1.949s]   /opt/ros/jazzy/share/generate_parameter_library/cmake/generate_parameter_libraryConfig.cmake:41 (include)
+[1.950s]   /opt/ros/jazzy/share/moveit_core/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[1.950s]   /opt/ros/jazzy/share/moveit_core/cmake/moveit_coreConfig.cmake:41 (include)
+[1.950s]   /opt/ros/jazzy/share/moveit_ros_planning_interface/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[1.950s]   /opt/ros/jazzy/share/moveit_ros_planning_interface/cmake/moveit_ros_planning_interfaceConfig.cmake:41 (include)
+[1.950s]   CMakeLists.txt:15 (find_package)
+[1.950s] 
+[1.950s] [0m
+[1.954s] -- Found rclcpp_lifecycle: 28.1.21 (/opt/ros/jazzy/share/rclcpp_lifecycle/cmake)
+[2.089s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[2.089s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[2.305s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread chrono 
+[2.359s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: thread system filesystem regex date_time program_options 
+[2.391s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread 
+[2.436s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: thread 
+[2.443s] -- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[2.548s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.548s] -- Configured cppcheck include dirs: 
+[2.548s] -- Configured cppcheck exclude dirs and/or files: 
+[2.549s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.549s] -- Configured 'flake8' exclude dirs and/or files: 
+[2.550s] -- Added test 'lint_cmake' to check CMake code style
+[2.550s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[2.552s] -- Added test 'uncrustify' to check C / C++ code style
+[2.552s] -- Configured uncrustify additional arguments: 
+[2.553s] -- Added test 'xmllint' to check XML markup files
+[2.554s] -- Configuring done (2.3s)
+[2.590s] -- Generating done (0.0s)
+[2.599s] -- Build files have been written to: /home/mario/master_ws/build/estun_control
+[2.612s] Invoked command in '/home/mario/master_ws/build/estun_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/mario/master_ws/src/estun_control -DCMAKE_INSTALL_PREFIX=/home/mario/master_ws/install/estun_control
+[2.614s] Invoking command in '/home/mario/master_ws/build/estun_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mario/master_ws/build/estun_control -- -j12 -l12
+[2.669s] [ 25%] [32mBuilding CXX object CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o[0m
+[2.671s] [ 50%] [32mBuilding CXX object CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o[0m
+[3.314s] In file included from [01m[K/home/mario/master_ws/src/estun_control/src/cartesian_planner.cpp:1[m[K:
+[3.314s] [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:51:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+[3.314s]    51 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+[3.314s]       |                                                                             [01;36m[K^[m[K
+[4.267s] In file included from [01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:1[m[K:
+[4.267s] [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:51:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+[4.267s]    51 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+[4.267s]       |                                                                             [01;36m[K^[m[K
+[6.172s] In file included from [01m[K/home/mario/master_ws/src/estun_control/src/cartesian_planner.cpp:2[m[K:
+[6.172s] [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+[6.172s]    50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+[6.173s]       |                                                                             [01;36m[K^[m[K
+[6.215s] [01m[K/home/mario/master_ws/src/estun_control/src/cartesian_planner.cpp:[m[K In member function ‘[01m[Kvoid CartesianPlanner::[01;32m[Kplan[m[K()[m[K’:
+[6.215s] [01m[K/home/mario/master_ws/src/estun_control/src/cartesian_planner.cpp:82:54:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdouble moveit::planning_interface::MoveGroupInterface::[01;32m[KcomputeCartesianPath[m[K(const std::vector<geometry_msgs::msg::Pose_<std::allocator<void> > >&, double, double, moveit_msgs::msg::RobotTrajectory&, bool, moveit_msgs::msg::MoveItErrorCodes*)[m[K’ is deprecated: Drop jump_threshold [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+[6.215s]    82 |     double fraction = [01;35m[Kmove_group.computeCartesianPath(waypoints, step, jump_th, traj)[m[K; //Funktion gibt werte zwischen 0 und 1 zurück oder -1 für failed
+[6.215s]       |                       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[6.215s] In file included from [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:52[m[K:
+[6.216s] [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.hpp:765:3:[m[K [01;36m[Knote: [m[Kdeclared here
+[6.216s]   765 |   [01;36m[KcomputeCartesianPath[m[K(const std::vector<geometry_msgs::msg::Pose>& waypoints, double eef_step,
+[6.216s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[6.216s] In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[6.216s]                  from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/kinematics_base/kinematics_base.hpp:42[m[K,
+[6.216s]                  from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_model/joint_model_group.hpp:42[m[K,
+[6.216s]                  from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_model/robot_model.hpp:45[m[K,
+[6.216s]                  from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_state/robot_state.hpp:40[m[K,
+[6.216s]                  from [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.hpp:41[m[K:
+[6.216s] [01m[K/home/mario/master_ws/src/estun_control/src/cartesian_planner.cpp:87:61:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 5 has type ‘[01m[Kdouble[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+[6.217s]    87 |         RCLCPP_ERROR(rclcpp::get_logger("moveit_executor"), [01;35m[K"Trajectory calculation failed | fraction: %d"[m[K, [32m[Kfraction[m[K);
+[6.217s]       |                                                             [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K  [32m[K~~~~~~~~[m[K
+[6.217s]       |                                                                                                             [32m[K|[m[K
+[6.217s]       |                                                                                                             [32m[Kdouble[m[K
+[6.217s] [01m[K/home/mario/master_ws/src/estun_control/src/cartesian_planner.cpp:87:105:[m[K [01;36m[Knote: [m[Kformat string is defined here
+[6.217s]    87 | cpp::get_logger("moveit_executor"), "Trajectory calculation failed | fraction: [01;36m[K%d[m[K", fraction);
+[6.217s]       |                                                                                [01;36m[K~^[m[K
+[6.217s]       |                                                                                 [01;36m[K|[m[K
+[6.217s]       |                                                                                 [01;36m[Kint[m[K
+[6.217s]       |                                                                                [32m[K%f[m[K
+[7.092s] In file included from [01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:2[m[K:
+[7.092s] [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+[7.092s]    50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+[7.092s]       |                                                                             [01;36m[K^[m[K
+[8.460s] [ 75%] [32m[1mLinking CXX executable cartesian_planner[0m
+[8.789s] [ 75%] Built target cartesian_planner
+[10.812s] [100%] [32m[1mLinking CXX executable obstacle_planner[0m
+[11.152s] [100%] Built target obstacle_planner
+[11.164s] Invoked command in '/home/mario/master_ws/build/estun_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mario/master_ws/build/estun_control -- -j12 -l12
+[11.165s] Invoking command in '/home/mario/master_ws/build/estun_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/mario/master_ws/build/estun_control
+[11.173s] -- Install configuration: ""
+[11.173s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/launch
+[11.173s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/launch/estun_obstacle_planner.launch.py
+[11.173s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/launch/estun_cartesian.launch.py
+[11.173s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/meshes
+[11.174s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/meshes/arm_01_1.stl
+[11.175s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/meshes/test_part.stl
+[11.175s] -- Installing: /home/mario/master_ws/install/estun_control/lib/estun_control/cartesian_planner
+[11.176s] -- Set non-toolchain portion of runtime path of "/home/mario/master_ws/install/estun_control/lib/estun_control/cartesian_planner" to ""
+[11.176s] -- Installing: /home/mario/master_ws/install/estun_control/lib/estun_control/obstacle_planner
+[11.177s] -- Set non-toolchain portion of runtime path of "/home/mario/master_ws/install/estun_control/lib/estun_control/obstacle_planner" to ""
+[11.177s] -- Installing: /home/mario/master_ws/install/estun_control/share/ament_index/resource_index/package_run_dependencies/estun_control
+[11.177s] -- Installing: /home/mario/master_ws/install/estun_control/share/ament_index/resource_index/parent_prefix_path/estun_control
+[11.178s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/environment/ament_prefix_path.sh
+[11.178s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/environment/ament_prefix_path.dsv
+[11.178s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/environment/path.sh
+[11.178s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/environment/path.dsv
+[11.178s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/local_setup.bash
+[11.178s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/local_setup.sh
+[11.178s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/local_setup.zsh
+[11.179s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/local_setup.dsv
+[11.179s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/package.dsv
+[11.179s] -- Installing: /home/mario/master_ws/install/estun_control/share/ament_index/resource_index/packages/estun_control
+[11.179s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/cmake/estun_controlConfig.cmake
+[11.179s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/cmake/estun_controlConfig-version.cmake
+[11.179s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/package.xml
+[11.181s] Invoked command in '/home/mario/master_ws/build/estun_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/mario/master_ws/build/estun_control

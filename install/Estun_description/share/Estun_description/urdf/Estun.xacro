@@ -1,0 +1,210 @@
+<?xml version="1.0" ?>
+<robot name="Estun" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find Estun_description)/urdf/materials.xacro" />
+
+<link name="world"/>
+
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.0013472855661161162 -1.0577277745136923e-05 0.03886132162128477" rpy="0 0 0"/>
+    <mass value="21.614236153672103"/>
+    <inertia ixx="0.072205" iyy="0.074559" izz="0.123178" ixy="-2e-06" iyz="-7e-06" ixz="-0.000351"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find Estun_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find Estun_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="arm_01_1">
+  <inertial>
+    <origin xyz="-0.02378172683529466 -1.1054803518793094e-08 0.10352562510075508" rpy="0 0 0"/>
+    <mass value="15.73672693607749"/>
+    <inertia ixx="0.077317" iyy="0.092749" izz="0.081729" ixy="-0.0" iyz="-0.0" ixz="0.010977"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 -0.0 -0.09" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find Estun_description)/meshes/arm_01_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 -0.0 -0.09" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find Estun_description)/meshes/arm_01_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="endeffector_1">
+  <inertial>
+    <origin xyz="-0.044882201979311365 -0.00010568566826330824 0.00016677342766846515" rpy="0 0 0"/>
+    <mass value="0.8198627657853613"/>
+    <inertia ixx="0.001305" iyy="0.001161" izz="0.001107" ixy="-0.0" iyz="-2e-06" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.3121 -7.9e-05 -1.992881" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find Estun_description)/meshes/endeffector_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.3121 -7.9e-05 -1.992881" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find Estun_description)/meshes/endeffector_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="arm_02_1">
+  <inertial>
+    <origin xyz="-0.11695624490678855 5.788997855261588e-08 0.36942776917383124" rpy="0 0 0"/>
+    <mass value="52.07341786323811"/>
+    <inertia ixx="4.941181" iyy="4.958153" izz="0.183631" ixy="-0.0" iyz="2e-06" ixz="0.06505"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.129 -0.0 -0.2158" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find Estun_description)/meshes/arm_02_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.129 -0.0 -0.2158" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find Estun_description)/meshes/arm_02_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="arm_03_1">
+  <inertial>
+    <origin xyz="0.08324122222369368 -1.4103653363434126e-05 0.298068527338065" rpy="0 0 0"/>
+    <mass value="24.194349073239565"/>
+    <inertia ixx="1.803357" iyy="1.807937" izz="0.050403" ixy="4e-06" iyz="-0.000102" ixz="-0.031373"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.1548 -0.0 -1.0658" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find Estun_description)/meshes/arm_03_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.1548 -0.0 -1.0658" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find Estun_description)/meshes/arm_03_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="arm_04_1">
+  <inertial>
+    <origin xyz="-0.05657709975682629 -9.149693082629364e-06 0.019067696397404355" rpy="0 0 0"/>
+    <mass value="2.7596671278892546"/>
+    <inertia ixx="0.004817" iyy="0.005208" izz="0.003991" ixy="0.0" iyz="0.0" ixz="0.00055"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.1498 -7.9e-05 -1.830581" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find Estun_description)/meshes/arm_04_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.1498 -7.9e-05 -1.830581" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find Estun_description)/meshes/arm_04_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="arm_05_1">
+  <inertial>
+    <origin xyz="-0.019032089377892664 9.243600161924518e-06 0.05658214968169051" rpy="0 0 0"/>
+    <mass value="2.7608644479000994"/>
+    <inertia ixx="0.003951" iyy="0.005263" izz="0.004915" ixy="0.0" iyz="0.0" ixz="0.000557"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.2143 -7.9e-05 -1.928381" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find Estun_description)/meshes/arm_05_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.2143 -7.9e-05 -1.928381" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find Estun_description)/meshes/arm_05_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Umdrehung 1" type="continuous">
+  <origin xyz="0.0 0.0 0.09" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="arm_01_1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+  <limit effort="1000.0" lower="-3.14" upper="3.14" velocity="5"/>
+</joint>
+
+<joint name="Umdrehung 2" type="continuous">
+  <origin xyz="-0.129 0.0 0.1258" rpy="0 0 0"/>
+  <parent link="arm_01_1"/>
+  <child link="arm_02_1"/>
+  <axis xyz="1.0 -0.0 -0.0"/>
+  <limit effort="1000.0" lower="-3.14" upper="3.14" velocity="5"/>
+</joint>
+
+<joint name="Umdrehung 3" type="continuous">
+  <origin xyz="-0.0258 0.0 0.85" rpy="0 0 0"/>
+  <parent link="arm_02_1"/>
+  <child link="arm_03_1"/>
+  <axis xyz="-1.0 -0.0 0.0"/>
+  <limit effort="1000.0" lower="-3.14" upper="3.14" velocity="10.0"/>
+</joint>
+
+<joint name="Umdrehung 4" type="continuous">
+  <origin xyz="0.005 7.9e-05 0.764781" rpy="0 0 0"/>
+  <parent link="arm_03_1"/>
+  <child link="arm_04_1"/>
+  <axis xyz="1.0 -0.0 -0.0"/>
+  <limit effort="1000.0" lower="-3.14" upper="3.14" velocity="10.0"/>
+</joint>
+
+<joint name="Umdrehung 5" type="continuous">
+  <origin xyz="-0.0645 0.0 0.0978" rpy="0 0 0"/>
+  <parent link="arm_04_1"/>
+  <child link="arm_05_1"/>
+  <axis xyz="0.0 -0.0 1.0"/>
+  <limit effort="1000.0" lower="-3.14" upper="3.14" velocity="10.0"/>
+</joint>
+
+<joint name="Umdrehung 6" type="continuous">
+  <origin xyz="-0.0978 0.0 0.0645" rpy="0 0 0"/>
+  <parent link="arm_05_1"/>
+  <child link="endeffector_1"/>
+  <axis xyz="-1.0 0.0 -0.0"/>
+  <limit effort="1000.0" lower="-3.14" upper="3.14" velocity="10.0"/>
+</joint>
+
+<joint name="world_base_link" type="fixed">
+  <origin xyz="0 0 0" rpy="0 0 0"/>
+  <parent link="world"/>
+  <child link="base_link"/>
+  <axis xyz="0 0 0"/>
+</joint>
+
+</robot>

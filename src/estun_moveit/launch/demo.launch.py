@@ -27,7 +27,7 @@ def generate_launch_description():
             ' ',
             PathJoinSubstitution(
                 [FindPackageShare('estun_moveit'),
-                 'config', 'Estun.urdf.xacro']
+                 'urdf', 'estun.urdf.xacro']
             ),
         ]
     )
@@ -37,9 +37,9 @@ def generate_launch_description():
     moveit_config = (
     MoveItConfigsBuilder("Estun", package_name="estun_moveit")
     
-    .robot_description(file_path="config/Estun.urdf.xacro")
+    .robot_description(file_path="urdf/estun.urdf.xacro")
     .robot_description_kinematics(file_path="config/kinematics.yaml")
-    .robot_description_semantic(file_path="config/Estun.srdf")
+    .robot_description_semantic(file_path="urdf/estun.srdf")
     .planning_pipelines(
         pipelines=["ompl", "pilz_industrial_motion_planner"],
         default_planning_pipeline="ompl",
@@ -66,7 +66,7 @@ def generate_launch_description():
     # Get the path to the RViz configuration file
 
     rviz_config = PathJoinSubstitution(
-        [FindPackageShare('Estun_description'), 'config', 'display.rviz'])
+        [FindPackageShare('estun_description'), 'config', 'display.rviz'])
 
     # Launch RViz
     rviz_node = Node(
@@ -99,7 +99,7 @@ def generate_launch_description():
             '-r -v 1 ',
             PathJoinSubstitution([
                 example_pkg_path,
-                'config',
+                'urdf',
                 'custom_world.sdf'
             ])
         ],
@@ -131,13 +131,6 @@ def generate_launch_description():
      output="screen",
  )
 
-#     controller_path = PathJoinSubstitution([FindPackageShare("estun_moveit"), "config"])
-#     control_node = Node(
-#     package="controller_manager",
-#     executable="ros2_control_node",
-#     parameters=[controller_path / "ros2_controllers.yaml"],
-#     output="both",
-# )
 
     #ld.add_action(load_joint_state_broadcaster)
     ld.add_action(run_move_group_node)

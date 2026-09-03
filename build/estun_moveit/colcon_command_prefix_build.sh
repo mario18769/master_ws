@@ -1,2 +1,2 @@
 # generated from colcon_core/shell/template/command_prefix.sh.em
-. "/home/mario/master_ws/install/Estun_description/share/Estun_description/package.sh"
+. "/home/mario/master_ws/install/estun_description/share/estun_description/package.sh"

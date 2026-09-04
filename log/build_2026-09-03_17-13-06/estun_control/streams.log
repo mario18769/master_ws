@@ -1,0 +1,89 @@
+[0.221s] Invoking command in '/home/mario/master_ws/build/estun_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mario/master_ws/install/estun_description:/home/mario/master_ws/install/Estun_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mario/master_ws/build/estun_control -- -j12 -l12
+[0.285s] [ 50%] Built target cartesian_planner
+[0.317s] [ 75%] [32mBuilding CXX object CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o[0m
+[2.169s] In file included from [01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:1[m[K:
+[2.169s] [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:51:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+[2.169s]    51 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+[2.169s]       |                                                                             [01;36m[K^[m[K
+[5.120s] In file included from [01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:2[m[K:
+[5.121s] [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+[5.121s]    50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+[5.121s]       |                                                                             [01;36m[K^[m[K
+[5.963s] In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[5.963s]                  from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/kinematics_base/kinematics_base.hpp:42[m[K,
+[5.963s]                  from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_model/joint_model_group.hpp:42[m[K,
+[5.963s]                  from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_model/robot_model.hpp:45[m[K,
+[5.964s]                  from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_state/robot_state.hpp:40[m[K,
+[5.964s]                  from [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.hpp:41[m[K,
+[5.964s]                  from [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:52[m[K:
+[5.964s] [01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:[m[K In member function ‘[01m[Kvoid ObstaclePlanner::[01;32m[Kobstacle_parser[m[K()[m[K’:
+[5.964s] [01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:244:40:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar*[m[K’, but argument 5 has type ‘[01m[Kconst std::string[m[K’ {aka ‘[01m[Kconst std::__cxx11::basic_string<char>[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+[5.965s]   244 |         RCLCPP_INFO(this->get_logger(),[01;35m[K"Pfad nicht korrekt oder keine valide SDF-File: %s"[m[K, sdfPath);
+[5.965s]       |                                        [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.965s] [01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:244:89:[m[K [01;36m[Knote: [m[Kformat string is defined here
+[5.965s]   244 |         RCLCPP_INFO(this->get_logger(),"Pfad nicht korrekt oder keine valide SDF-File: [01;36m[K%s[m[K", sdfPath);
+[5.966s]       |                                                                                        [01;36m[K~^[m[K
+[5.966s]       |                                                                                         [01;36m[K|[m[K
+[5.966s]       |                                                                                         [01;36m[Kchar*[m[K
+[5.966s] [01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:263:36:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar*[m[K’, but argument 5 has type ‘[01m[Kconst std::string[m[K’ {aka ‘[01m[Kconst std::__cxx11::basic_string<char>[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+[5.966s]   263 |     RCLCPP_INFO(this->get_logger(),[01;35m[K"Found: %s model"[m[K, modelName);
+[5.966s]       |                                    [01;35m[K^~~~~~~~~~~~~~~~~[m[K
+[5.967s] [01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:263:45:[m[K [01;36m[Knote: [m[Kformat string is defined here
+[5.967s]   263 |     RCLCPP_INFO(this->get_logger(),"Found: [01;36m[K%s[m[K model", modelName);
+[5.967s]       |                                            [01;36m[K~^[m[K
+[5.967s]       |                                             [01;36m[K|[m[K
+[5.967s]       |                                             [01;36m[Kchar*[m[K
+[5.968s] [01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:285:36:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar*[m[K’, but argument 5 has type ‘[01m[Ksdf::v14::ElementPtr[m[K’ {aka ‘[01m[Kstd::shared_ptr<sdf::v14::Element>[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+[5.968s]   285 |     RCLCPP_INFO(this->get_logger(),[01;35m[K"Joint: %s, Parent-link: %s, Child-link: %s"[m[K, jointElement,parentLinkName,childLinkName);
+[5.968s]       |                                    [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.968s] [01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:285:45:[m[K [01;36m[Knote: [m[Kformat string is defined here
+[5.968s]   285 |     RCLCPP_INFO(this->get_logger(),"Joint: [01;36m[K%s[m[K, Parent-link: %s, Child-link: %s", jointElement,parentLinkName,childLinkName);
+[5.968s]       |                                            [01;36m[K~^[m[K
+[5.969s]       |                                             [01;36m[K|[m[K
+[5.969s]       |                                             [01;36m[Kchar*[m[K
+[5.969s] [01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:285:36:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar*[m[K’, but argument 6 has type ‘[01m[Kconst std::string[m[K’ {aka ‘[01m[Kconst std::__cxx11::basic_string<char>[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+[5.969s]   285 |     RCLCPP_INFO(this->get_logger(),[01;35m[K"Joint: %s, Parent-link: %s, Child-link: %s"[m[K, jointElement,parentLinkName,childLinkName);
+[5.969s]       |                                    [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.970s] [01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:285:62:[m[K [01;36m[Knote: [m[Kformat string is defined here
+[5.970s]   285 |     RCLCPP_INFO(this->get_logger(),"Joint: %s, Parent-link: [01;36m[K%s[m[K, Child-link: %s", jointElement,parentLinkName,childLinkName);
+[5.970s]       |                                                             [01;36m[K~^[m[K
+[5.970s]       |                                                              [01;36m[K|[m[K
+[5.970s]       |                                                              [01;36m[Kchar*[m[K
+[5.971s] [01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:285:36:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar*[m[K’, but argument 7 has type ‘[01m[Kconst std::string[m[K’ {aka ‘[01m[Kconst std::__cxx11::basic_string<char>[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+[5.971s]   285 |     RCLCPP_INFO(this->get_logger(),[01;35m[K"Joint: %s, Parent-link: %s, Child-link: %s"[m[K, jointElement,parentLinkName,childLinkName);
+[5.971s]       |                                    [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.971s] [01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:285:78:[m[K [01;36m[Knote: [m[Kformat string is defined here
+[5.971s]   285 |     RCLCPP_INFO(this->get_logger(),"Joint: %s, Parent-link: %s, Child-link: [01;36m[K%s[m[K", jointElement,parentLinkName,childLinkName);
+[5.971s]       |                                                                             [01;36m[K~^[m[K
+[5.972s]       |                                                                              [01;36m[K|[m[K
+[5.972s]       |                                                                              [01;36m[Kchar*[m[K
+[9.474s] [100%] [32m[1mLinking CXX executable obstacle_planner[0m
+[9.886s] [100%] Built target obstacle_planner
+[9.904s] Invoked command in '/home/mario/master_ws/build/estun_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mario/master_ws/install/estun_description:/home/mario/master_ws/install/Estun_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mario/master_ws/build/estun_control -- -j12 -l12
+[9.905s] Invoking command in '/home/mario/master_ws/build/estun_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mario/master_ws/install/estun_description:/home/mario/master_ws/install/Estun_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/mario/master_ws/build/estun_control
+[9.913s] -- Install configuration: ""
+[9.913s] -- Up-to-date: /home/mario/master_ws/install/estun_control/share/estun_control/launch
+[9.913s] -- Up-to-date: /home/mario/master_ws/install/estun_control/share/estun_control/launch/estun_obstacle_planner.launch.py
+[9.914s] -- Up-to-date: /home/mario/master_ws/install/estun_control/share/estun_control/launch/estun_cartesian.launch.py
+[9.914s] -- Up-to-date: /home/mario/master_ws/install/estun_control/share/estun_control/meshes
+[9.914s] -- Up-to-date: /home/mario/master_ws/install/estun_control/share/estun_control/meshes/arm_01_1.stl
+[9.914s] -- Up-to-date: /home/mario/master_ws/install/estun_control/share/estun_control/meshes/test_part.stl
+[9.914s] -- Up-to-date: /home/mario/master_ws/install/estun_control/lib/estun_control/cartesian_planner
+[9.914s] -- Installing: /home/mario/master_ws/install/estun_control/lib/estun_control/obstacle_planner
+[9.916s] -- Set non-toolchain portion of runtime path of "/home/mario/master_ws/install/estun_control/lib/estun_control/obstacle_planner" to ""
+[9.916s] -- Up-to-date: /home/mario/master_ws/install/estun_control/share/ament_index/resource_index/package_run_dependencies/estun_control
+[9.916s] -- Up-to-date: /home/mario/master_ws/install/estun_control/share/ament_index/resource_index/parent_prefix_path/estun_control
+[9.917s] -- Up-to-date: /home/mario/master_ws/install/estun_control/share/estun_control/environment/ament_prefix_path.sh
+[9.917s] -- Up-to-date: /home/mario/master_ws/install/estun_control/share/estun_control/environment/ament_prefix_path.dsv
+[9.917s] -- Up-to-date: /home/mario/master_ws/install/estun_control/share/estun_control/environment/path.sh
+[9.917s] -- Up-to-date: /home/mario/master_ws/install/estun_control/share/estun_control/environment/path.dsv
+[9.917s] -- Up-to-date: /home/mario/master_ws/install/estun_control/share/estun_control/local_setup.bash
+[9.917s] -- Up-to-date: /home/mario/master_ws/install/estun_control/share/estun_control/local_setup.sh
+[9.917s] -- Up-to-date: /home/mario/master_ws/install/estun_control/share/estun_control/local_setup.zsh
+[9.917s] -- Up-to-date: /home/mario/master_ws/install/estun_control/share/estun_control/local_setup.dsv
+[9.917s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/package.dsv
+[9.918s] -- Up-to-date: /home/mario/master_ws/install/estun_control/share/ament_index/resource_index/packages/estun_control
+[9.918s] -- Up-to-date: /home/mario/master_ws/install/estun_control/share/estun_control/cmake/estun_controlConfig.cmake
+[9.918s] -- Up-to-date: /home/mario/master_ws/install/estun_control/share/estun_control/cmake/estun_controlConfig-version.cmake
+[9.918s] -- Up-to-date: /home/mario/master_ws/install/estun_control/share/estun_control/package.xml
+[9.919s] Invoked command in '/home/mario/master_ws/build/estun_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mario/master_ws/install/estun_description:/home/mario/master_ws/install/Estun_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/mario/master_ws/build/estun_control

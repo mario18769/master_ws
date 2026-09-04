@@ -18,9 +18,13 @@ find_package(geometry_msgs  REQUIRED )
 find_package(tf2_ros  REQUIRED )
 find_package(tf2  REQUIRED )
 find_package(Boost REQUIRED thread)
+find_package(sdformat14 REQUIRED)
+
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
+
+
 
 add_executable( cartesian_planner src/cartesian_planner.cpp ) 
 ament_target_dependencies(cartesian_planner rclcpp std_msgs moveit_ros_planning_interface)
@@ -37,7 +41,7 @@ geometry_msgs
 tf2_ros
 tf2)
 
-target_link_libraries(obstacle_planner Boost::thread)
+target_link_libraries(obstacle_planner Boost::thread sdformat14::sdformat14)
 
 install(DIRECTORY launch  
   DESTINATION share/${PROJECT_NAME}

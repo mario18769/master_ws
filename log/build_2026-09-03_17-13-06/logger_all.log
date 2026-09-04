@@ -1,0 +1,254 @@
+[0.099s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.100s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x798843df20f0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x798843df1520>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x798843df1520>>, mixin_verb=('build',))
+[0.129s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.129s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.129s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.129s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.129s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.129s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.129s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/mario/master_ws'
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.130s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.130s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.130s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_control) by extensions ['ignore', 'ignore_ament_install']
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_control) by extension 'ignore'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_control) by extension 'ignore_ament_install'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_control) by extensions ['colcon_pkg']
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_control) by extension 'colcon_pkg'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_control) by extensions ['colcon_meta']
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_control) by extension 'colcon_meta'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_control) by extensions ['ros']
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_control) by extension 'ros'
+[0.152s] DEBUG:colcon.colcon_core.package_identification:Package 'src/estun_control' with type 'ros.ament_cmake' and name 'estun_control'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_description) by extensions ['ignore', 'ignore_ament_install']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_description) by extension 'ignore'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_description) by extension 'ignore_ament_install'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_description) by extensions ['colcon_pkg']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_description) by extension 'colcon_pkg'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_description) by extensions ['colcon_meta']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_description) by extension 'colcon_meta'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_description) by extensions ['ros']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_description) by extension 'ros'
+[0.153s] DEBUG:colcon.colcon_core.package_identification:Package 'src/estun_description' with type 'ros.ament_python' and name 'estun_description'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_moveit) by extensions ['ignore', 'ignore_ament_install']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_moveit) by extension 'ignore'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_moveit) by extension 'ignore_ament_install'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_moveit) by extensions ['colcon_pkg']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_moveit) by extension 'colcon_pkg'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_moveit) by extensions ['colcon_meta']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_moveit) by extension 'colcon_meta'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_moveit) by extensions ['ros']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_moveit) by extension 'ros'
+[0.154s] DEBUG:colcon.colcon_core.package_identification:Package 'src/estun_moveit' with type 'ros.ament_cmake' and name 'estun_moveit'
+[0.154s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.154s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.154s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.154s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.154s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.168s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.168s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.169s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 4 installed packages in /home/mario/master_ws/install
+[0.171s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 534 installed packages in /opt/ros/jazzy
+[0.173s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'estun_control' build argument 'cmake_args' from command line to 'None'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'estun_control' build argument 'cmake_target' from command line to 'None'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'estun_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'estun_control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'estun_control' build argument 'cmake_clean_first' from command line to 'False'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'estun_control' build argument 'cmake_force_configure' from command line to 'False'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'estun_control' build argument 'ament_cmake_args' from command line to 'None'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'estun_control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'estun_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.244s] DEBUG:colcon.colcon_core.verb:Building package 'estun_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mario/master_ws/build/estun_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mario/master_ws/install/estun_control', 'merge_install': False, 'path': '/home/mario/master_ws/src/estun_control', 'symlink_install': False, 'test_result_base': None}
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'estun_description' build argument 'cmake_args' from command line to 'None'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'estun_description' build argument 'cmake_target' from command line to 'None'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'estun_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'estun_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'estun_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'estun_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'estun_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'estun_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'estun_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.245s] DEBUG:colcon.colcon_core.verb:Building package 'estun_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mario/master_ws/build/estun_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mario/master_ws/install/estun_description', 'merge_install': False, 'path': '/home/mario/master_ws/src/estun_description', 'symlink_install': False, 'test_result_base': None}
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'estun_moveit' build argument 'cmake_args' from command line to 'None'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'estun_moveit' build argument 'cmake_target' from command line to 'None'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'estun_moveit' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'estun_moveit' build argument 'cmake_clean_cache' from command line to 'False'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'estun_moveit' build argument 'cmake_clean_first' from command line to 'False'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'estun_moveit' build argument 'cmake_force_configure' from command line to 'False'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'estun_moveit' build argument 'ament_cmake_args' from command line to 'None'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'estun_moveit' build argument 'catkin_cmake_args' from command line to 'None'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'estun_moveit' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.245s] DEBUG:colcon.colcon_core.verb:Building package 'estun_moveit' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mario/master_ws/build/estun_moveit', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mario/master_ws/install/estun_moveit', 'merge_install': False, 'path': '/home/mario/master_ws/src/estun_moveit', 'symlink_install': False, 'test_result_base': None}
+[0.245s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.246s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.246s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/mario/master_ws/src/estun_description' with build type 'ament_python'
+[0.246s] Level 1:colcon.colcon_core.shell:create_environment_hook('estun_description', 'ament_prefix_path')
+[0.248s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.248s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mario/master_ws/install/estun_description/share/estun_description/hook/ament_prefix_path.ps1'
+[0.249s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mario/master_ws/install/estun_description/share/estun_description/hook/ament_prefix_path.dsv'
+[0.249s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mario/master_ws/install/estun_description/share/estun_description/hook/ament_prefix_path.sh'
+[0.250s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.250s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.253s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mario/master_ws/src/estun_control' with build type 'ament_cmake'
+[0.254s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mario/master_ws/src/estun_control'
+[0.254s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.254s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.467s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/mario/master_ws/src/estun_description'
+[0.467s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.467s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.474s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mario/master_ws/build/estun_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mario/master_ws/install/estun_description:/home/mario/master_ws/install/Estun_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mario/master_ws/build/estun_control -- -j12 -l12
+[1.119s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: install_egg_info, build_clib, check, install_lib, extract_messages, install, update_catalog, compile_catalog, upload_docs, bdist_dumb, test, build_ext, saveopts, egg_info, alias, symlink_data, bdist_egg, build_scripts, install_scripts, develop, register, install_data, clean, setopt, build_py, build, rotate, sdist, install_headers, editable_wheel, init_catalog, easy_install, upload, dist_info, bdist_rpm, bdist
+[1.121s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mario/master_ws/src/estun_description': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/mario/master_ws/build/estun_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mario/master_ws/install/estun_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/estun_description build --build-base /home/mario/master_ws/build/estun_description/build install --record /home/mario/master_ws/build/estun_description/install.log --install-scripts $base/lib/fusion2urdf_ros2 --single-version-externally-managed install_data
+[1.765s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mario/master_ws/src/estun_description' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/mario/master_ws/build/estun_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mario/master_ws/install/estun_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/estun_description build --build-base /home/mario/master_ws/build/estun_description/build install --record /home/mario/master_ws/build/estun_description/install.log --install-scripts $base/lib/fusion2urdf_ros2 --single-version-externally-managed install_data
+[1.767s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/estun_description' for CMake module files
+[1.768s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/estun_description' for CMake config files
+[1.769s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/estun_description/lib'
+[1.769s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/estun_description/bin'
+[1.769s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/estun_description/lib/pkgconfig/estun_description.pc'
+[1.770s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/estun_description/lib/python3.12/site-packages'
+[1.770s] Level 1:colcon.colcon_core.shell:create_environment_hook('estun_description', 'pythonpath')
+[1.770s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mario/master_ws/install/estun_description/share/estun_description/hook/pythonpath.ps1'
+[1.771s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mario/master_ws/install/estun_description/share/estun_description/hook/pythonpath.dsv'
+[1.771s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mario/master_ws/install/estun_description/share/estun_description/hook/pythonpath.sh'
+[1.772s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/estun_description/bin'
+[1.772s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(estun_description)
+[1.773s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/estun_description/share/estun_description/package.ps1'
+[1.774s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mario/master_ws/install/estun_description/share/estun_description/package.dsv'
+[1.775s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/estun_description/share/estun_description/package.sh'
+[1.776s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/estun_description/share/estun_description/package.bash'
+[1.777s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/estun_description/share/estun_description/package.zsh'
+[1.777s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mario/master_ws/install/estun_description/share/colcon-core/packages/estun_description)
+[1.778s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mario/master_ws/src/estun_moveit' with build type 'ament_cmake'
+[1.778s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mario/master_ws/src/estun_moveit'
+[1.778s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.778s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.791s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mario/master_ws/build/estun_moveit': AMENT_PREFIX_PATH=/home/mario/master_ws/install/estun_description:/home/mario/master_ws/install/estun_moveit:/home/mario/master_ws/install/estun_control:/home/mario/master_ws/install/Estun_description:/opt/ros/jazzy CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mario/master_ws/install/estun_description:/home/mario/master_ws/install/Estun_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mario/master_ws/build/estun_moveit -- -j12 -l12
+[1.836s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mario/master_ws/build/estun_moveit' returned '0': AMENT_PREFIX_PATH=/home/mario/master_ws/install/estun_description:/home/mario/master_ws/install/estun_moveit:/home/mario/master_ws/install/estun_control:/home/mario/master_ws/install/Estun_description:/opt/ros/jazzy CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mario/master_ws/install/estun_description:/home/mario/master_ws/install/Estun_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mario/master_ws/build/estun_moveit -- -j12 -l12
+[1.847s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mario/master_ws/build/estun_moveit': AMENT_PREFIX_PATH=/home/mario/master_ws/install/estun_description:/home/mario/master_ws/install/estun_moveit:/home/mario/master_ws/install/estun_control:/home/mario/master_ws/install/Estun_description:/opt/ros/jazzy CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mario/master_ws/install/estun_description:/home/mario/master_ws/install/Estun_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/mario/master_ws/build/estun_moveit
+[1.859s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(estun_moveit)
+[1.860s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/estun_moveit' for CMake module files
+[1.861s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/estun_moveit' for CMake config files
+[1.862s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mario/master_ws/build/estun_moveit' returned '0': AMENT_PREFIX_PATH=/home/mario/master_ws/install/estun_description:/home/mario/master_ws/install/estun_moveit:/home/mario/master_ws/install/estun_control:/home/mario/master_ws/install/Estun_description:/opt/ros/jazzy CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mario/master_ws/install/estun_description:/home/mario/master_ws/install/Estun_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/mario/master_ws/build/estun_moveit
+[1.862s] Level 1:colcon.colcon_core.shell:create_environment_hook('estun_moveit', 'cmake_prefix_path')
+[1.862s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mario/master_ws/install/estun_moveit/share/estun_moveit/hook/cmake_prefix_path.ps1'
+[1.862s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mario/master_ws/install/estun_moveit/share/estun_moveit/hook/cmake_prefix_path.dsv'
+[1.863s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mario/master_ws/install/estun_moveit/share/estun_moveit/hook/cmake_prefix_path.sh'
+[1.863s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/estun_moveit/bin'
+[1.863s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/estun_moveit/lib/pkgconfig/estun_moveit.pc'
+[1.863s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/estun_moveit/lib/python3.12/site-packages'
+[1.864s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/estun_moveit/bin'
+[1.864s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/estun_moveit/share/estun_moveit/package.ps1'
+[1.864s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mario/master_ws/install/estun_moveit/share/estun_moveit/package.dsv'
+[1.865s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/estun_moveit/share/estun_moveit/package.sh'
+[1.865s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/estun_moveit/share/estun_moveit/package.bash'
+[1.865s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/estun_moveit/share/estun_moveit/package.zsh'
+[1.866s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mario/master_ws/install/estun_moveit/share/colcon-core/packages/estun_moveit)
+[1.866s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(estun_moveit)
+[1.866s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/estun_moveit' for CMake module files
+[1.867s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/estun_moveit' for CMake config files
+[1.867s] Level 1:colcon.colcon_core.shell:create_environment_hook('estun_moveit', 'cmake_prefix_path')
+[1.867s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mario/master_ws/install/estun_moveit/share/estun_moveit/hook/cmake_prefix_path.ps1'
+[1.868s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mario/master_ws/install/estun_moveit/share/estun_moveit/hook/cmake_prefix_path.dsv'
+[1.868s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mario/master_ws/install/estun_moveit/share/estun_moveit/hook/cmake_prefix_path.sh'
+[1.868s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/estun_moveit/bin'
+[1.868s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/estun_moveit/lib/pkgconfig/estun_moveit.pc'
+[1.869s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/estun_moveit/lib/python3.12/site-packages'
+[1.869s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/estun_moveit/bin'
+[1.869s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/estun_moveit/share/estun_moveit/package.ps1'
+[1.870s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mario/master_ws/install/estun_moveit/share/estun_moveit/package.dsv'
+[1.870s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/estun_moveit/share/estun_moveit/package.sh'
+[1.870s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/estun_moveit/share/estun_moveit/package.bash'
+[1.871s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/estun_moveit/share/estun_moveit/package.zsh'
+[1.871s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mario/master_ws/install/estun_moveit/share/colcon-core/packages/estun_moveit)
+[10.157s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mario/master_ws/build/estun_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mario/master_ws/install/estun_description:/home/mario/master_ws/install/Estun_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mario/master_ws/build/estun_control -- -j12 -l12
+[10.159s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mario/master_ws/build/estun_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mario/master_ws/install/estun_description:/home/mario/master_ws/install/Estun_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/mario/master_ws/build/estun_control
+[10.172s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(estun_control)
+[10.172s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/estun_control' for CMake module files
+[10.173s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mario/master_ws/build/estun_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mario/master_ws/install/estun_description:/home/mario/master_ws/install/Estun_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/mario/master_ws/build/estun_control
+[10.174s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/estun_control' for CMake config files
+[10.174s] Level 1:colcon.colcon_core.shell:create_environment_hook('estun_control', 'cmake_prefix_path')
+[10.175s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mario/master_ws/install/estun_control/share/estun_control/hook/cmake_prefix_path.ps1'
+[10.175s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mario/master_ws/install/estun_control/share/estun_control/hook/cmake_prefix_path.dsv'
+[10.176s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mario/master_ws/install/estun_control/share/estun_control/hook/cmake_prefix_path.sh'
+[10.177s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/estun_control/lib'
+[10.177s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/estun_control/bin'
+[10.177s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/estun_control/lib/pkgconfig/estun_control.pc'
+[10.178s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/estun_control/lib/python3.12/site-packages'
+[10.178s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/estun_control/bin'
+[10.179s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/estun_control/share/estun_control/package.ps1'
+[10.179s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mario/master_ws/install/estun_control/share/estun_control/package.dsv'
+[10.180s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/estun_control/share/estun_control/package.sh'
+[10.181s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/estun_control/share/estun_control/package.bash'
+[10.181s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/estun_control/share/estun_control/package.zsh'
+[10.182s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mario/master_ws/install/estun_control/share/colcon-core/packages/estun_control)
+[10.183s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(estun_control)
+[10.183s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/estun_control' for CMake module files
+[10.184s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/estun_control' for CMake config files
+[10.184s] Level 1:colcon.colcon_core.shell:create_environment_hook('estun_control', 'cmake_prefix_path')
+[10.184s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mario/master_ws/install/estun_control/share/estun_control/hook/cmake_prefix_path.ps1'
+[10.185s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mario/master_ws/install/estun_control/share/estun_control/hook/cmake_prefix_path.dsv'
+[10.185s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mario/master_ws/install/estun_control/share/estun_control/hook/cmake_prefix_path.sh'
+[10.186s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/estun_control/lib'
+[10.186s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/estun_control/bin'
+[10.186s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/estun_control/lib/pkgconfig/estun_control.pc'
+[10.187s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/estun_control/lib/python3.12/site-packages'
+[10.187s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/estun_control/bin'
+[10.188s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/estun_control/share/estun_control/package.ps1'
+[10.188s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mario/master_ws/install/estun_control/share/estun_control/package.dsv'
+[10.189s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/estun_control/share/estun_control/package.sh'
+[10.190s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/estun_control/share/estun_control/package.bash'
+[10.190s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/estun_control/share/estun_control/package.zsh'
+[10.191s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mario/master_ws/install/estun_control/share/colcon-core/packages/estun_control)
+[10.191s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[10.192s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[10.192s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[10.192s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[10.201s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[10.201s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[10.201s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[10.215s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[10.215s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mario/master_ws/install/local_setup.ps1'
+[10.216s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/mario/master_ws/install/_local_setup_util_ps1.py'
+[10.218s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mario/master_ws/install/setup.ps1'
+[10.220s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mario/master_ws/install/local_setup.sh'
+[10.221s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/mario/master_ws/install/_local_setup_util_sh.py'
+[10.222s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mario/master_ws/install/setup.sh'
+[10.223s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mario/master_ws/install/local_setup.bash'
+[10.224s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mario/master_ws/install/setup.bash'
+[10.226s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mario/master_ws/install/local_setup.zsh'
+[10.227s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mario/master_ws/install/setup.zsh'

@@ -93,6 +93,7 @@ obstacle_planner_EXTERNAL_OBJECTS =
 obstacle_planner: CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o
 obstacle_planner: CMakeFiles/obstacle_planner.dir/build.make
 obstacle_planner: /opt/ros/jazzy/lib/libmoveit_move_group_interface.so.2.12.4
+obstacle_planner: /opt/ros/jazzy/opt/sdformat_vendor/lib/libsdformat14.so.14.9.0
 obstacle_planner: /opt/ros/jazzy/lib/libmoveit_common_planning_interface_objects.so.2.12.4
 obstacle_planner: /opt/ros/jazzy/lib/libmoveit_planning_scene_interface.so.2.12.4
 obstacle_planner: /opt/ros/jazzy/lib/libmoveit_move_group_capabilities_base.so.2.12.4
@@ -363,6 +364,8 @@ obstacle_planner: /opt/ros/jazzy/lib/librosidl_runtime_c.so
 obstacle_planner: /opt/ros/jazzy/lib/librcutils.so
 obstacle_planner: /usr/lib/x86_64-linux-gnu/liborocos-kdl.so
 obstacle_planner: /usr/lib/x86_64-linux-gnu/libcrypto.so
+obstacle_planner: /opt/ros/jazzy/opt/gz_math_vendor/lib/libgz-math7.so.7.6.0
+obstacle_planner: /opt/ros/jazzy/opt/gz_utils_vendor/lib/libgz-utils2.so.2.2.1
 obstacle_planner: CMakeFiles/obstacle_planner.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/mario/master_ws/build/estun_control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable obstacle_planner"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/obstacle_planner.dir/link.txt --verbose=$(VERBOSE)

@@ -152,6 +152,15 @@
   </collision>
 </link>
 
+<link name= "estun_hand">
+  <inertial>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <mass value="0.1"/>
+    <inertia ixx="0.001" iyy="0.001" izz="0.001" ixy="0.0" iyz="0.0" ixz="0.0001"/>
+  </inertial>
+</link>
+
+
 <joint name="Umdrehung 1" type="continuous">
   <origin xyz="0.0 0.0 0.09" rpy="0 0 0"/>
   <parent link="base_link"/>
@@ -201,10 +210,18 @@
 </joint>
 
 <joint name="world_base_link" type="fixed">
-  <origin xyz="0 0 0" rpy="0 0 0"/>
+  <origin xyz="-0.2 0 0" rpy="0 0 0"/>
   <parent link="world"/>
   <child link="base_link"/>
   <axis xyz="0 0 0"/>
+</joint>
+
+<joint name="hand_endeffector_1" type="continuous">
+  <origin xyz="0 0 0" rpy="0 0 0"/>
+  <parent link="endeffector_1"/>
+  <child link="estun_hand"/>
+  <axis xyz="0 0 1"/>
+  <limit effort="1000.0" lower="-3.14" upper="3.14" velocity="10.0"/>
 </joint>
 
 </robot>

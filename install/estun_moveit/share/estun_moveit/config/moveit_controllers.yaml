@@ -9,6 +9,7 @@ moveit_controller_manager: moveit_simple_controller_manager/MoveItSimpleControll
 moveit_simple_controller_manager:
   controller_names:
     - arm_controller
+    - hand_controller
 
   arm_controller:
     action_ns: follow_joint_trajectory
@@ -21,3 +22,11 @@ moveit_simple_controller_manager:
       - Umdrehung 4
       - Umdrehung 5
       - Umdrehung 6
+
+  hand_controller:
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: true
+    joints:
+      - hand_endeffector_1
+

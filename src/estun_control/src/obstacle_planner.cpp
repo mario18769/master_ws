@@ -20,8 +20,8 @@
 #include <sdf/sdf.hh>
 #include <gz/math/Pose3.hh>
 #include <string>
-
-
+#include <tf2/LinearMath/Quaternion.h>
+#include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
 
 
 class ObstaclePlanner : public rclcpp::Node {
@@ -43,9 +43,12 @@ class ObstaclePlanner : public rclcpp::Node {
         std::vector<std::string> model;
         std::vector<std::string> mesh;
         std::vector<std::vector<double>> pos;
+        tf2::Quaternion quaternion;
 
         const std::string sdfPath = "/home/mario/master_ws/src/estun_moveit/urdf/custom_world.sdf";
         int count_objects = 0;
+
+
 
 };
 
@@ -93,7 +96,7 @@ void ObstaclePlanner::plan(){
     target_pose.position.x = t.transform.translation.x; 
     target_pose.position.y = t.transform.translation.y;
     target_pose.position.z = t.transform.translation.z;
-    target_pose.position.x += 0.5;
+    target_pose.position.x += 0.2;
     _move_group->setPoseTarget(target_pose); 
 
     moveit::planning_interface::MoveGroupInterface::Plan my_plan;
@@ -103,7 +106,7 @@ void ObstaclePlanner::plan(){
     RCLCPP_INFO(this->get_logger(),"Plan status: %i", success_plan);
 
     // bool success_move = ( _move_group->move() == moveit::core::MoveItErrorCode::SUCCESS);
-     
+        
     // RCLCPP_INFO(this->get_logger(),"Move status: %i", success_move);
 
     auto execute_result = _move_group->execute(my_plan);
@@ -112,79 +115,89 @@ void ObstaclePlanner::plan(){
 }
 
 void ObstaclePlanner::run() {
-    auto node = rclcpp::Node::make_shared("CartesianPlan");
-    _node = node;
-    std::thread cartesian_plan_t( &ObstaclePlanner::plan, this);
-    rclcpp::spin(node);
+
+    auto node = rclcpp::Node::make_shared("Obstacle_parser");
+     _node = node;
+    //std::thread cartesian_plan_t( &ObstaclePlanner::plan, this);
+
+    obstacle_parser();
+    setup_world();
+    // rclcpp::spin(node);
+
 
     RCLCPP_INFO(this->get_logger(),"Node Run completed");
 }
 
 void ObstaclePlanner::setup_world(){
 
+    RCLCPP_INFO(this->get_logger(),"SetupWorld wird gestartet");
+
     moveit::planning_interface::PlanningSceneInterface planning_scene_interface;
 
+    _move_group = new moveit::planning_interface::MoveGroupInterface(_node, "arm");
 
-    //Obstacle in der Umgebung des Roboters
-    moveit_msgs::msg::CollisionObject obstacle;
-    obstacle.header.frame_id = _move_group->getPlanningFrame();
-    obstacle.id = "table";
-    shape_msgs::msg::SolidPrimitive primitive;
-    primitive.type = primitive.BOX;
-    primitive.dimensions.resize(3);
-    primitive.dimensions[primitive.BOX_X] = 0.1;
-    primitive.dimensions[primitive.BOX_Y] = 1.5;
-    primitive.dimensions[primitive.BOX_Z] = 0.3;
-    geometry_msgs::msg::Pose bp;
-    bp.orientation.w = 0.5;
-    bp.position.x = 0.48;
-    bp.position.y = 0.0;
-    bp.position.z = 0.25;
+    RCLCPP_INFO(this->get_logger(),"SetupWorld wird gestartet");
 
-    obstacle.primitives.push_back(primitive);
-    obstacle.primitive_poses.push_back(bp);
-    obstacle.operation = obstacle.ADD;
-    if (planning_scene_interface.applyCollisionObject(obstacle) == true){
+    // //Obstacle in der Umgebung des Roboters
+    // moveit_msgs::msg::CollisionObject obstacle;
+    // obstacle.header.frame_id = _move_group->getPlanningFrame();
+    // obstacle.id = "table";
+    // shape_msgs::msg::SolidPrimitive primitive;
+    // primitive.type = primitive.BOX;
+    // primitive.dimensions.resize(3);
+    // primitive.dimensions[primitive.BOX_X] = 0.1;
+    // primitive.dimensions[primitive.BOX_Y] = 1.5;
+    // primitive.dimensions[primitive.BOX_Z] = 0.3;
+    // geometry_msgs::msg::Pose bp;
+    // bp.orientation.w = 0.5;
+    // bp.position.x = 0.48;
+    // bp.position.y = 0.0;
+    // bp.position.z = 0.25;
 
-        RCLCPP_INFO(this->get_logger(),"Table succesfully added to planningscene");
-    }
+    // obstacle.primitives.push_back(primitive);
+    // obstacle.primitive_poses.push_back(bp);
+    // obstacle.operation = obstacle.ADD;
+    // if (planning_scene_interface.applyCollisionObject(obstacle) == true){
 
-    else{RCLCPP_INFO(this->get_logger(),"Table NOT added to planningscene");}
+    //     RCLCPP_INFO(this->get_logger(),"Table succesfully added to planningscene");
+    // }
+
+    // else{RCLCPP_INFO(this->get_logger(),"Table NOT added to planningscene");}
 
 
-    //Obstacle am Endeffektor des Roboters
-    moveit_msgs::msg::CollisionObject grasping_object;
-    grasping_object.id = "grasp";
-    shape_msgs::msg::SolidPrimitive grasping_object_primitive;
-    grasping_object_primitive.type = primitive.CYLINDER;
-    grasping_object_primitive.dimensions.resize(2);
-    grasping_object_primitive.dimensions[primitive.CYLINDER_HEIGHT] = 0.2;
-    grasping_object_primitive.dimensions[primitive.CYLINDER_RADIUS] = 0.06;
-    grasping_object.header.frame_id = _move_group->getEndEffectorLink();
-    geometry_msgs::msg::Pose grab_pose;
-    grab_pose.orientation.w = 1.0;
-    grab_pose.orientation.x = 0;
-    grab_pose.orientation.y = 1.0;
-    grab_pose.orientation.z = 0;
-    grab_pose.position.z = 0.0;
-    grab_pose.position.x = -0.2;
-    grasping_object.primitives.push_back(grasping_object_primitive);
-    grasping_object.primitive_poses.push_back(grab_pose);
-    grasping_object.operation = grasping_object.ADD;
-    planning_scene_interface.applyCollisionObject(grasping_object);
-    std::vector<std::string> connection_links;
+    // //Obstacle am Endeffektor des Roboters
+    // moveit_msgs::msg::CollisionObject grasping_object;
+    // grasping_object.id = "grasp";
+    // shape_msgs::msg::SolidPrimitive grasping_object_primitive;
+    // grasping_object_primitive.type = grasping_object_primitive.CYLINDER;
+    // grasping_object_primitive.dimensions.resize(2);
+    // grasping_object_primitive.dimensions[grasping_object_primitive.CYLINDER_HEIGHT] = 0.2;
+    // grasping_object_primitive.dimensions[grasping_object_primitive.CYLINDER_RADIUS] = 0.06;
+    // grasping_object.header.frame_id = _move_group->getEndEffectorLink();
+    // geometry_msgs::msg::Pose grab_pose;
+    // grab_pose.orientation.w = 1.0;
+    // grab_pose.orientation.x = 0;
+    // grab_pose.orientation.y = 1.0;
+    // grab_pose.orientation.z = 0;
+    // grab_pose.position.z = 0.0;
+    // grab_pose.position.x = -0.2;
+    // grasping_object.primitives.push_back(grasping_object_primitive);
+    // grasping_object.primitive_poses.push_back(grab_pose);
+    // grasping_object.operation = grasping_object.ADD;
+    // planning_scene_interface.applyCollisionObject(grasping_object);
+    // std::vector<std::string> connection_links;
     
-    connection_links.push_back ( "endeffector_1" );
+    // connection_links.push_back ( "endeffector_1" );
 
-    _move_group->attachObject(grasping_object.id, "endeffector_1", connection_links);
-
-
+    // _move_group->attachObject(grasping_object.id, "endeffector_1", connection_links);
+    RCLCPP_INFO(this->get_logger(),"For-Schleife beginnt");
     for (int i = 1 ; i < count_objects; i++){
 
         //Objekt aus STL als Collisions-Objekt einlesen----------------------------------------------------------------------------------------------------------------------------------
-
+        RCLCPP_INFO(this->get_logger(),"For-Schleife angekommen");
         moveit_msgs::msg::CollisionObject test_object; //Collisions Objekt wird angelegt
         test_object.header.frame_id = _move_group->getPlanningFrame();
+        RCLCPP_INFO(this->get_logger(),"Fehler bei getPlanningFrame()");
         test_object.id = model[i];
 
         RCLCPP_INFO(this->get_logger(),"TEST-Mesh");
@@ -213,10 +226,16 @@ void ObstaclePlanner::setup_world(){
 
 
         geometry_msgs::msg::Pose test_pose;
-        test_pose.orientation.w = 0;
+        quaternion.setEuler(pos[i][3],pos[i][4],pos[i][5]);
+
         test_pose.position.x = pos[i][0];
         test_pose.position.y = pos[i][1];
         test_pose.position.z = pos[i][2];
+
+        test_pose.orientation.x = quaternion.x();
+        test_pose.orientation.y = quaternion.y();
+        test_pose.orientation.z = quaternion.z();
+        test_pose.orientation.w = quaternion.w();
 
 
         test_object.meshes.push_back(test_mesh);
@@ -235,7 +254,7 @@ void ObstaclePlanner::setup_world(){
 
         if(planning_scene_interface.applyCollisionObject(test_object) == false){
 
-            RCLCPP_INFO(this->get_logger(),"Could add Mesh to planningscene");
+            RCLCPP_INFO(this->get_logger(),"Could not add Mesh to planningscene");
 
         }
         
@@ -343,7 +362,30 @@ void ObstaclePlanner::obstacle_parser(){
 
 
 int main(int argc, char * argv[]) {
+
   rclcpp::init(argc, argv);
-  ObstaclePlanner cp;
-  cp.run();
+
+    auto node_obstacle_planner = std::make_shared<ObstaclePlanner>();
+
+    //rclcpp::executors::SingleThreadedExecutor executor;
+    //executor.add_node(node_obstacle_planner);
+
+    //std::thread spinner([&executor]() {executor.spin();});
+
+    //node_obstacle_planner->obstacle_parser();
+    //node_obstacle_planner->setup_world();
+
+    // executor.cancel();
+    // spinner.join();
+
+    std::thread spinner(&ObstaclePlanner::run, node_obstacle_planner);
+        
+  
+  //executor.remove_node(node_obstacle_planner);
+
+    spinner.join();
+
+  rclcpp::shutdown();
+  return 0;
+
 }

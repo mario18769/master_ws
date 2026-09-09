@@ -19,12 +19,11 @@ find_package(tf2_ros  REQUIRED )
 find_package(tf2  REQUIRED )
 find_package(Boost REQUIRED thread)
 find_package(sdformat14 REQUIRED)
+find_package(moveit_task_constructor_core REQUIRED)
 
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
-
-
 
 add_executable( cartesian_planner src/cartesian_planner.cpp ) 
 ament_target_dependencies(cartesian_planner rclcpp std_msgs moveit_ros_planning_interface)
@@ -41,7 +40,17 @@ geometry_msgs
 tf2_ros
 tf2)
 
+add_executable(mtc_estun src/mtc_estun.cpp)
+ament_target_dependencies(mtc_estun moveit_task_constructor_core rclcpp)
+target_include_directories(mtc_estun PUBLIC
+$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+$<INSTALL_INTERFACE:include>)
+
 target_link_libraries(obstacle_planner Boost::thread sdformat14::sdformat14)
+target_compile_features(mtc_estun PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
+
+install(TARGETS mtc_estun
+DESTINATION lib/${PROJECT_NAME})
 
 install(DIRECTORY launch  
   DESTINATION share/${PROJECT_NAME}

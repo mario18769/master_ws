@@ -8,6 +8,7 @@ from ament_index_python.packages import get_package_share_directory
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch import LaunchDescription
 from launch.substitutions import Command, FindExecutable, LaunchConfiguration, PathJoinSubstitution
+import launch_ros.actions
 
 
 
@@ -19,6 +20,8 @@ def generate_launch_description():
     ros_gz_sim_pkg_path = get_package_share_directory('ros_gz_sim')
     example_pkg_path = FindPackageShare('estun_moveit')
     gz_launch_path = PathJoinSubstitution([ros_gz_sim_pkg_path, 'launch', 'gz_sim.launch.py'])
+
+    launch_ros.actions.SetParameter(name='use_sim_time', value=True)
 
     # Get URDF via xacro
     robot_description_content = Command(
@@ -52,7 +55,9 @@ def generate_launch_description():
     package='moveit_ros_move_group',
     executable='move_group',
     output='screen',
-    parameters=[moveit_config.to_dict(),{"use_sim_time": True},],
+    parameters=[moveit_config.to_dict(),
+                {"use_sim_time": True}, 
+                {"capabilities": "move_group/ExecuteTaskSolutionCapability"}],
 )
 
     robot_state_publisher_node = Node(
@@ -131,16 +136,65 @@ def generate_launch_description():
      output="screen",
  )
 
+    load_joint_state_broadcaster = ExecuteProcess(
+        cmd=['ros2', 'control', 'load_controller', '--set-state', 'active',
+                'joint_state_broadcaster'],
+        output='screen'
+    )
+
+    load_arm_controller = ExecuteProcess(
+        cmd=['ros2', 'control', 'load_controller', '--set-state', 'active',
+                'arm_controller'],
+        output='screen'
+    )
+
+    load_hand_controller = ExecuteProcess(
+        cmd=['ros2', 'control', 'load_controller', '--set-state', 'active',
+                'hand_controller'],
+        output='screen'
+    )
+
+
+    tutorial_node = Node(
+        package="estun_control",
+        executable="obstacle_planner",
+        output="screen",
+        parameters=[
+            {"use_sim_time": True},
+            moveit_config.robot_description,
+            moveit_config.robot_description_semantic,
+            moveit_config.robot_description_kinematics,
+        ],
+
+    )
+
+    pick_place_demo = Node(
+        package="estun_control",
+        executable="mtc_estun",
+        output="screen",
+        parameters=[
+            {"use_sim_time": True},
+            moveit_config.robot_description,
+            moveit_config.robot_description_semantic,
+            moveit_config.robot_description_kinematics,
+            moveit_config.planning_pipelines,
+            moveit_config.joint_limits,
+        ],
+    )
+
 
     #ld.add_action(load_joint_state_broadcaster)
     ld.add_action(run_move_group_node)
     ld.add_action(static_tf)
     ld.add_action(robot_state_publisher_node)
     ld.add_action(rviz_node)
-    
     ld.add_action(gz_bridge)
     ld.add_action(gz_world)
     ld.add_action(gz_spawn_entity)
-    #ld.add_action(control_node)
+    ld.add_action(load_joint_state_broadcaster)
+    ld.add_action(load_arm_controller)
+    ld.add_action(load_hand_controller)
+    ld.add_action(tutorial_node)
+    ld.add_action(pick_place_demo)
 
     return ld

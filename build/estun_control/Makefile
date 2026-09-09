@@ -223,6 +223,19 @@ obstacle_planner/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/obstacle_planner.dir/build.make CMakeFiles/obstacle_planner.dir/build
 .PHONY : obstacle_planner/fast
 
+#=============================================================================
+# Target rules for targets named mtc_estun
+
+# Build rule for target.
+mtc_estun: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mtc_estun
+.PHONY : mtc_estun
+
+# fast build rule for target.
+mtc_estun/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mtc_estun.dir/build.make CMakeFiles/mtc_estun.dir/build
+.PHONY : mtc_estun/fast
+
 src/cartesian_planner.o: src/cartesian_planner.cpp.o
 .PHONY : src/cartesian_planner.o
 
@@ -246,6 +259,30 @@ src/cartesian_planner.s: src/cartesian_planner.cpp.s
 src/cartesian_planner.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cartesian_planner.dir/build.make CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.s
 .PHONY : src/cartesian_planner.cpp.s
+
+src/mtc_estun.o: src/mtc_estun.cpp.o
+.PHONY : src/mtc_estun.o
+
+# target to build an object file
+src/mtc_estun.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mtc_estun.dir/build.make CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o
+.PHONY : src/mtc_estun.cpp.o
+
+src/mtc_estun.i: src/mtc_estun.cpp.i
+.PHONY : src/mtc_estun.i
+
+# target to preprocess a source file
+src/mtc_estun.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mtc_estun.dir/build.make CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.i
+.PHONY : src/mtc_estun.cpp.i
+
+src/mtc_estun.s: src/mtc_estun.cpp.s
+.PHONY : src/mtc_estun.s
+
+# target to generate assembly for a file
+src/mtc_estun.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mtc_estun.dir/build.make CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.s
+.PHONY : src/mtc_estun.cpp.s
 
 src/obstacle_planner.o: src/obstacle_planner.cpp.o
 .PHONY : src/obstacle_planner.o
@@ -287,10 +324,14 @@ help:
 	@echo "... estun_control_uninstall"
 	@echo "... uninstall"
 	@echo "... cartesian_planner"
+	@echo "... mtc_estun"
 	@echo "... obstacle_planner"
 	@echo "... src/cartesian_planner.o"
 	@echo "... src/cartesian_planner.i"
 	@echo "... src/cartesian_planner.s"
+	@echo "... src/mtc_estun.o"
+	@echo "... src/mtc_estun.i"
+	@echo "... src/mtc_estun.s"
 	@echo "... src/obstacle_planner.o"
 	@echo "... src/obstacle_planner.i"
 	@echo "... src/obstacle_planner.s"

@@ -1,0 +1,25 @@
+[ 33%] Built target cartesian_planner
+[ 66%] Built target mtc_estun
+[ 83%] [32mBuilding CXX object CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o[0m
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:1[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:51:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   51 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:2[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/kinematics_base/kinematics_base.hpp:42[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_model/joint_model_group.hpp:42[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_model/robot_model.hpp:45[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_state/robot_state.hpp:40[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.hpp:41[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:52[m[K:
+[01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:[m[K In member function ‘[01m[Kvoid ObstaclePlanner::[01;32m[Kplan[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:114:57:[m[K [01;31m[Kerror: [m[K‘[01m[Kexecute_result[m[K’ was not declared in this scope
+  114 |     RCLCPP_INFO(this->get_logger(),"Execute result: %d",[01;31m[Kexecute_result[m[K.val);
+      |                                                         [01;31m[K^~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/obstacle_planner.dir/build.make:76: CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o] Fehler 1
+gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/obstacle_planner.dir/all] Fehler 2
+gmake: *** [Makefile:146: all] Fehler 2

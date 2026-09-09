@@ -1,0 +1,28 @@
+[ 33%] Built target cartesian_planner
+[ 66%] Built target obstacle_planner
+[ 83%] [32mBuilding CXX object CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o[0m
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:2[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:3[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/jazzy/include/parameter_traits/parameter_traits/parameter_traits.hpp:37[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_ros_planning/planning_pipeline_parameters.hpp:26[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_ros_planning/moveit/planning_pipeline/planning_pipeline.hpp:52[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_ros_planning/moveit/planning_pipeline_interfaces/planning_pipeline_interfaces.hpp:43[m[K,
+                 from [01m[K/home/mario/master_ws/install/moveit_task_constructor_core/include/moveit/task_constructor/solvers/pipeline_planner.h:42[m[K,
+                 from [01m[K/home/mario/master_ws/install/moveit_task_constructor_core/include/moveit/task_constructor/solvers.h:43[m[K,
+                 from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:5[m[K:
+[01m[K/opt/ros/jazzy/include/tl_expected/expected.hpp:18:167:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: tl_expected/expected.hpp is deprecated. Use <tl/expected.hpp> from libexpected-dev, or <rcpputils/tl_expected/expected.hpp> if the system header is not available.[m[K’
+   18 |   "tl_expected/expected.hpp is deprecated. Use <tl/expected.hpp> from libexpected-dev, or <rcpputils/tl_expected/expected.hpp> if the system header is not available."[01;36m[K)[m[K // NOLINT
+      |                                                                                                                                                                       [01;36m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kmoveit::task_constructor::Task MTCTaskNode::[01;32m[KcreateTask[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:212:96:[m[K [01;31m[Kerror: [m[K‘[01m[Kstage[m[K’ was not declared in this scope
+  212 |             auto wrapper = std::make_unique<mtc::stages::ComputeIK>("grasp pose IK", std::move([01;31m[Kstage[m[K));
+      |                                                                                                [01;31m[K^~~~~[m[K
+gmake[2]: *** [CMakeFiles/mtc_estun.dir/build.make:76: CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o] Fehler 1
+gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/mtc_estun.dir/all] Fehler 2
+gmake: *** [Makefile:146: all] Fehler 2

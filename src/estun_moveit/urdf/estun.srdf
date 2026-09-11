@@ -14,18 +14,22 @@
     </group>
 
     <group name="hand">
-        <link name= "estun_hand"/>
+        <joint name="hand_endeffector_1"/>
     </group>
 
     <end_effector name="end_eff" parent_link="endeffector_1" group="hand"/>
 
     <group_state name="open" group="hand">
-        <joint name="hand_endeffector_1" value="0.1"/>
+        <joint name="hand_endeffector_1" value="0.0"/>
     </group_state>
 
-    <group_state name="close" group="hand">
+    <group_state name="closed" group="hand">
         <joint name="hand_endeffector_1" value="0.2"/>
     </group_state>
+
+    <!-- <group_state name="close" group="hand">
+        <joint name="hand_endeffector_1" value="0.2"/>
+    </group_state> -->
     
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
     <disable_collisions link1="arm_01_1" link2="arm_02_1" reason="Adjacent"/>

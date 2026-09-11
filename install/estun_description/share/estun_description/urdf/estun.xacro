@@ -216,12 +216,12 @@
   <axis xyz="0 0 0"/>
 </joint>
 
-<joint name="hand_endeffector_1" type="continuous">
-  <origin xyz="0 0 0" rpy="0 0 0"/>
+<joint name="hand_endeffector_1" type="prismatic">
+  <origin xyz="-0.1 0 0" rpy="0 0 0"/>
   <parent link="endeffector_1"/>
   <child link="estun_hand"/>
-  <axis xyz="0 0 1"/>
-  <limit effort="1000.0" lower="-3.14" upper="3.14" velocity="10.0"/>
+  <axis xyz="1 0 0"/>
+  <limit effort="1000.0" lower="0.0" upper="0.2" velocity="10.0"/>
 </joint>
 
 </robot>

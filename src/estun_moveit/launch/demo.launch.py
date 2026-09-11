@@ -10,6 +10,31 @@ from launch import LaunchDescription
 from launch.substitutions import Command, FindExecutable, LaunchConfiguration, PathJoinSubstitution
 import launch_ros.actions
 
+from launch import LaunchDescription
+from launch.actions import (
+    DeclareLaunchArgument,
+    EmitEvent,
+    ExecuteProcess,
+    LogInfo,
+    RegisterEventHandler,
+    TimerAction
+)
+from launch.conditions import IfCondition
+from launch.event_handlers import (
+    OnExecutionComplete,
+    OnProcessExit,
+    OnProcessIO,
+    OnProcessStart,
+    OnShutdown
+)
+from launch.events import Shutdown
+from launch.substitutions import (
+    EnvironmentVariable,
+    FindExecutable,
+    LaunchConfiguration,
+    LocalSubstitution,
+    PythonExpression
+)
 
 
 def generate_launch_description():
@@ -183,6 +208,8 @@ def generate_launch_description():
     )
 
 
+
+
     #ld.add_action(load_joint_state_broadcaster)
     ld.add_action(run_move_group_node)
     ld.add_action(static_tf)
@@ -192,9 +219,11 @@ def generate_launch_description():
     ld.add_action(gz_world)
     ld.add_action(gz_spawn_entity)
     ld.add_action(load_joint_state_broadcaster)
+    #ld.add_action(load_hand_controller)
     ld.add_action(load_arm_controller)
-    ld.add_action(load_hand_controller)
     ld.add_action(tutorial_node)
-    ld.add_action(pick_place_demo)
+    #ld.add_action(pick_place_demo)
+
+
 
     return ld

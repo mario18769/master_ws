@@ -11,15 +11,16 @@ def generate_launch_description():
 
     tutorial_node = Node(
         package="estun_control",
-        executable="obstacle_planner",
+        executable="mtc_estun",
         output="screen",
         parameters=[
             {"use_sim_time": True},
             moveit_config.robot_description,
             moveit_config.robot_description_semantic,
             moveit_config.robot_description_kinematics,
+            moveit_config.planning_pipelines,
+            moveit_config.joint_limits,
         ],
-
     )
 
 

@@ -9,22 +9,22 @@ serde = { version = "1", optional = true, features = ["derive"] }
 serde-big-array = { version = "0.5.1", optional = true }
 
 # ROS Dependencies
-unique_identifier_msgs = "*"
-action_msgs = "*"
-builtin_interfaces = "*"
-sensor_msgs = "*"
 visualization_msgs = "*"
-std_msgs = "*"
-service_msgs = "*"
 trajectory_msgs = "*"
+service_msgs = "*"
+action_msgs = "*"
+unique_identifier_msgs = "*"
+builtin_interfaces = "*"
 object_recognition_msgs = "*"
 geometry_msgs = "*"
+std_msgs = "*"
 octomap_msgs = "*"
 shape_msgs = "*"
+sensor_msgs = "*"
 moveit_msgs = "*"
 
 [features]
-serde = ['dep:serde', 'dep:serde-big-array', 'rosidl_runtime_rs/serde', 'unique_identifier_msgs/serde', 'action_msgs/serde', 'builtin_interfaces/serde', 'sensor_msgs/serde', 'visualization_msgs/serde', 'std_msgs/serde', 'service_msgs/serde', 'trajectory_msgs/serde', 'object_recognition_msgs/serde', 'geometry_msgs/serde', 'octomap_msgs/serde', 'shape_msgs/serde', 'moveit_msgs/serde']
+serde = ['dep:serde', 'dep:serde-big-array', 'rosidl_runtime_rs/serde', 'visualization_msgs/serde', 'trajectory_msgs/serde', 'service_msgs/serde', 'action_msgs/serde', 'unique_identifier_msgs/serde', 'builtin_interfaces/serde', 'object_recognition_msgs/serde', 'geometry_msgs/serde', 'std_msgs/serde', 'octomap_msgs/serde', 'shape_msgs/serde', 'sensor_msgs/serde', 'moveit_msgs/serde']
 
 [package.metadata.ros-env]
 include = true

@@ -1,0 +1,73 @@
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:2[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:3[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/jazzy/include/parameter_traits/parameter_traits/parameter_traits.hpp:37[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_ros_planning/planning_pipeline_parameters.hpp:26[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_ros_planning/moveit/planning_pipeline/planning_pipeline.hpp:52[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_ros_planning/moveit/planning_pipeline_interfaces/planning_pipeline_interfaces.hpp:43[m[K,
+                 from [01m[K/home/mario/master_ws/install/moveit_task_constructor_core/include/moveit/task_constructor/solvers/pipeline_planner.h:42[m[K,
+                 from [01m[K/home/mario/master_ws/install/moveit_task_constructor_core/include/moveit/task_constructor/solvers.h:43[m[K,
+                 from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:5[m[K:
+[01m[K/opt/ros/jazzy/include/tl_expected/expected.hpp:18:167:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: tl_expected/expected.hpp is deprecated. Use <tl/expected.hpp> from libexpected-dev, or <rcpputils/tl_expected/expected.hpp> if the system header is not available.[m[K’
+   18 |   "tl_expected/expected.hpp is deprecated. Use <tl/expected.hpp> from libexpected-dev, or <rcpputils/tl_expected/expected.hpp> if the system header is not available."[01;36m[K)[m[K // NOLINT
+      |                                                                                                                                                                       [01;36m[K^[m[K
+In file included from [01m[K/home/mario/master_ws/install/moveit_task_constructor_core/include/moveit/task_constructor/stages.h:41[m[K,
+                 from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:6[m[K:
+/home/mario/master_ws/install/moveit_task_constructor_core/include/moveit/task_constructor/stages/compute_ik.h: In instantiation of ‘[01m[Kvoid moveit::task_constructor::stages::ComputeIK::[01;32m[KsetIKFrame[m[K(const T&, const std::string&) [35m[K[with T = geometry_msgs::msg::PoseStamped_<std::allocator<void> >; std::string = std::__cxx11::basic_string<char>][m[K[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:339:32:[m[K   required from here
+[01m[K/home/mario/master_ws/install/moveit_task_constructor_core/include/moveit/task_constructor/stages/compute_ik.h:90:22:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[KEigen::Isometry3d[m[K’ {aka ‘[01m[KEigen::Transform<double, 3, 1>[m[K’} and ‘[01m[Kconst geometry_msgs::msg::PoseStamped_<std::allocator<void> >[m[K’)
+   90 |                 [01;31m[Kpose = p[m[K;
+      |                 [01;31m[K~~~~~^~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Geometry:44[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_model/joint_model.hpp:46[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_model/joint_model_group.hpp:40[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_model/robot_model.hpp:45[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.hpp:39[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:51[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Geometry/Transform.h:297:39:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Transform<Scalar, Dim, Mode, _Options>& Eigen::Transform<Scalar, Dim, Mode, _Options>::[01;32m[Koperator=[m[K(const Eigen::EigenBase<OtherDerived>&) [35m[K[with _Scalar = double; int _Dim = 3; int _Mode = 1; int _Options = 0][m[K[m[K’
+  297 |   EIGEN_DEVICE_FUNC inline Transform& [01;36m[Koperator[m[K=(const EigenBase<OtherDerived>& other)
+      |                                       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Geometry/Transform.h:297:39:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/install/moveit_task_constructor_core/include/moveit/task_constructor/stages/compute_ik.h:90:22:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst geometry_msgs::msg::PoseStamped_<std::allocator<void> >[m[K’ is not derived from ‘[01m[Kconst Eigen::EigenBase<Derived>[m[K’
+   90 |                 [01;36m[Kpose = p[m[K;
+      |                 [01;36m[K~~~~~^~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Geometry/Transform.h:363:32:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Transform<Scalar, Dim, Mode, _Options>& Eigen::Transform<Scalar, Dim, Mode, _Options>::[01;32m[Koperator=[m[K(const Eigen::ReturnByValue<OtherDerived>&) [35m[K[with _Scalar = double; int _Dim = 3; int _Mode = 1; int _Options = 0][m[K[m[K’
+  363 |   EIGEN_DEVICE_FUNC Transform& [01;36m[Koperator[m[K=(const ReturnByValue<OtherDerived>& other)
+      |                                [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Geometry/Transform.h:363:32:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/install/moveit_task_constructor_core/include/moveit/task_constructor/stages/compute_ik.h:90:22:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst geometry_msgs::msg::PoseStamped_<std::allocator<void> >[m[K’ is not derived from ‘[01m[Kconst Eigen::ReturnByValue<Derived>[m[K’
+   90 |                 [01;36m[Kpose = p[m[K;
+      |                 [01;36m[K~~~~~^~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Geometry/Transform.h:593:39:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class Derived> Eigen::Transform<Scalar, Dim, Mode, Options>& Eigen::Transform<Scalar, Dim, Mode, _Options>::[01;32m[Koperator=[m[K(const Eigen::RotationBase<Derived, Dim>&) [35m[K[with _Scalar = double; int _Dim = 3; int _Mode = 1; int _Options = 0][m[K[m[K’
+  593 |   EIGEN_DEVICE_FUNC inline Transform& [01;36m[Koperator[m[K=(const RotationBase<Derived,Dim>& r);
+      |                                       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Geometry/Transform.h:593:39:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/install/moveit_task_constructor_core/include/moveit/task_constructor/stages/compute_ik.h:90:22:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst geometry_msgs::msg::PoseStamped_<std::allocator<void> >[m[K’ is not derived from ‘[01m[Kconst Eigen::RotationBase<Derived, 3>[m[K’
+   90 |                 [01;36m[Kpose = p[m[K;
+      |                 [01;36m[K~~~~~^~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Geometry/Transform.h:997:62:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Transform<Scalar, Dim, Mode, Options>& Eigen::Transform<Scalar, Dim, Mode, _Options>::[01;32m[Koperator=[m[K(const TranslationType&) [35m[K[with _Scalar = double; int _Dim = 3; int _Mode = 1; int _Options = 0; TranslationType = Eigen::Translation<double, 3>][m[K[m[K’
+  997 | EIGEN_DEVICE_FUNC inline Transform<Scalar,Dim,Mode,Options>& [01;36m[KTransform<Scalar,Dim,Mode,Options>[m[K::operator=(const TranslationType& t)
+      |                                                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Geometry/Transform.h:997:131:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst geometry_msgs::msg::PoseStamped_<std::allocator<void> >[m[K’ to ‘[01m[Kconst Eigen::Transform<double, 3, 1>::TranslationType&[m[K’ {aka ‘[01m[Kconst Eigen::Translation<double, 3>&[m[K’}
+  997 | EIGEN_DEVICE_FUNC inline Transform<Scalar,Dim,Mode,Options>& Transform<Scalar,Dim,Mode,Options>::operator=([01;36m[Kconst TranslationType& t[m[K)
+      |                                                                                                            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Geometry/Transform.h:1014:62:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Transform<Scalar, Dim, Mode, Options>& Eigen::Transform<Scalar, Dim, Mode, _Options>::[01;32m[Koperator=[m[K(const Eigen::UniformScaling<_Scalar>&) [35m[K[with _Scalar = double; int _Dim = 3; int _Mode = 1; int _Options = 0][m[K[m[K’
+ 1014 | EIGEN_DEVICE_FUNC inline Transform<Scalar,Dim,Mode,Options>& [01;36m[KTransform<Scalar,Dim,Mode,Options>[m[K::operator=(const UniformScaling<Scalar>& s)
+      |                                                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Geometry/Transform.h:1014:138:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst geometry_msgs::msg::PoseStamped_<std::allocator<void> >[m[K’ to ‘[01m[Kconst Eigen::UniformScaling<double>&[m[K’
+ 1014 | EIGEN_DEVICE_FUNC inline Transform<Scalar,Dim,Mode,Options>& Transform<Scalar,Dim,Mode,Options>::operator=([01;36m[Kconst UniformScaling<Scalar>& s[m[K)
+      |                                                                                                            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Geometry/Transform.h:204:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Transform<double, 3, 1>& Eigen::Transform<double, 3, 1>::[01;32m[Koperator=[m[K(const Eigen::Transform<double, 3, 1>&)[m[K’
+  204 | class [01;36m[KTransform[m[K
+      |       [01;36m[K^~~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Geometry/Transform.h:204:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst geometry_msgs::msg::PoseStamped_<std::allocator<void> >[m[K’ to ‘[01m[Kconst Eigen::Transform<double, 3, 1>&[m[K’
+[01m[K/usr/include/eigen3/Eigen/src/Geometry/Transform.h:204:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Transform<double, 3, 1>& Eigen::Transform<double, 3, 1>::[01;32m[Koperator=[m[K(Eigen::Transform<double, 3, 1>&&)[m[K’
+[01m[K/usr/include/eigen3/Eigen/src/Geometry/Transform.h:204:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst geometry_msgs::msg::PoseStamped_<std::allocator<void> >[m[K’ to ‘[01m[KEigen::Transform<double, 3, 1>&&[m[K’
+gmake[2]: *** [CMakeFiles/mtc_estun.dir/build.make:76: CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o] Fehler 1
+gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/mtc_estun.dir/all] Fehler 2
+gmake: *** [Makefile:146: all] Fehler 2

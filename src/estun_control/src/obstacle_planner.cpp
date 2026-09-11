@@ -247,7 +247,7 @@ void ObstaclePlanner::setup_world(){
         
         moveit_msgs::msg::ObjectColor object_color;
         object_color.id = test_object.id;
-        object_color.color.r = 0.0f; // Red component
+        object_color.color.r = 1.0f; // Red component
         object_color.color.g = 0.0f;
         object_color.color.b = 1.0f;
         object_color.color.a = 1.0f; // Alpha (Opacity)
@@ -266,7 +266,7 @@ void ObstaclePlanner::setup_world(){
         std::vector<moveit_msgs::msg::ObjectColor> object_colors = {object_color};
         collision_objects.push_back(test_object);  
 
-        // Now, let's add the collision object into the world 
+
         planning_scene_interface.addCollisionObjects(collision_objects, object_colors);
     }
 

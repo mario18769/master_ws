@@ -1,0 +1,79 @@
+[33mCMake Warning (dev) at /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindFLANN.cmake:45 (find_package):
+  Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT
+  variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+
+  CMake variable FLANN_ROOT is set to:
+
+    /usr
+
+  For compatibility, find_package is ignoring the variable, but code in a
+  .cmake module might still use it.
+Call Stack (most recent call first):
+  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:261 (find_package)
+  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:306 (find_flann)
+  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:570 (find_external_library)
+  /opt/ros/jazzy/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /opt/ros/jazzy/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)
+  /opt/ros/jazzy/share/pcl_ros/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /opt/ros/jazzy/share/pcl_ros/cmake/pcl_rosConfig.cmake:41 (include)
+  CMakeLists.txt:14 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:8:36:[m[K [01;31m[Kerror: [m[K‘[01m[Krclcpp[m[K’ has not been declared
+    8 | class PointCloudProcessor : public [01;31m[Krclcpp[m[K::Node{
+      |                                    [01;31m[K^~~~~~[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:8:44:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ before ‘[01m[KNode[m[K’
+    8 | class PointCloudProcessor : public rclcpp::[01;31m[KNode[m[K{
+      |                                            [01;31m[K^~~~[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:10:5:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kpublic[m[K’
+   10 |     [01;31m[Kpublic[m[K:
+      |     [01;31m[K^~~~~~[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:10:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ before ‘[01m[Kpublic[m[K’
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:8:48:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+    8 | class PointCloudProcessor : public rclcpp::Node[01;36m[K{[m[K
+      |                                                [01;36m[K^[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:22:5:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kprivate[m[K’
+   22 |     [01;31m[Kprivate[m[K:
+      |     [01;31m[K^~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:28:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+   28 | [01;31m[K}[m[K
+      | [01;31m[K^[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:31:1:[m[K [01;31m[Kerror: [m[KISO C++ forbids declaration of ‘[01m[Kgenerate_cylinder_master[m[K’ with no type [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+   31 | [01;31m[KPointCloudProcessor[m[K::generate_cylinder_master(){
+      | [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:31:47:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kclass PointCloudProcessor[m[K’
+   31 | PointCloudProcessor::generate_cylinder_master([01;31m[K)[m[K{
+      |                                               [01;31m[K^[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:8:7:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass PointCloudProcessor[m[K’
+    8 | class [01;36m[KPointCloudProcessor[m[K : public rclcpp::Node{
+      |       [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In function ‘[01m[Kint[01;32m[K main[m[K(int, char**)[m[K’:
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:52:5:[m[K [01;31m[Kerror: [m[K‘[01m[Krclcpp[m[K’ has not been declared
+   52 |     [01;31m[Krclcpp[m[K::init(argc, argv);
+      |     [01;31m[K^~~~~~[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:54:51:[m[K [01;31m[Kerror: [m[K‘[01m[KObstaclePlanner[m[K’ was not declared in this scope; did you mean ‘[01m[Knode_obstacle_planner[m[K’?
+   54 |     auto node_obstacle_planner = std::make_shared<[01;31m[KObstaclePlanner[m[K>();
+      |                                                   [01;31m[K^~~~~~~~~~~~~~~[m[K
+      |                                                   [32m[Knode_obstacle_planner[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:54:67:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmake_shared<<expression error> >()[m[K’
+   54 |     auto node_obstacle_planner = [01;31m[Kstd::make_shared<ObstaclePlanner>()[m[K;
+      |                                  [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+In file included from [01m[K/usr/include/c++/13/memory:80[m[K,
+                 from [01m[K/usr/include/pcl-1.14/pcl/memory.h:50[m[K,
+                 from [01m[K/usr/include/pcl-1.14/pcl/PCLHeader.h:3[m[K,
+                 from [01m[K/usr/include/pcl-1.14/pcl/ModelCoefficients.h:7[m[K,
+                 from [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:2[m[K:
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1005:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Args> std::shared_ptr<typename std::enable_if<(! std::is_array< <template-parameter-1-1> >::value), _Tp>::type> std::[01;32m[Kmake_shared[m[K(_Args&& ...)[m[K’
+ 1005 |     [01;36m[Kmake_shared[m[K(_Args&&... __args)
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1005:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:54:67:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   54 |     auto node_obstacle_planner = [01;31m[Kstd::make_shared<ObstaclePlanner>()[m[K;
+      |                                  [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:56:5:[m[K [01;31m[Kerror: [m[K‘[01m[Krclcpp[m[K’ has not been declared
+   56 |     [01;31m[Krclcpp[m[K::shutdown();
+      |     [01;31m[K^~~~~~[m[K
+gmake[2]: *** [CMakeFiles/pcl_pose_estimation.dir/build.make:76: CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o] Fehler 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pcl_pose_estimation.dir/all] Fehler 2
+gmake: *** [Makefile:146: all] Fehler 2

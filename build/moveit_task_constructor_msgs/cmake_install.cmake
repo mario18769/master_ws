@@ -417,10 +417,6 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/rust_packages" TYPE FILE FILES "/home/mario/master_ws/build/moveit_task_constructor_msgs/ament_cmake_index/share/ament_index/resource_index/rust_packages/moveit_task_constructor_msgs")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_task_constructor_msgs" TYPE DIRECTORY FILES "/home/mario/master_ws/build/moveit_task_constructor_msgs/rosidl_generator_rs/moveit_task_constructor_msgs/rust")
 endif()
 

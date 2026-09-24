@@ -137,6 +137,7 @@ cartesian_planner: /opt/ros/jazzy/lib/libcomposition_interfaces__rosidl_typesupp
 cartesian_planner: /opt/ros/jazzy/lib/libcomposition_interfaces__rosidl_generator_py.so
 cartesian_planner: /opt/ros/jazzy/lib/libcomposition_interfaces__rosidl_typesupport_c.so
 cartesian_planner: /opt/ros/jazzy/lib/libcomposition_interfaces__rosidl_generator_c.so
+cartesian_planner: /opt/ros/jazzy/lib/libstatic_transform_broadcaster_node.so
 cartesian_planner: /opt/ros/jazzy/lib/libmoveit_collision_detection_bullet.so.2.12.4
 cartesian_planner: /usr/lib/x86_64-linux-gnu/libBulletDynamics.so
 cartesian_planner: /usr/lib/x86_64-linux-gnu/libBulletCollision.so
@@ -246,7 +247,6 @@ cartesian_planner: /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.83.0
 cartesian_planner: /usr/lib/x86_64-linux-gnu/libboost_program_options.so.1.83.0
 cartesian_planner: /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.83.0
 cartesian_planner: /opt/ros/jazzy/lib/libwarehouse_ros.so
-cartesian_planner: /opt/ros/jazzy/lib/libstatic_transform_broadcaster_node.so
 cartesian_planner: /opt/ros/jazzy/lib/libclass_loader.so
 cartesian_planner: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.1.0
 cartesian_planner: /usr/lib/x86_64-linux-gnu/libtinyxml2.so.10.0.0
@@ -344,7 +344,7 @@ cartesian_planner: /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_typesupport_
 cartesian_planner: /opt/ros/jazzy/lib/librosidl_typesupport_fastrtps_cpp.so
 cartesian_planner: /opt/ros/jazzy/lib/librmw.so
 cartesian_planner: /opt/ros/jazzy/lib/librosidl_dynamic_typesupport.so
-cartesian_planner: /opt/ros/jazzy/lib/libfastcdr.so.2.2.7
+cartesian_planner: /opt/ros/jazzy/lib/libfastcdr.so.2.2.8
 cartesian_planner: /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.so
 cartesian_planner: /opt/ros/jazzy/lib/librosidl_typesupport_introspection_cpp.so
 cartesian_planner: /opt/ros/jazzy/lib/librosidl_typesupport_introspection_c.so

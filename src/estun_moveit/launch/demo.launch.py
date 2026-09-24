@@ -98,6 +98,8 @@ def generate_launch_description():
     rviz_config = PathJoinSubstitution(
         [FindPackageShare('estun_description'), 'config', 'display.rviz'])
 
+    config_gz_ros_bridge = PathJoinSubstitution(
+        [FindPackageShare('estun_moveit'), 'config', 'ros2_gz_bridge.yaml'])
     # Launch RViz
     rviz_node = Node(
         package="rviz2",
@@ -155,11 +157,11 @@ def generate_launch_description():
      package="ros_gz_bridge",
      executable="parameter_bridge",
      arguments=['/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock'],
-     parameters=[{
-         "qos_overrides./tf_static.publisher.durability": "transient_local"
-     }],
+     parameters=[
+         {"qos_overrides./tf_static.publisher.durability": "transient_local"},
+         config_gz_ros_bridge],
      output="screen",
- )
+    )
 
     load_joint_state_broadcaster = ExecuteProcess(
         cmd=['ros2', 'control', 'load_controller', '--set-state', 'active',
@@ -192,6 +194,8 @@ def generate_launch_description():
         ],
 
     )
+
+
 
     pick_place_demo = Node(
         package="estun_control",

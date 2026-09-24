@@ -202,7 +202,7 @@ librviz_marker_tools.so: /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_typesu
 librviz_marker_tools.so: /opt/ros/jazzy/lib/librosidl_typesupport_fastrtps_cpp.so
 librviz_marker_tools.so: /opt/ros/jazzy/lib/librmw.so
 librviz_marker_tools.so: /opt/ros/jazzy/lib/librosidl_dynamic_typesupport.so
-librviz_marker_tools.so: /opt/ros/jazzy/lib/libfastcdr.so.2.2.7
+librviz_marker_tools.so: /opt/ros/jazzy/lib/libfastcdr.so.2.2.8
 librviz_marker_tools.so: /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.so
 librviz_marker_tools.so: /opt/ros/jazzy/lib/librosidl_typesupport_introspection_cpp.so
 librviz_marker_tools.so: /opt/ros/jazzy/lib/librosidl_typesupport_introspection_c.so

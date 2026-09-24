@@ -69,17 +69,14 @@ include /home/mario/master_ws/build/moveit_task_constructor_msgs/moveit_task_con
 /home/mario/master_ws/build/moveit_task_constructor_msgs/moveit_task_constructor_msgs__rs/CMakeFiles/moveit_task_constructor_msgs__rs: rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/lib.rs
 /home/mario/master_ws/build/moveit_task_constructor_msgs/moveit_task_constructor_msgs__rs/CMakeFiles/moveit_task_constructor_msgs__rs: rosidl_generator_rs/moveit_task_constructor_msgs/rust/build.rs
 /home/mario/master_ws/build/moveit_task_constructor_msgs/moveit_task_constructor_msgs__rs/CMakeFiles/moveit_task_constructor_msgs__rs: rosidl_generator_rs/moveit_task_constructor_msgs/rust/Cargo.toml
-/home/mario/master_ws/build/moveit_task_constructor_msgs/moveit_task_constructor_msgs__rs/CMakeFiles/moveit_task_constructor_msgs__rs: rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/msg.rs
-/home/mario/master_ws/build/moveit_task_constructor_msgs/moveit_task_constructor_msgs__rs/CMakeFiles/moveit_task_constructor_msgs__rs: rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/msg/rmw.rs
-/home/mario/master_ws/build/moveit_task_constructor_msgs/moveit_task_constructor_msgs__rs/CMakeFiles/moveit_task_constructor_msgs__rs: rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/srv.rs
-/home/mario/master_ws/build/moveit_task_constructor_msgs/moveit_task_constructor_msgs__rs/CMakeFiles/moveit_task_constructor_msgs__rs: rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/srv/rmw.rs
-/home/mario/master_ws/build/moveit_task_constructor_msgs/moveit_task_constructor_msgs__rs/CMakeFiles/moveit_task_constructor_msgs__rs: rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/action.rs
-/home/mario/master_ws/build/moveit_task_constructor_msgs/moveit_task_constructor_msgs__rs/CMakeFiles/moveit_task_constructor_msgs__rs: rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/action/rmw.rs
 
 rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/lib.rs: /opt/ros/jazzy/lib/rosidl_generator_rs/rosidl_generator_rs
 rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/lib.rs: /opt/ros/jazzy/lib/python3.12/site-packages/rosidl_generator_rs/__init__.py
 rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/lib.rs: /opt/ros/jazzy/share/rosidl_generator_rs/resource/action.rs.em
 rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/lib.rs: /opt/ros/jazzy/share/rosidl_generator_rs/resource/action/rmw.rs.em
+rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/lib.rs: /opt/ros/jazzy/share/rosidl_generator_rs/resource/build.rs.em
+rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/lib.rs: /opt/ros/jazzy/share/rosidl_generator_rs/resource/Cargo.toml.em
+rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/lib.rs: /opt/ros/jazzy/share/rosidl_generator_rs/resource/lib.rs.em
 rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/lib.rs: /opt/ros/jazzy/share/rosidl_generator_rs/resource/msg.rs.em
 rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/lib.rs: /opt/ros/jazzy/share/rosidl_generator_rs/resource/msg/rmw.rs.em
 rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/lib.rs: /opt/ros/jazzy/share/rosidl_generator_rs/resource/srv.rs.em
@@ -88,18 +85,6 @@ rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/lib.rs: /opt/ros/jazzy
 rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/lib.rs: /opt/ros/jazzy/share/rosidl_generator_rs/resource/templates/msg_rmw.rs.em
 rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/lib.rs: /opt/ros/jazzy/share/rosidl_generator_rs/resource/templates/srv_idiomatic.rs.em
 rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/lib.rs: /opt/ros/jazzy/share/rosidl_generator_rs/resource/templates/srv_rmw.rs.em
-rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/lib.rs: rosidl_adapter/moveit_task_constructor_msgs/msg/Property.idl
-rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/lib.rs: rosidl_adapter/moveit_task_constructor_msgs/msg/Solution.idl
-rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/lib.rs: rosidl_adapter/moveit_task_constructor_msgs/msg/SolutionInfo.idl
-rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/lib.rs: rosidl_adapter/moveit_task_constructor_msgs/msg/StageDescription.idl
-rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/lib.rs: rosidl_adapter/moveit_task_constructor_msgs/msg/StageStatistics.idl
-rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/lib.rs: rosidl_adapter/moveit_task_constructor_msgs/msg/SubSolution.idl
-rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/lib.rs: rosidl_adapter/moveit_task_constructor_msgs/msg/SubTrajectory.idl
-rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/lib.rs: rosidl_adapter/moveit_task_constructor_msgs/msg/TaskDescription.idl
-rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/lib.rs: rosidl_adapter/moveit_task_constructor_msgs/msg/TaskStatistics.idl
-rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/lib.rs: rosidl_adapter/moveit_task_constructor_msgs/msg/TrajectoryExecutionInfo.idl
-rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/lib.rs: rosidl_adapter/moveit_task_constructor_msgs/srv/GetSolution.idl
-rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/lib.rs: rosidl_adapter/moveit_task_constructor_msgs/action/ExecuteTaskSolution.idl
 rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/lib.rs: rosidl_adapter/moveit_task_constructor_msgs/msg/Property.idl
 rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/lib.rs: rosidl_adapter/moveit_task_constructor_msgs/msg/Solution.idl
 rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/lib.rs: rosidl_adapter/moveit_task_constructor_msgs/msg/SolutionInfo.idl
@@ -334,34 +319,10 @@ rosidl_generator_rs/moveit_task_constructor_msgs/rust/build.rs: rosidl_generator
 rosidl_generator_rs/moveit_task_constructor_msgs/rust/Cargo.toml: rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/lib.rs
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_rs/moveit_task_constructor_msgs/rust/Cargo.toml
 
-rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/msg.rs: rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/lib.rs
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/msg.rs
-
-rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/msg/rmw.rs: rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/lib.rs
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/msg/rmw.rs
-
-rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/srv.rs: rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/lib.rs
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/srv.rs
-
-rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/srv/rmw.rs: rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/lib.rs
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/srv/rmw.rs
-
-rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/action.rs: rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/lib.rs
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/action.rs
-
-rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/action/rmw.rs: rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/lib.rs
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/action/rmw.rs
-
 moveit_task_constructor_msgs__rs: /home/mario/master_ws/build/moveit_task_constructor_msgs/moveit_task_constructor_msgs__rs/CMakeFiles/moveit_task_constructor_msgs__rs
 moveit_task_constructor_msgs__rs: rosidl_generator_rs/moveit_task_constructor_msgs/rust/Cargo.toml
 moveit_task_constructor_msgs__rs: rosidl_generator_rs/moveit_task_constructor_msgs/rust/build.rs
-moveit_task_constructor_msgs__rs: rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/action.rs
-moveit_task_constructor_msgs__rs: rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/action/rmw.rs
 moveit_task_constructor_msgs__rs: rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/lib.rs
-moveit_task_constructor_msgs__rs: rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/msg.rs
-moveit_task_constructor_msgs__rs: rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/msg/rmw.rs
-moveit_task_constructor_msgs__rs: rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/srv.rs
-moveit_task_constructor_msgs__rs: rosidl_generator_rs/moveit_task_constructor_msgs/rust/src/srv/rmw.rs
 moveit_task_constructor_msgs__rs: /home/mario/master_ws/build/moveit_task_constructor_msgs/moveit_task_constructor_msgs__rs/CMakeFiles/moveit_task_constructor_msgs__rs.dir/build.make
 .PHONY : moveit_task_constructor_msgs__rs
 

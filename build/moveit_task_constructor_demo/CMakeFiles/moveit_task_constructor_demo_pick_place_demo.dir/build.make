@@ -195,12 +195,12 @@ pick_place_demo: /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.83.0
 pick_place_demo: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.83.0
 pick_place_demo: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.83.0
 pick_place_demo: /usr/lib/x86_64-linux-gnu/libboost_atomic.so.1.83.0
+pick_place_demo: /opt/ros/jazzy/lib/libstatic_transform_broadcaster_node.so
 pick_place_demo: /opt/ros/jazzy/lib/libwarehouse_ros.so
 pick_place_demo: /opt/ros/jazzy/lib/libclass_loader.so
 pick_place_demo: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.1.0
 pick_place_demo: /usr/lib/x86_64-linux-gnu/libtinyxml2.so.10.0.0
 pick_place_demo: /usr/lib/x86_64-linux-gnu/liborocos-kdl.so
-pick_place_demo: /opt/ros/jazzy/lib/libstatic_transform_broadcaster_node.so
 pick_place_demo: /usr/lib/x86_64-linux-gnu/libcrypto.so
 pick_place_demo: /home/mario/master_ws/install/moveit_task_constructor_msgs/lib/libmoveit_task_constructor_msgs__rosidl_typesupport_fastrtps_c.so
 pick_place_demo: /home/mario/master_ws/install/moveit_task_constructor_msgs/lib/libmoveit_task_constructor_msgs__rosidl_typesupport_fastrtps_cpp.so
@@ -361,7 +361,7 @@ pick_place_demo: /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_typesupport_fa
 pick_place_demo: /opt/ros/jazzy/lib/librosidl_typesupport_fastrtps_cpp.so
 pick_place_demo: /opt/ros/jazzy/lib/librmw.so
 pick_place_demo: /opt/ros/jazzy/lib/librosidl_dynamic_typesupport.so
-pick_place_demo: /opt/ros/jazzy/lib/libfastcdr.so.2.2.7
+pick_place_demo: /opt/ros/jazzy/lib/libfastcdr.so.2.2.8
 pick_place_demo: /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.so
 pick_place_demo: /opt/ros/jazzy/lib/librosidl_typesupport_introspection_cpp.so
 pick_place_demo: /opt/ros/jazzy/lib/librosidl_typesupport_introspection_c.so

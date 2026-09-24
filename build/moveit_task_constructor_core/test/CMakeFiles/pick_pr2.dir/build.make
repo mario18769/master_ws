@@ -196,12 +196,12 @@ test/pick_pr2: /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.83.0
 test/pick_pr2: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.83.0
 test/pick_pr2: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.83.0
 test/pick_pr2: /usr/lib/x86_64-linux-gnu/libboost_atomic.so.1.83.0
+test/pick_pr2: /opt/ros/jazzy/lib/libstatic_transform_broadcaster_node.so
 test/pick_pr2: /opt/ros/jazzy/lib/libwarehouse_ros.so
 test/pick_pr2: /opt/ros/jazzy/lib/libclass_loader.so
 test/pick_pr2: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.1.0
 test/pick_pr2: /usr/lib/x86_64-linux-gnu/libtinyxml2.so.10.0.0
 test/pick_pr2: /usr/lib/x86_64-linux-gnu/liborocos-kdl.so
-test/pick_pr2: /opt/ros/jazzy/lib/libstatic_transform_broadcaster_node.so
 test/pick_pr2: /usr/lib/x86_64-linux-gnu/libcrypto.so
 test/pick_pr2: /opt/ros/jazzy/lib/libtf2_ros.so
 test/pick_pr2: /opt/ros/jazzy/lib/libmessage_filters.so
@@ -359,7 +359,7 @@ test/pick_pr2: /opt/ros/jazzy/lib/librosidl_typesupport_fastrtps_c.so
 test/pick_pr2: /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_c.so
 test/pick_pr2: /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_cpp.so
 test/pick_pr2: /opt/ros/jazzy/lib/librosidl_typesupport_fastrtps_cpp.so
-test/pick_pr2: /opt/ros/jazzy/lib/libfastcdr.so.2.2.7
+test/pick_pr2: /opt/ros/jazzy/lib/libfastcdr.so.2.2.8
 test/pick_pr2: /opt/ros/jazzy/lib/librmw.so
 test/pick_pr2: /opt/ros/jazzy/lib/librosidl_dynamic_typesupport.so
 test/pick_pr2: /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.so

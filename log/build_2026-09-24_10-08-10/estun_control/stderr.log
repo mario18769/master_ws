@@ -1,0 +1,33 @@
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/cartesian_planner.cpp:1[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:51:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   51 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/cartesian_planner.cpp:2[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/cartesian_planner.cpp:9:45:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ before ‘[01m[K([m[K’ token
+    9 | class CartesianPlanner : public rclcpp::Node[01;31m[K([m[K) {
+      |                                             [01;31m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/cartesian_planner.cpp:9:46:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K)[m[K’ token
+    9 | class CartesianPlanner : public rclcpp::Node([01;31m[K)[m[K {
+      |                                              [01;31m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/cartesian_planner.cpp:24:29:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kclass CartesianPlanner[m[K’
+   24 | void CartesianPlanner::plan([01;31m[K)[m[K{
+      |                             [01;31m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/cartesian_planner.cpp:9:7:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass CartesianPlanner[m[K’
+    9 | class [01;36m[KCartesianPlanner[m[K : public rclcpp::Node() {
+      |       [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/cartesian_planner.cpp:90:28:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kclass CartesianPlanner[m[K’
+   90 | void CartesianPlanner::run([01;31m[K)[m[K {
+      |                            [01;31m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/cartesian_planner.cpp:9:7:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass CartesianPlanner[m[K’
+    9 | class [01;36m[KCartesianPlanner[m[K : public rclcpp::Node() {
+      |       [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/cartesian_planner.cpp:[m[K In function ‘[01m[Kint[01;32m[K main[m[K(int, char**)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/cartesian_planner.cpp:99:20:[m[K [01;31m[Kerror: [m[Kaggregate ‘[01m[KCartesianPlanner cp[m[K’ has incomplete type and cannot be defined
+   99 |   CartesianPlanner [01;31m[Kcp[m[K;
+      |                    [01;31m[K^~[m[K
+gmake[2]: *** [CMakeFiles/cartesian_planner.dir/build.make:76: CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o] Fehler 1
+gmake[1]: *** [CMakeFiles/Makefile2:141: CMakeFiles/cartesian_planner.dir/all] Fehler 2
+gmake: *** [Makefile:146: all] Fehler 2

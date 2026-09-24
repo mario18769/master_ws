@@ -1,0 +1,29 @@
+[0.252s] Invoking command in '/home/mario/master_ws/build/vision_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mario/master_ws/install/estun_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mario/master_ws/build/vision_control -- -j12 -l12
+[0.349s] [ 50%] [32mBuilding CXX object CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o[0m
+[6.711s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kvoid PointCloudProcessor::[01;32m[KprocessPointCloud[m[K()[m[K’:
+[6.711s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:176:25:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kpcl::PointCloud<pcl::PointXYZ>::Ptr[m[K’ {aka ‘[01m[Kstd::shared_ptr<pcl::PointCloud<pcl::PointXYZ> >[m[K’} to ‘[01m[Kconst pcl::PCLBase<pcl::PointNormal>::PointCloudConstPtr&[m[K’ {aka ‘[01m[Kconst std::shared_ptr<const pcl::PointCloud<pcl::PointNormal> >&[m[K’}
+[6.711s]   176 |   grid_2.setInputCloud ([01;31m[Kscene_before_downsampling[m[K);
+[6.711s]       |                         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[6.712s]       |                         [01;31m[K|[m[K
+[6.712s]       |                         [01;31m[Kpcl::PointCloud<pcl::PointXYZ>::Ptr {aka std::shared_ptr<pcl::PointCloud<pcl::PointXYZ> >}[m[K
+[6.712s] In file included from [01m[K/usr/include/pcl-1.14/pcl/correspondence.h:45[m[K,
+[6.712s]                  from [01m[K/usr/include/pcl-1.14/pcl/visualization/pcl_visualizer.h:42[m[K,
+[6.712s]                  from [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:10[m[K:
+[6.712s] [01m[K/usr/include/pcl-1.14/pcl/pcl_base.h:92:48:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid pcl::PCLBase<PointT>::[01;32m[KsetInputCloud[m[K(const PointCloudConstPtr&) [35m[K[with PointT = pcl::PointNormal; PointCloudConstPtr = std::shared_ptr<const pcl::PointCloud<pcl::PointNormal> >][m[K[m[K’
+[6.712s]    92 |       setInputCloud ([01;36m[Kconst PointCloudConstPtr &cloud[m[K);
+[6.712s]       |                      [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~[m[K
+[6.714s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:184:26:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kpcl::PointCloud<pcl::PointXYZ>::Ptr[m[K’ {aka ‘[01m[Kstd::shared_ptr<pcl::PointCloud<pcl::PointXYZ> >[m[K’} to ‘[01m[Kconst pcl::Feature<pcl::PointNormal, pcl::PointXYZ>::PointCloudInConstPtr&[m[K’ {aka ‘[01m[Kconst std::shared_ptr<const pcl::PointCloud<pcl::PointNormal> >&[m[K’}
+[6.714s]   184 |   nest.setSearchSurface ([01;31m[Kscene_before_downsampling[m[K);
+[6.714s]       |                          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[6.714s]       |                          [01;31m[K|[m[K
+[6.714s]       |                          [01;31m[Kpcl::PointCloud<pcl::PointXYZ>::Ptr {aka std::shared_ptr<pcl::PointCloud<pcl::PointXYZ> >}[m[K
+[6.715s] In file included from [01m[K/usr/include/pcl-1.14/pcl/features/normal_3d.h:45[m[K,
+[6.715s]                  from [01m[K/usr/include/pcl-1.14/pcl/features/normal_3d_omp.h:43[m[K,
+[6.715s]                  from [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:16[m[K:
+[6.715s] [01m[K/usr/include/pcl-1.14/pcl/features/feature.h:146:53:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid pcl::Feature<PointInT, PointOutT>::[01;32m[KsetSearchSurface[m[K(const PointCloudInConstPtr&) [35m[K[with PointInT = pcl::PointNormal; PointOutT = pcl::PointXYZ; PointCloudInConstPtr = std::shared_ptr<const pcl::PointCloud<pcl::PointNormal> >][m[K[m[K’
+[6.715s]   146 |       setSearchSurface ([01;36m[Kconst PointCloudInConstPtr &cloud[m[K)
+[6.715s]       |                         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~[m[K
+[10.743s] gmake[2]: *** [CMakeFiles/pcl_pose_estimation.dir/build.make:76: CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o] Fehler 1
+[10.744s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pcl_pose_estimation.dir/all] Fehler 2
+[10.745s] gmake: *** [Makefile:146: all] Fehler 2
+[10.748s] Invoked command in '/home/mario/master_ws/build/vision_control' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mario/master_ws/install/estun_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mario/master_ws/build/vision_control -- -j12 -l12

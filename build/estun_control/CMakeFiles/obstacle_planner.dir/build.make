@@ -106,6 +106,7 @@ obstacle_planner: /opt/ros/jazzy/lib/libstd_srvs__rosidl_generator_py.so
 obstacle_planner: /opt/ros/jazzy/lib/libstd_srvs__rosidl_typesupport_c.so
 obstacle_planner: /opt/ros/jazzy/lib/libstd_srvs__rosidl_generator_c.so
 obstacle_planner: /opt/ros/jazzy/lib/libmoveit_warehouse.so.2.12.4
+obstacle_planner: /opt/ros/jazzy/lib/libstatic_transform_broadcaster_node.so
 obstacle_planner: /opt/ros/jazzy/lib/libmoveit_constraint_sampler_manager_loader.so.2.12.4
 obstacle_planner: /opt/ros/jazzy/lib/libmoveit_cpp.so.2.12.4
 obstacle_planner: /opt/ros/jazzy/lib/libmoveit_plan_execution.so.2.12.4
@@ -247,7 +248,6 @@ obstacle_planner: /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.83.0
 obstacle_planner: /usr/lib/x86_64-linux-gnu/libboost_program_options.so.1.83.0
 obstacle_planner: /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.83.0
 obstacle_planner: /opt/ros/jazzy/lib/libwarehouse_ros.so
-obstacle_planner: /opt/ros/jazzy/lib/libstatic_transform_broadcaster_node.so
 obstacle_planner: /opt/ros/jazzy/lib/libclass_loader.so
 obstacle_planner: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.1.0
 obstacle_planner: /usr/lib/x86_64-linux-gnu/libtinyxml2.so.10.0.0
@@ -349,7 +349,7 @@ obstacle_planner: /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_typesupport_f
 obstacle_planner: /opt/ros/jazzy/lib/librosidl_typesupport_fastrtps_cpp.so
 obstacle_planner: /opt/ros/jazzy/lib/librmw.so
 obstacle_planner: /opt/ros/jazzy/lib/librosidl_dynamic_typesupport.so
-obstacle_planner: /opt/ros/jazzy/lib/libfastcdr.so.2.2.7
+obstacle_planner: /opt/ros/jazzy/lib/libfastcdr.so.2.2.8
 obstacle_planner: /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.so
 obstacle_planner: /opt/ros/jazzy/lib/librosidl_typesupport_introspection_cpp.so
 obstacle_planner: /opt/ros/jazzy/lib/librosidl_typesupport_introspection_c.so
@@ -364,7 +364,7 @@ obstacle_planner: /opt/ros/jazzy/lib/librosidl_runtime_c.so
 obstacle_planner: /opt/ros/jazzy/lib/librcutils.so
 obstacle_planner: /usr/lib/x86_64-linux-gnu/liborocos-kdl.so
 obstacle_planner: /usr/lib/x86_64-linux-gnu/libcrypto.so
-obstacle_planner: /opt/ros/jazzy/opt/gz_math_vendor/lib/libgz-math7.so.7.6.0
+obstacle_planner: /opt/ros/jazzy/opt/gz_math_vendor/lib/libgz-math7.so.7.7.0
 obstacle_planner: /opt/ros/jazzy/opt/gz_utils_vendor/lib/libgz-utils2.so.2.2.1
 obstacle_planner: CMakeFiles/obstacle_planner.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/mario/master_ws/build/estun_control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable obstacle_planner"

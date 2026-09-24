@@ -1,0 +1,194 @@
+[0.275s] Invoking command in '/home/mario/master_ws/build/vision_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mario/master_ws/install/estun_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mario/master_ws/build/vision_control -- -j12 -l12
+[0.390s] [ 50%] [32mBuilding CXX object CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o[0m
+[7.212s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kvoid PointCloudProcessor::[01;32m[KprocessPointCloud[m[K()[m[K’:
+[7.213s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:162:18:[m[K [01;31m[Kerror: [m[K‘[01m[KPoinXYZ[m[K’ was not declared in this scope; did you mean ‘[01m[KPointXYZ[m[K’?
+[7.213s]   162 |   pcl::VoxelGrid<[01;31m[KPoinXYZ[m[K> grid;
+[7.213s]       |                  [01;31m[K^~~~~~~[m[K
+[7.213s]       |                  [32m[KPointXYZ[m[K
+[7.213s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:162:25:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[7.213s]   162 |   pcl::VoxelGrid<PoinXYZ[01;31m[K>[m[K grid;
+[7.213s]       |                         [01;31m[K^[m[K
+[7.213s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:164:8:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KsetLeafSize[m[K’ in ‘[01m[Kgrid[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+[7.213s]   164 |   grid.[01;31m[KsetLeafSize[m[K (leaf, leaf, leaf);
+[7.214s]       |        [01;31m[K^~~~~~~~~~~[m[K
+[7.214s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:165:8:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KsetInputCloud[m[K’ in ‘[01m[Kgrid[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+[7.214s]   165 |   grid.[01;31m[KsetInputCloud[m[K (object);
+[7.214s]       |        [01;31m[K^~~~~~~~~~~~~[m[K
+[7.214s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:166:8:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kfilter[m[K’ in ‘[01m[Kgrid[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+[7.214s]   166 |   grid.[01;31m[Kfilter[m[K (*object);
+[7.214s]       |        [01;31m[K^~~~~~[m[K
+[7.219s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:168:18:[m[K [01;31m[Kerror: [m[K‘[01m[KPoinNT_[m[K’ was not declared in this scope; did you mean ‘[01m[KPointNT[m[K’?
+[7.220s]   168 |   pcl::VoxelGrid<[01;31m[KPoinNT_[m[K> grid_2;
+[7.220s]       |                  [01;31m[K^~~~~~~[m[K
+[7.220s]       |                  [32m[KPointNT[m[K
+[7.220s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:168:25:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[7.220s]   168 |   pcl::VoxelGrid<PoinNT_[01;31m[K>[m[K grid_2;
+[7.220s]       |                         [01;31m[K^[m[K
+[7.220s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:169:10:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KsetLeafSize[m[K’ in ‘[01m[Kgrid_2[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+[7.220s]   169 |   grid_2.[01;31m[KsetLeafSize[m[K (leaf, leaf, leaf);
+[7.221s]       |          [01;31m[K^~~~~~~~~~~[m[K
+[7.221s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:170:10:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[KsetInputCloud[m[K’ in ‘[01m[Kgrid_2[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+[7.221s]   170 |   grid_2.[01;31m[KsetInputCloud[m[K (scene_before_downsampling);
+[7.221s]       |          [01;31m[K^~~~~~~~~~~~~[m[K
+[7.221s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:171:10:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kfilter[m[K’ in ‘[01m[Kgrid_2[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+[7.221s]   171 |   grid_2.[01;31m[Kfilter[m[K (*scene);
+[7.221s]       |          [01;31m[K^~~~~~[m[K
+[7.222s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:177:23:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kpcl::PointCloud<pcl::PointNormal>::Ptr[m[K’ {aka ‘[01m[Kstd::shared_ptr<pcl::PointCloud<pcl::PointNormal> >[m[K’} to ‘[01m[Kconst pcl::NormalEstimation<pcl::PointXYZ, pcl::Normal>::PointCloudConstPtr&[m[K’ {aka ‘[01m[Kconst std::shared_ptr<const pcl::PointCloud<pcl::PointXYZ> >&[m[K’}
+[7.222s]   177 |   nest.setInputCloud ([01;31m[Kscene[m[K);
+[7.222s]       |                       [01;31m[K^~~~~[m[K
+[7.222s]       |                       [01;31m[K|[m[K
+[7.222s]       |                       [01;31m[Kpcl::PointCloud<pcl::PointNormal>::Ptr {aka std::shared_ptr<pcl::PointCloud<pcl::PointNormal> >}[m[K
+[7.222s] In file included from [01m[K/usr/include/pcl-1.14/pcl/features/normal_3d_omp.h:43[m[K,
+[7.223s]                  from [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:16[m[K:
+[7.223s] [01m[K/usr/include/pcl-1.14/pcl/features/normal_3d.h:328:48:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid pcl::NormalEstimation<PointInT, PointOutT>::[01;32m[KsetInputCloud[m[K(const PointCloudConstPtr&) [35m[K[with PointInT = pcl::PointXYZ; PointOutT = pcl::Normal; PointCloudConstPtr = std::shared_ptr<const pcl::PointCloud<pcl::PointXYZ> >][m[K[m[K’
+[7.223s]   328 |       setInputCloud ([01;36m[Kconst PointCloudConstPtr &cloud[m[K) override
+[7.223s]       |                      [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~[m[K
+[7.223s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:178:26:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kpcl::PointCloud<pcl::PointNormal>::Ptr[m[K’ {aka ‘[01m[Kstd::shared_ptr<pcl::PointCloud<pcl::PointNormal> >[m[K’} to ‘[01m[Kconst pcl::Feature<pcl::PointXYZ, pcl::Normal>::PointCloudInConstPtr&[m[K’ {aka ‘[01m[Kconst std::shared_ptr<const pcl::PointCloud<pcl::PointXYZ> >&[m[K’}
+[7.223s]   178 |   nest.setSearchSurface ([01;31m[Kscene_before_downsampling[m[K);
+[7.223s]       |                          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.223s]       |                          [01;31m[K|[m[K
+[7.223s]       |                          [01;31m[Kpcl::PointCloud<pcl::PointNormal>::Ptr {aka std::shared_ptr<pcl::PointCloud<pcl::PointNormal> >}[m[K
+[7.224s] In file included from [01m[K/usr/include/pcl-1.14/pcl/features/normal_3d.h:45[m[K:
+[7.224s] [01m[K/usr/include/pcl-1.14/pcl/features/feature.h:146:53:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid pcl::Feature<PointInT, PointOutT>::[01;32m[KsetSearchSurface[m[K(const PointCloudInConstPtr&) [35m[K[with PointInT = pcl::PointXYZ; PointOutT = pcl::Normal; PointCloudInConstPtr = std::shared_ptr<const pcl::PointCloud<pcl::PointXYZ> >][m[K[m[K’
+[7.224s]   146 |       setSearchSurface ([01;36m[Kconst PointCloudInConstPtr &cloud[m[K)
+[7.224s]       |                         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~[m[K
+[7.225s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:179:17:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kstd::__shared_ptr_access<pcl::PointCloud<pcl::PointNormal>, __gnu_cxx::_S_atomic, false, false>::element_type[m[K’ {aka ‘[01m[Kpcl::PointCloud<pcl::PointNormal>[m[K’} to ‘[01m[Kpcl::Feature<pcl::PointXYZ, pcl::Normal>::PointCloudOut&[m[K’ {aka ‘[01m[Kpcl::PointCloud<pcl::Normal>&[m[K’}
+[7.226s]   179 |   nest.compute ([01;31m[K*scene[m[K);
+[7.226s]       |                 [01;31m[K^~~~~~[m[K
+[7.226s]       |                 [01;31m[K|[m[K
+[7.226s]       |                 [01;31m[Kstd::__shared_ptr_access<pcl::PointCloud<pcl::PointNormal>, __gnu_cxx::_S_atomic, false, false>::element_type {aka pcl::PointCloud<pcl::PointNormal>}[m[K
+[7.226s] In file included from [01m[K/usr/include/pcl-1.14/pcl/features/feature.h:491[m[K:
+[7.226s] [01m[K/usr/include/pcl-1.14/pcl/features/impl/feature.hpp:194:55:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid pcl::Feature<PointInT, PointOutT>::[01;32m[Kcompute[m[K(PointCloudOut&) [35m[K[with PointInT = pcl::PointXYZ; PointOutT = pcl::Normal; PointCloudOut = pcl::PointCloud<pcl::Normal>][m[K[m[K’
+[7.226s]   194 | Feature<PointInT, PointOutT>::compute ([01;36m[KPointCloudOut &output[m[K)
+[7.226s]       |                                        [01;36m[K~~~~~~~~~~~~~~~^~~~~~[m[K
+[7.229s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:186:25:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kpcl::PointCloud<pcl::PointXYZ>::Ptr[m[K’ {aka ‘[01m[Kstd::shared_ptr<pcl::PointCloud<pcl::PointXYZ> >[m[K’} to ‘[01m[Kconst pcl::FeatureFromNormals<pcl::PointXYZ, pcl::PointNormal, pcl::FPFHSignature33>::PointCloudNConstPtr&[m[K’ {aka ‘[01m[Kconst std::shared_ptr<const pcl::PointCloud<pcl::PointNormal> >&[m[K’}
+[7.229s]   186 |   fest.setInputNormals ([01;31m[Kobject[m[K);
+[7.229s]       |                         [01;31m[K^~~~~~[m[K
+[7.229s]       |                         [01;31m[K|[m[K
+[7.229s]       |                         [01;31m[Kpcl::PointCloud<pcl::PointXYZ>::Ptr {aka std::shared_ptr<pcl::PointCloud<pcl::PointXYZ> >}[m[K
+[7.230s] [01m[K/usr/include/pcl-1.14/pcl/features/feature.h:339:51:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid pcl::FeatureFromNormals<PointInT, PointNT, PointOutT>::[01;32m[KsetInputNormals[m[K(const PointCloudNConstPtr&) [35m[K[with PointInT = pcl::PointXYZ; PointNT = pcl::PointNormal; PointOutT = pcl::FPFHSignature33; PointCloudNConstPtr = std::shared_ptr<const pcl::PointCloud<pcl::PointNormal> >][m[K[m[K’
+[7.230s]   339 |       setInputNormals ([01;36m[Kconst PointCloudNConstPtr &normals[m[K) { normals_ = normals; }
+[7.230s]       |                        [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[7.230s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:188:23:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kpcl::PointCloud<pcl::PointNormal>::Ptr[m[K’ {aka ‘[01m[Kstd::shared_ptr<pcl::PointCloud<pcl::PointNormal> >[m[K’} to ‘[01m[Kconst pcl::PCLBase<pcl::PointXYZ>::PointCloudConstPtr&[m[K’ {aka ‘[01m[Kconst std::shared_ptr<const pcl::PointCloud<pcl::PointXYZ> >&[m[K’}
+[7.230s]   188 |   fest.setInputCloud ([01;31m[Kscene[m[K);
+[7.230s]       |                       [01;31m[K^~~~~[m[K
+[7.230s]       |                       [01;31m[K|[m[K
+[7.230s]       |                       [01;31m[Kpcl::PointCloud<pcl::PointNormal>::Ptr {aka std::shared_ptr<pcl::PointCloud<pcl::PointNormal> >}[m[K
+[7.230s] In file included from [01m[K/usr/include/pcl-1.14/pcl/correspondence.h:45[m[K,
+[7.231s]                  from [01m[K/usr/include/pcl-1.14/pcl/visualization/pcl_visualizer.h:42[m[K,
+[7.231s]                  from [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:10[m[K:
+[7.231s] [01m[K/usr/include/pcl-1.14/pcl/pcl_base.h:92:48:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid pcl::PCLBase<PointT>::[01;32m[KsetInputCloud[m[K(const PointCloudConstPtr&) [35m[K[with PointT = pcl::PointXYZ; PointCloudConstPtr = std::shared_ptr<const pcl::PointCloud<pcl::PointXYZ> >][m[K[m[K’
+[7.231s]    92 |       setInputCloud ([01;36m[Kconst PointCloudConstPtr &cloud[m[K);
+[7.231s]       |                      [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~[m[K
+[7.250s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:197:25:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kpcl::PointCloud<pcl::PointNormal>::Ptr[m[K’ {aka ‘[01m[Kstd::shared_ptr<pcl::PointCloud<pcl::PointNormal> >[m[K’} to ‘[01m[Kconst pcl::Registration<pcl::PointXYZ, pcl::Normal, float>::PointCloudTargetConstPtr&[m[K’ {aka ‘[01m[Kconst std::shared_ptr<const pcl::PointCloud<pcl::Normal> >&[m[K’}
+[7.250s]   197 |   align.setInputTarget ([01;31m[Kscene[m[K);
+[7.250s]       |                         [01;31m[K^~~~~[m[K
+[7.250s]       |                         [01;31m[K|[m[K
+[7.250s]       |                         [01;31m[Kpcl::PointCloud<pcl::PointNormal>::Ptr {aka std::shared_ptr<pcl::PointCloud<pcl::PointNormal> >}[m[K
+[7.250s] In file included from [01m[K/usr/include/pcl-1.14/pcl/registration/registration.h:700[m[K,
+[7.251s]                  from [01m[K/usr/include/pcl-1.14/pcl/registration/sample_consensus_prerejective.h:44[m[K,
+[7.251s]                  from [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:20[m[K:
+[7.251s] [01m[K/usr/include/pcl-1.14/pcl/registration/impl/registration.hpp:62:37:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid pcl::Registration<PointSource, PointTarget, Scalar>::[01;32m[KsetInputTarget[m[K(const PointCloudTargetConstPtr&) [35m[K[with PointSource = pcl::PointXYZ; PointTarget = pcl::Normal; Scalar = float; PointCloudTargetConstPtr = std::shared_ptr<const pcl::PointCloud<pcl::Normal> >][m[K[m[K’
+[7.251s]    62 |     [01;36m[Kconst PointCloudTargetConstPtr& cloud[m[K)
+[7.251s]       |     [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~[m[K
+[7.252s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:225:69:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kpcl::visualization::PointCloudColorHandlerCustom<pcl::PointXYZ>::PointCloudColorHandlerCustom(pcl::PointCloud<pcl::PointNormal>::Ptr&, double, double, double)[m[K’
+[7.252s]   225 |     visu.addPointCloud (scene, ColorHandlerT (scene, 0.0, 255.0, 0.0[01;31m[K)[m[K, "scene");
+[7.252s]       |                                                                     [01;31m[K^[m[K
+[7.252s] In file included from [01m[K/usr/include/pcl-1.14/pcl/visualization/common/actor_map.h:41[m[K,
+[7.252s]                  from [01m[K/usr/include/pcl-1.14/pcl/visualization/pcl_visualizer.h:48[m[K:
+[7.252s] [01m[K/usr/include/pcl-1.14/pcl/visualization/point_cloud_color_handlers.h:207:9:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kpcl::visualization::PointCloudColorHandlerCustom<PointT>::[01;32m[KPointCloudColorHandlerCustom[m[K(const PointCloudConstPtr&, double, double, double) [35m[K[with PointT = pcl::PointXYZ; PointCloudConstPtr = std::shared_ptr<const pcl::PointCloud<pcl::PointXYZ> >][m[K[m[K’
+[7.252s]   207 |         [01;36m[KPointCloudColorHandlerCustom[m[K (const PointCloudConstPtr &cloud,
+[7.253s]       |         [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.253s] [01m[K/usr/include/pcl-1.14/pcl/visualization/point_cloud_color_handlers.h:207:65:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpcl::PointCloud<pcl::PointNormal>::Ptr[m[K’ {aka ‘[01m[Kstd::shared_ptr<pcl::PointCloud<pcl::PointNormal> >[m[K’} to ‘[01m[Kconst pcl::visualization::PointCloudColorHandlerCustom<pcl::PointXYZ>::PointCloudConstPtr&[m[K’ {aka ‘[01m[Kconst std::shared_ptr<const pcl::PointCloud<pcl::PointXYZ> >&[m[K’}
+[7.253s]   207 |         PointCloudColorHandlerCustom ([01;36m[Kconst PointCloudConstPtr &cloud[m[K,
+[7.253s]       |                                       [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~[m[K
+[7.253s] [01m[K/usr/include/pcl-1.14/pcl/visualization/point_cloud_color_handlers.h:197:9:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kpcl::visualization::PointCloudColorHandlerCustom<PointT>::[01;32m[KPointCloudColorHandlerCustom[m[K(double, double, double) [35m[K[with PointT = pcl::PointXYZ][m[K[m[K’
+[7.253s]   197 |         [01;36m[KPointCloudColorHandlerCustom[m[K (double r, double g, double b)
+[7.253s]       |         [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.253s] [01m[K/usr/include/pcl-1.14/pcl/visualization/point_cloud_color_handlers.h:197:9:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 4 provided
+[7.253s] [01m[K/usr/include/pcl-1.14/pcl/visualization/point_cloud_color_handlers.h:186:11:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kpcl::visualization::PointCloudColorHandlerCustom<pcl::PointXYZ>::[01;32m[KPointCloudColorHandlerCustom[m[K(const pcl::visualization::PointCloudColorHandlerCustom<pcl::PointXYZ>&)[m[K’
+[7.254s]   186 |     class [01;36m[KPointCloudColorHandlerCustom[m[K : public PointCloudColorHandler<PointT>
+[7.254s]       |           [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.254s] [01m[K/usr/include/pcl-1.14/pcl/visualization/point_cloud_color_handlers.h:186:11:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 4 provided
+[7.254s] [01m[K/usr/include/pcl-1.14/pcl/visualization/point_cloud_color_handlers.h:186:11:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kpcl::visualization::PointCloudColorHandlerCustom<pcl::PointXYZ>::[01;32m[KPointCloudColorHandlerCustom[m[K(pcl::visualization::PointCloudColorHandlerCustom<pcl::PointXYZ>&&)[m[K’
+[7.254s] [01m[K/usr/include/pcl-1.14/pcl/visualization/point_cloud_color_handlers.h:186:11:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 4 provided
+[10.723s] In file included from [01m[K/usr/include/pcl-1.14/pcl/registration/transformation_estimation_svd.h:157[m[K,
+[10.723s]                  from [01m[K/usr/include/pcl-1.14/pcl/registration/sample_consensus_prerejective.h:45[m[K:
+[10.723s] /usr/include/pcl-1.14/pcl/registration/impl/transformation_estimation_svd.hpp: In instantiation of ‘[01m[Kvoid pcl::registration::TransformationEstimationSVD<PointSource, PointTarget, Scalar>::[01;32m[KestimateRigidTransformation[m[K(pcl::ConstCloudIterator<PointT>&, pcl::ConstCloudIterator<PointTarget>&, Matrix4&) const [35m[K[with PointSource = pcl::PointXYZ; PointTarget = pcl::Normal; Scalar = float; Matrix4 = Eigen::Matrix<float, 4, 4>][m[K[m[K’:
+[10.723s] [01m[K/usr/include/pcl-1.14/pcl/registration/impl/transformation_estimation_svd.hpp:68:30:[m[K   required from ‘[01m[Kvoid pcl::registration::TransformationEstimationSVD<PointSource, PointTarget, Scalar>::[01;32m[KestimateRigidTransformation[m[K(const pcl::PointCloud<PointT>&, const pcl::PointCloud<PointOutT>&, Matrix4&) const [35m[K[with PointSource = pcl::PointXYZ; PointTarget = pcl::Normal; Scalar = float; Matrix4 = Eigen::Matrix<float, 4, 4>][m[K[m[K’
+[10.723s] [01m[K/usr/include/pcl-1.14/pcl/registration/impl/transformation_estimation_svd.hpp:52:1:[m[K   required from here
+[10.723s] [01m[K/usr/include/pcl-1.14/pcl/registration/impl/transformation_estimation_svd.hpp:147:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst struct pcl::Normal[m[K’ has no member named ‘[01m[Kx[m[K’
+[10.723s]   147 |       cloud_tgt(0, i) = [01;31m[Ktarget_it->x[m[K;
+[10.723s]       |                         [01;31m[K~~~~~~~~~~~^[m[K
+[10.723s] [01m[K/usr/include/pcl-1.14/pcl/registration/impl/transformation_estimation_svd.hpp:148:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst struct pcl::Normal[m[K’ has no member named ‘[01m[Ky[m[K’
+[10.724s]   148 |       cloud_tgt(1, i) = [01;31m[Ktarget_it->y[m[K;
+[10.724s]       |                         [01;31m[K~~~~~~~~~~~^[m[K
+[10.724s] [01m[K/usr/include/pcl-1.14/pcl/registration/impl/transformation_estimation_svd.hpp:149:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst struct pcl::Normal[m[K’ has no member named ‘[01m[Kz[m[K’
+[10.724s]   149 |       cloud_tgt(2, i) = [01;31m[Ktarget_it->z[m[K;
+[10.724s]       |                         [01;31m[K~~~~~~~~~~~^[m[K
+[10.745s] In file included from [01m[K/usr/include/pcl-1.14/pcl/registration/sample_consensus_prerejective.h:326[m[K:
+[10.745s] /usr/include/pcl-1.14/pcl/registration/impl/sample_consensus_prerejective.hpp: In instantiation of ‘[01m[Kvoid pcl::SampleConsensusPrerejective<PointSource, PointTarget, FeatureT>::[01;32m[KgetFitness[m[K(pcl::Indices&, float&) [35m[K[with PointSource = pcl::PointXYZ; PointTarget = pcl::Normal; FeatureT = pcl::FPFHSignature33; pcl::Indices = std::vector<int, std::allocator<int> >][m[K[m[K’:
+[10.745s] [01m[K/usr/include/pcl-1.14/pcl/registration/impl/sample_consensus_prerejective.hpp:231:5:[m[K   required from ‘[01m[Kvoid pcl::SampleConsensusPrerejective<PointSource, PointTarget, FeatureT>::[01;32m[KcomputeTransformation[m[K(PointCloudSource&, const Eigen::Matrix4f&) [35m[K[with PointSource = pcl::PointXYZ; PointTarget = pcl::Normal; FeatureT = pcl::FPFHSignature33; PointCloudSource = pcl::PointCloud<pcl::PointXYZ>; Eigen::Matrix4f = Eigen::Matrix<float, 4, 4>][m[K[m[K’
+[10.745s] [01m[K/usr/include/pcl-1.14/pcl/registration/impl/sample_consensus_prerejective.hpp:154:1:[m[K   required from here
+[10.746s] [01m[K/usr/include/pcl-1.14/pcl/registration/impl/sample_consensus_prerejective.hpp:328:26:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kpcl::search::KdTree<pcl::Normal, pcl::KdTreeFLANN<pcl::Normal, flann::L2_Simple<float> > >::nearestKSearch(pcl::PointXYZ&, int, pcl::Indices&, std::vector<float>&)[m[K’
+[10.746s]   328 |     [01;31m[Ktree_->nearestKSearch(input_transformed[i], 1, nn_indices, nn_dists)[m[K;
+[10.746s]       |     [01;31m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[10.746s] In file included from [01m[K/usr/include/pcl-1.14/pcl/sample_consensus/sac_model.h:58[m[K,
+[10.746s]                  from [01m[K/usr/include/pcl-1.14/pcl/filters/project_inliers.h:44[m[K,
+[10.746s]                  from [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:11[m[K:
+[10.746s] [01m[K/usr/include/pcl-1.14/pcl/search/search.h:217:9:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid pcl::search::Search<PointT>::[01;32m[KnearestKSearch[m[K(const PointCloud&, const pcl::Indices&, int, std::vector<std::vector<int, std::allocator<int> > >&, std::vector<std::vector<float> >&) const [35m[K[with PointT = pcl::Normal; PointCloud = pcl::PointCloud<pcl::Normal>; pcl::Indices = std::vector<int, std::allocator<int> >][m[K[m[K’
+[10.746s]   217 |         [01;36m[KnearestKSearch[m[K (const PointCloud& cloud, const Indices& indices,
+[10.746s]       |         [01;36m[K^~~~~~~~~~~~~~[m[K
+[10.746s] [01m[K/usr/include/pcl-1.14/pcl/search/search.h:217:9:[m[K [01;36m[Knote: [m[K  candidate expects 5 arguments, 4 provided
+[10.746s] [01m[K/usr/include/pcl-1.14/pcl/search/search.h:205:9:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kint pcl::search::Search<PointT>::[01;32m[KnearestKSearch[m[K(pcl::index_t, int, pcl::Indices&, std::vector<float>&) const [35m[K[with PointT = pcl::Normal; pcl::index_t = int; pcl::Indices = std::vector<int, std::allocator<int> >][m[K[m[K’
+[10.747s]   205 |         [01;36m[KnearestKSearch[m[K (index_t index, int k,
+[10.747s]       |         [01;36m[K^~~~~~~~~~~~~~[m[K
+[10.747s] [01m[K/usr/include/pcl-1.14/pcl/search/search.h:205:33:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpcl::PointXYZ[m[K’ to ‘[01m[Kpcl::index_t[m[K’ {aka ‘[01m[Kint[m[K’}
+[10.747s]   205 |         nearestKSearch ([01;36m[Kindex_t index[m[K, int k,
+[10.747s]       |                         [01;36m[K~~~~~~~~^~~~~[m[K
+[10.747s] [01m[K/usr/include/pcl-1.14/pcl/search/search.h:183:9:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kint pcl::search::Search<PointT>::[01;32m[KnearestKSearch[m[K(const PointCloud&, pcl::index_t, int, pcl::Indices&, std::vector<float>&) const [35m[K[with PointT = pcl::Normal; PointCloud = pcl::PointCloud<pcl::Normal>; pcl::index_t = int; pcl::Indices = std::vector<int, std::allocator<int> >][m[K[m[K’
+[10.747s]   183 |         [01;36m[KnearestKSearch[m[K (const PointCloud &cloud, index_t index, int k,
+[10.747s]       |         [01;36m[K^~~~~~~~~~~~~~[m[K
+[10.747s] [01m[K/usr/include/pcl-1.14/pcl/search/search.h:183:9:[m[K [01;36m[Knote: [m[K  candidate expects 5 arguments, 4 provided
+[10.747s] In file included from [01m[K/usr/include/pcl-1.14/pcl/features/impl/feature.hpp:44[m[K:
+[10.747s] [01m[K/usr/include/pcl-1.14/pcl/search/kdtree.h:144:9:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kint pcl::search::KdTree<PointT, Tree>::[01;32m[KnearestKSearch[m[K(const PointT&, int, pcl::Indices&, std::vector<float>&) const [35m[K[with PointT = pcl::Normal; Tree = pcl::KdTreeFLANN<pcl::Normal, flann::L2_Simple<float> >; pcl::Indices = std::vector<int, std::allocator<int> >][m[K[m[K’
+[10.748s]   144 |         [01;36m[KnearestKSearch[m[K (const PointT &point, int k,
+[10.748s]       |         [01;36m[K^~~~~~~~~~~~~~[m[K
+[10.748s] [01m[K/usr/include/pcl-1.14/pcl/search/kdtree.h:144:39:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpcl::PointXYZ[m[K’ to ‘[01m[Kconst pcl::Normal&[m[K’
+[10.748s]   144 |         nearestKSearch ([01;36m[Kconst PointT &point[m[K, int k,
+[10.748s]       |                         [01;36m[K~~~~~~~~~~~~~~^~~~~[m[K
+[10.859s] In file included from [01m[K/usr/include/pcl-1.14/pcl/registration/sample_consensus_prerejective.h:43[m[K:
+[10.859s] /usr/include/pcl-1.14/pcl/registration/correspondence_rejection_poly.h: In instantiation of ‘[01m[Kbool pcl::registration::CorrespondenceRejectorPoly<SourceT, TargetT>::[01;32m[KthresholdEdgeLength[m[K(int, int, int, int, float) [35m[K[with SourceT = pcl::PointXYZ; TargetT = pcl::Normal][m[K[m[K’:
+[10.859s] [01m[K/usr/include/pcl-1.14/pcl/registration/correspondence_rejection_poly.h:213:15:[m[K   required from ‘[01m[Kbool pcl::registration::CorrespondenceRejectorPoly<SourceT, TargetT>::[01;32m[KthresholdPolygon[m[K(const pcl::Correspondences&, const std::vector<int, std::allocator<int> >&) [35m[K[with SourceT = pcl::PointXYZ; TargetT = pcl::Normal; pcl::Correspondences = std::vector<pcl::Correspondence, Eigen::aligned_allocator<pcl::Correspondence> >][m[K[m[K’
+[10.859s] [01m[K/usr/include/pcl-1.14/pcl/registration/impl/correspondence_rejection_poly.hpp:117:25:[m[K   required from ‘[01m[Kvoid pcl::registration::CorrespondenceRejectorPoly<SourceT, TargetT>::[01;32m[KgetRemainingCorrespondences[m[K(const pcl::Correspondences&, pcl::Correspondences&) [35m[K[with SourceT = pcl::PointXYZ; TargetT = pcl::Normal; pcl::Correspondences = std::vector<pcl::Correspondence, Eigen::aligned_allocator<pcl::Correspondence> >][m[K[m[K’
+[10.860s] [01m[K/usr/include/pcl-1.14/pcl/registration/impl/correspondence_rejection_poly.hpp:48:1:[m[K   required from here
+[10.860s] [01m[K/usr/include/pcl-1.14/pcl/registration/correspondence_rejection_poly.h:329:31:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kconst pcl::PointXYZ[m[K’ to ‘[01m[Kconst pcl::Normal&[m[K’
+[10.860s]   329 |         [01;31m[KcomputeSquaredDistance((*input_)[index_query_1], (*input_)[index_query_2])[m[K;
+[10.860s]       |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[10.860s] [01m[K/usr/include/pcl-1.14/pcl/registration/correspondence_rejection_poly.h:303:60:[m[K [01;36m[Knote: [m[K  initializing argument 2 of ‘[01m[Kfloat pcl::registration::CorrespondenceRejectorPoly<SourceT, TargetT>::[01;32m[KcomputeSquaredDistance[m[K(const SourceT&, const TargetT&) [35m[K[with SourceT = pcl::PointXYZ; TargetT = pcl::Normal][m[K[m[K’
+[10.860s]   303 |   computeSquaredDistance(const SourceT& p1, [01;36m[Kconst TargetT& p2[m[K)
+[10.860s]       |                                             [01;36m[K~~~~~~~~~~~~~~~^~[m[K
+[10.860s] [01m[K/usr/include/pcl-1.14/pcl/registration/correspondence_rejection_poly.h:332:31:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kconst pcl::Normal[m[K’ to ‘[01m[Kconst pcl::PointXYZ&[m[K’
+[10.860s]   332 |         [01;31m[KcomputeSquaredDistance((*target_)[index_match_1], (*target_)[index_match_2])[m[K;
+[10.860s]       |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[10.860s] [01m[K/usr/include/pcl-1.14/pcl/registration/correspondence_rejection_poly.h:303:41:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kfloat pcl::registration::CorrespondenceRejectorPoly<SourceT, TargetT>::[01;32m[KcomputeSquaredDistance[m[K(const SourceT&, const TargetT&) [35m[K[with SourceT = pcl::PointXYZ; TargetT = pcl::Normal][m[K[m[K’
+[10.861s]   303 |   computeSquaredDistance([01;36m[Kconst SourceT& p1[m[K, const TargetT& p2)
+[10.861s]       |                          [01;36m[K~~~~~~~~~~~~~~~^~[m[K
+[10.977s] /usr/include/pcl-1.14/pcl/registration/correspondence_rejection_poly.h: In instantiation of ‘[01m[Kfloat pcl::registration::CorrespondenceRejectorPoly<SourceT, TargetT>::[01;32m[KcomputeSquaredDistance[m[K(const SourceT&, const TargetT&) [35m[K[with SourceT = pcl::PointXYZ; TargetT = pcl::Normal][m[K[m[K’:
+[10.977s] [01m[K/usr/include/pcl-1.14/pcl/registration/correspondence_rejection_poly.h:329:9:[m[K   required from ‘[01m[Kbool pcl::registration::CorrespondenceRejectorPoly<SourceT, TargetT>::[01;32m[KthresholdEdgeLength[m[K(int, int, int, int, float) [35m[K[with SourceT = pcl::PointXYZ; TargetT = pcl::Normal][m[K[m[K’
+[10.977s] [01m[K/usr/include/pcl-1.14/pcl/registration/correspondence_rejection_poly.h:213:15:[m[K   required from ‘[01m[Kbool pcl::registration::CorrespondenceRejectorPoly<SourceT, TargetT>::[01;32m[KthresholdPolygon[m[K(const pcl::Correspondences&, const std::vector<int, std::allocator<int> >&) [35m[K[with SourceT = pcl::PointXYZ; TargetT = pcl::Normal; pcl::Correspondences = std::vector<pcl::Correspondence, Eigen::aligned_allocator<pcl::Correspondence> >][m[K[m[K’
+[10.977s] [01m[K/usr/include/pcl-1.14/pcl/registration/impl/correspondence_rejection_poly.hpp:117:25:[m[K   required from ‘[01m[Kvoid pcl::registration::CorrespondenceRejectorPoly<SourceT, TargetT>::[01;32m[KgetRemainingCorrespondences[m[K(const pcl::Correspondences&, pcl::Correspondences&) [35m[K[with SourceT = pcl::PointXYZ; TargetT = pcl::Normal; pcl::Correspondences = std::vector<pcl::Correspondence, Eigen::aligned_allocator<pcl::Correspondence> >][m[K[m[K’
+[10.977s] [01m[K/usr/include/pcl-1.14/pcl/registration/impl/correspondence_rejection_poly.hpp:48:1:[m[K   required from here
+[10.977s] [01m[K/usr/include/pcl-1.14/pcl/registration/correspondence_rejection_poly.h:305:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst struct pcl::Normal[m[K’ has no member named ‘[01m[Kx[m[K’
+[10.978s]   305 |     const float dx = [01;31m[Kp2.x[m[K - p1.x;
+[10.978s]       |                      [01;31m[K~~~^[m[K
+[10.978s] [01m[K/usr/include/pcl-1.14/pcl/registration/correspondence_rejection_poly.h:306:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst struct pcl::Normal[m[K’ has no member named ‘[01m[Ky[m[K’
+[10.978s]   306 |     const float dy = [01;31m[Kp2.y[m[K - p1.y;
+[10.978s]       |                      [01;31m[K~~~^[m[K
+[10.978s] [01m[K/usr/include/pcl-1.14/pcl/registration/correspondence_rejection_poly.h:307:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst struct pcl::Normal[m[K’ has no member named ‘[01m[Kz[m[K’
+[10.978s]   307 |     const float dz = [01;31m[Kp2.z[m[K - p1.z;
+[10.978s]       |                      [01;31m[K~~~^[m[K
+[12.186s] gmake[2]: *** [CMakeFiles/pcl_pose_estimation.dir/build.make:76: CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o] Fehler 1
+[12.187s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pcl_pose_estimation.dir/all] Fehler 2
+[12.187s] gmake: *** [Makefile:146: all] Fehler 2
+[12.190s] Invoked command in '/home/mario/master_ws/build/vision_control' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mario/master_ws/install/estun_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mario/master_ws/build/vision_control -- -j12 -l12

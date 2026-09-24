@@ -1,0 +1,20 @@
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kvoid PointCloudProcessor::[01;32m[Kgenerate_cylinder_master[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:65:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kspacing_z[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   65 |     double [01;35m[Kspacing_z[m[K= cyl_height/spaces_z;
+      |            [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K At global scope:
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:142:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kvisu[m[K’ does not name a type
+  142 |     [01;31m[Kvisu[m[K.addPointCloud(output, ColorHandlerT(output, 0.0, 255.0, 0.0), "Probekoerper");
+      |     [01;31m[K^~~~[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:143:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kvisu[m[K’ does not name a type
+  143 |     [01;31m[Kvisu[m[K.addPointCloud(cloud, ColorHandlerT(cloud, 255.0, 0.0, 0.0), "Projektion");
+      |     [01;31m[K^~~~[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:144:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kvisu[m[K’ does not name a type
+  144 |     [01;31m[Kvisu[m[K.spin ();
+      |     [01;31m[K^~~~[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:145:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+  145 | [01;31m[K}[m[K
+      | [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/pcl_pose_estimation.dir/build.make:76: CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o] Fehler 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pcl_pose_estimation.dir/all] Fehler 2
+gmake: *** [Makefile:146: all] Fehler 2

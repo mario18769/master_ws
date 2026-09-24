@@ -1,0 +1,14 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o[0m
+[100%] [32m[1mLinking CXX executable pcl_pose_estimation[0m
+/usr/bin/ld: CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: In Funktion »pcl::NormalEstimationOMP<pcl::PointNormal, pcl::PointXYZ>::NormalEstimationOMP(unsigned int, int)«:
+pcl_pose_estimation.cpp:(.text._ZN3pcl19NormalEstimationOMPINS_11PointNormalENS_8PointXYZEEC2Eji[_ZN3pcl19NormalEstimationOMPINS_11PointNormalENS_8PointXYZEEC5Eji]+0x69): undefinierter Verweis auf »pcl::NormalEstimationOMP<pcl::PointNormal, pcl::PointXYZ>::setNumberOfThreads(unsigned int)«
+/usr/bin/ld: CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: In Funktion »pcl::FPFHEstimationOMP<pcl::PointXYZ, pcl::PointXYZ, pcl::FPFHSignature33>::FPFHEstimationOMP(unsigned int)«:
+pcl_pose_estimation.cpp:(.text._ZN3pcl17FPFHEstimationOMPINS_8PointXYZES1_NS_15FPFHSignature33EEC2Ej[_ZN3pcl17FPFHEstimationOMPINS_8PointXYZES1_NS_15FPFHSignature33EEC5Ej]+0x83): undefinierter Verweis auf »pcl::FPFHEstimationOMP<pcl::PointXYZ, pcl::PointXYZ, pcl::FPFHSignature33>::setNumberOfThreads(unsigned int)«
+/usr/bin/ld: CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o:(.data.rel.ro._ZTVN3pcl17FPFHEstimationOMPINS_8PointXYZES1_NS_15FPFHSignature33EEE[_ZTVN3pcl17FPFHEstimationOMPINS_8PointXYZES1_NS_15FPFHSignature33EEE]+0x58): undefinierter Verweis auf »pcl::FPFHEstimationOMP<pcl::PointXYZ, pcl::PointXYZ, pcl::FPFHSignature33>::computeFeature(pcl::PointCloud<pcl::FPFHSignature33>&)«
+/usr/bin/ld: CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o:(.data.rel.ro._ZTVN3pcl14FPFHEstimationINS_8PointXYZES1_NS_15FPFHSignature33EEE[_ZTVN3pcl14FPFHEstimationINS_8PointXYZES1_NS_15FPFHSignature33EEE]+0x58): undefinierter Verweis auf »pcl::FPFHEstimation<pcl::PointXYZ, pcl::PointXYZ, pcl::FPFHSignature33>::computeFeature(pcl::PointCloud<pcl::FPFHSignature33>&)«
+/usr/bin/ld: CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o:(.data.rel.ro._ZTVN3pcl19NormalEstimationOMPINS_11PointNormalENS_8PointXYZEEE[_ZTVN3pcl19NormalEstimationOMPINS_11PointNormalENS_8PointXYZEEE]+0x58): undefinierter Verweis auf »pcl::NormalEstimationOMP<pcl::PointNormal, pcl::PointXYZ>::computeFeature(pcl::PointCloud<pcl::PointXYZ>&)«
+/usr/bin/ld: CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o:(.data.rel.ro._ZTVN3pcl16NormalEstimationINS_11PointNormalENS_8PointXYZEEE[_ZTVN3pcl16NormalEstimationINS_11PointNormalENS_8PointXYZEEE]+0x58): undefinierter Verweis auf »pcl::NormalEstimation<pcl::PointNormal, pcl::PointXYZ>::computeFeature(pcl::PointCloud<pcl::PointXYZ>&)«
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/pcl_pose_estimation.dir/build.make:393: pcl_pose_estimation] Fehler 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pcl_pose_estimation.dir/all] Fehler 2
+gmake: *** [Makefile:146: all] Fehler 2

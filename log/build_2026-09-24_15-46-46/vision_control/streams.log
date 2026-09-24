@@ -1,0 +1,23 @@
+[0.272s] Invoking command in '/home/mario/master_ws/build/vision_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mario/master_ws/install/estun_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mario/master_ws/build/vision_control -- -j12 -l12
+[0.412s] [ 50%] [32mBuilding CXX object CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o[0m
+[6.644s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kvoid PointCloudProcessor::[01;32m[Kgenerate_cylinder_master[m[K()[m[K’:
+[6.645s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:65:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kspacing_z[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[6.645s]    65 |     double [01;35m[Kspacing_z[m[K= cyl_height/spaces_z;
+[6.645s]       |            [01;35m[K^~~~~~~~~[m[K
+[6.647s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K At global scope:
+[6.647s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:142:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kvisu[m[K’ does not name a type
+[6.648s]   142 |     [01;31m[Kvisu[m[K.addPointCloud(output, ColorHandlerT(output, 0.0, 255.0, 0.0), "Probekoerper");
+[6.648s]       |     [01;31m[K^~~~[m[K
+[6.649s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:143:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kvisu[m[K’ does not name a type
+[6.649s]   143 |     [01;31m[Kvisu[m[K.addPointCloud(cloud, ColorHandlerT(cloud, 255.0, 0.0, 0.0), "Projektion");
+[6.649s]       |     [01;31m[K^~~~[m[K
+[6.650s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:144:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kvisu[m[K’ does not name a type
+[6.651s]   144 |     [01;31m[Kvisu[m[K.spin ();
+[6.651s]       |     [01;31m[K^~~~[m[K
+[6.651s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:145:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+[6.651s]   145 | [01;31m[K}[m[K
+[6.651s]       | [01;31m[K^[m[K
+[9.222s] gmake[2]: *** [CMakeFiles/pcl_pose_estimation.dir/build.make:76: CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o] Fehler 1
+[9.222s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pcl_pose_estimation.dir/all] Fehler 2
+[9.222s] gmake: *** [Makefile:146: all] Fehler 2
+[9.225s] Invoked command in '/home/mario/master_ws/build/vision_control' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mario/master_ws/install/estun_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mario/master_ws/build/vision_control -- -j12 -l12

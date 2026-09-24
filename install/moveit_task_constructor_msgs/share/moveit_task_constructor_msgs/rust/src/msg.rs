@@ -345,8 +345,8 @@ impl rosidl_runtime_rs::Message for StageStatistics {
     match msg_cow {
       std::borrow::Cow::Owned(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
         id: msg.id,
-        solved: msg.solved.into(),
-        failed: msg.failed.into(),
+        solved: msg.solved.as_slice().into(),
+        failed: msg.failed.as_slice().into(),
         num_failed: msg.num_failed,
         total_compute_time: msg.total_compute_time,
       }),
@@ -363,12 +363,8 @@ impl rosidl_runtime_rs::Message for StageStatistics {
   fn from_rmw_message(msg: Self::RmwMsg) -> Self {
     Self {
       id: msg.id,
-      solved: msg.solved
-          .into_iter()
-          .collect(),
-      failed: msg.failed
-          .into_iter()
-          .collect(),
+      solved: msg.solved.into(),
+      failed: msg.failed.into(),
       num_failed: msg.num_failed,
       total_compute_time: msg.total_compute_time,
     }
@@ -407,7 +403,7 @@ impl rosidl_runtime_rs::Message for SubSolution {
     match msg_cow {
       std::borrow::Cow::Owned(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
         info: super::msg::SolutionInfo::into_rmw_message(std::borrow::Cow::Owned(msg.info)).into_owned(),
-        sub_solution_id: msg.sub_solution_id.into(),
+        sub_solution_id: msg.sub_solution_id.as_slice().into(),
       }),
       std::borrow::Cow::Borrowed(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
         info: super::msg::SolutionInfo::into_rmw_message(std::borrow::Cow::Borrowed(&msg.info)).into_owned(),
@@ -419,9 +415,7 @@ impl rosidl_runtime_rs::Message for SubSolution {
   fn from_rmw_message(msg: Self::RmwMsg) -> Self {
     Self {
       info: super::msg::SolutionInfo::from_rmw_message(msg.info),
-      sub_solution_id: msg.sub_solution_id
-          .into_iter()
-          .collect(),
+      sub_solution_id: msg.sub_solution_id.into(),
     }
   }
 }

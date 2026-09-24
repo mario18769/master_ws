@@ -1,7 +1,10 @@
 <?xml version="1.0" ?>
 
-<sdf version="1.6">
+<sdf version="1.9">
   <world name="empty">
+    <!-- <frame name="world_frame">
+    </frame> -->
+
     <physics name="1ms" type="ignored">
       <max_step_size>0.001</max_step_size>
       <real_time_factor>1.0</real_time_factor>
@@ -22,6 +25,91 @@
       filename="gz-sim-contact-system"
       name="gz::sim::systems::Contact">
     </plugin>
+    <plugin
+      filename="gz-sim-sensors-system"
+      name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+
+
+
+    <model name="Sensor">
+      <!-- <frame name="Sensor_1" attached_to="world">
+        <pose>0 0 0 0 0 0</pose>
+      </frame> -->
+      <!-- <joint name="Sensor_joint" type="fixed">
+        <parent>world</parent>
+        <child>link_sensor</child>
+        <pose>0 0 0 0 0 0</pose>
+      </joint> -->
+
+      <pose>-0.3 -0.0 1 0 0.0 -1.5707</pose>
+      <static>true</static> 
+      <link name="link_sensor">
+        <pose>0.0 0.0 0 0 0 0</pose>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.000166667</ixx>
+            <iyy>0.000166667</iyy>
+            <izz>0.000166667</izz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
+          </geometry>
+        </visual>
+        <sensor name="rgbd_camera" type="rgbd_camera">
+          <!-- <frame_id>world</frame_id> -->
+          <visualize>true</visualize>
+          <camera>
+            <horizontal_fov>1.04</horizontal_fov>
+            <image>
+              <width>320</width>
+              <height>240</height>
+              <format>R8G8B8</format>
+            </image>
+            <clip>
+              <near>0.3</near>
+              <far>10</far>
+            </clip>
+          </camera>
+          <always_on>1</always_on>
+          <update_rate>30</update_rate>
+          <visualize>true</visualize>
+          <topic>rgbd_camera</topic>
+          <enable_metrics>true</enable_metrics>
+        </sensor>
+        <sensor name="depth_camera1" type="depth_camera">
+          <!-- <frame_id>world</frame_id> -->
+          <update_rate>0.1</update_rate>
+          <topic>depth_camera</topic>
+          <enable_metrics>true</enable_metrics>
+          <camera>
+            <horizontal_fov>1.05</horizontal_fov>
+            <image>
+              <width>320</width>
+              <height>240</height>
+              <format>R_FLOAT32</format>
+            </image>
+            <clip>
+              <near>0.1</near>
+              <far>10.0</far>
+            </clip>
+          </camera>
+        </sensor>
+      </link>
+    </model>
 
     <light type="directional" name="sun">
       <cast_shadows>true</cast_shadows>

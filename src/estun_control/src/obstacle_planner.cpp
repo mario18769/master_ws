@@ -197,7 +197,7 @@ void ObstaclePlanner::setup_world(){
         RCLCPP_INFO(this->get_logger(),"For-Schleife angekommen");
         moveit_msgs::msg::CollisionObject test_object; //Collisions Objekt wird angelegt
         test_object.header.frame_id = _move_group->getPlanningFrame();
-        RCLCPP_INFO(this->get_logger(),"Fehler bei getPlanningFrame()");
+
         test_object.id = model[i];
 
         RCLCPP_INFO(this->get_logger(),"TEST-Mesh");
@@ -305,6 +305,16 @@ void ObstaclePlanner::obstacle_parser(){
     while(loop_model){
 
         std::string modelName = modelElement->Get<std::string>("name");
+
+        if(modelName == "Sensor"){
+
+            modelElement = modelElement->GetNextElement("model");
+        
+            RCLCPP_INFO(this->get_logger(),"Sensor-Model wird übersprungen"); 
+            std::string modelName = modelElement->Get<std::string>("name");
+        
+        }
+
 
         model.push_back(modelName);
 

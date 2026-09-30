@@ -1,0 +1,254 @@
+[0.119s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'vision_control']
+[0.119s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['vision_control'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7610c00831a0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7610bff15df0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7610bff15df0>>, mixin_verb=('build',))
+[0.156s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.156s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.156s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.156s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.156s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.156s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.156s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/mario/master_ws'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_control) by extensions ['ignore', 'ignore_ament_install']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_control) by extension 'ignore'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_control) by extension 'ignore_ament_install'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_control) by extensions ['colcon_pkg']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_control) by extension 'colcon_pkg'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_control) by extensions ['colcon_meta']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_control) by extension 'colcon_meta'
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_control) by extensions ['ros']
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_control) by extension 'ros'
+[0.191s] DEBUG:colcon.colcon_core.package_identification:Package 'src/estun_control' with type 'ros.ament_cmake' and name 'estun_control'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_description) by extensions ['ignore', 'ignore_ament_install']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_description) by extension 'ignore'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_description) by extension 'ignore_ament_install'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_description) by extensions ['colcon_pkg']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_description) by extension 'colcon_pkg'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_description) by extensions ['colcon_meta']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_description) by extension 'colcon_meta'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_description) by extensions ['ros']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_description) by extension 'ros'
+[0.192s] DEBUG:colcon.colcon_core.package_identification:Package 'src/estun_description' with type 'ros.ament_python' and name 'estun_description'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_moveit) by extensions ['ignore', 'ignore_ament_install']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_moveit) by extension 'ignore'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_moveit) by extension 'ignore_ament_install'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_moveit) by extensions ['colcon_pkg']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_moveit) by extension 'colcon_pkg'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_moveit) by extensions ['colcon_meta']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_moveit) by extension 'colcon_meta'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_moveit) by extensions ['ros']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_moveit) by extension 'ros'
+[0.193s] DEBUG:colcon.colcon_core.package_identification:Package 'src/estun_moveit' with type 'ros.ament_cmake' and name 'estun_moveit'
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor) by extensions ['ignore', 'ignore_ament_install']
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor) by extension 'ignore'
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor) by extension 'ignore_ament_install'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor) by extensions ['colcon_pkg']
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor) by extension 'colcon_pkg'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor) by extensions ['colcon_meta']
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor) by extension 'colcon_meta'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor) by extensions ['ros']
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor) by extension 'ros'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor) by extensions ['cmake', 'python']
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor) by extension 'cmake'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor) by extension 'python'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor) by extensions ['python_setup_py']
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor) by extension 'python_setup_py'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/capabilities) by extensions ['ignore', 'ignore_ament_install']
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/capabilities) by extension 'ignore'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/capabilities) by extension 'ignore_ament_install'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/capabilities) by extensions ['colcon_pkg']
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/capabilities) by extension 'colcon_pkg'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/capabilities) by extensions ['colcon_meta']
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/capabilities) by extension 'colcon_meta'
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/capabilities) by extensions ['ros']
+[0.194s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/capabilities) by extension 'ros'
+[0.195s] DEBUG:colcon.colcon_core.package_identification:Package 'src/moveit_task_constructor/capabilities' with type 'ros.ament_cmake' and name 'moveit_task_constructor_capabilities'
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/core) by extensions ['ignore', 'ignore_ament_install']
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/core) by extension 'ignore'
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/core) by extension 'ignore_ament_install'
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/core) by extensions ['colcon_pkg']
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/core) by extension 'colcon_pkg'
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/core) by extensions ['colcon_meta']
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/core) by extension 'colcon_meta'
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/core) by extensions ['ros']
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/core) by extension 'ros'
+[0.197s] DEBUG:colcon.colcon_core.package_identification:Package 'src/moveit_task_constructor/core' with type 'ros.ament_cmake' and name 'moveit_task_constructor_core'
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/demo) by extensions ['ignore', 'ignore_ament_install']
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/demo) by extension 'ignore'
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/demo) by extension 'ignore_ament_install'
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/demo) by extensions ['colcon_pkg']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/demo) by extension 'colcon_pkg'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/demo) by extensions ['colcon_meta']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/demo) by extension 'colcon_meta'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/demo) by extensions ['ros']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/demo) by extension 'ros'
+[0.198s] DEBUG:colcon.colcon_core.package_identification:Package 'src/moveit_task_constructor/demo' with type 'ros.ament_cmake' and name 'moveit_task_constructor_demo'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/msgs) by extension 'ignore'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/msgs) by extension 'ignore_ament_install'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/msgs) by extensions ['colcon_pkg']
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/msgs) by extension 'colcon_pkg'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/msgs) by extensions ['colcon_meta']
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/msgs) by extension 'colcon_meta'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/msgs) by extensions ['ros']
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/msgs) by extension 'ros'
+[0.199s] DEBUG:colcon.colcon_core.package_identification:Package 'src/moveit_task_constructor/msgs' with type 'ros.ament_cmake' and name 'moveit_task_constructor_msgs'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/rviz_marker_tools) by extensions ['ignore', 'ignore_ament_install']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/rviz_marker_tools) by extension 'ignore'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/rviz_marker_tools) by extension 'ignore_ament_install'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/rviz_marker_tools) by extensions ['colcon_pkg']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/rviz_marker_tools) by extension 'colcon_pkg'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/rviz_marker_tools) by extensions ['colcon_meta']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/rviz_marker_tools) by extension 'colcon_meta'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/rviz_marker_tools) by extensions ['ros']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/rviz_marker_tools) by extension 'ros'
+[0.201s] DEBUG:colcon.colcon_core.package_identification:Package 'src/moveit_task_constructor/rviz_marker_tools' with type 'ros.ament_cmake' and name 'rviz_marker_tools'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/visualization) by extensions ['ignore', 'ignore_ament_install']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/visualization) by extension 'ignore'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/visualization) by extension 'ignore_ament_install'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/visualization) by extensions ['colcon_pkg']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/visualization) by extension 'colcon_pkg'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/visualization) by extensions ['colcon_meta']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/visualization) by extension 'colcon_meta'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/visualization) by extensions ['ros']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/visualization) by extension 'ros'
+[0.202s] DEBUG:colcon.colcon_core.package_identification:Package 'src/moveit_task_constructor/visualization' with type 'ros.ament_cmake' and name 'moveit_task_constructor_visualization'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_control) by extensions ['ignore', 'ignore_ament_install']
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_control) by extension 'ignore'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_control) by extension 'ignore_ament_install'
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_control) by extensions ['colcon_pkg']
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_control) by extension 'colcon_pkg'
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_control) by extensions ['colcon_meta']
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_control) by extension 'colcon_meta'
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_control) by extensions ['ros']
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_control) by extension 'ros'
+[0.203s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vision_control' with type 'ros.ament_cmake' and name 'vision_control'
+[0.203s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.203s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.203s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.204s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.204s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.225s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'estun_description' in 'src/estun_description'
+[0.225s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'moveit_task_constructor_msgs' in 'src/moveit_task_constructor/msgs'
+[0.225s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'rviz_marker_tools' in 'src/moveit_task_constructor/rviz_marker_tools'
+[0.225s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'estun_moveit' in 'src/estun_moveit'
+[0.225s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'moveit_task_constructor_core' in 'src/moveit_task_constructor/core'
+[0.225s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'estun_control' in 'src/estun_control'
+[0.225s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'moveit_task_constructor_capabilities' in 'src/moveit_task_constructor/capabilities'
+[0.225s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'moveit_task_constructor_visualization' in 'src/moveit_task_constructor/visualization'
+[0.225s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'moveit_task_constructor_demo' in 'src/moveit_task_constructor/demo'
+[0.226s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.226s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.228s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 10 installed packages in /home/mario/master_ws/install
+[0.231s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 542 installed packages in /opt/ros/jazzy
+[0.232s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.314s] Level 5:colcon.colcon_core.verb:set package 'vision_control' build argument 'cmake_args' from command line to 'None'
+[0.314s] Level 5:colcon.colcon_core.verb:set package 'vision_control' build argument 'cmake_target' from command line to 'None'
+[0.314s] Level 5:colcon.colcon_core.verb:set package 'vision_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.314s] Level 5:colcon.colcon_core.verb:set package 'vision_control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.314s] Level 5:colcon.colcon_core.verb:set package 'vision_control' build argument 'cmake_clean_first' from command line to 'False'
+[0.314s] Level 5:colcon.colcon_core.verb:set package 'vision_control' build argument 'cmake_force_configure' from command line to 'False'
+[0.314s] Level 5:colcon.colcon_core.verb:set package 'vision_control' build argument 'ament_cmake_args' from command line to 'None'
+[0.314s] Level 5:colcon.colcon_core.verb:set package 'vision_control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.314s] Level 5:colcon.colcon_core.verb:set package 'vision_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.314s] DEBUG:colcon.colcon_core.verb:Building package 'vision_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mario/master_ws/build/vision_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mario/master_ws/install/vision_control', 'merge_install': False, 'path': '/home/mario/master_ws/src/vision_control', 'symlink_install': False, 'test_result_base': None}
+[0.315s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.315s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.316s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mario/master_ws/src/vision_control' with build type 'ament_cmake'
+[0.316s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mario/master_ws/src/vision_control'
+[0.318s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.318s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.318s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.331s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mario/master_ws/build/vision_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mario/master_ws/install/estun_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mario/master_ws/build/vision_control -- -j12 -l12
+[26.697s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mario/master_ws/build/vision_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mario/master_ws/install/estun_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mario/master_ws/build/vision_control -- -j12 -l12
+[26.711s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mario/master_ws/build/vision_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mario/master_ws/install/estun_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/mario/master_ws/build/vision_control
+[26.738s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vision_control)
+[26.739s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mario/master_ws/build/vision_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mario/master_ws/install/estun_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/mario/master_ws/build/vision_control
+[26.741s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/vision_control' for CMake module files
+[26.741s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/vision_control' for CMake config files
+[26.741s] Level 1:colcon.colcon_core.shell:create_environment_hook('vision_control', 'cmake_prefix_path')
+[26.741s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mario/master_ws/install/vision_control/share/vision_control/hook/cmake_prefix_path.ps1'
+[26.742s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mario/master_ws/install/vision_control/share/vision_control/hook/cmake_prefix_path.dsv'
+[26.742s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mario/master_ws/install/vision_control/share/vision_control/hook/cmake_prefix_path.sh'
+[26.743s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/vision_control/lib'
+[26.743s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/vision_control/bin'
+[26.743s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/vision_control/lib/pkgconfig/vision_control.pc'
+[26.743s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/vision_control/lib/python3.12/site-packages'
+[26.744s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/vision_control/bin'
+[26.744s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/vision_control/share/vision_control/package.ps1'
+[26.745s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mario/master_ws/install/vision_control/share/vision_control/package.dsv'
+[26.745s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/vision_control/share/vision_control/package.sh'
+[26.745s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/vision_control/share/vision_control/package.bash'
+[26.746s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/vision_control/share/vision_control/package.zsh'
+[26.746s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mario/master_ws/install/vision_control/share/colcon-core/packages/vision_control)
+[26.747s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vision_control)
+[26.747s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/vision_control' for CMake module files
+[26.747s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/vision_control' for CMake config files
+[26.747s] Level 1:colcon.colcon_core.shell:create_environment_hook('vision_control', 'cmake_prefix_path')
+[26.748s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mario/master_ws/install/vision_control/share/vision_control/hook/cmake_prefix_path.ps1'
+[26.748s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mario/master_ws/install/vision_control/share/vision_control/hook/cmake_prefix_path.dsv'
+[26.748s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mario/master_ws/install/vision_control/share/vision_control/hook/cmake_prefix_path.sh'
+[26.749s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/vision_control/lib'
+[26.749s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/vision_control/bin'
+[26.749s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/vision_control/lib/pkgconfig/vision_control.pc'
+[26.749s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/vision_control/lib/python3.12/site-packages'
+[26.749s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/vision_control/bin'
+[26.750s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/vision_control/share/vision_control/package.ps1'
+[26.750s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mario/master_ws/install/vision_control/share/vision_control/package.dsv'
+[26.751s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/vision_control/share/vision_control/package.sh'
+[26.751s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/vision_control/share/vision_control/package.bash'
+[26.751s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/vision_control/share/vision_control/package.zsh'
+[26.752s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mario/master_ws/install/vision_control/share/colcon-core/packages/vision_control)
+[26.752s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[26.752s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[26.752s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[26.752s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[26.759s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[26.759s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[26.759s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[26.776s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[26.776s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mario/master_ws/install/local_setup.ps1'
+[26.777s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/mario/master_ws/install/_local_setup_util_ps1.py'
+[26.778s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mario/master_ws/install/setup.ps1'
+[26.779s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mario/master_ws/install/local_setup.sh'
+[26.780s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/mario/master_ws/install/_local_setup_util_sh.py'
+[26.781s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mario/master_ws/install/setup.sh'
+[26.783s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mario/master_ws/install/local_setup.bash'
+[26.783s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mario/master_ws/install/setup.bash'
+[26.785s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mario/master_ws/install/local_setup.zsh'
+[26.786s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mario/master_ws/install/setup.zsh'

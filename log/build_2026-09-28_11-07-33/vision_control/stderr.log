@@ -1,0 +1,19 @@
+In file included from [01m[K/usr/include/pcl-1.14/pcl/range_image/impl/range_image.hpp:45[m[K,
+                 from [01m[K/usr/include/pcl-1.14/pcl/range_image/range_image.h:840[m[K,
+                 from [01m[K/usr/include/pcl-1.14/pcl/range_image/range_image_planar.h:40[m[K,
+                 from [01m[K/usr/include/pcl-1.14/pcl/io/vtk_lib_io.h:48[m[K,
+                 from [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:7[m[K:
+/usr/include/pcl-1.14/pcl/common/point_tests.h: In instantiation of ‘[01m[Kbool pcl::[01;32m[KisFinite[m[K(const PointT&) [35m[K[with PointT = __gnu_cxx::__normal_iterator<PointNormal*, std::vector<PointNormal, Eigen::aligned_allocator<PointNormal> > >][m[K[m[K’:
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:246:24:[m[K   required from here
+[01m[K/usr/include/pcl-1.14/pcl/common/point_tests.h:57:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst class __gnu_cxx::__normal_iterator<pcl::PointNormal*, std::vector<pcl::PointNormal, Eigen::aligned_allocator<pcl::PointNormal> > >[m[K’ has no member named ‘[01m[Kx[m[K’
+   57 |     return (std::isfinite ([01;31m[Kpt.x[m[K) && std::isfinite (pt.y) && std::isfinite (pt.z));
+      |                            [01;31m[K~~~^[m[K
+[01m[K/usr/include/pcl-1.14/pcl/common/point_tests.h:57:55:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst class __gnu_cxx::__normal_iterator<pcl::PointNormal*, std::vector<pcl::PointNormal, Eigen::aligned_allocator<pcl::PointNormal> > >[m[K’ has no member named ‘[01m[Ky[m[K’
+   57 |     return (std::isfinite (pt.x) && std::isfinite ([01;31m[Kpt.y[m[K) && std::isfinite (pt.z));
+      |                                                    [01;31m[K~~~^[m[K
+[01m[K/usr/include/pcl-1.14/pcl/common/point_tests.h:57:79:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst class __gnu_cxx::__normal_iterator<pcl::PointNormal*, std::vector<pcl::PointNormal, Eigen::aligned_allocator<pcl::PointNormal> > >[m[K’ has no member named ‘[01m[Kz[m[K’
+   57 |     return (std::isfinite (pt.x) && std::isfinite (pt.y) && std::isfinite ([01;31m[Kpt.z[m[K));
+      |                                                                            [01;31m[K~~~^[m[K
+gmake[2]: *** [CMakeFiles/pcl_pose_estimation.dir/build.make:76: CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o] Fehler 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pcl_pose_estimation.dir/all] Fehler 2
+gmake: *** [Makefile:146: all] Fehler 2

@@ -31,8 +31,6 @@
       <render_engine>ogre2</render_engine>
     </plugin>
 
-
-
     <model name="Sensor">
       <!-- <frame name="Sensor_1" attached_to="world">
         <pose>0 0 0 0 0 0</pose>
@@ -43,7 +41,7 @@
         <pose>0 0 0 0 0 0</pose>
       </joint> -->
 
-      <pose>-0.3 -0.0 1 0 0.0 -1.5707</pose>
+      <pose>-0.3 -0.0 1.2 0 0.263 -1.5707</pose>
       <static>true</static> 
       <link name="link_sensor">
         <pose>0.0 0.0 0 0 0 0</pose>
@@ -69,8 +67,7 @@
             </box>
           </geometry>
         </visual>
-        <sensor name="rgbd_camera" type="rgbd_camera">
-          <!-- <frame_id>world</frame_id> -->
+        <!-- <sensor name="rgbd_camera" type="rgbd_camera">
           <visualize>true</visualize>
           <camera>
             <horizontal_fov>1.04</horizontal_fov>
@@ -81,7 +78,7 @@
             </image>
             <clip>
               <near>0.3</near>
-              <far>10</far>
+              <far>2.0</far>
             </clip>
           </camera>
           <always_on>1</always_on>
@@ -89,14 +86,13 @@
           <visualize>true</visualize>
           <topic>rgbd_camera</topic>
           <enable_metrics>true</enable_metrics>
-        </sensor>
+        </sensor> -->
         <sensor name="depth_camera1" type="depth_camera">
-          <!-- <frame_id>world</frame_id> -->
           <update_rate>0.1</update_rate>
-          <topic>depth_camera</topic>
+          <topic>rgbd_camera</topic>
           <enable_metrics>true</enable_metrics>
           <camera>
-            <horizontal_fov>1.05</horizontal_fov>
+            <horizontal_fov>0.7</horizontal_fov>
             <image>
               <width>320</width>
               <height>240</height>
@@ -104,7 +100,7 @@
             </image>
             <clip>
               <near>0.1</near>
-              <far>10.0</far>
+              <far>1.2</far>
             </clip>
           </camera>
         </sensor>
@@ -166,20 +162,20 @@
     </model>
 
 
-  <model name="Palettenwagen">
+  <!-- <model name="Palettenwagen">
       <pose>-0.4 -1.2 0 0 0 1.5707</pose>
       <static>true</static>
     <link name="link">
       <inertial>
         <mass>1.0</mass>
-        <inertia> <!-- inertias are tricky to compute -->
-          <!-- http://gazebosim.org/tutorials?tut=inertia&cat=build_robot -->
-          <ixx>0.083</ixx>       <!-- for a box: ixx = 0.083 * mass * (y*y + z*z) -->
-          <ixy>0.0</ixy>         <!-- for a box: ixy = 0 -->
-          <ixz>0.0</ixz>         <!-- for a box: ixz = 0 -->
-          <iyy>0.083</iyy>       <!-- for a box: iyy = 0.083 * mass * (x*x + z*z) -->
-          <iyz>0.0</iyz>         <!-- for a box: iyz = 0 -->
-          <izz>0.083</izz>       <!-- for a box: izz = 0.083 * mass * (x*x + y*y) -->
+        <inertia> 
+          
+          <ixx>0.083</ixx>       
+          <ixy>0.0</ixy>         
+          <ixz>0.0</ixz>         
+          <iyy>0.083</iyy>       
+          <iyz>0.0</iyz>         
+          <izz>0.083</izz>       
         </inertia>
       </inertial>
       <collision name="collision">
@@ -198,7 +194,7 @@
         </material>
       </visual>
     </link>
-  </model>
+  </model> -->
 
   <model name="Druckpruefmaschine">
     <pose>-1.1 0.65 0 0 0 0</pose>
@@ -274,14 +270,14 @@
     <link name="link">
       <inertial>
         <mass>1.0</mass>
-        <inertia> <!-- inertias are tricky to compute -->
-          <!-- http://gazebosim.org/tutorials?tut=inertia&cat=build_robot -->
-          <ixx>0.083</ixx>       <!-- for a box: ixx = 0.083 * mass * (y*y + z*z) -->
-          <ixy>0.0</ixy>         <!-- for a box: ixy = 0 -->
-          <ixz>0.0</ixz>         <!-- for a box: ixz = 0 -->
-          <iyy>0.083</iyy>       <!-- for a box: iyy = 0.083 * mass * (x*x + z*z) -->
-          <iyz>0.0</iyz>         <!-- for a box: iyz = 0 -->
-          <izz>0.083</izz>       <!-- for a box: izz = 0.083 * mass * (x*x + y*y) -->
+        <inertia> 
+          
+          <ixx>0.083</ixx>       
+          <ixy>0.0</ixy>         
+          <ixz>0.0</ixz>         
+          <iyy>0.083</iyy>       
+          <iyz>0.0</iyz>         
+          <izz>0.083</izz>       
         </inertia>
       </inertial>
       <collision name="collision">
@@ -302,20 +298,20 @@
     </link>
   </model>
 
-  <model name="Tisch">
+  <!-- <model name="Tisch">
     <pose>0.35 -0.95 0 0 0 1.5707</pose>
     <static>true</static>
     <link name="link">
       <inertial>
         <mass>1.0</mass>
-        <inertia> <!-- inertias are tricky to compute -->
-          <!-- http://gazebosim.org/tutorials?tut=inertia&cat=build_robot -->
-          <ixx>0.083</ixx>       <!-- for a box: ixx = 0.083 * mass * (y*y + z*z) -->
-          <ixy>0.0</ixy>         <!-- for a box: ixy = 0 -->
-          <ixz>0.0</ixz>         <!-- for a box: ixz = 0 -->
-          <iyy>0.083</iyy>       <!-- for a box: iyy = 0.083 * mass * (x*x + z*z) -->
-          <iyz>0.0</iyz>         <!-- for a box: iyz = 0 -->
-          <izz>0.083</izz>       <!-- for a box: izz = 0.083 * mass * (x*x + y*y) -->
+        <inertia> 
+          
+          <ixx>0.083</ixx>       
+          <ixy>0.0</ixy>         
+          <ixz>0.0</ixz>         
+          <iyy>0.083</iyy>       
+          <iyz>0.0</iyz>         
+          <izz>0.083</izz>       
         </inertia>
       </inertial>
       <collision name="collision">
@@ -334,22 +330,22 @@
         </material>
       </visual>
     </link>
-  </model>
+  </model> -->
 
-  <model name="Vermessungsstation">
+  <!-- <model name="Vermessungsstation">
     <pose>0.35 -0.95 0.8 0 0 0</pose>
     <static>true</static>
     <link name="link">
       <inertial>
         <mass>1.0</mass>
-        <inertia> <!-- inertias are tricky to compute -->
-          <!-- http://gazebosim.org/tutorials?tut=inertia&cat=build_robot -->
-          <ixx>0.083</ixx>       <!-- for a box: ixx = 0.083 * mass * (y*y + z*z) -->
-          <ixy>0.0</ixy>         <!-- for a box: ixy = 0 -->
-          <ixz>0.0</ixz>         <!-- for a box: ixz = 0 -->
-          <iyy>0.083</iyy>       <!-- for a box: iyy = 0.083 * mass * (x*x + z*z) -->
-          <iyz>0.0</iyz>         <!-- for a box: iyz = 0 -->
-          <izz>0.083</izz>       <!-- for a box: izz = 0.083 * mass * (x*x + y*y) -->
+        <inertia> 
+          
+          <ixx>0.083</ixx>      
+          <ixy>0.0</ixy>         
+          <ixz>0.0</ixz>         
+          <iyy>0.083</iyy>       
+          <iyz>0.0</iyz>         
+          <izz>0.083</izz>       
         </inertia>
       </inertial>
       <collision name="collision">
@@ -368,7 +364,7 @@
         </material>
       </visual>
     </link>
-  </model>
+  </model> -->
 
     <model name="Probekoerper">
       <pose>-0.4 -0.8 0.794 0 0 0</pose>

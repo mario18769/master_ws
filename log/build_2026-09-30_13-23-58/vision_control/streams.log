@@ -1,0 +1,29 @@
+[0.264s] Invoking command in '/home/mario/master_ws/build/vision_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mario/master_ws/install/estun_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mario/master_ws/build/vision_control -- -j12 -l12
+[0.361s] [ 50%] [32mBuilding CXX object CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o[0m
+[2.723s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:435:1:[m[K [01;31m[Kerror: [m[Kextended character ´ is not valid in an identifier
+[2.723s]   435 | [01;31m[K´[m[K
+[2.723s]       | [01;31m[K^[m[K
+[7.036s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kvoid PointCloudProcessor::[01;32m[Kgenerate_cylinder_master[m[K()[m[K’:
+[7.036s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:101:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcurrent_height[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[7.037s]   101 |       float [01;35m[Kcurrent_height[m[K = j * spacing_z;
+[7.037s]       |             [01;35m[K^~~~~~~~~~~~~~[m[K
+[7.152s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kvoid PointCloudProcessor::[01;32m[KprocessPointCloud[m[K()[m[K’:
+[7.152s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:424:9:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kfloat theta_y[m[K’
+[7.152s]   424 |   float [01;31m[Ktheta_y[m[K = -0.263;
+[7.152s]       |         [01;31m[K^~~~~~~[m[K
+[7.152s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:188:9:[m[K [01;36m[Knote: [m[K‘[01m[Kfloat theta_y[m[K’ previously declared here
+[7.153s]   188 |   float [01;36m[Ktheta_y[m[K = -0.262;
+[7.153s]       |         [01;36m[K^~~~~~~[m[K
+[7.153s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:425:9:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kfloat theta_z[m[K’
+[7.153s]   425 |   float [01;31m[Ktheta_z[m[K = -1.57;
+[7.153s]       |         [01;31m[K^~~~~~~[m[K
+[7.153s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:189:9:[m[K [01;36m[Knote: [m[K‘[01m[Kfloat theta_z[m[K’ previously declared here
+[7.153s]   189 |   float [01;36m[Ktheta_z[m[K = -1.57;
+[7.153s]       |         [01;36m[K^~~~~~~[m[K
+[7.159s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:435:1:[m[K [01;31m[Kerror: [m[K‘[01m[K´[m[K’ was not declared in this scope
+[7.159s]   435 | [01;31m[K´[m[K
+[7.159s]       | [01;31m[K^[m[K
+[12.886s] gmake[2]: *** [CMakeFiles/pcl_pose_estimation.dir/build.make:76: CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o] Fehler 1
+[12.886s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pcl_pose_estimation.dir/all] Fehler 2
+[12.886s] gmake: *** [Makefile:146: all] Fehler 2
+[12.891s] Invoked command in '/home/mario/master_ws/build/vision_control' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mario/master_ws/install/estun_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mario/master_ws/build/vision_control -- -j12 -l12

@@ -27,6 +27,8 @@
 #include <pcl/sample_consensus/sac_model_plane.h>
 #include <pcl/sample_consensus/sac_model_sphere.h>
 #include <pcl/sample_consensus/sac_model_cylinder.h>
+#include <string>
+#include <pcl/segmentation/extract_clusters.h>
 
 
 typedef pcl::PointXYZ PointXYZ;
@@ -57,6 +59,7 @@ class PointCloudProcessor : public rclcpp::Node{
         }
         void generate_cylinder_master();
         void processPointCloud();
+        void clusterPointCloud();
         void getPointCloud(sensor_msgs::msg::PointCloud2 msg);
         
     private:
@@ -82,7 +85,7 @@ void PointCloudProcessor::generate_cylinder_master(){
 
     pcl::fromPCLPointCloud2(testMesh.cloud, *output);
 
-    pcl::visualization::PCLVisualizer visu("Alignment");
+    //pcl::visualization::PCLVisualizer visu("Alignment");
 
     cloud.reset(new pcl::PointCloud<PointClNormal>());
 
@@ -144,10 +147,11 @@ void PointCloudProcessor::generate_cylinder_master(){
         }
     }
 
-    visu.addPointCloud(output, ColorHandlerNormal(output, 0.0, 255.0, 0.0), "Probekoerper");
-    visu.addPointCloud(cloud, ColorHandlerNormal(cloud, 255.0, 0.0, 0.0), "Projektion");
-    visu.spin ();
+    //visu.addPointCloud(output, ColorHandlerNormal(output, 0.0, 255.0, 0.0), "Probekoerper");
+    //visu.addPointCloud(cloud, ColorHandlerNormal(cloud, 255.0, 0.0, 0.0), "Projektion");
+    //visu.spin ();
 }
+
 void PointCloudProcessor::getPointCloud(sensor_msgs::msg::PointCloud2 msg){
 
     pcl::fromROSMsg(msg,scene_cloud);
@@ -159,29 +163,164 @@ void PointCloudProcessor::getPointCloud(sensor_msgs::msg::PointCloud2 msg){
             counter=1;
         }
 
+        // if (counter==0){
+            
+        //     RCLCPP_INFO(this->get_logger(),"RUN ClusterPointCloud");
+        //     clusterPointCloud();
+        //     counter=1;
+        // }
+
+}
+
+void PointCloudProcessor::clusterPointCloud(){
+
+  pcl::visualization::PCLVisualizer visu_cluster("Cluster_Scene");
+  PointCloudN::Ptr scene_before_downsampling (new PointCloudN);
+
+  // Creating the KdTree object for the search method of the extraction
+  pcl::search::KdTree<PointClNormal>::Ptr tree (new pcl::search::KdTree<PointClNormal>);
+
+  PointCloudN::Ptr scene (new PointCloudN);
+
+  *scene_before_downsampling = scene_cloud;
+
+  const float leaf = 0.005f;
+
+
+  pcl::VoxelGrid<PointClNormal> grid_2;
+  grid_2.setLeafSize (leaf, leaf, leaf);
+  grid_2.setInputCloud (scene_before_downsampling);
+  grid_2.filter (*scene);
+
+  PointCloudN::Ptr scene_filtered (new PointCloudN);
+
+  pcl::PointCloud<PointClNormal>::iterator pcl_begin;
+  pcl::PointCloud<PointClNormal>::iterator pcl_end;
+
+  pcl_begin = scene->begin();
+  pcl_end = scene->end();
+
+  for (pcl::PointCloud<PointClNormal>::iterator count = pcl_begin; count<=pcl_end;){
+
+    if (pcl::isFinite(*count)==false){
+
+      RCLCPP_INFO(this->get_logger(),"is NOT finite"); 
+
+      count = scene->erase(count);
+
+      RCLCPP_INFO(this->get_logger(),"Removed Point from Cloud"); 
+    } 
+
+    else {count++;}
+  }
+
+  tree->setInputCloud (scene);
+
+  std::vector<pcl::PointIndices> cluster_indices;
+  pcl::EuclideanClusterExtraction<PointClNormal> ec;
+  ec.setClusterTolerance (0.02); // 2cm
+  ec.setMinClusterSize (10);
+  ec.setMaxClusterSize (25000);
+  ec.setSearchMethod (tree);
+  ec.setInputCloud (scene);
+  ec.extract (cluster_indices);
+
+  RCLCPP_INFO(this->get_logger(),"Extract Cluster Indizes succeded"); 
+  RCLCPP_INFO(this->get_logger(),"Extract Cluster Indizes size: %i", cluster_indices.size()); 
+  
+  std::vector<pcl::PointCloud<PointClNormal>::Ptr> cluster_vec;
+
+  int j = 0;
+
+  RCLCPP_INFO(this->get_logger(),"Extract Cluster Indizes succeded");
+
+  for (const auto& cluster : cluster_indices){
+
+    RCLCPP_INFO(this->get_logger(),"Test For-Schleife 1"); 
+    pcl::PointCloud<PointClNormal>::Ptr cloud_cluster (new pcl::PointCloud<PointClNormal>);
+    
+    for (const auto& idx : cluster.indices) {
+      //RCLCPP_INFO(this->get_logger(),"Test For-Schleife 2"); 
+      cloud_cluster->push_back((*scene)[idx]); //Scene Punktewolke wird nach Indizes des jeweiligen Clusters extrahiert
+      //RCLCPP_INFO(this->get_logger(),"Extract into cloud_cluster erfolgreich"); 
+    } 
+
+    cloud_cluster->width = cloud_cluster->size ();
+    cloud_cluster->height = 1;
+    cloud_cluster->is_dense = true;
+
+    std::cout << "PointCloud representing the Cluster: " << cloud_cluster->size () << " data points." << std::endl;
+
+    auto cluster_copy = pcl::make_shared<pcl::PointCloud<PointClNormal>>(*cloud_cluster);
+
+    RCLCPP_INFO(this->get_logger(),"Copy erfolgreich"); 
+
+    cluster_vec.push_back(cluster_copy);
+
+    
+
+    RCLCPP_INFO(this->get_logger(),"Schleife erfolgreich"); 
+
+    std::string visu_name = "cylinder_cloud_" + std::to_string(j); 
+
+    double r = 0.0, g = 0.0, b = 0.0;
+
+    if ((j % 2) == 0){r = 255.0; g = 0.0, b = 0.0;}
+
+    if ((j % 3) == 0){r = 0.0; g = 255.0, b = 0.0;}
+
+    else{r = 0.0; g = 0.0, b = 255.0;}
+
+    visu_cluster.addPointCloud (cluster_vec[j], ColorHandlerNormal (cluster_vec[j], r, g, b), visu_name);
+
+    RCLCPP_INFO(this->get_logger(),"Add to Visu erfolgreich"); 
+
+    j++;
+  }
+
+  RCLCPP_INFO(this->get_logger(),"Visu start"); 
+  
+  visu_cluster.spin();
 }
 
 void PointCloudProcessor::processPointCloud(){
+
+  pcl::visualization::PCLVisualizer visu_ransac("Cylinder-Segmentation");
+
+
+  //Umrechnung der Koordinaten--------------------------------------------------------------------------------------------------------------------------
+
+  Eigen::Affine3f transform_3 = Eigen::Affine3f::Identity();
+
+  float phi_x = 0.263;
+  float phi_y = 0.0;
+  float phi_z = -1.57;
+  
+  transform_3.translation() << -0.3, 0.0, 1.2;
+
+  // The same rotation matrix as before; theta radians around Z axis
+  transform_3.rotate (Eigen::AngleAxisf (phi_x, Eigen::Vector3f::UnitX()));
+  transform_3.rotate (Eigen::AngleAxisf (phi_y, Eigen::Vector3f::UnitY()));
+  transform_3.rotate (Eigen::AngleAxisf (phi_z, Eigen::Vector3f::UnitZ()));
+  
+  // Print the transformation
+  printf ("\nTransformationsmatrix\n");
+  std::cout << transform_3.matrix() << std::endl;
 
 // Point clouds
   PointCloudN::Ptr object (new PointCloudN);
   PointCloudN::Ptr scene_ (new PointCloudN);
   PointCloudN::Ptr object_aligned (new PointCloudN);
-
   PointCloudN::Ptr scene_before_downsampling (new PointCloudN);
   PointCloudN::Ptr scene (new PointCloudN);
   PointCloudN::Ptr object_normal (new PointCloudN);
-
   PointCloudN::Ptr final (new PointCloudN);
-
 
   FeatureCloudT::Ptr object_features (new FeatureCloudT);
   FeatureCloudT::Ptr scene_features (new FeatureCloudT);
 
   object = cloud;
   *scene_before_downsampling = scene_cloud;
-
-
 
   Eigen::Affine3f transform_2 = Eigen::Affine3f::Identity();
   //float theta = M_PI/4;
@@ -216,8 +355,8 @@ void PointCloudProcessor::processPointCloud(){
   pcl::transformPointCloud (*object, *object, transform_2);
   
 
-pcl::visualization::PCLVisualizer visu_2("Alignment_TEST");
-float vx = 0, vy = 0 , vz = 0;
+  //pcl::visualization::PCLVisualizer visu_2("Alignment_TEST");
+  float vx = 0, vy = 0 , vz = 0;
 
   // Downsample
     pcl::console::print_highlight ("Downsampling...\n");
@@ -233,7 +372,7 @@ float vx = 0, vy = 0 , vz = 0;
     grid_2.filter (*scene);
 
   
-
+    //Punktewolke nach infiniten Punkten filtern
     pcl::PointCloud<PointClNormal>::iterator pcl_begin;
     pcl::PointCloud<PointClNormal>::iterator pcl_end;
 
@@ -295,299 +434,313 @@ float vx = 0, vy = 0 , vz = 0;
   //nest.setSearchSurface (scene_before_downsampling);
   nest.compute (*scene);
 
+  visu_ransac.addPointCloud (scene, ColorHandlerNormal (scene, 255.0, 0.0, 0.0), "scene");
+  // visu_ransac.spin ();
+  //visu_ransac.removeAllPointClouds();
 
-
-
-
-
-
-
-
-
-
-
-
-
-  pcl::ModelCoefficients::Ptr coefficients_cylinder (new pcl::ModelCoefficients);
-  pcl::ModelCoefficients::Ptr coefficients_circle (new pcl::ModelCoefficients);
-  pcl::ModelCoefficients::Ptr coefficients_plane (new pcl::ModelCoefficients);
-
-  pcl::PointIndices::Ptr inliers_cylinder (new pcl::PointIndices);
-  pcl::PointIndices::Ptr inliers_circle (new pcl::PointIndices);
-  pcl::PointIndices::Ptr inliers_plane (new pcl::PointIndices);
-
-  pcl::ExtractIndices<PointClNormal> extract;
-  pcl::ExtractIndices<PointClNormal> extract_2;
-
-  // Create the segmentation object for cylinder segmentation and set all the parameters
-
-  pcl::SACSegmentationFromNormals<PointClNormal, PointClNormal> seg;
-  seg.setOptimizeCoefficients (true);
-  seg.setModelType (pcl::SACMODEL_CYLINDER);
-  seg.setMethodType (pcl::SAC_RANSAC);
-  seg.setNormalDistanceWeight (0.1);
-  seg.setMaxIterations (10000);
-  seg.setDistanceThreshold (0.05);
-  seg.setRadiusLimits (0, 0.1);
-  seg.setInputCloud (scene);
-  seg.setInputNormals (scene);
-
-  // pcl::SACSegmentationFromNormals<PointClNormal, PointClNormal> seg_2;
-  // seg_2.setOptimizeCoefficients (true);
-  // seg_2.setModelType (pcl::SACMODEL_CIRCLE3D);
-  // seg_2.setMethodType (pcl::SAC_RANSAC);
-  // seg_2.setNormalDistanceWeight (0.1);
-  // seg_2.setMaxIterations (10000);
-  // seg_2.setDistanceThreshold (0.05);
-  // seg_2.setRadiusLimits (0, 0.1);
-  // seg_2.setInputCloud (scene);
-  // seg_2.setInputNormals (scene);
-
-  // // Obtain the cylinder inliers and coefficients
-  // seg_2.segment (*inliers_circle, *coefficients_circle);
-  // std::cerr << "Circle coefficients: " << *coefficients_circle << std::endl;
-
-  seg.segment (*inliers_cylinder, *coefficients_cylinder);
-  std::cerr << "Cylinder coefficients: " << *coefficients_cylinder << std::endl;
-
-  Eigen::Vector3f cyl_axis = seg.getAxis();
-
-    float x = cyl_axis[0];
-    float y = cyl_axis[1];
-    float z = cyl_axis[2];
-
-    RCLCPP_INFO(this->get_logger(),"Axis X: %f \n Axis Y: %f \n Axis Z: %f \n ", x, y ,z);
-
-  // Write the cylinder inliers to disk
-  extract.setInputCloud (scene);
-  extract.setIndices (inliers_cylinder);
-  extract.setNegative (false);
+  //Segemntierung von Cylinder und Kreisfläche-------------------------------------------------------------------------------------------------
 
   pcl::PointCloud<PointClNormal>::Ptr cloud_cylinder (new pcl::PointCloud<PointClNormal> ());
+  pcl::PointCloud<PointClNormal>::Ptr cloud_circle_plane (new pcl::PointCloud<PointClNormal> ());
+  pcl::PointCloud<PointClNormal>::Ptr scene_before (new pcl::PointCloud<PointClNormal> ());
+  std::vector<pcl::PointCloud<PointClNormal>::Ptr> object_vec;
   
-  extract.filter (*cloud_cylinder);
+  bool empty_cyl_cloud = false;
 
-  PointCloudN::Ptr outliers_zylinder (new PointCloudN);
-  extract.setNegative (true);
-  extract.filter(*outliers_zylinder);
+  int number_cylinders = 0;
 
+  for(; empty_cyl_cloud == false ; number_cylinders++){
 
-  pcl::SACSegmentationFromNormals<PointClNormal, PointClNormal> seg_2;
+  //for(int i = 0; i<1; i++){
 
-  seg_2.setOptimizeCoefficients (true);
-  seg_2.setModelType (pcl::SACMODEL_CIRCLE3D);
-  seg_2.setMethodType (pcl::SAC_RANSAC);
-  seg_2.setNormalDistanceWeight (0.1);
-  seg_2.setMaxIterations (10000);
-  seg_2.setDistanceThreshold (0.05);
-  seg_2.setEpsAngle(pcl::deg2rad (1.0));
-  seg_2.setRadiusLimits (0, 0.1);
-  seg_2.setAxis(Eigen::Vector3f (-0.259936, 0.0, 0.9656));
-  seg_2.setInputCloud (outliers_zylinder);
-  seg_2.setInputNormals (outliers_zylinder);
+    //RCLCPP_INFO(this->get_logger(),"DO-While wird ausgeführt");
 
-  seg_2.segment (*inliers_plane, *coefficients_plane);
-  std::cerr << "Plane coefficients: " << *coefficients_plane << std::endl;
+    pcl::ModelCoefficients::Ptr coefficients_cylinder (new pcl::ModelCoefficients);
+    pcl::ModelCoefficients::Ptr coefficients_circle (new pcl::ModelCoefficients);
+    pcl::ModelCoefficients::Ptr coefficients_plane (new pcl::ModelCoefficients);
 
-  extract_2.setInputCloud (outliers_zylinder);
-  extract_2.setIndices (inliers_plane);
-  extract_2.setNegative (false);
+    pcl::PointIndices::Ptr inliers_cylinder (new pcl::PointIndices);
+    pcl::PointIndices::Ptr inliers_circle (new pcl::PointIndices);
+    pcl::PointIndices::Ptr inliers_plane (new pcl::PointIndices);
 
+    pcl::ExtractIndices<PointClNormal> extract;
+    pcl::ExtractIndices<PointClNormal> extract_2;
+
+    // Create the segmentation object for cylinder segmentation and set all the parameters
+
+    pcl::SACSegmentationFromNormals<PointClNormal, PointClNormal> seg;
+    seg.setOptimizeCoefficients (true);
+    seg.setModelType (pcl::SACMODEL_CYLINDER);
+    seg.setMethodType (pcl::SAC_RANSAC);
+    seg.setNormalDistanceWeight (0.1);
+    seg.setMaxIterations (10000);
+    seg.setDistanceThreshold (0.01);
+    seg.setRadiusLimits (0.048, 0.052);
+    seg.setInputCloud (scene);
+    seg.setInputNormals (scene);
+    seg.segment (*inliers_cylinder, *coefficients_cylinder);
+
+    auto distance = seg.getDistanceFromOrigin();
   
-  pcl::PointCloud<PointClNormal>::Ptr cloud_plane (new pcl::PointCloud<PointClNormal> ());
+    //std::cerr << "Cylinder coefficients: " << *coefficients_cylinder << std::endl;
 
-  //pcl::PointCloud<PointClNormal>::Ptr cloud_circle (new pcl::PointCloud<PointClNormal> ());
+    float cyl_axis_point_x = coefficients_cylinder->values[0];
+    float cyl_axis_point_y = coefficients_cylinder->values[1];
+    float cyl_axis_point_z = coefficients_cylinder->values[2];
 
-  
-  extract_2.filter (*cloud_plane);
-  //extract_2.filter(*cloud_circle);
+    float cyl_axis_x = coefficients_cylinder->values[3];
+    float cyl_axis_y = coefficients_cylinder->values[4];
+    float cyl_axis_z = coefficients_cylinder->values[5];
 
-    pcl::visualization::PCLVisualizer visu_ransac("TEST");
-    visu_ransac.addPointCloud (cloud_cylinder, ColorHandlerNormal (cloud_cylinder, 0.0, 255.0, 0.0), "cloud_cylinder");
-    visu_ransac.addPointCloud (cloud_plane, ColorHandlerNormal (cloud_plane, 0.0, 0.0, 255.0), "cloud_plane");
-    //visu_ransac.addPointCloud (cloud_circle, ColorHandlerNormal (cloud_circle, 255.0, 0.0, 0.0), "cloud_circle");
+    //extrahiertes Objekt
+    extract.setInputCloud (scene);
+    extract.setIndices (inliers_cylinder);
+    extract.setNegative (false);
+    extract.filter (*cloud_cylinder);
+    extract.setNegative (true);
+    extract.filter(*scene);
+
+
+
+    RCLCPP_INFO(this->get_logger(),"X_Cyl_axis_pt: %f \n Y_Cyl_axis_pt: %f \n Z_Cyl_axis_pt: %f \n ", cyl_axis_point_x, cyl_axis_point_y, cyl_axis_point_z);
+
+    RCLCPP_INFO(this->get_logger(),"X_Cyl_axis_vec: %f \n Y_Cyl_axis_vec: %f \n Z_Cyl_axis_vec: %f \n ", cyl_axis_x, cyl_axis_y, cyl_axis_z);
+
+    PointCloudN::Ptr cloud_cylinder_end (new PointCloudN); //Cloud für Stirnseite des Zylinders
+
+    if ((cloud_cylinder->points.empty())){
+
+      std::cerr << "Can't find any more the cylindrical component." << std::endl;
+      empty_cyl_cloud = true;
+
+    }
+
+    else{
+
+      //std::cerr << "Starte Punktesuche im Cylinder" << std::endl;
+
+      int counter = 0;
+
+      for (const auto& point : *scene){
+
+        counter++;
+
+        float X = point.x;
+        float Y = point.y;
+        float Z = point.z;
+        float radius_bb = 0.055;
+
+        float t = ((X- cyl_axis_point_x) * cyl_axis_x + (Y - cyl_axis_point_y) * cyl_axis_y + (Z- cyl_axis_point_z) * cyl_axis_z)/(pow(cyl_axis_x,2)+pow(cyl_axis_y,2)+pow(cyl_axis_z,2));
+
+        //std::cerr << "Linearer Para t:"<< t << std::endl;
+
+        //std::cerr << "X:"<< X << "Y:"<< Y << "Z:"<< Z << std::endl;
+
+        float distance = sqrt(pow(X-(cyl_axis_point_x+t*cyl_axis_x),2) + pow(Y-(cyl_axis_point_y+t*cyl_axis_y),2) + pow(Z-(cyl_axis_point_z+t*cyl_axis_z),2));
+
+        //std::cerr << "Distance:"<< distance << std::endl;
+
+        if (distance <= radius_bb){
+
+          //std::cerr << "Distance ist kleiner"<< std::endl;
+
+          cloud_cylinder_end->push_back(point);
+
+        }
+      }
+
+
+      //std::cerr << "Punktesuche Cylinder beendet" << std::endl;
+      //std::cerr << "Counter" << counter<< std::endl;
+
+
+      //Restliche Scene
+      // PointCloudN::Ptr outliers_zylinder (new PointCloudN);
+      // extract.setNegative (true);
+      // extract.filter(*outliers_zylinder);
+
+      pcl::SACSegmentationFromNormals<PointClNormal, PointClNormal> seg_2;
+
+      seg_2.setOptimizeCoefficients (true);
+      seg_2.setModelType (pcl::SACMODEL_CIRCLE3D);
+      seg_2.setMethodType (pcl::SAC_RANSAC);
+      seg_2.setNormalDistanceWeight (0.1);
+      seg_2.setMaxIterations (10000);
+      seg_2.setDistanceThreshold (0.002);
+      seg_2.setEpsAngle(pcl::deg2rad (1.0));
+      seg_2.setRadiusLimits (0.0, 0.045);
+      seg_2.setAxis(Eigen::Vector3f (cyl_axis_x, cyl_axis_y, cyl_axis_z));
+      seg_2.setInputCloud (cloud_cylinder_end);
+      seg_2.setInputNormals (cloud_cylinder_end);
+      seg_2.segment (*inliers_plane, *coefficients_circle);
+      std::cerr << "Plane coefficients: " << *coefficients_circle << std::endl;
+
+      float cir_mid_x = coefficients_circle->values[0];
+      float cir_mid_y = coefficients_circle->values[1];
+      float cir_mid_z = coefficients_circle->values[2];
+
+      // extract_2.setInputCloud (cloud_cylinder);
+      // extract_2.setIndices (inliers_plane);
+      // extract_2.setNegative (false);
+      // extract_2.filter (*cloud_circle_plane);
+
+      //Scene enthält nur noch ungefilterte Objekte
+
+
+       //*cloud_cylinder += *cloud_cylinder_end;
+
+      //Aktuelle Cloud wird in Vektor gespeichert
+      auto cloud_copy = pcl::make_shared<pcl::PointCloud<PointClNormal>>(*cloud_cylinder);
+      object_vec.push_back(cloud_copy);
+
+      //std::cerr << "PointCloud representing Object_vec: " << object_vec[number_cylinders]->size() << " data points." << std::endl;
+
+      //Transformation der Zylinder-Koordianten in das World Koordinatensystem
+
+      //RCLCPP_INFO(this->get_logger(),"Cloud-Cylinder: %i",cloud_cylinder->points.empty());
+
+      Eigen::Vector3f koo_kreismittelp_camera(cir_mid_x, cir_mid_y, cir_mid_z);
+      Eigen::Vector3f koo_zylaxis_camera(cyl_axis_x, cyl_axis_y, cyl_axis_z);
+      Eigen::Vector3f koo_zylaxis_point_camera(cyl_axis_point_x, cyl_axis_point_y, cyl_axis_point_z);
+
+      Eigen::Vector3f koo_kreismittelp_world;
+      Eigen::Vector3f koo_zylaxis_world;
+      Eigen::Vector3f koo_zylaxispoint_world;
+
+      koo_kreismittelp_world = transform_3 * koo_kreismittelp_camera;
+      koo_zylaxis_world = transform_3 * koo_zylaxis_camera;
+      koo_zylaxispoint_world = transform_3 * koo_zylaxis_point_camera;
+
+      RCLCPP_INFO(this->get_logger(),"X_Circle_mid: %f \n Y_Circle_mid: %f \n Z_Circle_mid: %f \n ", koo_kreismittelp_world[0], koo_kreismittelp_world[1] ,koo_kreismittelp_world[2]);
+
+      RCLCPP_INFO(this->get_logger(),"X_Cyl_axis_pt: %f \n Y_Cyl_axis_pt: %f \n Z_Cyl_axis_pt: %f \n ", koo_zylaxispoint_world[0], koo_zylaxispoint_world[1] ,koo_zylaxispoint_world[2]);
+
+      RCLCPP_INFO(this->get_logger(),"X_Cyl_axis_vec: %f \n Y_Cyl_axis_vec: %f \n Z_Cyl_axis_vec: %f \n ", koo_zylaxis_world[0], koo_zylaxis_world[1] ,koo_zylaxis_world[2]);
+
+      //Point Cloud wird zur Visualisierung hinzugefügt
+
+      std::string visu_name = "cylinder_cloud_" + std::to_string(number_cylinders); 
+
+
+      
+      visu_ransac.addPointCloud (object_vec[number_cylinders], ColorHandlerNormal (object_vec[number_cylinders], 0.0, 255.0, 0.0), visu_name);
+      visu_ransac.addPointCloud (cloud_cylinder_end, ColorHandlerNormal (cloud_cylinder_end, 0.0, 0.0, 255.0), visu_name+"_");
+      //visu_ransac.addPointCloud (test, ColorHandlerNormal (test, 255.0, 0.0, 0.0), "test");
+      
+
+    }
+  }
+
+    //Visualisierung-----------------------------------------------------------------------------------------------------------------------------
+    
+    //visu_ransac.addPointCloud (object_vec[1], ColorHandlerNormal (object_vec[1], 0.0, 255.0, 0.0), "test_2");
+    //visu_ransac.addCylinder(*coefficients_cylinder,"cylinder");
     visu_ransac.spin ();
 
-  if (cloud_cylinder->points.empty ()) 
-    std::cerr << "Can't find the cylindrical component." << std::endl;
-  else
-  {
-	  std::cerr << "PointCloud representing the cylindrical component: " << cloud_cylinder->size () << " data points." << std::endl;
-	  //writer.write ("table_scene_mug_stereo_textured_cylinder.pcd", *cloud_cylinder, false);
-  }
 
-//Umrechnung der Koordinaten
+//     // Estimate normals for scene
+//   pcl::console::print_highlight ("Estimating object normals...\n");
+//   pcl::NormalEstimationOMP<PointClNormal,PointClNormal> nest_object;
 
-  Eigen::Affine3f transform_3 = Eigen::Affine3f::Identity();
+// //   pcl::search::KdTree<pcl::PointXYZ>::Ptr tree (new pcl::search::KdTree<pcl::PointXYZ> ());
+// //   nest_object.setSearchMethod (tree);
 
-  Eigen::Affine3f transform_3_inv = Eigen::Affine3f::Identity();
-
-  float phi_x = 0.263;
-  float phi_y = 0.0;
-  float phi_z = -1.57;
-  
-
-  // Define a translation of 2.5 meters on the x axis.
-  transform_3.translation() << -0.3, 0.0, 1.2;
-
-  // The same rotation matrix as before; theta radians around Z axis
-  transform_3.rotate (Eigen::AngleAxisf (phi_x, Eigen::Vector3f::UnitX()));
-  transform_3.rotate (Eigen::AngleAxisf (phi_y, Eigen::Vector3f::UnitY()));
-  transform_3.rotate (Eigen::AngleAxisf (phi_z, Eigen::Vector3f::UnitZ()));
-  
-  // Print the transformation
-  printf ("\nTransformationsmatrix\n");
-  std::cout << transform_3.matrix() << std::endl;
-
-  // std::vector<float> koo_kreismittelp_camera = {0.8184, -0.0981, 0.0058};
-  // std::vector<float> koo_kreismittelp_world;
-
-  Eigen::Vector3f koo_kreismittelp_camera(0.818403, -0.098142, 0.00582787);
-  Eigen::Vector3f koo_zylaxispoint_camera(0.866483, -0.10008, 0.-0.14109);
-  //Eigen::Vector3f koo_kreismittelp_camera(-0.4, -0.8, 0.994);
-  Eigen::Vector3f koo_kreismittelp_world;
-  Eigen::Vector3f koo_zylaxispoint_world;
-
-  koo_kreismittelp_world = transform_3 * koo_kreismittelp_camera;
-  koo_zylaxispoint_world = transform_3 * koo_zylaxispoint_camera;
-
-  RCLCPP_INFO(this->get_logger(),"X: %f \n Y: %f \n Z: %f \n ", koo_kreismittelp_world[0], koo_kreismittelp_world[1] ,koo_kreismittelp_world[2]);
-
-  RCLCPP_INFO(this->get_logger(),"X_Cyl: %f \n Y_Cyl: %f \n Z_Cyl: %f \n ", koo_zylaxispoint_world[0], koo_zylaxispoint_world[1] ,koo_zylaxispoint_world[2]);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // Estimate normals for scene
-  pcl::console::print_highlight ("Estimating object normals...\n");
-  pcl::NormalEstimationOMP<PointClNormal,PointClNormal> nest_object;
-
-//   pcl::search::KdTree<pcl::PointXYZ>::Ptr tree (new pcl::search::KdTree<pcl::PointXYZ> ());
+//   //nest_object.setRadiusSearch (0.01);
 //   nest_object.setSearchMethod (tree);
+//   nest_object.setKSearch(10);
+//   nest_object.setInputCloud (object);
+//   //nest_object.setSearchSurface (object);
+//   nest_object.setViewPoint(vx,vy,vz);
+//   nest_object.compute (*object);
 
-  //nest_object.setRadiusSearch (0.01);
-  nest_object.setSearchMethod (tree);
-  nest_object.setKSearch(10);
-  nest_object.setInputCloud (object);
-  //nest_object.setSearchSurface (object);
-  nest_object.setViewPoint(vx,vy,vz);
-  nest_object.compute (*object);
+//   int size_object_normal= object->size();
 
-  int size_object_normal= object->size();
-
-  RCLCPP_INFO(this->get_logger(),"Size: %i", size_object_normal);
+//   RCLCPP_INFO(this->get_logger(),"Size: %i", size_object_normal);
 
 
-    //pcl::flipNormalTowardsViewpoint (*object, vx, vy, vz, *object_normal);
+//     //pcl::flipNormalTowardsViewpoint (*object, vx, vy, vz, *object_normal);
 
-    visu_2.addPointCloud(object, ColorHandlerNormal(object, 255.0, 0.0, 0.0), "Projektion_object");
-    visu_2.addPointCloud(scene, ColorHandlerNormal(scene, 0.0, 255.0, 0.0), "Projektion_scene");
+//     visu_2.addPointCloud(object, ColorHandlerNormal(object, 255.0, 0.0, 0.0), "Projektion_object");
+//     visu_2.addPointCloud(scene, ColorHandlerNormal(scene, 0.0, 255.0, 0.0), "Projektion_scene");
     
-    int level_obj = 5, level_scene = 10;
-    float scale = (0.0199999995529651642F);
+//     int level_obj = 5, level_scene = 10;
+//     float scale = (0.0199999995529651642F);
 
-    visu_2.addPointCloudNormals<PointClNormal,PointClNormal>(scene, scene, level_scene, scale, "SceneNormal");
-    visu_2.addPointCloudNormals<PointClNormal,PointClNormal>(object, object, level_obj , scale , "ObjectNormal");
-    visu_2.spin();
+//     visu_2.addPointCloudNormals<PointClNormal,PointClNormal>(scene, scene, level_scene, scale, "SceneNormal");
+//     visu_2.addPointCloudNormals<PointClNormal,PointClNormal>(object, object, level_obj , scale , "ObjectNormal");
+//     visu_2.spin();
   
-  // Estimate features
-  pcl::console::print_highlight ("Estimating features...\n");
+//   // Estimate features
+//   pcl::console::print_highlight ("Estimating features...\n");
 
-  FeatureEstimationT fest;
-  //fest.setRadiusSearch (0.010);
-  fest.setSearchMethod(tree);
-  fest.setKSearch(10);
-  fest.setInputCloud (object);
-  fest.setInputNormals (object);
-  fest.compute (*object_features);
-  fest.setInputCloud (scene);
-  fest.setInputNormals (scene);
-  fest.compute (*scene_features);
+//   FeatureEstimationT fest;
+//   //fest.setRadiusSearch (0.010);
+//   fest.setSearchMethod(tree);
+//   fest.setKSearch(10);
+//   fest.setInputCloud (object);
+//   fest.setInputNormals (object);
+//   fest.compute (*object_features);
+//   fest.setInputCloud (scene);
+//   fest.setInputNormals (scene);
+//   fest.compute (*scene_features);
 
-  int feat_count_scene = scene_features->size();
-  int feat_count_object = object_features->size();
-
-
-  pcl::console::print_highlight ("Features Scene: %i\n Features Object: %i \n", feat_count_scene, feat_count_object);
+//   int feat_count_scene = scene_features->size();
+//   int feat_count_object = object_features->size();
 
 
-  pcl::SampleConsensusPrerejective<PointClNormal,PointClNormal,FeatureT> align_object;
-  align_object.setInputSource (object);
-  align_object.setSourceFeatures (object_features);
-  align_object.setInputTarget (scene);
-  align_object.setTargetFeatures (scene_features);
+//   pcl::console::print_highlight ("Features Scene: %i\n Features Object: %i \n", feat_count_scene, feat_count_object);
 
-  // align_object.setInputSource (scene);
-  // align_object.setSourceFeatures (scene_features);
-  // align_object.setInputTarget (object);
-  // align_object.setTargetFeatures (object_features);
 
-  align_object.setMaximumIterations (50000); // Number of RANSAC iterations
-  align_object.setNumberOfSamples (3); // Number of points to sample for generating/prerejecting a pose
-  align_object.setCorrespondenceRandomness (5); // Number of nearest features to use
-  align_object.setSimilarityThreshold (0.90f); // Polygonal edge length similarity threshold
-  align_object.setMaxCorrespondenceDistance (0.8f * leaf); // Inlier threshold
-  align_object.setInlierFraction (0.99f); // Required inlier fraction for accepting a pose hypothesis
-  {
-    pcl::ScopeTime t("Alignment");
-    align_object.align (*object_aligned);
-  }
+//   pcl::SampleConsensusPrerejective<PointClNormal,PointClNormal,FeatureT> align_object;
+//   align_object.setInputSource (object);
+//   align_object.setSourceFeatures (object_features);
+//   align_object.setInputTarget (scene);
+//   align_object.setTargetFeatures (scene_features);
+
+//   // align_object.setInputSource (scene);
+//   // align_object.setSourceFeatures (scene_features);
+//   // align_object.setInputTarget (object);
+//   // align_object.setTargetFeatures (object_features);
+
+//   align_object.setMaximumIterations (50000); // Number of RANSAC iterations
+//   align_object.setNumberOfSamples (3); // Number of points to sample for generating/prerejecting a pose
+//   align_object.setCorrespondenceRandomness (5); // Number of nearest features to use
+//   align_object.setSimilarityThreshold (0.90f); // Polygonal edge length similarity threshold
+//   align_object.setMaxCorrespondenceDistance (0.8f * leaf); // Inlier threshold
+//   align_object.setInlierFraction (0.99f); // Required inlier fraction for accepting a pose hypothesis
+//   {
+//     pcl::ScopeTime t("Alignment");
+//     align_object.align (*object_aligned);
+//   }
 
 
   
-  if (align_object.hasConverged ())
-  {
-    // Print results
-    printf ("\n");
-    Eigen::Matrix4f transformation = align_object.getFinalTransformation ();
-    pcl::console::print_info ("    | %6.3f %6.3f %6.3f | \n", transformation (0,0), transformation (0,1), transformation (0,2));
-    pcl::console::print_info ("R = | %6.3f %6.3f %6.3f | \n", transformation (1,0), transformation (1,1), transformation (1,2));
-    pcl::console::print_info ("    | %6.3f %6.3f %6.3f | \n", transformation (2,0), transformation (2,1), transformation (2,2));
-    pcl::console::print_info ("\n");
-    pcl::console::print_info ("t = < %0.3f, %0.3f, %0.3f >\n", transformation (0,3), transformation (1,3), transformation (2,3));
-    pcl::console::print_info ("\n");
-    pcl::console::print_info ("Inliers: %i/%i\n", align_object.getInliers ().size (), object->size ());
+//   if (align_object.hasConverged ())
+//   {
+//     // Print results
+//     printf ("\n");
+//     Eigen::Matrix4f transformation = align_object.getFinalTransformation ();
+//     pcl::console::print_info ("    | %6.3f %6.3f %6.3f | \n", transformation (0,0), transformation (0,1), transformation (0,2));
+//     pcl::console::print_info ("R = | %6.3f %6.3f %6.3f | \n", transformation (1,0), transformation (1,1), transformation (1,2));
+//     pcl::console::print_info ("    | %6.3f %6.3f %6.3f | \n", transformation (2,0), transformation (2,1), transformation (2,2));
+//     pcl::console::print_info ("\n");
+//     pcl::console::print_info ("t = < %0.3f, %0.3f, %0.3f >\n", transformation (0,3), transformation (1,3), transformation (2,3));
+//     pcl::console::print_info ("\n");
+//     pcl::console::print_info ("Inliers: %i/%i\n", align_object.getInliers ().size (), object->size ());
     
-    // Show alignment
-    pcl::visualization::PCLVisualizer visu("TEST");
-    visu.addPointCloud (scene, ColorHandlerNormal (scene, 0.0, 255.0, 0.0), "scene");
-    visu.addPointCloud (object_aligned, ColorHandlerNormal (object_aligned, 255.0, 0.0, 0.0), "object_aligned");
-    visu.spin ();
-  }
-  else
-  {
-    pcl::console::print_error ("Alignment failed!\n");
+//     // Show alignment
+//     pcl::visualization::PCLVisualizer visu("TEST");
+//     visu.addPointCloud (scene, ColorHandlerNormal (scene, 0.0, 255.0, 0.0), "scene");
+//     visu.addPointCloud (object_aligned, ColorHandlerNormal (object_aligned, 255.0, 0.0, 0.0), "object_aligned");
+//     visu.spin ();
+//   }
+//   else
+//   {
+//     pcl::console::print_error ("Alignment failed!\n");
 
-    rclcpp::shutdown();
-    return;
-  }
+//     rclcpp::shutdown();
+//     return;
+//   }
 
   return;
 }

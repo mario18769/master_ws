@@ -2235,4 +2235,5 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: \
  /usr/include/pcl-1.14/pcl/sample_consensus/ransac.h \
  /usr/include/pcl-1.14/pcl/sample_consensus/sac_model_plane.h \
  /usr/include/pcl-1.14/pcl/sample_consensus/sac_model_sphere.h \
- /usr/include/pcl-1.14/pcl/sample_consensus/sac_model_cylinder.h
+ /usr/include/pcl-1.14/pcl/sample_consensus/sac_model_cylinder.h \
+ /usr/include/pcl-1.14/pcl/segmentation/extract_clusters.h

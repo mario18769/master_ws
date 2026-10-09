@@ -1930,3 +1930,227 @@ events:
         
       exitCode: 0
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/VTK-vtk-module-find-packages.cmake:397 (find_package)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/vtk-config.cmake:150 (include)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:275 (find_package)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:324 (find_VTK)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:567 (find_external_library)"
+      - "/opt/ros/jazzy/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)"
+      - "/opt/ros/jazzy/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)"
+      - "/opt/ros/jazzy/share/pcl_ros/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)"
+      - "/opt/ros/jazzy/share/pcl_ros/cmake/pcl_rosConfig.cmake:41 (include)"
+      - "CMakeLists.txt:14 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/mario/master_ws/build/vision_control/CMakeFiles/CMakeScratch/TryCompile-oTNhZN"
+      binary: "/home/mario/master_ws/build/vision_control/CMakeFiles/CMakeScratch/TryCompile-oTNhZN"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/patches/99;/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1;/opt/ros/jazzy/share/fastrtps_cmake_module/cmake/Modules;/usr/lib/x86_64-linux-gnu/cmake/pcl/Modules"
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/mario/master_ws/build/vision_control/CMakeFiles/CMakeScratch/TryCompile-oTNhZN'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_d4c3a/fast
+        gmake[1]: Verzeichnis „/home/mario/master_ws/build/vision_control/CMakeFiles/CMakeScratch/TryCompile-oTNhZN“ wird betreten
+        /usr/bin/gmake  -f CMakeFiles/cmTC_d4c3a.dir/build.make CMakeFiles/cmTC_d4c3a.dir/build
+        gmake[2]: Verzeichnis „/home/mario/master_ws/build/vision_control/CMakeFiles/CMakeScratch/TryCompile-oTNhZN“ wird betreten
+        Building C object CMakeFiles/cmTC_d4c3a.dir/test_mpi.c.o
+        /usr/bin/cc  -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi  -o CMakeFiles/cmTC_d4c3a.dir/test_mpi.c.o -c /home/mario/master_ws/build/vision_control/CMakeFiles/CMakeScratch/TryCompile-oTNhZN/test_mpi.c
+        Linking C executable cmTC_d4c3a
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d4c3a.dir/link.txt --verbose=1
+        /usr/bin/cc -L/usr/lib/x86_64-linux-gnu/openmpi/lib CMakeFiles/cmTC_d4c3a.dir/test_mpi.c.o -o cmTC_d4c3a  /usr/lib/x86_64-linux-gnu/libmpi.so 
+        gmake[2]: Verzeichnis „/home/mario/master_ws/build/vision_control/CMakeFiles/CMakeScratch/TryCompile-oTNhZN“ wird verlassen
+        gmake[1]: Verzeichnis „/home/mario/master_ws/build/vision_control/CMakeFiles/CMakeScratch/TryCompile-oTNhZN“ wird verlassen
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/VTK-vtk-module-find-packages.cmake:397 (find_package)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/vtk-config.cmake:150 (include)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:275 (find_package)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:324 (find_VTK)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:567 (find_external_library)"
+      - "/opt/ros/jazzy/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)"
+      - "/opt/ros/jazzy/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)"
+      - "/opt/ros/jazzy/share/pcl_ros/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)"
+      - "/opt/ros/jazzy/share/pcl_ros/cmake/pcl_rosConfig.cmake:41 (include)"
+      - "CMakeLists.txt:14 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/mario/master_ws/build/vision_control/CMakeFiles/CMakeScratch/TryCompile-KhNh6K"
+      binary: "/home/mario/master_ws/build/vision_control/CMakeFiles/CMakeScratch/TryCompile-KhNh6K"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/patches/99;/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1;/opt/ros/jazzy/share/fastrtps_cmake_module/cmake/Modules;/usr/lib/x86_64-linux-gnu/cmake/pcl/Modules"
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/mario/master_ws/build/vision_control/CMakeFiles/CMakeScratch/TryCompile-KhNh6K'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_8a4eb/fast
+        gmake[1]: Verzeichnis „/home/mario/master_ws/build/vision_control/CMakeFiles/CMakeScratch/TryCompile-KhNh6K“ wird betreten
+        /usr/bin/gmake  -f CMakeFiles/cmTC_8a4eb.dir/build.make CMakeFiles/cmTC_8a4eb.dir/build
+        gmake[2]: Verzeichnis „/home/mario/master_ws/build/vision_control/CMakeFiles/CMakeScratch/TryCompile-KhNh6K“ wird betreten
+        Building C object CMakeFiles/cmTC_8a4eb.dir/test_mpi.c.o
+        /usr/bin/cc  -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi  -o CMakeFiles/cmTC_8a4eb.dir/test_mpi.c.o -c /home/mario/master_ws/build/vision_control/CMakeFiles/CMakeScratch/TryCompile-KhNh6K/test_mpi.c
+        Linking C executable cmTC_8a4eb
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8a4eb.dir/link.txt --verbose=1
+        /usr/bin/cc -L/usr/lib/x86_64-linux-gnu/openmpi/lib CMakeFiles/cmTC_8a4eb.dir/test_mpi.c.o -o cmTC_8a4eb  /usr/lib/x86_64-linux-gnu/libmpi.so 
+        gmake[2]: Verzeichnis „/home/mario/master_ws/build/vision_control/CMakeFiles/CMakeScratch/TryCompile-KhNh6K“ wird verlassen
+        gmake[1]: Verzeichnis „/home/mario/master_ws/build/vision_control/CMakeFiles/CMakeScratch/TryCompile-KhNh6K“ wird verlassen
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/VTK-vtk-module-find-packages.cmake:397 (find_package)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/vtk-config.cmake:150 (include)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:275 (find_package)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:324 (find_VTK)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:570 (find_external_library)"
+      - "/opt/ros/jazzy/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)"
+      - "/opt/ros/jazzy/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)"
+      - "/opt/ros/jazzy/share/pcl_ros/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)"
+      - "/opt/ros/jazzy/share/pcl_ros/cmake/pcl_rosConfig.cmake:41 (include)"
+      - "CMakeLists.txt:14 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/mario/master_ws/build/vision_control/CMakeFiles/CMakeScratch/TryCompile-OVcord"
+      binary: "/home/mario/master_ws/build/vision_control/CMakeFiles/CMakeScratch/TryCompile-OVcord"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/patches/99;/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1;/opt/ros/jazzy/share/fastrtps_cmake_module/cmake/Modules;/usr/lib/x86_64-linux-gnu/cmake/pcl/Modules"
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/mario/master_ws/build/vision_control/CMakeFiles/CMakeScratch/TryCompile-OVcord'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_30ee6/fast
+        gmake[1]: Verzeichnis „/home/mario/master_ws/build/vision_control/CMakeFiles/CMakeScratch/TryCompile-OVcord“ wird betreten
+        /usr/bin/gmake  -f CMakeFiles/cmTC_30ee6.dir/build.make CMakeFiles/cmTC_30ee6.dir/build
+        gmake[2]: Verzeichnis „/home/mario/master_ws/build/vision_control/CMakeFiles/CMakeScratch/TryCompile-OVcord“ wird betreten
+        Building C object CMakeFiles/cmTC_30ee6.dir/test_mpi.c.o
+        /usr/bin/cc  -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi  -o CMakeFiles/cmTC_30ee6.dir/test_mpi.c.o -c /home/mario/master_ws/build/vision_control/CMakeFiles/CMakeScratch/TryCompile-OVcord/test_mpi.c
+        Linking C executable cmTC_30ee6
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_30ee6.dir/link.txt --verbose=1
+        /usr/bin/cc -L/usr/lib/x86_64-linux-gnu/openmpi/lib CMakeFiles/cmTC_30ee6.dir/test_mpi.c.o -o cmTC_30ee6  /usr/lib/x86_64-linux-gnu/libmpi.so 
+        gmake[2]: Verzeichnis „/home/mario/master_ws/build/vision_control/CMakeFiles/CMakeScratch/TryCompile-OVcord“ wird verlassen
+        gmake[1]: Verzeichnis „/home/mario/master_ws/build/vision_control/CMakeFiles/CMakeScratch/TryCompile-OVcord“ wird verlassen
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/VTK-vtk-module-find-packages.cmake:397 (find_package)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/vtk-config.cmake:150 (include)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:275 (find_package)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:324 (find_VTK)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:567 (find_external_library)"
+      - "/opt/ros/jazzy/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)"
+      - "/opt/ros/jazzy/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)"
+      - "/opt/ros/jazzy/share/pcl_ros/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)"
+      - "/opt/ros/jazzy/share/pcl_ros/cmake/pcl_rosConfig.cmake:41 (include)"
+      - "CMakeLists.txt:14 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/mario/master_ws/build/vision_control/CMakeFiles/CMakeScratch/TryCompile-ZvgB0F"
+      binary: "/home/mario/master_ws/build/vision_control/CMakeFiles/CMakeScratch/TryCompile-ZvgB0F"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/patches/99;/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1;/opt/ros/jazzy/share/fastrtps_cmake_module/cmake/Modules;/usr/lib/x86_64-linux-gnu/cmake/pcl/Modules"
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/mario/master_ws/build/vision_control/CMakeFiles/CMakeScratch/TryCompile-ZvgB0F'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_b4a8c/fast
+        gmake[1]: Verzeichnis „/home/mario/master_ws/build/vision_control/CMakeFiles/CMakeScratch/TryCompile-ZvgB0F“ wird betreten
+        /usr/bin/gmake  -f CMakeFiles/cmTC_b4a8c.dir/build.make CMakeFiles/cmTC_b4a8c.dir/build
+        gmake[2]: Verzeichnis „/home/mario/master_ws/build/vision_control/CMakeFiles/CMakeScratch/TryCompile-ZvgB0F“ wird betreten
+        Building C object CMakeFiles/cmTC_b4a8c.dir/test_mpi.c.o
+        /usr/bin/cc  -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi  -o CMakeFiles/cmTC_b4a8c.dir/test_mpi.c.o -c /home/mario/master_ws/build/vision_control/CMakeFiles/CMakeScratch/TryCompile-ZvgB0F/test_mpi.c
+        Linking C executable cmTC_b4a8c
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b4a8c.dir/link.txt --verbose=1
+        /usr/bin/cc -L/usr/lib/x86_64-linux-gnu/openmpi/lib CMakeFiles/cmTC_b4a8c.dir/test_mpi.c.o -o cmTC_b4a8c  /usr/lib/x86_64-linux-gnu/libmpi.so 
+        gmake[2]: Verzeichnis „/home/mario/master_ws/build/vision_control/CMakeFiles/CMakeScratch/TryCompile-ZvgB0F“ wird verlassen
+        gmake[1]: Verzeichnis „/home/mario/master_ws/build/vision_control/CMakeFiles/CMakeScratch/TryCompile-ZvgB0F“ wird verlassen
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/VTK-vtk-module-find-packages.cmake:397 (find_package)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/vtk-config.cmake:150 (include)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:275 (find_package)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:324 (find_VTK)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:567 (find_external_library)"
+      - "/opt/ros/jazzy/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)"
+      - "/opt/ros/jazzy/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)"
+      - "/opt/ros/jazzy/share/pcl_ros/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)"
+      - "/opt/ros/jazzy/share/pcl_ros/cmake/pcl_rosConfig.cmake:41 (include)"
+      - "CMakeLists.txt:14 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/mario/master_ws/build/vision_control/CMakeFiles/CMakeScratch/TryCompile-rcTfTv"
+      binary: "/home/mario/master_ws/build/vision_control/CMakeFiles/CMakeScratch/TryCompile-rcTfTv"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/patches/99;/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1;/opt/ros/jazzy/share/fastrtps_cmake_module/cmake/Modules;/usr/lib/x86_64-linux-gnu/cmake/pcl/Modules"
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/mario/master_ws/build/vision_control/CMakeFiles/CMakeScratch/TryCompile-rcTfTv'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_340ea/fast
+        gmake[1]: Verzeichnis „/home/mario/master_ws/build/vision_control/CMakeFiles/CMakeScratch/TryCompile-rcTfTv“ wird betreten
+        /usr/bin/gmake  -f CMakeFiles/cmTC_340ea.dir/build.make CMakeFiles/cmTC_340ea.dir/build
+        gmake[2]: Verzeichnis „/home/mario/master_ws/build/vision_control/CMakeFiles/CMakeScratch/TryCompile-rcTfTv“ wird betreten
+        Building C object CMakeFiles/cmTC_340ea.dir/test_mpi.c.o
+        /usr/bin/cc  -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi  -o CMakeFiles/cmTC_340ea.dir/test_mpi.c.o -c /home/mario/master_ws/build/vision_control/CMakeFiles/CMakeScratch/TryCompile-rcTfTv/test_mpi.c
+        Linking C executable cmTC_340ea
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_340ea.dir/link.txt --verbose=1
+        /usr/bin/cc -L/usr/lib/x86_64-linux-gnu/openmpi/lib CMakeFiles/cmTC_340ea.dir/test_mpi.c.o -o cmTC_340ea  /usr/lib/x86_64-linux-gnu/libmpi.so 
+        gmake[2]: Verzeichnis „/home/mario/master_ws/build/vision_control/CMakeFiles/CMakeScratch/TryCompile-rcTfTv“ wird verlassen
+        gmake[1]: Verzeichnis „/home/mario/master_ws/build/vision_control/CMakeFiles/CMakeScratch/TryCompile-rcTfTv“ wird verlassen
+        
+      exitCode: 0
+...

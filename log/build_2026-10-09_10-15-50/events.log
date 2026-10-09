@@ -1,0 +1,247 @@
+[0.000000] (-) TimerEvent: {}
+[0.000321] (-) JobUnselected: {'identifier': 'estun_description'}
+[0.000415] (-) JobUnselected: {'identifier': 'estun_moveit'}
+[0.000686] (-) JobUnselected: {'identifier': 'moveit_task_constructor_capabilities'}
+[0.000703] (-) JobUnselected: {'identifier': 'moveit_task_constructor_core'}
+[0.000715] (-) JobUnselected: {'identifier': 'moveit_task_constructor_demo'}
+[0.000728] (-) JobUnselected: {'identifier': 'moveit_task_constructor_msgs'}
+[0.000740] (-) JobUnselected: {'identifier': 'moveit_task_constructor_visualization'}
+[0.000752] (-) JobUnselected: {'identifier': 'robot_interfaces'}
+[0.000764] (-) JobUnselected: {'identifier': 'rviz_marker_tools'}
+[0.000776] (-) JobUnselected: {'identifier': 'vision_control'}
+[0.000790] (estun_control) JobQueued: {'identifier': 'estun_control', 'dependencies': OrderedDict({'moveit_task_constructor_msgs': '/home/mario/master_ws/install/moveit_task_constructor_msgs', 'robot_interfaces': '/home/mario/master_ws/install/robot_interfaces', 'rviz_marker_tools': '/home/mario/master_ws/install/rviz_marker_tools', 'moveit_task_constructor_core': '/home/mario/master_ws/install/moveit_task_constructor_core'})}
+[0.000821] (estun_control) JobStarted: {'identifier': 'estun_control'}
+[0.019169] (estun_control) JobProgress: {'identifier': 'estun_control', 'progress': 'cmake'}
+[0.019699] (estun_control) JobProgress: {'identifier': 'estun_control', 'progress': 'build'}
+[0.020174] (estun_control) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/mario/master_ws/build/estun_control', '--', '-j12', '-l12'], 'cwd': '/home/mario/master_ws/build/estun_control', 'env': OrderedDict({'GZ_SIM_SYSTEM_PLUGIN_PATH': '/opt/ros/jazzy/lib', 'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'XDG_ACTIVATION_TOKEN': 'gnome-shell/Terminator/2802-2-mario-MS-7C37_TIME641003', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'LANGUAGE': 'de_DE:en', 'USER': 'mario', 'LC_TIME': 'de_DE.UTF-8', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'x11', 'STM32CubeMX_PATH': '/home/mario/STM32CubeMX', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/mario/master_ws/install/moveit_task_constructor_core/lib:/home/mario/master_ws/install/rviz_marker_tools/lib:/home/mario/master_ws/install/robot_interfaces/lib:/home/mario/master_ws/install/moveit_task_constructor_msgs/lib:/home/mario/master_ws/install/moveit_task_constructor_demo/lib:/home/mario/master_ws/install/moveit_task_constructor_visualization/lib:/home/mario/master_ws/install/moveit_task_constructor_capabilities/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/mario', 'OLDPWD': '/home/mario', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/terminator.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'de_DE.UTF-8', 'MANAGERPID': '2421', 'SYSTEMD_EXEC_PID': '2802', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '16101', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/mario/master_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'mario', 'JOURNAL_STREAM': '10:26693', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'mario', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/home/mario/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/mario/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/mario-MS-7C37:@/tmp/.ICE-unix/2759,unix/mario-MS-7C37:/tmp/.ICE-unix/2759', 'INVOCATION_ID': '688439501be0435182a3fbb8edfd3e0f', 'PAPERSIZE': 'a4', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'de_DE.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'de_DE.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'de_DE.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/mario/master_ws/install/vision_control:/home/mario/master_ws/install/moveit_task_constructor_demo:/home/mario/master_ws/install/moveit_task_constructor_visualization:/home/mario/master_ws/install/moveit_task_constructor_capabilities:/home/mario/master_ws/install/estun_control:/home/mario/master_ws/install/moveit_task_constructor_core:/home/mario/master_ws/install/rviz_marker_tools:/home/mario/master_ws/install/robot_interfaces:/home/mario/master_ws/install/moveit_task_constructor_msgs:/home/mario/master_ws/install/estun_moveit:/home/mario/master_ws/install/estun_description:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LC_NAME': 'de_DE.UTF-8', 'TERMINATOR_UUID': 'urn:uuid:e3701b18-0f06-45e1-aa09-8470d634a2f1', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'de_DE.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'LC_IDENTIFICATION': 'de_DE.UTF-8', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/mario/master_ws/build/estun_control', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/home/mario/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/mario/master_ws/install/moveit_task_constructor_core/lib/python3.12/site-packages:/home/mario/master_ws/install/robot_interfaces/lib/python3.12/site-packages:/home/mario/master_ws/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:/home/mario/master_ws/install/estun_description/lib/python3.12/site-packages:/opt/ros/jazzy/opt/gz_sim_vendor/lib/python:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_transport_vendor/lib/python:/opt/ros/jazzy/opt/gz_msgs_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'LC_NUMERIC': 'en_US.UTF-8', 'LC_PAPER': 'de_DE.UTF-8', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/mario/master_ws/install/moveit_task_constructor_core:/home/mario/master_ws/install/rviz_marker_tools:/home/mario/master_ws/install/robot_interfaces:/home/mario/master_ws/install/moveit_task_constructor_msgs:/home/mario/master_ws/install/vision_control:/home/mario/master_ws/install/moveit_task_constructor_demo:/home/mario/master_ws/install/moveit_task_constructor_visualization:/home/mario/master_ws/install/moveit_task_constructor_capabilities:/home/mario/master_ws/install/estun_control:/home/mario/master_ws/install/estun_moveit:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/mario/master_ws/install/estun_description:/opt/ros/jazzy'}), 'shell': False}
+[0.091331] (estun_control) StdoutLine: {'line': b'[ 33%] Built target cartesian_planner\n'}
+[0.095753] (estun_control) StdoutLine: {'line': b'[ 66%] Built target mtc_estun\n'}
+[0.099831] (-) TimerEvent: {}
+[0.101636] (estun_control) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o\x1b[0m\n'}
+[0.199900] (-) TimerEvent: {}
+[0.300173] (-) TimerEvent: {}
+[0.400460] (-) TimerEvent: {}
+[0.500747] (-) TimerEvent: {}
+[0.601035] (-) TimerEvent: {}
+[0.701337] (-) TimerEvent: {}
+[0.801621] (-) TimerEvent: {}
+[0.901913] (-) TimerEvent: {}
+[1.002182] (-) TimerEvent: {}
+[1.102474] (-) TimerEvent: {}
+[1.202756] (-) TimerEvent: {}
+[1.303052] (-) TimerEvent: {}
+[1.403372] (-) TimerEvent: {}
+[1.503676] (-) TimerEvent: {}
+[1.603969] (-) TimerEvent: {}
+[1.704265] (-) TimerEvent: {}
+[1.804558] (-) TimerEvent: {}
+[1.904855] (-) TimerEvent: {}
+[2.005140] (-) TimerEvent: {}
+[2.050330] (estun_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:1\x1b[m\x1b[K:\n'}
+[2.050646] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:51:77:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[K#pragma message: .h header is obsolete. Please use the .hpp header instead.\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.050854] (estun_control) StderrLine: {'line': b'   51 | #pragma message(".h header is obsolete. Please use the .hpp header instead."\x1b[01;36m\x1b[K)\x1b[m\x1b[K\n'}
+[2.051037] (estun_control) StderrLine: {'line': b'      |                                                                             \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[2.105243] (-) TimerEvent: {}
+[2.205527] (-) TimerEvent: {}
+[2.306920] (-) TimerEvent: {}
+[2.407218] (-) TimerEvent: {}
+[2.507462] (-) TimerEvent: {}
+[2.607737] (-) TimerEvent: {}
+[2.708024] (-) TimerEvent: {}
+[2.808309] (-) TimerEvent: {}
+[2.908593] (-) TimerEvent: {}
+[3.008856] (-) TimerEvent: {}
+[3.109104] (-) TimerEvent: {}
+[3.209357] (-) TimerEvent: {}
+[3.309603] (-) TimerEvent: {}
+[3.409845] (-) TimerEvent: {}
+[3.510100] (-) TimerEvent: {}
+[3.610368] (-) TimerEvent: {}
+[3.710602] (-) TimerEvent: {}
+[3.810833] (-) TimerEvent: {}
+[3.911089] (-) TimerEvent: {}
+[4.011367] (-) TimerEvent: {}
+[4.111631] (-) TimerEvent: {}
+[4.211883] (-) TimerEvent: {}
+[4.312153] (-) TimerEvent: {}
+[4.412401] (-) TimerEvent: {}
+[4.512660] (-) TimerEvent: {}
+[4.612916] (-) TimerEvent: {}
+[4.713175] (-) TimerEvent: {}
+[4.813433] (-) TimerEvent: {}
+[4.913701] (-) TimerEvent: {}
+[5.013989] (-) TimerEvent: {}
+[5.114264] (-) TimerEvent: {}
+[5.214527] (-) TimerEvent: {}
+[5.262679] (estun_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:2\x1b[m\x1b[K:\n'}
+[5.262907] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[K#pragma message: .h header is obsolete. Please use the .hpp header instead.\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.263043] (estun_control) StderrLine: {'line': b'   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."\x1b[01;36m\x1b[K)\x1b[m\x1b[K\n'}
+[5.263180] (estun_control) StderrLine: {'line': b'      |                                                                             \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[5.314605] (-) TimerEvent: {}
+[5.414826] (-) TimerEvent: {}
+[5.515086] (-) TimerEvent: {}
+[5.615346] (-) TimerEvent: {}
+[5.715623] (-) TimerEvent: {}
+[5.815894] (-) TimerEvent: {}
+[5.916162] (-) TimerEvent: {}
+[6.016424] (-) TimerEvent: {}
+[6.116680] (-) TimerEvent: {}
+[6.216938] (-) TimerEvent: {}
+[6.317177] (-) TimerEvent: {}
+[6.417435] (-) TimerEvent: {}
+[6.517724] (-) TimerEvent: {}
+[6.617979] (-) TimerEvent: {}
+[6.697991] (estun_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[6.698249] (estun_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/moveit_core/moveit/kinematics_base/kinematics_base.hpp:42\x1b[m\x1b[K,\n'}
+[6.698376] (estun_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/moveit_core/moveit/robot_model/joint_model_group.hpp:42\x1b[m\x1b[K,\n'}
+[6.698493] (estun_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/moveit_core/moveit/robot_model/robot_model.hpp:45\x1b[m\x1b[K,\n'}
+[6.698658] (estun_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/moveit_core/moveit/robot_state/robot_state.hpp:40\x1b[m\x1b[K,\n'}
+[6.698778] (estun_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.hpp:41\x1b[m\x1b[K,\n'}
+[6.698892] (estun_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:52\x1b[m\x1b[K:\n'}
+[6.699006] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid ObstaclePlanner::\x1b[01;32m\x1b[KaddProbekoerper\x1b[m\x1b[K(robot_interfaces::msg::ObjectPose)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.699146] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:155:40:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kformat \xe2\x80\x98\x1b[01m\x1b[K%i\x1b[m\x1b[K\xe2\x80\x99 expects argument of type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99, but argument 5 has type \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<robot_interfaces::msg::ObjectPose_<std::allocator<void> > >::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=\x07-Wformat=\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.699269] (estun_control) StderrLine: {'line': b'  155 |         RCLCPP_INFO(this->get_logger(),\x1b[01;35m\x1b[K"Message_new_size: %i"\x1b[m\x1b[K, \x1b[32m\x1b[Kmsg_vector_new.size()\x1b[m\x1b[K);\n'}
+[6.699385] (estun_control) StderrLine: {'line': b'      |                                        \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K  \x1b[32m\x1b[K~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.699508] (estun_control) StderrLine: {'line': b'      |                                                                                   \x1b[32m\x1b[K|\x1b[m\x1b[K\n'}
+[6.699660] (estun_control) StderrLine: {'line': b'      |                                                                                   \x1b[32m\x1b[Kstd::vector<robot_interfaces::msg::ObjectPose_<std::allocator<void> > >::size_type {aka long unsigned int}\x1b[m\x1b[K\n'}
+[6.699807] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:155:60:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kformat string is defined here\n'}
+[6.699978] (estun_control) StderrLine: {'line': b'  155 |         RCLCPP_INFO(this->get_logger(),"Message_new_size: \x1b[01;36m\x1b[K%i\x1b[m\x1b[K", msg_vector_new.size());\n'}
+[6.700141] (estun_control) StderrLine: {'line': b'      |                                                           \x1b[01;36m\x1b[K~^\x1b[m\x1b[K\n'}
+[6.700290] (estun_control) StderrLine: {'line': b'      |                                                            \x1b[01;36m\x1b[K|\x1b[m\x1b[K\n'}
+[6.700437] (estun_control) StderrLine: {'line': b'      |                                                            \x1b[01;36m\x1b[Kint\x1b[m\x1b[K\n'}
+[6.700581] (estun_control) StderrLine: {'line': b'      |                                                           \x1b[32m\x1b[K%li\x1b[m\x1b[K\n'}
+[6.700744] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:166:40:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kformat \xe2\x80\x98\x1b[01m\x1b[K%i\x1b[m\x1b[K\xe2\x80\x99 expects argument of type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99, but argument 5 has type \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<robot_interfaces::msg::ObjectPose_<std::allocator<void> > >::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=\x07-Wformat=\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.700937] (estun_control) StderrLine: {'line': b'  166 |         RCLCPP_INFO(this->get_logger(),\x1b[01;35m\x1b[K"Message_old_size: %i"\x1b[m\x1b[K, \x1b[32m\x1b[Kmsg_vector_old.size()\x1b[m\x1b[K);\n'}
+[6.701103] (estun_control) StderrLine: {'line': b'      |                                        \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K  \x1b[32m\x1b[K~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.701293] (estun_control) StderrLine: {'line': b'      |                                                                                   \x1b[32m\x1b[K|\x1b[m\x1b[K\n'}
+[6.701419] (estun_control) StderrLine: {'line': b'      |                                                                                   \x1b[32m\x1b[Kstd::vector<robot_interfaces::msg::ObjectPose_<std::allocator<void> > >::size_type {aka long unsigned int}\x1b[m\x1b[K\n'}
+[6.701553] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:166:60:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kformat string is defined here\n'}
+[6.701672] (estun_control) StderrLine: {'line': b'  166 |         RCLCPP_INFO(this->get_logger(),"Message_old_size: \x1b[01;36m\x1b[K%i\x1b[m\x1b[K", msg_vector_old.size());\n'}
+[6.701804] (estun_control) StderrLine: {'line': b'      |                                                           \x1b[01;36m\x1b[K~^\x1b[m\x1b[K\n'}
+[6.701924] (estun_control) StderrLine: {'line': b'      |                                                            \x1b[01;36m\x1b[K|\x1b[m\x1b[K\n'}
+[6.702044] (estun_control) StderrLine: {'line': b'      |                                                            \x1b[01;36m\x1b[Kint\x1b[m\x1b[K\n'}
+[6.702180] (estun_control) StderrLine: {'line': b'      |                                                           \x1b[32m\x1b[K%li\x1b[m\x1b[K\n'}
+[6.702298] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:175:44:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kformat \xe2\x80\x98\x1b[01m\x1b[K%s\x1b[m\x1b[K\xe2\x80\x99 expects argument of type \xe2\x80\x98\x1b[01m\x1b[Kchar*\x1b[m\x1b[K\xe2\x80\x99, but argument 5 has type \xe2\x80\x98\x1b[01m\x1b[Krobot_interfaces::msg::ObjectPose_<std::allocator<void> >::_object_type_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstd::__cxx11::basic_string<char>\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=\x07-Wformat=\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.702423] (estun_control) StderrLine: {'line': b'  175 |             RCLCPP_INFO(this->get_logger(),\x1b[01;35m\x1b[K"String: %s"\x1b[m\x1b[K, msg_component.object_type);\n'}
+[6.702543] (estun_control) StderrLine: {'line': b'      |                                            \x1b[01;35m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.702663] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:175:54:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kformat string is defined here\n'}
+[6.702780] (estun_control) StderrLine: {'line': b'  175 |             RCLCPP_INFO(this->get_logger(),"String: \x1b[01;36m\x1b[K%s\x1b[m\x1b[K", msg_component.object_type);\n'}
+[6.702899] (estun_control) StderrLine: {'line': b'      |                                                     \x1b[01;36m\x1b[K~^\x1b[m\x1b[K\n'}
+[6.703018] (estun_control) StderrLine: {'line': b'      |                                                      \x1b[01;36m\x1b[K|\x1b[m\x1b[K\n'}
+[6.703148] (estun_control) StderrLine: {'line': b'      |                                                      \x1b[01;36m\x1b[Kchar*\x1b[m\x1b[K\n'}
+[6.718063] (-) TimerEvent: {}
+[6.818293] (-) TimerEvent: {}
+[6.918552] (-) TimerEvent: {}
+[7.018797] (-) TimerEvent: {}
+[7.119029] (-) TimerEvent: {}
+[7.219352] (-) TimerEvent: {}
+[7.319654] (-) TimerEvent: {}
+[7.419948] (-) TimerEvent: {}
+[7.520228] (-) TimerEvent: {}
+[7.620445] (-) TimerEvent: {}
+[7.720729] (-) TimerEvent: {}
+[7.820995] (-) TimerEvent: {}
+[7.921219] (-) TimerEvent: {}
+[8.021431] (-) TimerEvent: {}
+[8.121639] (-) TimerEvent: {}
+[8.221876] (-) TimerEvent: {}
+[8.322160] (-) TimerEvent: {}
+[8.422390] (-) TimerEvent: {}
+[8.522658] (-) TimerEvent: {}
+[8.622896] (-) TimerEvent: {}
+[8.723107] (-) TimerEvent: {}
+[8.823309] (-) TimerEvent: {}
+[8.923534] (-) TimerEvent: {}
+[9.023794] (-) TimerEvent: {}
+[9.124070] (-) TimerEvent: {}
+[9.224334] (-) TimerEvent: {}
+[9.324595] (-) TimerEvent: {}
+[9.424847] (-) TimerEvent: {}
+[9.525103] (-) TimerEvent: {}
+[9.625335] (-) TimerEvent: {}
+[9.725551] (-) TimerEvent: {}
+[9.825802] (-) TimerEvent: {}
+[9.926029] (-) TimerEvent: {}
+[10.026325] (-) TimerEvent: {}
+[10.126583] (-) TimerEvent: {}
+[10.226882] (-) TimerEvent: {}
+[10.327166] (-) TimerEvent: {}
+[10.427407] (-) TimerEvent: {}
+[10.527699] (-) TimerEvent: {}
+[10.627971] (-) TimerEvent: {}
+[10.728200] (-) TimerEvent: {}
+[10.828432] (-) TimerEvent: {}
+[10.928665] (-) TimerEvent: {}
+[11.028905] (-) TimerEvent: {}
+[11.129145] (-) TimerEvent: {}
+[11.229398] (-) TimerEvent: {}
+[11.329610] (-) TimerEvent: {}
+[11.429827] (-) TimerEvent: {}
+[11.530049] (-) TimerEvent: {}
+[11.630272] (-) TimerEvent: {}
+[11.730499] (-) TimerEvent: {}
+[11.830749] (-) TimerEvent: {}
+[11.930974] (-) TimerEvent: {}
+[12.031237] (-) TimerEvent: {}
+[12.131442] (-) TimerEvent: {}
+[12.231671] (-) TimerEvent: {}
+[12.331943] (-) TimerEvent: {}
+[12.432168] (-) TimerEvent: {}
+[12.532401] (-) TimerEvent: {}
+[12.632627] (-) TimerEvent: {}
+[12.732857] (-) TimerEvent: {}
+[12.833109] (-) TimerEvent: {}
+[12.933400] (-) TimerEvent: {}
+[13.033618] (-) TimerEvent: {}
+[13.133861] (-) TimerEvent: {}
+[13.234040] (-) TimerEvent: {}
+[13.334243] (-) TimerEvent: {}
+[13.415535] (estun_control) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable obstacle_planner\x1b[0m\n'}
+[13.434321] (-) TimerEvent: {}
+[13.534505] (-) TimerEvent: {}
+[13.634679] (-) TimerEvent: {}
+[13.734924] (-) TimerEvent: {}
+[13.835216] (-) TimerEvent: {}
+[13.935520] (-) TimerEvent: {}
+[14.034502] (estun_control) StdoutLine: {'line': b'[100%] Built target obstacle_planner\n'}
+[14.035581] (-) TimerEvent: {}
+[14.046689] (estun_control) CommandEnded: {'returncode': 0}
+[14.047183] (estun_control) JobProgress: {'identifier': 'estun_control', 'progress': 'install'}
+[14.056611] (estun_control) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/mario/master_ws/build/estun_control'], 'cwd': '/home/mario/master_ws/build/estun_control', 'env': OrderedDict({'GZ_SIM_SYSTEM_PLUGIN_PATH': '/opt/ros/jazzy/lib', 'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'XDG_ACTIVATION_TOKEN': 'gnome-shell/Terminator/2802-2-mario-MS-7C37_TIME641003', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'LANGUAGE': 'de_DE:en', 'USER': 'mario', 'LC_TIME': 'de_DE.UTF-8', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'x11', 'STM32CubeMX_PATH': '/home/mario/STM32CubeMX', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/mario/master_ws/install/moveit_task_constructor_core/lib:/home/mario/master_ws/install/rviz_marker_tools/lib:/home/mario/master_ws/install/robot_interfaces/lib:/home/mario/master_ws/install/moveit_task_constructor_msgs/lib:/home/mario/master_ws/install/moveit_task_constructor_demo/lib:/home/mario/master_ws/install/moveit_task_constructor_visualization/lib:/home/mario/master_ws/install/moveit_task_constructor_capabilities/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/mario', 'OLDPWD': '/home/mario', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/terminator.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'de_DE.UTF-8', 'MANAGERPID': '2421', 'SYSTEMD_EXEC_PID': '2802', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '16101', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/mario/master_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'mario', 'JOURNAL_STREAM': '10:26693', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'mario', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/home/mario/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/mario/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/mario-MS-7C37:@/tmp/.ICE-unix/2759,unix/mario-MS-7C37:/tmp/.ICE-unix/2759', 'INVOCATION_ID': '688439501be0435182a3fbb8edfd3e0f', 'PAPERSIZE': 'a4', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'de_DE.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'de_DE.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'de_DE.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/mario/master_ws/install/vision_control:/home/mario/master_ws/install/moveit_task_constructor_demo:/home/mario/master_ws/install/moveit_task_constructor_visualization:/home/mario/master_ws/install/moveit_task_constructor_capabilities:/home/mario/master_ws/install/estun_control:/home/mario/master_ws/install/moveit_task_constructor_core:/home/mario/master_ws/install/rviz_marker_tools:/home/mario/master_ws/install/robot_interfaces:/home/mario/master_ws/install/moveit_task_constructor_msgs:/home/mario/master_ws/install/estun_moveit:/home/mario/master_ws/install/estun_description:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LC_NAME': 'de_DE.UTF-8', 'TERMINATOR_UUID': 'urn:uuid:e3701b18-0f06-45e1-aa09-8470d634a2f1', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'de_DE.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'LC_IDENTIFICATION': 'de_DE.UTF-8', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/mario/master_ws/build/estun_control', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/home/mario/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/mario/master_ws/install/moveit_task_constructor_core/lib/python3.12/site-packages:/home/mario/master_ws/install/robot_interfaces/lib/python3.12/site-packages:/home/mario/master_ws/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:/home/mario/master_ws/install/estun_description/lib/python3.12/site-packages:/opt/ros/jazzy/opt/gz_sim_vendor/lib/python:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_transport_vendor/lib/python:/opt/ros/jazzy/opt/gz_msgs_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'LC_NUMERIC': 'en_US.UTF-8', 'LC_PAPER': 'de_DE.UTF-8', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/mario/master_ws/install/moveit_task_constructor_core:/home/mario/master_ws/install/rviz_marker_tools:/home/mario/master_ws/install/robot_interfaces:/home/mario/master_ws/install/moveit_task_constructor_msgs:/home/mario/master_ws/install/vision_control:/home/mario/master_ws/install/moveit_task_constructor_demo:/home/mario/master_ws/install/moveit_task_constructor_visualization:/home/mario/master_ws/install/moveit_task_constructor_capabilities:/home/mario/master_ws/install/estun_control:/home/mario/master_ws/install/estun_moveit:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/mario/master_ws/install/estun_description:/opt/ros/jazzy'}), 'shell': False}
+[14.064879] (estun_control) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[14.065104] (estun_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/estun_control/lib/estun_control/mtc_estun\n'}
+[14.065305] (estun_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/estun_control/share/estun_control/launch\n'}
+[14.065724] (estun_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/estun_control/share/estun_control/launch/estun_obstacle_planner.launch.py\n'}
+[14.065928] (estun_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/estun_control/share/estun_control/launch/test.launch.py\n'}
+[14.066094] (estun_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/estun_control/share/estun_control/launch/estun_cartesian.launch.py\n'}
+[14.066245] (estun_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/estun_control/share/estun_control/meshes\n'}
+[14.066365] (estun_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/estun_control/share/estun_control/meshes/arm_01_1.stl\n'}
+[14.066487] (estun_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/estun_control/share/estun_control/meshes/test_part.stl\n'}
+[14.066619] (estun_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/estun_control/share/estun_control/meshes/Vermessungsstation.stl\n'}
+[14.066738] (estun_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/estun_control/share/estun_control/meshes/Palettenwagen.stl\n'}
+[14.066868] (estun_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/estun_control/share/estun_control/meshes/Industriezaun.stl\n'}
+[14.066989] (estun_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/estun_control/share/estun_control/meshes/Container.stl\n'}
+[14.067108] (estun_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/estun_control/share/estun_control/meshes/Probekoerper.stl\n'}
+[14.067260] (estun_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/estun_control/share/estun_control/meshes/Druckpruefmaschine.stl\n'}
+[14.067378] (estun_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/estun_control/share/estun_control/meshes/Tisch.stl\n'}
+[14.067527] (estun_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/estun_control/lib/estun_control/cartesian_planner\n'}
+[14.067682] (estun_control) StdoutLine: {'line': b'-- Installing: /home/mario/master_ws/install/estun_control/lib/estun_control/obstacle_planner\n'}
+[14.074770] (estun_control) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/mario/master_ws/install/estun_control/lib/estun_control/obstacle_planner" to ""\n'}
+[14.075137] (estun_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/estun_control/share/ament_index/resource_index/package_run_dependencies/estun_control\n'}
+[14.075344] (estun_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/estun_control/share/ament_index/resource_index/parent_prefix_path/estun_control\n'}
+[14.075472] (estun_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/estun_control/share/estun_control/environment/ament_prefix_path.sh\n'}
+[14.075664] (estun_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/estun_control/share/estun_control/environment/ament_prefix_path.dsv\n'}
+[14.075788] (estun_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/estun_control/share/estun_control/environment/path.sh\n'}
+[14.075909] (estun_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/estun_control/share/estun_control/environment/path.dsv\n'}
+[14.076031] (estun_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/estun_control/share/estun_control/local_setup.bash\n'}
+[14.076175] (estun_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/estun_control/share/estun_control/local_setup.sh\n'}
+[14.076298] (estun_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/estun_control/share/estun_control/local_setup.zsh\n'}
+[14.076423] (estun_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/estun_control/share/estun_control/local_setup.dsv\n'}
+[14.076547] (estun_control) StdoutLine: {'line': b'-- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/package.dsv\n'}
+[14.076668] (estun_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/estun_control/share/ament_index/resource_index/packages/estun_control\n'}
+[14.076820] (estun_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/estun_control/share/estun_control/cmake/estun_controlConfig.cmake\n'}
+[14.076967] (estun_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/estun_control/share/estun_control/cmake/estun_controlConfig-version.cmake\n'}
+[14.077244] (estun_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/estun_control/share/estun_control/package.xml\n'}
+[14.077849] (estun_control) CommandEnded: {'returncode': 0}
+[14.089566] (estun_control) JobEnded: {'identifier': 'estun_control', 'rc': 0}
+[14.090202] (-) EventReactorShutdown: {}

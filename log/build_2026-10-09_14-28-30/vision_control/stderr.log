@@ -1,0 +1,37 @@
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kvoid PointCloudProcessor::[01;32m[Kgenerate_cylinder_master[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:113:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcurrent_height[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  113 |       float [01;35m[Kcurrent_height[m[K = j * spacing_z;
+      |             [01;35m[K^~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/copy_all_parameter_values.hpp:27[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:175[m[K,
+                 from [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:5[m[K:
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kvoid PointCloudProcessor::[01;32m[KclusterPointCloud[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:238:34:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%i[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 5 has type ‘[01m[Kstd::vector<pcl::PointIndices>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  238 |   RCLCPP_INFO(this->get_logger(),[01;35m[K"Extract Cluster Indizes size: %i"[m[K, [32m[Kcluster_indices.size()[m[K);
+      |                                  [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K  [32m[K~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                                                                          [32m[K|[m[K
+      |                                                                                          [32m[Kstd::vector<pcl::PointIndices>::size_type {aka long unsigned int}[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:238:66:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  238 |   RCLCPP_INFO(this->get_logger(),"Extract Cluster Indizes size: [01;36m[K%i[m[K", cluster_indices.size());
+      |                                                                 [01;36m[K~^[m[K
+      |                                                                  [01;36m[K|[m[K
+      |                                                                  [01;36m[Kint[m[K
+      |                                                                 [32m[K%li[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kvoid PointCloudProcessor::[01;32m[KprocessPointCloud[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:491:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kdistance[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  491 |     auto [01;35m[Kdistance[m[K = seg.getDistanceFromOrigin();
+      |          [01;35m[K^~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kstd::vector<float> PointCloudProcessor::[01;32m[KcalculateCylinder[m[K(Eigen::Vector3f, Eigen::Vector3f, Eigen::Vector3f)[m[K’:
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:780:15:[m[K [01;35m[Kwarning: [m[K‘[01m[Kzaehler[m[K’ is used uninitialized [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wuninitialized-Wuninitialized]8;;[m[K]
+  780 |     float t = [01;35m[K-zaehler[m[K/nenner;
+      |               [01;35m[K^~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:778:11:[m[K [01;36m[Knote: [m[K‘[01m[Kzaehler[m[K’ was declared here
+  778 |     float [01;36m[Kzaehler[m[K;
+      |           [01;36m[K^~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:780:11:[m[K [01;35m[Kwarning: [m[K‘[01m[Knenner[m[K’ is used uninitialized [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wuninitialized-Wuninitialized]8;;[m[K]
+  780 |     float [01;35m[Kt[m[K = -zaehler/nenner;
+      |           [01;35m[K^[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:779:11:[m[K [01;36m[Knote: [m[K‘[01m[Knenner[m[K’ was declared here
+  779 |     float [01;36m[Knenner[m[K;
+      |           [01;36m[K^~~~~~[m[K

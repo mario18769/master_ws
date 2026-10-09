@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.8)
 project(estun_control)
+set(CMAKE_CXX_STANDARD 20)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
@@ -20,10 +21,8 @@ find_package(tf2  REQUIRED )
 find_package(Boost REQUIRED thread)
 find_package(sdformat14 REQUIRED)
 find_package(moveit_task_constructor_core REQUIRED)
+find_package(robot_interfaces REQUIRED)
 
-# uncomment the following section in order to fill in
-# further dependencies manually.
-# find_package(<dependency> REQUIRED)
 
 add_executable( cartesian_planner src/cartesian_planner.cpp ) 
 ament_target_dependencies(cartesian_planner rclcpp std_msgs moveit_ros_planning_interface)
@@ -38,7 +37,9 @@ moveit
 geometric_shapes
 geometry_msgs
 tf2_ros
-tf2)
+tf2
+robot_interfaces
+)
 
 add_executable(mtc_estun src/mtc_estun.cpp)
 ament_target_dependencies(mtc_estun moveit_task_constructor_core rclcpp)

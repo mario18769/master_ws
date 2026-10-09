@@ -6,12 +6,13 @@
                 "${workspaceFolder}/**",
                 "/opt/ros/${env:ROS_DISTRO}/include/**",
                 "${workspaceFolder}/install/**/include/**",
-                "${workspaceFolder}/build/**/include/**"
+                "${workspaceFolder}/build/**/include/**",
+                "${workspaceFolder}/install/robot_interfaces/include/**"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/clang-18",
-            "cStandard": "c17",
-            "cppStandard": "c++17",
+            "cStandard": "c23",
+            "cppStandard": "c++20",
             "intelliSenseMode": "linux-clang-x64",
             "compileCommands": "${workspaceFolder}/build/compile_commands.json"
         }

@@ -1,0 +1,105 @@
+[0.035s] Invoking command in '/home/mario/master_ws/build/vision_control': AMENT_PREFIX_PATH=/home/mario/master_ws/install/robot_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mario/master_ws/install/robot_interfaces:/home/mario/master_ws/install/vision_control:/home/mario/master_ws/install/moveit_task_constructor_demo:/home/mario/master_ws/install/moveit_task_constructor_visualization:/home/mario/master_ws/install/moveit_task_constructor_capabilities:/home/mario/master_ws/install/estun_control:/home/mario/master_ws/install/moveit_task_constructor_core:/home/mario/master_ws/install/rviz_marker_tools:/home/mario/master_ws/install/moveit_task_constructor_msgs:/home/mario/master_ws/install/estun_moveit:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/mario/master_ws/install/estun_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/mario/master_ws/install/robot_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/mario/master_ws/install/robot_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/mario/master_ws/build/vision_control -- -j12 -l12
+[0.074s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.308s] -- Found rclcpp: 28.1.22 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.345s] -- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.355s] -- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.368s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.386s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.473s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.478s] -- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.629s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.748s] -- Found pcl_ros: 2.6.5 (/opt/ros/jazzy/share/pcl_ros/cmake)
+[0.915s] [33mCMake Warning (dev) at /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindFLANN.cmake:45 (find_package):
+[0.915s]   Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT
+[0.915s]   variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the
+[0.915s]   cmake_policy command to set the policy and suppress this warning.
+[0.915s] 
+[0.915s]   CMake variable FLANN_ROOT is set to:
+[0.915s] 
+[0.915s]     /usr
+[0.916s] 
+[0.916s]   For compatibility, find_package is ignoring the variable, but code in a
+[0.916s]   .cmake module might still use it.
+[0.916s] Call Stack (most recent call first):
+[0.916s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:261 (find_package)
+[0.916s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:306 (find_flann)
+[0.916s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:570 (find_external_library)
+[0.916s]   /opt/ros/jazzy/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[0.916s]   /opt/ros/jazzy/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)
+[0.916s]   /opt/ros/jazzy/share/pcl_ros/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[0.917s]   /opt/ros/jazzy/share/pcl_ros/cmake/pcl_rosConfig.cmake:41 (include)
+[0.917s]   CMakeLists.txt:14 (find_package)
+[0.917s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.917s] [0m
+[0.917s] -- Found flann version 1.9.2
+[1.504s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[1.511s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[1.516s] -- Could NOT find Pcap (missing: PCAP_LIBRARIES PCAP_INCLUDE_DIRS) 
+[2.068s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[2.075s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[2.566s] -- Found Qhull version 8.0.2
+[3.105s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[3.861s] -- Found eigen3_cmake_module: 0.3.1 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)
+[3.863s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[3.867s] -- Found robot_interfaces: 0.0.0 (/home/mario/master_ws/install/robot_interfaces/share/robot_interfaces/cmake)
+[3.882s] -- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[3.982s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[3.982s] -- Configured cppcheck include dirs: 
+[3.983s] -- Configured cppcheck exclude dirs and/or files: 
+[3.983s] -- Added test 'lint_cmake' to check CMake code style
+[3.984s] -- Added test 'uncrustify' to check C / C++ code style
+[3.984s] -- Configured uncrustify additional arguments: 
+[3.984s] -- Added test 'xmllint' to check XML markup files
+[3.985s] -- Configuring done (3.9s)
+[4.055s] -- Generating done (0.1s)
+[4.062s] -- Build files have been written to: /home/mario/master_ws/build/vision_control
+[4.154s] [ 50%] [32mBuilding CXX object CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o[0m
+[11.257s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In constructor ‘[01m[KPointCloudProcessor::[01;32m[KPointCloudProcessor[m[K()[m[K’:
+[11.257s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:60:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kpose_publisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Kcount_publishers[m[K’?
+[11.257s]    60 |             [01;31m[Kpose_publisher_[m[K = this->create_publisher<robot_interfaces/msg/ObjectPose>("/ObjectPose",10);
+[11.258s]       |             [01;31m[K^~~~~~~~~~~~~~~[m[K
+[11.258s]       |             [32m[Kcount_publishers[m[K
+[11.258s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:60:37:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+[11.258s]    60 |             pose_publisher_ = this->[01;31m[Kcreate_publisher<robot_interfaces/msg/ObjectPose>[m[K("/ObjectPose",10);
+[11.259s]       |                                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[11.259s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:60:86:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KPointCloudProcessor::create_publisher<<expression error> >(const char [12], int)[m[K’
+[11.259s]    60 |             pose_publisher_ = [01;31m[Kthis->create_publisher<robot_interfaces/msg/ObjectPose>("/ObjectPose",10)[m[K;
+[11.259s]       |                               [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~[m[K
+[11.259s] In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[11.260s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+[11.260s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:176[m[K,
+[11.260s]                  from [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:5[m[K:
+[11.260s] [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node.hpp:197:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::[01;32m[Kcreate_publisher[m[K(const std::string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)[m[K’
+[11.260s]   197 |   [01;36m[Kcreate_publisher[m[K(
+[11.260s]       |   [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[11.261s] [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node.hpp:197:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[11.261s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:60:86:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[11.261s]    60 |             pose_publisher_ = [01;31m[Kthis->create_publisher<robot_interfaces/msg/ObjectPose>("/ObjectPose",10)[m[K;
+[11.261s]       |                               [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~[m[K
+[11.261s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kvoid PointCloudProcessor::[01;32m[Kgenerate_cylinder_master[m[K()[m[K’:
+[11.262s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:109:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcurrent_height[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[11.262s]   109 |       float [01;35m[Kcurrent_height[m[K = j * spacing_z;
+[11.262s]       |             [01;35m[K^~~~~~~~~~~~~~[m[K
+[11.273s] In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[11.274s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/copy_all_parameter_values.hpp:27[m[K,
+[11.274s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:175[m[K:
+[11.274s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kvoid PointCloudProcessor::[01;32m[KclusterPointCloud[m[K()[m[K’:
+[11.274s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:234:34:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%i[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 5 has type ‘[01m[Kstd::vector<pcl::PointIndices>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+[11.274s]   234 |   RCLCPP_INFO(this->get_logger(),[01;35m[K"Extract Cluster Indizes size: %i"[m[K, [32m[Kcluster_indices.size()[m[K);
+[11.274s]       |                                  [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K  [32m[K~~~~~~~~~~~~~~~~~~~~~~[m[K
+[11.274s]       |                                                                                          [32m[K|[m[K
+[11.274s]       |                                                                                          [32m[Kstd::vector<pcl::PointIndices>::size_type {aka long unsigned int}[m[K
+[11.274s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:234:66:[m[K [01;36m[Knote: [m[Kformat string is defined here
+[11.275s]   234 |   RCLCPP_INFO(this->get_logger(),"Extract Cluster Indizes size: [01;36m[K%i[m[K", cluster_indices.size());
+[11.275s]       |                                                                 [01;36m[K~^[m[K
+[11.275s]       |                                                                  [01;36m[K|[m[K
+[11.275s]       |                                                                  [01;36m[Kint[m[K
+[11.275s]       |                                                                 [32m[K%li[m[K
+[11.402s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kvoid PointCloudProcessor::[01;32m[KprocessPointCloud[m[K()[m[K’:
+[11.402s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:487:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kdistance[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[11.402s]   487 |     auto [01;35m[Kdistance[m[K = seg.getDistanceFromOrigin();
+[11.402s]       |          [01;35m[K^~~~~~~~[m[K
+[15.870s] gmake[2]: *** [CMakeFiles/pcl_pose_estimation.dir/build.make:76: CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o] Fehler 1
+[15.871s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pcl_pose_estimation.dir/all] Fehler 2
+[15.871s] gmake: *** [Makefile:146: all] Fehler 2
+[15.875s] Invoked command in '/home/mario/master_ws/build/vision_control' returned '2': AMENT_PREFIX_PATH=/home/mario/master_ws/install/robot_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mario/master_ws/install/robot_interfaces:/home/mario/master_ws/install/vision_control:/home/mario/master_ws/install/moveit_task_constructor_demo:/home/mario/master_ws/install/moveit_task_constructor_visualization:/home/mario/master_ws/install/moveit_task_constructor_capabilities:/home/mario/master_ws/install/estun_control:/home/mario/master_ws/install/moveit_task_constructor_core:/home/mario/master_ws/install/rviz_marker_tools:/home/mario/master_ws/install/moveit_task_constructor_msgs:/home/mario/master_ws/install/estun_moveit:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/mario/master_ws/install/estun_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/mario/master_ws/install/robot_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/mario/master_ws/install/robot_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/mario/master_ws/build/vision_control -- -j12 -l12

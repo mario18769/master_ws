@@ -22,23 +22,41 @@
 #include <string>
 #include <tf2/LinearMath/Quaternion.h>
 #include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
+#include <string_view>
+#include <string.h>
+#include <rclcpp/rclcpp.hpp>
+#include <cmath>
+
+#include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
+
+//Custom Interfaces
+#include "../robot_interfaces/robot_interfaces/msg/object_pose.hpp"
 
 
 class ObstaclePlanner : public rclcpp::Node {
 
     public:
 
-        ObstaclePlanner() : Node("obstacle_planner"){} //Initialiserung: nach : kommt Initialisierungsliste
+        ObstaclePlanner() : Node("obstacle_planner"){ //Initialiserung: nach : kommt Initialisierungsliste
 
+        object_pose_sub_ = this->create_subscription<robot_interfaces::msg::ObjectPose>("/ObjectPose", 10, std::bind(&ObstaclePlanner::addProbekoerper, this, std::placeholders::_1));
+
+        }
         void run();
         void plan();
         void setup_world();
         void obstacle_parser();
+        void addProbekoerper(robot_interfaces::msg::ObjectPose msg);
+        
 
     private:
 
+        rclcpp::Subscription<robot_interfaces::msg::ObjectPose>::SharedPtr object_pose_sub_;
         rclcpp::Node::SharedPtr _node;
         moveit::planning_interface::MoveGroupInterface *_move_group;
+        moveit::planning_interface::PlanningSceneInterface planning_scene_interface;
+        std::vector<robot_interfaces::msg::ObjectPose> msg_vector_new;
+
 
         std::vector<std::string> model;
         std::vector<std::string> mesh;
@@ -59,7 +77,6 @@ void ObstaclePlanner::plan(){
 
     auto tf_buffer {std::make_unique<tf2_ros::Buffer>(this->get_clock())}; //geschweifte Klammer als moderne Variablendeklaration statt =
     auto tf_listener {std::make_shared<tf2_ros::TransformListener>(*tf_buffer)}; //this->get_clock und *tf_buffer sind jeweils Argumente für das Initialisieren des Objekts
-
 
     moveit::planning_interface::MoveGroupInterface move_group(_node, "arm"); //arm ist ein name einer group aus der SRDF 
     
@@ -128,41 +145,162 @@ void ObstaclePlanner::run() {
     RCLCPP_INFO(this->get_logger(),"Node Run completed");
 }
 
+void ObstaclePlanner::addProbekoerper(robot_interfaces::msg::ObjectPose msg){
+
+    RCLCPP_INFO(this->get_logger(),"Probekoerper Message empfangen");
+    
+    if (msg.object_type != "END"){
+        
+        msg_vector_new.push_back(msg);
+
+        RCLCPP_INFO(this->get_logger(),"Message_new_size: %i", msg_vector_new.size());
+
+        RCLCPP_INFO(this->get_logger(),"Message wird zu Msg.vector hinzugefuegt");
+
+    }
+
+    else{
+
+        std::vector<robot_interfaces::msg::ObjectPose> msg_vector_old(msg_vector_new);
+        msg_vector_new.clear();
+
+        RCLCPP_INFO(this->get_logger(),"Message_old_size: %i", msg_vector_old.size());
+
+        int i = 0;
+
+        for (auto& msg_component : msg_vector_old){
+
+            //RCLCPP_INFO(this->get_logger(),"TEST");
+
+            //RCLCPP_INFO(this->get_logger(),"String: %s", msg_component.object_type);
+            std::cout<< "String: "<< msg_component.object_type << std::endl;
+            std::cout<< "Axis_x: "<< msg_component.axis_x<< std::endl;
+            //RCLCPP_INFO(this->get_logger(),"Axis_x: %f", msg_component.axis2_x);
+
+            if (msg_component.object_type == "Cylinder"){
+
+                    // //Obstacle in der Umgebung des Roboters
+                    // moveit_msgs::msg::CollisionObject obstacle;
+                    // obstacle.header.frame_id = _move_group->getPlanningFrame();
+                    // obstacle.id = "table";
+                    // shape_msgs::msg::SolidPrimitive primitive2;
+                    // primitive2.type = primitive2.BOX;
+                    // primitive2.dimensions.resize(3);
+                    // primitive2.dimensions[primitive2.BOX_X] = 0.1;
+                    // primitive2.dimensions[primitive2.BOX_Y] = 1.5;
+                    // primitive2.dimensions[primitive2.BOX_Z] = 0.3;
+                    // geometry_msgs::msg::Pose bp;
+                    // bp.orientation.w = 0.5;
+                    // bp.position.x = 0.48;
+                    // bp.position.y = 0.0;
+                    // bp.position.z = 0.25;
+
+                    // obstacle.primitives.push_back(primitive2);
+                    // obstacle.primitive_poses.push_back(bp);
+                    // obstacle.operation = obstacle.ADD;
+                    // if (planning_scene_interface.applyCollisionObject(obstacle) == true){
+
+                    //     RCLCPP_INFO(this->get_logger(),"Table succesfully added to planningscene");
+                    // }
+
+                    // else{RCLCPP_INFO(this->get_logger(),"Table NOT added to planningscene");}
+
+                RCLCPP_INFO(this->get_logger(),"Cylinder wird verarbeitet");
+
+                moveit_msgs::msg::CollisionObject object;
+                object.header.frame_id = _move_group->getPlanningFrame();
+                object.id = "Cylinder_" + std::to_string(i);
+
+                RCLCPP_INFO(this->get_logger(),"TEST1");
+
+                shape_msgs::msg::SolidPrimitive primitive;
+                primitive.type = primitive.CYLINDER;
+                primitive.dimensions.resize(2);
+                primitive.dimensions[primitive.CYLINDER_HEIGHT] = msg_component.radius*4;
+                primitive.dimensions[primitive.CYLINDER_RADIUS] = msg_component.radius;
+
+                geometry_msgs::msg::Pose cp;
+                
+                RCLCPP_INFO(this->get_logger(),"TEST2");
+
+                tf2::Quaternion q;
+
+                float vectorlength_pitch = sqrt(msg_component.axis_x * msg_component.axis_x +
+                    msg_component.axis_y * msg_component.axis_y +
+                    msg_component.axis_z * msg_component.axis_z);
+
+                float vectorlength_yaw = sqrt(msg_component.axis_x * msg_component.axis_x +
+                    msg_component.axis_y * msg_component.axis_y);
+
+                // float roll = 0;
+                // float pitch = asin(msg_component.axis_z/vectorlength_pitch);
+                // float yaw = asin(msg_component.axis_y/vectorlength_yaw);
+
+                //std::cout<< "roll: "<< roll << std::endl;
+                // std::cout<< "pitch: "<< pitch << std::endl;
+                // std::cout<< "yaw: "<< yaw << std::endl;
+
+                //q.setValue(msg_component.axis_x,msg_component.axis_y,msg_component.axis_z);
+
+
+                float roll  = 0;
+                float pitch = acos(msg_component.axis_z / vectorlength_pitch);
+                float yaw   = atan2(msg_component.axis_y, msg_component.axis_x);
+
+                q.setRPY(roll, pitch, yaw);
+
+                //q.setEuler(0.785,0.785,0.785);
+
+                cp.orientation.x = q.x();
+                cp.orientation.y = q.y();
+                cp.orientation.z = q.z();
+                cp.orientation.w = q.w();
+
+                cp.position.x = msg_component.mid_x;
+                cp.position.y = msg_component.mid_y;
+                cp.position.z = msg_component.mid_z;
+
+                std::cout<< "QX: "<< cp.orientation.x << std::endl;
+                std::cout<< "QY: "<< cp.orientation.y << std::endl;
+                std::cout<< "QZ: "<< cp.orientation.z << std::endl;
+                std::cout<< "QW: "<< cp.orientation.w << std::endl;
+
+                RCLCPP_INFO(this->get_logger(),"TEST3");
+
+                object.primitives.push_back(primitive);
+                object.primitive_poses.push_back(cp);
+                object.operation = object.ADD;
+
+                moveit_msgs::msg::ObjectColor object_color;
+                object_color.id = object.id;
+                object_color.color.r = 0.0f; // Red component
+                object_color.color.g = 1.0f;
+                object_color.color.b = 0.0f;
+                object_color.color.a = 1.0f; // Alpha (Opacity)
+
+                if (planning_scene_interface.applyCollisionObject(object) == true){
+
+                    RCLCPP_INFO(this->get_logger(),"Cylinder succesfully added to planningscene");
+
+                }
+
+                else{RCLCPP_INFO(this->get_logger(),"Cylinder NOT added to planningscene");}
+            }
+            i++;
+        }
+        i=0;
+    }
+}
+
 void ObstaclePlanner::setup_world(){
 
     RCLCPP_INFO(this->get_logger(),"SetupWorld wird gestartet");
-
-    moveit::planning_interface::PlanningSceneInterface planning_scene_interface;
 
     _move_group = new moveit::planning_interface::MoveGroupInterface(_node, "arm");
 
     RCLCPP_INFO(this->get_logger(),"SetupWorld wird gestartet");
 
-    // //Obstacle in der Umgebung des Roboters
-    // moveit_msgs::msg::CollisionObject obstacle;
-    // obstacle.header.frame_id = _move_group->getPlanningFrame();
-    // obstacle.id = "table";
-    // shape_msgs::msg::SolidPrimitive primitive;
-    // primitive.type = primitive.BOX;
-    // primitive.dimensions.resize(3);
-    // primitive.dimensions[primitive.BOX_X] = 0.1;
-    // primitive.dimensions[primitive.BOX_Y] = 1.5;
-    // primitive.dimensions[primitive.BOX_Z] = 0.3;
-    // geometry_msgs::msg::Pose bp;
-    // bp.orientation.w = 0.5;
-    // bp.position.x = 0.48;
-    // bp.position.y = 0.0;
-    // bp.position.z = 0.25;
 
-    // obstacle.primitives.push_back(primitive);
-    // obstacle.primitive_poses.push_back(bp);
-    // obstacle.operation = obstacle.ADD;
-    // if (planning_scene_interface.applyCollisionObject(obstacle) == true){
-
-    //     RCLCPP_INFO(this->get_logger(),"Table succesfully added to planningscene");
-    // }
-
-    // else{RCLCPP_INFO(this->get_logger(),"Table NOT added to planningscene");}
 
 
     // //Obstacle am Endeffektor des Roboters
@@ -302,63 +440,77 @@ void ObstaclePlanner::obstacle_parser(){
     sdf::ElementPtr modelElement = worldElement->GetElement("model");
 
     bool loop_model= true;
+    
     while(loop_model){
 
         std::string modelName = modelElement->Get<std::string>("name");
 
-        if(modelName == "Sensor"){
+        if(modelName =="Sensor" ||  modelName.starts_with("Probe")){
 
-            modelElement = modelElement->GetNextElement("model");
-        
-            RCLCPP_INFO(this->get_logger(),"Sensor-Model wird übersprungen"); 
-            std::string modelName = modelElement->Get<std::string>("name");
-        
+            if(modelElement->GetNextElement("model") == nullptr){
+
+                loop_model = false; 
+
+            }
+
+            else{
+
+                modelElement = modelElement->GetNextElement("model");
+            
+                RCLCPP_INFO(this->get_logger(),"Model wird übersprungen"); 
+
+                modelName = modelElement->Get<std::string>("name");
+            }
+            
         }
 
-
-        model.push_back(modelName);
-
-        //Link des Model finden
-        sdf::ElementPtr linkElement = modelElement->GetElement("link");
-        sdf::ElementPtr poseElement = modelElement->GetElement("pose");
-        sdf::ElementPtr collisionElement= linkElement->GetElement("collision");
-        sdf::ElementPtr geometryElement= collisionElement->GetElement("geometry");
-        sdf::ElementPtr meshElement= geometryElement->GetElement("mesh");
-        sdf::ElementPtr uriElement= meshElement->GetElement("uri");
         
-        std::string uriString = uriElement->Get<std::string>();
-        std::string search = "share";
+        else{
+            
+            model.push_back(modelName);
 
-        std::size_t found = uriString.find(search);
-        uriString = uriString.substr(found + 6);
-        uriString = "package://" + uriString;
+            //Link des Model finden
+            sdf::ElementPtr linkElement = modelElement->GetElement("link");
+            sdf::ElementPtr poseElement = modelElement->GetElement("pose");
+            sdf::ElementPtr collisionElement= linkElement->GetElement("collision");
+            sdf::ElementPtr geometryElement= collisionElement->GetElement("geometry");
+            sdf::ElementPtr meshElement= geometryElement->GetElement("mesh");
+            sdf::ElementPtr uriElement= meshElement->GetElement("uri");
+            
+            std::string uriString = uriElement->Get<std::string>();
+            std::string search = "share";
 
-        mesh.push_back(uriString);
-        RCLCPP_INFO(this->get_logger(),"String: %s", uriString.c_str());
+            std::size_t found = uriString.find(search);
+            uriString = uriString.substr(found + 6);
+            uriString = "package://" + uriString;
 
-        gz::math::Pose3d position= poseElement->Get<gz::math::Pose3d>();
-        
-        std::vector<double> pose_vector = {
+            mesh.push_back(uriString);
+            RCLCPP_INFO(this->get_logger(),"String: %s", uriString.c_str());
 
-            position.Pos().X(),     // x
-            position.Pos().Y(),     // y
-            position.Pos().Z(),     // z
-            position.Rot().Roll(),  // roll
-            position.Rot().Pitch(), // pitch
-            position.Rot().Yaw()    // yaw
-        };
+            gz::math::Pose3d position= poseElement->Get<gz::math::Pose3d>();
+            
+            std::vector<double> pose_vector = {
 
-        pos.push_back(pose_vector);
+                position.Pos().X(),     // x
+                position.Pos().Y(),     // y
+                position.Pos().Z(),     // z
+                position.Rot().Roll(),  // roll
+                position.Rot().Pitch(), // pitch
+                position.Rot().Yaw()    // yaw
+            };
 
-        RCLCPP_INFO(this->get_logger(),"Position: %f", pose_vector[1]);
+            pos.push_back(pose_vector);
 
-        if(modelElement->GetNextElement("model") != nullptr){
+            RCLCPP_INFO(this->get_logger(),"Position: %f", pose_vector[1]);
 
-            modelElement = modelElement->GetNextElement("model");
-        
-            RCLCPP_INFO(this->get_logger(),"NextModel"); }
+            if(modelElement->GetNextElement("model") != nullptr){
 
-        else{loop_model = false;}
+                modelElement = modelElement->GetNextElement("model");
+            
+                RCLCPP_INFO(this->get_logger(),"NextModel"); }
+
+            else{loop_model = false;}
+        }
 
     }
 
@@ -389,6 +541,8 @@ int main(int argc, char * argv[]) {
     // spinner.join();
 
     std::thread spinner(&ObstaclePlanner::run, node_obstacle_planner);
+
+    rclcpp::spin(node_obstacle_planner);
         
   
   //executor.remove_node(node_obstacle_planner);

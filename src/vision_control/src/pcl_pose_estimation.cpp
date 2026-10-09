@@ -30,6 +30,9 @@
 #include <string>
 #include <pcl/segmentation/extract_clusters.h>
 
+//Custom Interfaces
+#include "../robot_interfaces/robot_interfaces/msg/object_pose.hpp"
+
 
 typedef pcl::PointXYZ PointXYZ;
 typedef pcl::visualization::PointCloudColorHandlerCustom<PointXYZ> ColorHandlerT;
@@ -54,6 +57,8 @@ class PointCloudProcessor : public rclcpp::Node{
             subscription_ = this->create_subscription<sensor_msgs::msg::PointCloud2>("/depthpoints", 10,
                 std::bind(&PointCloudProcessor::getPointCloud, this, std::placeholders::_1));
 
+            pose_publisher_ = this->create_publisher<robot_interfaces::msg::ObjectPose>("/ObjectPose",10);
+
             // // Publisher for the filtered and downsampled point cloud
             // publisher_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("filtered_pointcloud", 10);
         }
@@ -61,6 +66,10 @@ class PointCloudProcessor : public rclcpp::Node{
         void processPointCloud();
         void clusterPointCloud();
         void getPointCloud(sensor_msgs::msg::PointCloud2 msg);
+        std::vector<float> calculateCylinder(Eigen::Vector3f,Eigen::Vector3f,Eigen::Vector3f,float);
+
+        rclcpp::Publisher<robot_interfaces::msg::ObjectPose>::SharedPtr pose_publisher_;
+
         
     private:
 
@@ -69,7 +78,7 @@ class PointCloudProcessor : public rclcpp::Node{
         PointCloudN scene_cloud;
 
         rclcpp::Subscription<sensor_msgs::msg::PointCloud2>::SharedPtr subscription_;
-
+        
         float cyl_radius = 0.05;
         float cyl_height = 0.200;
         int counter =0;
@@ -302,10 +311,15 @@ void PointCloudProcessor::processPointCloud(){
   transform_3.rotate (Eigen::AngleAxisf (phi_x, Eigen::Vector3f::UnitX()));
   transform_3.rotate (Eigen::AngleAxisf (phi_y, Eigen::Vector3f::UnitY()));
   transform_3.rotate (Eigen::AngleAxisf (phi_z, Eigen::Vector3f::UnitZ()));
+
+  Eigen::Matrix3f transform_rotation = transform_3.rotation();
+  Eigen::Vector3f transform_translation = transform_3.translation();
   
   // Print the transformation
   printf ("\nTransformationsmatrix\n");
   std::cout << transform_3.matrix() << std::endl;
+
+
 
 // Point clouds
   PointCloudN::Ptr object (new PointCloudN);
@@ -370,8 +384,7 @@ void PointCloudProcessor::processPointCloud(){
     grid_2.setLeafSize (leaf, leaf, leaf);
     grid_2.setInputCloud (scene_before_downsampling);
     grid_2.filter (*scene);
-
-  
+ 
     //Punktewolke nach infiniten Punkten filtern
     pcl::PointCloud<PointClNormal>::iterator pcl_begin;
     pcl::PointCloud<PointClNormal>::iterator pcl_end;
@@ -502,17 +515,18 @@ void PointCloudProcessor::processPointCloud(){
 
 
 
-    RCLCPP_INFO(this->get_logger(),"X_Cyl_axis_pt: %f \n Y_Cyl_axis_pt: %f \n Z_Cyl_axis_pt: %f \n ", cyl_axis_point_x, cyl_axis_point_y, cyl_axis_point_z);
-
-    RCLCPP_INFO(this->get_logger(),"X_Cyl_axis_vec: %f \n Y_Cyl_axis_vec: %f \n Z_Cyl_axis_vec: %f \n ", cyl_axis_x, cyl_axis_y, cyl_axis_z);
-
     PointCloudN::Ptr cloud_cylinder_end (new PointCloudN); //Cloud für Stirnseite des Zylinders
+
+    auto message = robot_interfaces::msg::ObjectPose();
 
     if ((cloud_cylinder->points.empty())){
 
       std::cerr << "Can't find any more the cylindrical component." << std::endl;
       empty_cyl_cloud = true;
 
+      message.object_type = "END";
+
+      pose_publisher_->publish(message);
     }
 
     else{
@@ -528,7 +542,7 @@ void PointCloudProcessor::processPointCloud(){
         float X = point.x;
         float Y = point.y;
         float Z = point.z;
-        float radius_bb = 0.055;
+        float radius_bb = 0.045;
 
         float t = ((X- cyl_axis_point_x) * cyl_axis_x + (Y - cyl_axis_point_y) * cyl_axis_y + (Z- cyl_axis_point_z) * cyl_axis_z)/(pow(cyl_axis_x,2)+pow(cyl_axis_y,2)+pow(cyl_axis_z,2));
 
@@ -589,7 +603,7 @@ void PointCloudProcessor::processPointCloud(){
 
        //*cloud_cylinder += *cloud_cylinder_end;
 
-      //Aktuelle Cloud wird in Vektor gespeichert
+      //Aktuelle Cloud wird in Vektor gespeichertr
       auto cloud_copy = pcl::make_shared<pcl::PointCloud<PointClNormal>>(*cloud_cylinder);
       object_vec.push_back(cloud_copy);
 
@@ -607,9 +621,9 @@ void PointCloudProcessor::processPointCloud(){
       Eigen::Vector3f koo_zylaxis_world;
       Eigen::Vector3f koo_zylaxispoint_world;
 
-      koo_kreismittelp_world = transform_3 * koo_kreismittelp_camera;
-      koo_zylaxis_world = transform_3 * koo_zylaxis_camera;
-      koo_zylaxispoint_world = transform_3 * koo_zylaxis_point_camera;
+      koo_kreismittelp_world = transform_3.rotation() * koo_kreismittelp_camera + transform_3.translation();
+      koo_zylaxis_world = transform_3.rotation() * koo_zylaxis_camera;
+      koo_zylaxispoint_world = transform_3.rotation() * koo_zylaxis_point_camera + transform_3.translation();
 
       RCLCPP_INFO(this->get_logger(),"X_Circle_mid: %f \n Y_Circle_mid: %f \n Z_Circle_mid: %f \n ", koo_kreismittelp_world[0], koo_kreismittelp_world[1] ,koo_kreismittelp_world[2]);
 
@@ -617,17 +631,41 @@ void PointCloudProcessor::processPointCloud(){
 
       RCLCPP_INFO(this->get_logger(),"X_Cyl_axis_vec: %f \n Y_Cyl_axis_vec: %f \n Z_Cyl_axis_vec: %f \n ", koo_zylaxis_world[0], koo_zylaxis_world[1] ,koo_zylaxis_world[2]);
 
+      RCLCPP_INFO(this->get_logger(),"X_Cyl_axis_pt: %f \n Y_Cyl_axis_pt: %f \n Z_Cyl_axis_pt: %f \n ", cyl_axis_point_x, cyl_axis_point_y, cyl_axis_point_z);
+
+      RCLCPP_INFO(this->get_logger(),"X_Cyl_axis_vec: %f \n Y_Cyl_axis_vec: %f \n Z_Cyl_axis_vec: %f \n ", cyl_axis_x, cyl_axis_y, cyl_axis_z);
+
       //Point Cloud wird zur Visualisierung hinzugefügt
 
       std::string visu_name = "cylinder_cloud_" + std::to_string(number_cylinders); 
 
-
-      
+      std::cout << "Transform-Matrix" << std::endl;
+      std::cout << transform_3.matrix() << std::endl;
+      std::cout << "Rotation-Block" << std::endl;
+      std::cout << transform_3.rotation() << std::endl;
+      std::cout << "Translation-Block" << std::endl;
+      std::cout << transform_3.translation() << std::endl;
+    
       visu_ransac.addPointCloud (object_vec[number_cylinders], ColorHandlerNormal (object_vec[number_cylinders], 0.0, 255.0, 0.0), visu_name);
       visu_ransac.addPointCloud (cloud_cylinder_end, ColorHandlerNormal (cloud_cylinder_end, 0.0, 0.0, 255.0), visu_name+"_");
-      //visu_ransac.addPointCloud (test, ColorHandlerNormal (test, 255.0, 0.0, 0.0), "test");
-      
 
+      //ObjectPose Message für Publisher erstellen
+
+      std::vector<float> cylinder_position = calculateCylinder(koo_zylaxis_world,koo_zylaxispoint_world,koo_kreismittelp_world,cyl_radius);
+
+      message.object_type = "Cylinder";
+
+      message.radius = cyl_radius;
+
+      message.mid_x = cylinder_position[0];
+      message.mid_y = cylinder_position[1];
+      message.mid_z = cylinder_position[2];
+      message.axis_x = cylinder_position[3];
+      message.axis_y = cylinder_position[4];
+      message.axis_z = cylinder_position[5];
+
+      pose_publisher_->publish(message);
+      
     }
   }
 
@@ -745,6 +783,75 @@ void PointCloudProcessor::processPointCloud(){
   return;
 }
 
+std::vector<float> PointCloudProcessor::calculateCylinder(Eigen::Vector3f zylaxis,Eigen::Vector3f zylaxispoint,Eigen::Vector3f circlepoint, float radius){
+
+  //Koordinaten bereits in World-KYS konvertiert --> in processPointCloud()
+  //Ebene aus Circle-Point und Cylinderachse als Normale wird mit Gerade aus Cylinderachse und Achsaufpunkt verschnitten --> exakter Mittenpunkt an Zylinderkopf
+
+    std::cout<< "calculateCylinder wurde aufgerufen"<< std::endl;
+
+    std::vector<float> cylinder_position{0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
+    std::vector<float> schnittpunkt{0.0, 0.0, 0.0};
+
+    float zaehler = 0;
+    float nenner = 0;
+   
+    
+    for (int i = 0; i <= 2; i++){
+    
+      zaehler += zylaxis[i]*(zylaxispoint[i]-circlepoint[i]);
+      nenner += zylaxis[i]*zylaxis[i];
+    }
+
+    std::cout<< "Schleife_1 beendet"<< std::endl;
+
+    std::cout<< "Zaehler: "<< zaehler <<"\n"<<"Nenner: " << nenner << std::endl;
+
+    float t = -zaehler/nenner;
+
+    //Mittelpunkt des Cylinders berechnen
+
+    std::cout<< "t: "<< t << std::endl;
+
+    std::cout<< "Eigenvektor_wert: "<< zylaxispoint[0] << std::endl;
+
+
+
+    //Vektorlenge wird auf 2*Radius normiert für den Abstand von Stirnseite zu Mittelpunkt des Cylinders
+
+
+    
+
+    for (int i = 0; i <= 2; i++){
+
+      // cylinder_position entspricht Schnittpunkt = Geradengleichung + Orientierungsvektor normiert auf Länge bis Mittelpunkt
+    
+      schnittpunkt[i] = zylaxispoint[i] + (t * zylaxis[i]);
+    }
+
+    std::cout<< "Schleife_2 beendet"<< std::endl;
+
+
+    //Vektor zwischen Mittenpunkt am Zylinderkopf und dem Achsenaufpunkt liefert exakte Orienterirung X,Y,Z 
+    for (int i = 0; i <= 2; i++){
+    
+      cylinder_position[3+i] = zylaxispoint[i]-schnittpunkt[i];
+    }
+
+    float koeff = sqrt((2*radius)*(2*radius)/(cylinder_position[3]*cylinder_position[3]+cylinder_position[4]*cylinder_position[4]+cylinder_position[5]*cylinder_position[5]));
+
+    std::cout<< "Koeffizient: "<< koeff << std::endl;
+
+    for (int i = 0; i <= 2; i++){
+
+      //Mittelpunkt = Schnittpunkt + Normierter Vektor zwischen Schnittpunkt und Aufpunkt auf der Cylinderachse
+    
+      cylinder_position[i] = schnittpunkt[i] + koeff * cylinder_position[3+i]; 
+    }
+
+
+  return cylinder_position; //Return der Calinderposition [0] bis [2] ist der Mittelpunkt auf Stirnseite , [3] bis [5] ist die Orientierung relativ zu Mittenpunkt auf Stirnseite
+}
 
 int main(int argc, char * argv[]) {
 

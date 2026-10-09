@@ -850,6 +850,8 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
   /usr/include/c++/13/bits/atomic_base.h \
   /usr/include/c++/13/bits/atomic_futex.h \
   /usr/include/c++/13/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/13/bits/atomic_timed_wait.h \
+  /usr/include/c++/13/bits/atomic_wait.h \
   /usr/include/c++/13/bits/basic_ios.h \
   /usr/include/c++/13/bits/basic_ios.tcc \
   /usr/include/c++/13/bits/basic_string.h \
@@ -857,6 +859,7 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
   /usr/include/c++/13/bits/char_traits.h \
   /usr/include/c++/13/bits/charconv.h \
   /usr/include/c++/13/bits/chrono.h \
+  /usr/include/c++/13/bits/chrono_io.h \
   /usr/include/c++/13/bits/codecvt.h \
   /usr/include/c++/13/bits/concept_check.h \
   /usr/include/c++/13/bits/cpp_type_traits.h \
@@ -876,6 +879,7 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
   /usr/include/c++/13/bits/invoke.h \
   /usr/include/c++/13/bits/ios_base.h \
   /usr/include/c++/13/bits/istream.tcc \
+  /usr/include/c++/13/bits/iterator_concepts.h \
   /usr/include/c++/13/bits/list.tcc \
   /usr/include/c++/13/bits/locale_classes.h \
   /usr/include/c++/13/bits/locale_classes.tcc \
@@ -885,6 +889,7 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
   /usr/include/c++/13/bits/locale_facets_nonio.h \
   /usr/include/c++/13/bits/locale_facets_nonio.tcc \
   /usr/include/c++/13/bits/localefwd.h \
+  /usr/include/c++/13/bits/max_size_type.h \
   /usr/include/c++/13/bits/memory_resource.h \
   /usr/include/c++/13/bits/memoryfwd.h \
   /usr/include/c++/13/bits/move.h \
@@ -899,8 +904,15 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
   /usr/include/c++/13/bits/ptr_traits.h \
   /usr/include/c++/13/bits/quoted_string.h \
   /usr/include/c++/13/bits/range_access.h \
+  /usr/include/c++/13/bits/ranges_algo.h \
+  /usr/include/c++/13/bits/ranges_algobase.h \
+  /usr/include/c++/13/bits/ranges_base.h \
+  /usr/include/c++/13/bits/ranges_cmp.h \
+  /usr/include/c++/13/bits/ranges_uninitialized.h \
+  /usr/include/c++/13/bits/ranges_util.h \
   /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
+  /usr/include/c++/13/bits/semaphore_base.h \
   /usr/include/c++/13/bits/shared_ptr.h \
   /usr/include/c++/13/bits/shared_ptr_atomic.h \
   /usr/include/c++/13/bits/shared_ptr_base.h \
@@ -953,6 +965,7 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
   /usr/include/c++/13/cctype \
   /usr/include/c++/13/cerrno \
   /usr/include/c++/13/cfloat \
+  /usr/include/c++/13/charconv \
   /usr/include/c++/13/chrono \
   /usr/include/c++/13/climits \
   /usr/include/c++/13/clocale \
@@ -960,6 +973,7 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
   /usr/include/c++/13/codecvt \
   /usr/include/c++/13/compare \
   /usr/include/c++/13/complex \
+  /usr/include/c++/13/concepts \
   /usr/include/c++/13/condition_variable \
   /usr/include/c++/13/csignal \
   /usr/include/c++/13/cstddef \
@@ -982,6 +996,7 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
   /usr/include/c++/13/ext/numeric_traits.h \
   /usr/include/c++/13/ext/string_conversions.h \
   /usr/include/c++/13/ext/type_traits.h \
+  /usr/include/c++/13/format \
   /usr/include/c++/13/functional \
   /usr/include/c++/13/future \
   /usr/include/c++/13/initializer_list \
@@ -999,6 +1014,7 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
   /usr/include/c++/13/memory \
   /usr/include/c++/13/mutex \
   /usr/include/c++/13/new \
+  /usr/include/c++/13/numbers \
   /usr/include/c++/13/numeric \
   /usr/include/c++/13/optional \
   /usr/include/c++/13/ostream \
@@ -1009,11 +1025,15 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
   /usr/include/c++/13/pstl/pstl_config.h \
   /usr/include/c++/13/queue \
   /usr/include/c++/13/ratio \
+  /usr/include/c++/13/semaphore \
   /usr/include/c++/13/set \
   /usr/include/c++/13/shared_mutex \
+  /usr/include/c++/13/source_location \
+  /usr/include/c++/13/span \
   /usr/include/c++/13/sstream \
   /usr/include/c++/13/stdexcept \
   /usr/include/c++/13/stdlib.h \
+  /usr/include/c++/13/stop_token \
   /usr/include/c++/13/streambuf \
   /usr/include/c++/13/string \
   /usr/include/c++/13/string_view \
@@ -1228,6 +1248,7 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
   /usr/include/math.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
+  /usr/include/semaphore.h \
   /usr/include/signal.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdint.h \
@@ -1235,12 +1256,15 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
   /usr/include/stdlib.h \
   /usr/include/string.h \
   /usr/include/strings.h \
+  /usr/include/syscall.h \
   /usr/include/time.h \
   /usr/include/tinyxml2.h \
   /usr/include/unistd.h \
   /usr/include/wchar.h \
   /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
+  /usr/include/x86_64-linux-gnu/asm/unistd.h \
+  /usr/include/x86_64-linux-gnu/asm/unistd_64.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
   /usr/include/x86_64-linux-gnu/bits/confname.h \
@@ -1274,6 +1298,7 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/sched.h \
   /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/semaphore.h \
   /usr/include/x86_64-linux-gnu/bits/setjmp.h \
   /usr/include/x86_64-linux-gnu/bits/sigaction.h \
   /usr/include/x86_64-linux-gnu/bits/sigcontext.h \
@@ -1295,6 +1320,7 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
+  /usr/include/x86_64-linux-gnu/bits/syscall.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
   /usr/include/x86_64-linux-gnu/bits/time.h \
   /usr/include/x86_64-linux-gnu/bits/time64.h \
@@ -1361,6 +1387,8 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
   /usr/include/x86_64-linux-gnu/sys/cdefs.h \
   /usr/include/x86_64-linux-gnu/sys/select.h \
   /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
+  /usr/include/x86_64-linux-gnu/sys/syscall.h \
+  /usr/include/x86_64-linux-gnu/sys/time.h \
   /usr/include/x86_64-linux-gnu/sys/types.h \
   /usr/include/x86_64-linux-gnu/sys/ucontext.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/emmintrin.h \
@@ -1392,6 +1420,8 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 /usr/lib/gcc/x86_64-linux-gnu/13/include/float.h:
 
 /usr/include/x86_64-linux-gnu/sys/ucontext.h:
+
+/usr/include/x86_64-linux-gnu/sys/syscall.h:
 
 /usr/include/x86_64-linux-gnu/sys/single_threaded.h:
 
@@ -1505,8 +1535,6 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 
 /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
 
-/usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
-
 /usr/include/x86_64-linux-gnu/bits/getopt_core.h:
 
 /usr/include/x86_64-linux-gnu/bits/fp-logb.h:
@@ -1527,11 +1555,17 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 
 /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
 
+/usr/include/x86_64-linux-gnu/asm/unistd_64.h:
+
+/usr/include/x86_64-linux-gnu/asm/unistd.h:
+
 /usr/include/wchar.h:
 
 /usr/include/unistd.h:
 
 /usr/include/time.h:
+
+/usr/include/syscall.h:
 
 /usr/include/strings.h:
 
@@ -1599,8 +1633,6 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 
 /usr/include/eigen3/Eigen/src/QR/FullPivHouseholderQR.h:
 
-/usr/include/eigen3/Eigen/src/QR/CompleteOrthogonalDecomposition.h:
-
 /usr/include/eigen3/Eigen/src/QR/ColPivHouseholderQR.h:
 
 /usr/include/eigen3/Eigen/src/LU/arch/InverseSize4.h:
@@ -1612,6 +1644,8 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 /usr/include/eigen3/Eigen/src/LU/Determinant.h:
 
 /usr/include/eigen3/Eigen/src/Jacobi/Jacobi.h:
+
+/usr/include/semaphore.h:
 
 /usr/include/eigen3/Eigen/src/Householder/Householder.h:
 
@@ -1733,6 +1767,30 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 
 /usr/include/eigen3/Eigen/src/Core/Solve.h:
 
+/usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h:
+
+/usr/include/eigen3/Eigen/src/Core/Select.h:
+
+/usr/include/eigen3/Eigen/src/Core/Reverse.h:
+
+/usr/include/eigen3/Eigen/src/Core/ReturnByValue.h:
+
+/usr/include/eigen3/Eigen/src/Core/Reshaped.h:
+
+/usr/include/eigen3/Eigen/src/Core/Replicate.h:
+
+/usr/include/eigen3/Eigen/src/Core/Ref.h:
+
+/usr/include/eigen3/Eigen/src/Core/Redux.h:
+
+/usr/include/eigen3/Eigen/src/Core/Product.h:
+
+/usr/include/eigen3/Eigen/src/Core/NumTraits.h:
+
+/usr/include/eigen3/Eigen/src/Core/NoAlias.h:
+
+/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:
+
 /opt/ros/jazzy/include/rcutils/rcutils/error_handling.h:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/publisher_factory.hpp:
@@ -1781,6 +1839,8 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/type_support_decl.hpp:
 
+/usr/include/c++/13/bits/ranges_algobase.h:
+
 /opt/ros/jazzy/include/rclcpp/rclcpp/time.hpp:
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/velocity_stamped__builder.hpp:
@@ -1788,6 +1848,10 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 /opt/ros/jazzy/include/rclcpp/rclcpp/experimental/create_intra_process_buffer.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/subscription_wait_set_mask.hpp:
+
+/usr/include/eigen3/Eigen/src/Core/ProductEvaluators.h:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/service.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/serialized_message.hpp:
 
@@ -1893,8 +1957,6 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/detail/subscription_callback_type_helper.hpp:
 
-/opt/ros/jazzy/include/action_msgs/action_msgs/srv/detail/cancel_goal__functions.h:
-
 /opt/ros/jazzy/include/rosidl_dynamic_typesupport/rosidl_dynamic_typesupport/dynamic_message_type_support_struct.h:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_services_interface.hpp:
@@ -1964,6 +2026,10 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 /opt/ros/jazzy/include/rclcpp/rclcpp/experimental/buffers/intra_process_buffer.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/exceptions/exceptions.hpp:
+
+/usr/include/eigen3/Eigen/src/Core/NestByValue.h:
+
+/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/get_parameter_types.hpp:
 
 /opt/ros/jazzy/include/rcpputils/rcpputils/shared_library.hpp:
 
@@ -2049,8 +2115,6 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/wait_result.hpp:
 
-/usr/include/eigen3/Eigen/src/Core/Product.h:
-
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_type__struct.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/subscription_factory.hpp:
@@ -2091,8 +2155,6 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 
 /opt/ros/jazzy/include/rcl/rcl/error_handling.h:
 
-/usr/include/eigen3/Eigen/src/Core/ReturnByValue.h:
-
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/list_parameters_result__traits.hpp:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameter_types__struct.hpp:
@@ -2110,8 +2172,6 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_value__type_support.hpp:
 
 /opt/ros/jazzy/include/rcl_action/rcl_action/visibility_control.h:
-
-/usr/include/eigen3/Eigen/src/Core/NoAlias.h:
 
 /opt/ros/jazzy/include/rcl_action/rcl_action/types.h:
 
@@ -2136,6 +2196,10 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 /opt/ros/jazzy/include/rosidl_dynamic_typesupport/rosidl_dynamic_typesupport/api/dynamic_type.h:
 
 /opt/ros/jazzy/include/tf2_ros/tf2_ros/buffer_interface.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
+
+/usr/include/c++/13/bits/ranges_util.h:
 
 /opt/ros/jazzy/include/rcl/rcl/time.h:
 
@@ -2243,6 +2307,8 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/action/detail/execute_trajectory__traits.hpp:
 
+/usr/include/x86_64-linux-gnu/bits/syscall.h:
+
 /usr/include/boost/integer_traits.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/detail/resolve_use_intra_process.hpp:
@@ -2286,6 +2352,10 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 /usr/include/c++/13/array:
 
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/trajectory_constraints__struct.hpp:
+
+/usr/include/eigen3/Eigen/src/Core/SelfAdjointView.h:
+
+/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/constraints__builder.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:
 
@@ -2367,11 +2437,13 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/init_options.hpp:
 
-/usr/include/eigen3/Eigen/src/Core/NumTraits.h:
-
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/planning_scene__struct.hpp:
 
 /opt/ros/jazzy/include/tf2_ros/tf2_ros/async_buffer_interface.hpp:
+
+/usr/include/eigen3/Eigen/src/Core/PartialReduxEvaluator.h:
+
+/usr/include/c++/13/backward/auto_ptr.h:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/type_adapter.hpp:
 
@@ -2469,8 +2541,6 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/floating_point_range__traits.hpp:
 
-/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:
-
 /opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.hpp:
 
 /opt/ros/jazzy/include/trajectory_msgs/trajectory_msgs/msg/rosidl_generator_cpp__visibility_control.hpp:
@@ -2548,6 +2618,10 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 /opt/ros/jazzy/include/rclcpp/rclcpp/context.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/publisher_options.hpp:
+
+/usr/include/eigen3/Eigen/src/Core/PermutationMatrix.h:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/publisher_base.hpp:
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/twist.hpp:
 
@@ -2637,8 +2711,6 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/subscription_base.hpp:
 
-/usr/include/eigen3/Eigen/src/Core/Reshaped.h:
-
 /usr/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h:
 
 /opt/ros/jazzy/include/action_msgs/action_msgs/msg/detail/goal_info__struct.h:
@@ -2718,6 +2790,8 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/list_parameters__struct.hpp:
 
 /opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/detail/compressed_image__struct.hpp:
+
+/usr/include/c++/13/span:
 
 /opt/ros/jazzy/include/action_msgs/action_msgs/msg/detail/goal_status_array__type_support.hpp:
 
@@ -2799,9 +2873,9 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 
 /usr/include/c++/13/cstdio:
 
-/opt/ros/jazzy/include/action_msgs/action_msgs/msg/detail/goal_status__functions.h:
-
 /opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/detail/multi_dof_joint_state__traits.hpp:
+
+/usr/include/c++/13/bits/atomic_wait.h:
 
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/motion_plan_request.hpp:
 
@@ -2854,6 +2928,10 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h:
 
 /usr/include/c++/13/clocale:
+
+/usr/include/eigen3/Eigen/src/QR/CompleteOrthogonalDecomposition.h:
+
+/usr/include/c++/13/format:
 
 /usr/include/c++/13/stdexcept:
 
@@ -2961,8 +3039,6 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/motion_plan_request__traits.hpp:
 
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/field_type__struct.h:
-
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/move_it_error_codes__builder.hpp:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/set_parameters_result.hpp:
@@ -3053,8 +3129,6 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 
 /opt/ros/jazzy/include/urdf/urdf/urdfdom_compatibility.h:
 
-/usr/include/eigen3/Eigen/src/Core/Replicate.h:
-
 /opt/ros/jazzy/include/rclcpp/rclcpp/message_memory_strategy.hpp:
 
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/workspace_parameters__traits.hpp:
@@ -3070,10 +3144,6 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 /opt/ros/jazzy/include/rclcpp/rclcpp/exceptions.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/detail/resolve_intra_process_buffer_type.hpp:
-
-/usr/include/c++/13/backward/auto_ptr.h:
-
-/usr/include/eigen3/Eigen/src/Core/PartialReduxEvaluator.h:
 
 /usr/include/boost/config/detail/cxx_composite.hpp:
 
@@ -3168,8 +3238,6 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 /opt/ros/jazzy/include/rmw/rmw/events_statuses/incompatible_type.h:
 
 /opt/ros/jazzy/include/rmw/rmw/events_statuses/liveliness_changed.h:
-
-/opt/ros/jazzy/include/rmw/rmw/events_statuses/offered_deadline_missed.h:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/create_client.hpp:
 
@@ -3293,6 +3361,8 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
 
+/usr/include/c++/13/bits/atomic_timed_wait.h:
+
 /opt/ros/jazzy/include/rosidl_runtime_cpp/rosidl_runtime_cpp/message_type_support_decl.hpp:
 
 /opt/ros/jazzy/include/rcpputils/rcpputils/filesystem_helper.hpp:
@@ -3392,10 +3462,6 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 /opt/ros/jazzy/include/rclcpp/rclcpp/experimental/subscription_intra_process.hpp:
 
 /opt/ros/jazzy/include/tf2/tf2/LinearMath/MinMax.hpp:
-
-/opt/ros/jazzy/include/rcutils/rcutils/visibility_control.h:
-
-/opt/ros/jazzy/include/tf2/tf2/LinearMath/Quaternion.hpp:
 
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/grasp.hpp:
 
@@ -3529,6 +3595,8 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 
 /usr/include/c++/13/cassert:
 
+/usr/include/x86_64-linux-gnu/bits/semaphore.h:
+
 /opt/ros/jazzy/include/visualization_msgs/visualization_msgs/msg/detail/marker__traits.hpp:
 
 /usr/include/c++/13/bits/stl_list.h:
@@ -3536,10 +3604,6 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/constants.hpp:
 
 /usr/include/c++/13/debug/debug.h:
-
-/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/constraints__builder.hpp:
-
-/usr/include/eigen3/Eigen/src/Core/SelfAdjointView.h:
 
 /opt/ros/jazzy/include/visualization_msgs/visualization_msgs/msg/marker_array.hpp:
 
@@ -3604,6 +3668,8 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 /opt/ros/jazzy/include/trajectory_msgs/trajectory_msgs/msg/detail/joint_trajectory__builder.hpp:
 
 /usr/include/c++/13/bits/char_traits.h:
+
+/usr/include/x86_64-linux-gnu/sys/time.h:
 
 /usr/include/boost/limits.hpp:
 
@@ -3719,8 +3785,6 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 
 /usr/include/c++/13/bits/allocated_ptr.h:
 
-/usr/include/c++/13/bits/atomic_base.h:
-
 /opt/ros/jazzy/include/rclcpp/rclcpp/node.hpp:
 
 /usr/include/eigen3/Eigen/src/Core/MapBase.h:
@@ -3732,6 +3796,8 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 /usr/include/c++/13/bits/stl_heap.h:
 
 /usr/include/c++/13/bits/basic_string.h:
+
+/usr/include/c++/13/bits/chrono_io.h:
 
 /usr/include/c++/13/bits/cxxabi_forced.h:
 
@@ -3755,6 +3821,10 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 
 /usr/include/c++/13/bits/ios_base.h:
 
+/usr/include/c++/13/bits/iterator_concepts.h:
+
+/usr/include/eigen3/Eigen/src/Core/CoreIterators.h:
+
 /usr/include/c++/13/bits/list.tcc:
 
 /usr/include/c++/13/type_traits:
@@ -3768,6 +3838,10 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 /usr/include/c++/13/bits/locale_facets_nonio.h:
 
 /usr/include/c++/13/bits/localefwd.h:
+
+/opt/ros/jazzy/include/action_msgs/action_msgs/msg/detail/goal_status__functions.h:
+
+/usr/include/c++/13/bits/max_size_type.h:
 
 /usr/include/c++/13/bits/memoryfwd.h:
 
@@ -3801,7 +3875,21 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 
 /usr/include/c++/13/bits/range_access.h:
 
+/usr/include/c++/13/bits/ranges_algo.h:
+
+/usr/include/c++/13/bits/ranges_base.h:
+
+/usr/include/c++/13/bits/ranges_cmp.h:
+
+/usr/include/c++/13/bits/ranges_uninitialized.h:
+
 /usr/include/c++/13/bits/refwrap.h:
+
+/opt/ros/jazzy/include/rcutils/rcutils/visibility_control.h:
+
+/opt/ros/jazzy/include/tf2/tf2/LinearMath/Quaternion.hpp:
+
+/usr/include/c++/13/bits/semaphore_base.h:
 
 /usr/include/c++/13/bits/shared_ptr_atomic.h:
 
@@ -3895,6 +3983,10 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 
 /usr/include/ctype.h:
 
+/usr/include/c++/13/charconv:
+
+/usr/include/eigen3/Eigen/src/Core/ArrayWrapper.h:
+
 /usr/include/c++/13/chrono:
 
 /usr/include/x86_64-linux-gnu/asm/errno.h:
@@ -3906,6 +3998,12 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/orientation_constraint__struct.hpp:
 
 /usr/include/c++/13/complex:
+
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/field_type__struct.h:
+
+/usr/include/c++/13/concepts:
+
+/usr/include/c++/13/pstl/glue_numeric_defs.h:
 
 /opt/ros/jazzy/include/rcl/rcl/guard_condition.h:
 
@@ -3975,8 +4073,6 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 
 /usr/include/c++/13/pstl/glue_algorithm_defs.h:
 
-/usr/include/c++/13/pstl/glue_numeric_defs.h:
-
 /usr/include/c++/13/iomanip:
 
 /usr/include/c++/13/pstl/pstl_config.h:
@@ -3995,11 +4091,25 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 
 /usr/include/c++/13/ratio:
 
+/opt/ros/jazzy/include/rmw/rmw/events_statuses/offered_deadline_missed.h:
+
+/usr/include/c++/13/semaphore:
+
+/usr/include/c++/13/version:
+
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
 /usr/include/c++/13/set:
 
+/usr/include/c++/13/bits/atomic_base.h:
+
+/usr/include/c++/13/source_location:
+
 /usr/include/c++/13/stdlib.h:
+
+/opt/ros/jazzy/include/action_msgs/action_msgs/srv/detail/cancel_goal__functions.h:
+
+/usr/include/c++/13/stop_token:
 
 /opt/ros/jazzy/include/rcutils/rcutils/types.h:
 
@@ -4029,8 +4139,6 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 
 /usr/include/c++/13/vector:
 
-/usr/include/c++/13/version:
-
 /usr/include/eigen3/Eigen/Cholesky:
 
 /opt/ros/jazzy/include/rmw/rmw/message_sequence.h:
@@ -4043,8 +4151,6 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 
 /usr/include/eigen3/Eigen/src/Cholesky/LLT.h:
 
-/usr/include/eigen3/Eigen/src/Core/ArrayWrapper.h:
-
 /usr/include/c++/13/streambuf:
 
 /usr/include/c++/13/tr1/gamma.tcc:
@@ -4054,8 +4160,6 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 /usr/include/eigen3/Eigen/src/Core/BooleanRedux.h:
 
 /usr/include/eigen3/Eigen/src/Core/CoreEvaluators.h:
-
-/usr/include/eigen3/Eigen/src/Core/CoreIterators.h:
 
 /opt/ros/jazzy/include/urdfdom_headers/urdf_model/link.h:
 
@@ -4070,6 +4174,8 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 /usr/include/c++/13/atomic:
 
 /usr/include/eigen3/Eigen/src/Core/DenseBase.h:
+
+/usr/include/c++/13/numbers:
 
 /usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:
 
@@ -4102,25 +4208,3 @@ CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o: /home/mario/master
 /usr/include/eigen3/Eigen/src/Core/Map.h:
 
 /usr/include/eigen3/Eigen/src/Core/MathFunctions.h:
-
-/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/get_parameter_types.hpp:
-
-/usr/include/eigen3/Eigen/src/Core/NestByValue.h:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/publisher_base.hpp:
-
-/usr/include/eigen3/Eigen/src/Core/PermutationMatrix.h:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/service.hpp:
-
-/usr/include/eigen3/Eigen/src/Core/ProductEvaluators.h:
-
-/usr/include/eigen3/Eigen/src/Core/Redux.h:
-
-/usr/include/eigen3/Eigen/src/Core/Ref.h:
-
-/usr/include/eigen3/Eigen/src/Core/Reverse.h:
-
-/usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h:
-
-/usr/include/eigen3/Eigen/src/Core/Select.h:

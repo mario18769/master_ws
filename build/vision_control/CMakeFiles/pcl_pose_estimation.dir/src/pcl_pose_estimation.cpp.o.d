@@ -2236,4 +2236,10 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: \
  /usr/include/pcl-1.14/pcl/sample_consensus/sac_model_plane.h \
  /usr/include/pcl-1.14/pcl/sample_consensus/sac_model_sphere.h \
  /usr/include/pcl-1.14/pcl/sample_consensus/sac_model_cylinder.h \
- /usr/include/pcl-1.14/pcl/segmentation/extract_clusters.h
+ /usr/include/pcl-1.14/pcl/segmentation/extract_clusters.h \
+ /home/mario/master_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/object_pose.hpp \
+ /home/mario/master_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/object_pose__struct.hpp \
+ /home/mario/master_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/object_pose__builder.hpp \
+ /home/mario/master_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/object_pose__traits.hpp \
+ /home/mario/master_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/object_pose__type_support.hpp \
+ /home/mario/master_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp

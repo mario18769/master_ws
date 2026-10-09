@@ -1,0 +1,21 @@
+[ 33%] Built target cartesian_planner
+[ 66%] Built target mtc_estun
+[ 83%] [32mBuilding CXX object CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o[0m
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:1[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:51:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   51 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:2[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:[m[K In member function ‘[01m[Kvoid ObstaclePlanner::[01;32m[Kobstacle_parser[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:321:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd::string[m[K’ {aka ‘[01m[Kclass std::__cxx11::basic_string<char>[m[K’} has no member named ‘[01m[Kstarts_with[m[K’
+  321 |         bool test = modelName.[01;31m[Kstarts_with[m[K("test");
+      |                               [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:321:14:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ktest[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  321 |         bool [01;35m[Ktest[m[K = modelName.starts_with("test");
+      |              [01;35m[K^~~~[m[K
+gmake[2]: *** [CMakeFiles/obstacle_planner.dir/build.make:76: CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o] Fehler 1
+gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/obstacle_planner.dir/all] Fehler 2
+gmake: *** [Makefile:146: all] Fehler 2

@@ -232,24 +232,13 @@ void ObstaclePlanner::addProbekoerper(robot_interfaces::msg::ObjectPose msg){
                 float vectorlength_yaw = sqrt(msg_component.axis_x * msg_component.axis_x +
                     msg_component.axis_y * msg_component.axis_y);
 
-                // float roll = 0;
-                // float pitch = asin(msg_component.axis_z/vectorlength_pitch);
-                // float yaw = asin(msg_component.axis_y/vectorlength_yaw);
-
-                //std::cout<< "roll: "<< roll << std::endl;
-                // std::cout<< "pitch: "<< pitch << std::endl;
-                // std::cout<< "yaw: "<< yaw << std::endl;
-
-                //q.setValue(msg_component.axis_x,msg_component.axis_y,msg_component.axis_z);
-
-
                 float roll  = 0;
                 float pitch = acos(msg_component.axis_z / vectorlength_pitch);
-                float yaw   = atan2(msg_component.axis_y, msg_component.axis_x);
+                //float yaw   = atan2(msg_component.axis_y, msg_component.axis_x);
+                float yaw   = acos(msg_component.axis_x/ vectorlength_yaw);
+
 
                 q.setRPY(roll, pitch, yaw);
-
-                //q.setEuler(0.785,0.785,0.785);
 
                 cp.orientation.x = q.x();
                 cp.orientation.y = q.y();

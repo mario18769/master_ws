@@ -2242,4 +2242,5 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: \
  /home/mario/master_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/object_pose__builder.hpp \
  /home/mario/master_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/object_pose__traits.hpp \
  /home/mario/master_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/object_pose__type_support.hpp \
- /home/mario/master_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+ /home/mario/master_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp \
+ /usr/include/pcl-1.14/pcl/features/moment_of_inertia_estimation.h

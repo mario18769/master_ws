@@ -1977,6 +1977,7 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
   /usr/include/pcl-1.14/pcl/features/fpfh.h \
   /usr/include/pcl-1.14/pcl/features/fpfh_omp.h \
   /usr/include/pcl-1.14/pcl/features/impl/feature.hpp \
+  /usr/include/pcl-1.14/pcl/features/moment_of_inertia_estimation.h \
   /usr/include/pcl-1.14/pcl/features/normal_3d.h \
   /usr/include/pcl-1.14/pcl/features/normal_3d_omp.h \
   /usr/include/pcl-1.14/pcl/filters/conditional_removal.h \
@@ -2506,6 +2507,10 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 /usr/include/boost/move/detail/meta_utils_core.hpp:
 
 /usr/include/boost/mpl/list/list0.hpp:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/ctype_inline.h:
+
+/usr/include/boost/fusion/algorithm/query/find_fwd.hpp:
 
 /usr/include/boost/cstdint.hpp:
 
@@ -6117,6 +6122,8 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 
 /usr/include/c++/13/cassert:
 
+/usr/include/pcl-1.14/pcl/features/moment_of_inertia_estimation.h:
+
 /usr/include/c++/13/climits:
 
 /usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
@@ -6566,10 +6573,6 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 /usr/include/vtk-9.1/vtkWrappingHints.h:
 
 /usr/include/flann/defines.h:
-
-/usr/include/boost/fusion/algorithm/query/find_fwd.hpp:
-
-/usr/include/x86_64-linux-gnu/c++/13/bits/ctype_inline.h:
 
 /usr/include/libintl.h:
 

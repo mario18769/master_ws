@@ -35,7 +35,7 @@ void robot_interfaces__msg__ObjectPose__rosidl_typesupport_introspection_c__Obje
   robot_interfaces__msg__ObjectPose__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember robot_interfaces__msg__ObjectPose__rosidl_typesupport_introspection_c__ObjectPose_message_member_array[15] = {
+static rosidl_typesupport_introspection_c__MessageMember robot_interfaces__msg__ObjectPose__rosidl_typesupport_introspection_c__ObjectPose_message_member_array[16] = {
   {
     "object_type",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
@@ -163,7 +163,7 @@ static rosidl_typesupport_introspection_c__MessageMember robot_interfaces__msg__
     NULL  // resize(index) function pointer
   },
   {
-    "axis2_x",  // name
+    "q_x",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
@@ -171,7 +171,7 @@ static rosidl_typesupport_introspection_c__MessageMember robot_interfaces__msg__
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(robot_interfaces__msg__ObjectPose, axis2_x),  // bytes offset in struct
+    offsetof(robot_interfaces__msg__ObjectPose, q_x),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -181,7 +181,7 @@ static rosidl_typesupport_introspection_c__MessageMember robot_interfaces__msg__
     NULL  // resize(index) function pointer
   },
   {
-    "axis2_y",  // name
+    "q_y",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
@@ -189,7 +189,7 @@ static rosidl_typesupport_introspection_c__MessageMember robot_interfaces__msg__
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(robot_interfaces__msg__ObjectPose, axis2_y),  // bytes offset in struct
+    offsetof(robot_interfaces__msg__ObjectPose, q_y),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -199,7 +199,7 @@ static rosidl_typesupport_introspection_c__MessageMember robot_interfaces__msg__
     NULL  // resize(index) function pointer
   },
   {
-    "axis2_z",  // name
+    "q_z",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
@@ -207,7 +207,25 @@ static rosidl_typesupport_introspection_c__MessageMember robot_interfaces__msg__
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(robot_interfaces__msg__ObjectPose, axis2_z),  // bytes offset in struct
+    offsetof(robot_interfaces__msg__ObjectPose, q_z),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "q_w",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is key
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(robot_interfaces__msg__ObjectPose, q_w),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -311,7 +329,7 @@ static rosidl_typesupport_introspection_c__MessageMember robot_interfaces__msg__
 static const rosidl_typesupport_introspection_c__MessageMembers robot_interfaces__msg__ObjectPose__rosidl_typesupport_introspection_c__ObjectPose_message_members = {
   "robot_interfaces__msg",  // message namespace
   "ObjectPose",  // message name
-  15,  // number of fields
+  16,  // number of fields
   sizeof(robot_interfaces__msg__ObjectPose),
   false,  // has_any_key_member_
   robot_interfaces__msg__ObjectPose__rosidl_typesupport_introspection_c__ObjectPose_message_member_array,  // message members

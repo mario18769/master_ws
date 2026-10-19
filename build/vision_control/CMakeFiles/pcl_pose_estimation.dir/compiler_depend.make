@@ -1331,6 +1331,7 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
   /usr/include/boost/range/value_type.hpp \
   /usr/include/boost/ref.hpp \
   /usr/include/boost/scoped_ptr.hpp \
+  /usr/include/boost/shared_array.hpp \
   /usr/include/boost/shared_ptr.hpp \
   /usr/include/boost/signals2/connection.hpp \
   /usr/include/boost/signals2/detail/auto_buffer.hpp \
@@ -1386,6 +1387,7 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
   /usr/include/boost/smart_ptr/make_shared_array.hpp \
   /usr/include/boost/smart_ptr/make_shared_object.hpp \
   /usr/include/boost/smart_ptr/scoped_ptr.hpp \
+  /usr/include/boost/smart_ptr/shared_array.hpp \
   /usr/include/boost/smart_ptr/shared_ptr.hpp \
   /usr/include/boost/smart_ptr/weak_ptr.hpp \
   /usr/include/boost/static_assert.hpp \
@@ -1951,6 +1953,7 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
   /usr/include/pcl-1.14/pcl/common/angles.h \
   /usr/include/pcl-1.14/pcl/common/centroid.h \
   /usr/include/pcl-1.14/pcl/common/colors.h \
+  /usr/include/pcl-1.14/pcl/common/common.h \
   /usr/include/pcl-1.14/pcl/common/concatenate.h \
   /usr/include/pcl-1.14/pcl/common/copy_point.h \
   /usr/include/pcl-1.14/pcl/common/distances.h \
@@ -1958,11 +1961,14 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
   /usr/include/pcl-1.14/pcl/common/impl/accumulators.hpp \
   /usr/include/pcl-1.14/pcl/common/impl/angles.hpp \
   /usr/include/pcl-1.14/pcl/common/impl/centroid.hpp \
+  /usr/include/pcl-1.14/pcl/common/impl/common.hpp \
   /usr/include/pcl-1.14/pcl/common/impl/copy_point.hpp \
   /usr/include/pcl-1.14/pcl/common/impl/eigen.hpp \
+  /usr/include/pcl-1.14/pcl/common/impl/intersections.hpp \
   /usr/include/pcl-1.14/pcl/common/impl/io.hpp \
   /usr/include/pcl-1.14/pcl/common/impl/transforms.hpp \
   /usr/include/pcl-1.14/pcl/common/impl/vector_average.hpp \
+  /usr/include/pcl-1.14/pcl/common/intersections.h \
   /usr/include/pcl-1.14/pcl/common/io.h \
   /usr/include/pcl-1.14/pcl/common/point_tests.h \
   /usr/include/pcl-1.14/pcl/common/time.h \
@@ -1977,9 +1983,11 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
   /usr/include/pcl-1.14/pcl/features/fpfh.h \
   /usr/include/pcl-1.14/pcl/features/fpfh_omp.h \
   /usr/include/pcl-1.14/pcl/features/impl/feature.hpp \
+  /usr/include/pcl-1.14/pcl/features/impl/range_image_border_extractor.hpp \
   /usr/include/pcl-1.14/pcl/features/moment_of_inertia_estimation.h \
   /usr/include/pcl-1.14/pcl/features/normal_3d.h \
   /usr/include/pcl-1.14/pcl/features/normal_3d_omp.h \
+  /usr/include/pcl-1.14/pcl/features/range_image_border_extractor.h \
   /usr/include/pcl-1.14/pcl/filters/conditional_removal.h \
   /usr/include/pcl-1.14/pcl/filters/extract_indices.h \
   /usr/include/pcl-1.14/pcl/filters/filter.h \
@@ -1988,6 +1996,7 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
   /usr/include/pcl-1.14/pcl/filters/project_inliers.h \
   /usr/include/pcl-1.14/pcl/filters/voxel_grid.h \
   /usr/include/pcl-1.14/pcl/for_each_type.h \
+  /usr/include/pcl-1.14/pcl/geometry/planar_polygon.h \
   /usr/include/pcl-1.14/pcl/impl/cloud_iterator.hpp \
   /usr/include/pcl-1.14/pcl/impl/point_types.hpp \
   /usr/include/pcl-1.14/pcl/io/file_io.h \
@@ -2051,6 +2060,8 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
   /usr/include/pcl-1.14/pcl/visualization/common/impl/shapes.hpp \
   /usr/include/pcl-1.14/pcl/visualization/common/ren_win_interact_map.h \
   /usr/include/pcl-1.14/pcl/visualization/common/shapes.h \
+  /usr/include/pcl-1.14/pcl/visualization/image_viewer.h \
+  /usr/include/pcl-1.14/pcl/visualization/impl/image_viewer.hpp \
   /usr/include/pcl-1.14/pcl/visualization/impl/pcl_visualizer.hpp \
   /usr/include/pcl-1.14/pcl/visualization/impl/point_cloud_color_handlers.hpp \
   /usr/include/pcl-1.14/pcl/visualization/interactor_style.h \
@@ -2060,6 +2071,9 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
   /usr/include/pcl-1.14/pcl/visualization/point_cloud_color_handlers.h \
   /usr/include/pcl-1.14/pcl/visualization/point_cloud_geometry_handlers.h \
   /usr/include/pcl-1.14/pcl/visualization/point_picking_event.h \
+  /usr/include/pcl-1.14/pcl/visualization/range_image_visualizer.h \
+  /usr/include/pcl-1.14/pcl/visualization/vtk/pcl_context_item.h \
+  /usr/include/pcl-1.14/pcl/visualization/vtk/pcl_image_canvas_source_2d.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
   /usr/include/signal.h \
@@ -2075,6 +2089,7 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
   /usr/include/vtk-9.1/vtkAOSDataArrayTemplate.h \
   /usr/include/vtk-9.1/vtkAbstractArray.h \
   /usr/include/vtk-9.1/vtkAbstractCellLinks.h \
+  /usr/include/vtk-9.1/vtkAbstractContextItem.h \
   /usr/include/vtk-9.1/vtkAbstractMapper.h \
   /usr/include/vtk-9.1/vtkAbstractMapper3D.h \
   /usr/include/vtk-9.1/vtkActor.h \
@@ -2100,6 +2115,9 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
   /usr/include/vtk-9.1/vtkCommonExecutionModelModule.h \
   /usr/include/vtk-9.1/vtkCommonMathModule.h \
   /usr/include/vtk-9.1/vtkCompiler.h \
+  /usr/include/vtk-9.1/vtkContextActor.h \
+  /usr/include/vtk-9.1/vtkContextItem.h \
+  /usr/include/vtk-9.1/vtkContextScene.h \
   /usr/include/vtk-9.1/vtkCoordinate.h \
   /usr/include/vtk-9.1/vtkDataArray.h \
   /usr/include/vtk-9.1/vtkDataArrayAccessor.h \
@@ -2135,12 +2153,23 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
   /usr/include/vtk-9.1/vtkIOStream.h \
   /usr/include/vtk-9.1/vtkIdList.h \
   /usr/include/vtk-9.1/vtkIdTypeArray.h \
+  /usr/include/vtk-9.1/vtkImageAlgorithm.h \
+  /usr/include/vtk-9.1/vtkImageCanvasSource2D.h \
+  /usr/include/vtk-9.1/vtkImageData.h \
+  /usr/include/vtk-9.1/vtkImageFlip.h \
+  /usr/include/vtk-9.1/vtkImageMapper.h \
+  /usr/include/vtk-9.1/vtkImageReslice.h \
+  /usr/include/vtk-9.1/vtkImageViewer.h \
+  /usr/include/vtk-9.1/vtkImagingCoreModule.h \
+  /usr/include/vtk-9.1/vtkImagingSourcesModule.h \
   /usr/include/vtk-9.1/vtkIndent.h \
   /usr/include/vtk-9.1/vtkIntArray.h \
+  /usr/include/vtk-9.1/vtkInteractionImageModule.h \
   /usr/include/vtk-9.1/vtkInteractionStyleModule.h \
   /usr/include/vtk-9.1/vtkInteractionWidgetsModule.h \
   /usr/include/vtk-9.1/vtkInteractorObserver.h \
   /usr/include/vtk-9.1/vtkInteractorStyle.h \
+  /usr/include/vtk-9.1/vtkInteractorStyleImage.h \
   /usr/include/vtk-9.1/vtkInteractorStyleRubberBandPick.h \
   /usr/include/vtk-9.1/vtkInteractorStyleTrackballCamera.h \
   /usr/include/vtk-9.1/vtkLODActor.h \
@@ -2150,6 +2179,7 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
   /usr/include/vtk-9.1/vtkLongLongArray.h \
   /usr/include/vtk-9.1/vtkLookupTable.h \
   /usr/include/vtk-9.1/vtkMapper.h \
+  /usr/include/vtk-9.1/vtkMapper2D.h \
   /usr/include/vtk-9.1/vtkMath.h \
   /usr/include/vtk-9.1/vtkMathConfigure.h \
   /usr/include/vtk-9.1/vtkMathPrivate.hxx \
@@ -2183,6 +2213,7 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
   /usr/include/vtk-9.1/vtkRenderer.h \
   /usr/include/vtk-9.1/vtkRendererCollection.h \
   /usr/include/vtk-9.1/vtkRenderingAnnotationModule.h \
+  /usr/include/vtk-9.1/vtkRenderingContext2DModule.h \
   /usr/include/vtk-9.1/vtkRenderingCoreModule.h \
   /usr/include/vtk-9.1/vtkRenderingFreeTypeModule.h \
   /usr/include/vtk-9.1/vtkRenderingLODModule.h \
@@ -2196,7 +2227,10 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
   /usr/include/vtk-9.1/vtkStructuredGrid.h \
   /usr/include/vtk-9.1/vtkSystemIncludes.h \
   /usr/include/vtk-9.1/vtkTextProperty.h \
+  /usr/include/vtk-9.1/vtkThreadedImageAlgorithm.h \
+  /usr/include/vtk-9.1/vtkThreads.h \
   /usr/include/vtk-9.1/vtkTimeStamp.h \
+  /usr/include/vtk-9.1/vtkTuple.h \
   /usr/include/vtk-9.1/vtkType.h \
   /usr/include/vtk-9.1/vtkTypeInt32Array.h \
   /usr/include/vtk-9.1/vtkTypeInt64Array.h \
@@ -2211,6 +2245,7 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
   /usr/include/vtk-9.1/vtkVariant.h \
   /usr/include/vtk-9.1/vtkVariantCast.h \
   /usr/include/vtk-9.1/vtkVariantInlineOperators.h \
+  /usr/include/vtk-9.1/vtkVector.h \
   /usr/include/vtk-9.1/vtkVectorText.h \
   /usr/include/vtk-9.1/vtkVersion.h \
   /usr/include/vtk-9.1/vtkVersionMacros.h \
@@ -2218,6 +2253,7 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
   /usr/include/vtk-9.1/vtkViewport.h \
   /usr/include/vtk-9.1/vtkVolume.h \
   /usr/include/vtk-9.1/vtkVolumeCollection.h \
+  /usr/include/vtk-9.1/vtkWeakPointer.h \
   /usr/include/vtk-9.1/vtkWeakPointerBase.h \
   /usr/include/vtk-9.1/vtkWin32Header.h \
   /usr/include/vtk-9.1/vtkWindow.h \
@@ -2442,6 +2478,48 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/error_constants.h:
 
+/usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h:
+
+/usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
+
+/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
+
+/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
+
+/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/stack_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/sigval_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
+
 /usr/include/boost/mpl/void.hpp:
 
 /usr/include/boost/fusion/support/detail/index_sequence.hpp:
@@ -2491,6 +2569,8 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 /usr/include/boost/mpl/minus.hpp:
 
 /usr/include/eigen3/Eigen/src/Core/arch/Default/BFloat16.h:
+
+/usr/include/pcl-1.14/pcl/visualization/impl/image_viewer.hpp:
 
 /usr/include/boost/mpl/long.hpp:
 
@@ -2630,11 +2710,17 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/future_return_code.hpp:
 
+/usr/include/boost/smart_ptr/shared_array.hpp:
+
 /usr/include/boost/mpl/prior.hpp:
 
 /usr/include/boost/mpl/aux_/front_impl.hpp:
 
 /usr/include/boost/mpl/aux_/preprocessed/gcc/inherit.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h:
+
+/usr/include/boost/mpl/size_fwd.hpp:
 
 /usr/include/boost/type_traits/has_nothrow_copy.hpp:
 
@@ -2770,6 +2856,8 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 
 /usr/include/boost/mpl/assert.hpp:
 
+/usr/include/pcl-1.14/pcl/common/intersections.h:
+
 /usr/include/vtk-9.1/vtkTypeList.txx:
 
 /usr/include/boost/mpl/arg_fwd.hpp:
@@ -2817,8 +2905,6 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 /usr/include/boost/iterator/iterator_concepts.hpp:
 
 /opt/ros/jazzy/include/rosidl_dynamic_typesupport/rosidl_dynamic_typesupport/api/dynamic_data.h:
-
-/usr/include/boost/intrusive/detail/config_end.hpp:
 
 /usr/include/boost/iterator/detail/facade_iterator_category.hpp:
 
@@ -2958,10 +3044,6 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 
 /usr/include/boost/fusion/support/void.hpp:
 
-/usr/include/boost/mpl/size_fwd.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h:
-
 /usr/include/eigen3/Eigen/src/Geometry/Homogeneous.h:
 
 /usr/include/boost/preprocessor/seq/enum.hpp:
@@ -3013,8 +3095,6 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 /usr/include/vtk-9.1/vtkTypeList.h:
 
 /usr/include/boost/fusion/sequence/intrinsic/size.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
 
 /usr/include/boost/fusion/sequence/intrinsic/end.hpp:
 
@@ -3128,9 +3208,15 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 
 /usr/include/boost/fusion/iterator/detail/segmented_next_impl.hpp:
 
+/usr/include/pcl-1.14/pcl/common/common.h:
+
 /usr/include/boost/fusion/iterator/detail/segment_sequence.hpp:
 
 /usr/include/boost/numeric/conversion/cast.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/wchar.h:
+
+/usr/include/boost/interprocess/detail/workaround.hpp:
 
 /opt/ros/jazzy/include/rmw/rmw/rmw.h:
 
@@ -3225,6 +3311,8 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 /usr/include/boost/mpl/advance.hpp:
 
 /usr/include/linux/close_range.h:
+
+/usr/include/vtk-9.1/vtkRenderingContext2DModule.h:
 
 /usr/include/boost/fusion/container/list/detail/deref_impl.hpp:
 
@@ -3486,6 +3574,12 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/set_parameters.hpp:
 
+/usr/include/x86_64-linux-gnu/bits/waitflags.h:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/guard_condition.hpp:
+
+/usr/include/boost/shared_array.hpp:
+
 /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/wait_set_policies/detail/synchronization_policy_common.hpp:
@@ -3539,8 +3633,6 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 /opt/ros/jazzy/include/rmw/rmw/network_flow_endpoint.h:
 
 /usr/include/wchar.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/detail/resolve_intra_process_buffer_type.hpp:
 
@@ -3603,8 +3695,6 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 /usr/include/pcl-1.14/pcl/common/impl/copy_point.hpp:
 
 /usr/include/boost/signals2/detail/null_output_iterator.hpp:
-
-/usr/include/boost/variant/detail/substitute_fwd.hpp:
 
 /usr/include/boost/mpl/push_front_fwd.hpp:
 
@@ -3700,8 +3790,6 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 
 /usr/include/vtk-9.1/vtkPlatform.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h:
-
 /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_hash.h:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/describe_parameters.hpp:
@@ -3737,8 +3825,6 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 /usr/include/vtk-9.1/vtkInteractorStyleTrackballCamera.h:
 
 /usr/include/pcl-1.14/pcl/cloud_iterator.h:
-
-/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
 /opt/ros/jazzy/include/std_msgs/std_msgs/msg/header.hpp:
 
@@ -3955,8 +4041,6 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 /usr/include/c++/13/ext/alloc_traits.h:
 
 /usr/include/pcl-1.14/pcl/sample_consensus/sac_model_plane.h:
-
-/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
 
 /opt/ros/jazzy/include/rcutils/rcutils/shared_library.h:
 
@@ -4190,8 +4274,6 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 
 /usr/include/eigen3/Eigen/src/Eigenvalues/SelfAdjointEigenSolver.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/stack_t.h:
-
 /usr/include/boost/interprocess/interprocess_fwd.hpp:
 
 /usr/include/boost/mpl/front_fwd.hpp:
@@ -4227,6 +4309,8 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/parameter_descriptor.hpp:
 
 /usr/include/boost/fusion/container/list/detail/reverse_cons.hpp:
+
+/usr/include/pcl-1.14/pcl/features/range_image_border_extractor.h:
 
 /usr/include/pcl-1.14/pcl/range_image/range_image.h:
 
@@ -4480,6 +4564,10 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 
 /usr/include/boost/preprocessor/seq/limits/enum_256.hpp:
 
+/usr/include/x86_64-linux-gnu/bits/types/struct_statx.h:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/subscription_content_filter_options.hpp:
+
 /usr/include/boost/mpl/aux_/config/overload_resolution.hpp:
 
 /usr/include/boost/mpl/vector/aux_/pop_back.hpp:
@@ -4491,8 +4579,6 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 /opt/ros/jazzy/include/rclcpp/rclcpp/expand_topic_or_service_name.hpp:
 
 /usr/include/c++/13/bits/chrono.h:
-
-/usr/include/c++/13/limits:
 
 /usr/include/x86_64-linux-gnu/bits/stat.h:
 
@@ -4520,19 +4606,25 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 
 /opt/ros/jazzy/include/statistics_msgs/statistics_msgs/msg/metrics_message.hpp:
 
+/usr/include/x86_64-linux-gnu/c++/13/bits/ctype_base.h:
+
+/usr/include/boost/random/detail/generator_seed_seq.hpp:
+
+/usr/include/boost/preprocessor/arithmetic/sub.hpp:
+
 /opt/ros/jazzy/include/rclcpp/rclcpp/experimental/create_intra_process_buffer.hpp:
 
 /usr/include/eigen3/Eigen/src/Core/util/BlasUtil.h:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/time.hpp:
 
+/usr/include/vtk-9.1/vtkMapper2D.h:
+
 /usr/include/boost/fusion/container/deque/deque_fwd.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
 
 /usr/include/asm-generic/int-ll64.h:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/client.hpp:
 
 /usr/include/c++/13/bits/cxxabi_init_exception.h:
 
@@ -4543,8 +4635,6 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 /usr/include/eigen3/Eigen/src/Core/EigenBase.h:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/type_support_decl.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/typesupport_helpers.hpp:
 
@@ -4658,8 +4748,6 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 
 /usr/include/boost/fusion/view/joint_view/joint_view_iterator.hpp:
 
-/usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h:
-
 /opt/ros/jazzy/include/rclcpp/rclcpp/loaned_message.hpp:
 
 /opt/ros/jazzy/include/rmw/rmw/events_statuses/message_lost.h:
@@ -4667,6 +4755,10 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 /usr/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h:
 
 /usr/include/vtk-9.1/vtkFieldData.h:
+
+/usr/include/c++/13/limits:
+
+/usr/include/vtk-9.1/vtkImageFlip.h:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/any_executable.hpp:
 
@@ -4970,6 +5062,8 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter__builder.hpp:
 
+/usr/include/pcl-1.14/pcl/common/impl/common.hpp:
+
 /usr/include/linux/types.h:
 
 /usr/include/boost/algorithm/string/constants.hpp:
@@ -5038,10 +5132,6 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 
 /usr/include/boost/preprocessor/repetition/enum_shifted_params.hpp:
 
-/usr/include/boost/interprocess/detail/workaround.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/wchar.h:
-
 /usr/include/boost/mpl/aux_/advance_backward.hpp:
 
 /usr/include/boost/blank_fwd.hpp:
@@ -5088,7 +5178,7 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 
 /usr/include/boost/config/stdlib/libstdcpp3.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
+/usr/include/vtk-9.1/vtkImageMapper.h:
 
 /usr/include/boost/type.hpp:
 
@@ -5103,10 +5193,6 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 /usr/include/boost/core/enable_if.hpp:
 
 /usr/include/boost/signals2/detail/signals_common_macros.hpp:
-
-/usr/include/boost/mpl/list/aux_/preprocessed/plain/list20.hpp:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/exceptions.hpp:
 
 /usr/include/boost/mpl/aux_/nttp_decl.hpp:
 
@@ -5163,6 +5249,10 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 /usr/include/unistd.h:
 
 /usr/include/boost/numeric/conversion/detail/sign_mixture.hpp:
+
+/usr/include/boost/variant/detail/substitute_fwd.hpp:
+
+/usr/include/pcl-1.14/pcl/visualization/range_image_visualizer.h:
 
 /usr/include/boost/numeric/conversion/int_float_mixture_enum.hpp:
 
@@ -5360,6 +5450,10 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 
 /usr/include/boost/preprocessor/logical/compl.hpp:
 
+/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
+
+/usr/include/boost/preprocessor/logical/limits/bool_256.hpp:
+
 /usr/include/boost/mpl/aux_/config/compiler.hpp:
 
 /usr/include/boost/signals2/detail/scope_guard.hpp:
@@ -5544,10 +5638,6 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 
 /usr/include/boost/scoped_ptr.hpp:
 
-/usr/include/vtk-9.1/vtkProperty2D.h:
-
-/usr/include/boost/signals2/detail/auto_buffer.hpp:
-
 /usr/include/boost/signals2/detail/foreign_ptr.hpp:
 
 /usr/include/boost/fusion/container/vector/detail/end_impl.hpp:
@@ -5563,10 +5653,6 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 /usr/include/boost/signals2/detail/signal_template.hpp:
 
 /usr/include/c++/13/memory:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/guard_condition.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
 /usr/include/boost/signals2/detail/signals_common.hpp:
 
@@ -5605,10 +5691,6 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 /usr/include/boost/smart_ptr/detail/local_counted_base.hpp:
 
 /usr/include/boost/smart_ptr/detail/local_sp_deleter.hpp:
-
-/usr/include/boost/preprocessor/array/elem.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
 
 /usr/include/boost/smart_ptr/detail/requires_cxx11.hpp:
 
@@ -5734,10 +5816,6 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 
 /usr/include/boost/type_traits/has_trivial_move_assign.hpp:
 
-/opt/ros/jazzy/include/rclcpp/rclcpp/subscription_content_filter_options.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_statx.h:
-
 /usr/include/boost/type_traits/intrinsics.hpp:
 
 /usr/include/boost/fusion/support/detail/and.hpp:
@@ -5773,6 +5851,12 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 /usr/include/vtk-9.1/vtkScalarsToColors.h:
 
 /usr/include/boost/type_traits/is_constructible.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
+
+/usr/include/eigen3/Eigen/src/Core/products/SelfadjointProduct.h:
+
+/usr/include/boost/type_traits/is_copy_constructible.hpp:
 
 /usr/include/boost/type_traits/is_default_constructible.hpp:
 
@@ -5829,6 +5913,8 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
 
 /usr/include/boost/type_traits/remove_pointer.hpp:
+
+/usr/include/vtk-9.1/vtkInteractionImageModule.h:
 
 /usr/include/boost/type_traits/remove_reference.hpp:
 
@@ -5958,6 +6044,8 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 
 /usr/include/boost/fusion/view/filter_view/detail/value_of_data_impl.hpp:
 
+/usr/include/pcl-1.14/pcl/visualization/vtk/pcl_image_canvas_source_2d.h:
+
 /usr/include/c++/13/bits/fstream.tcc:
 
 /usr/include/c++/13/bits/hashtable.h:
@@ -6077,6 +6165,10 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 /usr/include/c++/13/bits/stl_numeric.h:
 
 /usr/include/vtk-9.1/vtkWeakPointerBase.h:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h:
+
+/usr/include/c++/13/bits/stl_queue.h:
 
 /usr/include/x86_64-linux-gnu/bits/fp-fast.h:
 
@@ -6204,6 +6296,14 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 
 /usr/include/c++/13/list:
 
+/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
+
+/usr/include/boost/bind/bind_mf2_cc.hpp:
+
+/usr/include/c++/13/numeric:
+
+/usr/include/vtk-9.1/vtkThreadedImageAlgorithm.h:
+
 /usr/include/c++/13/ostream:
 
 /usr/include/c++/13/pstl/glue_algorithm_defs.h:
@@ -6216,17 +6316,17 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 
 /usr/include/c++/13/stdlib.h:
 
+/usr/include/boost/mpl/list/aux_/preprocessed/plain/list20.hpp:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/exceptions.hpp:
+
+/usr/include/vtk-9.1/vtkImageAlgorithm.h:
+
 /usr/include/pcl-1.14/pcl/for_each_type.h:
 
 /usr/include/c++/13/tr1/ell_integral.tcc:
 
 /usr/include/c++/13/tr1/legendre_function.tcc:
-
-/usr/include/boost/bind/bind_mf2_cc.hpp:
-
-/usr/include/c++/13/numeric:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
 
 /usr/include/c++/13/tr1/poly_hermite.tcc:
 
@@ -6638,6 +6738,10 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 
 /usr/include/pcl-1.14/pcl/common/impl/centroid.hpp:
 
+/usr/include/pcl-1.14/pcl/common/impl/intersections.hpp:
+
+/usr/include/pcl-1.14/pcl/features/normal_3d_omp.h:
+
 /usr/include/boost/mpl/vector/aux_/pop_front.hpp:
 
 /usr/include/pcl-1.14/pcl/common/impl/transforms.hpp:
@@ -6668,11 +6772,11 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 
 /usr/include/pcl-1.14/pcl/features/fpfh_omp.h:
 
+/usr/include/pcl-1.14/pcl/features/impl/range_image_border_extractor.hpp:
+
 /usr/include/boost/range/has_range_iterator.hpp:
 
 /usr/include/pcl-1.14/pcl/features/normal_3d.h:
-
-/usr/include/pcl-1.14/pcl/features/normal_3d_omp.h:
 
 /usr/include/eigen3/Eigen/src/Core/ProductEvaluators.h:
 
@@ -6695,6 +6799,12 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 /usr/include/pcl-1.14/pcl/filters/voxel_grid.h:
 
 /usr/include/vtk-9.1/vtkCellArray.h:
+
+/usr/include/vtk-9.1/vtkProperty2D.h:
+
+/usr/include/boost/signals2/detail/auto_buffer.hpp:
+
+/usr/include/pcl-1.14/pcl/geometry/planar_polygon.h:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_event__traits.hpp:
 
@@ -6786,11 +6896,15 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 
 /usr/include/pcl-1.14/pcl/visualization/common/ren_win_interact_map.h:
 
+/usr/include/pcl-1.14/pcl/visualization/image_viewer.h:
+
 /usr/include/pcl-1.14/pcl/visualization/impl/pcl_visualizer.hpp:
 
 /usr/include/vtk-9.1/vtkOrientationMarkerWidget.h:
 
 /usr/include/pcl-1.14/pcl/visualization/impl/point_cloud_color_handlers.hpp:
+
+/usr/include/vtk-9.1/vtkContextActor.h:
 
 /usr/include/pcl-1.14/pcl/visualization/interactor_style.h:
 
@@ -6799,6 +6913,12 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 /usr/include/pcl-1.14/pcl/visualization/point_cloud_color_handlers.h:
 
 /usr/include/pcl-1.14/pcl/visualization/point_cloud_geometry_handlers.h:
+
+/usr/include/boost/preprocessor/array/elem.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
+
+/usr/include/pcl-1.14/pcl/visualization/vtk/pcl_context_item.h:
 
 /usr/include/pthread.h:
 
@@ -6811,6 +6931,8 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 /usr/include/strings.h:
 
 /usr/include/time.h:
+
+/usr/include/vtk-9.1/vtkAbstractContextItem.h:
 
 /usr/include/vtk-9.1/vtkAbstractMapper3D.h:
 
@@ -6845,6 +6967,12 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 /usr/include/vtk-9.1/vtkCommonMathModule.h:
 
 /usr/include/vtk-9.1/vtkCompiler.h:
+
+/usr/include/vtk-9.1/vtkContextItem.h:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/client.hpp:
+
+/usr/include/vtk-9.1/vtkContextScene.h:
 
 /opt/ros/jazzy/include/type_description_interfaces/type_description_interfaces/msg/detail/field__struct.h:
 
@@ -6882,10 +7010,6 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 
 /usr/include/vtk-9.1/vtkFiltersCoreModule.h:
 
-/usr/include/boost/preprocessor/logical/limits/bool_256.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
-
 /usr/include/vtk-9.1/vtkFiltersGeneralModule.h:
 
 /usr/include/boost/interprocess/sync/file_lock.hpp:
@@ -6902,11 +7026,29 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 
 /usr/include/vtk-9.1/vtkIdTypeArray.h:
 
+/usr/include/vtk-9.1/vtkImageCanvasSource2D.h:
+
+/usr/include/vtk-9.1/vtkImageData.h:
+
+/usr/include/vtk-9.1/vtkImageReslice.h:
+
+/usr/include/boost/mpl/vector/aux_/at.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types/error_t.h:
+
+/usr/include/vtk-9.1/vtkImagingCoreModule.h:
+
+/usr/include/boost/intrusive/detail/config_end.hpp:
+
+/usr/include/vtk-9.1/vtkImagingSourcesModule.h:
+
 /usr/include/vtk-9.1/vtkIntArray.h:
 
 /usr/include/vtk-9.1/vtkMapper.h:
 
 /usr/include/vtk-9.1/vtkInteractorStyle.h:
+
+/usr/include/vtk-9.1/vtkInteractorStyleImage.h:
 
 /usr/include/boost/fusion/view/joint_view/joint_view.hpp:
 
@@ -6939,6 +7081,8 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 /usr/include/vtk-9.1/vtkOStrStreamWrapper.h:
 
 /usr/include/vtk-9.1/vtkOStreamWrapper.h:
+
+/usr/include/vtk-9.1/vtkImageViewer.h:
 
 /usr/include/vtk-9.1/vtkOptions.h:
 
@@ -6984,6 +7128,8 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 
 /usr/include/vtk-9.1/vtkTextProperty.h:
 
+/usr/include/vtk-9.1/vtkTuple.h:
+
 /usr/include/pcl-1.14/pcl/sample_consensus/method_types.h:
 
 /usr/include/boost/fusion/support/tag_of_fwd.hpp:
@@ -6996,13 +7142,13 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 
 /usr/include/vtk-9.1/vtkUnstructuredGrid.h:
 
+/usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h:
+
 /usr/include/vtk-9.1/vtkABI.h:
 
 /usr/include/eigen3/Eigen/src/StlSupport/StdVector.h:
 
 /opt/ros/jazzy/include/type_description_interfaces/type_description_interfaces/msg/detail/type_source__struct.h:
-
-/usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h:
 
 /usr/include/vtk-9.1/vtkUnstructuredGridBase.h:
 
@@ -7016,9 +7162,13 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 
 /usr/include/x86_64-linux-gnu/bits/sigthread.h:
 
+/usr/include/vtk-9.1/vtkVector.h:
+
 /usr/include/boost/predef/detail/test.h:
 
 /usr/include/vtk-9.1/vtkVectorText.h:
+
+/usr/include/vtk-9.1/vtkWeakPointer.h:
 
 /usr/include/vtk-9.1/vtk_kwiml.h:
 
@@ -7078,8 +7228,6 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 
 /usr/include/x86_64-linux-gnu/bits/mman-shared.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
-
 /usr/include/x86_64-linux-gnu/bits/mman.h:
 
 /usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
@@ -7095,6 +7243,8 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 /usr/include/x86_64-linux-gnu/bits/sigaction.h:
 
 /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h:
+
+/usr/include/vtk-9.1/vtkThreads.h:
 
 /usr/include/boost/smart_ptr/shared_ptr.hpp:
 
@@ -7116,10 +7266,6 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
 
-/usr/include/boost/mpl/vector/aux_/at.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/types/error_t.h:
-
 /usr/include/boost/random/uniform_01.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
@@ -7131,41 +7277,3 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: /home/mario/ma
 /usr/include/boost/preprocessor/iterate.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/sigval_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/typesizes.h:
-
-/usr/include/eigen3/Eigen/src/Core/products/SelfadjointProduct.h:
-
-/usr/include/boost/type_traits/is_copy_constructible.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
-
-/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
-
-/usr/include/x86_64-linux-gnu/bits/wordsize.h:
-
-/usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h:
-
-/usr/include/c++/13/bits/stl_queue.h:
-
-/usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h:
-
-/usr/include/boost/random/detail/generator_seed_seq.hpp:
-
-/usr/include/boost/preprocessor/arithmetic/sub.hpp:
-
-/usr/include/x86_64-linux-gnu/c++/13/bits/ctype_base.h:

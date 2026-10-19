@@ -170,40 +170,9 @@ void ObstaclePlanner::addProbekoerper(robot_interfaces::msg::ObjectPose msg){
 
         for (auto& msg_component : msg_vector_old){
 
-            //RCLCPP_INFO(this->get_logger(),"TEST");
-
-            //RCLCPP_INFO(this->get_logger(),"String: %s", msg_component.object_type);
             std::cout<< "String: "<< msg_component.object_type << std::endl;
-            std::cout<< "Axis_x: "<< msg_component.axis_x<< std::endl;
-            //RCLCPP_INFO(this->get_logger(),"Axis_x: %f", msg_component.axis2_x);
 
             if (msg_component.object_type == "Cylinder"){
-
-                    // //Obstacle in der Umgebung des Roboters
-                    // moveit_msgs::msg::CollisionObject obstacle;
-                    // obstacle.header.frame_id = _move_group->getPlanningFrame();
-                    // obstacle.id = "table";
-                    // shape_msgs::msg::SolidPrimitive primitive2;
-                    // primitive2.type = primitive2.BOX;
-                    // primitive2.dimensions.resize(3);
-                    // primitive2.dimensions[primitive2.BOX_X] = 0.1;
-                    // primitive2.dimensions[primitive2.BOX_Y] = 1.5;
-                    // primitive2.dimensions[primitive2.BOX_Z] = 0.3;
-                    // geometry_msgs::msg::Pose bp;
-                    // bp.orientation.w = 0.5;
-                    // bp.position.x = 0.48;
-                    // bp.position.y = 0.0;
-                    // bp.position.z = 0.25;
-
-                    // obstacle.primitives.push_back(primitive2);
-                    // obstacle.primitive_poses.push_back(bp);
-                    // obstacle.operation = obstacle.ADD;
-                    // if (planning_scene_interface.applyCollisionObject(obstacle) == true){
-
-                    //     RCLCPP_INFO(this->get_logger(),"Table succesfully added to planningscene");
-                    // }
-
-                    // else{RCLCPP_INFO(this->get_logger(),"Table NOT added to planningscene");}
 
                 RCLCPP_INFO(this->get_logger(),"Cylinder wird verarbeitet");
 
@@ -234,9 +203,7 @@ void ObstaclePlanner::addProbekoerper(robot_interfaces::msg::ObjectPose msg){
 
                 float roll  = 0;
                 float pitch = acos(msg_component.axis_z / vectorlength_pitch);
-                //float yaw   = atan2(msg_component.axis_y, msg_component.axis_x);
                 float yaw   = acos(msg_component.axis_x/ vectorlength_yaw);
-
 
                 q.setRPY(roll, pitch, yaw);
 
@@ -270,11 +237,67 @@ void ObstaclePlanner::addProbekoerper(robot_interfaces::msg::ObjectPose msg){
                 if (planning_scene_interface.applyCollisionObject(object) == true){
 
                     RCLCPP_INFO(this->get_logger(),"Cylinder succesfully added to planningscene");
-
                 }
 
                 else{RCLCPP_INFO(this->get_logger(),"Cylinder NOT added to planningscene");}
             }
+
+            if (msg_component.object_type == "Cube"){
+
+                RCLCPP_INFO(this->get_logger(),"Cube wird verarbeitet");
+
+                moveit_msgs::msg::CollisionObject object;
+                object.header.frame_id = _move_group->getPlanningFrame();
+                object.id = "Cube_" + std::to_string(i);
+
+                RCLCPP_INFO(this->get_logger(),"TEST1");
+
+                shape_msgs::msg::SolidPrimitive primitive;
+                primitive.type = primitive.BOX;
+                primitive.dimensions.resize(3);
+                primitive.dimensions[primitive.BOX_X] = msg_component.length;
+                primitive.dimensions[primitive.BOX_Y] = msg_component.length;
+                primitive.dimensions[primitive.BOX_Z] = msg_component.length;
+
+                geometry_msgs::msg::Pose cp;
+                
+                RCLCPP_INFO(this->get_logger(),"TEST2");
+
+                cp.position.x = msg_component.mid_x;
+                cp.position.y = msg_component.mid_y;
+                cp.position.z = msg_component.mid_z;
+
+                cp.orientation.x = msg_component.q_x;
+                cp.orientation.y = msg_component.q_y;
+                cp.orientation.z = msg_component.q_z;
+                cp.orientation.w = msg_component.q_w;
+
+                // std::cout<< "QX: "<< cp.orientation.x << std::endl;
+                // std::cout<< "QY: "<< cp.orientation.y << std::endl;
+                // std::cout<< "QZ: "<< cp.orientation.z << std::endl;
+                // std::cout<< "QW: "<< cp.orientation.w << std::endl;
+
+                RCLCPP_INFO(this->get_logger(),"TEST3");
+
+                object.primitives.push_back(primitive);
+                object.primitive_poses.push_back(cp);
+                object.operation = object.ADD;
+
+                moveit_msgs::msg::ObjectColor object_color;
+                object_color.id = object.id;
+                object_color.color.r = 1.0f; // Red component
+                object_color.color.g = 0.0f;
+                object_color.color.b = 1.0f;
+                object_color.color.a = 1.0f; // Alpha (Opacity)
+
+                if (planning_scene_interface.applyCollisionObject(object) == true){
+
+                    RCLCPP_INFO(this->get_logger(),"Cube succesfully added to planningscene");
+                }
+
+                else{RCLCPP_INFO(this->get_logger(),"Cube NOT added to planningscene");}
+            }
+
             i++;
         }
         i=0;
@@ -407,9 +430,7 @@ void ObstaclePlanner::obstacle_parser(){
     if(!sdf::readFile(sdfPath, sdfElement)){
 
         RCLCPP_INFO(this->get_logger(),"Pfad nicht korrekt oder keine valide SDF-File: %s", sdfPath.c_str());
-
         return;
-
     }
 
     else{RCLCPP_INFO(this->get_logger(),"SUCCESS parsing SDF");}
@@ -438,22 +459,17 @@ void ObstaclePlanner::obstacle_parser(){
 
             if(modelElement->GetNextElement("model") == nullptr){
 
-                loop_model = false; 
-
+                loop_model = false;
             }
 
             else{
 
                 modelElement = modelElement->GetNextElement("model");
-            
-                RCLCPP_INFO(this->get_logger(),"Model wird übersprungen"); 
-
+                RCLCPP_INFO(this->get_logger(),"Model wird übersprungen");
                 modelName = modelElement->Get<std::string>("name");
-            }
-            
+            } 
         }
 
-        
         else{
             
             model.push_back(modelName);

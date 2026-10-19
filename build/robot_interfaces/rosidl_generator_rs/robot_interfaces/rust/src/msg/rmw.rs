@@ -63,17 +63,22 @@ pub struct ObjectPose {
 
     // This member is not documented.
     #[allow(missing_docs)]
-    pub axis2_x: f64,
+    pub q_x: f64,
 
 
     // This member is not documented.
     #[allow(missing_docs)]
-    pub axis2_y: f64,
+    pub q_y: f64,
 
 
     // This member is not documented.
     #[allow(missing_docs)]
-    pub axis2_z: f64,
+    pub q_z: f64,
+
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub q_w: f64,
 
 
     // This member is not documented.

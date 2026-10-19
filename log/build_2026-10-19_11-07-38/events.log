@@ -1,0 +1,405 @@
+[0.000000] (-) TimerEvent: {}
+[0.000167] (-) JobUnselected: {'identifier': 'estun_control'}
+[0.000384] (-) JobUnselected: {'identifier': 'estun_description'}
+[0.000419] (-) JobUnselected: {'identifier': 'estun_moveit'}
+[0.000446] (-) JobUnselected: {'identifier': 'moveit_task_constructor_capabilities'}
+[0.000602] (-) JobUnselected: {'identifier': 'moveit_task_constructor_core'}
+[0.000616] (-) JobUnselected: {'identifier': 'moveit_task_constructor_demo'}
+[0.000627] (-) JobUnselected: {'identifier': 'moveit_task_constructor_msgs'}
+[0.000637] (-) JobUnselected: {'identifier': 'moveit_task_constructor_visualization'}
+[0.000719] (-) JobUnselected: {'identifier': 'robot_interfaces'}
+[0.000731] (-) JobUnselected: {'identifier': 'rviz_marker_tools'}
+[0.000743] (vision_control) JobQueued: {'identifier': 'vision_control', 'dependencies': OrderedDict({'robot_interfaces': '/home/mario/master_ws/install/robot_interfaces'})}
+[0.000929] (vision_control) JobStarted: {'identifier': 'vision_control'}
+[0.012828] (vision_control) JobProgress: {'identifier': 'vision_control', 'progress': 'cmake'}
+[0.013699] (vision_control) JobProgress: {'identifier': 'vision_control', 'progress': 'build'}
+[0.014353] (vision_control) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/mario/master_ws/build/vision_control', '--', '-j12', '-l12'], 'cwd': '/home/mario/master_ws/build/vision_control', 'env': OrderedDict({'GZ_SIM_SYSTEM_PLUGIN_PATH': '/opt/ros/jazzy/lib', 'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'XDG_ACTIVATION_TOKEN': 'gnome-shell/Terminator/2789-4-mario-MS-7C37_TIME6442362', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'LANGUAGE': 'de_DE:en', 'USER': 'mario', 'LC_TIME': 'de_DE.UTF-8', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'x11', 'STM32CubeMX_PATH': '/home/mario/STM32CubeMX', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/mario/master_ws/install/robot_interfaces/lib:/home/mario/master_ws/install/moveit_task_constructor_demo/lib:/home/mario/master_ws/install/moveit_task_constructor_visualization/lib:/home/mario/master_ws/install/moveit_task_constructor_capabilities/lib:/home/mario/master_ws/install/moveit_task_constructor_core/lib:/home/mario/master_ws/install/rviz_marker_tools/lib:/home/mario/master_ws/install/moveit_task_constructor_msgs/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/mario', 'OLDPWD': '/home/mario', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/terminator.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'de_DE.UTF-8', 'MANAGERPID': '2414', 'SYSTEMD_EXEC_PID': '2789', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '18913', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/mario/master_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'mario', 'JOURNAL_STREAM': '10:21030', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'mario', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/home/mario/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/mario/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/mario-MS-7C37:@/tmp/.ICE-unix/2746,unix/mario-MS-7C37:/tmp/.ICE-unix/2746', 'INVOCATION_ID': 'f8b67e6ba1bd43dea43618616555cd19', 'PAPERSIZE': 'a4', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'de_DE.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'de_DE.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'de_DE.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/mario/master_ws/install/vision_control:/home/mario/master_ws/install/moveit_task_constructor_demo:/home/mario/master_ws/install/moveit_task_constructor_visualization:/home/mario/master_ws/install/moveit_task_constructor_capabilities:/home/mario/master_ws/install/estun_control:/home/mario/master_ws/install/moveit_task_constructor_core:/home/mario/master_ws/install/rviz_marker_tools:/home/mario/master_ws/install/robot_interfaces:/home/mario/master_ws/install/moveit_task_constructor_msgs:/home/mario/master_ws/install/estun_moveit:/home/mario/master_ws/install/estun_description:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LC_NAME': 'de_DE.UTF-8', 'TERMINATOR_UUID': 'urn:uuid:c3627ee9-55e7-446b-bbc1-2e879664de94', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'de_DE.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'LC_IDENTIFICATION': 'de_DE.UTF-8', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/mario/master_ws/build/vision_control', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/home/mario/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/mario/master_ws/install/robot_interfaces/lib/python3.12/site-packages:/home/mario/master_ws/install/moveit_task_constructor_core/lib/python3.12/site-packages:/home/mario/master_ws/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:/home/mario/master_ws/install/estun_description/lib/python3.12/site-packages:/opt/ros/jazzy/opt/gz_sim_vendor/lib/python:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_transport_vendor/lib/python:/opt/ros/jazzy/opt/gz_msgs_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'LC_NUMERIC': 'en_US.UTF-8', 'LC_PAPER': 'de_DE.UTF-8', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/mario/master_ws/install/robot_interfaces:/home/mario/master_ws/install/vision_control:/home/mario/master_ws/install/moveit_task_constructor_demo:/home/mario/master_ws/install/moveit_task_constructor_visualization:/home/mario/master_ws/install/moveit_task_constructor_capabilities:/home/mario/master_ws/install/estun_control:/home/mario/master_ws/install/moveit_task_constructor_core:/home/mario/master_ws/install/rviz_marker_tools:/home/mario/master_ws/install/moveit_task_constructor_msgs:/home/mario/master_ws/install/estun_moveit:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/mario/master_ws/install/estun_description:/opt/ros/jazzy'}), 'shell': False}
+[0.099633] (-) TimerEvent: {}
+[0.125978] (vision_control) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o\x1b[0m\n'}
+[0.199756] (-) TimerEvent: {}
+[0.300087] (-) TimerEvent: {}
+[0.400388] (-) TimerEvent: {}
+[0.500627] (-) TimerEvent: {}
+[0.600859] (-) TimerEvent: {}
+[0.701096] (-) TimerEvent: {}
+[0.801402] (-) TimerEvent: {}
+[0.901727] (-) TimerEvent: {}
+[1.001996] (-) TimerEvent: {}
+[1.102246] (-) TimerEvent: {}
+[1.202537] (-) TimerEvent: {}
+[1.302790] (-) TimerEvent: {}
+[1.403092] (-) TimerEvent: {}
+[1.503393] (-) TimerEvent: {}
+[1.603690] (-) TimerEvent: {}
+[1.705517] (-) TimerEvent: {}
+[1.805807] (-) TimerEvent: {}
+[1.906052] (-) TimerEvent: {}
+[2.006292] (-) TimerEvent: {}
+[2.106540] (-) TimerEvent: {}
+[2.206795] (-) TimerEvent: {}
+[2.307195] (-) TimerEvent: {}
+[2.407496] (-) TimerEvent: {}
+[2.507749] (-) TimerEvent: {}
+[2.608058] (-) TimerEvent: {}
+[2.708316] (-) TimerEvent: {}
+[2.808608] (-) TimerEvent: {}
+[2.908917] (-) TimerEvent: {}
+[3.009305] (-) TimerEvent: {}
+[3.109635] (-) TimerEvent: {}
+[3.209945] (-) TimerEvent: {}
+[3.310246] (-) TimerEvent: {}
+[3.410523] (-) TimerEvent: {}
+[3.510843] (-) TimerEvent: {}
+[3.611141] (-) TimerEvent: {}
+[3.711466] (-) TimerEvent: {}
+[3.811779] (-) TimerEvent: {}
+[3.912090] (-) TimerEvent: {}
+[4.012419] (-) TimerEvent: {}
+[4.112813] (-) TimerEvent: {}
+[4.213143] (-) TimerEvent: {}
+[4.313469] (-) TimerEvent: {}
+[4.413906] (-) TimerEvent: {}
+[4.514309] (-) TimerEvent: {}
+[4.614682] (-) TimerEvent: {}
+[4.715375] (-) TimerEvent: {}
+[4.816835] (-) TimerEvent: {}
+[4.917166] (-) TimerEvent: {}
+[5.017437] (-) TimerEvent: {}
+[5.117759] (-) TimerEvent: {}
+[5.218036] (-) TimerEvent: {}
+[5.318423] (-) TimerEvent: {}
+[5.418777] (-) TimerEvent: {}
+[5.519032] (-) TimerEvent: {}
+[5.619301] (-) TimerEvent: {}
+[5.719564] (-) TimerEvent: {}
+[5.819846] (-) TimerEvent: {}
+[5.920094] (-) TimerEvent: {}
+[6.020365] (-) TimerEvent: {}
+[6.120613] (-) TimerEvent: {}
+[6.220896] (-) TimerEvent: {}
+[6.321181] (-) TimerEvent: {}
+[6.421502] (-) TimerEvent: {}
+[6.521780] (-) TimerEvent: {}
+[6.622047] (-) TimerEvent: {}
+[6.722344] (-) TimerEvent: {}
+[6.822661] (-) TimerEvent: {}
+[6.922998] (-) TimerEvent: {}
+[7.023286] (-) TimerEvent: {}
+[7.123545] (-) TimerEvent: {}
+[7.223836] (-) TimerEvent: {}
+[7.324103] (-) TimerEvent: {}
+[7.424396] (-) TimerEvent: {}
+[7.524689] (-) TimerEvent: {}
+[7.624943] (-) TimerEvent: {}
+[7.725243] (-) TimerEvent: {}
+[7.825500] (-) TimerEvent: {}
+[7.843908] (vision_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid PointCloudProcessor::\x1b[01;32m\x1b[Kgenerate_cylinder_master\x1b[m\x1b[K()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[7.844248] (vision_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:122:13:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kcurrent_height\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[7.844474] (vision_control) StderrLine: {'line': b'  122 |       float \x1b[01;35m\x1b[Kcurrent_height\x1b[m\x1b[K = j * spacing_z;\n'}
+[7.844670] (vision_control) StderrLine: {'line': b'      |             \x1b[01;35m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.860135] (vision_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<std::shared_ptr<pcl::PointCloud<pcl::PointNormal> > > PointCloudProcessor::\x1b[01;32m\x1b[KclusterPointCloud\x1b[m\x1b[K()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[7.860426] (vision_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:253:14:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kvariable \xe2\x80\x98\x1b[01m\x1b[Kr\x1b[m\x1b[K\xe2\x80\x99 set but not used [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable\x07-Wunused-but-set-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[7.860575] (vision_control) StderrLine: {'line': b'  253 |       double \x1b[01;35m\x1b[Kr\x1b[m\x1b[K = 0.0, g = 0.0, b = 0.0;\n'}
+[7.860738] (vision_control) StderrLine: {'line': b'      |              \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[7.860917] (vision_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:253:23:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kvariable \xe2\x80\x98\x1b[01m\x1b[Kg\x1b[m\x1b[K\xe2\x80\x99 set but not used [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable\x07-Wunused-but-set-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[7.861112] (vision_control) StderrLine: {'line': b'  253 |       double r = 0.0, \x1b[01;35m\x1b[Kg\x1b[m\x1b[K = 0.0, b = 0.0;\n'}
+[7.861303] (vision_control) StderrLine: {'line': b'      |                       \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[7.861504] (vision_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:253:32:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kvariable \xe2\x80\x98\x1b[01m\x1b[Kb\x1b[m\x1b[K\xe2\x80\x99 set but not used [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable\x07-Wunused-but-set-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[7.861693] (vision_control) StderrLine: {'line': b'  253 |       double r = 0.0, g = 0.0, \x1b[01;35m\x1b[Kb\x1b[m\x1b[K = 0.0;\n'}
+[7.861906] (vision_control) StderrLine: {'line': b'      |                                \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[7.916415] (vision_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid PointCloudProcessor::\x1b[01;32m\x1b[KprocessPointCloud\x1b[m\x1b[K()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[7.916672] (vision_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:297:19:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kvariable \xe2\x80\x98\x1b[01m\x1b[Ktransform_rotation\x1b[m\x1b[K\xe2\x80\x99 set but not used [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable\x07-Wunused-but-set-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[7.916792] (vision_control) StderrLine: {'line': b'  297 |   Eigen::Matrix3f \x1b[01;35m\x1b[Ktransform_rotation\x1b[m\x1b[K = transform_3.rotation();\n'}
+[7.916947] (vision_control) StderrLine: {'line': b'      |                   \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.917109] (vision_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:298:19:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kvariable \xe2\x80\x98\x1b[01m\x1b[Ktransform_translation\x1b[m\x1b[K\xe2\x80\x99 set but not used [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable\x07-Wunused-but-set-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[7.917282] (vision_control) StderrLine: {'line': b'  298 |   Eigen::Vector3f \x1b[01;35m\x1b[Ktransform_translation\x1b[m\x1b[K = transform_3.translation();\n'}
+[7.917454] (vision_control) StderrLine: {'line': b'      |                   \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.925591] (-) TimerEvent: {}
+[7.941112] (vision_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid PointCloudProcessor::\x1b[01;32m\x1b[KedgeDetection\x1b[m\x1b[K(std::shared_ptr<pcl::PointCloud<pcl::PointNormal> >)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[7.941466] (vision_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:807:19:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kvariable \xe2\x80\x98\x1b[01m\x1b[Ktransform_rotation\x1b[m\x1b[K\xe2\x80\x99 set but not used [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable\x07-Wunused-but-set-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[7.941629] (vision_control) StderrLine: {'line': b'  807 |   Eigen::Matrix3f \x1b[01;35m\x1b[Ktransform_rotation\x1b[m\x1b[K = scene_sensor_pose.rotation();\n'}
+[7.941785] (vision_control) StderrLine: {'line': b'      |                   \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.941937] (vision_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:808:19:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kvariable \xe2\x80\x98\x1b[01m\x1b[Ktransform_translation\x1b[m\x1b[K\xe2\x80\x99 set but not used [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable\x07-Wunused-but-set-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[7.942120] (vision_control) StderrLine: {'line': b'  808 |   Eigen::Vector3f \x1b[01;35m\x1b[Ktransform_translation\x1b[m\x1b[K = scene_sensor_pose.translation();\n'}
+[7.942274] (vision_control) StderrLine: {'line': b'      |                   \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.942439] (vision_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:812:8:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[KsetUnseenToMaxRange\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[7.942603] (vision_control) StderrLine: {'line': b'  812 |   bool \x1b[01;35m\x1b[KsetUnseenToMaxRange\x1b[m\x1b[K = false;\n'}
+[7.942731] (vision_control) StderrLine: {'line': b'      |        \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.955970] (vision_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<float> PointCloudProcessor::\x1b[01;32m\x1b[KcalculateCubeCenter\x1b[m\x1b[K(std::vector<Eigen::Matrix<float, 4, 1> >, std::shared_ptr<pcl::PointCloud<pcl::PointNormal> >)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[7.956218] (vision_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:1041:8:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kintersects_plane_plane\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[7.956403] (vision_control) StderrLine: {'line': b' 1041 |   bool \x1b[01;35m\x1b[Kintersects_plane_plane\x1b[m\x1b[K = pcl::threePlanesIntersection(cube_planes_double[0],cube_planes_double[1],cube_planes_double[2],eckpunkt,0.002);\n'}
+[7.956561] (vision_control) StderrLine: {'line': b'      |        \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.025706] (-) TimerEvent: {}
+[8.126006] (-) TimerEvent: {}
+[8.226287] (-) TimerEvent: {}
+[8.326580] (-) TimerEvent: {}
+[8.426865] (-) TimerEvent: {}
+[8.527119] (-) TimerEvent: {}
+[8.627383] (-) TimerEvent: {}
+[8.727664] (-) TimerEvent: {}
+[8.827944] (-) TimerEvent: {}
+[8.928245] (-) TimerEvent: {}
+[9.028562] (-) TimerEvent: {}
+[9.128866] (-) TimerEvent: {}
+[9.229120] (-) TimerEvent: {}
+[9.329367] (-) TimerEvent: {}
+[9.429598] (-) TimerEvent: {}
+[9.529845] (-) TimerEvent: {}
+[9.630127] (-) TimerEvent: {}
+[9.730378] (-) TimerEvent: {}
+[9.830692] (-) TimerEvent: {}
+[9.931017] (-) TimerEvent: {}
+[10.031340] (-) TimerEvent: {}
+[10.131641] (-) TimerEvent: {}
+[10.231931] (-) TimerEvent: {}
+[10.332247] (-) TimerEvent: {}
+[10.432601] (-) TimerEvent: {}
+[10.533062] (-) TimerEvent: {}
+[10.633387] (-) TimerEvent: {}
+[10.733665] (-) TimerEvent: {}
+[10.833929] (-) TimerEvent: {}
+[10.934224] (-) TimerEvent: {}
+[11.034526] (-) TimerEvent: {}
+[11.134815] (-) TimerEvent: {}
+[11.235095] (-) TimerEvent: {}
+[11.335337] (-) TimerEvent: {}
+[11.435628] (-) TimerEvent: {}
+[11.535979] (-) TimerEvent: {}
+[11.636240] (-) TimerEvent: {}
+[11.736515] (-) TimerEvent: {}
+[11.836919] (-) TimerEvent: {}
+[11.937415] (-) TimerEvent: {}
+[12.037676] (-) TimerEvent: {}
+[12.138002] (-) TimerEvent: {}
+[12.238309] (-) TimerEvent: {}
+[12.338654] (-) TimerEvent: {}
+[12.438953] (-) TimerEvent: {}
+[12.539220] (-) TimerEvent: {}
+[12.640523] (-) TimerEvent: {}
+[12.740813] (-) TimerEvent: {}
+[12.841076] (-) TimerEvent: {}
+[12.941380] (-) TimerEvent: {}
+[13.041659] (-) TimerEvent: {}
+[13.141949] (-) TimerEvent: {}
+[13.242240] (-) TimerEvent: {}
+[13.342559] (-) TimerEvent: {}
+[13.442851] (-) TimerEvent: {}
+[13.543150] (-) TimerEvent: {}
+[13.643466] (-) TimerEvent: {}
+[13.743722] (-) TimerEvent: {}
+[13.844010] (-) TimerEvent: {}
+[13.944299] (-) TimerEvent: {}
+[14.044608] (-) TimerEvent: {}
+[14.144841] (-) TimerEvent: {}
+[14.245075] (-) TimerEvent: {}
+[14.345371] (-) TimerEvent: {}
+[14.445635] (-) TimerEvent: {}
+[14.545852] (-) TimerEvent: {}
+[14.646086] (-) TimerEvent: {}
+[14.746371] (-) TimerEvent: {}
+[14.846619] (-) TimerEvent: {}
+[14.946934] (-) TimerEvent: {}
+[15.047204] (-) TimerEvent: {}
+[15.147472] (-) TimerEvent: {}
+[15.247762] (-) TimerEvent: {}
+[15.348033] (-) TimerEvent: {}
+[15.448281] (-) TimerEvent: {}
+[15.548630] (-) TimerEvent: {}
+[15.648956] (-) TimerEvent: {}
+[15.749236] (-) TimerEvent: {}
+[15.849518] (-) TimerEvent: {}
+[15.949799] (-) TimerEvent: {}
+[16.050041] (-) TimerEvent: {}
+[16.150312] (-) TimerEvent: {}
+[16.250550] (-) TimerEvent: {}
+[16.350796] (-) TimerEvent: {}
+[16.451124] (-) TimerEvent: {}
+[16.551365] (-) TimerEvent: {}
+[16.651651] (-) TimerEvent: {}
+[16.751953] (-) TimerEvent: {}
+[16.852187] (-) TimerEvent: {}
+[16.952511] (-) TimerEvent: {}
+[17.052806] (-) TimerEvent: {}
+[17.153073] (-) TimerEvent: {}
+[17.253321] (-) TimerEvent: {}
+[17.353620] (-) TimerEvent: {}
+[17.453940] (-) TimerEvent: {}
+[17.554250] (-) TimerEvent: {}
+[17.654590] (-) TimerEvent: {}
+[17.754891] (-) TimerEvent: {}
+[17.855266] (-) TimerEvent: {}
+[17.955731] (-) TimerEvent: {}
+[18.056073] (-) TimerEvent: {}
+[18.156416] (-) TimerEvent: {}
+[18.256740] (-) TimerEvent: {}
+[18.357043] (-) TimerEvent: {}
+[18.457344] (-) TimerEvent: {}
+[18.557598] (-) TimerEvent: {}
+[18.657866] (-) TimerEvent: {}
+[18.758164] (-) TimerEvent: {}
+[18.858413] (-) TimerEvent: {}
+[18.958752] (-) TimerEvent: {}
+[19.059069] (-) TimerEvent: {}
+[19.159327] (-) TimerEvent: {}
+[19.259592] (-) TimerEvent: {}
+[19.360137] (-) TimerEvent: {}
+[19.460391] (-) TimerEvent: {}
+[19.560621] (-) TimerEvent: {}
+[19.660977] (-) TimerEvent: {}
+[19.761242] (-) TimerEvent: {}
+[19.861593] (-) TimerEvent: {}
+[19.961861] (-) TimerEvent: {}
+[20.062276] (-) TimerEvent: {}
+[20.162601] (-) TimerEvent: {}
+[20.262881] (-) TimerEvent: {}
+[20.363228] (-) TimerEvent: {}
+[20.463563] (-) TimerEvent: {}
+[20.563936] (-) TimerEvent: {}
+[20.664304] (-) TimerEvent: {}
+[20.764604] (-) TimerEvent: {}
+[20.864913] (-) TimerEvent: {}
+[20.965214] (-) TimerEvent: {}
+[21.065583] (-) TimerEvent: {}
+[21.165852] (-) TimerEvent: {}
+[21.266131] (-) TimerEvent: {}
+[21.366410] (-) TimerEvent: {}
+[21.466675] (-) TimerEvent: {}
+[21.566946] (-) TimerEvent: {}
+[21.667235] (-) TimerEvent: {}
+[21.767576] (-) TimerEvent: {}
+[21.867836] (-) TimerEvent: {}
+[21.968154] (-) TimerEvent: {}
+[22.068397] (-) TimerEvent: {}
+[22.168592] (-) TimerEvent: {}
+[22.268812] (-) TimerEvent: {}
+[22.369041] (-) TimerEvent: {}
+[22.469286] (-) TimerEvent: {}
+[22.569579] (-) TimerEvent: {}
+[22.669846] (-) TimerEvent: {}
+[22.770074] (-) TimerEvent: {}
+[22.870310] (-) TimerEvent: {}
+[22.970535] (-) TimerEvent: {}
+[23.070819] (-) TimerEvent: {}
+[23.171117] (-) TimerEvent: {}
+[23.271394] (-) TimerEvent: {}
+[23.371616] (-) TimerEvent: {}
+[23.471842] (-) TimerEvent: {}
+[23.572088] (-) TimerEvent: {}
+[23.672335] (-) TimerEvent: {}
+[23.772601] (-) TimerEvent: {}
+[23.872833] (-) TimerEvent: {}
+[23.973107] (-) TimerEvent: {}
+[24.073371] (-) TimerEvent: {}
+[24.173593] (-) TimerEvent: {}
+[24.273898] (-) TimerEvent: {}
+[24.374168] (-) TimerEvent: {}
+[24.474419] (-) TimerEvent: {}
+[24.574706] (-) TimerEvent: {}
+[24.674998] (-) TimerEvent: {}
+[24.775268] (-) TimerEvent: {}
+[24.875539] (-) TimerEvent: {}
+[24.975787] (-) TimerEvent: {}
+[25.076045] (-) TimerEvent: {}
+[25.176316] (-) TimerEvent: {}
+[25.276617] (-) TimerEvent: {}
+[25.376927] (-) TimerEvent: {}
+[25.477231] (-) TimerEvent: {}
+[25.577521] (-) TimerEvent: {}
+[25.678120] (-) TimerEvent: {}
+[25.778415] (-) TimerEvent: {}
+[25.878751] (-) TimerEvent: {}
+[25.979112] (-) TimerEvent: {}
+[26.079482] (-) TimerEvent: {}
+[26.179973] (-) TimerEvent: {}
+[26.280390] (-) TimerEvent: {}
+[26.380709] (-) TimerEvent: {}
+[26.480955] (-) TimerEvent: {}
+[26.564941] (vision_control) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable pcl_pose_estimation\x1b[0m\n'}
+[26.581063] (-) TimerEvent: {}
+[26.681390] (-) TimerEvent: {}
+[26.781630] (-) TimerEvent: {}
+[26.881904] (-) TimerEvent: {}
+[26.982230] (-) TimerEvent: {}
+[27.082547] (-) TimerEvent: {}
+[27.182827] (-) TimerEvent: {}
+[27.283193] (-) TimerEvent: {}
+[27.383492] (-) TimerEvent: {}
+[27.483838] (-) TimerEvent: {}
+[27.584135] (-) TimerEvent: {}
+[27.684429] (-) TimerEvent: {}
+[27.784775] (-) TimerEvent: {}
+[27.885051] (-) TimerEvent: {}
+[27.985406] (-) TimerEvent: {}
+[28.085766] (-) TimerEvent: {}
+[28.186199] (-) TimerEvent: {}
+[28.286550] (-) TimerEvent: {}
+[28.386918] (-) TimerEvent: {}
+[28.487291] (-) TimerEvent: {}
+[28.587603] (-) TimerEvent: {}
+[28.687940] (-) TimerEvent: {}
+[28.788250] (-) TimerEvent: {}
+[28.888606] (-) TimerEvent: {}
+[28.988873] (-) TimerEvent: {}
+[29.089264] (-) TimerEvent: {}
+[29.189616] (-) TimerEvent: {}
+[29.289900] (-) TimerEvent: {}
+[29.390236] (-) TimerEvent: {}
+[29.490624] (-) TimerEvent: {}
+[29.590935] (-) TimerEvent: {}
+[29.691239] (-) TimerEvent: {}
+[29.791589] (-) TimerEvent: {}
+[29.892031] (-) TimerEvent: {}
+[29.992335] (-) TimerEvent: {}
+[30.092650] (-) TimerEvent: {}
+[30.192989] (-) TimerEvent: {}
+[30.293277] (-) TimerEvent: {}
+[30.393592] (-) TimerEvent: {}
+[30.493860] (-) TimerEvent: {}
+[30.594158] (-) TimerEvent: {}
+[30.694414] (-) TimerEvent: {}
+[30.794705] (-) TimerEvent: {}
+[30.895031] (-) TimerEvent: {}
+[30.995396] (-) TimerEvent: {}
+[31.095695] (-) TimerEvent: {}
+[31.195972] (-) TimerEvent: {}
+[31.297417] (-) TimerEvent: {}
+[31.397655] (-) TimerEvent: {}
+[31.497918] (-) TimerEvent: {}
+[31.598228] (-) TimerEvent: {}
+[31.698606] (-) TimerEvent: {}
+[31.798937] (-) TimerEvent: {}
+[31.899328] (-) TimerEvent: {}
+[31.999781] (-) TimerEvent: {}
+[32.100179] (-) TimerEvent: {}
+[32.200427] (-) TimerEvent: {}
+[32.300722] (-) TimerEvent: {}
+[32.400987] (-) TimerEvent: {}
+[32.501261] (-) TimerEvent: {}
+[32.601587] (-) TimerEvent: {}
+[32.701834] (-) TimerEvent: {}
+[32.744133] (vision_control) StdoutLine: {'line': b'[100%] Built target pcl_pose_estimation\n'}
+[32.759003] (vision_control) CommandEnded: {'returncode': 0}
+[32.759612] (vision_control) JobProgress: {'identifier': 'vision_control', 'progress': 'install'}
+[32.771687] (vision_control) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/mario/master_ws/build/vision_control'], 'cwd': '/home/mario/master_ws/build/vision_control', 'env': OrderedDict({'GZ_SIM_SYSTEM_PLUGIN_PATH': '/opt/ros/jazzy/lib', 'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'XDG_ACTIVATION_TOKEN': 'gnome-shell/Terminator/2789-4-mario-MS-7C37_TIME6442362', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'LANGUAGE': 'de_DE:en', 'USER': 'mario', 'LC_TIME': 'de_DE.UTF-8', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'x11', 'STM32CubeMX_PATH': '/home/mario/STM32CubeMX', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/mario/master_ws/install/robot_interfaces/lib:/home/mario/master_ws/install/moveit_task_constructor_demo/lib:/home/mario/master_ws/install/moveit_task_constructor_visualization/lib:/home/mario/master_ws/install/moveit_task_constructor_capabilities/lib:/home/mario/master_ws/install/moveit_task_constructor_core/lib:/home/mario/master_ws/install/rviz_marker_tools/lib:/home/mario/master_ws/install/moveit_task_constructor_msgs/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/mario', 'OLDPWD': '/home/mario', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/terminator.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'de_DE.UTF-8', 'MANAGERPID': '2414', 'SYSTEMD_EXEC_PID': '2789', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '18913', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/mario/master_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'mario', 'JOURNAL_STREAM': '10:21030', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'mario', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/home/mario/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/mario/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/mario-MS-7C37:@/tmp/.ICE-unix/2746,unix/mario-MS-7C37:/tmp/.ICE-unix/2746', 'INVOCATION_ID': 'f8b67e6ba1bd43dea43618616555cd19', 'PAPERSIZE': 'a4', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'de_DE.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'de_DE.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'de_DE.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/mario/master_ws/install/vision_control:/home/mario/master_ws/install/moveit_task_constructor_demo:/home/mario/master_ws/install/moveit_task_constructor_visualization:/home/mario/master_ws/install/moveit_task_constructor_capabilities:/home/mario/master_ws/install/estun_control:/home/mario/master_ws/install/moveit_task_constructor_core:/home/mario/master_ws/install/rviz_marker_tools:/home/mario/master_ws/install/robot_interfaces:/home/mario/master_ws/install/moveit_task_constructor_msgs:/home/mario/master_ws/install/estun_moveit:/home/mario/master_ws/install/estun_description:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LC_NAME': 'de_DE.UTF-8', 'TERMINATOR_UUID': 'urn:uuid:c3627ee9-55e7-446b-bbc1-2e879664de94', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'de_DE.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'LC_IDENTIFICATION': 'de_DE.UTF-8', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/mario/master_ws/build/vision_control', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/home/mario/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/mario/master_ws/install/robot_interfaces/lib/python3.12/site-packages:/home/mario/master_ws/install/moveit_task_constructor_core/lib/python3.12/site-packages:/home/mario/master_ws/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:/home/mario/master_ws/install/estun_description/lib/python3.12/site-packages:/opt/ros/jazzy/opt/gz_sim_vendor/lib/python:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_transport_vendor/lib/python:/opt/ros/jazzy/opt/gz_msgs_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'LC_NUMERIC': 'en_US.UTF-8', 'LC_PAPER': 'de_DE.UTF-8', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/mario/master_ws/install/robot_interfaces:/home/mario/master_ws/install/vision_control:/home/mario/master_ws/install/moveit_task_constructor_demo:/home/mario/master_ws/install/moveit_task_constructor_visualization:/home/mario/master_ws/install/moveit_task_constructor_capabilities:/home/mario/master_ws/install/estun_control:/home/mario/master_ws/install/moveit_task_constructor_core:/home/mario/master_ws/install/rviz_marker_tools:/home/mario/master_ws/install/moveit_task_constructor_msgs:/home/mario/master_ws/install/estun_moveit:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/mario/master_ws/install/estun_description:/opt/ros/jazzy'}), 'shell': False}
+[32.780683] (vision_control) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[32.780993] (vision_control) StdoutLine: {'line': b'-- Installing: /home/mario/master_ws/install/vision_control/lib/vision_control/pcl_pose_estimation\n'}
+[32.792482] (vision_control) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/mario/master_ws/install/vision_control/lib/vision_control/pcl_pose_estimation" to ""\n'}
+[32.792693] (vision_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/vision_control/share/ament_index/resource_index/package_run_dependencies/vision_control\n'}
+[32.792840] (vision_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/vision_control/share/ament_index/resource_index/parent_prefix_path/vision_control\n'}
+[32.792953] (vision_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/vision_control/share/vision_control/environment/ament_prefix_path.sh\n'}
+[32.793054] (vision_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/vision_control/share/vision_control/environment/ament_prefix_path.dsv\n'}
+[32.793207] (vision_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/vision_control/share/vision_control/environment/path.sh\n'}
+[32.793324] (vision_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/vision_control/share/vision_control/environment/path.dsv\n'}
+[32.793427] (vision_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/vision_control/share/vision_control/local_setup.bash\n'}
+[32.793493] (vision_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/vision_control/share/vision_control/local_setup.sh\n'}
+[32.793562] (vision_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/vision_control/share/vision_control/local_setup.zsh\n'}
+[32.793622] (vision_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/vision_control/share/vision_control/local_setup.dsv\n'}
+[32.793683] (vision_control) StdoutLine: {'line': b'-- Installing: /home/mario/master_ws/install/vision_control/share/vision_control/package.dsv\n'}
+[32.793749] (vision_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/vision_control/share/ament_index/resource_index/packages/vision_control\n'}
+[32.793810] (vision_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/vision_control/share/vision_control/cmake/vision_controlConfig.cmake\n'}
+[32.793875] (vision_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/vision_control/share/vision_control/cmake/vision_controlConfig-version.cmake\n'}
+[32.793940] (vision_control) StdoutLine: {'line': b'-- Up-to-date: /home/mario/master_ws/install/vision_control/share/vision_control/package.xml\n'}
+[32.795432] (vision_control) CommandEnded: {'returncode': 0}
+[32.802085] (-) TimerEvent: {}
+[32.820931] (vision_control) JobEnded: {'identifier': 'vision_control', 'rc': 0}
+[32.822246] (-) EventReactorShutdown: {}

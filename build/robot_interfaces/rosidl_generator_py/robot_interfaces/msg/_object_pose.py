@@ -71,9 +71,10 @@ class ObjectPose(metaclass=Metaclass_ObjectPose):
         '_axis_pt_x',
         '_axis_pt_y',
         '_axis_pt_z',
-        '_axis2_x',
-        '_axis2_y',
-        '_axis2_z',
+        '_q_x',
+        '_q_y',
+        '_q_z',
+        '_q_w',
         '_radius',
         '_length',
         '_mid_x',
@@ -90,9 +91,10 @@ class ObjectPose(metaclass=Metaclass_ObjectPose):
         'axis_pt_x': 'double',
         'axis_pt_y': 'double',
         'axis_pt_z': 'double',
-        'axis2_x': 'double',
-        'axis2_y': 'double',
-        'axis2_z': 'double',
+        'q_x': 'double',
+        'q_y': 'double',
+        'q_z': 'double',
+        'q_w': 'double',
         'radius': 'double',
         'length': 'double',
         'mid_x': 'double',
@@ -104,6 +106,7 @@ class ObjectPose(metaclass=Metaclass_ObjectPose):
     # related to the data type of each of the components the message.
     SLOT_TYPES = (
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
@@ -136,9 +139,10 @@ class ObjectPose(metaclass=Metaclass_ObjectPose):
         self.axis_pt_x = kwargs.get('axis_pt_x', float())
         self.axis_pt_y = kwargs.get('axis_pt_y', float())
         self.axis_pt_z = kwargs.get('axis_pt_z', float())
-        self.axis2_x = kwargs.get('axis2_x', float())
-        self.axis2_y = kwargs.get('axis2_y', float())
-        self.axis2_z = kwargs.get('axis2_z', float())
+        self.q_x = kwargs.get('q_x', float())
+        self.q_y = kwargs.get('q_y', float())
+        self.q_z = kwargs.get('q_z', float())
+        self.q_w = kwargs.get('q_w', float())
         self.radius = kwargs.get('radius', float())
         self.length = kwargs.get('length', float())
         self.mid_x = kwargs.get('mid_x', float())
@@ -189,11 +193,13 @@ class ObjectPose(metaclass=Metaclass_ObjectPose):
             return False
         if self.axis_pt_z != other.axis_pt_z:
             return False
-        if self.axis2_x != other.axis2_x:
+        if self.q_x != other.q_x:
             return False
-        if self.axis2_y != other.axis2_y:
+        if self.q_y != other.q_y:
             return False
-        if self.axis2_z != other.axis2_z:
+        if self.q_z != other.q_z:
+            return False
+        if self.q_w != other.q_w:
             return False
         if self.radius != other.radius:
             return False
@@ -316,49 +322,64 @@ class ObjectPose(metaclass=Metaclass_ObjectPose):
         self._axis_pt_z = value
 
     @builtins.property
-    def axis2_x(self):
-        """Message field 'axis2_x'."""
-        return self._axis2_x
+    def q_x(self):
+        """Message field 'q_x'."""
+        return self._q_x
 
-    @axis2_x.setter
-    def axis2_x(self, value):
+    @q_x.setter
+    def q_x(self, value):
         if self._check_fields:
             assert \
                 isinstance(value, float), \
-                "The 'axis2_x' field must be of type 'float'"
+                "The 'q_x' field must be of type 'float'"
             assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
-                "The 'axis2_x' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
-        self._axis2_x = value
+                "The 'q_x' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
+        self._q_x = value
 
     @builtins.property
-    def axis2_y(self):
-        """Message field 'axis2_y'."""
-        return self._axis2_y
+    def q_y(self):
+        """Message field 'q_y'."""
+        return self._q_y
 
-    @axis2_y.setter
-    def axis2_y(self, value):
+    @q_y.setter
+    def q_y(self, value):
         if self._check_fields:
             assert \
                 isinstance(value, float), \
-                "The 'axis2_y' field must be of type 'float'"
+                "The 'q_y' field must be of type 'float'"
             assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
-                "The 'axis2_y' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
-        self._axis2_y = value
+                "The 'q_y' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
+        self._q_y = value
 
     @builtins.property
-    def axis2_z(self):
-        """Message field 'axis2_z'."""
-        return self._axis2_z
+    def q_z(self):
+        """Message field 'q_z'."""
+        return self._q_z
 
-    @axis2_z.setter
-    def axis2_z(self, value):
+    @q_z.setter
+    def q_z(self, value):
         if self._check_fields:
             assert \
                 isinstance(value, float), \
-                "The 'axis2_z' field must be of type 'float'"
+                "The 'q_z' field must be of type 'float'"
             assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
-                "The 'axis2_z' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
-        self._axis2_z = value
+                "The 'q_z' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
+        self._q_z = value
+
+    @builtins.property
+    def q_w(self):
+        """Message field 'q_w'."""
+        return self._q_w
+
+    @q_w.setter
+    def q_w(self, value):
+        if self._check_fields:
+            assert \
+                isinstance(value, float), \
+                "The 'q_w' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'q_w' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
+        self._q_w = value
 
     @builtins.property
     def radius(self):

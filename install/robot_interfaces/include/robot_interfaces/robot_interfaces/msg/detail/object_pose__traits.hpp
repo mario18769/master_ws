@@ -77,24 +77,31 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
-  // member: axis2_x
+  // member: q_x
   {
-    out << "axis2_x: ";
-    rosidl_generator_traits::value_to_yaml(msg.axis2_x, out);
+    out << "q_x: ";
+    rosidl_generator_traits::value_to_yaml(msg.q_x, out);
     out << ", ";
   }
 
-  // member: axis2_y
+  // member: q_y
   {
-    out << "axis2_y: ";
-    rosidl_generator_traits::value_to_yaml(msg.axis2_y, out);
+    out << "q_y: ";
+    rosidl_generator_traits::value_to_yaml(msg.q_y, out);
     out << ", ";
   }
 
-  // member: axis2_z
+  // member: q_z
   {
-    out << "axis2_z: ";
-    rosidl_generator_traits::value_to_yaml(msg.axis2_z, out);
+    out << "q_z: ";
+    rosidl_generator_traits::value_to_yaml(msg.q_z, out);
+    out << ", ";
+  }
+
+  // member: q_w
+  {
+    out << "q_w: ";
+    rosidl_generator_traits::value_to_yaml(msg.q_w, out);
     out << ", ";
   }
 
@@ -208,33 +215,43 @@ inline void to_block_style_yaml(
     out << "\n";
   }
 
-  // member: axis2_x
+  // member: q_x
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "axis2_x: ";
-    rosidl_generator_traits::value_to_yaml(msg.axis2_x, out);
+    out << "q_x: ";
+    rosidl_generator_traits::value_to_yaml(msg.q_x, out);
     out << "\n";
   }
 
-  // member: axis2_y
+  // member: q_y
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "axis2_y: ";
-    rosidl_generator_traits::value_to_yaml(msg.axis2_y, out);
+    out << "q_y: ";
+    rosidl_generator_traits::value_to_yaml(msg.q_y, out);
     out << "\n";
   }
 
-  // member: axis2_z
+  // member: q_z
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "axis2_z: ";
-    rosidl_generator_traits::value_to_yaml(msg.axis2_z, out);
+    out << "q_z: ";
+    rosidl_generator_traits::value_to_yaml(msg.q_z, out);
+    out << "\n";
+  }
+
+  // member: q_w
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "q_w: ";
+    rosidl_generator_traits::value_to_yaml(msg.q_w, out);
     out << "\n";
   }
 

@@ -33,9 +33,10 @@ typedef struct robot_interfaces__msg__ObjectPose
   double axis_pt_x;
   double axis_pt_y;
   double axis_pt_z;
-  double axis2_x;
-  double axis2_y;
-  double axis2_z;
+  double q_x;
+  double q_y;
+  double q_z;
+  double q_w;
   double radius;
   double length;
   double mid_x;

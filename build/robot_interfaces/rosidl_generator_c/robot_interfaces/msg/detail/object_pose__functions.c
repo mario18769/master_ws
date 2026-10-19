@@ -32,9 +32,10 @@ robot_interfaces__msg__ObjectPose__init(robot_interfaces__msg__ObjectPose * msg)
   // axis_pt_x
   // axis_pt_y
   // axis_pt_z
-  // axis2_x
-  // axis2_y
-  // axis2_z
+  // q_x
+  // q_y
+  // q_z
+  // q_w
   // radius
   // length
   // mid_x
@@ -57,9 +58,10 @@ robot_interfaces__msg__ObjectPose__fini(robot_interfaces__msg__ObjectPose * msg)
   // axis_pt_x
   // axis_pt_y
   // axis_pt_z
-  // axis2_x
-  // axis2_y
-  // axis2_z
+  // q_x
+  // q_y
+  // q_z
+  // q_w
   // radius
   // length
   // mid_x
@@ -103,16 +105,20 @@ robot_interfaces__msg__ObjectPose__are_equal(const robot_interfaces__msg__Object
   if (lhs->axis_pt_z != rhs->axis_pt_z) {
     return false;
   }
-  // axis2_x
-  if (lhs->axis2_x != rhs->axis2_x) {
+  // q_x
+  if (lhs->q_x != rhs->q_x) {
     return false;
   }
-  // axis2_y
-  if (lhs->axis2_y != rhs->axis2_y) {
+  // q_y
+  if (lhs->q_y != rhs->q_y) {
     return false;
   }
-  // axis2_z
-  if (lhs->axis2_z != rhs->axis2_z) {
+  // q_z
+  if (lhs->q_z != rhs->q_z) {
+    return false;
+  }
+  // q_w
+  if (lhs->q_w != rhs->q_w) {
     return false;
   }
   // radius
@@ -164,12 +170,14 @@ robot_interfaces__msg__ObjectPose__copy(
   output->axis_pt_y = input->axis_pt_y;
   // axis_pt_z
   output->axis_pt_z = input->axis_pt_z;
-  // axis2_x
-  output->axis2_x = input->axis2_x;
-  // axis2_y
-  output->axis2_y = input->axis2_y;
-  // axis2_z
-  output->axis2_z = input->axis2_z;
+  // q_x
+  output->q_x = input->q_x;
+  // q_y
+  output->q_y = input->q_y;
+  // q_z
+  output->q_z = input->q_z;
+  // q_w
+  output->q_w = input->q_w;
   // radius
   output->radius = input->radius;
   // length

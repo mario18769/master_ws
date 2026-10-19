@@ -2237,10 +2237,42 @@ CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o: \
  /usr/include/pcl-1.14/pcl/sample_consensus/sac_model_sphere.h \
  /usr/include/pcl-1.14/pcl/sample_consensus/sac_model_cylinder.h \
  /usr/include/pcl-1.14/pcl/segmentation/extract_clusters.h \
+ /usr/include/pcl-1.14/pcl/visualization/range_image_visualizer.h \
+ /usr/include/pcl-1.14/pcl/visualization/image_viewer.h \
+ /usr/include/pcl-1.14/pcl/visualization/vtk/pcl_image_canvas_source_2d.h \
+ /usr/include/vtk-9.1/vtkImageCanvasSource2D.h \
+ /usr/include/vtk-9.1/vtkImageAlgorithm.h \
+ /usr/include/vtk-9.1/vtkImagingSourcesModule.h \
+ /usr/include/pcl-1.14/pcl/visualization/vtk/pcl_context_item.h \
+ /usr/include/vtk-9.1/vtkContextItem.h \
+ /usr/include/vtk-9.1/vtkAbstractContextItem.h \
+ /usr/include/vtk-9.1/vtkRenderingContext2DModule.h \
+ /usr/include/pcl-1.14/pcl/geometry/planar_polygon.h \
+ /usr/include/boost/shared_array.hpp \
+ /usr/include/boost/smart_ptr/shared_array.hpp \
+ /usr/include/vtk-9.1/vtkInteractorStyleImage.h \
+ /usr/include/pcl-1.14/pcl/visualization/impl/image_viewer.hpp \
+ /usr/include/vtk-9.1/vtkContextActor.h \
+ /usr/include/vtk-9.1/vtkContextScene.h /usr/include/vtk-9.1/vtkVector.h \
+ /usr/include/vtk-9.1/vtkTuple.h /usr/include/vtk-9.1/vtkWeakPointer.h \
+ /usr/include/vtk-9.1/vtkImageData.h /usr/include/vtk-9.1/vtkImageFlip.h \
+ /usr/include/vtk-9.1/vtkImageReslice.h \
+ /usr/include/vtk-9.1/vtkImagingCoreModule.h \
+ /usr/include/vtk-9.1/vtkThreadedImageAlgorithm.h \
+ /usr/include/vtk-9.1/vtkThreads.h /usr/include/vtk-9.1/vtkImageViewer.h \
+ /usr/include/vtk-9.1/vtkInteractionImageModule.h \
+ /usr/include/vtk-9.1/vtkImageMapper.h /usr/include/vtk-9.1/vtkMapper2D.h \
+ /usr/include/vtk-9.1/vtkRenderWindow.h \
+ /usr/include/pcl-1.14/pcl/common/intersections.h \
+ /usr/include/pcl-1.14/pcl/common/common.h \
+ /usr/include/pcl-1.14/pcl/common/impl/common.hpp \
+ /usr/include/pcl-1.14/pcl/common/impl/intersections.hpp \
  /home/mario/master_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/object_pose.hpp \
  /home/mario/master_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/object_pose__struct.hpp \
  /home/mario/master_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/object_pose__builder.hpp \
  /home/mario/master_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/object_pose__traits.hpp \
  /home/mario/master_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/object_pose__type_support.hpp \
  /home/mario/master_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp \
- /usr/include/pcl-1.14/pcl/features/moment_of_inertia_estimation.h
+ /usr/include/pcl-1.14/pcl/features/moment_of_inertia_estimation.h \
+ /usr/include/pcl-1.14/pcl/features/range_image_border_extractor.h \
+ /usr/include/pcl-1.14/pcl/features/impl/range_image_border_extractor.hpp

@@ -122,31 +122,40 @@ bool robot_interfaces__msg__object_pose__convert_from_py(PyObject * _pymsg, void
     ros_message->axis_pt_z = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
-  {  // axis2_x
-    PyObject * field = PyObject_GetAttrString(_pymsg, "axis2_x");
+  {  // q_x
+    PyObject * field = PyObject_GetAttrString(_pymsg, "q_x");
     if (!field) {
       return false;
     }
     assert(PyFloat_Check(field));
-    ros_message->axis2_x = PyFloat_AS_DOUBLE(field);
+    ros_message->q_x = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
-  {  // axis2_y
-    PyObject * field = PyObject_GetAttrString(_pymsg, "axis2_y");
+  {  // q_y
+    PyObject * field = PyObject_GetAttrString(_pymsg, "q_y");
     if (!field) {
       return false;
     }
     assert(PyFloat_Check(field));
-    ros_message->axis2_y = PyFloat_AS_DOUBLE(field);
+    ros_message->q_y = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
-  {  // axis2_z
-    PyObject * field = PyObject_GetAttrString(_pymsg, "axis2_z");
+  {  // q_z
+    PyObject * field = PyObject_GetAttrString(_pymsg, "q_z");
     if (!field) {
       return false;
     }
     assert(PyFloat_Check(field));
-    ros_message->axis2_z = PyFloat_AS_DOUBLE(field);
+    ros_message->q_z = PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
+  {  // q_w
+    PyObject * field = PyObject_GetAttrString(_pymsg, "q_w");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->q_w = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
   {  // radius
@@ -299,33 +308,44 @@ PyObject * robot_interfaces__msg__object_pose__convert_to_py(void * raw_ros_mess
       }
     }
   }
-  {  // axis2_x
+  {  // q_x
     PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->axis2_x);
+    field = PyFloat_FromDouble(ros_message->q_x);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "axis2_x", field);
+      int rc = PyObject_SetAttrString(_pymessage, "q_x", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
       }
     }
   }
-  {  // axis2_y
+  {  // q_y
     PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->axis2_y);
+    field = PyFloat_FromDouble(ros_message->q_y);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "axis2_y", field);
+      int rc = PyObject_SetAttrString(_pymessage, "q_y", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
       }
     }
   }
-  {  // axis2_z
+  {  // q_z
     PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->axis2_z);
+    field = PyFloat_FromDouble(ros_message->q_z);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "axis2_z", field);
+      int rc = PyObject_SetAttrString(_pymessage, "q_z", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // q_w
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->q_w);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "q_w", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

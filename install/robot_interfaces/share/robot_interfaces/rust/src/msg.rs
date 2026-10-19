@@ -49,17 +49,22 @@ pub struct ObjectPose {
 
     // This member is not documented.
     #[allow(missing_docs)]
-    pub axis2_x: f64,
+    pub q_x: f64,
 
 
     // This member is not documented.
     #[allow(missing_docs)]
-    pub axis2_y: f64,
+    pub q_y: f64,
 
 
     // This member is not documented.
     #[allow(missing_docs)]
-    pub axis2_z: f64,
+    pub q_z: f64,
+
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub q_w: f64,
 
 
     // This member is not documented.
@@ -109,9 +114,10 @@ impl rosidl_runtime_rs::Message for ObjectPose {
         axis_pt_x: msg.axis_pt_x,
         axis_pt_y: msg.axis_pt_y,
         axis_pt_z: msg.axis_pt_z,
-        axis2_x: msg.axis2_x,
-        axis2_y: msg.axis2_y,
-        axis2_z: msg.axis2_z,
+        q_x: msg.q_x,
+        q_y: msg.q_y,
+        q_z: msg.q_z,
+        q_w: msg.q_w,
         radius: msg.radius,
         length: msg.length,
         mid_x: msg.mid_x,
@@ -126,9 +132,10 @@ impl rosidl_runtime_rs::Message for ObjectPose {
       axis_pt_x: msg.axis_pt_x,
       axis_pt_y: msg.axis_pt_y,
       axis_pt_z: msg.axis_pt_z,
-      axis2_x: msg.axis2_x,
-      axis2_y: msg.axis2_y,
-      axis2_z: msg.axis2_z,
+      q_x: msg.q_x,
+      q_y: msg.q_y,
+      q_z: msg.q_z,
+      q_w: msg.q_w,
       radius: msg.radius,
       length: msg.length,
       mid_x: msg.mid_x,
@@ -147,9 +154,10 @@ impl rosidl_runtime_rs::Message for ObjectPose {
       axis_pt_x: msg.axis_pt_x,
       axis_pt_y: msg.axis_pt_y,
       axis_pt_z: msg.axis_pt_z,
-      axis2_x: msg.axis2_x,
-      axis2_y: msg.axis2_y,
-      axis2_z: msg.axis2_z,
+      q_x: msg.q_x,
+      q_y: msg.q_y,
+      q_z: msg.q_z,
+      q_w: msg.q_w,
       radius: msg.radius,
       length: msg.length,
       mid_x: msg.mid_x,

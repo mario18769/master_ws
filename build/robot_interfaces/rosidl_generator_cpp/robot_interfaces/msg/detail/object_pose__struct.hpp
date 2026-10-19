@@ -49,9 +49,10 @@ struct ObjectPose_
       this->axis_pt_x = 0.0;
       this->axis_pt_y = 0.0;
       this->axis_pt_z = 0.0;
-      this->axis2_x = 0.0;
-      this->axis2_y = 0.0;
-      this->axis2_z = 0.0;
+      this->q_x = 0.0;
+      this->q_y = 0.0;
+      this->q_z = 0.0;
+      this->q_w = 0.0;
       this->radius = 0.0;
       this->length = 0.0;
       this->mid_x = 0.0;
@@ -73,9 +74,10 @@ struct ObjectPose_
       this->axis_pt_x = 0.0;
       this->axis_pt_y = 0.0;
       this->axis_pt_z = 0.0;
-      this->axis2_x = 0.0;
-      this->axis2_y = 0.0;
-      this->axis2_z = 0.0;
+      this->q_x = 0.0;
+      this->q_y = 0.0;
+      this->q_z = 0.0;
+      this->q_w = 0.0;
       this->radius = 0.0;
       this->length = 0.0;
       this->mid_x = 0.0;
@@ -106,15 +108,18 @@ struct ObjectPose_
   using _axis_pt_z_type =
     double;
   _axis_pt_z_type axis_pt_z;
-  using _axis2_x_type =
+  using _q_x_type =
     double;
-  _axis2_x_type axis2_x;
-  using _axis2_y_type =
+  _q_x_type q_x;
+  using _q_y_type =
     double;
-  _axis2_y_type axis2_y;
-  using _axis2_z_type =
+  _q_y_type q_y;
+  using _q_z_type =
     double;
-  _axis2_z_type axis2_z;
+  _q_z_type q_z;
+  using _q_w_type =
+    double;
+  _q_w_type q_w;
   using _radius_type =
     double;
   _radius_type radius;
@@ -174,22 +179,28 @@ struct ObjectPose_
     this->axis_pt_z = _arg;
     return *this;
   }
-  Type & set__axis2_x(
+  Type & set__q_x(
     const double & _arg)
   {
-    this->axis2_x = _arg;
+    this->q_x = _arg;
     return *this;
   }
-  Type & set__axis2_y(
+  Type & set__q_y(
     const double & _arg)
   {
-    this->axis2_y = _arg;
+    this->q_y = _arg;
     return *this;
   }
-  Type & set__axis2_z(
+  Type & set__q_z(
     const double & _arg)
   {
-    this->axis2_z = _arg;
+    this->q_z = _arg;
+    return *this;
+  }
+  Type & set__q_w(
+    const double & _arg)
+  {
+    this->q_w = _arg;
     return *this;
   }
   Type & set__radius(
@@ -286,13 +297,16 @@ struct ObjectPose_
     if (this->axis_pt_z != other.axis_pt_z) {
       return false;
     }
-    if (this->axis2_x != other.axis2_x) {
+    if (this->q_x != other.q_x) {
       return false;
     }
-    if (this->axis2_y != other.axis2_y) {
+    if (this->q_y != other.q_y) {
       return false;
     }
-    if (this->axis2_z != other.axis2_z) {
+    if (this->q_z != other.q_z) {
+      return false;
+    }
+    if (this->q_w != other.q_w) {
       return false;
     }
     if (this->radius != other.radius) {

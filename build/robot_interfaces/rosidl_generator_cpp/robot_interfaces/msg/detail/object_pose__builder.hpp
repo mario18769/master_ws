@@ -104,15 +104,15 @@ private:
   ::robot_interfaces::msg::ObjectPose msg_;
 };
 
-class Init_ObjectPose_axis2_z
+class Init_ObjectPose_q_w
 {
 public:
-  explicit Init_ObjectPose_axis2_z(::robot_interfaces::msg::ObjectPose & msg)
+  explicit Init_ObjectPose_q_w(::robot_interfaces::msg::ObjectPose & msg)
   : msg_(msg)
   {}
-  Init_ObjectPose_radius axis2_z(::robot_interfaces::msg::ObjectPose::_axis2_z_type arg)
+  Init_ObjectPose_radius q_w(::robot_interfaces::msg::ObjectPose::_q_w_type arg)
   {
-    msg_.axis2_z = std::move(arg);
+    msg_.q_w = std::move(arg);
     return Init_ObjectPose_radius(msg_);
   }
 
@@ -120,32 +120,48 @@ private:
   ::robot_interfaces::msg::ObjectPose msg_;
 };
 
-class Init_ObjectPose_axis2_y
+class Init_ObjectPose_q_z
 {
 public:
-  explicit Init_ObjectPose_axis2_y(::robot_interfaces::msg::ObjectPose & msg)
+  explicit Init_ObjectPose_q_z(::robot_interfaces::msg::ObjectPose & msg)
   : msg_(msg)
   {}
-  Init_ObjectPose_axis2_z axis2_y(::robot_interfaces::msg::ObjectPose::_axis2_y_type arg)
+  Init_ObjectPose_q_w q_z(::robot_interfaces::msg::ObjectPose::_q_z_type arg)
   {
-    msg_.axis2_y = std::move(arg);
-    return Init_ObjectPose_axis2_z(msg_);
+    msg_.q_z = std::move(arg);
+    return Init_ObjectPose_q_w(msg_);
   }
 
 private:
   ::robot_interfaces::msg::ObjectPose msg_;
 };
 
-class Init_ObjectPose_axis2_x
+class Init_ObjectPose_q_y
 {
 public:
-  explicit Init_ObjectPose_axis2_x(::robot_interfaces::msg::ObjectPose & msg)
+  explicit Init_ObjectPose_q_y(::robot_interfaces::msg::ObjectPose & msg)
   : msg_(msg)
   {}
-  Init_ObjectPose_axis2_y axis2_x(::robot_interfaces::msg::ObjectPose::_axis2_x_type arg)
+  Init_ObjectPose_q_z q_y(::robot_interfaces::msg::ObjectPose::_q_y_type arg)
   {
-    msg_.axis2_x = std::move(arg);
-    return Init_ObjectPose_axis2_y(msg_);
+    msg_.q_y = std::move(arg);
+    return Init_ObjectPose_q_z(msg_);
+  }
+
+private:
+  ::robot_interfaces::msg::ObjectPose msg_;
+};
+
+class Init_ObjectPose_q_x
+{
+public:
+  explicit Init_ObjectPose_q_x(::robot_interfaces::msg::ObjectPose & msg)
+  : msg_(msg)
+  {}
+  Init_ObjectPose_q_y q_x(::robot_interfaces::msg::ObjectPose::_q_x_type arg)
+  {
+    msg_.q_x = std::move(arg);
+    return Init_ObjectPose_q_y(msg_);
   }
 
 private:
@@ -158,10 +174,10 @@ public:
   explicit Init_ObjectPose_axis_pt_z(::robot_interfaces::msg::ObjectPose & msg)
   : msg_(msg)
   {}
-  Init_ObjectPose_axis2_x axis_pt_z(::robot_interfaces::msg::ObjectPose::_axis_pt_z_type arg)
+  Init_ObjectPose_q_x axis_pt_z(::robot_interfaces::msg::ObjectPose::_axis_pt_z_type arg)
   {
     msg_.axis_pt_z = std::move(arg);
-    return Init_ObjectPose_axis2_x(msg_);
+    return Init_ObjectPose_q_x(msg_);
   }
 
 private:

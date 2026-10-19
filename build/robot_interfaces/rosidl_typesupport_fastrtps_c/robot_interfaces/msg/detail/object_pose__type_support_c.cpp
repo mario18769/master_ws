@@ -94,19 +94,24 @@ bool cdr_serialize_robot_interfaces__msg__ObjectPose(
     cdr << ros_message->axis_pt_z;
   }
 
-  // Field name: axis2_x
+  // Field name: q_x
   {
-    cdr << ros_message->axis2_x;
+    cdr << ros_message->q_x;
   }
 
-  // Field name: axis2_y
+  // Field name: q_y
   {
-    cdr << ros_message->axis2_y;
+    cdr << ros_message->q_y;
   }
 
-  // Field name: axis2_z
+  // Field name: q_z
   {
-    cdr << ros_message->axis2_z;
+    cdr << ros_message->q_z;
+  }
+
+  // Field name: q_w
+  {
+    cdr << ros_message->q_w;
   }
 
   // Field name: radius
@@ -188,19 +193,24 @@ bool cdr_deserialize_robot_interfaces__msg__ObjectPose(
     cdr >> ros_message->axis_pt_z;
   }
 
-  // Field name: axis2_x
+  // Field name: q_x
   {
-    cdr >> ros_message->axis2_x;
+    cdr >> ros_message->q_x;
   }
 
-  // Field name: axis2_y
+  // Field name: q_y
   {
-    cdr >> ros_message->axis2_y;
+    cdr >> ros_message->q_y;
   }
 
-  // Field name: axis2_z
+  // Field name: q_z
   {
-    cdr >> ros_message->axis2_z;
+    cdr >> ros_message->q_z;
+  }
+
+  // Field name: q_w
+  {
+    cdr >> ros_message->q_w;
   }
 
   // Field name: radius
@@ -293,23 +303,30 @@ size_t get_serialized_size_robot_interfaces__msg__ObjectPose(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: axis2_x
+  // Field name: q_x
   {
-    size_t item_size = sizeof(ros_message->axis2_x);
+    size_t item_size = sizeof(ros_message->q_x);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: axis2_y
+  // Field name: q_y
   {
-    size_t item_size = sizeof(ros_message->axis2_y);
+    size_t item_size = sizeof(ros_message->q_y);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: axis2_z
+  // Field name: q_z
   {
-    size_t item_size = sizeof(ros_message->axis2_z);
+    size_t item_size = sizeof(ros_message->q_z);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: q_w
+  {
+    size_t item_size = sizeof(ros_message->q_w);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -431,7 +448,7 @@ size_t max_serialized_size_robot_interfaces__msg__ObjectPose(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
-  // Field name: axis2_x
+  // Field name: q_x
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint64_t);
@@ -439,7 +456,7 @@ size_t max_serialized_size_robot_interfaces__msg__ObjectPose(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
-  // Field name: axis2_y
+  // Field name: q_y
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint64_t);
@@ -447,7 +464,15 @@ size_t max_serialized_size_robot_interfaces__msg__ObjectPose(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
-  // Field name: axis2_z
+  // Field name: q_z
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
+  // Field name: q_w
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint64_t);
@@ -560,19 +585,24 @@ bool cdr_serialize_key_robot_interfaces__msg__ObjectPose(
     cdr << ros_message->axis_pt_z;
   }
 
-  // Field name: axis2_x
+  // Field name: q_x
   {
-    cdr << ros_message->axis2_x;
+    cdr << ros_message->q_x;
   }
 
-  // Field name: axis2_y
+  // Field name: q_y
   {
-    cdr << ros_message->axis2_y;
+    cdr << ros_message->q_y;
   }
 
-  // Field name: axis2_z
+  // Field name: q_z
   {
-    cdr << ros_message->axis2_z;
+    cdr << ros_message->q_z;
+  }
+
+  // Field name: q_w
+  {
+    cdr << ros_message->q_w;
   }
 
   // Field name: radius
@@ -665,23 +695,30 @@ size_t get_serialized_size_key_robot_interfaces__msg__ObjectPose(
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: axis2_x
+  // Field name: q_x
   {
-    size_t item_size = sizeof(ros_message->axis2_x);
+    size_t item_size = sizeof(ros_message->q_x);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: axis2_y
+  // Field name: q_y
   {
-    size_t item_size = sizeof(ros_message->axis2_y);
+    size_t item_size = sizeof(ros_message->q_y);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
-  // Field name: axis2_z
+  // Field name: q_z
   {
-    size_t item_size = sizeof(ros_message->axis2_z);
+    size_t item_size = sizeof(ros_message->q_z);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: q_w
+  {
+    size_t item_size = sizeof(ros_message->q_w);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -801,7 +838,7 @@ size_t max_serialized_size_key_robot_interfaces__msg__ObjectPose(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
-  // Field name: axis2_x
+  // Field name: q_x
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint64_t);
@@ -809,7 +846,7 @@ size_t max_serialized_size_key_robot_interfaces__msg__ObjectPose(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
-  // Field name: axis2_y
+  // Field name: q_y
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint64_t);
@@ -817,7 +854,15 @@ size_t max_serialized_size_key_robot_interfaces__msg__ObjectPose(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
-  // Field name: axis2_z
+  // Field name: q_z
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
+  // Field name: q_w
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint64_t);

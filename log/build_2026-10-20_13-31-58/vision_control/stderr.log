@@ -1,0 +1,43 @@
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kvoid PointCloudProcessor::[01;32m[Kgenerate_cylinder_master[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:123:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcurrent_height[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  123 |       float [01;35m[Kcurrent_height[m[K = j * spacing_z;
+      |             [01;35m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kstd::vector<std::shared_ptr<pcl::PointCloud<pcl::PointNormal> > > PointCloudProcessor::[01;32m[KclusterPointCloud[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:254:14:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kr[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+  254 |       double [01;35m[Kr[m[K = 0.0, g = 0.0, b = 0.0;
+      |              [01;35m[K^[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:254:23:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kg[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+  254 |       double r = 0.0, [01;35m[Kg[m[K = 0.0, b = 0.0;
+      |                       [01;35m[K^[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:254:32:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kb[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+  254 |       double r = 0.0, g = 0.0, [01;35m[Kb[m[K = 0.0;
+      |                                [01;35m[K^[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kvoid PointCloudProcessor::[01;32m[KprocessPointCloud[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:298:19:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Ktransform_rotation[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+  298 |   Eigen::Matrix3f [01;35m[Ktransform_rotation[m[K = transform_3.rotation();
+      |                   [01;35m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:299:19:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Ktransform_translation[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+  299 |   Eigen::Vector3f [01;35m[Ktransform_translation[m[K = transform_3.translation();
+      |                   [01;35m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kstd::vector<float> PointCloudProcessor::[01;32m[KcalculateCylinderEnd[m[K(std::shared_ptr<pcl::PointCloud<pcl::PointNormal> >, Eigen::Vector3f, Eigen::Vector3f)[m[K’:
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:877:23:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kplane_new[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+  877 |       Eigen::Vector4f [01;35m[Kplane_new[m[K = {zylaxis[0],zylaxis[1],zylaxis[2],d};
+      |                       [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:836:143:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kzylaxispoint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  836 | sor::calculateCylinderEnd(std::shared_ptr<PointCloudN> cyl_cloud, Eigen::Vector3f zylaxis, [01;35m[KEigen::Vector3f zylaxispoint[m[K){
+      |                                                                                            [01;35m[K~~~~~~~~~~~~~~~~^~~~~~~~~~~~[m[K
+
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kvoid PointCloudProcessor::[01;32m[KedgeDetection[m[K(std::shared_ptr<pcl::PointCloud<pcl::PointNormal> >)[m[K’:
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:924:19:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Ktransform_rotation[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+  924 |   Eigen::Matrix3f [01;35m[Ktransform_rotation[m[K = scene_sensor_pose.rotation();
+      |                   [01;35m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:925:19:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Ktransform_translation[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+  925 |   Eigen::Vector3f [01;35m[Ktransform_translation[m[K = scene_sensor_pose.translation();
+      |                   [01;35m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:929:8:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KsetUnseenToMaxRange[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  929 |   bool [01;35m[KsetUnseenToMaxRange[m[K = false;
+      |        [01;35m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kstd::vector<float> PointCloudProcessor::[01;32m[KcalculateCubeCenter[m[K(std::vector<Eigen::Matrix<float, 4, 1> >, std::shared_ptr<pcl::PointCloud<pcl::PointNormal> >)[m[K’:
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:1155:8:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kintersects_plane_plane[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+ 1155 |   bool [01;35m[Kintersects_plane_plane[m[K = pcl::threePlanesIntersection(cube_planes_double[0],cube_planes_double[1],cube_planes_double[2],eckpunkt,0.002);
+      |        [01;35m[K^~~~~~~~~~~~~~~~~~~~~~[m[K

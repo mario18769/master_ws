@@ -36,7 +36,6 @@ private:
   rclcpp::Node::SharedPtr node_;
 };
 
-
 rclcpp::node_interfaces::NodeBaseInterface::SharedPtr MTCTaskNode::getNodeBaseInterface() //Getter Funktion um Node-Base Interface in node_ zu bekommen
 {
   return node_->get_node_base_interface();
@@ -66,8 +65,6 @@ void MTCTaskNode::setupPlanningScene()
 
 void MTCTaskNode::doTask()
 {
-
-
   try
   {
     task_ = createTask();
@@ -108,7 +105,6 @@ void MTCTaskNode::doTask()
   return;
 }
 
-
 mtc::Task MTCTaskNode::createTask(){
 
     RCLCPP_ERROR_STREAM(LOGGER, "CREATE TASK STARTED");
@@ -120,7 +116,6 @@ mtc::Task MTCTaskNode::createTask(){
     const auto& hand_group_name = "hand"; //Name der Gruppe des Handeffektors
     const auto& hand_frame = "estun_hand"; //Link an Endeffectorgruppe als Bezug
     const auto& eef_name = "end_eff"; //Name des Endeffektors
-
 
     // Set task properties
     task.setProperty("group", arm_group_name);
@@ -199,7 +194,7 @@ mtc::Task MTCTaskNode::createTask(){
             stage->properties().set("marker_ns", "grasp_pose");
             stage->setPreGraspPose("open");
             stage->setGraspPose("closed");
-            stage->setObject("Probekoerper");
+            stage->setObject("Cylinder_0");
             stage->setAngleDelta(M_PI / 12); //Winkeldifferenz für Lösungen der Greifposition
             stage->setMonitoredStage(current_state_ptr);  // Hook into current state --> Grasp-Object Pose und Shape werden an IK-Solver weitergereicht
             
@@ -242,7 +237,7 @@ mtc::Task MTCTaskNode::createTask(){
 
         { //Collision zwischen Greifer und Object erlauben durch Modifizierung der Planning-Scene
             auto stage = std::make_unique<mtc::stages::ModifyPlanningScene>("allow collision (hand,object)");
-            stage->allowCollisions("Probekoerper", task.getRobotModel()
+            stage->allowCollisions("Cylinder_0", task.getRobotModel()
                 ->getJointModelGroup(hand_group_name)
                 ->getLinkModelNamesWithCollisionGeometry(), true);
             grasp->insert(std::move(stage));
@@ -254,10 +249,10 @@ mtc::Task MTCTaskNode::createTask(){
             auto stage = std::make_unique<mtc::stages::ModifyPlanningScene>("allow collision (hand,object)");
             std::vector<std::string> allow_collision_list;
               allow_collision_list.push_back("Palettenwagen");
-            // stage->allowCollisions("Probekoerper", task.getRobotModel()
+            // stage->allowCollisions("Cylinder_0", task.getRobotModel()
             //     ->getJointModelGroup(hand_group_name)
             //     ->getLinkModelNamesWithCollisionGeometry(), true);
-            stage->allowCollisions("Probekoerper", allow_collision_list, true);
+            stage->allowCollisions("Cylinder_0", allow_collision_list, true);
             grasp->insert(std::move(stage));
 
              RCLCPP_INFO_STREAM(LOGGER, "Dritte Substage");
@@ -282,7 +277,7 @@ mtc::Task MTCTaskNode::createTask(){
 
         { // Stage für Objekt zum Greifer des Roboters hinzufügen
             auto stage = std::make_unique<mtc::stages::ModifyPlanningScene>("attach object");
-            stage->attachObject("Probekoerper", hand_frame); //eigentlich hand_frame
+            stage->attachObject("Cylinder_0", hand_frame); //eigentlich hand_frame
             attach_object_stage = stage.get();
             grasp->insert(std::move(stage));
 
@@ -335,7 +330,7 @@ mtc::Task MTCTaskNode::createTask(){
             auto stage = std::make_unique<mtc::stages::GeneratePlacePose>("generate place pose");
             stage->properties().configureInitFrom(mtc::Stage::PARENT);
             stage->properties().set("marker_ns", "place_pose");
-            stage->setObject("Probekoerper");
+            stage->setObject("Cylinder_0");
 
             geometry_msgs::msg::PoseStamped target_pose_msg;
             target_pose_msg.header.frame_id = "world";
@@ -376,7 +371,7 @@ mtc::Task MTCTaskNode::createTask(){
 
         { //Kollisionen werden nach Ablegen des Objekts wieder erlaubt
             auto stage = std::make_unique<mtc::stages::ModifyPlanningScene>("forbid collision (hand,object)");
-            stage->allowCollisions("Probekoerper", task.getRobotModel()
+            stage->allowCollisions("Cylinder_0", task.getRobotModel()
                 ->getJointModelGroup(hand_group_name)
                 ->getLinkModelNamesWithCollisionGeometry(), false);
             place->insert(std::move(stage));
@@ -386,7 +381,7 @@ mtc::Task MTCTaskNode::createTask(){
 
         { //Grasp-Objekt wird vom Greifer detached
             auto stage = std::make_unique<mtc::stages::ModifyPlanningScene>("detach object");
-            stage->detachObject("Probekoerper", hand_frame); //eigentlich hand_frame
+            stage->detachObject("Cylinder_0", hand_frame); //eigentlich hand_frame
             place->insert(std::move(stage));
 
             RCLCPP_INFO_STREAM(LOGGER, "Dritte Place-Substage");
@@ -425,7 +420,6 @@ mtc::Task MTCTaskNode::createTask(){
     RCLCPP_INFO_STREAM(LOGGER, "Create Task Successful");
     return task;
 }
-
 
 int main(int argc, char** argv){
 

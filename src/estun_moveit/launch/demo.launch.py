@@ -226,7 +226,7 @@ def generate_launch_description():
     #ld.add_action(load_hand_controller)
     ld.add_action(load_arm_controller)
     ld.add_action(tutorial_node)
-    #ld.add_action(pick_place_demo)
+    ld.add_action(pick_place_demo)
 
 
 

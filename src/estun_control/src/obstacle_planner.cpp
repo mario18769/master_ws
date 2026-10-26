@@ -147,6 +147,8 @@ void ObstaclePlanner::run() {
 
 void ObstaclePlanner::addProbekoerper(robot_interfaces::msg::ObjectPose msg){
 
+    _move_group = new moveit::planning_interface::MoveGroupInterface(_node, "arm");
+
     RCLCPP_INFO(this->get_logger(),"Probekoerper Message empfangen");
     
     if (msg.object_type != "END"){
@@ -216,10 +218,10 @@ void ObstaclePlanner::addProbekoerper(robot_interfaces::msg::ObjectPose msg){
                 cp.position.y = msg_component.mid_y;
                 cp.position.z = msg_component.mid_z;
 
-                std::cout<< "QX: "<< cp.orientation.x << std::endl;
-                std::cout<< "QY: "<< cp.orientation.y << std::endl;
-                std::cout<< "QZ: "<< cp.orientation.z << std::endl;
-                std::cout<< "QW: "<< cp.orientation.w << std::endl;
+                // std::cout<< "QX: "<< cp.orientation.x << std::endl;
+                // std::cout<< "QY: "<< cp.orientation.y << std::endl;
+                // std::cout<< "QZ: "<< cp.orientation.z << std::endl;
+                // std::cout<< "QW: "<< cp.orientation.w << std::endl;
 
                 RCLCPP_INFO(this->get_logger(),"TEST3");
 
@@ -525,8 +527,6 @@ void ObstaclePlanner::obstacle_parser(){
     return;
 
 }
-
-
 
 int main(int argc, char * argv[]) {
 

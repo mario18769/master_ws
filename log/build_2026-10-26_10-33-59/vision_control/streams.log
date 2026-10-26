@@ -1,0 +1,172 @@
+[0.009s] Invoking command in '/home/mario/master_ws/build/vision_control': AMENT_PREFIX_PATH=/home/mario/master_ws/install/robot_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mario/master_ws/install/robot_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/mario/master_ws/install/robot_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/mario/master_ws/install/robot_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/mario/master_ws/src/vision_control -DCMAKE_INSTALL_PREFIX=/home/mario/master_ws/install/vision_control
+[0.060s] -- The C compiler identification is GNU 13.3.0
+[0.113s] -- The CXX compiler identification is GNU 13.3.0
+[0.136s] -- Detecting C compiler ABI info
+[0.224s] -- Detecting C compiler ABI info - done
+[0.238s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.238s] -- Detecting C compile features
+[0.239s] -- Detecting C compile features - done
+[0.249s] -- Detecting CXX compiler ABI info
+[0.348s] -- Detecting CXX compiler ABI info - done
+[0.361s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.361s] -- Detecting CXX compile features
+[0.362s] -- Detecting CXX compile features - done
+[0.368s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.517s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.653s] -- Found rclcpp: 28.1.22 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.717s] -- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.738s] -- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.761s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.785s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.885s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.890s] -- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.990s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[1.020s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[1.050s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.183s] -- Found pcl_ros: 2.6.5 (/opt/ros/jazzy/share/pcl_ros/cmake)
+[1.383s] [33mCMake Warning (dev) at /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindFLANN.cmake:45 (find_package):
+[1.383s]   Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT
+[1.383s]   variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the
+[1.383s]   cmake_policy command to set the policy and suppress this warning.
+[1.384s] 
+[1.384s]   CMake variable FLANN_ROOT is set to:
+[1.384s] 
+[1.384s]     /usr
+[1.384s] 
+[1.384s]   For compatibility, find_package is ignoring the variable, but code in a
+[1.384s]   .cmake module might still use it.
+[1.384s] Call Stack (most recent call first):
+[1.384s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:261 (find_package)
+[1.384s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:306 (find_flann)
+[1.384s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:570 (find_external_library)
+[1.384s]   /opt/ros/jazzy/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[1.384s]   /opt/ros/jazzy/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)
+[1.385s]   /opt/ros/jazzy/share/pcl_ros/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[1.385s]   /opt/ros/jazzy/share/pcl_ros/cmake/pcl_rosConfig.cmake:41 (include)
+[1.385s]   CMakeLists.txt:14 (find_package)
+[1.385s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.385s] [0m
+[1.385s] -- Found flann version 1.9.2
+[1.796s] -- Found OpenMP_CXX: -fopenmp (found version "4.5") 
+[1.797s] -- Found OpenMP: TRUE (found version "4.5") found components: CXX 
+[3.874s] -- Checking for module 'libusb-1.0'
+[3.931s] --   Found libusb-1.0, version 1.0.27
+[4.086s] -- Found libusb: /usr/lib/x86_64-linux-gnu/libusb-1.0.so  
+[4.088s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[4.316s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[4.323s] -- Could NOT find Pcap (missing: PCAP_LIBRARIES PCAP_INCLUDE_DIRS) 
+[4.374s] -- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.3")  
+[4.406s] -- Found PNG: /usr/lib/x86_64-linux-gnu/libpng.so (found version "1.6.43") 
+[5.367s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[5.388s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[6.352s] -- Found Qhull version 8.0.2
+[6.892s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[7.306s] -- Found PCL_COMMON: /usr/lib/x86_64-linux-gnu/libpcl_common.so  
+[7.307s] -- Found PCL_KDTREE: /usr/lib/x86_64-linux-gnu/libpcl_kdtree.so  
+[7.308s] -- Found PCL_OCTREE: /usr/lib/x86_64-linux-gnu/libpcl_octree.so  
+[7.309s] -- Found PCL_SEARCH: /usr/lib/x86_64-linux-gnu/libpcl_search.so  
+[7.310s] -- Found PCL_SAMPLE_CONSENSUS: /usr/lib/x86_64-linux-gnu/libpcl_sample_consensus.so  
+[7.311s] -- Found PCL_FILTERS: /usr/lib/x86_64-linux-gnu/libpcl_filters.so  
+[7.312s] -- Found PCL_2D: /usr/include/pcl-1.14  
+[7.312s] -- Found PCL_GEOMETRY: /usr/include/pcl-1.14  
+[7.313s] -- Found PCL_IO: /usr/lib/x86_64-linux-gnu/libpcl_io.so  
+[7.315s] -- Found PCL_FEATURES: /usr/lib/x86_64-linux-gnu/libpcl_features.so  
+[7.316s] -- Found PCL_ML: /usr/lib/x86_64-linux-gnu/libpcl_ml.so  
+[7.317s] -- Found PCL_SEGMENTATION: /usr/lib/x86_64-linux-gnu/libpcl_segmentation.so  
+[7.318s] -- Found PCL_VISUALIZATION: /usr/lib/x86_64-linux-gnu/libpcl_visualization.so  
+[7.319s] -- Found PCL_SURFACE: /usr/lib/x86_64-linux-gnu/libpcl_surface.so  
+[7.321s] -- Found PCL_REGISTRATION: /usr/lib/x86_64-linux-gnu/libpcl_registration.so  
+[7.322s] -- Found PCL_KEYPOINTS: /usr/lib/x86_64-linux-gnu/libpcl_keypoints.so  
+[7.323s] -- Found PCL_TRACKING: /usr/lib/x86_64-linux-gnu/libpcl_tracking.so  
+[7.324s] -- Found PCL_RECOGNITION: /usr/lib/x86_64-linux-gnu/libpcl_recognition.so  
+[7.326s] -- Found PCL_STEREO: /usr/lib/x86_64-linux-gnu/libpcl_stereo.so  
+[7.327s] -- Found PCL_APPS: /usr/lib/x86_64-linux-gnu/libpcl_apps.so  
+[7.328s] -- Found PCL_IN_HAND_SCANNER: /usr/include/pcl-1.14  
+[7.328s] -- Found PCL_MODELER: /usr/include/pcl-1.14  
+[7.328s] -- Found PCL_POINT_CLOUD_EDITOR: /usr/include/pcl-1.14  
+[7.329s] -- Found PCL_OUTOFCORE: /usr/lib/x86_64-linux-gnu/libpcl_outofcore.so  
+[7.331s] -- Found PCL_PEOPLE: /usr/lib/x86_64-linux-gnu/libpcl_people.so  
+[7.525s] -- Found eigen3_cmake_module: 0.3.1 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)
+[7.527s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[7.527s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[7.531s] -- Found robot_interfaces: 0.0.0 (/home/mario/master_ws/install/robot_interfaces/share/robot_interfaces/cmake)
+[7.546s] -- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[7.651s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[7.651s] -- Configured cppcheck include dirs: 
+[7.651s] -- Configured cppcheck exclude dirs and/or files: 
+[7.652s] -- Added test 'lint_cmake' to check CMake code style
+[7.653s] -- Added test 'uncrustify' to check C / C++ code style
+[7.653s] -- Configured uncrustify additional arguments: 
+[7.654s] -- Added test 'xmllint' to check XML markup files
+[7.656s] -- Configuring done (7.6s)
+[7.718s] -- Generating done (0.0s)
+[7.725s] -- Build files have been written to: /home/mario/master_ws/build/vision_control
+[7.742s] Invoked command in '/home/mario/master_ws/build/vision_control' returned '0': AMENT_PREFIX_PATH=/home/mario/master_ws/install/robot_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mario/master_ws/install/robot_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/mario/master_ws/install/robot_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/mario/master_ws/install/robot_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/mario/master_ws/src/vision_control -DCMAKE_INSTALL_PREFIX=/home/mario/master_ws/install/vision_control
+[7.744s] Invoking command in '/home/mario/master_ws/build/vision_control': AMENT_PREFIX_PATH=/home/mario/master_ws/install/robot_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mario/master_ws/install/robot_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/mario/master_ws/install/robot_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/mario/master_ws/install/robot_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/mario/master_ws/build/vision_control -- -j12 -l12
+[7.797s] [ 50%] [32mBuilding CXX object CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o[0m
+[16.126s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kvoid PointCloudProcessor::[01;32m[Kgenerate_cylinder_master[m[K()[m[K’:
+[16.130s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:123:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcurrent_height[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[16.130s]   123 |       float [01;35m[Kcurrent_height[m[K = j * spacing_z;
+[16.130s]       |             [01;35m[K^~~~~~~~~~~~~~[m[K
+[16.150s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kstd::vector<std::shared_ptr<pcl::PointCloud<pcl::PointNormal> > > PointCloudProcessor::[01;32m[KclusterPointCloud[m[K()[m[K’:
+[16.150s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:254:14:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kr[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+[16.150s]   254 |       double [01;35m[Kr[m[K = 0.0, g = 0.0, b = 0.0;
+[16.150s]       |              [01;35m[K^[m[K
+[16.151s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:254:23:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kg[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+[16.151s]   254 |       double r = 0.0, [01;35m[Kg[m[K = 0.0, b = 0.0;
+[16.151s]       |                       [01;35m[K^[m[K
+[16.151s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:254:32:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kb[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+[16.154s]   254 |       double r = 0.0, g = 0.0, [01;35m[Kb[m[K = 0.0;
+[16.154s]       |                                [01;35m[K^[m[K
+[16.217s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kvoid PointCloudProcessor::[01;32m[KprocessPointCloud[m[K()[m[K’:
+[16.217s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:299:19:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Ktransform_rotation[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+[16.218s]   299 |   Eigen::Matrix3f [01;35m[Ktransform_rotation[m[K = transform_3.rotation();
+[16.218s]       |                   [01;35m[K^~~~~~~~~~~~~~~~~~[m[K
+[16.220s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:300:19:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Ktransform_translation[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+[16.220s]   300 |   Eigen::Vector3f [01;35m[Ktransform_translation[m[K = transform_3.translation();
+[16.220s]       |                   [01;35m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[16.230s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kstd::vector<float> PointCloudProcessor::[01;32m[KcalculateCylinderEnd[m[K(std::shared_ptr<pcl::PointCloud<pcl::PointNormal> >, Eigen::Vector3f, Eigen::Vector3f)[m[K’:
+[16.230s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:885:23:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kplane_new[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+[16.230s]   885 |       Eigen::Vector4f [01;35m[Kplane_new[m[K = {zylaxis[0],zylaxis[1],zylaxis[2],d};
+[16.230s]       |                       [01;35m[K^~~~~~~~~[m[K
+[16.232s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:842:143:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kzylaxispoint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[16.232s]   842 | CloudN> cyl_cloud, Eigen::Vector3f zylaxis, [01;35m[KEigen::Vector3f zylaxispoint[m[K){
+[16.232s]       |                                             [01;35m[K~~~~~~~~~~~~~~~~^~~~~~~~~~~~[m[K
+[16.232s] 
+[16.255s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kvoid PointCloudProcessor::[01;32m[KedgeDetection[m[K(std::shared_ptr<pcl::PointCloud<pcl::PointNormal> >)[m[K’:
+[16.255s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:932:19:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Ktransform_rotation[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+[16.255s]   932 |   Eigen::Matrix3f [01;35m[Ktransform_rotation[m[K = scene_sensor_pose.rotation();
+[16.256s]       |                   [01;35m[K^~~~~~~~~~~~~~~~~~[m[K
+[16.256s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:933:19:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Ktransform_translation[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+[16.256s]   933 |   Eigen::Vector3f [01;35m[Ktransform_translation[m[K = scene_sensor_pose.translation();
+[16.256s]       |                   [01;35m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[16.256s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:937:8:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KsetUnseenToMaxRange[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[16.256s]   937 |   bool [01;35m[KsetUnseenToMaxRange[m[K = false;
+[16.256s]       |        [01;35m[K^~~~~~~~~~~~~~~~~~~[m[K
+[16.263s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kstd::vector<float> PointCloudProcessor::[01;32m[KcalculateCubeCenter[m[K(std::vector<Eigen::Matrix<float, 4, 1> >, std::shared_ptr<pcl::PointCloud<pcl::PointNormal> >)[m[K’:
+[16.264s] [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:1165:8:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kintersects_plane_plane[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[16.264s]  1165 |   bool [01;35m[Kintersects_plane_plane[m[K = pcl::threePlanesIntersection(cube_planes_double[0],cube_planes_double[1],cube_planes_double[2],eckpunkt,0.002);
+[16.264s]       |        [01;35m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[41.434s] [100%] [32m[1mLinking CXX executable pcl_pose_estimation[0m
+[53.948s] [100%] Built target pcl_pose_estimation
+[53.968s] Invoked command in '/home/mario/master_ws/build/vision_control' returned '0': AMENT_PREFIX_PATH=/home/mario/master_ws/install/robot_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mario/master_ws/install/robot_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/mario/master_ws/install/robot_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/mario/master_ws/install/robot_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/mario/master_ws/build/vision_control -- -j12 -l12
+[53.971s] Invoking command in '/home/mario/master_ws/build/vision_control': AMENT_PREFIX_PATH=/home/mario/master_ws/install/robot_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mario/master_ws/install/robot_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/mario/master_ws/install/robot_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/mario/master_ws/install/robot_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/mario/master_ws/build/vision_control
+[53.988s] -- Install configuration: ""
+[53.988s] -- Installing: /home/mario/master_ws/install/vision_control/lib/vision_control/pcl_pose_estimation
+[54.009s] -- Set non-toolchain portion of runtime path of "/home/mario/master_ws/install/vision_control/lib/vision_control/pcl_pose_estimation" to ""
+[54.010s] -- Installing: /home/mario/master_ws/install/vision_control/share/ament_index/resource_index/package_run_dependencies/vision_control
+[54.011s] -- Installing: /home/mario/master_ws/install/vision_control/share/ament_index/resource_index/parent_prefix_path/vision_control
+[54.014s] -- Installing: /home/mario/master_ws/install/vision_control/share/vision_control/environment/ament_prefix_path.sh
+[54.014s] -- Installing: /home/mario/master_ws/install/vision_control/share/vision_control/environment/ament_prefix_path.dsv
+[54.015s] -- Installing: /home/mario/master_ws/install/vision_control/share/vision_control/environment/path.sh
+[54.015s] -- Installing: /home/mario/master_ws/install/vision_control/share/vision_control/environment/path.dsv
+[54.015s] -- Installing: /home/mario/master_ws/install/vision_control/share/vision_control/local_setup.bash
+[54.015s] -- Installing: /home/mario/master_ws/install/vision_control/share/vision_control/local_setup.sh
+[54.015s] -- Installing: /home/mario/master_ws/install/vision_control/share/vision_control/local_setup.zsh
+[54.015s] -- Installing: /home/mario/master_ws/install/vision_control/share/vision_control/local_setup.dsv
+[54.016s] -- Installing: /home/mario/master_ws/install/vision_control/share/vision_control/package.dsv
+[54.016s] -- Installing: /home/mario/master_ws/install/vision_control/share/ament_index/resource_index/packages/vision_control
+[54.016s] -- Installing: /home/mario/master_ws/install/vision_control/share/vision_control/cmake/vision_controlConfig.cmake
+[54.017s] -- Installing: /home/mario/master_ws/install/vision_control/share/vision_control/cmake/vision_controlConfig-version.cmake
+[54.017s] -- Installing: /home/mario/master_ws/install/vision_control/share/vision_control/package.xml
+[54.020s] Invoked command in '/home/mario/master_ws/build/vision_control' returned '0': AMENT_PREFIX_PATH=/home/mario/master_ws/install/robot_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mario/master_ws/install/robot_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/mario/master_ws/install/robot_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/mario/master_ws/install/robot_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/mario/master_ws/build/vision_control

@@ -1,0 +1,207 @@
+[0.016s] Invoking command in '/home/mario/master_ws/build/estun_control': AMENT_PREFIX_PATH=/home/mario/master_ws/install/moveit_task_constructor_core:/home/mario/master_ws/install/rviz_marker_tools:/home/mario/master_ws/install/robot_interfaces:/home/mario/master_ws/install/moveit_task_constructor_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mario/master_ws/install/moveit_task_constructor_core:/home/mario/master_ws/install/rviz_marker_tools:/home/mario/master_ws/install/robot_interfaces:/home/mario/master_ws/install/moveit_task_constructor_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/mario/master_ws/install/moveit_task_constructor_core/lib:/home/mario/master_ws/install/rviz_marker_tools/lib:/home/mario/master_ws/install/robot_interfaces/lib:/home/mario/master_ws/install/moveit_task_constructor_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/mario/master_ws/install/moveit_task_constructor_core/lib/python3.12/site-packages:/home/mario/master_ws/install/robot_interfaces/lib/python3.12/site-packages:/home/mario/master_ws/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/mario/master_ws/src/estun_control -DCMAKE_INSTALL_PREFIX=/home/mario/master_ws/install/estun_control
+[0.065s] -- The C compiler identification is GNU 13.3.0
+[0.116s] -- The CXX compiler identification is GNU 13.3.0
+[0.131s] -- Detecting C compiler ABI info
+[0.213s] -- Detecting C compiler ABI info - done
+[0.222s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.222s] -- Detecting C compile features
+[0.222s] -- Detecting C compile features - done
+[0.231s] -- Detecting CXX compiler ABI info
+[0.324s] -- Detecting CXX compiler ABI info - done
+[0.335s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.336s] -- Detecting CXX compile features
+[0.336s] -- Detecting CXX compile features - done
+[0.342s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.501s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.655s] -- Found rclcpp: 28.1.22 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.723s] -- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.747s] -- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.770s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.795s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.896s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.901s] -- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.028s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[1.074s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[1.117s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.252s] -- Found moveit: 2.12.4 (/opt/ros/jazzy/share/moveit/cmake)
+[1.257s] -- Found std_msgs: 5.3.8 (/opt/ros/jazzy/share/std_msgs/cmake)
+[1.282s] -- Found moveit_msgs: 2.6.0 (/opt/ros/jazzy/share/moveit_msgs/cmake)
+[1.551s] -- Found moveit_ros_planning_interface: 2.12.4 (/opt/ros/jazzy/share/moveit_ros_planning_interface/cmake)
+[1.685s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: date_time filesystem program_options system thread 
+[1.726s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+[1.828s] -- Found tcb_span: 1.3.2 (/opt/ros/jazzy/share/tcb_span/cmake)
+[1.838s] -- Found rclcpp_lifecycle: 28.1.22 (/opt/ros/jazzy/share/rclcpp_lifecycle/cmake)
+[1.879s] -- Found parameter_traits: 0.7.6 (/opt/ros/jazzy/share/parameter_traits/cmake)
+[1.980s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.981s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[2.188s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread chrono 
+[2.243s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: thread system filesystem regex date_time program_options 
+[2.275s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread 
+[2.318s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: thread 
+[2.320s] -- Looking for sdformat14 -- found version 14.9.0
+[2.330s] -- Searching for dependencies of sdformat14
+[2.337s] -- Checking for module 'tinyxml2'
+[2.355s] --   Found tinyxml2, version 10.0.0
+[2.396s] -- Looking for gz-math7 -- found version 7.7.0
+[2.396s] -- Searching for dependencies of gz-math7
+[2.399s] -- Looking for gz-utils2 -- found version 2.2.1
+[2.399s] -- Searching for dependencies of gz-utils2
+[2.401s] -- Looking for gz-utils2 -- found version 2.2.1
+[2.401s] -- Searching for dependencies of gz-utils2
+[2.401s] -- Searching for <gz-utils2> component [cli]
+[2.404s] -- Looking for gz-utils2-cli -- found version 2.2.1
+[2.404s] -- Searching for dependencies of gz-utils2-cli
+[2.406s] -- Found moveit_task_constructor_core: 0.2.0 (/home/mario/master_ws/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake)
+[2.470s] -- Found robot_interfaces: 0.0.0 (/home/mario/master_ws/install/robot_interfaces/share/robot_interfaces/cmake)
+[2.488s] -- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[2.596s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.596s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/mario/master_ws/src/estun_control/include>
+[2.596s] -- Configured cppcheck exclude dirs and/or files: 
+[2.597s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.597s] -- Configured 'flake8' exclude dirs and/or files: 
+[2.598s] -- Added test 'lint_cmake' to check CMake code style
+[2.599s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[2.601s] -- Added test 'uncrustify' to check C / C++ code style
+[2.601s] -- Configured uncrustify additional arguments: 
+[2.602s] -- Added test 'xmllint' to check XML markup files
+[2.603s] -- Configuring done (2.6s)
+[2.659s] -- Generating done (0.0s)
+[2.672s] -- Build files have been written to: /home/mario/master_ws/build/estun_control
+[2.687s] Invoked command in '/home/mario/master_ws/build/estun_control' returned '0': AMENT_PREFIX_PATH=/home/mario/master_ws/install/moveit_task_constructor_core:/home/mario/master_ws/install/rviz_marker_tools:/home/mario/master_ws/install/robot_interfaces:/home/mario/master_ws/install/moveit_task_constructor_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mario/master_ws/install/moveit_task_constructor_core:/home/mario/master_ws/install/rviz_marker_tools:/home/mario/master_ws/install/robot_interfaces:/home/mario/master_ws/install/moveit_task_constructor_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/mario/master_ws/install/moveit_task_constructor_core/lib:/home/mario/master_ws/install/rviz_marker_tools/lib:/home/mario/master_ws/install/robot_interfaces/lib:/home/mario/master_ws/install/moveit_task_constructor_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/mario/master_ws/install/moveit_task_constructor_core/lib/python3.12/site-packages:/home/mario/master_ws/install/robot_interfaces/lib/python3.12/site-packages:/home/mario/master_ws/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/mario/master_ws/src/estun_control -DCMAKE_INSTALL_PREFIX=/home/mario/master_ws/install/estun_control
+[2.687s] Invoking command in '/home/mario/master_ws/build/estun_control': AMENT_PREFIX_PATH=/home/mario/master_ws/install/moveit_task_constructor_core:/home/mario/master_ws/install/rviz_marker_tools:/home/mario/master_ws/install/robot_interfaces:/home/mario/master_ws/install/moveit_task_constructor_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mario/master_ws/install/moveit_task_constructor_core:/home/mario/master_ws/install/rviz_marker_tools:/home/mario/master_ws/install/robot_interfaces:/home/mario/master_ws/install/moveit_task_constructor_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/mario/master_ws/install/moveit_task_constructor_core/lib:/home/mario/master_ws/install/rviz_marker_tools/lib:/home/mario/master_ws/install/robot_interfaces/lib:/home/mario/master_ws/install/moveit_task_constructor_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/mario/master_ws/install/moveit_task_constructor_core/lib/python3.12/site-packages:/home/mario/master_ws/install/robot_interfaces/lib/python3.12/site-packages:/home/mario/master_ws/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/mario/master_ws/build/estun_control -- -j12 -l12
+[2.745s] [ 16%] [32mBuilding CXX object CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o[0m
+[2.746s] [ 33%] [32mBuilding CXX object CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o[0m
+[2.748s] [ 50%] [32mBuilding CXX object CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o[0m
+[3.510s] In file included from [01m[K/home/mario/master_ws/src/estun_control/src/cartesian_planner.cpp:1[m[K:
+[3.510s] [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:51:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+[3.510s]    51 | a message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+[3.510s]       |                                                                       [01;36m[K^[m[K
+[3.510s] 
+[5.459s] In file included from [01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:1[m[K:
+[5.459s] [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:51:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+[5.459s]    51 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+[5.459s]       |                                                                             [01;36m[K^[m[K
+[6.310s] In file included from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:2[m[K:
+[6.310s] [01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+[6.310s]    50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+[6.310s]       |                                                                             [01;36m[K^[m[K
+[9.335s] In file included from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:3[m[K:
+[9.335s] [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+[9.335s]    50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+[9.335s]       |                                                                             [01;36m[K^[m[K
+[10.863s] In file included from [01m[K/home/mario/master_ws/src/estun_control/src/cartesian_planner.cpp:2[m[K:
+[10.863s] [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+[10.863s]    50 | a message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+[10.863s]       |                                                                       [01;36m[K^[m[K
+[10.863s] 
+[11.079s] [01m[K/home/mario/master_ws/src/estun_control/src/cartesian_planner.cpp:[m[K In member function ‘[01m[Kvoid CartesianPlanner::[01;32m[Kplan[m[K()[m[K’:
+[11.080s] [01m[K/home/mario/master_ws/src/estun_control/src/cartesian_planner.cpp:82:54:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdouble moveit::planning_interface::MoveGroupInterface::[01;32m[KcomputeCartesianPath[m[K(const std::vector<geometry_msgs::msg::Pose_<std::allocator<void> > >&, double, double, moveit_msgs::msg::RobotTrajectory&, bool, moveit_msgs::msg::MoveItErrorCodes*)[m[K’ is deprecated: Drop jump_threshold [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+[11.080s]    82 |     double fraction = [01;35m[Kmove_group.computeCartesianPath(waypoints, step, jump_th, traj)[m[K; //Funktion gibt werte zwischen 0 und 1 zurück oder -1 für failed
+[11.080s]       |                       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[11.080s] In file included from [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:52[m[K:
+[11.080s] [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.hpp:765:3:[m[K [01;36m[Knote: [m[Kdeclared here
+[11.080s]   765 |   [01;36m[KcomputeCartesianPath[m[K(const std::vector<geometry_msgs::msg::Pose>& waypoints, double eef_step,
+[11.080s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[11.080s] In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[11.080s]                  from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/kinematics_base/kinematics_base.hpp:42[m[K,
+[11.081s]                  from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_model/joint_model_group.hpp:42[m[K,
+[11.081s]                  from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_model/robot_model.hpp:45[m[K,
+[11.081s]                  from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_state/robot_state.hpp:40[m[K,
+[11.081s]                  from [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.hpp:41[m[K:
+[11.081s] [01m[K/home/mario/master_ws/src/estun_control/src/cartesian_planner.cpp:87:61:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 5 has type ‘[01m[Kdouble[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+[11.081s]    87 |         RCLCPP_ERROR(rclcpp::get_logger("moveit_executor"), [01;35m[K"Trajectory calculation failed | fraction: %d"[m[K, [32m[Kfraction[m[K);
+[11.081s]       |                                                             [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K  [32m[K~~~~~~~~[m[K
+[11.081s]       |                                                                                                             [32m[K|[m[K
+[11.081s]       |                                                                                                             [32m[Kdouble[m[K
+[11.081s] [01m[K/home/mario/master_ws/src/estun_control/src/cartesian_planner.cpp:87:105:[m[K [01;36m[Knote: [m[Kformat string is defined here
+[11.081s]    87 | eit_executor"), "Trajectory calculation failed | fraction: [01;36m[K%d[m[K", fraction);
+[11.082s]       |                                                            [01;36m[K~^[m[K
+[11.084s]       |                                                             [01;36m[K|[m[K
+[11.084s]       |                                                             [01;36m[Kint[m[K
+[11.084s]       |                                                            [32m[K%f[m[K
+[11.289s] [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kmoveit::task_constructor::Task MTCTaskNode::[01;32m[KcreateTask[m[K()[m[K’:
+[11.290s] [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:117:17:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Khand_group_name[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[11.290s]   117 |     const auto& [01;35m[Khand_group_name[m[K = "hand"; //Name der Gruppe des Handeffektors
+[11.290s]       |                 [01;35m[K^~~~~~~~~~~~~~~[m[K
+[11.290s] [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:158:17:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kattach_object_stage[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[11.290s]   158 |     mtc::Stage* [01;35m[Kattach_object_stage[m[K = nullptr;  // Forward attach_object_stage to place pose generator
+[11.290s]       |                 [01;35m[K^~~~~~~~~~~~~~~~~~~[m[K
+[13.132s] In file included from [01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:2[m[K:
+[13.132s] [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+[13.132s]    50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+[13.133s]       |                                                                             [01;36m[K^[m[K
+[15.653s] In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[15.653s]                  from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/kinematics_base/kinematics_base.hpp:42[m[K,
+[15.653s]                  from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_model/joint_model_group.hpp:42[m[K,
+[15.653s]                  from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_model/robot_model.hpp:45[m[K,
+[15.653s]                  from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_state/robot_state.hpp:40[m[K,
+[15.654s]                  from [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.hpp:41[m[K,
+[15.654s]                  from [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:52[m[K:
+[15.654s] [01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:[m[K In member function ‘[01m[Kvoid ObstaclePlanner::[01;32m[KaddProbekoerper[m[K(robot_interfaces::msg::ObjectPose)[m[K’:
+[15.654s] [01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:158:40:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%i[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 5 has type ‘[01m[Kstd::vector<robot_interfaces::msg::ObjectPose_<std::allocator<void> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+[15.654s]   158 |         RCLCPP_INFO(this->get_logger(),[01;35m[K"Message_new_size: %i"[m[K, [32m[Kmsg_vector_new.size()[m[K);
+[15.654s]       |                                        [01;35m[K^~~~~~~~~~~~~~~~~~~~~~[m[K  [32m[K~~~~~~~~~~~~~~~~~~~~~[m[K
+[15.654s]       |                                                                                   [32m[K|[m[K
+[15.654s]       |                                                                                   [32m[Kstd::vector<robot_interfaces::msg::ObjectPose_<std::allocator<void> > >::size_type {aka long unsigned int}[m[K
+[15.654s] [01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:158:60:[m[K [01;36m[Knote: [m[Kformat string is defined here
+[15.654s]   158 |         RCLCPP_INFO(this->get_logger(),"Message_new_size: [01;36m[K%i[m[K", msg_vector_new.size());
+[15.654s]       |                                                           [01;36m[K~^[m[K
+[15.654s]       |                                                            [01;36m[K|[m[K
+[15.655s]       |                                                            [01;36m[Kint[m[K
+[15.655s]       |                                                           [32m[K%li[m[K
+[15.656s] [01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:169:40:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%i[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 5 has type ‘[01m[Kstd::vector<robot_interfaces::msg::ObjectPose_<std::allocator<void> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+[15.656s]   169 |         RCLCPP_INFO(this->get_logger(),[01;35m[K"Message_old_size: %i"[m[K, [32m[Kmsg_vector_old.size()[m[K);
+[15.656s]       |                                        [01;35m[K^~~~~~~~~~~~~~~~~~~~~~[m[K  [32m[K~~~~~~~~~~~~~~~~~~~~~[m[K
+[15.656s]       |                                                                                   [32m[K|[m[K
+[15.656s]       |                                                                                   [32m[Kstd::vector<robot_interfaces::msg::ObjectPose_<std::allocator<void> > >::size_type {aka long unsigned int}[m[K
+[15.656s] [01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:169:60:[m[K [01;36m[Knote: [m[Kformat string is defined here
+[15.656s]   169 |         RCLCPP_INFO(this->get_logger(),"Message_old_size: [01;36m[K%i[m[K", msg_vector_old.size());
+[15.656s]       |                                                           [01;36m[K~^[m[K
+[15.656s]       |                                                            [01;36m[K|[m[K
+[15.657s]       |                                                            [01;36m[Kint[m[K
+[15.657s]       |                                                           [32m[K%li[m[K
+[16.850s] [ 66%] [32m[1mLinking CXX executable cartesian_planner[0m
+[17.443s] [ 66%] Built target cartesian_planner
+[18.507s] [ 83%] [32m[1mLinking CXX executable mtc_estun[0m
+[19.115s] [ 83%] Built target mtc_estun
+[24.017s] [100%] [32m[1mLinking CXX executable obstacle_planner[0m
+[24.675s] [100%] Built target obstacle_planner
+[24.688s] Invoked command in '/home/mario/master_ws/build/estun_control' returned '0': AMENT_PREFIX_PATH=/home/mario/master_ws/install/moveit_task_constructor_core:/home/mario/master_ws/install/rviz_marker_tools:/home/mario/master_ws/install/robot_interfaces:/home/mario/master_ws/install/moveit_task_constructor_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mario/master_ws/install/moveit_task_constructor_core:/home/mario/master_ws/install/rviz_marker_tools:/home/mario/master_ws/install/robot_interfaces:/home/mario/master_ws/install/moveit_task_constructor_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/mario/master_ws/install/moveit_task_constructor_core/lib:/home/mario/master_ws/install/rviz_marker_tools/lib:/home/mario/master_ws/install/robot_interfaces/lib:/home/mario/master_ws/install/moveit_task_constructor_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/mario/master_ws/install/moveit_task_constructor_core/lib/python3.12/site-packages:/home/mario/master_ws/install/robot_interfaces/lib/python3.12/site-packages:/home/mario/master_ws/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/mario/master_ws/build/estun_control -- -j12 -l12
+[24.690s] Invoking command in '/home/mario/master_ws/build/estun_control': AMENT_PREFIX_PATH=/home/mario/master_ws/install/moveit_task_constructor_core:/home/mario/master_ws/install/rviz_marker_tools:/home/mario/master_ws/install/robot_interfaces:/home/mario/master_ws/install/moveit_task_constructor_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mario/master_ws/install/moveit_task_constructor_core:/home/mario/master_ws/install/rviz_marker_tools:/home/mario/master_ws/install/robot_interfaces:/home/mario/master_ws/install/moveit_task_constructor_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/mario/master_ws/install/moveit_task_constructor_core/lib:/home/mario/master_ws/install/rviz_marker_tools/lib:/home/mario/master_ws/install/robot_interfaces/lib:/home/mario/master_ws/install/moveit_task_constructor_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/mario/master_ws/install/moveit_task_constructor_core/lib/python3.12/site-packages:/home/mario/master_ws/install/robot_interfaces/lib/python3.12/site-packages:/home/mario/master_ws/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/mario/master_ws/build/estun_control
+[24.699s] -- Install configuration: ""
+[24.699s] -- Installing: /home/mario/master_ws/install/estun_control/lib/estun_control/mtc_estun
+[24.700s] -- Set non-toolchain portion of runtime path of "/home/mario/master_ws/install/estun_control/lib/estun_control/mtc_estun" to ""
+[24.701s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/launch
+[24.701s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/launch/estun_obstacle_planner.launch.py
+[24.701s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/launch/test.launch.py
+[24.701s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/launch/estun_cartesian.launch.py
+[24.701s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/meshes
+[24.702s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/meshes/arm_01_1.stl
+[24.705s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/meshes/test_part.stl
+[24.705s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/meshes/Vermessungsstation.stl
+[24.706s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/meshes/Palettenwagen.stl
+[24.707s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/meshes/Industriezaun.stl
+[24.707s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/meshes/Container.stl
+[24.708s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/meshes/Probekoerper.stl
+[24.708s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/meshes/Druckpruefmaschine.stl
+[24.709s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/meshes/Tisch.stl
+[24.709s] -- Installing: /home/mario/master_ws/install/estun_control/lib/estun_control/cartesian_planner
+[24.710s] -- Set non-toolchain portion of runtime path of "/home/mario/master_ws/install/estun_control/lib/estun_control/cartesian_planner" to ""
+[24.710s] -- Installing: /home/mario/master_ws/install/estun_control/lib/estun_control/obstacle_planner
+[24.718s] -- Set non-toolchain portion of runtime path of "/home/mario/master_ws/install/estun_control/lib/estun_control/obstacle_planner" to ""
+[24.718s] -- Installing: /home/mario/master_ws/install/estun_control/share/ament_index/resource_index/package_run_dependencies/estun_control
+[24.718s] -- Installing: /home/mario/master_ws/install/estun_control/share/ament_index/resource_index/parent_prefix_path/estun_control
+[24.718s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/environment/ament_prefix_path.sh
+[24.718s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/environment/ament_prefix_path.dsv
+[24.719s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/environment/path.sh
+[24.719s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/environment/path.dsv
+[24.719s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/local_setup.bash
+[24.719s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/local_setup.sh
+[24.719s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/local_setup.zsh
+[24.719s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/local_setup.dsv
+[24.720s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/package.dsv
+[24.720s] -- Installing: /home/mario/master_ws/install/estun_control/share/ament_index/resource_index/packages/estun_control
+[24.720s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/cmake/estun_controlConfig.cmake
+[24.720s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/cmake/estun_controlConfig-version.cmake
+[24.720s] -- Installing: /home/mario/master_ws/install/estun_control/share/estun_control/package.xml
+[24.723s] Invoked command in '/home/mario/master_ws/build/estun_control' returned '0': AMENT_PREFIX_PATH=/home/mario/master_ws/install/moveit_task_constructor_core:/home/mario/master_ws/install/rviz_marker_tools:/home/mario/master_ws/install/robot_interfaces:/home/mario/master_ws/install/moveit_task_constructor_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mario/master_ws/install/moveit_task_constructor_core:/home/mario/master_ws/install/rviz_marker_tools:/home/mario/master_ws/install/robot_interfaces:/home/mario/master_ws/install/moveit_task_constructor_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/mario/master_ws/install/moveit_task_constructor_core/lib:/home/mario/master_ws/install/rviz_marker_tools/lib:/home/mario/master_ws/install/robot_interfaces/lib:/home/mario/master_ws/install/moveit_task_constructor_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/mario/master_ws/install/moveit_task_constructor_core/lib/python3.12/site-packages:/home/mario/master_ws/install/robot_interfaces/lib/python3.12/site-packages:/home/mario/master_ws/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/mario/master_ws/build/estun_control

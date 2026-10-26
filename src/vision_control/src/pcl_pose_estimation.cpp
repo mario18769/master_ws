@@ -237,7 +237,7 @@ std::vector<pcl::PointCloud<PointClNormal>::Ptr> PointCloudProcessor::clusterPoi
       cloud_cluster->height = 1;
       cloud_cluster->is_dense = true;
 
-      std::cout << "PointCloud representing the Cluster: " << cloud_cluster->size () << " data points." << std::endl;
+      //std::cout << "PointCloud representing the Cluster: " << cloud_cluster->size () << " data points." << std::endl;
 
       auto cluster_copy = pcl::make_shared<pcl::PointCloud<PointClNormal>>(*cloud_cluster);
 
@@ -263,7 +263,7 @@ std::vector<pcl::PointCloud<PointClNormal>::Ptr> PointCloudProcessor::clusterPoi
 
       //RCLCPP_INFO(this->get_logger(),"Add to Visu erfolgreich"); 
 
-      std::cout << "Cluster-Vektor-Size: " << cluster_vec.size () << " Elements" << std::endl;
+      //std::cout << "Cluster-Vektor-Size: " << cluster_vec.size () << " Elements" << std::endl;
 
       j++;
 
@@ -279,16 +279,18 @@ std::vector<pcl::PointCloud<PointClNormal>::Ptr> PointCloudProcessor::clusterPoi
 
 void PointCloudProcessor::processPointCloud(){
 
+  std::cout<<"Start process Point Cloud"<< std::endl;
   
  //Umrechnung der Koordinaten--------------------------------------------------------------------------------------------------------------------------
 
   Eigen::Affine3f transform_3 = Eigen::Affine3f::Identity();
 
-  float phi_x = 0.263; //X und Y Achse sind vertauscht gegenüber SDF 
+  float phi_x = 0.785; //X und Y Achse sind vertauscht gegenüber SDF 
   float phi_y = 0.0;
-  float phi_z = -1.57;
+  float phi_z = -1.5707;
+
   
-  transform_3.translation() << -0.3, 0.0, 1.2;
+  transform_3.translation() << -0.3, -0.05, 2.1;
 
   // The same rotation matrix as before; theta radians around Z axis
   transform_3.rotate (Eigen::AngleAxisf (phi_x, Eigen::Vector3f::UnitX()));
@@ -307,6 +309,7 @@ void PointCloudProcessor::processPointCloud(){
   pcl::transformPointCloud (scene_cloud,*scene_before_downsampling, transform_3);
   
   //Aufruf der separaten Filterfunktion
+  std::cout<<"Filtering wird aufgerufen"<< std::endl;
   filterPointCloud();
 
   std::cout<<"Filtering abgeschlossen"<< std::endl;
@@ -328,7 +331,7 @@ void PointCloudProcessor::processPointCloud(){
 
   //For Schleife zum bestimmen der Cylinder im Cluster-vector ----------------------------------------------------------------------------------------------
   
-  pcl::visualization::PCLVisualizer visu_ransac("Cylinder-Segmentation");
+  //
 
   for(auto& cluster_pt : cluster_vec){
 
@@ -336,7 +339,7 @@ void PointCloudProcessor::processPointCloud(){
     bool clusterempty = false;
 
     // Estimate normals for scene
-    pcl::console::print_highlight ("Estimating scene normals...\n");
+    //pcl::console::print_highlight ("Estimating scene normals...\n");
     pcl::NormalEstimationOMP<PointClNormal,PointClNormal> nest;
 
     nest.setSearchMethod (tree);
@@ -380,7 +383,7 @@ void PointCloudProcessor::processPointCloud(){
     seg.segment (*inliers_cylinder, *coefficients_cylinder);
 
     //Cube Berechnung --------------------------------------------------------------------------------------------------------
-    if (inliers_cylinder->indices.size () <= 300) { 
+    if (inliers_cylinder->indices.size () <= 50) { 
       
       std::cout << "Cluster had no Cylinder in it, Checking for Cubes" << std::endl;
 
@@ -410,7 +413,8 @@ void PointCloudProcessor::processPointCloud(){
       first_plane_coeff[2] = coefficients_plane->values[2];
       first_plane_coeff[3] = coefficients_plane->values[3];
       
-      if (inliers_cube_plane->indices.size () <= 10) { std::cout << "Cluster had no Cube in it" << std::endl;}
+      if (inliers_cube_plane->indices.size () <= 10) { std::cout << "Cluster had no Cube in it" << std::endl;
+      }
 
       else{
 
@@ -428,7 +432,7 @@ void PointCloudProcessor::processPointCloud(){
         extract_cube.setNegative (true); //Ausschneiden der gefundenen Plane aus gesamter Clusterwolke
         extract_cube.filter(*cluster_pt); 
 
-        visu_ransac.addPointCloud (cloud_cube, ColorHandlerNormal (cloud_cube, 0.0, 255.0, 255.0), visu_name);
+        //visu_ransac.addPointCloud (cloud_cube, ColorHandlerNormal (cloud_cube, 0.0, 255.0, 255.0), visu_name);
 
         //Suchen aller rechtwinkliger Seitenflächen in For-Schleife bis ClusterCloud leer ist
         
@@ -447,13 +451,13 @@ void PointCloudProcessor::processPointCloud(){
           seg_cube_perpend.segment (*inliers_cube_plane_perpend, *coefficients_plane_perpend);
 
           if (inliers_cube_plane_perpend->indices.size () <= 10) { 
-            std::cout << "Cluster had no/no more perpendicular Plane in it" << std::endl; 
+            //std::cout << "Cluster had no/no more perpendicular Plane in it" << std::endl; 
             clusterempty = true;
             
           }
 
           else{
-            std::cout << "Found perpendicular Plane with Number: " << i << std::endl;
+            //std::cout << "Found perpendicular Plane with Number: " << i << std::endl;
             Eigen::Vector4f perpend_plane_coeff (coefficients_plane_perpend->values[0], coefficients_plane_perpend->values[1], coefficients_plane_perpend->values[2], coefficients_plane_perpend->values[3]);
 
             cube_plane_vectors.push_back(perpend_plane_coeff); //Neue Plane Vektor für Coeffizienten werden in übergeordneten Vektor des Würfels geschrieben
@@ -469,7 +473,7 @@ void PointCloudProcessor::processPointCloud(){
             extract_cube.setNegative (true); //Ausschneiden der gefundenen Plane aus gesamter Clusterwolke
             extract_cube.filter(*cluster_pt); 
             
-            visu_ransac.addPointCloud (cloud_cube_perpend, ColorHandlerNormal (cloud_cube_perpend, 0.0, 0.0, 255.0), "ClusterNumber_"+ std::to_string(number_cylinders)+ " / PerpendPlane Number: " + std::to_string(i));
+            //visu_ransac.addPointCloud (cloud_cube_perpend, ColorHandlerNormal (cloud_cube_perpend, 0.0, 0.0, 255.0), "ClusterNumber_"+ std::to_string(number_cylinders)+ " / PerpendPlane Number: " + std::to_string(i));
 
             number_cylinders++;
             
@@ -477,7 +481,7 @@ void PointCloudProcessor::processPointCloud(){
         }
         //Alle rechtwinklinge Planes wurden zur ersten Plane gefunden und in Vektor cube_plane_vektors geschrieben
         std::vector<float> cube_position = calculateCube(cube_plane_vectors, copy_cloud);
-        std::cout << "Sending Message for Cube " << std::endl;
+        //std::cout << "Sending Message for Cube " << std::endl;
         message.object_type = "Cube";
 
         message.length = 0.1;
@@ -497,7 +501,7 @@ void PointCloudProcessor::processPointCloud(){
     
     //Zylinder wurde erkannt und weitere Verarbeitung erfolgt im Else-Zweig---------------------------------------------------
     else {
-      std::cout << "Cylinder wurde erkannt"<< std::endl;
+      //std::cout << "Cylinder wurde erkannt"<< std::endl;
 
       float cyl_axis_point_x = coefficients_cylinder->values[0];
       float cyl_axis_point_y = coefficients_cylinder->values[1];
@@ -520,7 +524,7 @@ void PointCloudProcessor::processPointCloud(){
 
 
       PointCloudN::Ptr cloud_cylinder_end (new PointCloudN); //Cloud für Stirnseite des Zylinders
-      std::cout << "Test_1"<< std::endl;
+      std::cout << "Cylinder gefunden"<< std::endl;
       int counter_cylinder_end = 0;
       for (const auto& point : *cluster_pt){
 
@@ -540,12 +544,12 @@ void PointCloudProcessor::processPointCloud(){
         }
       }
 
-      std::cout << "Test_2"<< std::endl;
-      std::cout << "Is empty: "<< cloud_cylinder_end->points.empty()<< std::endl;
+      // std::cout << "Test_2"<< std::endl;
+      // std::cout << "Is empty: "<< cloud_cylinder_end->points.empty()<< std::endl;
 
-      if (cloud_cylinder_end->points.empty() == true) { std::cout << "Cloud-Cylinder_End is empty"<< std::endl;}
+      //if (cloud_cylinder_end->points.empty() == true) { std::cout << "Cloud-Cylinder_End is empty"<< std::endl;}
 
-      std::cout << "Starte Circle Search"<< std::endl;
+      //std::cout << "Starte Circle Search"<< std::endl;
       pcl::SACSegmentationFromNormals<PointClNormal, PointClNormal> seg_2;
 
       seg_2.setOptimizeCoefficients (true);
@@ -563,7 +567,7 @@ void PointCloudProcessor::processPointCloud(){
 
       if(inliers_circle_plane->indices.empty() == true){
 
-        std::cout << "Kein Circle in Cloud gefunden"<< std::endl;
+        //std::cout << "Kein Circle in Cloud gefunden"<< std::endl;
 
         //Aufruf der Funktion zum Berechnen des Zylinderanfangs wenn keine Stirnseite gefunden wurde (parallele Lage zur Kamera)
         Eigen::Vector3f aufpunkt_ebene_eigen = {0.0, 0.0, 0.0};
@@ -584,7 +588,7 @@ void PointCloudProcessor::processPointCloud(){
 
         std::vector<float> cylinder_position = calculateCylinder(koo_zylaxis_world, koo_zylaxispoint_world, aufpunkt_ebene_eigen, cyl_radius,koo_masscenter_world);
 
-        RCLCPP_INFO(this->get_logger(),"Cylinder-Message wird erstellt");
+        //RCLCPP_INFO(this->get_logger(),"Cylinder-Message wird erstellt");
 
         message.object_type = "Cylinder";
         message.radius = cyl_radius;
@@ -600,7 +604,7 @@ void PointCloudProcessor::processPointCloud(){
       }
 
       else{
-        std::cout << "Circle in Cloud gefunden"<< std::endl;
+        //std::cout << "Circle in Cloud gefunden"<< std::endl;
         float cir_mid_x = coefficients_circle->values[0];
         float cir_mid_y = coefficients_circle->values[1];
         float cir_mid_z = coefficients_circle->values[2];
@@ -648,17 +652,17 @@ void PointCloudProcessor::processPointCloud(){
         pcl::PointXYZ y_axis (major_vector (0) + mass_center (0), major_vector (1) + mass_center (1), major_vector (2) + mass_center (2));
 
         // RCLCPP_INFO(this->get_logger(),"Number Cylinder: %i", number_cylinders);
-
-        visu_ransac.addPointCloud (scene_before_downsampling, ColorHandlerNormal (scene_before_downsampling, 50.0, 50.0, 50.0), "scene");
-        visu_ransac.addPointCloud (cloud_cylinder, ColorHandlerNormal (cloud_cylinder, 0.0, 255.0, 0.0), visu_name);
-        visu_ransac.addPointCloud (cloud_cylinder_end, ColorHandlerNormal (cloud_cylinder_end, 0.0, 0.0, 255.0), visu_name+"_");
-        visu_ransac.addCoordinateSystem(0.2);
+        // pcl::visualization::PCLVisualizer visu_ransac("Cylinder-Segmentation");
+        // visu_ransac.addPointCloud (scene_before_downsampling, ColorHandlerNormal (scene_before_downsampling, 50.0, 50.0, 50.0), "scene");
+        // visu_ransac.addPointCloud (cloud_cylinder, ColorHandlerNormal (cloud_cylinder, 0.0, 255.0, 0.0), visu_name);
+        // visu_ransac.addPointCloud (cloud_cylinder_end, ColorHandlerNormal (cloud_cylinder_end, 0.0, 0.0, 255.0), visu_name+"_");
+        // visu_ransac.addCoordinateSystem(0.2);
 
         // RCLCPP_INFO(this->get_logger(),"Calculate Cylinder wird aufgerufen");
 
         std::vector<float> cylinder_position = calculateCylinder(koo_zylaxis_world,koo_zylaxispoint_world,koo_kreismittelp_world,cyl_radius, koo_masscenter_world);
 
-        RCLCPP_INFO(this->get_logger(),"Cylinder-Message wird erstellt");
+        //RCLCPP_INFO(this->get_logger(),"Cylinder-Message wird erstellt");
 
         message.object_type = "Cylinder";
 
@@ -682,7 +686,7 @@ void PointCloudProcessor::processPointCloud(){
   pose_publisher_->publish(message);
 
   //Visualisierung-----------------------------------------------------------------------------------------------------------------------------
-  visu_ransac.spin ();
+  //visu_ransac.spin ();
   return;
 }
 
@@ -690,7 +694,7 @@ void PointCloudProcessor::filterPointCloud(){
 
   pcl::PointCloud<PointClNormal>::Ptr scene_before_filtering (new pcl::PointCloud<PointClNormal>());
   // Downsample
-  pcl::console::print_highlight ("Downsampling...\n");
+  //pcl::console::print_highlight ("Downsampling...\n");
 
   const float leaf = 0.005f;
   pcl::VoxelGrid<PointClNormal> grid_2;
@@ -761,7 +765,7 @@ std::vector<float> PointCloudProcessor::calculateCylinder(Eigen::Vector3f zylaxi
   //Koordinaten bereits in World-KYS konvertiert --> in processPointCloud()
   //Ebene aus Circle-Point und Cylinderachse als Normale wird mit Gerade aus Cylinderachse und Achsaufpunkt verschnitten --> exakter Mittenpunkt an Zylinderkopf
 
-    std::cout<< "calculateCylinder wurde aufgerufen"<< std::endl;
+    //std::cout<< "calculateCylinder wurde aufgerufen"<< std::endl;
 
     std::vector<float> cylinder_position{0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
     std::vector<float> schnittpunkt_cylaxis_cyltop{0.0, 0.0, 0.0};
@@ -866,11 +870,13 @@ std::vector<float> PointCloudProcessor::calculateCylinderEnd(std::shared_ptr<Poi
     }
 
     //Wenn mehr als die geforderte Anzahl an Punkte zur Ebene gehören ist diese Ebene die Seitenfläche
-    if(counter >= numberPointsnearPlane){std::cout << "Seitenfläche wurde gefunden" << std::endl; seitenflaeche = false;
+    if(counter >= numberPointsnearPlane){
+      //std::cout << "Seitenfläche wurde gefunden" << std::endl; 
+      seitenflaeche = false;
       
       //Ebene aus Normalenform in Koordinatenform transformieren --> Koeffizient d berechnen
       d = -1*(zylaxis[0] * maxelement_x[0].x + zylaxis[1] * maxelement_x[0].y + zylaxis[2] * maxelement_x[0].y);
-      std::cout << "d: " << d << std::endl;
+      //std::cout << "d: " << d << std::endl;
       //pcl::visualization::PCLVisualizer visu_test("Ebene");
       // visu_test.addPointCloud (cyl_cloud, ColorHandlerNormal (cube_cloud, 0.0, 255.0, 0.0), "test");
       // visu_test.addCoordinateSystem(0.2);
@@ -1019,12 +1025,12 @@ std::vector<float> PointCloudProcessor::calculateCube(std::vector<Eigen::Vector4
 
   std::vector<float> cube_position {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0}; //Ersten 3 Werte sind der Mittelpunkt danach Quarternion
   
-  if (cube_planes.size() < 2){ std::cout << "Error: Würfel hat weniger als zwei Seiten" << std::endl;}
-  if (cube_planes.size() > 3){ std::cout << "Error: Würfel hat mehr als 3 Seiten" << std::endl;}
+  // if (cube_planes.size() < 2){ std::cout << "Error: Würfel hat weniger als zwei Seiten" << std::endl;}
+  // if (cube_planes.size() > 3){ std::cout << "Error: Würfel hat mehr als 3 Seiten" << std::endl;}
 
   if (cube_planes.size() == 2){
 
-    std::cout << "Würfel hat 2 Seiten" << std::endl;
+    //std::cout << "Würfel hat 2 Seiten" << std::endl;
 
     auto compmax = [&](PointClNormal a, PointClNormal b){ return a.x < b.x;};
 
@@ -1085,14 +1091,16 @@ std::vector<float> PointCloudProcessor::calculateCube(std::vector<Eigen::Vector4
       }
 
       //Wenn mehr als die geforderte Anzahl an Punkte zur Ebene gehören ist diese Ebene die Seitenfläche
-      if(counter >= numberPointsnearPlane){std::cout << "Seitenfläche wurde gefunden" << std::endl; seitenflaeche = false;
+      if(counter >= numberPointsnearPlane){
+        //std::cout << "Seitenfläche wurde gefunden" << std::endl;
+         seitenflaeche = false;
         
         //Ebene aus Normalenform in Koordinatenform transformieren --> Koeffizient d berechnen
         d = -1*(e3[0] * maxelement_x[0].x + e3[1] * maxelement_x[0].y + e3[2] * maxelement_x[0].y);
-        std::cout << "d: " << d << std::endl;
-        pcl::visualization::PCLVisualizer visu_test("Ebene");
-        visu_test.addPointCloud (cube_cloud, ColorHandlerNormal (cube_cloud, 0.0, 255.0, 0.0), "test");
-        visu_test.addCoordinateSystem(0.2);
+        //std::cout << "d: " << d << std::endl;
+        // pcl::visualization::PCLVisualizer visu_test("Ebene");
+        // visu_test.addPointCloud (cube_cloud, ColorHandlerNormal (cube_cloud, 0.0, 255.0, 0.0), "test");
+        // visu_test.addCoordinateSystem(0.2);
 
         pcl::ModelCoefficients::Ptr plane_coefficients (new pcl::ModelCoefficients);
 
@@ -1104,8 +1112,8 @@ std::vector<float> PointCloudProcessor::calculateCube(std::vector<Eigen::Vector4
         plane_coefficients->values.push_back(d);
         // std::cout << "Count: "<< counter << std::endl;
         // std::cout << "Plane Coefficients 0: "<< plane_coefficients->values[0] << std::endl;
-        visu_test.addPlane(*plane_coefficients);
-        visu_test.spin();
+        // visu_test.addPlane(*plane_coefficients);
+        // visu_test.spin();
 
         cube_planes.push_back(plane_new);
         cube_position = calculateCubeCenter(cube_planes,cube_cloud);
@@ -1244,11 +1252,11 @@ std::vector<float> PointCloudProcessor::calculateCubeCenter(std::vector<Eigen::V
   cubeCenter[5]= q.z();
   cubeCenter[6]= q.w();
 
-  std::cout<<"Cube-Orientation" << std::endl;
-  std::cout<<"QX: " << cubeCenter[3]<< std::endl;
-  std::cout<<"QY: " << cubeCenter[4]<< std::endl;
-  std::cout<<"QZ: " << cubeCenter[5]<< std::endl;
-  std::cout<<"QW: " << cubeCenter[6]<< std::endl;
+  // std::cout<<"Cube-Orientation" << std::endl;
+  // std::cout<<"QX: " << cubeCenter[3]<< std::endl;
+  // std::cout<<"QY: " << cubeCenter[4]<< std::endl;
+  // std::cout<<"QZ: " << cubeCenter[5]<< std::endl;
+  // std::cout<<"QW: " << cubeCenter[6]<< std::endl;
 
   return cubeCenter;
 }

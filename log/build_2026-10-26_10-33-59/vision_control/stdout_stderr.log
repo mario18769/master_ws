@@ -1,0 +1,166 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Found rclcpp: 28.1.22 (/opt/ros/jazzy/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found pcl_ros: 2.6.5 (/opt/ros/jazzy/share/pcl_ros/cmake)
+[33mCMake Warning (dev) at /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindFLANN.cmake:45 (find_package):
+  Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT
+  variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+
+  CMake variable FLANN_ROOT is set to:
+
+    /usr
+
+  For compatibility, find_package is ignoring the variable, but code in a
+  .cmake module might still use it.
+Call Stack (most recent call first):
+  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:261 (find_package)
+  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:306 (find_flann)
+  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:570 (find_external_library)
+  /opt/ros/jazzy/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /opt/ros/jazzy/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)
+  /opt/ros/jazzy/share/pcl_ros/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /opt/ros/jazzy/share/pcl_ros/cmake/pcl_rosConfig.cmake:41 (include)
+  CMakeLists.txt:14 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+-- Found flann version 1.9.2
+-- Found OpenMP_CXX: -fopenmp (found version "4.5") 
+-- Found OpenMP: TRUE (found version "4.5") found components: CXX 
+-- Checking for module 'libusb-1.0'
+--   Found libusb-1.0, version 1.0.27
+-- Found libusb: /usr/lib/x86_64-linux-gnu/libusb-1.0.so  
+-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+-- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+-- Could NOT find Pcap (missing: PCAP_LIBRARIES PCAP_INCLUDE_DIRS) 
+-- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.3")  
+-- Found PNG: /usr/lib/x86_64-linux-gnu/libpng.so (found version "1.6.43") 
+-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+-- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+-- Found Qhull version 8.0.2
+-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+-- Found PCL_COMMON: /usr/lib/x86_64-linux-gnu/libpcl_common.so  
+-- Found PCL_KDTREE: /usr/lib/x86_64-linux-gnu/libpcl_kdtree.so  
+-- Found PCL_OCTREE: /usr/lib/x86_64-linux-gnu/libpcl_octree.so  
+-- Found PCL_SEARCH: /usr/lib/x86_64-linux-gnu/libpcl_search.so  
+-- Found PCL_SAMPLE_CONSENSUS: /usr/lib/x86_64-linux-gnu/libpcl_sample_consensus.so  
+-- Found PCL_FILTERS: /usr/lib/x86_64-linux-gnu/libpcl_filters.so  
+-- Found PCL_2D: /usr/include/pcl-1.14  
+-- Found PCL_GEOMETRY: /usr/include/pcl-1.14  
+-- Found PCL_IO: /usr/lib/x86_64-linux-gnu/libpcl_io.so  
+-- Found PCL_FEATURES: /usr/lib/x86_64-linux-gnu/libpcl_features.so  
+-- Found PCL_ML: /usr/lib/x86_64-linux-gnu/libpcl_ml.so  
+-- Found PCL_SEGMENTATION: /usr/lib/x86_64-linux-gnu/libpcl_segmentation.so  
+-- Found PCL_VISUALIZATION: /usr/lib/x86_64-linux-gnu/libpcl_visualization.so  
+-- Found PCL_SURFACE: /usr/lib/x86_64-linux-gnu/libpcl_surface.so  
+-- Found PCL_REGISTRATION: /usr/lib/x86_64-linux-gnu/libpcl_registration.so  
+-- Found PCL_KEYPOINTS: /usr/lib/x86_64-linux-gnu/libpcl_keypoints.so  
+-- Found PCL_TRACKING: /usr/lib/x86_64-linux-gnu/libpcl_tracking.so  
+-- Found PCL_RECOGNITION: /usr/lib/x86_64-linux-gnu/libpcl_recognition.so  
+-- Found PCL_STEREO: /usr/lib/x86_64-linux-gnu/libpcl_stereo.so  
+-- Found PCL_APPS: /usr/lib/x86_64-linux-gnu/libpcl_apps.so  
+-- Found PCL_IN_HAND_SCANNER: /usr/include/pcl-1.14  
+-- Found PCL_MODELER: /usr/include/pcl-1.14  
+-- Found PCL_POINT_CLOUD_EDITOR: /usr/include/pcl-1.14  
+-- Found PCL_OUTOFCORE: /usr/lib/x86_64-linux-gnu/libpcl_outofcore.so  
+-- Found PCL_PEOPLE: /usr/lib/x86_64-linux-gnu/libpcl_people.so  
+-- Found eigen3_cmake_module: 0.3.1 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)
+-- Found Eigen3: TRUE (found version "3.4.0") 
+-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+-- Found robot_interfaces: 0.0.0 (/home/mario/master_ws/install/robot_interfaces/share/robot_interfaces/cmake)
+-- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: 
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done (7.6s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/mario/master_ws/build/vision_control
+[ 50%] [32mBuilding CXX object CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o[0m
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kvoid PointCloudProcessor::[01;32m[Kgenerate_cylinder_master[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:123:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcurrent_height[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  123 |       float [01;35m[Kcurrent_height[m[K = j * spacing_z;
+      |             [01;35m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kstd::vector<std::shared_ptr<pcl::PointCloud<pcl::PointNormal> > > PointCloudProcessor::[01;32m[KclusterPointCloud[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:254:14:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kr[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+  254 |       double [01;35m[Kr[m[K = 0.0, g = 0.0, b = 0.0;
+      |              [01;35m[K^[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:254:23:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kg[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+  254 |       double r = 0.0, [01;35m[Kg[m[K = 0.0, b = 0.0;
+      |                       [01;35m[K^[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:254:32:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kb[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+  254 |       double r = 0.0, g = 0.0, [01;35m[Kb[m[K = 0.0;
+      |                                [01;35m[K^[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kvoid PointCloudProcessor::[01;32m[KprocessPointCloud[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:299:19:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Ktransform_rotation[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+  299 |   Eigen::Matrix3f [01;35m[Ktransform_rotation[m[K = transform_3.rotation();
+      |                   [01;35m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:300:19:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Ktransform_translation[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+  300 |   Eigen::Vector3f [01;35m[Ktransform_translation[m[K = transform_3.translation();
+      |                   [01;35m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kstd::vector<float> PointCloudProcessor::[01;32m[KcalculateCylinderEnd[m[K(std::shared_ptr<pcl::PointCloud<pcl::PointNormal> >, Eigen::Vector3f, Eigen::Vector3f)[m[K’:
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:885:23:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kplane_new[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+  885 |       Eigen::Vector4f [01;35m[Kplane_new[m[K = {zylaxis[0],zylaxis[1],zylaxis[2],d};
+      |                       [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:842:143:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kzylaxispoint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  842 | CloudN> cyl_cloud, Eigen::Vector3f zylaxis, [01;35m[KEigen::Vector3f zylaxispoint[m[K){
+      |                                             [01;35m[K~~~~~~~~~~~~~~~~^~~~~~~~~~~~[m[K
+
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kvoid PointCloudProcessor::[01;32m[KedgeDetection[m[K(std::shared_ptr<pcl::PointCloud<pcl::PointNormal> >)[m[K’:
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:932:19:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Ktransform_rotation[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+  932 |   Eigen::Matrix3f [01;35m[Ktransform_rotation[m[K = scene_sensor_pose.rotation();
+      |                   [01;35m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:933:19:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Ktransform_translation[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+  933 |   Eigen::Vector3f [01;35m[Ktransform_translation[m[K = scene_sensor_pose.translation();
+      |                   [01;35m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:937:8:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KsetUnseenToMaxRange[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  937 |   bool [01;35m[KsetUnseenToMaxRange[m[K = false;
+      |        [01;35m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kstd::vector<float> PointCloudProcessor::[01;32m[KcalculateCubeCenter[m[K(std::vector<Eigen::Matrix<float, 4, 1> >, std::shared_ptr<pcl::PointCloud<pcl::PointNormal> >)[m[K’:
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:1165:8:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kintersects_plane_plane[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+ 1165 |   bool [01;35m[Kintersects_plane_plane[m[K = pcl::threePlanesIntersection(cube_planes_double[0],cube_planes_double[1],cube_planes_double[2],eckpunkt,0.002);
+      |        [01;35m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[100%] [32m[1mLinking CXX executable pcl_pose_estimation[0m
+[100%] Built target pcl_pose_estimation
+-- Install configuration: ""
+-- Installing: /home/mario/master_ws/install/vision_control/lib/vision_control/pcl_pose_estimation
+-- Set non-toolchain portion of runtime path of "/home/mario/master_ws/install/vision_control/lib/vision_control/pcl_pose_estimation" to ""
+-- Installing: /home/mario/master_ws/install/vision_control/share/ament_index/resource_index/package_run_dependencies/vision_control
+-- Installing: /home/mario/master_ws/install/vision_control/share/ament_index/resource_index/parent_prefix_path/vision_control
+-- Installing: /home/mario/master_ws/install/vision_control/share/vision_control/environment/ament_prefix_path.sh
+-- Installing: /home/mario/master_ws/install/vision_control/share/vision_control/environment/ament_prefix_path.dsv
+-- Installing: /home/mario/master_ws/install/vision_control/share/vision_control/environment/path.sh
+-- Installing: /home/mario/master_ws/install/vision_control/share/vision_control/environment/path.dsv
+-- Installing: /home/mario/master_ws/install/vision_control/share/vision_control/local_setup.bash
+-- Installing: /home/mario/master_ws/install/vision_control/share/vision_control/local_setup.sh
+-- Installing: /home/mario/master_ws/install/vision_control/share/vision_control/local_setup.zsh
+-- Installing: /home/mario/master_ws/install/vision_control/share/vision_control/local_setup.dsv
+-- Installing: /home/mario/master_ws/install/vision_control/share/vision_control/package.dsv
+-- Installing: /home/mario/master_ws/install/vision_control/share/ament_index/resource_index/packages/vision_control
+-- Installing: /home/mario/master_ws/install/vision_control/share/vision_control/cmake/vision_controlConfig.cmake
+-- Installing: /home/mario/master_ws/install/vision_control/share/vision_control/cmake/vision_controlConfig-version.cmake
+-- Installing: /home/mario/master_ws/install/vision_control/share/vision_control/package.xml

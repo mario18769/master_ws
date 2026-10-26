@@ -14,6 +14,8 @@
 #else
 #include <tf2_eigen/tf2_eigen.h>
 #endif
+#include <tf2/LinearMath/Quaternion.h>
+
 static const rclcpp::Logger LOGGER = rclcpp::get_logger("mtc_estun");
 namespace mtc = moveit::task_constructor;
 
@@ -55,8 +57,9 @@ void MTCTaskNode::setupPlanningScene()
   object.primitives[0].dimensions = { 0.2, 0.05 };
 
   geometry_msgs::msg::Pose pose;
-  pose.position.x = 0.5;
-  pose.position.y = -0.25;
+  pose.position.x = -0.5;
+  pose.position.y = -0.8;
+  pose.position.z = 0.8;
   object.pose = pose;
 
   moveit::planning_interface::PlanningSceneInterface psi;
@@ -66,7 +69,7 @@ void MTCTaskNode::setupPlanningScene()
 void MTCTaskNode::doTask()
 {
   try
-  {
+  {RCLCPP_INFO_STREAM(LOGGER, "try to create Task");
     task_ = createTask();
   }
   catch (mtc::InitStageException& e)
@@ -100,7 +103,7 @@ void MTCTaskNode::doTask()
     return;
   }
 
-  else{RCLCPP_ERROR_STREAM(LOGGER, "Task execution succeded");}
+  else{RCLCPP_INFO_STREAM(LOGGER, "Task execution succeded");}
 
   return;
 }
@@ -114,7 +117,7 @@ mtc::Task MTCTaskNode::createTask(){
 
     const auto& arm_group_name = "arm"; //Zuordung der Groups bestehend aus einer Kette von Links --> Definiert in srdf des Robotermodells
     const auto& hand_group_name = "hand"; //Name der Gruppe des Handeffektors
-    const auto& hand_frame = "estun_hand"; //Link an Endeffectorgruppe als Bezug
+    const auto& hand_frame = "estun_hand_0"; //Link an Endeffectorgruppe als Bezug
     const auto& eef_name = "end_eff"; //Name des Endeffektors
 
     // Set task properties
@@ -157,7 +160,6 @@ mtc::Task MTCTaskNode::createTask(){
     mtc::Stage* attach_object_stage = nullptr;  // Forward attach_object_stage to place pose generator
 
     //Serieller Container der mehrere Substages beinhaltet
-
     { //grasp ist Serieller Continer mit der Bezeichnung "pick object" ------------------------------------------------------------------------------------
 
         auto grasp = std::make_unique<mtc::SerialContainer>("pick object");
@@ -168,32 +170,36 @@ mtc::Task MTCTaskNode::createTask(){
 
         //Substage: Propagator-Stage = MoveRelative
         {
-            auto stage =
-            std::make_unique<mtc::stages::MoveRelative>("approach object", cartesian_planner);
-            stage->properties().set("marker_ns", "approach_object");
-            stage->properties().set("link", hand_frame);
-            stage->properties().configureInitFrom(mtc::Stage::PARENT, { "group" });
-            stage->setMinMaxDistance(0.005, 0.01);
+          auto stage = std::make_unique<mtc::stages::MoveRelative>("approach object", cartesian_planner);
+          //stage->properties().set("marker_ns", "approach_object"); //Property MarkerNs ist teil von Stages
+          //stage->properties().set("link", hand_frame);
+          stage->setMarkerNS("approach_object");
+          stage->properties().configureInitFrom(mtc::Stage::PARENT, { "group" });
+          stage->setMinMaxDistance(0.0, 0.4);
 
-            // Set hand forward direction
-            geometry_msgs::msg::Vector3Stamped vec;
-            vec.header.frame_id = "world"; //hand_frame als relativer Frame zu dem Bewegung ausgeführt wird
-            //vec.vector.y = 1.0;
-            vec.vector.z = 1.0;
-            stage->setDirection(vec);
-            grasp->insert(std::move(stage));
+          // Set hand forward direction
+          geometry_msgs::msg::Vector3Stamped vec;
+          vec.header.frame_id = "world"; //hand_frame als relativer Frame zu dem Bewegung ausgeführt wird
+          //vec.vector.y = .1;
+          //vec.vector.x = 1.0;
+          vec.vector.z = -1.0;
+          stage->setDirection(vec); //Gibt Bewegungsrichtung an
+          grasp->insert(std::move(stage));
 
-            RCLCPP_INFO_STREAM(LOGGER, "Erste Substage");
+          RCLCPP_INFO_STREAM(LOGGER, "Erste Substage");
         }
 
         //Substage: Connector-Stage = GenerateGraspPose
-        {
+          {   
+            Eigen::Vector3d axis = {1.0, 1.0, 1.0};
             // Sample grasp pose
             auto stage = std::make_unique<mtc::stages::GenerateGraspPose>("generate grasp pose");
-            stage->properties().configureInitFrom(mtc::Stage::PARENT);
+            //stage->properties().configureInitFrom(mtc::Stage::PARENT);
             stage->properties().set("marker_ns", "grasp_pose");
+            stage->setEndEffector(eef_name);
             stage->setPreGraspPose("open");
             stage->setGraspPose("closed");
+            //stage->setRotationAxis(axis);
             stage->setObject("Cylinder_0");
             stage->setAngleDelta(M_PI / 12); //Winkeldifferenz für Lösungen der Greifposition
             stage->setMonitoredStage(current_state_ptr);  // Hook into current state --> Grasp-Object Pose und Shape werden an IK-Solver weitergereicht
@@ -206,28 +212,43 @@ mtc::Task MTCTaskNode::createTask(){
             //   geometry_msgs::msg::PoseStamped pose_stamped;
             //     geometry_msgs::msg::Pose pose;
 
-            //       pose.position.x = 1.0;
-            //       pose.position.y = 0.0;
-            //       pose.position.z = 0.0;
-            //       pose.orientation.w = 1.0;
-            //       pose_stamped.header.frame_id = "world";
-            //       pose_stamped.pose = pose;
-            //   stage->setPose(pose_stamped);
+            //     float roll = 0.0;
+            //     float pitch = 0.0;
+            //     float yaw = 0.0;
+
+            //     tf2::Quaternion q1;
+            //     q1.setRPY(roll, pitch, yaw);
+            //     pose.orientation.x = q1[0];
+            //     pose.orientation.y = q1[1];
+            //     pose.orientation.z = q1[2];
+            //     pose.orientation.w = q1[3];
+
+            //     pose.position.x = 0.0;
+            //     pose.position.y = 0.6;
+            //     pose.position.z = 1.2;
+
+            //     pose_stamped.header.frame_id = "world";
+            //     pose_stamped.pose = pose;
+            //     stage->setPose(pose_stamped);
 
 
+            //M_PI / 2
             Eigen::Isometry3d grasp_frame_transform;
-            Eigen::Quaterniond q = Eigen::AngleAxisd(M_PI / 2, Eigen::Vector3d::UnitX()) *
-            Eigen::AngleAxisd(M_PI / 2, Eigen::Vector3d::UnitY()) *
-            Eigen::AngleAxisd(M_PI / 2, Eigen::Vector3d::UnitZ());
+            Eigen::Quaterniond q = Eigen::AngleAxisd(M_PI/2, Eigen::Vector3d::UnitX()) *
+            Eigen::AngleAxisd(-M_PI/2, Eigen::Vector3d::UnitY()) *
+            Eigen::AngleAxisd(0.0, Eigen::Vector3d::UnitZ());
             grasp_frame_transform.linear() = q.matrix();
-            grasp_frame_transform.translation().x() = -0.3;
-            
+            grasp_frame_transform.translation().x() = -0.1;
+            grasp_frame_transform.translation().y() = 0.0;
+            grasp_frame_transform.translation().z() = 0.0;
 
+  
+            
             // Compute IK
             auto wrapper = std::make_unique<mtc::stages::ComputeIK>("grasp pose IK", std::move(stage));
             wrapper->setMaxIKSolutions(8);
             wrapper->setMinSolutionDistance(1.0);
-            wrapper->setIKFrame(grasp_frame_transform, "endeffector_1"); //eigentlich hand_frame
+            wrapper->setIKFrame(grasp_frame_transform, hand_frame); //eigentlich hand_frame
             wrapper->properties().configureInitFrom(mtc::Stage::PARENT, { "eef", "group" });
             wrapper->properties().configureInitFrom(mtc::Stage::INTERFACE, { "target_pose" });
             grasp->insert(std::move(wrapper));
@@ -247,12 +268,19 @@ mtc::Task MTCTaskNode::createTask(){
 
         { //Collision zwischen Greifer und Object erlauben durch Modifizierung der Planning-Scene
             auto stage = std::make_unique<mtc::stages::ModifyPlanningScene>("allow collision (hand,object)");
+            stage->allowCollisions("Palettenwagen", task.getRobotModel()
+                ->getJointModelGroup(hand_group_name)
+                ->getLinkModelNamesWithCollisionGeometry(), true);
+            grasp->insert(std::move(stage));
+
+             RCLCPP_INFO_STREAM(LOGGER, "Dritte Substage");
+        }
+
+        { //Collision zwischen Greifer und Object erlauben durch Modifizierung der Planning-Scene
+            auto stage = std::make_unique<mtc::stages::ModifyPlanningScene>("allow collision (hand,object)");
             std::vector<std::string> allow_collision_list;
-              allow_collision_list.push_back("Palettenwagen");
-            // stage->allowCollisions("Cylinder_0", task.getRobotModel()
-            //     ->getJointModelGroup(hand_group_name)
-            //     ->getLinkModelNamesWithCollisionGeometry(), true);
-            stage->allowCollisions("Cylinder_0", allow_collision_list, true);
+            stage->allowCollisions("Cylinder_0", "Palettenwagen",true);
+
             grasp->insert(std::move(stage));
 
              RCLCPP_INFO_STREAM(LOGGER, "Dritte Substage");
@@ -260,7 +288,7 @@ mtc::Task MTCTaskNode::createTask(){
 
         // { //Collision zwischen Greifer und Object erlauben durch Modifizierung der Planning-Scene
         //     auto stage = std::make_unique<mtc::stages::ModifyPlanningScene>("allow collision (arm,object)");
-        //     stage->allowCollisions("object", task.getRobotModel()
+        //     stage->allowCollisions("Cylinder_0", task.getRobotModel()
         //         ->getJointModelGroup(arm_group_name)
         //         ->getLinkModelNamesWithCollisionGeometry(), true);
         //     grasp->insert(std::move(stage));
@@ -268,12 +296,12 @@ mtc::Task MTCTaskNode::createTask(){
         //      RCLCPP_INFO_STREAM(LOGGER, "Dritte Substage");
         // }
 
-        // { //Propagator-Stage
-        //     auto stage = std::make_unique<mtc::stages::MoveTo>("close hand", interpolation_planner);
-        //     stage->setGroup(hand_group_name);
-        //     stage->setGoal("close"); //position close aus SRDF
-        //     grasp->insert(std::move(stage));
-        // }
+        { //Propagator-Stage
+            auto stage = std::make_unique<mtc::stages::MoveTo>("close hand", interpolation_planner);
+            stage->setGroup(hand_group_name);
+            stage->setGoal("closed"); //position close aus SRDF
+            grasp->insert(std::move(stage));
+        }
 
         { // Stage für Objekt zum Greifer des Roboters hinzufügen
             auto stage = std::make_unique<mtc::stages::ModifyPlanningScene>("attach object");
@@ -286,9 +314,9 @@ mtc::Task MTCTaskNode::createTask(){
 
         { //Objekt relativ Bewegen
             auto stage = std::make_unique<mtc::stages::MoveRelative>("lift object", cartesian_planner);
-            stage->properties().configureInitFrom(mtc::Stage::PARENT, { "group" });
-            stage->setMinMaxDistance(0.3, 0.5);
-            stage->setIKFrame("endeffector_1"); //eigentlich hand_frame
+            stage->properties().configureInitFrom(mtc::Stage::PARENT, { "group"});
+            stage->setMinMaxDistance(0.3, 0.4);
+            stage->setIKFrame(hand_frame); //eigentlich hand_frame
             stage->properties().set("marker_ns", "lift_object");
 
             // Set upward direction
@@ -334,9 +362,9 @@ mtc::Task MTCTaskNode::createTask(){
 
             geometry_msgs::msg::PoseStamped target_pose_msg;
             target_pose_msg.header.frame_id = "world";
-            target_pose_msg.pose.position.x = 0.5;
-            target_pose_msg.pose.position.y = -0.25;
-            target_pose_msg.pose.position.z = 0.2;
+            target_pose_msg.pose.position.x = 0.8;
+            target_pose_msg.pose.position.y = 0.6;
+            target_pose_msg.pose.position.z = 0.1;
             target_pose_msg.pose.orientation.w = 1.0;
             stage->setPose(target_pose_msg);
             stage->setMonitoredStage(attach_object_stage);  //Raw-Pointer aus Grasp-Task wird MonitoredStage übergeben
@@ -346,15 +374,15 @@ mtc::Task MTCTaskNode::createTask(){
             Eigen::Isometry3d place_frame_transform;
             Eigen::Quaterniond q = Eigen::AngleAxisd(M_PI / 2, Eigen::Vector3d::UnitX()) *
             Eigen::AngleAxisd(M_PI / 2, Eigen::Vector3d::UnitY()) *
-            Eigen::AngleAxisd(M_PI / 2, Eigen::Vector3d::UnitZ());
+            Eigen::AngleAxisd(M_PI/2, Eigen::Vector3d::UnitZ());
             place_frame_transform.linear() = q.matrix();
-            place_frame_transform.translation().x() = -0.2;
+            place_frame_transform.translation().x() = -0.1;
 
             // Compute IK
             auto wrapper = std::make_unique<mtc::stages::ComputeIK>("place pose IK", std::move(stage));
             wrapper->setMaxIKSolutions(2);
             wrapper->setMinSolutionDistance(1.0);
-            wrapper->setIKFrame(place_frame_transform,"endeffector_1");
+            wrapper->setIKFrame(place_frame_transform, hand_frame);
             wrapper->properties().configureInitFrom(mtc::Stage::PARENT, { "eef", "group" });
             wrapper->properties().configureInitFrom(mtc::Stage::INTERFACE, { "target_pose" });
             place->insert(std::move(wrapper));
@@ -362,12 +390,12 @@ mtc::Task MTCTaskNode::createTask(){
             RCLCPP_INFO_STREAM(LOGGER, "Erste Place-Substage");
         }
 
-        // {
-        //     auto stage = std::make_unique<mtc::stages::MoveTo>("open hand", interpolation_planner);
-        //     stage->setGroup(hand_group_name);
-        //     stage->setGoal("open");
-        //     place->insert(std::move(stage));
-        // }
+        {
+            auto stage = std::make_unique<mtc::stages::MoveTo>("open hand", interpolation_planner);
+            stage->setGroup(hand_group_name);
+            stage->setGoal("open");
+            place->insert(std::move(stage));
+        }
 
         { //Kollisionen werden nach Ablegen des Objekts wieder erlaubt
             auto stage = std::make_unique<mtc::stages::ModifyPlanningScene>("forbid collision (hand,object)");
@@ -390,8 +418,8 @@ mtc::Task MTCTaskNode::createTask(){
         { //Freifahren des Roboters
             auto stage = std::make_unique<mtc::stages::MoveRelative>("retreat", cartesian_planner);
             stage->properties().configureInitFrom(mtc::Stage::PARENT, { "group" });
-            stage->setMinMaxDistance(0.2, 0.3);
-            stage->setIKFrame("endeffector_1");
+            stage->setMinMaxDistance(0.4, 0.5);
+            stage->setIKFrame(hand_frame);
             stage->properties().set("marker_ns", "retreat");
 
             // Set retreat direction
@@ -404,9 +432,10 @@ mtc::Task MTCTaskNode::createTask(){
             RCLCPP_INFO_STREAM(LOGGER, "Vierte Place-Substage");
         }
 
-      task.add(std::move(place));
+      task.add(std::move(place)); 
 
       RCLCPP_INFO_STREAM(LOGGER, "Place-Task abgeshlossen");
+      
     }
 
     // { //Home Positon wird angefahren

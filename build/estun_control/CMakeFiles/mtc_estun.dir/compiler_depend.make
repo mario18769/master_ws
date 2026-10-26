@@ -886,6 +886,7 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
   /opt/ros/jazzy/include/tf2/tf2/LinearMath/Matrix3x3.hpp \
   /opt/ros/jazzy/include/tf2/tf2/LinearMath/MinMax.hpp \
   /opt/ros/jazzy/include/tf2/tf2/LinearMath/QuadWord.hpp \
+  /opt/ros/jazzy/include/tf2/tf2/LinearMath/Quaternion.h \
   /opt/ros/jazzy/include/tf2/tf2/LinearMath/Quaternion.hpp \
   /opt/ros/jazzy/include/tf2/tf2/LinearMath/Scalar.hpp \
   /opt/ros/jazzy/include/tf2/tf2/LinearMath/Transform.hpp \
@@ -4940,6 +4941,8 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 /usr/include/boost/type_traits/detail/is_function_cxx_11.hpp:
 
 /usr/include/boost/type_traits/is_floating_point.hpp:
+
+/opt/ros/jazzy/include/tf2/tf2/LinearMath/Quaternion.h:
 
 /usr/include/c++/13/bits/codecvt.h:
 

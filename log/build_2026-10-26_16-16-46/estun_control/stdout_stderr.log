@@ -1,0 +1,36 @@
+[ 33%] Built target cartesian_planner
+[ 50%] [32mBuilding CXX object CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o[0m
+[ 83%] Built target obstacle_planner
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:2[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:3[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kmoveit::task_constructor::Task MTCTaskNode::[01;32m[KcreateTask[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:220:42:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kpose[m[K’
+  220 |                 pose.orientation.x = q[0]
+      |                                          [01;31m[K^[m[K
+      |                                          [32m[K;[m[K
+  221 |                 [32m[Kpose[m[K.orientation.y = q[1]
+      |                 [32m[K~~~~[m[K                      
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:236:32:[m[K [01;31m[Kerror: [m[Kconflicting declaration ‘[01m[KEigen::Quaterniond q[m[K’
+  236 |             Eigen::Quaterniond [01;31m[Kq[m[K = Eigen::AngleAxisd(M_PI / 2, Eigen::Vector3d::UnitX()) *
+      |                                [01;31m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:218:33:[m[K [01;36m[Knote: [m[Kprevious declaration as ‘[01m[Ktf2::Quaternion q[m[K’
+  218 |                 tf2::Quaternion [01;36m[Kq[m[K;
+      |                                 [01;36m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:239:48:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass tf2::Quaternion[m[K’ has no member named ‘[01m[Kmatrix[m[K’
+  239 |             grasp_frame_transform.linear() = q.[01;31m[Kmatrix[m[K();
+      |                                                [01;31m[K^~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:119:17:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Khand_group_name[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  119 |     const auto& [01;35m[Khand_group_name[m[K = "hand"; //Name der Gruppe des Handeffektors
+      |                 [01;35m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:160:17:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kattach_object_stage[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  160 |     mtc::Stage* [01;35m[Kattach_object_stage[m[K = nullptr;  // Forward attach_object_stage to place pose generator
+      |                 [01;35m[K^~~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/mtc_estun.dir/build.make:76: CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o] Fehler 1
+gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/mtc_estun.dir/all] Fehler 2
+gmake: *** [Makefile:146: all] Fehler 2

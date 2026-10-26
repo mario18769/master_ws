@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "robot_interfaces/msg/detail/object_pose__type_support.h"
+#include "rosidl_typesupport_interface/macros.h"
 #include "robot_interfaces/msg/detail/object_pose__functions.h"
 #include "robot_interfaces/msg/detail/object_pose__struct.h"
-#include "rosidl_typesupport_interface/macros.h"
+#include "robot_interfaces/msg/detail/object_pose__type_support.h"
 
 #ifdef __cplusplus
 extern "C"

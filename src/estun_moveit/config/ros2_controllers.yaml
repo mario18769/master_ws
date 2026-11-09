@@ -1,11 +1,10 @@
 # This config file is used by ros2_control
 controller_manager:
   ros__parameters:
-    update_rate: 100  # Hz
+    update_rate: 50  # Hz
 
     arm_controller:
       type: joint_trajectory_controller/JointTrajectoryController
-
 
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster
@@ -16,38 +15,79 @@ controller_manager:
 hand_controller:
   ros__parameters:
     joints:
-     - hand_endeffector_1
+     - joint_gripper_base_finger_base_left
+     - joint_gripper_base_finger_base_right
     command_interfaces:
       - position
     state_interfaces:
       - position
       - velocity
+
     allow_nonzero_velocity_at_trajectory_end: true
 
 arm_controller:
   ros__parameters:
     joints:
-      - Umdrehung 1
-      - Umdrehung 2
-      - Umdrehung 3
-      - Umdrehung 4
-      - Umdrehung 5
-      - Umdrehung 6
+      - joint_base_00
+      - joint_00_01
+      - joint_01_02
+      - joint_02_03
+      - joint_03_04
+      - joint_04_05
     command_interfaces:
       - position
     state_interfaces:
       - position
       - velocity
-    allow_nonzero_velocity_at_trajectory_end: true
 
+    allow_nonzero_velocity_at_trajectory_end: true
 
     action_monitor_rate: 20.0
 
     allow_partial_joints_goal: false
     interpolate_from_desired_state: false
+    allow_trajectory_replacement: true
     constraints:
       stopped_velocity_tolerance: 0.01
-      goal_time: 0.0
-      joint1:
-        trajectory: 0.05
-        goal: 0.03
+      goal_time: 10.0
+      # joint_base_00:
+      #   trajectory: 0.05
+      #   goal: 0.05
+
+      # joint_00_01:
+      #   trajectory: 0.05
+      #   goal: 0.05
+
+      # joint_01_02:
+      #   trajectory: 0.05
+      #   goal: 0.05
+
+      # joint_02_03:
+      #   trajectory: 0.05
+      #   goal: 0.05
+
+      # joint_03_04:
+      #   trajectory: 0.05
+      #   goal: 0.05
+
+      # joint_04_05:
+      #   trajectory: 0.05
+      #   goal: 0.05
+
+    # gains:
+    # __map_joints:
+    #   p: {
+    #     type: double,
+    #     default_value: 0.2,
+    #     description: "Proportional gain :math:`k_p` for PID"
+    #   }
+    #   i: {
+    #     type: double,
+    #     default_value: 0.1,
+    #     description: "Integral gain :math:`k_i` for PID"
+    #   }
+    #   d: {
+    #     type: double,
+    #     default_value: 0.1,
+    #     description: "Derivative gain :math:`k_d` for PID"
+    #   }

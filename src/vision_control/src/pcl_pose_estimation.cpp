@@ -204,7 +204,7 @@ std::vector<pcl::PointCloud<PointClNormal>::Ptr> PointCloudProcessor::clusterPoi
   pcl::EuclideanClusterExtraction<PointClNormal> ec;
   ec.setClusterTolerance (0.02); // 2cm
   ec.setMinClusterSize (500);
-  ec.setMaxClusterSize (5000);
+  ec.setMaxClusterSize (1000000);
   ec.setSearchMethod (tree);
   ec.setInputCloud (scene);
   ec.extract (cluster_indices);
@@ -259,11 +259,11 @@ std::vector<pcl::PointCloud<PointClNormal>::Ptr> PointCloudProcessor::clusterPoi
 
       else{r = 0.0; g = 0.0, b = 255.0;}
 
-      //visu_cluster.addPointCloud (cluster_vec[j], ColorHandlerNormal (cluster_vec[j], r, g, b), visu_name);
+      // visu_cluster.addPointCloud (cluster_vec[j], ColorHandlerNormal (cluster_vec[j], r, g, b), visu_name);
 
-      //RCLCPP_INFO(this->get_logger(),"Add to Visu erfolgreich"); 
+      // RCLCPP_INFO(this->get_logger(),"Add to Visu erfolgreich"); 
 
-      //std::cout << "Cluster-Vektor-Size: " << cluster_vec.size () << " Elements" << std::endl;
+      // std::cout << "Cluster-Vektor-Size: " << cluster_vec.size () << " Elements" << std::endl;
 
       j++;
 
@@ -285,12 +285,14 @@ void PointCloudProcessor::processPointCloud(){
 
   Eigen::Affine3f transform_3 = Eigen::Affine3f::Identity();
 
-  float phi_x = 0.785; //X und Y Achse sind vertauscht gegenüber SDF 
+  float phi_x = 1.309; //X und Y Achse sind vertauscht gegenüber SDF 
   float phi_y = 0.0;
-  float phi_z = -1.5707;
+  float phi_z = -1.5708;
+
+  //-0.4 -0.5 2.500 0.0 1.309 -1.5708
 
   
-  transform_3.translation() << -0.3, -0.05, 2.1;
+  transform_3.translation() << -0.4, -0.5, 2.5;
 
   // The same rotation matrix as before; theta radians around Z axis
   transform_3.rotate (Eigen::AngleAxisf (phi_x, Eigen::Vector3f::UnitX()));
@@ -307,6 +309,22 @@ void PointCloudProcessor::processPointCloud(){
 
   //pcl::transformPointCloud (*scene_before_downsampling, scene_cloud, transform_3);
   pcl::transformPointCloud (scene_cloud,*scene_before_downsampling, transform_3);
+
+  // pcl::PointCloud<PointClNormal>::Ptr scene_before_filtering (new pcl::PointCloud<PointClNormal>());
+  // const float leaf = 0.005f;
+  // pcl::VoxelGrid<PointClNormal> grid_2;
+  // grid_2.setLeafSize (leaf, leaf, leaf);
+  // grid_2.setInputCloud (scene_before_downsampling);
+  // grid_2.filter (*scene_before_filtering);
+
+  std::cout << "Size: " << scene_before_downsampling->size() << std::endl;
+
+  // pcl::visualization::PCLVisualizer visu_test("Initial Scene");
+  // visu_test.addPointCloud (scene_before_downsampling, ColorHandlerNormal (scene_before_downsampling, 0.0, 255.0, 0.0), "test_123");
+  // visu_test.setBackgroundColor(255.0, 0.00, 255.0, 0); // Setting background to a dark grey
+  // visu_test.setPointCloudRenderingProperties (pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 2, "original_cloud");
+  // visu_test.addCoordinateSystem(0.2);
+  // visu_test.spin();
   
   //Aufruf der separaten Filterfunktion
   std::cout<<"Filtering wird aufgerufen"<< std::endl;
@@ -693,14 +711,16 @@ void PointCloudProcessor::processPointCloud(){
 void PointCloudProcessor::filterPointCloud(){
 
   pcl::PointCloud<PointClNormal>::Ptr scene_before_filtering (new pcl::PointCloud<PointClNormal>());
-  // Downsample
+  // pcl::visualization::PCLVisualizer visu_test("Cylinder-Segmentation");
   //pcl::console::print_highlight ("Downsampling...\n");
 
-  const float leaf = 0.005f;
+  const float leaf = 0.002f;
   pcl::VoxelGrid<PointClNormal> grid_2;
   grid_2.setLeafSize (leaf, leaf, leaf);
   grid_2.setInputCloud (scene_before_downsampling);
   grid_2.filter (*scene_before_filtering);
+
+  
 
   //Punktewolke nach infiniten Punkten filtern
   pcl::PointCloud<PointClNormal>::iterator pcl_begin;
@@ -713,17 +733,18 @@ void PointCloudProcessor::filterPointCloud(){
 
     if (pcl::isFinite(*pt)==false){
 
-      RCLCPP_INFO(this->get_logger(),"is NOT finite"); 
-
+      //RCLCPP_INFO(this->get_logger(),"is NOT finite"); 
       pt = scene_before_filtering->erase(pt);
-
-      RCLCPP_INFO(this->get_logger(),"Removed Point from Cloud"); 
+      //RCLCPP_INFO(this->get_logger(),"Removed Point from Cloud"); 
     } 
 
     else {
       pt++;
     }
   }
+  //visu_test.addPointCloud (scene_before_filtering, ColorHandlerNormal (scene_before_filtering, 255.0, 255.0, 0.0), "scene_before_filtering");
+
+  RCLCPP_INFO(this->get_logger(),"Finished filtering non finite Points"); 
 
   //Filtering der groben Dimensionen
 
@@ -731,7 +752,7 @@ void PointCloudProcessor::filterPointCloud(){
   pcl::PassThrough<PointClNormal> pass_x;
   pass_x.setInputCloud (scene_before_filtering);
   pass_x.setFilterFieldName ("x");
-  pass_x.setFilterLimits (-0.8, 0.0);
+  pass_x.setFilterLimits (-1.1, 0.3);
   pass_x.filter (*cloud_filtered_x);
 
   if(cloud_filtered_x->points.empty()){ std::cout << "X ist leer"<< std::endl;}
@@ -740,7 +761,7 @@ void PointCloudProcessor::filterPointCloud(){
   pcl::PassThrough<PointClNormal> pass_y;
   pass_y.setInputCloud (cloud_filtered_x);
   pass_y.setFilterFieldName ("y");
-  pass_y.setFilterLimits (-1.8, 0.0);
+  pass_y.setFilterLimits (-1.3, 0.0);
   pass_y.filter (*cloud_filtered_y);
 
   if(cloud_filtered_y->points.empty()){ std::cout << "Y ist leer"<< std::endl;}
@@ -753,7 +774,7 @@ void PointCloudProcessor::filterPointCloud(){
 
   if(scene->points.empty()){ std::cout << "Z ist leer"<< std::endl;}
 
-  // pcl::visualization::PCLVisualizer visu_test("Cylinder-Segmentation");
+  
   // visu_test.addPointCloud (scene, ColorHandlerNormal (scene, 0.0, 255.0, 0.0), "test");
   // visu_test.addCoordinateSystem(0.2);
   // visu_test.spin();

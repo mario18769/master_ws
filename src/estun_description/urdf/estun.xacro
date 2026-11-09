@@ -239,4 +239,16 @@
   <limit effort="1000.0" lower="0.0" upper="0.2" velocity="10.0"/>
 </joint>
 
+<!-- <gazebo>
+  <plugin filename="gz-sim-detachable-joint-system" name="gz::sim::systems::DetachableJoint">
+        <parent_link>endeffector_1</parent_link>
+        <child_model>Probekoerper1</child_model>
+        <child_link>link</child_link>
+        <initial_attach>false</initial_attach>
+        <output_topic>/Attachment_gz</output_topic>
+        <attach_topic>/Probekoerper1/attach</attach_topic>
+        <detach_topic>/Probekoerper1/detach</detach_topic>
+  </plugin>
+</gazebo> -->
+
 </robot>

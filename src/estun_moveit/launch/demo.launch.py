@@ -3,6 +3,7 @@ from launch.actions import ExecuteProcess, IncludeLaunchDescription
 from launch_ros.actions import Node
 from launch.substitutions import LaunchConfiguration, Command
 from launch.substitutions import PathJoinSubstitution
+from launch.substitutions import PathSubstitution
 from launch_ros.substitutions import FindPackageShare
 from ament_index_python.packages import get_package_share_directory
 from launch.launch_description_sources import PythonLaunchDescriptionSource
@@ -63,7 +64,7 @@ def generate_launch_description():
 
 
     moveit_config = (
-        MoveItConfigsBuilder("Estun", package_name="estun_moveit")
+        MoveItConfigsBuilder("estun_er_hi", package_name="estun_moveit")
         .robot_description(file_path="urdf/estun.urdf.xacro")
         .robot_description_kinematics(file_path="config/kinematics.yaml")
         .robot_description_semantic(file_path="urdf/estun.srdf")
@@ -163,7 +164,8 @@ def generate_launch_description():
         executable="static_transform_publisher",
         name="static_transform_publisher",
         output="log",
-        arguments=["--x", "-0.3", "--y", "-0.05", "--z", "2.1", "--roll", "0.0", "--pitch", "0.785", "--yaw", "-1.5707 ", "--frame-id", "world", "--child-frame-id", "Sensor/link_sensor/depth_camera1"],
+        arguments=["--x", "-0.4", "--y", "-0.5", "--z", "2.500", "--roll", "0.0", "--pitch", "1.309", "--yaw", "-1.5708 ", "--frame-id", "world", "--child-frame-id", "Sensor/link_sensor/depth_camera1"],
+
     )
 
    
@@ -237,18 +239,22 @@ def generate_launch_description():
     control_node = Node(
         package="controller_manager",
         executable="ros2_control_node",
-        #parameters=[robot_controllers],
+        parameters=[ParameterFile(
+            PathSubstitution(FindPackageShare("estun_moveit"))
+            / "config"
+            / "ros2_controllers.yaml",
+        ),
+    ],
         output="both",
-        remappings=[
-            ("~/robot_description", "/robot_description"),
-        ],
+        #remappings=[("~/robot_description", "/robot_description"),],
     )
 
     return LaunchDescription([
 
 
         (static_tf),
-        (gz_world),
+        #(gz_world),
+        (control_node),
               
         RegisterEventHandler(
             OnProcessStart(
@@ -276,20 +282,20 @@ def generate_launch_description():
                     
         
                   
+        # RegisterEventHandler(
+        #     OnProcessStart(
+                
+        #         target_action=robot_state_publisher_node,
+        #         on_start=[LogInfo(msg='Starte gz_spawn_entity \n'), gz_spawn_entity]
+        #     )
+        # ),           
+
+                        
         RegisterEventHandler(
             OnProcessStart(
                 
                 target_action=robot_state_publisher_node,
-                on_start=[LogInfo(msg='Starte gz_spawn_entity \n'), gz_spawn_entity]
-            )
-        ),           
-
-                        
-        RegisterEventHandler(
-            OnExecutionComplete(
-                
-                target_action=gz_spawn_entity,
-                on_completion=[LogInfo(msg='Starte joint_state_broadcaster_controller \n'), load_arm_controller]
+                on_start=[LogInfo(msg='Starte joint_state_broadcaster_controller \n'), load_arm_controller]
             )
         ),
 
@@ -303,20 +309,21 @@ def generate_launch_description():
         
 
   
-        RegisterEventHandler(
-            OnExecutionComplete(
+        # RegisterEventHandler(
+        #     OnExecutionComplete(
                 
-                target_action=load_hand_controller,
-                on_completion=[LogInfo(msg='Starte pcl_pose_estimation \n'), pose_estimation_node]
-            )
-        ),       
+        #         target_action=load_hand_controller,
+        #         on_completion=[LogInfo(msg='Starte pcl_pose_estimation \n'), pose_estimation_node]
+        #     )
+        # ),       
            
         
                             
         RegisterEventHandler(
             OnProcessStart(
                 
-                target_action=pose_estimation_node,
+                target_action=load_hand_controller,
+                #target_action=load_hand_controller,
                 on_start=[LogInfo(msg='starte move_group_node \n'), run_move_group_node]
             )
         ),
@@ -324,18 +331,18 @@ def generate_launch_description():
         RegisterEventHandler(
             OnProcessStart(
                 
-                target_action=run_move_group_node,
+                target_action=load_hand_controller,
                 on_start=[LogInfo(msg='starte rviz2 \n'), rviz_node]
             )
         ),
 
-        RegisterEventHandler(
-            OnProcessStart(
+        # RegisterEventHandler(
+        #     OnProcessStart(
                 
-                target_action=rviz_node,
-                on_start=[LogInfo(msg='starte robstacle_planner \n'), obstacle_planner_node]
-            )
-        ),            
+        #         target_action=rviz_node,
+        #         on_start=[LogInfo(msg='starte robstacle_planner \n'), obstacle_planner_node]
+        #     )
+        # ),            
         
 
         # RegisterEventHandler(

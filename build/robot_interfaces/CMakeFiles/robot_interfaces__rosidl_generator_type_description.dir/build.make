@@ -67,14 +67,20 @@ include CMakeFiles/robot_interfaces__rosidl_generator_type_description.dir/compi
 include CMakeFiles/robot_interfaces__rosidl_generator_type_description.dir/progress.make
 
 CMakeFiles/robot_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/robot_interfaces/msg/ObjectPose.json
+CMakeFiles/robot_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/robot_interfaces/msg/DetachMsg.json
 
 rosidl_generator_type_description/robot_interfaces/msg/ObjectPose.json: /opt/ros/jazzy/lib/rosidl_generator_type_description/rosidl_generator_type_description
 rosidl_generator_type_description/robot_interfaces/msg/ObjectPose.json: /opt/ros/jazzy/lib/python3.12/site-packages/rosidl_generator_type_description/__init__.py
 rosidl_generator_type_description/robot_interfaces/msg/ObjectPose.json: rosidl_adapter/robot_interfaces/msg/ObjectPose.idl
+rosidl_generator_type_description/robot_interfaces/msg/ObjectPose.json: rosidl_adapter/robot_interfaces/msg/DetachMsg.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/mario/master_ws/build/robot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating type hashes for ROS interfaces"
 	/usr/bin/python3 /opt/ros/jazzy/lib/rosidl_generator_type_description/rosidl_generator_type_description --generator-arguments-file /home/mario/master_ws/build/robot_interfaces/rosidl_generator_type_description__arguments.json
 
+rosidl_generator_type_description/robot_interfaces/msg/DetachMsg.json: rosidl_generator_type_description/robot_interfaces/msg/ObjectPose.json
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_type_description/robot_interfaces/msg/DetachMsg.json
+
 robot_interfaces__rosidl_generator_type_description: CMakeFiles/robot_interfaces__rosidl_generator_type_description
+robot_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/robot_interfaces/msg/DetachMsg.json
 robot_interfaces__rosidl_generator_type_description: rosidl_generator_type_description/robot_interfaces/msg/ObjectPose.json
 robot_interfaces__rosidl_generator_type_description: CMakeFiles/robot_interfaces__rosidl_generator_type_description.dir/build.make
 .PHONY : robot_interfaces__rosidl_generator_type_description

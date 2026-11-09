@@ -1,8 +1,11 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/robot_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/robot_interfaces/msg/detach_msg__type_support.cpp.o"
+  "CMakeFiles/robot_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/robot_interfaces/msg/detach_msg__type_support.cpp.o.d"
   "CMakeFiles/robot_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/robot_interfaces/msg/object_pose__type_support.cpp.o"
   "CMakeFiles/robot_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/robot_interfaces/msg/object_pose__type_support.cpp.o.d"
   "librobot_interfaces__rosidl_typesupport_c.pdb"
   "librobot_interfaces__rosidl_typesupport_c.so"
+  "rosidl_typesupport_c/robot_interfaces/msg/detach_msg__type_support.cpp"
   "rosidl_typesupport_c/robot_interfaces/msg/object_pose__type_support.cpp"
 )
 

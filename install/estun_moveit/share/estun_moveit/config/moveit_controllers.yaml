@@ -1,7 +1,7 @@
 trajectory_execution:
   allowed_execution_duration_scaling: 1.2
-  allowed_goal_duration_margin: 0.5
-  allowed_start_tolerance: 0.01
+  allowed_goal_duration_margin: 1.0
+  allowed_start_tolerance: 0.05
   execution_duration_monitoring: true
 
 moveit_controller_manager: moveit_simple_controller_manager/MoveItSimpleControllerManager
@@ -16,17 +16,18 @@ moveit_simple_controller_manager:
     type: FollowJointTrajectory
     default: true
     joints:
-      - Umdrehung 1
-      - Umdrehung 2
-      - Umdrehung 3
-      - Umdrehung 4
-      - Umdrehung 5
-      - Umdrehung 6
+      - joint_base_00
+      - joint_00_01
+      - joint_01_02
+      - joint_02_03
+      - joint_03_04
+      - joint_04_05
 
   hand_controller:
     action_ns: follow_joint_trajectory
     type: FollowJointTrajectory
     default: true
     joints:
-      - hand_endeffector_1
+      - joint_gripper_base_finger_base_left
+      - joint_gripper_base_finger_base_right
 

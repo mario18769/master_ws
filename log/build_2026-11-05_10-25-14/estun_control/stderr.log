@@ -1,0 +1,20 @@
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:1[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:51:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   51 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:2[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:[m[K In member function ‘[01m[Kvoid ObstaclePlanner::[01;32m[Kobstacle_parser[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:462:22:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around assignment used as truth value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wparentheses-Wparentheses]8;;[m[K]
+  462 |         if([01;35m[KmodelName = "Sensor" || modelName.starts_with("Probe")[m[K){
+      |            [01;35m[K~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:462:22:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[KmodelName.std::__cxx11::basic_string<char>::operator=(((int)((char)((((const char*)"Sensor") != 0) || modelName.std::__cxx11::basic_string<char>::starts_with(((const char*)"Probe"))))))[m[K’ from ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’ to ‘[01m[Kbool[m[K’
+  462 |         if([01;31m[KmodelName = "Sensor" || modelName.starts_with("Probe")[m[K){
+      |            [01;31m[K~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                      [01;31m[K|[m[K
+      |                      [01;31m[Kstd::__cxx11::basic_string<char>[m[K
+gmake[2]: *** [CMakeFiles/obstacle_planner.dir/build.make:76: CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o] Fehler 1
+gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/obstacle_planner.dir/all] Fehler 2
+gmake: *** [Makefile:146: all] Fehler 2

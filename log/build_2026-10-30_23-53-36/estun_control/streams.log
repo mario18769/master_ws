@@ -1,0 +1,75 @@
+[0.027s] Invoking command in '/home/mario/master_ws/build/estun_control': CMAKE_PREFIX_PATH=/home/mario/master_ws/install/moveit_task_constructor_core:/home/mario/master_ws/install/rviz_marker_tools:/home/mario/master_ws/install/robot_interfaces:/home/mario/master_ws/install/moveit_task_constructor_msgs:/home/mario/master_ws/install/vision_control:/home/mario/master_ws/install/moveit_task_constructor_demo:/home/mario/master_ws/install/moveit_task_constructor_visualization:/home/mario/master_ws/install/moveit_task_constructor_capabilities:/home/mario/master_ws/install/estun_control:/home/mario/master_ws/install/estun_moveit:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/mario/master_ws/install/estun_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/mario/master_ws/install/moveit_task_constructor_core/lib:/home/mario/master_ws/install/rviz_marker_tools/lib:/home/mario/master_ws/install/robot_interfaces/lib:/home/mario/master_ws/install/moveit_task_constructor_msgs/lib:/home/mario/master_ws/install/moveit_task_constructor_demo/lib:/home/mario/master_ws/install/moveit_task_constructor_visualization/lib:/home/mario/master_ws/install/moveit_task_constructor_capabilities/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib /usr/bin/cmake --build /home/mario/master_ws/build/estun_control -- -j12 -l12
+[0.107s] [ 33%] Built target cartesian_planner
+[0.115s] [ 66%] Built target obstacle_planner
+[0.127s] [ 83%] [32mBuilding CXX object CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o[0m
+[3.461s] In file included from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:3[m[K:
+[3.461s] [01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+[3.461s]    50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+[3.462s]       |                                                                             [01;36m[K^[m[K
+[5.249s] In file included from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:4[m[K:
+[5.250s] [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+[5.250s]    50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+[5.250s]       |                                                                             [01;36m[K^[m[K
+[6.380s] [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kvoid MTCTaskNode::[01;32m[KgetObjects[m[K()[m[K’:
+[6.381s] [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:105:21:[m[K [01;31m[Kerror: [m[Kinvalid declarator before ‘[01m[Kobjects[m[K’
+[6.381s]   105 |   std::vector<data> [01;31m[Kobjects[m[K;
+[6.381s]       |                     [01;31m[K^~~~~~~[m[K
+[6.381s] [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:110:4:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ after struct definition
+[6.381s]   110 |   }
+[6.381s]       |    [01;31m[K^[m[K
+[6.381s]       |    [32m[K;[m[K
+[6.389s] [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:113:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kobject_id[m[K’ was not declared in this scope; did you mean ‘[01m[Kobject_ids[m[K’?
+[6.390s]   113 |     [01;31m[Kobject_id[m[K.push_back(iterator.first);
+[6.390s]       |     [01;31m[K^~~~~~~~~[m[K
+[6.390s]       |     [32m[Kobject_ids[m[K
+[6.480s] [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:116:84:[m[K [01;31m[Kerror: [m[K‘[01m[Kobject_id[m[K’ was not declared in this scope; did you mean ‘[01m[Kobject_ids[m[K’?
+[6.480s]   116 |   std::map<std::string, geometry_msgs::msg::Pose> object_pose = psi.getObjectPoses([01;31m[Kobject_id[m[K);
+[6.480s]       |                                                                                    [01;31m[K^~~~~~~~~[m[K
+[6.480s]       |                                                                                    [32m[Kobject_ids[m[K
+[6.482s] [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:128:16:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K.[m[K’ token
+[6.482s]   128 |       data_temp[01;31m[K.[m[Kname = iterator.first;
+[6.482s]       |                [01;31m[K^[m[K
+[6.482s] [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:129:16:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K.[m[K’ token
+[6.482s]   129 |       data_temp[01;31m[K.[m[Kdistance = distance;
+[6.483s]       |                [01;31m[K^[m[K
+[6.490s] [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:130:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kobjects[m[K’ was not declared in this scope; did you mean ‘[01m[Kobject_ids[m[K’?
+[6.490s]   130 |       [01;31m[Kobjects[m[K.push_back(data_temp);
+[6.491s]       |       [01;31m[K^~~~~~~[m[K
+[6.491s]       |       [32m[Kobject_ids[m[K
+[6.491s] [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:130:34:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K)[m[K’ token
+[6.491s]   130 |       objects.push_back(data_temp[01;31m[K)[m[K;
+[6.491s]       |                                  [01;31m[K^[m[K
+[6.491s] [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:124:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kdistance[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[6.491s]   124 |     float [01;35m[Kdistance[m[K = sqrt(pos_x*pos_x + pos_y * pos_y);
+[6.491s]       |           [01;35m[K^~~~~~~~[m[K
+[6.491s] [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:137:3:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+[6.491s]   137 |   [01;31m[K{[m[K
+[6.491s]       |   [01;31m[K^[m[K
+[6.498s] [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:142:8:[m[K [01;31m[Kerror: [m[K‘[01m[Kobjects[m[K’ was not declared in this scope; did you mean ‘[01m[Kobject_ids[m[K’?
+[6.498s]   142 |   sort([01;31m[Kobjects[m[K.begin(), objects.end(), comp);
+[6.499s]       |        [01;31m[K^~~~~~~[m[K
+[6.499s]       |        [32m[Kobject_ids[m[K
+[6.506s] [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:142:40:[m[K [01;31m[Kerror: [m[K‘[01m[Kcomp[m[K’ was not declared in this scope
+[6.506s]   142 |   sort(objects.begin(), objects.end(), [01;31m[Kcomp[m[K);
+[6.506s]       |                                        [01;31m[K^~~~[m[K
+[6.507s] [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:142:3:[m[K [01;31m[Kerror: [m[K‘[01m[Ksort[m[K’ was not declared in this scope
+[6.507s]   142 |   [01;31m[Ksort[m[K(objects.begin(), objects.end(), comp);
+[6.507s]       |   [01;31m[K^~~~[m[K
+[6.507s] [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:142:3:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+[6.508s] In file included from [01m[K/usr/include/c++/13/algorithm:73[m[K,
+[6.508s]                  from [01m[K/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/list_parameters__struct.hpp:11[m[K,
+[6.508s]                  from [01m[K/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/list_parameters.hpp:7[m[K,
+[6.508s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/copy_all_parameter_values.hpp:21[m[K,
+[6.508s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:175[m[K,
+[6.508s]                  from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1[m[K:
+[6.508s] [01m[K/usr/include/c++/13/pstl/glue_algorithm_defs.h:296:1:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::sort[m[K’
+[6.509s]   296 | [01;36m[Ksort[m[K(_ExecutionPolicy&& __exec, _RandomAccessIterator __first, _RandomAccessIterator __last);
+[6.509s]       | [01;36m[K^~~~[m[K
+[6.509s] In file included from [01m[K/usr/include/c++/13/algorithm:63[m[K:
+[6.509s] [01m[K/usr/include/c++/13/bits/ranges_algo.h:1801:30:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::ranges::sort[m[K’
+[6.509s]  1801 |   inline constexpr __sort_fn [01;36m[Ksort[m[K{};
+[6.510s]       |                              [01;36m[K^~~~[m[K
+[11.252s] gmake[2]: *** [CMakeFiles/mtc_estun.dir/build.make:76: CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o] Fehler 1
+[11.253s] gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/mtc_estun.dir/all] Fehler 2
+[11.253s] gmake: *** [Makefile:146: all] Fehler 2
+[11.257s] Invoked command in '/home/mario/master_ws/build/estun_control' returned '2': CMAKE_PREFIX_PATH=/home/mario/master_ws/install/moveit_task_constructor_core:/home/mario/master_ws/install/rviz_marker_tools:/home/mario/master_ws/install/robot_interfaces:/home/mario/master_ws/install/moveit_task_constructor_msgs:/home/mario/master_ws/install/vision_control:/home/mario/master_ws/install/moveit_task_constructor_demo:/home/mario/master_ws/install/moveit_task_constructor_visualization:/home/mario/master_ws/install/moveit_task_constructor_capabilities:/home/mario/master_ws/install/estun_control:/home/mario/master_ws/install/estun_moveit:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/mario/master_ws/install/estun_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/mario/master_ws/install/moveit_task_constructor_core/lib:/home/mario/master_ws/install/rviz_marker_tools/lib:/home/mario/master_ws/install/robot_interfaces/lib:/home/mario/master_ws/install/moveit_task_constructor_msgs/lib:/home/mario/master_ws/install/moveit_task_constructor_demo/lib:/home/mario/master_ws/install/moveit_task_constructor_visualization/lib:/home/mario/master_ws/install/moveit_task_constructor_capabilities/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib /usr/bin/cmake --build /home/mario/master_ws/build/estun_control -- -j12 -l12

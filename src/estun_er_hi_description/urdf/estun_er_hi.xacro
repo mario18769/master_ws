@@ -1,0 +1,389 @@
+<?xml version="1.0" ?>
+<robot name="estun_er_hi" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find estun_er_hi_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find estun_er_hi_description)/urdf/estun_er_hi.ros2control" />
+<xacro:include filename="$(find estun_er_hi_description)/urdf/estun_er_hi.gazebo" />
+
+<link name="world"/>
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.06692134176208843 -0.009868900945926226 0.0774189346399731" rpy="0 0 0"/>
+    <mass value="144.0"/>
+    <inertia ixx="5.562252" iyy="8.924623" izz="12.983783" ixy="0.247424" iyz="0.028426" ixz="0.607946"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find estun_er_hi_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find estun_er_hi_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="arm_00_1">
+  <inertial>
+    <origin xyz="0.12310487810200335 0.09954608147775985 0.3638988527888285" rpy="0 0 0"/>
+    <mass value="144.0"/>
+    <inertia ixx="0.688104" iyy="2.142975" izz="2.125268" ixy="0.102596" iyz="0.001523" ixz="-0.30344"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 -0.0 -0.164" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find estun_er_hi_description)/meshes/arm_00_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 -0.0 -0.164" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find estun_er_hi_description)/meshes/arm_00_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="arm_01_1">
+  <inertial>
+    <origin xyz="0.0008177892656384411 -0.03703993588170296 0.3721932605120336" rpy="0 0 0"/>
+    <mass value="62.0"/>
+    <inertia ixx="9.374024" iyy="9.84134" izz="0.949007" ixy="-0.011122" iyz="0.007472" ixz="0.006327"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.232577 0.181359 -0.55" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find estun_er_hi_description)/meshes/arm_01_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.232577 0.181359 -0.55" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find estun_er_hi_description)/meshes/arm_01_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="arm_02_1">
+  <inertial>
+    <origin xyz="0.06892001167449616 0.15823654484486513 0.07192664831111917" rpy="0 0 0"/>
+    <mass value="37.5"/>
+    <inertia ixx="2.396571" iyy="2.388492" izz="2.407898" ixy="-0.100449" iyz="-0.211896" ixz="-0.785137"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.232312 0.173762 -1.4" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find estun_er_hi_description)/meshes/arm_02_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.232312 0.173762 -1.4" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find estun_er_hi_description)/meshes/arm_02_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="arm_03_1">
+  <inertial>
+    <origin xyz="0.45588056399981103 0.010657391475246837 -0.002335479974949539" rpy="0 0 0"/>
+    <mass value="37.5"/>
+    <inertia ixx="0.773769" iyy="12.705325" izz="13.03813" ixy="-0.229797" iyz="0.052687" ixz="0.091099"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.477792 -0.004613 -1.570046" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find estun_er_hi_description)/meshes/arm_03_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.477792 -0.004613 -1.570046" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find estun_er_hi_description)/meshes/arm_03_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="arm_04_1">
+  <inertial>
+    <origin xyz="0.011398578581826024 -0.06346646742456985 -0.0007920829281884423" rpy="0 0 0"/>
+    <mass value="12.0"/>
+    <inertia ixx="0.03324" iyy="0.049582" izz="0.053793" ixy="-8.3e-05" iyz="-8e-06" ixz="-4e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-1.439823 -0.08017 -1.570226" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find estun_er_hi_description)/meshes/arm_04_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-1.439823 -0.08017 -1.570226" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find estun_er_hi_description)/meshes/arm_04_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="arm_05_1">
+  <inertial>
+    <origin xyz="0.014291825575565298 0.00020147112676539153 9.064983753637179e-06" rpy="0 0 0"/>
+    <mass value="2.0"/>
+    <inertia ixx="0.000691" iyy="0.000388" izz="0.000388" ixy="4e-06" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-1.540402 -0.01958 -1.569441" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find estun_er_hi_description)/meshes/arm_05_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-1.540402 -0.01958 -1.569441" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find estun_er_hi_description)/meshes/arm_05_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name= "base_plate">
+  <inertial>
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+    <mass value="2.0"/>
+    <inertia ixx="0.000691" iyy="0.000388" izz="0.000388" ixy="4e-06" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find estun_er_hi_description)/meshes/base_plate.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-1.540402 -0.01958 -1.569441" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find estun_er_hi_description)/meshes/base_plate.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name= "gripper_base">
+  <inertial>
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+    <mass value="2.0"/>
+    <inertia ixx="0.000691" iyy="0.000388" izz="0.000388" ixy="4e-06" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find estun_er_hi_description)/meshes/gripper_base.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-1.540402 -0.01958 -1.569441" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find estun_er_hi_description)/meshes/gripper_base.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name= "finger_base_left">
+  <inertial>
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+    <mass value="2.0"/>
+    <inertia ixx="0.000691" iyy="0.000388" izz="0.000388" ixy="4e-06" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find estun_er_hi_description)/meshes/finger_base.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-1.540402 -0.01958 -1.569441" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find estun_er_hi_description)/meshes/finger_base.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name= "finger_base_right">
+  <inertial>
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+    <mass value="2.0"/>
+    <inertia ixx="0.000691" iyy="0.000388" izz="0.000388" ixy="4e-06" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find estun_er_hi_description)/meshes/finger_base.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-1.540402 -0.01958 -1.569441" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find estun_er_hi_description)/meshes/finger_base.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name= "finger_tip_left">
+  <inertial>
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+    <mass value="2.0"/>
+    <inertia ixx="0.000691" iyy="0.000388" izz="0.000388" ixy="4e-06" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find estun_er_hi_description)/meshes/finger_tip.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-1.540402 -0.01958 -1.569441" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find estun_er_hi_description)/meshes/finger_tip.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name= "finger_tip_right">
+  <inertial>
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+    <mass value="2.0"/>
+    <inertia ixx="0.000691" iyy="0.000388" izz="0.000388" ixy="4e-06" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find estun_er_hi_description)/meshes/finger_tip.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-1.540402 -0.01958 -1.569441" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find estun_er_hi_description)/meshes/finger_tip.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name= "tcp">
+
+</link>
+
+<joint name="joint_base_00" type="revolute">
+  <origin xyz="0.0 0.0 0.164" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="arm_00_1"/>
+  <axis xyz="-0.0 0.0 1.0"/>
+  <limit effort="1000" velocity="1.0" lower="-3.14" upper="3.14" />
+</joint>
+
+<joint name="joint_00_01" type="revolute">
+  <origin xyz="0.232577 -0.181359 0.386" rpy="0 0 0"/>
+  <parent link="arm_00_1"/>
+  <child link="arm_01_1"/>
+  <axis xyz="0.014084 -0.999901 0.0"/>
+  <limit effort="10000" velocity="1.0" lower="-2.356" upper="1.570" />
+</joint>
+
+<joint name="joint_01_02" type="revolute">
+  <origin xyz="-0.000265 0.007597 0.85" rpy="0 0 0"/>
+  <parent link="arm_01_1"/>
+  <child link="arm_02_1"/>
+  <axis xyz="-0.014084 0.999901 -0.0"/>
+  <limit effort="1000" velocity="1.0" lower="-3.228" upper="1.396" />
+</joint>
+
+<joint name="joint_02_03" type="revolute">
+  <origin xyz="0.24548 0.178375 0.170046" rpy="0 0 0"/>
+  <parent link="arm_02_1"/>
+  <child link="arm_03_1"/>
+  <axis xyz="0.999901 0.014084 0.000187"/>
+  <limit effort="1000" velocity="1.0" lower="-3.490" upper="3.490" />
+</joint>
+
+<joint name="joint_03_04" type="revolute">
+  <origin xyz="0.962031 0.075557 0.00018" rpy="0 0 0"/>
+  <parent link="arm_03_1"/>
+  <child link="arm_04_1"/>
+  <axis xyz="0.014084 -0.999901 0.0"/>
+  <limit effort="1000" velocity="1.0" lower="-2.268" upper="2.268" />
+</joint>
+
+<joint name="joint_04_05" type="revolute">
+  <origin xyz="0.100579 -0.06059 -0.000785" rpy="0 0 0"/>
+  <parent link="arm_04_1"/>
+  <child link="arm_05_1"/>
+  <axis xyz="0.999901 0.014084 0.000187"/>
+  <limit effort="1000" velocity="1.0" lower="-6.283" upper="6.283" />
+</joint>
+
+<joint name="world_base_link" type="fixed">
+  <origin xyz="-0.2 0.5 0" rpy="0 0 0"/>
+  <parent link="world"/>
+  <child link="base_link"/>
+  <axis xyz="0 0 0"/>
+</joint>
+
+<joint name="joint_base_plate" type="fixed">
+  <origin xyz="0.032 0 0" rpy="0 1.5708 0"/>
+  <parent link="arm_05_1"/>
+  <child link="base_plate"/>
+  <axis xyz="0 0 0"/>
+</joint>
+
+<joint name="joint_base_plate_gripper_base" type="fixed">
+  <origin xyz="0 0 0.0105" rpy="1.5708 0 0"/>
+  <parent link="base_plate"/>
+  <child link="gripper_base"/>
+  <axis xyz="0 0 0"/>
+</joint>
+
+<joint name="joint_gripper_base_finger_base_left" type="prismatic">
+  <origin xyz="-0.021875 0.116 0.0135" rpy="-1.5708 -1.5708 0.0"/>
+  <parent link="gripper_base"/>
+  <child link="finger_base_left"/>
+  <axis xyz="-1.0 0 0"/>
+  <limit effort="1000" velocity="1.0" lower="0" upper="0.06" />
+</joint>
+
+<joint name="joint_gripper_base_finger_base_right" type="prismatic">
+  <origin xyz="0.021875 0.116 -0.0135" rpy="-1.5708 1.5708 0"/>
+  <parent link="gripper_base"/>
+  <child link="finger_base_right"/>
+  <axis xyz="-1.0 0 0"/>
+  <limit effort="1000" velocity="1.0" lower="0.0" upper="0.06" />
+</joint>
+
+<joint name="joint_finger_base_finger_tip_left" type="fixed">
+  <origin xyz="0.064 0.021875 0.0085" rpy="-1.5708 3.142 0"/>
+  <parent link="finger_base_left"/>
+  <child link="finger_tip_left"/>
+</joint>
+
+<joint name="joint_finger_base_finger_tip_right" type="fixed">
+  <origin xyz="0.064 0.021875 0.0085" rpy="-1.5708 3.142 0"/>
+  <parent link="finger_base_right"/>
+  <child link="finger_tip_right"/>
+</joint>
+
+<joint name="joint_gripper_base_tcp" type="fixed">
+  <origin xyz="0.0 0.2 0.0" rpy="0.0 1.5708 3.142"/>
+  <parent link="gripper_base"/>
+  <child link="tcp"/>
+</joint>
+
+</robot>

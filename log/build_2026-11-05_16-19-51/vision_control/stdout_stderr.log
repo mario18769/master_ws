@@ -1,0 +1,44 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o[0m
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kvoid PointCloudProcessor::[01;32m[Kgenerate_cylinder_master[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:123:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcurrent_height[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  123 |       float [01;35m[Kcurrent_height[m[K = j * spacing_z;
+      |             [01;35m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kvoid PointCloudProcessor::[01;32m[KprocessPointCloud[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:323:89:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kpcl::visualization::PointCloudColorHandlerCustom<pcl::PointNormal>::PointCloudColorHandlerCustom(PointCloudN&, double, double, double)[m[K’
+  323 |   visu_test.addPointCloud (scene_cloud, ColorHandlerNormal (scene_cloud, 0.0, 255.0, 0.0[01;31m[K)[m[K, "test_123");
+      |                                                                                         [01;31m[K^[m[K
+In file included from [01m[K/usr/include/pcl-1.14/pcl/visualization/common/actor_map.h:41[m[K,
+                 from [01m[K/usr/include/pcl-1.14/pcl/visualization/pcl_visualizer.h:48[m[K,
+                 from [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:10[m[K:
+[01m[K/usr/include/pcl-1.14/pcl/visualization/point_cloud_color_handlers.h:207:9:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kpcl::visualization::PointCloudColorHandlerCustom<PointT>::[01;32m[KPointCloudColorHandlerCustom[m[K(const PointCloudConstPtr&, double, double, double) [35m[K[with PointT = pcl::PointNormal; PointCloudConstPtr = std::shared_ptr<const pcl::PointCloud<pcl::PointNormal> >][m[K[m[K’
+  207 |         [01;36m[KPointCloudColorHandlerCustom[m[K (const PointCloudConstPtr &cloud,
+      |         [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.14/pcl/visualization/point_cloud_color_handlers.h:207:65:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KPointCloudN[m[K’ {aka ‘[01m[Kpcl::PointCloud<pcl::PointNormal>[m[K’} to ‘[01m[Kconst pcl::visualization::PointCloudColorHandlerCustom<pcl::PointNormal>::PointCloudConstPtr&[m[K’ {aka ‘[01m[Kconst std::shared_ptr<const pcl::PointCloud<pcl::PointNormal> >&[m[K’}
+  207 |         PointCloudColorHandlerCustom ([01;36m[Kconst PointCloudConstPtr &cloud[m[K,
+      |                                       [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~[m[K
+[01m[K/usr/include/pcl-1.14/pcl/visualization/point_cloud_color_handlers.h:197:9:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kpcl::visualization::PointCloudColorHandlerCustom<PointT>::[01;32m[KPointCloudColorHandlerCustom[m[K(double, double, double) [35m[K[with PointT = pcl::PointNormal][m[K[m[K’
+  197 |         [01;36m[KPointCloudColorHandlerCustom[m[K (double r, double g, double b)
+      |         [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.14/pcl/visualization/point_cloud_color_handlers.h:197:9:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 4 provided
+[01m[K/usr/include/pcl-1.14/pcl/visualization/point_cloud_color_handlers.h:186:11:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kpcl::visualization::PointCloudColorHandlerCustom<pcl::PointNormal>::[01;32m[KPointCloudColorHandlerCustom[m[K(const pcl::visualization::PointCloudColorHandlerCustom<pcl::PointNormal>&)[m[K’
+  186 |     class [01;36m[KPointCloudColorHandlerCustom[m[K : public PointCloudColorHandler<PointT>
+      |           [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/pcl-1.14/pcl/visualization/point_cloud_color_handlers.h:186:11:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 4 provided
+[01m[K/usr/include/pcl-1.14/pcl/visualization/point_cloud_color_handlers.h:186:11:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kpcl::visualization::PointCloudColorHandlerCustom<pcl::PointNormal>::[01;32m[KPointCloudColorHandlerCustom[m[K(pcl::visualization::PointCloudColorHandlerCustom<pcl::PointNormal>&&)[m[K’
+[01m[K/usr/include/pcl-1.14/pcl/visualization/point_cloud_color_handlers.h:186:11:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 4 provided
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kstd::vector<float> PointCloudProcessor::[01;32m[KcalculateCylinderEnd[m[K(std::shared_ptr<pcl::PointCloud<pcl::PointNormal> >, Eigen::Vector3f, Eigen::Vector3f)[m[K’:
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:858:143:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kzylaxispoint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  858 | or::calculateCylinderEnd(std::shared_ptr<PointCloudN> cyl_cloud, Eigen::Vector3f zylaxis, [01;35m[KEigen::Vector3f zylaxispoint[m[K){
+      |                                                                                           [01;35m[K~~~~~~~~~~~~~~~~^~~~~~~~~~~~[m[K
+
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kvoid PointCloudProcessor::[01;32m[KedgeDetection[m[K(std::shared_ptr<pcl::PointCloud<pcl::PointNormal> >)[m[K’:
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:953:8:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KsetUnseenToMaxRange[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  953 |   bool [01;35m[KsetUnseenToMaxRange[m[K = false;
+      |        [01;35m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kstd::vector<float> PointCloudProcessor::[01;32m[KcalculateCubeCenter[m[K(std::vector<Eigen::Matrix<float, 4, 1> >, std::shared_ptr<pcl::PointCloud<pcl::PointNormal> >)[m[K’:
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:1181:8:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kintersects_plane_plane[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+ 1181 |   bool [01;35m[Kintersects_plane_plane[m[K = pcl::threePlanesIntersection(cube_planes_double[0],cube_planes_double[1],cube_planes_double[2],eckpunkt,0.002);
+      |        [01;35m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/pcl_pose_estimation.dir/build.make:76: CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o] Fehler 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pcl_pose_estimation.dir/all] Fehler 2
+gmake: *** [Makefile:146: all] Fehler 2

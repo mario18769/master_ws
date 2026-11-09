@@ -6,69 +6,81 @@
         <ros2_control name="${name}" type="system">
             <hardware>
                 <!-- By default, set up controllers for simulation. This won't work on real hardware -->
-                <!--<plugin>mock_components/GenericSystem</plugin>-->
-                <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+                <!-- <plugin>gz_ros2_control/GazeboSimSystem</plugin> -->
+
+                 <plugin>mock_components/GenericSystem</plugin>
+                <!-- <param name="calculate_dynamics">false</param>
+                <param name="custom_interface_with_following_offset"></param>
+                <param name="disable_commands">false</param>
+                <param name="mock_gpio_commands">false</param>
+                <param name="mock_sensor_commands">false</param>
+                <param name="position_state_following_offset">0.0</param> -->
 
             </hardware>
-            <joint name="Umdrehung 1">
+            <joint name="joint_base_00">
                 <command_interface name="position"/>
                 <state_interface name="position">
-                  <param name="initial_value">${initial_positions['Umdrehung 1']}</param>
+                  <param name="initial_value">${initial_positions['joint_base_00']}</param>
+                </state_interface>
+                <state_interface name="velocity"/>
+                
+            </joint>
+            <joint name="joint_00_01">
+                <command_interface name="position"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['joint_00_01']}</param>
                 </state_interface>
                 <state_interface name="velocity"/>
             </joint>
-            <joint name="Umdrehung 2">
+            <joint name="joint_01_02">
                 <command_interface name="position"/>
                 <state_interface name="position">
-                  <param name="initial_value">${initial_positions['Umdrehung 2']}</param>
+                  <param name="initial_value">${initial_positions['joint_01_02']}</param>
                 </state_interface>
                 <state_interface name="velocity"/>
             </joint>
-            <joint name="Umdrehung 3">
+            <joint name="joint_02_03">
                 <command_interface name="position"/>
                 <state_interface name="position">
-                  <param name="initial_value">${initial_positions['Umdrehung 3']}</param>
+                  <param name="initial_value">${initial_positions['joint_02_03']}</param>
                 </state_interface>
                 <state_interface name="velocity"/>
             </joint>
-            <joint name="Umdrehung 4">
+            <joint name="joint_03_04">
                 <command_interface name="position"/>
                 <state_interface name="position">
-                  <param name="initial_value">${initial_positions['Umdrehung 4']}</param>
+                  <param name="initial_value">${initial_positions['joint_03_04']}</param>
                 </state_interface>
                 <state_interface name="velocity"/>
             </joint>
-            <joint name="Umdrehung 5">
+            <joint name="joint_04_05">
                 <command_interface name="position"/>
                 <state_interface name="position">
-                  <param name="initial_value">${initial_positions['Umdrehung 5']}</param>
+                  <param name="initial_value">${initial_positions['joint_04_05']}</param>
                 </state_interface>
                 <state_interface name="velocity"/>
             </joint>
-            <joint name="Umdrehung 6">
+            <joint name="joint_gripper_base_finger_base_left">
                 <command_interface name="position"/>
-                <state_interface name="position">
-                  <param name="initial_value">${initial_positions['Umdrehung 6']}</param>
+                <state_interface name="position">   
                 </state_interface>
                 <state_interface name="velocity"/>
             </joint>
-            <joint name="hand_endeffector_1">
+            <joint name="joint_gripper_base_finger_base_right">
                 <command_interface name="position"/>
                 <state_interface name="position">   
                 </state_interface>
                 <state_interface name="velocity"/>
             </joint>
 
-            
-
         </ros2_control>
 
-        <gazebo>
+        <!-- <gazebo>
             <plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
 
                 <parameters>$(find estun_moveit)/config/ros2_controllers.yaml</parameters>
             
             </plugin>
-        </gazebo>
+        </gazebo> -->
     </xacro:macro>
 </robot>

@@ -1,0 +1,27 @@
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:2[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:3[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:32:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kattach_pub_[m[K’ does not name a type
+   32 |   [01;31m[Kattach_pub_[m[K = this->create_publisher<std_msgs::msg::String>("/Probekoerper1/attach",10);
+      |   [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:33:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kdetach_pub_[m[K’ does not name a type
+   33 |   [01;31m[Kdetach_pub_[m[K = this->create_publisher<std_msgs::msg::String>("/Probekoerper1/detach",10);
+      |   [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:35:34:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[K" "[m[K’ from ‘[01m[Kconst char [2][m[K’ to ‘[01m[Kstd_msgs::msg::String[m[K’ {aka ‘[01m[Kstd_msgs::msg::String_<std::allocator<void> >[m[K’}
+   35 |   std_msgs::msg::String detach = [01;31m[K" "[m[K;
+      |                                  [01;31m[K^~~[m[K
+      |                                  [01;31m[K|[m[K
+      |                                  [01;31m[Kconst char [2][m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:36:34:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[K" "[m[K’ from ‘[01m[Kconst char [2][m[K’ to ‘[01m[Kstd_msgs::msg::String[m[K’ {aka ‘[01m[Kstd_msgs::msg::String_<std::allocator<void> >[m[K’}
+   36 |   std_msgs::msg::String attach = [01;31m[K" "[m[K;
+      |                                  [01;31m[K^~~[m[K
+      |                                  [01;31m[K|[m[K
+      |                                  [01;31m[Kconst char [2][m[K
+gmake[2]: *** [CMakeFiles/mtc_estun.dir/build.make:76: CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o] Fehler 1
+gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/mtc_estun.dir/all] Fehler 2
+gmake: *** [Makefile:146: all] Fehler 2

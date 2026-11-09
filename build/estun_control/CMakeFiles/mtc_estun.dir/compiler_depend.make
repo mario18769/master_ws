@@ -77,6 +77,12 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
   /home/mario/master_ws/install/moveit_task_constructor_msgs/include/moveit_task_constructor_msgs/moveit_task_constructor_msgs/srv/detail/get_solution__traits.hpp \
   /home/mario/master_ws/install/moveit_task_constructor_msgs/include/moveit_task_constructor_msgs/moveit_task_constructor_msgs/srv/detail/get_solution__type_support.hpp \
   /home/mario/master_ws/install/moveit_task_constructor_msgs/include/moveit_task_constructor_msgs/moveit_task_constructor_msgs/srv/get_solution.hpp \
+  /home/mario/master_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detach_msg.hpp \
+  /home/mario/master_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/detach_msg__builder.hpp \
+  /home/mario/master_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/detach_msg__struct.hpp \
+  /home/mario/master_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/detach_msg__traits.hpp \
+  /home/mario/master_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/detach_msg__type_support.hpp \
+  /home/mario/master_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp \
   /opt/ros/jazzy/include/action_msgs/action_msgs/msg/detail/goal_info__builder.hpp \
   /opt/ros/jazzy/include/action_msgs/action_msgs/msg/detail/goal_info__functions.h \
   /opt/ros/jazzy/include/action_msgs/action_msgs/msg/detail/goal_info__struct.h \
@@ -879,9 +885,19 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/color_rgba__struct.hpp \
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/color_rgba__traits.hpp \
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/color_rgba__type_support.hpp \
+  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/empty__builder.hpp \
+  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/empty__struct.hpp \
+  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/empty__traits.hpp \
+  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/empty__type_support.hpp \
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__struct.hpp \
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__traits.hpp \
+  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/string__builder.hpp \
+  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/string__struct.hpp \
+  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/string__traits.hpp \
+  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/string__type_support.hpp \
+  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/empty.hpp \
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/string.hpp \
   /opt/ros/jazzy/include/tcb_span/span.hpp \
   /opt/ros/jazzy/include/tf2/tf2/LinearMath/Matrix3x3.hpp \
   /opt/ros/jazzy/include/tf2/tf2/LinearMath/MinMax.hpp \
@@ -2078,8 +2094,6 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 
 /usr/include/eigen3/Eigen/src/Core/ArithmeticSequence.h:
 
-/usr/include/eigen3/Eigen/src/Cholesky/LLT.h:
-
 /usr/include/eigen3/Eigen/src/Cholesky/LDLT.h:
 
 /usr/include/eigen3/Eigen/StdVector:
@@ -2210,8 +2224,6 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 
 /usr/include/c++/13/cwctype:
 
-/usr/include/c++/13/cwchar:
-
 /usr/include/c++/13/ctime:
 
 /usr/include/eigen3/Eigen/src/Core/Matrix.h:
@@ -2324,8 +2336,6 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 
 /usr/include/c++/13/bits/ranges_cmp.h:
 
-/usr/include/c++/13/bits/ranges_base.h:
-
 /usr/include/c++/13/bits/ranges_algobase.h:
 
 /usr/include/c++/13/bits/ranges_algo.h:
@@ -2377,6 +2387,30 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 /usr/include/c++/13/bits/hashtable_policy.h:
 
 /usr/include/c++/13/bits/functional_hash.h:
+
+/usr/include/c++/13/bits/stl_construct.h:
+
+/usr/include/c++/13/bits/fs_fwd.h:
+
+/usr/include/eigen3/Eigen/src/Core/util/SymbolicIndex.h:
+
+/usr/include/c++/13/bits/specfun.h:
+
+/usr/include/c++/13/bits/exception_ptr.h:
+
+/usr/include/c++/13/bits/exception.h:
+
+/usr/include/c++/13/bits/erase_if.h:
+
+/usr/include/c++/13/bits/enable_special_members.h:
+
+/usr/include/c++/13/bits/cxxabi_forced.h:
+
+/usr/include/c++/13/bits/cpp_type_traits.h:
+
+/usr/include/c++/13/limits:
+
+/usr/include/c++/13/bits/chrono.h:
 
 /usr/include/c++/13/iostream:
 
@@ -2454,10 +2488,6 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 
 /opt/ros/jazzy/include/rcl_action/rcl_action/types.h:
 
-/usr/include/c++/13/limits:
-
-/usr/include/c++/13/bits/chrono.h:
-
 /opt/ros/jazzy/include/rcl_action/rcl_action/action_server.h:
 
 /opt/ros/jazzy/include/tf2_msgs/tf2_msgs/srv/detail/frame_graph__struct.hpp:
@@ -2524,9 +2554,9 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 
 /opt/ros/jazzy/include/pluginlib/pluginlib/class_loader_imp.hpp:
 
-/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/wrench_stamped__struct.hpp:
-
 /opt/ros/jazzy/include/moveit_core/moveit_kinematics_base_export.h:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/wrench_stamped__struct.hpp:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h:
 
@@ -2561,6 +2591,10 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 /opt/ros/jazzy/include/moveit_ros_planning/moveit/planning_pipeline_interfaces/plan_responses_container.hpp:
 
 /usr/include/alloca.h:
+
+/usr/include/c++/13/bits/chrono_io.h:
+
+/opt/ros/jazzy/include/moveit_ros_planning/moveit/planning_pipeline/planning_pipeline.hpp:
 
 /opt/ros/jazzy/include/moveit_core/moveit/planning_interface/planning_interface.hpp:
 
@@ -2680,12 +2714,6 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 
 /opt/ros/jazzy/include/moveit_ros_planning/moveit/planning_pipeline_interfaces/planning_pipeline_interfaces.hpp:
 
-/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/quaternion_stamped__type_support.hpp:
-
-/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/point__builder.hpp:
-
-/opt/ros/jazzy/include/rcl/rcl/types.h:
-
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/link_scale__traits.hpp:
 
 /usr/include/eigen3/Eigen/src/Core/Transpositions.h:
@@ -2708,10 +2736,6 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 
 /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/collector/generate_statistics_message.hpp:
 
-/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/list_parameters__traits.hpp:
-
-/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/rosidl_generator_cpp__visibility_control.hpp:
-
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/generic_trajectory__traits.hpp:
 
 /opt/ros/jazzy/include/moveit_core/moveit/robot_model/planar_joint_model.hpp:
@@ -2723,10 +2747,6 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/list_parameters__builder.hpp:
 
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/collision_object__builder.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
-
-/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/cartesian_point__struct.hpp:
 
 /usr/include/eigen3/Eigen/src/Core/products/SelfadjointProduct.h:
 
@@ -2826,8 +2846,6 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 
 /opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.hpp:
 
-/opt/ros/jazzy/include/rclcpp/rclcpp/detail/qos_parameters.hpp:
-
 /usr/include/boost/config/compiler/gcc.hpp:
 
 /opt/ros/jazzy/include/moveit_core/moveit/planning_interface/planning_request_adapter.hpp:
@@ -2837,8 +2855,6 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 /opt/ros/jazzy/include/moveit_core/moveit/macros/declare_ptr.hpp:
 
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/planning_scene_components__type_support.hpp:
-
-/usr/include/c++/13/bits/erase_if.h:
 
 /opt/ros/jazzy/include/moveit_core/moveit/exceptions/exceptions.hpp:
 
@@ -2900,35 +2916,43 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 
 /opt/ros/jazzy/include/moveit_core/moveit/collision_detection/collision_detector_allocator.hpp:
 
+/usr/include/c++/13/bits/codecvt.h:
+
+/opt/ros/jazzy/include/tf2/tf2/LinearMath/Quaternion.h:
+
 /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/visibility_control.hpp:
 
-/opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__type_support.hpp:
+/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/floating_point_range__traits.hpp:
 
-/usr/include/c++/13/cstddef:
+/usr/include/eigen3/Eigen/src/Geometry/arch/Geometry_SIMD.h:
 
-/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/joint_constraint__struct.hpp:
+/usr/include/eigen3/Eigen/src/Core/IndexedView.h:
 
-/opt/ros/jazzy/include/service_msgs/service_msgs/msg/detail/service_event_info__struct.hpp:
+/usr/include/c++/13/bits/shared_ptr.h:
 
-/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose_with_covariance_stamped__type_support.hpp:
+/opt/ros/jazzy/include/class_loader/class_loader/multi_library_class_loader.hpp:
+
+/usr/include/c++/13/debug/debug.h:
+
+/opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/constants.hpp:
+
+/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/move_it_error_codes__struct.hpp:
+
+/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/set_parameters_result.hpp:
+
+/opt/ros/jazzy/include/rclcpp_action/rclcpp_action/client.hpp:
+
+/opt/ros/jazzy/include/moveit_core/moveit/kinematics_base/kinematics_base.hpp:
+
+/opt/ros/jazzy/include/rmw/rmw/discovery_options.h:
+
+/opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/moving_average_statistics/types.hpp:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/waitable.hpp:
 
 /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__builder.hpp:
 
-/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/wrench_stamped__builder.hpp:
-
-/usr/include/c++/13/bits/functexcept.h:
-
-/opt/ros/jazzy/include/rosidl_dynamic_typesupport/rosidl_dynamic_typesupport/visibility_control.h:
-
 /usr/include/boost/random/detail/large_arithmetic.hpp:
-
-/opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.hpp:
-
-/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/motion_plan_request__type_support.hpp:
-
-/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp:
-
-/opt/ros/jazzy/include/action_msgs/action_msgs/msg/rosidl_generator_cpp__visibility_control.hpp:
 
 /opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.hpp:
 
@@ -2957,10 +2981,6 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
 
 /opt/ros/jazzy/include/tf2_ros/tf2_ros/create_timer_interface.hpp:
-
-/usr/include/fmt/ranges.h:
-
-/usr/include/boost/type_traits/conditional.hpp:
 
 /opt/ros/jazzy/include/action_msgs/action_msgs/srv/detail/cancel_goal__builder.hpp:
 
@@ -2994,22 +3014,6 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 
 /home/mario/master_ws/install/moveit_task_constructor_msgs/include/moveit_task_constructor_msgs/moveit_task_constructor_msgs/msg/detail/stage_statistics__traits.hpp:
 
-/usr/include/c++/13/bits/stl_pair.h:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_timers_interface.hpp:
-
-/usr/include/c++/13/variant:
-
-/usr/include/c++/13/system_error:
-
-/opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__traits.hpp:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/any_executable.hpp:
-
-/opt/ros/jazzy/include/type_description_interfaces/type_description_interfaces/srv/detail/get_type_description__functions.h:
-
-/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/allowed_collision_matrix__traits.hpp:
-
 /usr/include/c++/13/bits/max_size_type.h:
 
 /opt/ros/jazzy/include/action_msgs/action_msgs/msg/detail/goal_status__functions.h:
@@ -3022,37 +3026,41 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/transform__type_support.hpp:
 
+/usr/include/c++/13/bits/concept_check.h:
+
+/opt/ros/jazzy/include/moveit_core/moveit/utils/moveit_error_code.hpp:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/twist_stamped.hpp:
+
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/velocity_stamped__traits.hpp:
 
 /usr/include/eigen3/Eigen/src/Core/CommaInitializer.h:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/message_info.hpp:
 
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/rosidl_generator_cpp__visibility_control.hpp:
+
+/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/list_parameters__traits.hpp:
+
 /opt/ros/jazzy/include/rclcpp/rclcpp/allocator/allocator_common.hpp:
 
 /opt/ros/jazzy/include/action_msgs/action_msgs/msg/detail/goal_status__struct.h:
-
-/opt/ros/jazzy/include/moveit_core/moveit/planning_interface/planning_response_adapter.hpp:
-
-/home/mario/master_ws/install/moveit_task_constructor_msgs/include/moveit_task_constructor_msgs/moveit_task_constructor_msgs/msg/detail/trajectory_execution_info__traits.hpp:
 
 /opt/ros/jazzy/include/action_msgs/action_msgs/msg/detail/goal_status__builder.hpp:
 
 /opt/ros/jazzy/include/action_msgs/action_msgs/msg/detail/goal_info__type_support.hpp:
 
-/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/list_parameters__struct.hpp:
+/home/mario/master_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/detach_msg__type_support.hpp:
 
-/opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/detail/compressed_image__struct.hpp:
+/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
 
-/home/mario/master_ws/install/moveit_task_constructor_msgs/include/moveit_task_constructor_msgs/moveit_task_constructor_msgs/srv/detail/get_solution__type_support.hpp:
+/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/cartesian_point__struct.hpp:
+
+/usr/include/eigen3/Eigen/src/Cholesky/LLT.h:
+
+/home/mario/master_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detach_msg.hpp:
 
 /opt/ros/jazzy/include/action_msgs/action_msgs/srv/detail/cancel_goal__traits.hpp:
-
-/usr/include/eigen3/Eigen/src/Core/util/SymbolicIndex.h:
-
-/usr/include/c++/13/bits/specfun.h:
-
-/usr/include/c++/13/bits/exception_ptr.h:
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/pose_with_covariance_stamped.hpp:
 
@@ -3100,8 +3108,6 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 
 /usr/include/boost/random/detail/config.hpp:
 
-/usr/include/c++/13/bits/cpp_type_traits.h:
-
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/velocity_stamped__builder.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/experimental/create_intra_process_buffer.hpp:
@@ -3125,12 +3131,6 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 /opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:
 
 /home/mario/master_ws/install/moveit_task_constructor_msgs/include/moveit_task_constructor_msgs/moveit_task_constructor_msgs/msg/detail/trajectory_execution_info__type_support.hpp:
-
-/usr/include/c++/13/tr1/riemann_zeta.tcc:
-
-/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__builder.hpp:
-
-/opt/ros/jazzy/include/geometric_shapes/geometric_shapes/bodies.h:
 
 /home/mario/master_ws/install/moveit_task_constructor_msgs/include/moveit_task_constructor_msgs/moveit_task_constructor_msgs/msg/detail/trajectory_execution_info__builder.hpp:
 
@@ -3274,19 +3274,11 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 
 /opt/ros/jazzy/include/action_msgs/action_msgs/msg/detail/goal_info__traits.hpp:
 
-/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/floating_point_range__traits.hpp:
+/opt/ros/jazzy/include/std_msgs/std_msgs/msg/color_rgba.hpp:
 
-/usr/include/eigen3/Eigen/src/Geometry/arch/Geometry_SIMD.h:
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/wrench__struct.hpp:
 
-/usr/include/eigen3/Eigen/src/Core/IndexedView.h:
-
-/usr/include/c++/13/bits/shared_ptr.h:
-
-/opt/ros/jazzy/include/class_loader/class_loader/multi_library_class_loader.hpp:
-
-/usr/include/c++/13/debug/debug.h:
-
-/opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/constants.hpp:
+/home/mario/master_ws/install/moveit_task_constructor_core/include/moveit/task_constructor/stages/connect.h:
 
 /usr/include/eigen3/Eigen/src/SVD/JacobiSVD.h:
 
@@ -3354,29 +3346,19 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 
 /home/mario/master_ws/install/moveit_task_constructor_msgs/include/moveit_task_constructor_msgs/moveit_task_constructor_msgs/msg/detail/sub_solution__traits.hpp:
 
-/home/mario/master_ws/install/moveit_task_constructor_msgs/include/moveit_task_constructor_msgs/moveit_task_constructor_msgs/srv/detail/get_solution__builder.hpp:
+/opt/ros/jazzy/include/moveit_core/moveit/planning_interface/planning_response_adapter.hpp:
 
-/opt/ros/jazzy/include/statistics_msgs/statistics_msgs/msg/detail/metrics_message__traits.hpp:
+/home/mario/master_ws/install/moveit_task_constructor_msgs/include/moveit_task_constructor_msgs/moveit_task_constructor_msgs/msg/detail/trajectory_execution_info__traits.hpp:
 
-/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/transform_stamped__traits.hpp:
+/home/mario/master_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/detach_msg__builder.hpp:
 
-/usr/include/eigen3/Eigen/src/Geometry/Quaternion.h:
+/home/mario/master_ws/install/moveit_task_constructor_msgs/include/moveit_task_constructor_msgs/moveit_task_constructor_msgs/msg/solution.hpp:
 
-/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:
+/usr/include/boost/type_traits/is_arithmetic.hpp:
 
-/opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h:
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
 
-/opt/ros/jazzy/include/pluginlib/pluginlib/class_desc.hpp:
-
-/usr/include/fmt/core.h:
-
-/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.hpp:
-
-/opt/ros/jazzy/include/rclcpp_lifecycle/rclcpp_lifecycle/node_interfaces/lifecycle_node_interface.hpp:
-
-/usr/include/eigen3/Eigen/src/Core/arch/Default/Half.h:
-
-/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/pose.hpp:
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/vector3_stamped__builder.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:
 
@@ -3456,18 +3438,6 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 
 /usr/include/c++/13/bits/allocator.h:
 
-/home/mario/master_ws/install/moveit_task_constructor_msgs/include/moveit_task_constructor_msgs/moveit_task_constructor_msgs/msg/solution.hpp:
-
-/usr/include/boost/type_traits/is_arithmetic.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
-
-/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/vector3_stamped__builder.hpp:
-
-/usr/include/c++/13/new:
-
-/opt/ros/jazzy/include/ament_index_cpp/ament_index_cpp/get_resources.hpp:
-
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/cartesian_trajectory_point__struct.hpp:
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.hpp:
@@ -3510,32 +3480,6 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 
 /home/mario/master_ws/install/moveit_task_constructor_core/include/moveit/task_constructor/type_traits.h:
 
-/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/set_parameters_result__builder.hpp:
-
-/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/bounding_volume__struct.hpp:
-
-/usr/include/stdio.h:
-
-/opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__traits.hpp:
-
-/home/mario/master_ws/install/moveit_task_constructor_core/include/moveit/task_constructor/introspection.h:
-
-/home/mario/master_ws/install/moveit_task_constructor_msgs/include/moveit_task_constructor_msgs/moveit_task_constructor_msgs/msg/detail/task_description__traits.hpp:
-
-/usr/include/string.h:
-
-/usr/include/c++/13/bits/stl_deque.h:
-
-/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/quaternion_stamped__traits.hpp:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/get_node_base_interface.hpp:
-
-/home/mario/master_ws/install/moveit_task_constructor_msgs/include/moveit_task_constructor_msgs/moveit_task_constructor_msgs/action/detail/execute_task_solution__builder.hpp:
-
-/usr/include/eigen3/Eigen/src/SVD/UpperBidiagonalization.h:
-
-/home/mario/master_ws/install/moveit_task_constructor_core/include/moveit/task_constructor/solvers.h:
-
 /opt/ros/jazzy/include/rmw/rmw/impl/cpp/demangle.hpp:
 
 /home/mario/master_ws/install/moveit_task_constructor_msgs/include/moveit_task_constructor_msgs/moveit_task_constructor_msgs/action/detail/execute_task_solution__struct.hpp:
@@ -3568,6 +3512,14 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 
 /opt/ros/jazzy/include/action_msgs/action_msgs/msg/goal_status_array.h:
 
+/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/object_color__type_support.hpp:
+
+/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/link_padding__traits.hpp:
+
+/opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/collector/metric_details_interface.hpp:
+
+/opt/ros/jazzy/include/action_msgs/action_msgs/srv/cancel_goal.hpp:
+
 /opt/ros/jazzy/include/moveit_core/moveit/robot_model/link_model.hpp:
 
 /opt/ros/jazzy/include/rcl_yaml_param_parser/rcl_yaml_param_parser/visibility_control.h:
@@ -3579,6 +3531,8 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 /opt/ros/jazzy/include/rclcpp_lifecycle/rclcpp_lifecycle/managed_entity.hpp:
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/point_stamped__traits.hpp:
+
+/home/mario/master_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/detach_msg__traits.hpp:
 
 /usr/include/c++/13/bits/requires_hosted.h:
 
@@ -3628,7 +3582,125 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 
 /opt/ros/jazzy/include/action_msgs/action_msgs/msg/detail/goal_status_array__builder.hpp:
 
+/opt/ros/jazzy/include/geometric_shapes/geometric_shapes/bodies.h:
+
+/usr/include/c++/13/tr1/riemann_zeta.tcc:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__builder.hpp:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/wrench_stamped__builder.hpp:
+
+/usr/include/c++/13/bits/functexcept.h:
+
+/opt/ros/jazzy/include/rosidl_dynamic_typesupport/rosidl_dynamic_typesupport/visibility_control.h:
+
+/usr/include/c++/13/bits/postypes.h:
+
+/opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/color_rgba__traits.hpp:
+
+/opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/moving_average_statistics/moving_average.hpp:
+
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/quaternion.hpp:
+
+/usr/include/c++/13/variant:
+
+/usr/include/c++/13/system_error:
+
+/opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__traits.hpp:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/any_executable.hpp:
+
+/opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__type_support.hpp:
+
+/usr/include/c++/13/cstddef:
+
+/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/joint_constraint__struct.hpp:
+
+/opt/ros/jazzy/include/service_msgs/service_msgs/msg/detail/service_event_info__struct.hpp:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose_with_covariance_stamped__type_support.hpp:
+
+/home/mario/master_ws/install/moveit_task_constructor_msgs/include/moveit_task_constructor_msgs/moveit_task_constructor_msgs/srv/detail/get_solution__builder.hpp:
+
+/opt/ros/jazzy/include/statistics_msgs/statistics_msgs/msg/detail/metrics_message__traits.hpp:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/transform_stamped__traits.hpp:
+
+/usr/include/eigen3/Eigen/src/Geometry/Quaternion.h:
+
+/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:
+
+/opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h:
+
+/opt/ros/jazzy/include/pluginlib/pluginlib/class_desc.hpp:
+
+/usr/include/fmt/core.h:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.hpp:
+
+/opt/ros/jazzy/include/rclcpp_lifecycle/rclcpp_lifecycle/node_interfaces/lifecycle_node_interface.hpp:
+
+/usr/include/eigen3/Eigen/src/Core/arch/Default/Half.h:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/pose.hpp:
+
+/opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.hpp:
+
+/home/mario/master_ws/install/moveit_task_constructor_msgs/include/moveit_task_constructor_msgs/moveit_task_constructor_msgs/action/detail/execute_task_solution__builder.hpp:
+
+/usr/include/eigen3/Eigen/src/SVD/UpperBidiagonalization.h:
+
+/home/mario/master_ws/install/moveit_task_constructor_core/include/moveit/task_constructor/solvers.h:
+
+/usr/include/string.h:
+
+/usr/include/c++/13/bits/stl_deque.h:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/quaternion_stamped__traits.hpp:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/get_node_base_interface.hpp:
+
+/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/motion_plan_request__type_support.hpp:
+
+/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/allowed_collision_matrix__traits.hpp:
+
+/opt/ros/jazzy/include/type_description_interfaces/type_description_interfaces/srv/detail/get_type_description__functions.h:
+
+/opt/ros/jazzy/include/action_msgs/action_msgs/msg/rosidl_generator_cpp__visibility_control.hpp:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp:
+
+/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/set_parameters_result__builder.hpp:
+
+/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/bounding_volume__struct.hpp:
+
+/home/mario/master_ws/install/moveit_task_constructor_core/include/moveit/task_constructor/introspection.h:
+
+/home/mario/master_ws/install/moveit_task_constructor_msgs/include/moveit_task_constructor_msgs/moveit_task_constructor_msgs/msg/detail/task_description__traits.hpp:
+
+/usr/include/stdio.h:
+
+/opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__traits.hpp:
+
+/home/mario/master_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp:
+
+/usr/include/c++/13/cctype:
+
+/opt/ros/jazzy/include/rcpputils/rcpputils/scope_exit.hpp:
+
+/opt/ros/jazzy/include/srdfdom/srdfdom/visibility_control.h:
+
+/usr/include/c++/13/new:
+
+/opt/ros/jazzy/include/ament_index_cpp/ament_index_cpp/get_resources.hpp:
+
+/opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/received_message_period.hpp:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h:
+
+/opt/ros/jazzy/include/shape_msgs/shape_msgs/msg/detail/plane__traits.hpp:
+
+/opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp:
 
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/pipeline_state__struct.hpp:
 
@@ -3730,13 +3802,29 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/subscription_base.hpp:
 
+/usr/include/c++/13/cwchar:
+
+/home/mario/master_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/detach_msg__struct.hpp:
+
+/opt/ros/jazzy/include/urdf/urdf/visibility_control.hpp:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/point__builder.hpp:
+
+/opt/ros/jazzy/include/rcl/rcl/types.h:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/quaternion_stamped__type_support.hpp:
+
+/opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/detail/compressed_image__struct.hpp:
+
+/home/mario/master_ws/install/moveit_task_constructor_msgs/include/moveit_task_constructor_msgs/moveit_task_constructor_msgs/srv/detail/get_solution__type_support.hpp:
+
+/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/list_parameters__struct.hpp:
+
 /opt/ros/jazzy/include/lifecycle_msgs/lifecycle_msgs/msg/detail/transition__struct.h:
 
 /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/field__struct.h:
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose__builder.hpp:
-
-/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/transform__struct.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
@@ -3774,6 +3862,10 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose_with_covariance__builder.hpp:
 
+/usr/include/c++/13/bits/deque.tcc:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/executor_options.hpp:
+
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose_with_covariance__struct.hpp:
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose_with_covariance__traits.hpp:
@@ -3806,6 +3898,8 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/twist_stamped__traits.hpp:
 
+/opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/received_message_age.hpp:
+
 /usr/include/eigen3/Eigen/src/Core/ConditionEstimator.h:
 
 /usr/include/c++/13/ext/numeric_traits.h:
@@ -3825,12 +3919,6 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/transform__traits.hpp:
-
-/usr/include/c++/13/bits/postypes.h:
-
-/opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/color_rgba__traits.hpp:
-
-/opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/moving_average_statistics/moving_average.hpp:
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/transform_stamped__struct.hpp:
 
@@ -3866,6 +3954,18 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 
 /opt/ros/jazzy/include/rcutils/rcutils/shared_library.h:
 
+/usr/lib/gcc/x86_64-linux-gnu/13/include/float.h:
+
+/home/mario/master_ws/install/moveit_task_constructor_msgs/include/moveit_task_constructor_msgs/moveit_task_constructor_msgs/msg/detail/property__struct.hpp:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/twist_stamped__type_support.hpp:
+
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_hash.h:
+
+/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/cartesian_trajectory__traits.hpp:
+
+/opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/color_rgba__builder.hpp:
+
 /usr/include/c++/13/bits/regex.h:
 
 /opt/ros/jazzy/include/ament_index_cpp/ament_index_cpp/visibility_control.h:
@@ -3880,21 +3980,9 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 
 /opt/ros/jazzy/include/rclcpp_action/rclcpp_action/server_goal_handle.hpp:
 
-/usr/lib/gcc/x86_64-linux-gnu/13/include/float.h:
-
-/home/mario/master_ws/install/moveit_task_constructor_msgs/include/moveit_task_constructor_msgs/moveit_task_constructor_msgs/msg/detail/property__struct.hpp:
-
-/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/twist_stamped__type_support.hpp:
-
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_hash.h:
-
-/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/cartesian_trajectory__traits.hpp:
-
-/opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/color_rgba__builder.hpp:
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/vector3.hpp:
 
 /opt/ros/jazzy/include/rmw/rmw/domain_id.h:
-
-/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/vector3.hpp:
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__traits.hpp:
 
@@ -3950,44 +4038,6 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/constraints__traits.hpp:
 
-/opt/ros/jazzy/include/action_msgs/action_msgs/srv/cancel_goal.hpp:
-
-/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/object_color__type_support.hpp:
-
-/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/link_padding__traits.hpp:
-
-/opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/collector/metric_details_interface.hpp:
-
-/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/move_it_error_codes__struct.hpp:
-
-/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/set_parameters_result.hpp:
-
-/opt/ros/jazzy/include/rclcpp_action/rclcpp_action/client.hpp:
-
-/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/wrench__struct.hpp:
-
-/home/mario/master_ws/install/moveit_task_constructor_core/include/moveit/task_constructor/stages/connect.h:
-
-/opt/ros/jazzy/include/std_msgs/std_msgs/msg/color_rgba.hpp:
-
-/opt/ros/jazzy/include/moveit_core/moveit/kinematics_base/kinematics_base.hpp:
-
-/opt/ros/jazzy/include/rmw/rmw/discovery_options.h:
-
-/opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/moving_average_statistics/types.hpp:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/waitable.hpp:
-
-/opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/received_message_age.hpp:
-
-/opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp:
-
-/opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/received_message_period.hpp:
-
-/usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h:
-
-/opt/ros/jazzy/include/shape_msgs/shape_msgs/msg/detail/plane__traits.hpp:
-
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/motion_plan_detailed_response.hpp:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/set_parameters__type_support.hpp:
@@ -4019,6 +4069,12 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 /usr/include/c++/13/bits/regex.tcc:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/list_parameters.hpp:
+
+/usr/include/fmt/ranges.h:
+
+/usr/include/boost/type_traits/conditional.hpp:
+
+/opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/empty__type_support.hpp:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/set_parameters__struct.hpp:
 
@@ -4118,12 +4174,6 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 
 /usr/include/boost/type_traits/is_volatile.hpp:
 
-/opt/ros/jazzy/include/moveit_core/moveit/utils/moveit_error_code.hpp:
-
-/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/twist_stamped.hpp:
-
-/usr/include/c++/13/bits/concept_check.h:
-
 /opt/ros/jazzy/include/moveit_ros_planning/moveit_planning_pipeline_export.h:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/executors/executor_entities_collection.hpp:
@@ -4198,8 +4248,6 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/node.hpp:
 
-/usr/include/c++/13/bits/enable_special_members.h:
-
 /opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/get_node_clock_interface.hpp:
 
 /opt/ros/jazzy/include/trajectory_msgs/trajectory_msgs/msg/detail/joint_trajectory_point__traits.hpp:
@@ -4249,6 +4297,8 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 /opt/ros/jazzy/include/tf2/tf2/LinearMath/Vector3.hpp:
 
 /usr/include/c++/13/bits/regex_error.h:
+
+/opt/ros/jazzy/include/std_msgs/std_msgs/msg/empty.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_timers_interface_traits.hpp:
 
@@ -4456,6 +4506,8 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 
 /opt/ros/jazzy/include/rmw/rmw/events_statuses/events_statuses.h:
 
+/opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/string__traits.hpp:
+
 /opt/ros/jazzy/include/rmw/rmw/events_statuses/incompatible_type.h:
 
 /opt/ros/jazzy/include/rmw/rmw/events_statuses/liveliness_changed.h:
@@ -4486,9 +4538,9 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 
 /opt/ros/jazzy/include/shape_msgs/shape_msgs/msg/detail/mesh__struct.hpp:
 
-/home/mario/master_ws/install/moveit_task_constructor_msgs/include/moveit_task_constructor_msgs/moveit_task_constructor_msgs/msg/task_description.hpp:
-
 /opt/ros/jazzy/include/rcl/rcl/timer.h:
+
+/home/mario/master_ws/install/moveit_task_constructor_msgs/include/moveit_task_constructor_msgs/moveit_task_constructor_msgs/msg/task_description.hpp:
 
 /opt/ros/jazzy/include/rmw/rmw/localhost.h:
 
@@ -4507,6 +4559,18 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 /opt/ros/jazzy/include/rmw/rmw/ret_types.h:
 
 /opt/ros/jazzy/include/rmw/rmw/security_options.h:
+
+/usr/include/c++/13/bits/fs_ops.h:
+
+/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/motion_plan_detailed_response__traits.hpp:
+
+/home/mario/master_ws/install/moveit_task_constructor_msgs/include/moveit_task_constructor_msgs/moveit_task_constructor_msgs/srv/detail/get_solution__struct.hpp:
+
+/opt/ros/jazzy/include/rosidl_runtime_cpp/rosidl_runtime_cpp/service_type_support_decl.hpp:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/node_impl.hpp:
+
+/opt/ros/jazzy/include/rmw/rmw/subscription_content_filter_options.h:
 
 /usr/include/c++/13/bits/fs_dir.h:
 
@@ -4636,12 +4700,6 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 
 /opt/ros/jazzy/include/statistics_msgs/statistics_msgs/msg/detail/metrics_message__builder.hpp:
 
-/usr/include/c++/13/cctype:
-
-/opt/ros/jazzy/include/rcpputils/rcpputils/scope_exit.hpp:
-
-/opt/ros/jazzy/include/srdfdom/srdfdom/visibility_control.h:
-
 /opt/ros/jazzy/include/statistics_msgs/statistics_msgs/msg/detail/metrics_message__struct.hpp:
 
 /usr/include/c++/13/bits/std_function.h:
@@ -4655,6 +4713,34 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 /opt/ros/jazzy/include/statistics_msgs/statistics_msgs/msg/rosidl_generator_cpp__visibility_control.hpp:
 
 /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/color_rgba__type_support.hpp:
+
+/opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/empty__builder.hpp:
+
+/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/planning_scene__traits.hpp:
+
+/usr/include/boost/assert/source_location.hpp:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/detail/qos_parameters.hpp:
+
+/opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/empty__struct.hpp:
+
+/usr/include/c++/13/bits/ranges_base.h:
+
+/opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/empty__traits.hpp:
+
+/usr/include/c++/13/bits/basic_string.h:
+
+/usr/include/c++/13/bits/stl_pair.h:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_timers_interface.hpp:
+
+/opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/string__struct.hpp:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/transform__struct.hpp:
+
+/opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/string__type_support.hpp:
+
+/opt/ros/jazzy/include/std_msgs/std_msgs/msg/string.hpp:
 
 /opt/ros/jazzy/include/tracetools/tracetools/utils.hpp:
 
@@ -4762,8 +4848,6 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 
 /opt/ros/jazzy/include/urdf/urdf/model.h:
 
-/opt/ros/jazzy/include/urdf/urdf/visibility_control.hpp:
-
 /opt/ros/jazzy/include/urdfdom_headers/urdf_model/color.h:
 
 /usr/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h:
@@ -4809,10 +4893,6 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/wrench.hpp:
 
 /usr/include/boost/config.hpp:
-
-/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/planning_scene__traits.hpp:
-
-/usr/include/boost/assert/source_location.hpp:
 
 /usr/include/boost/config/detail/cxx_composite.hpp:
 
@@ -4892,6 +4972,8 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/twist__type_support.hpp:
 
+/opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/string__builder.hpp:
+
 /usr/include/boost/random/uniform_01.hpp:
 
 /usr/include/boost/random/uniform_int.hpp:
@@ -4942,10 +5024,6 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 
 /usr/include/boost/type_traits/is_floating_point.hpp:
 
-/opt/ros/jazzy/include/tf2/tf2/LinearMath/Quaternion.h:
-
-/usr/include/c++/13/bits/codecvt.h:
-
 /usr/include/boost/type_traits/is_function.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_time_source_interface.hpp:
@@ -4991,33 +5069,3 @@ CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o: /home/mario/master_ws/src/estun_co
 /usr/include/c++/13/bits/atomic_base.h:
 
 /usr/include/c++/13/bits/atomic_lockfree_defines.h:
-
-/usr/include/c++/13/bits/basic_string.h:
-
-/opt/ros/jazzy/include/moveit_ros_planning/moveit/planning_pipeline/planning_pipeline.hpp:
-
-/usr/include/c++/13/bits/chrono_io.h:
-
-/usr/include/c++/13/bits/cxxabi_forced.h:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/executor_options.hpp:
-
-/usr/include/c++/13/bits/deque.tcc:
-
-/usr/include/c++/13/bits/exception.h:
-
-/usr/include/c++/13/bits/stl_construct.h:
-
-/usr/include/c++/13/bits/fs_fwd.h:
-
-/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/motion_plan_detailed_response__traits.hpp:
-
-/home/mario/master_ws/install/moveit_task_constructor_msgs/include/moveit_task_constructor_msgs/moveit_task_constructor_msgs/srv/detail/get_solution__struct.hpp:
-
-/opt/ros/jazzy/include/rosidl_runtime_cpp/rosidl_runtime_cpp/service_type_support_decl.hpp:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/node_impl.hpp:
-
-/opt/ros/jazzy/include/rmw/rmw/subscription_content_filter_options.h:
-
-/usr/include/c++/13/bits/fs_ops.h:

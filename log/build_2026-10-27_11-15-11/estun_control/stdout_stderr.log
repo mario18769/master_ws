@@ -1,0 +1,56 @@
+[ 33%] Built target cartesian_planner
+[ 66%] Built target obstacle_planner
+[ 83%] [32mBuilding CXX object CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o[0m
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:2[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:3[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In constructor ‘[01m[KMTCTaskNode::[01;32m[KMTCTaskNode[m[K(const rclcpp::NodeOptions&)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:30:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass MTCTaskNode[m[K’ has no member named ‘[01m[Kcreate_publisher[m[K’
+   30 |     attach_pub_ = this->[01;31m[Kcreate_publisher[m[K<robot_interfaces::msg::DetachMsg>("/Probekoerper1/attach",10);
+      |                         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:30:74:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+   30 |     attach_pub_ = this->create_publisher<robot_interfaces::msg::DetachMsg[01;31m[K>[m[K("/Probekoerper1/attach",10);
+      |                                                                          [01;31m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:30:76:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+   30 |     attach_pub_ = this->create_publisher<robot_interfaces::msg::DetachMsg>([01;35m[K"/Probekoerper1/attach"[m[K,10);
+      |                                                                            [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:31:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass MTCTaskNode[m[K’ has no member named ‘[01m[Kcreate_publisher[m[K’
+   31 |     detach_pub_ = this->[01;31m[Kcreate_publisher[m[K<robot_interfaces::msg::DetachMsg>("/Probekoerper1/detach",10);
+      |                         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:31:74:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+   31 |     detach_pub_ = this->create_publisher<robot_interfaces::msg::DetachMsg[01;31m[K>[m[K("/Probekoerper1/detach",10);
+      |                                                                          [01;31m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:31:76:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+   31 |     detach_pub_ = this->create_publisher<robot_interfaces::msg::DetachMsg>([01;35m[K"/Probekoerper1/detach"[m[K,10);
+      |                                                                            [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:28:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Koptions[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   28 |   MTCTaskNode([01;35m[Kconst rclcpp::NodeOptions& options[m[K){
+      |               [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K At global scope:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:64:1:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[KMTCTaskNode::[01;32m[KMTCTaskNode[m[K(const rclcpp::NodeOptions&)[m[K’
+   64 | [01;31m[KMTCTaskNode[m[K::MTCTaskNode(const rclcpp::NodeOptions& options): node_{ std::make_shared<rclcpp::Node>("mtc_node", options) }{} //Initialisierung des Knotens --> : leitet Initialisierungsliste ein , MTCTaskNode = Konstruktor aus obiger Klasse
+      | [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:28:3:[m[K [01;36m[Knote: [m[K‘[01m[KMTCTaskNode::[01;32m[KMTCTaskNode[m[K(const rclcpp::NodeOptions&)[m[K’ previously defined here
+   28 |   [01;36m[KMTCTaskNode[m[K(const rclcpp::NodeOptions& options){
+      |   [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:64:123:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K{[m[K’ token
+   64 | CTaskNode::MTCTaskNode(const rclcpp::NodeOptions& options): node_{ std::make_shared<rclcpp::Node>("mtc_node", options) }[01;31m[K{[m[K} //Initialisierung des Knotens --> : leitet Initialisierungsliste ein , MTCTaskNode = Konstruktor aus obiger Klasse
+      |                                                                                                                         [01;31m[K^[m[K
+
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kmoveit::task_constructor::Task MTCTaskNode::[01;32m[KcreateTask[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:329:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kattach[m[K’ was not declared in this scope; did you mean ‘[01m[Katanh[m[K’?
+  329 |             attach_pub_->publish([01;31m[Kattach[m[K);
+      |                                  [01;31m[K^~~~~~[m[K
+      |                                  [32m[Katanh[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:433:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kdetach[m[K’ was not declared in this scope; did you mean ‘[01m[Kdetail[m[K’?
+  433 |             detach_pub_->publish([01;31m[Kdetach[m[K);
+      |                                  [01;31m[K^~~~~~[m[K
+      |                                  [32m[Kdetail[m[K
+gmake[2]: *** [CMakeFiles/mtc_estun.dir/build.make:76: CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o] Fehler 1
+gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/mtc_estun.dir/all] Fehler 2
+gmake: *** [Makefile:146: all] Fehler 2

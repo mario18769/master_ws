@@ -86,6 +86,7 @@ rosidl_generator_rs/robot_interfaces/rust/src/lib.rs: /opt/ros/jazzy/share/rosid
 rosidl_generator_rs/robot_interfaces/rust/src/lib.rs: /opt/ros/jazzy/share/rosidl_generator_rs/resource/templates/srv_idiomatic.rs.em
 rosidl_generator_rs/robot_interfaces/rust/src/lib.rs: /opt/ros/jazzy/share/rosidl_generator_rs/resource/templates/srv_rmw.rs.em
 rosidl_generator_rs/robot_interfaces/rust/src/lib.rs: rosidl_adapter/robot_interfaces/msg/ObjectPose.idl
+rosidl_generator_rs/robot_interfaces/rust/src/lib.rs: rosidl_adapter/robot_interfaces/msg/DetachMsg.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/mario/master_ws/build/robot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Rust code for ROS interfaces"
 	cd /home/mario/master_ws/build/robot_interfaces/robot_interfaces__rs && /usr/bin/python3 /opt/ros/jazzy/share/rosidl_generator_rs/cmake/../../../lib/rosidl_generator_rs/rosidl_generator_rs --generator-arguments-file /home/mario/master_ws/build/robot_interfaces/rosidl_generator_rs__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
 

@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "/home/mario/master_ws/build/robot_interfaces/rosidl_generator_py/robot_interfaces/_robot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/mario/master_ws/build/robot_interfaces/rosidl_generator_py/robot_interfaces/_robot_interfaces_s.ep.rosidl_typesupport_introspection_c.c"
   "/home/mario/master_ws/build/robot_interfaces/rosidl_generator_py/robot_interfaces/msg/__init__.py"
+  "/home/mario/master_ws/build/robot_interfaces/rosidl_generator_py/robot_interfaces/msg/_detach_msg.py"
+  "/home/mario/master_ws/build/robot_interfaces/rosidl_generator_py/robot_interfaces/msg/_detach_msg_s.c"
   "/home/mario/master_ws/build/robot_interfaces/rosidl_generator_py/robot_interfaces/msg/_object_pose.py"
   "/home/mario/master_ws/build/robot_interfaces/rosidl_generator_py/robot_interfaces/msg/_object_pose_s.c"
   "CMakeFiles/robot_interfaces__py"

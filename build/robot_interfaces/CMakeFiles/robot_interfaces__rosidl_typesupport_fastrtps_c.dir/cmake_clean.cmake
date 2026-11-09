@@ -1,8 +1,12 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robot_interfaces/msg/detail/detach_msg__type_support_c.cpp.o"
+  "CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robot_interfaces/msg/detail/detach_msg__type_support_c.cpp.o.d"
   "CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robot_interfaces/msg/detail/object_pose__type_support_c.cpp.o"
   "CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robot_interfaces/msg/detail/object_pose__type_support_c.cpp.o.d"
   "librobot_interfaces__rosidl_typesupport_fastrtps_c.pdb"
   "librobot_interfaces__rosidl_typesupport_fastrtps_c.so"
+  "rosidl_typesupport_fastrtps_c/robot_interfaces/msg/detail/detach_msg__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/robot_interfaces/msg/detail/detach_msg__type_support_c.cpp"
   "rosidl_typesupport_fastrtps_c/robot_interfaces/msg/detail/object_pose__rosidl_typesupport_fastrtps_c.h"
   "rosidl_typesupport_fastrtps_c/robot_interfaces/msg/detail/object_pose__type_support_c.cpp"
 )

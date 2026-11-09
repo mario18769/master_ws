@@ -67,6 +67,7 @@ include CMakeFiles/robot_interfaces.dir/compiler_depend.make
 include CMakeFiles/robot_interfaces.dir/progress.make
 
 CMakeFiles/robot_interfaces: /home/mario/master_ws/src/robot_interfaces/msg/ObjectPose.msg
+CMakeFiles/robot_interfaces: /home/mario/master_ws/src/robot_interfaces/msg/DetachMsg.msg
 
 robot_interfaces: CMakeFiles/robot_interfaces
 robot_interfaces: CMakeFiles/robot_interfaces.dir/build.make

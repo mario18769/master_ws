@@ -168,3 +168,56 @@ impl rosidl_runtime_rs::Message for ObjectPose {
 }
 
 
+// Corresponds to robot_interfaces__msg__DetachMsg
+
+// This struct is not documented.
+#[allow(missing_docs)]
+
+#[cfg_attr(feature = "serde", derive(Deserialize, Serialize))]
+#[derive(Clone, Debug, PartialEq, PartialOrd)]
+pub struct DetachMsg {
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub attach_msg: std::string::String,
+
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub detach_msg: std::string::String,
+
+}
+
+
+
+impl Default for DetachMsg {
+  fn default() -> Self {
+    <Self as rosidl_runtime_rs::Message>::from_rmw_message(super::msg::rmw::DetachMsg::default())
+  }
+}
+
+impl rosidl_runtime_rs::Message for DetachMsg {
+  type RmwMsg = super::msg::rmw::DetachMsg;
+
+  fn into_rmw_message(msg_cow: std::borrow::Cow<'_, Self>) -> std::borrow::Cow<'_, Self::RmwMsg> {
+    match msg_cow {
+      std::borrow::Cow::Owned(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
+        attach_msg: msg.attach_msg.as_str().into(),
+        detach_msg: msg.detach_msg.as_str().into(),
+      }),
+      std::borrow::Cow::Borrowed(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
+        attach_msg: msg.attach_msg.as_str().into(),
+        detach_msg: msg.detach_msg.as_str().into(),
+      })
+    }
+  }
+
+  fn from_rmw_message(msg: Self::RmwMsg) -> Self {
+    Self {
+      attach_msg: msg.attach_msg.to_string(),
+      detach_msg: msg.detach_msg.to_string(),
+    }
+  }
+}
+
+

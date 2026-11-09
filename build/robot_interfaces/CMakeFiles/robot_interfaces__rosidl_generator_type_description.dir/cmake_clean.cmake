@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/robot_interfaces__rosidl_generator_type_description"
+  "rosidl_generator_type_description/robot_interfaces/msg/DetachMsg.json"
   "rosidl_generator_type_description/robot_interfaces/msg/ObjectPose.json"
 )
 

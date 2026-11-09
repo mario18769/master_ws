@@ -1,0 +1,687 @@
+[ 33%] Built target cartesian_planner
+[ 50%] [32mBuilding CXX object CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o[0m
+[ 83%] Built target obstacle_planner
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:3[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:4[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kvoid MTCTaskNode::[01;32m[KgetObjects[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:89:84:[m[K [01;31m[Kerror: [m[Kconversion from ‘[01m[Kvoid[m[K’ to non-scalar type ‘[01m[Kstd::map<std::__cxx11::basic_string<char>, moveit_msgs::msg::CollisionObject_<std::allocator<void> > >[m[K’ requested
+   89 |   std::map<std::string, moveit_msgs::msg::CollisionObject> Object_list = [01;31m[KgetObjects()[m[K;
+      |                                                                          [01;31m[K~~~~~~~~~~^~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:90:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kstring[m[K’ was not declared in this scope
+   90 |   std::vector<[01;31m[Kstring[m[K> object_id; std::vector<float> object_distance;
+      |               [01;31m[K^~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:90:15:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+In file included from [01m[K/usr/include/c++/13/iosfwd:41[m[K,
+                 from [01m[K/usr/include/c++/13/ios:40[m[K,
+                 from [01m[K/usr/include/c++/13/ostream:40[m[K,
+                 from [01m[K/usr/include/c++/13/bits/unique_ptr.h:42[m[K,
+                 from [01m[K/usr/include/c++/13/memory:78[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:173[m[K,
+                 from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1[m[K:
+[01m[K/usr/include/c++/13/bits/stringfwd.h:77:33:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::string[m[K’
+   77 |   typedef basic_string<char>    [01;36m[Kstring[m[K;
+      |                                 [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/c++/13/bits/locale_classes.h:40[m[K,
+                 from [01m[K/usr/include/c++/13/bits/ios_base.h:41[m[K,
+                 from [01m[K/usr/include/c++/13/ios:44[m[K:
+[01m[K/usr/include/c++/13/string:66:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::pmr::string[m[K’
+   66 |     using [01;36m[Kstring[m[K    = basic_string<char>;
+      |           [01;36m[K^~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:90:21:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   90 |   std::vector<string[01;31m[K>[m[K object_id; std::vector<float> object_distance;
+      |                     [01;31m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:90:21:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:100:14:[m[K [01;31m[Kerror: [m[Kinvalid types ‘[01m[Kint[int][m[K’ for array subscript
+  100 |     object_id[01;31m[K[[m[Ki] = iterator.second.id;
+      |              [01;31m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:13:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator<<[m[K’ (operand types are ‘[01m[Kstd::ostream[m[K’ {aka ‘[01m[Kstd::basic_ostream<char>[m[K’} and ‘[01m[Kstd::vector<float>[m[K’)
+  106 |   [32m[Kstd::cout[m[K [01;31m[K<<[m[K[34m[Kobject_distance[m[K << std::endl;
+      |   [32m[K~~~~~~~~~[m[K [01;31m[K^~[m[K[34m[K~~~~~~~~~~~~~~~[m[K
+      |        [32m[K|[m[K      [34m[K|[m[K
+      |        [32m[K|[m[K      [34m[Kstd::vector<float>[m[K
+      |        [32m[Kstd::ostream {aka std::basic_ostream<char>}[m[K
+[01m[K/usr/include/c++/13/ostream:110:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::[01;32m[Koperator<<[m[K(__ostream_type& (*)(__ostream_type&)) [35m[K[with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>][m[K[m[K’
+  110 |       [01;36m[Koperator[m[K<<(__ostream_type& (*__pf)(__ostream_type&))
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:110:36:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<float>[m[K’ to ‘[01m[Kstd::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&)[m[K’ {aka ‘[01m[Kstd::basic_ostream<char>& (*)(std::basic_ostream<char>&)[m[K’}
+  110 |       operator<<([01;36m[K__ostream_type& (*__pf)(__ostream_type&)[m[K)
+      |                  [01;36m[K~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:119:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::[01;32m[Koperator<<[m[K(__ios_type& (*)(__ios_type&)) [35m[K[with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>; __ios_type = std::basic_ios<char>][m[K[m[K’
+  119 |       [01;36m[Koperator[m[K<<(__ios_type& (*__pf)(__ios_type&))
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:119:32:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<float>[m[K’ to ‘[01m[Kstd::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&)[m[K’ {aka ‘[01m[Kstd::basic_ios<char>& (*)(std::basic_ios<char>&)[m[K’}
+  119 |       operator<<([01;36m[K__ios_type& (*__pf)(__ios_type&)[m[K)
+      |                  [01;36m[K~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:129:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::[01;32m[Koperator<<[m[K(std::ios_base& (*)(std::ios_base&)) [35m[K[with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>][m[K[m[K’
+  129 |       [01;36m[Koperator[m[K<<(ios_base& (*__pf) (ios_base&))
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:129:30:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<float>[m[K’ to ‘[01m[Kstd::ios_base& (*)(std::ios_base&)[m[K’
+  129 |       operator<<([01;36m[Kios_base& (*__pf) (ios_base&)[m[K)
+      |                  [01;36m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:168:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::[01;32m[Koperator<<[m[K(long int) [35m[K[with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>][m[K[m[K’
+  168 |       [01;36m[Koperator[m[K<<(long __n)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:168:23:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<float>[m[K’ to ‘[01m[Klong int[m[K’
+  168 |       operator<<([01;36m[Klong __n[m[K)
+      |                  [01;36m[K~~~~~^~~[m[K
+[01m[K/usr/include/c++/13/ostream:172:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::[01;32m[Koperator<<[m[K(long unsigned int) [35m[K[with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>][m[K[m[K’
+  172 |       [01;36m[Koperator[m[K<<(unsigned long __n)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:172:32:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<float>[m[K’ to ‘[01m[Klong unsigned int[m[K’
+  172 |       operator<<([01;36m[Kunsigned long __n[m[K)
+      |                  [01;36m[K~~~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/13/ostream:176:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::[01;32m[Koperator<<[m[K(bool) [35m[K[with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>][m[K[m[K’
+  176 |       [01;36m[Koperator[m[K<<(bool __n)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:176:23:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<float>[m[K’ to ‘[01m[Kbool[m[K’
+  176 |       operator<<([01;36m[Kbool __n[m[K)
+      |                  [01;36m[K~~~~~^~~[m[K
+In file included from [01m[K/usr/include/c++/13/ostream:880[m[K:
+[01m[K/usr/include/c++/13/bits/ostream.tcc:96:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::[01;32m[Koperator<<[m[K(short int) [35m[K[with _CharT = char; _Traits = std::char_traits<char>][m[K[m[K’
+   96 |     [01;36m[Kbasic_ostream<_CharT, _Traits>[m[K::
+      |     [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/ostream.tcc:97:22:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<float>[m[K’ to ‘[01m[Kshort int[m[K’
+   97 |     operator<<([01;36m[Kshort __n[m[K)
+      |                [01;36m[K~~~~~~^~~[m[K
+[01m[K/usr/include/c++/13/ostream:183:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::[01;32m[Koperator<<[m[K(short unsigned int) [35m[K[with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>][m[K[m[K’
+  183 |       [01;36m[Koperator[m[K<<(unsigned short __n)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:183:33:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<float>[m[K’ to ‘[01m[Kshort unsigned int[m[K’
+  183 |       operator<<([01;36m[Kunsigned short __n[m[K)
+      |                  [01;36m[K~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/13/bits/ostream.tcc:110:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::[01;32m[Koperator<<[m[K(int) [35m[K[with _CharT = char; _Traits = std::char_traits<char>][m[K[m[K’
+  110 |     [01;36m[Kbasic_ostream<_CharT, _Traits>[m[K::
+      |     [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/ostream.tcc:111:20:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<float>[m[K’ to ‘[01m[Kint[m[K’
+  111 |     operator<<([01;36m[Kint __n[m[K)
+      |                [01;36m[K~~~~^~~[m[K
+[01m[K/usr/include/c++/13/ostream:194:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::[01;32m[Koperator<<[m[K(unsigned int) [35m[K[with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>][m[K[m[K’
+  194 |       [01;36m[Koperator[m[K<<(unsigned int __n)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:194:31:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<float>[m[K’ to ‘[01m[Kunsigned int[m[K’
+  194 |       operator<<([01;36m[Kunsigned int __n[m[K)
+      |                  [01;36m[K~~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/13/ostream:203:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::[01;32m[Koperator<<[m[K(long long int) [35m[K[with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>][m[K[m[K’
+  203 |       [01;36m[Koperator[m[K<<(long long __n)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:203:28:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<float>[m[K’ to ‘[01m[Klong long int[m[K’
+  203 |       operator<<([01;36m[Klong long __n[m[K)
+      |                  [01;36m[K~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/13/ostream:207:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::[01;32m[Koperator<<[m[K(long long unsigned int) [35m[K[with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>][m[K[m[K’
+  207 |       [01;36m[Koperator[m[K<<(unsigned long long __n)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:207:37:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<float>[m[K’ to ‘[01m[Klong long unsigned int[m[K’
+  207 |       operator<<([01;36m[Kunsigned long long __n[m[K)
+      |                  [01;36m[K~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/13/ostream:222:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::[01;32m[Koperator<<[m[K(double) [35m[K[with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>][m[K[m[K’
+  222 |       [01;36m[Koperator[m[K<<(double __f)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:222:25:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<float>[m[K’ to ‘[01m[Kdouble[m[K’
+  222 |       operator<<([01;36m[Kdouble __f[m[K)
+      |                  [01;36m[K~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/13/ostream:226:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::[01;32m[Koperator<<[m[K(float) [35m[K[with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>][m[K[m[K’
+  226 |       [01;36m[Koperator[m[K<<(float __f)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:226:24:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<float>[m[K’ to ‘[01m[Kfloat[m[K’
+  226 |       operator<<([01;36m[Kfloat __f[m[K)
+      |                  [01;36m[K~~~~~~^~~[m[K
+[01m[K/usr/include/c++/13/ostream:234:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::[01;32m[Koperator<<[m[K(long double) [35m[K[with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>][m[K[m[K’
+  234 |       [01;36m[Koperator[m[K<<(long double __f)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:234:30:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<float>[m[K’ to ‘[01m[Klong double[m[K’
+  234 |       operator<<([01;36m[Klong double __f[m[K)
+      |                  [01;36m[K~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/13/ostream:292:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::[01;32m[Koperator<<[m[K(const void*) [35m[K[with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>][m[K[m[K’
+  292 |       [01;36m[Koperator[m[K<<(const void* __p)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:292:30:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<float>[m[K’ to ‘[01m[Kconst void*[m[K’
+  292 |       operator<<([01;36m[Kconst void* __p[m[K)
+      |                  [01;36m[K~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/13/ostream:297:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::[01;32m[Koperator<<[m[K(std::nullptr_t) [35m[K[with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>; std::nullptr_t = std::nullptr_t][m[K[m[K’
+  297 |       [01;36m[Koperator[m[K<<(nullptr_t)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:297:18:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<float>[m[K’ to ‘[01m[Kstd::nullptr_t[m[K’
+  297 |       operator<<([01;36m[Knullptr_t[m[K)
+      |                  [01;36m[K^~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/ostream.tcc:124:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::[01;32m[Koperator<<[m[K(__streambuf_type*) [35m[K[with _CharT = char; _Traits = std::char_traits<char>; __streambuf_type = std::basic_streambuf<char>][m[K[m[K’
+  124 |     [01;36m[Kbasic_ostream<_CharT, _Traits>[m[K::
+      |     [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/ostream.tcc:125:34:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<float>[m[K’ to ‘[01m[Kstd::basic_ostream<char>::__streambuf_type*[m[K’ {aka ‘[01m[Kstd::basic_streambuf<char>*[m[K’}
+  125 |     operator<<([01;36m[K__streambuf_type* __sbin[m[K)
+      |                [01;36m[K~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+In file included from [01m[K/usr/include/c++/13/regex:68[m[K,
+                 from [01m[K/opt/ros/jazzy/include/pluginlib/pluginlib/impl/split.hpp:33[m[K,
+                 from [01m[K/opt/ros/jazzy/include/pluginlib/pluginlib/class_loader_imp.hpp:60[m[K,
+                 from [01m[K/opt/ros/jazzy/include/pluginlib/pluginlib/class_loader.hpp:334[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_ros_planning/moveit/planning_pipeline/planning_pipeline.hpp:47[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_ros_planning/moveit/planning_pipeline_interfaces/planning_pipeline_interfaces.hpp:43[m[K,
+                 from [01m[K/home/mario/master_ws/install/moveit_task_constructor_core/include/moveit/task_constructor/solvers/pipeline_planner.h:42[m[K,
+                 from [01m[K/home/mario/master_ws/install/moveit_task_constructor_core/include/moveit/task_constructor/solvers.h:43[m[K,
+                 from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:6[m[K:
+[01m[K/usr/include/c++/13/bits/regex.h:1715:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Ch_type, class _Ch_traits, class _Bi_iter> std::basic_ostream<_CharT, _Traits>& std::__cxx11::[01;32m[Koperator<<[m[K(std::basic_ostream<_CharT, _Traits>&, const sub_match<_Bi_iter>&)[m[K’
+ 1715 |     [01;36m[Koperator[m[K<<(basic_ostream<_Ch_type, _Ch_traits>& __os,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/regex.h:1715:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<float>[m[K’ is not derived from ‘[01m[Kconst std::__cxx11::sub_match<_Bi_iter>[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/13/bits/basic_string.h:47[m[K,
+                 from [01m[K/usr/include/c++/13/string:54[m[K:
+[01m[K/usr/include/c++/13/string_view:761:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, basic_string_view<_CharT, _Traits>)[m[K’
+  761 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/string_view:761:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<float>[m[K’ is not derived from ‘[01m[Kstd::basic_string_view<_CharT, _Traits>[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/basic_string.h:4032:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, const __cxx11::basic_string<_CharT, _Traits, _Allocator>&)[m[K’
+ 4032 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/basic_string.h:4032:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<float>[m[K’ is not derived from ‘[01m[Kconst std::__cxx11::basic_string<_CharT, _Traits, _Allocator>[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/13/bits/memory_resource.h:38[m[K,
+                 from [01m[K/usr/include/c++/13/string:58[m[K:
+[01m[K/usr/include/c++/13/cstddef:124:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IntegerType> constexpr std::__byte_op_t<_IntegerType> std::[01;32m[Koperator<<[m[K(byte, _IntegerType)[m[K’
+  124 |     [01;36m[Koperator[m[K<<(byte __b, _IntegerType __shift) noexcept
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/cstddef:124:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:8:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kstd::cout[m[K’ (type ‘[01m[Kstd::ostream[m[K’ {aka ‘[01m[Kstd::basic_ostream<char>[m[K’}) to type ‘[01m[Kstd::byte[m[K’
+  106 |   [01;36m[Kstd::cout[m[K <<object_distance << std::endl;
+      |   [01;36m[K~~~~~^~~~[m[K
+In file included from [01m[K/usr/include/c++/13/bits/ios_base.h:46[m[K:
+[01m[K/usr/include/c++/13/system_error:339:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, const error_code&)[m[K’
+  339 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, const error_code& __e)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/system_error:339:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kobject_distance[m[K’ (type ‘[01m[Kstd::vector<float>[m[K’) to type ‘[01m[Kconst std::error_code&[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:554:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, _CharT)[m[K’
+  554 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:554:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  deduced conflicting types for parameter ‘[01m[K_CharT[m[K’ (‘[01m[Kchar[m[K’ and ‘[01m[Kstd::vector<float>[m[K’)
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:564:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, char)[m[K’
+  564 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:564:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kobject_distance[m[K’ (type ‘[01m[Kstd::vector<float>[m[K’) to type ‘[01m[Kchar[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:570:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<char, _Traits>&, char)[m[K’
+  570 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, char __c)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:570:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kobject_distance[m[K’ (type ‘[01m[Kstd::vector<float>[m[K’) to type ‘[01m[Kchar[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:581:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<char, _Traits>&, signed char)[m[K’
+  581 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, signed char __c)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:581:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kobject_distance[m[K’ (type ‘[01m[Kstd::vector<float>[m[K’) to type ‘[01m[Ksigned char[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:586:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<char, _Traits>&, unsigned char)[m[K’
+  586 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:586:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kobject_distance[m[K’ (type ‘[01m[Kstd::vector<float>[m[K’) to type ‘[01m[Kunsigned char[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:595:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<char, _Traits>&, wchar_t)[m[K’ (deleted)
+  595 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>&, wchar_t) = delete;
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:595:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kobject_distance[m[K’ (type ‘[01m[Kstd::vector<float>[m[K’) to type ‘[01m[Kwchar_t[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:600:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<char, _Traits>&, char8_t)[m[K’ (deleted)
+  600 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>&, char8_t) = delete;
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:600:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kobject_distance[m[K’ (type ‘[01m[Kstd::vector<float>[m[K’) to type ‘[01m[Kchar8_t[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:605:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<char, _Traits>&, char16_t)[m[K’ (deleted)
+  605 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>&, char16_t) = delete;
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:605:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kobject_distance[m[K’ (type ‘[01m[Kstd::vector<float>[m[K’) to type ‘[01m[Kchar16_t[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:609:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<char, _Traits>&, char32_t)[m[K’ (deleted)
+  609 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>&, char32_t) = delete;
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:609:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kobject_distance[m[K’ (type ‘[01m[Kstd::vector<float>[m[K’) to type ‘[01m[Kchar32_t[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:615:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<wchar_t, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<wchar_t, _Traits>&, char8_t)[m[K’ (deleted)
+  615 |     [01;36m[Koperator[m[K<<(basic_ostream<wchar_t, _Traits>&, char8_t) = delete;
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:615:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kwchar_t[m[K’ and ‘[01m[Kchar[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:620:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<wchar_t, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<wchar_t, _Traits>&, char16_t)[m[K’ (deleted)
+  620 |     [01;36m[Koperator[m[K<<(basic_ostream<wchar_t, _Traits>&, char16_t) = delete;
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:620:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kwchar_t[m[K’ and ‘[01m[Kchar[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:624:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<wchar_t, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<wchar_t, _Traits>&, char32_t)[m[K’ (deleted)
+  624 |     [01;36m[Koperator[m[K<<(basic_ostream<wchar_t, _Traits>&, char32_t) = delete;
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:624:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kwchar_t[m[K’ and ‘[01m[Kchar[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:645:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, const _CharT*)[m[K’
+  645 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:645:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst _CharT*[m[K’ and ‘[01m[Kstd::vector<float>[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/ostream.tcc:307:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, const char*)[m[K’
+  307 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/ostream.tcc:307:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kobject_distance[m[K’ (type ‘[01m[Kstd::vector<float>[m[K’) to type ‘[01m[Kconst char*[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:662:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<char, _Traits>&, const char*)[m[K’
+  662 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, const char* __s)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:662:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kobject_distance[m[K’ (type ‘[01m[Kstd::vector<float>[m[K’) to type ‘[01m[Kconst char*[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:675:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<char, _Traits>&, const signed char*)[m[K’
+  675 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:675:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kobject_distance[m[K’ (type ‘[01m[Kstd::vector<float>[m[K’) to type ‘[01m[Kconst signed char*[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:680:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<char, _Traits>&, const unsigned char*)[m[K’
+  680 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:680:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kobject_distance[m[K’ (type ‘[01m[Kstd::vector<float>[m[K’) to type ‘[01m[Kconst unsigned char*[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:689:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<char, _Traits>&, const wchar_t*)[m[K’ (deleted)
+  689 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>&, const wchar_t*) = delete;
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:689:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kobject_distance[m[K’ (type ‘[01m[Kstd::vector<float>[m[K’) to type ‘[01m[Kconst wchar_t*[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:694:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<char, _Traits>&, const char8_t*)[m[K’ (deleted)
+  694 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>&, const char8_t*) = delete;
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:694:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kobject_distance[m[K’ (type ‘[01m[Kstd::vector<float>[m[K’) to type ‘[01m[Kconst char8_t*[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:699:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<char, _Traits>&, const char16_t*)[m[K’ (deleted)
+  699 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>&, const char16_t*) = delete;
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:699:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kobject_distance[m[K’ (type ‘[01m[Kstd::vector<float>[m[K’) to type ‘[01m[Kconst char16_t*[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:703:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<char, _Traits>&, const char32_t*)[m[K’ (deleted)
+  703 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>&, const char32_t*) = delete;
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:703:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kobject_distance[m[K’ (type ‘[01m[Kstd::vector<float>[m[K’) to type ‘[01m[Kconst char32_t*[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:709:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<wchar_t, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<wchar_t, _Traits>&, const char8_t*)[m[K’ (deleted)
+  709 |     [01;36m[Koperator[m[K<<(basic_ostream<wchar_t, _Traits>&, const char8_t*) = delete;
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:709:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kwchar_t[m[K’ and ‘[01m[Kchar[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:714:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<wchar_t, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<wchar_t, _Traits>&, const char16_t*)[m[K’ (deleted)
+  714 |     [01;36m[Koperator[m[K<<(basic_ostream<wchar_t, _Traits>&, const char16_t*) = delete;
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:714:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kwchar_t[m[K’ and ‘[01m[Kchar[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:718:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<wchar_t, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<wchar_t, _Traits>&, const char32_t*)[m[K’ (deleted)
+  718 |     [01;36m[Koperator[m[K<<(basic_ostream<wchar_t, _Traits>&, const char32_t*) = delete;
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:718:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kwchar_t[m[K’ and ‘[01m[Kchar[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:801:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Ostream, class _Tp> _Ostream&& std::[01;32m[Koperator<<[m[K(_Ostream&&, const _Tp&)[m[K’
+  801 |     [01;36m[Koperator[m[K<<(_Ostream&& __os, const _Tp& __x)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:801:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+/usr/include/c++/13/ostream: In substitution of ‘[01m[Ktemplate<class _Ostream, class _Tp> _Ostream&& std::[01;32m[Koperator<<[m[K(_Ostream&&, const _Tp&) [35m[K[with _Ostream = std::basic_ostream<char>&; _Tp = std::vector<float>][m[K[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K   required from here
+[01m[K/usr/include/c++/13/ostream:801:5:[m[K [01;31m[Kerror: [m[Ktemplate constraint failure for ‘[01m[Ktemplate<class _Os, class _Tp>  requires (__derived_from_ios_base<_Os>) && requires(_Os& __os, const _Tp& __t) {__os << __t;} using std::__rvalue_stream_insertion_t = _Os&&[m[K’
+[01m[K/usr/include/c++/13/ostream:801:5:[m[K [01;36m[Knote: [m[Kconstraints not satisfied
+/usr/include/c++/13/ostream: In substitution of ‘[01m[Ktemplate<class _Os, class _Tp>  requires (__derived_from_ios_base<_Os>) && requires(_Os& __os, const _Tp& __t) {__os << __t;} using std::__rvalue_stream_insertion_t = _Os&& [35m[K[with _Os = std::basic_ostream<char>&; _Tp = std::vector<float>][m[K[m[K’:
+[01m[K/usr/include/c++/13/ostream:801:5:[m[K   required by substitution of ‘[01m[Ktemplate<class _Ostream, class _Tp> _Ostream&& std::[01;32m[Koperator<<[m[K(_Ostream&&, const _Tp&) [35m[K[with _Ostream = std::basic_ostream<char>&; _Tp = std::vector<float>][m[K[m[K’
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K   required from here
+[01m[K/usr/include/c++/13/ostream:768:13:[m[K   required for the satisfaction of ‘[01m[K__derived_from_ios_base<_Os>[m[K’ [with _Os = std::basic_ostream<char, std::char_traits<char> >&]
+[01m[K/usr/include/c++/13/ostream:768:39:[m[K [01;36m[Knote: [m[Kthe expression ‘[01m[Kis_class_v<_Tp> [with _Tp = std::basic_ostream<char, std::char_traits<char> >&][m[K’ evaluated to ‘[01m[Kfalse[m[K’
+  768 |     concept __derived_from_ios_base = [01;36m[Kis_class_v<_Tp>[m[K
+      |                                       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/unique_ptr.h:1142:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits, class _Tp, class _Dp> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, const unique_ptr<_Up, _Ep>&) requires requires{std::operator<<::__os << std::operator<<::__p->get();}[m[K’
+ 1142 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/unique_ptr.h:1142:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<float>[m[K’ is not derived from ‘[01m[Kconst std::unique_ptr<_Up, _Ep>[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/13/memory:80[m[K:
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:70:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Ch, class _Tr, class _Tp, __gnu_cxx::_Lock_policy _Lp> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, const __shared_ptr<_Tp, _Lp>&)[m[K’
+   70 |     [01;36m[Koperator[m[K<<(std::basic_ostream<_Ch, _Tr>& __os,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:70:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<float>[m[K’ is not derived from ‘[01m[Kconst std::__shared_ptr<_Tp, _Lp>[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/jazzy/include/rosidl_runtime_cpp/rosidl_runtime_cpp/traits.hpp:20[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/list_parameters__traits.hpp:18[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/list_parameters.hpp:9[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/copy_all_parameter_values.hpp:21[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:175[m[K:
+[01m[K/usr/include/c++/13/iomanip:81:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, _Resetiosflags)[m[K’
+   81 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Resetiosflags __f)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/iomanip:81:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kobject_distance[m[K’ (type ‘[01m[Kstd::vector<float>[m[K’) to type ‘[01m[Kstd::_Resetiosflags[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/iomanip:111:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, _Setiosflags)[m[K’
+  111 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Setiosflags __f)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/iomanip:111:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kobject_distance[m[K’ (type ‘[01m[Kstd::vector<float>[m[K’) to type ‘[01m[Kstd::_Setiosflags[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/iomanip:145:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, _Setbase)[m[K’
+  145 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Setbase __f)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/iomanip:145:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kobject_distance[m[K’ (type ‘[01m[Kstd::vector<float>[m[K’) to type ‘[01m[Kstd::_Setbase[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/iomanip:180:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, _Setfill<_CharT>)[m[K’
+  180 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Setfill<_CharT> __f)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/iomanip:180:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<float>[m[K’ is not derived from ‘[01m[Kstd::_Setfill<_CharT>[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/iomanip:210:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, _Setprecision)[m[K’
+  210 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Setprecision __f)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/iomanip:210:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kobject_distance[m[K’ (type ‘[01m[Kstd::vector<float>[m[K’) to type ‘[01m[Kstd::_Setprecision[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/iomanip:240:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, _Setw)[m[K’
+  240 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Setw __f)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/iomanip:240:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kobject_distance[m[K’ (type ‘[01m[Kstd::vector<float>[m[K’) to type ‘[01m[Kstd::_Setw[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/iomanip:313:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits, class _MoneyT> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, _Put_money<_MoneyT>)[m[K’
+  313 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Put_money<_MoneyT> __f)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/iomanip:313:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<float>[m[K’ is not derived from ‘[01m[Kstd::_Put_money<_MoneyT>[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/iomanip:365:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, _Put_time<_CharT>)[m[K’
+  365 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Put_time<_CharT> __f)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/iomanip:365:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<float>[m[K’ is not derived from ‘[01m[Kstd::_Put_time<_CharT>[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:22[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:176[m[K:
+[01m[K/usr/include/c++/13/thread:97:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, thread::id)[m[K’
+   97 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __out, thread::id __id)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/thread:97:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kobject_distance[m[K’ (type ‘[01m[Kstd::vector<float>[m[K’) to type ‘[01m[Kstd::thread::id[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Geometry:11[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_model/joint_model.hpp:46[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_model/joint_model_group.hpp:40[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_model/robot_model.hpp:45[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.hpp:39[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:51[m[K:
+[01m[K/usr/include/c++/13/complex:558:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, const complex<_Tp>&)[m[K’
+  558 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, const complex<_Tp>& __x)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/complex:558:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<float>[m[K’ is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/13/regex:40[m[K:
+[01m[K/usr/include/c++/13/bitset:1683:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits, long unsigned int _Nb> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, const bitset<_Nb>&)[m[K’
+ 1683 |     [01;36m[Koperator[m[K<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bitset:1683:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<float>[m[K’ is not derived from ‘[01m[Kconst std::bitset<_Nb>[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/13/random:51[m[K,
+                 from [01m[K/home/mario/master_ws/install/moveit_task_constructor_core/include/moveit/task_constructor/stages/generate_random_pose.h:43[m[K,
+                 from [01m[K/home/mario/master_ws/install/moveit_task_constructor_core/include/moveit/task_constructor/stages.h:50[m[K,
+                 from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:7[m[K:
+[01m[K/usr/include/c++/13/bits/random.h:1341:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _RandomNumberEngine, long unsigned int __w, class _UIntType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, const independent_bits_engine<_RandomNumberEngine, __w, _UIntType>&)[m[K’
+ 1341 |     [01;36m[Koperator[m[K<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.h:1341:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<float>[m[K’ is not derived from ‘[01m[Kconst std::independent_bits_engine<_RandomNumberEngine, __w, _UIntType>[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/13/random:53[m[K:
+[01m[K/usr/include/c++/13/bits/random.tcc:910:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IntType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, const uniform_int_distribution<_IntType>&)[m[K’
+  910 |     [01;36m[Koperator[m[K<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:910:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<float>[m[K’ is not derived from ‘[01m[Kconst std::uniform_int_distribution<_IntType>[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:968:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, const uniform_real_distribution<_RealType>&)[m[K’
+  968 |     [01;36m[Koperator[m[K<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:968:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<float>[m[K’ is not derived from ‘[01m[Kconst std::uniform_real_distribution<_RealType>[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:2145:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, const cauchy_distribution<_RealType>&)[m[K’
+ 2145 |     [01;36m[Koperator[m[K<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:2145:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<float>[m[K’ is not derived from ‘[01m[Kconst std::cauchy_distribution<_RealType>[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:1029:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, const bernoulli_distribution&)[m[K’
+ 1029 |     [01;36m[Koperator[m[K<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:1029:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kobject_distance[m[K’ (type ‘[01m[Kstd::vector<float>[m[K’) to type ‘[01m[Kconst std::bernoulli_distribution&[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:1110:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IntType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, const geometric_distribution<_IntType>&)[m[K’
+ 1110 |     [01;36m[Koperator[m[K<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:1110:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<float>[m[K’ is not derived from ‘[01m[Kconst std::geometric_distribution<_IntType>[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:1762:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, const exponential_distribution<_RealType>&)[m[K’
+ 1762 |     [01;36m[Koperator[m[K<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:1762:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<float>[m[K’ is not derived from ‘[01m[Kconst std::exponential_distribution<_RealType>[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:2539:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, const weibull_distribution<_RealType>&)[m[K’
+ 2539 |     [01;36m[Koperator[m[K<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:2539:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<float>[m[K’ is not derived from ‘[01m[Kconst std::weibull_distribution<_RealType>[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:2613:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, const extreme_value_distribution<_RealType>&)[m[K’
+ 2613 |     [01;36m[Koperator[m[K<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:2613:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<float>[m[K’ is not derived from ‘[01m[Kconst std::extreme_value_distribution<_RealType>[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:156:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _UIntType, _UIntType __a, _UIntType __c, _UIntType __m, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, const linear_congruential_engine<_UIntType, __a, __c, __m>&)[m[K’
+  156 |     [01;36m[Koperator[m[K<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:156:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<float>[m[K’ is not derived from ‘[01m[Kconst std::linear_congruential_engine<_UIntType, __a, __c, __m>[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:477:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _UIntType1, long unsigned int __w1, long unsigned int __n1, long unsigned int __m1, long unsigned int __r1, _UIntType1 __a1, long unsigned int __u1, _UIntType1 __d1, long unsigned int __s1, _UIntType1 __b1, long unsigned int __t1, _UIntType1 __c1, long unsigned int __l1, _UIntType1 __f1, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, const mersenne_twister_engine<_UIntType1, __w1, __n1, __m1, __r1, __a1, __u1, __d1, __s1, __b1, __t1, __c1, __l1, __f1>&)[m[K’
+  477 |     [01;36m[Koperator[m[K<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:477:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<float>[m[K’ is not derived from ‘[01m[Kconst std::mersenne_twister_engine<_UIntType1, __w1, __n1, __m1, __r1, __a1, __u1, __d1, __s1, __b1, __t1, __c1, __l1, __f1>[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:635:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _UIntType, long unsigned int __w, long unsigned int __s, long unsigned int __r, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, const subtract_with_carry_engine<_UIntType, __w, __s, __r>&)[m[K’
+  635 |     [01;36m[Koperator[m[K<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:635:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<float>[m[K’ is not derived from ‘[01m[Kconst std::subtract_with_carry_engine<_UIntType, __w, __s, __r>[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:704:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _RandomNumberEngine, long unsigned int __p, long unsigned int __r, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, const discard_block_engine<_RandomNumberEngine, __p, __r>&)[m[K’
+  704 |     [01;36m[Koperator[m[K<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:704:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<float>[m[K’ is not derived from ‘[01m[Kconst std::discard_block_engine<_RandomNumberEngine, __p, __r>[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:866:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _RandomNumberEngine, long unsigned int __k, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, const shuffle_order_engine<_RandomNumberEngine, __k>&)[m[K’
+  866 |     [01;36m[Koperator[m[K<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:866:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<float>[m[K’ is not derived from ‘[01m[Kconst std::shuffle_order_engine<_RandomNumberEngine, __k>[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:1224:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IntType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, const negative_binomial_distribution<_IntType>&)[m[K’
+ 1224 |     [01;36m[Koperator[m[K<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:1224:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<float>[m[K’ is not derived from ‘[01m[Kconst std::negative_binomial_distribution<_IntType>[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:1434:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IntType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, const poisson_distribution<_IntType>&)[m[K’
+ 1434 |     [01;36m[Koperator[m[K<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:1434:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<float>[m[K’ is not derived from ‘[01m[Kconst std::poisson_distribution<_IntType>[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:1700:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IntType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, const binomial_distribution<_IntType>&)[m[K’
+ 1700 |     [01;36m[Koperator[m[K<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:1700:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<float>[m[K’ is not derived from ‘[01m[Kconst std::binomial_distribution<_IntType>[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:1920:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _RealType1, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, const normal_distribution<_RealType>&)[m[K’
+ 1920 |     [01;36m[Koperator[m[K<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:1920:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<float>[m[K’ is not derived from ‘[01m[Kconst std::normal_distribution<_RealType>[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:1987:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, const lognormal_distribution<_RealType>&)[m[K’
+ 1987 |     [01;36m[Koperator[m[K<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:1987:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<float>[m[K’ is not derived from ‘[01m[Kconst std::lognormal_distribution<_RealType>[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:2059:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, const chi_squared_distribution<_RealType>&)[m[K’
+ 2059 |     [01;36m[Koperator[m[K<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:2059:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<float>[m[K’ is not derived from ‘[01m[Kconst std::chi_squared_distribution<_RealType>[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:2220:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, const fisher_f_distribution<_RealType>&)[m[K’
+ 2220 |     [01;36m[Koperator[m[K<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:2220:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<float>[m[K’ is not derived from ‘[01m[Kconst std::fisher_f_distribution<_RealType>[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:2294:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, const student_t_distribution<_RealType>&)[m[K’
+ 2294 |     [01;36m[Koperator[m[K<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:2294:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<float>[m[K’ is not derived from ‘[01m[Kconst std::student_t_distribution<_RealType>[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:2463:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _RealType1, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, const gamma_distribution<_RealType>&)[m[K’
+ 2463 |     [01;36m[Koperator[m[K<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:2463:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<float>[m[K’ is not derived from ‘[01m[Kconst std::gamma_distribution<_RealType>[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:2749:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IntType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, const discrete_distribution<_IntType>&)[m[K’
+ 2749 |     [01;36m[Koperator[m[K<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:2749:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<float>[m[K’ is not derived from ‘[01m[Kconst std::discrete_distribution<_IntType>[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:2971:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, const piecewise_constant_distribution<_RealType>&)[m[K’
+ 2971 |     [01;36m[Koperator[m[K<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:2971:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<float>[m[K’ is not derived from ‘[01m[Kconst std::piecewise_constant_distribution<_RealType>[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:3177:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, const piecewise_linear_distribution<_RealType>&)[m[K’
+ 3177 |     [01;36m[Koperator[m[K<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/random.tcc:3177:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:106:15:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<float>[m[K’ is not derived from ‘[01m[Kconst std::piecewise_linear_distribution<_RealType>[m[K’
+  106 |   std::cout <<[01;36m[Kobject_distance[m[K << std::endl;
+      |               [01;36m[K^~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/mtc_estun.dir/build.make:76: CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o] Fehler 1
+gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/mtc_estun.dir/all] Fehler 2
+gmake: *** [Makefile:146: all] Fehler 2

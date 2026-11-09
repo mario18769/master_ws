@@ -1,0 +1,74 @@
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:2[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:3[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:32:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kattach_pub_[m[K’ does not name a type
+   32 |   [01;31m[Kattach_pub_[m[K = this->create_publisher<robot_interfaces::msg::Detachable>("/Probekoerper1/attach",10);
+      |   [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:33:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kdetach_pub_[m[K’ does not name a type
+   33 |   [01;31m[Kdetach_pub_[m[K = this->create_publisher<robot_interfaces::msg::Detachable>("/Probekoerper1/detach",10);
+      |   [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:35:26:[m[K [01;31m[Kerror: [m[K‘[01m[KDetachable[m[K’ in namespace ‘[01m[Krobot_interfaces::msg[m[K’ does not name a type
+   35 |   robot_interfaces::msg::[01;31m[KDetachable[m[K detach;
+      |                          [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:36:26:[m[K [01;31m[Kerror: [m[K‘[01m[KDetachable[m[K’ in namespace ‘[01m[Krobot_interfaces::msg[m[K’ does not name a type
+   36 |   robot_interfaces::msg::[01;31m[KDetachable[m[K attach;
+      |                          [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:38:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kdetach[m[K’ does not name a type
+   38 |   [01;31m[Kdetach[m[K.detach_msg = "";
+      |   [01;31m[K^~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:39:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kattach[m[K’ does not name a type
+   39 |   [01;31m[Kattach[m[K.attach_msg = "";
+      |   [01;31m[K^~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:46:44:[m[K [01;31m[Kerror: [m[K‘[01m[KDetachable[m[K’ is not a member of ‘[01m[Krobot_interfaces::msg[m[K’
+   46 |   rclcpp::Publisher<robot_interfaces::msg::[01;31m[KDetachable[m[K>::SharedPtr attach_pub_;
+      |                                            [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:46:54:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   46 |   rclcpp::Publisher<robot_interfaces::msg::Detachable[01;31m[K>[m[K::SharedPtr attach_pub_;
+      |                                                      [01;31m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:46:57:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   46 |   rclcpp::Publisher<robot_interfaces::msg::Detachable>::[01;31m[KSharedPtr[m[K attach_pub_;
+      |                                                         [01;31m[K^~~~~~~~~[m[K
+      |                                                                  [32m[K;[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:46:67:[m[K [01;31m[Kerror: [m[K‘[01m[Kattach_pub_[m[K’ does not name a type
+   46 |   rclcpp::Publisher<robot_interfaces::msg::Detachable>::SharedPtr [01;31m[Kattach_pub_[m[K;
+      |                                                                   [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:47:44:[m[K [01;31m[Kerror: [m[K‘[01m[KDetachable[m[K’ is not a member of ‘[01m[Krobot_interfaces::msg[m[K’
+   47 |   rclcpp::Publisher<robot_interfaces::msg::[01;31m[KDetachable[m[K>::SharedPtr detach_pub_;
+      |                                            [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:47:54:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   47 |   rclcpp::Publisher<robot_interfaces::msg::Detachable[01;31m[K>[m[K::SharedPtr detach_pub_;
+      |                                                      [01;31m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:47:57:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   47 |   rclcpp::Publisher<robot_interfaces::msg::Detachable>::[01;31m[KSharedPtr[m[K detach_pub_;
+      |                                                         [01;31m[K^~~~~~~~~[m[K
+      |                                                                  [32m[K;[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:47:57:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kint MTCTaskNode::SharedPtr[m[K’
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:46:57:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kint MTCTaskNode::SharedPtr[m[K’
+   46 |   rclcpp::Publisher<robot_interfaces::msg::Detachable>::[01;36m[KSharedPtr[m[K attach_pub_;
+      |                                                         [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:47:67:[m[K [01;31m[Kerror: [m[K‘[01m[Kdetach_pub_[m[K’ does not name a type
+   47 |   rclcpp::Publisher<robot_interfaces::msg::Detachable>::SharedPtr [01;31m[Kdetach_pub_[m[K;
+      |                                                                   [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kmoveit::task_constructor::Task MTCTaskNode::[01;32m[KcreateTask[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:324:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kattach_pub_[m[K’ was not declared in this scope
+  324 |             [01;31m[Kattach_pub_[m[K->publish(attach);
+      |             [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:324:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kattach[m[K’ was not declared in this scope; did you mean ‘[01m[Katanh[m[K’?
+  324 |             attach_pub_->publish([01;31m[Kattach[m[K);
+      |                                  [01;31m[K^~~~~~[m[K
+      |                                  [32m[Katanh[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:428:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kdetach_pub_[m[K’ was not declared in this scope
+  428 |             [01;31m[Kdetach_pub_[m[K->publish(detach);
+      |             [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:428:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kdetach[m[K’ was not declared in this scope; did you mean ‘[01m[Kdetail[m[K’?
+  428 |             detach_pub_->publish([01;31m[Kdetach[m[K);
+      |                                  [01;31m[K^~~~~~[m[K
+      |                                  [32m[Kdetail[m[K
+gmake[2]: *** [CMakeFiles/mtc_estun.dir/build.make:76: CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o] Fehler 1
+gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/mtc_estun.dir/all] Fehler 2
+gmake: *** [Makefile:146: all] Fehler 2

@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="Estun">
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="estun_er_hi">
 
     <xacro:arg name="initial_positions_file" default="$(find estun_moveit)/config/initial_positions.yaml" />
 
     <!-- Import Estun urdf file -->
-    <xacro:include filename="$(find estun_description)/urdf/estun.xacro" />
+    <xacro:include filename="$(find estun_er_hi_description)/urdf/estun_er_hi.xacro" />
 
     <!-- Import control_xacro -->
     <xacro:include filename="estun.ros2_control.xacro" />

@@ -151,3 +151,82 @@ impl rosidl_runtime_rs::RmwMessage for ObjectPose where Self: Sized {
 }
 
 
+#[link(name = "robot_interfaces__rosidl_typesupport_c")]
+extern "C" {
+    fn rosidl_typesupport_c__get_message_type_support_handle__robot_interfaces__msg__DetachMsg() -> *const std::ffi::c_void;
+}
+
+#[link(name = "robot_interfaces__rosidl_generator_c")]
+extern "C" {
+    fn robot_interfaces__msg__DetachMsg__init(msg: *mut DetachMsg) -> bool;
+    fn robot_interfaces__msg__DetachMsg__Sequence__init(seq: *mut rosidl_runtime_rs::Sequence<DetachMsg>, size: usize) -> bool;
+    fn robot_interfaces__msg__DetachMsg__Sequence__fini(seq: *mut rosidl_runtime_rs::Sequence<DetachMsg>);
+    fn robot_interfaces__msg__DetachMsg__Sequence__copy(in_seq: &rosidl_runtime_rs::Sequence<DetachMsg>, out_seq: *mut rosidl_runtime_rs::Sequence<DetachMsg>) -> bool;
+}
+
+// Corresponds to robot_interfaces__msg__DetachMsg
+#[cfg_attr(feature = "serde", derive(Deserialize, Serialize))]
+
+
+// This struct is not documented.
+#[allow(missing_docs)]
+
+#[repr(C)]
+#[derive(Clone, Debug, PartialEq, PartialOrd)]
+pub struct DetachMsg {
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub attach_msg: rosidl_runtime_rs::String,
+
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub detach_msg: rosidl_runtime_rs::String,
+
+}
+
+
+
+impl Default for DetachMsg {
+  fn default() -> Self {
+    unsafe {
+      let mut msg = std::mem::zeroed();
+      if !robot_interfaces__msg__DetachMsg__init(&mut msg as *mut _) {
+        panic!("Call to robot_interfaces__msg__DetachMsg__init() failed");
+      }
+      msg
+    }
+  }
+}
+
+impl rosidl_runtime_rs::SequenceAlloc for DetachMsg {
+  fn sequence_init(seq: &mut rosidl_runtime_rs::Sequence<Self>, size: usize) -> bool {
+    // SAFETY: This is safe since the pointer is guaranteed to be valid/initialized.
+    unsafe { robot_interfaces__msg__DetachMsg__Sequence__init(seq as *mut _, size) }
+  }
+  fn sequence_fini(seq: &mut rosidl_runtime_rs::Sequence<Self>) {
+    // SAFETY: This is safe since the pointer is guaranteed to be valid/initialized.
+    unsafe { robot_interfaces__msg__DetachMsg__Sequence__fini(seq as *mut _) }
+  }
+  fn sequence_copy(in_seq: &rosidl_runtime_rs::Sequence<Self>, out_seq: &mut rosidl_runtime_rs::Sequence<Self>) -> bool {
+    // SAFETY: This is safe since the pointer is guaranteed to be valid/initialized.
+    unsafe { robot_interfaces__msg__DetachMsg__Sequence__copy(in_seq, out_seq as *mut _) }
+  }
+}
+
+impl rosidl_runtime_rs::Message for DetachMsg {
+  type RmwMsg = Self;
+  fn into_rmw_message(msg_cow: std::borrow::Cow<'_, Self>) -> std::borrow::Cow<'_, Self::RmwMsg> { msg_cow }
+  fn from_rmw_message(msg: Self::RmwMsg) -> Self { msg }
+}
+
+impl rosidl_runtime_rs::RmwMessage for DetachMsg where Self: Sized {
+  const TYPE_NAME: &'static str = "robot_interfaces/msg/DetachMsg";
+  fn get_type_support() -> *const std::ffi::c_void {
+    // SAFETY: No preconditions for this function.
+    unsafe { rosidl_typesupport_c__get_message_type_support_handle__robot_interfaces__msg__DetachMsg() }
+  }
+}
+
+

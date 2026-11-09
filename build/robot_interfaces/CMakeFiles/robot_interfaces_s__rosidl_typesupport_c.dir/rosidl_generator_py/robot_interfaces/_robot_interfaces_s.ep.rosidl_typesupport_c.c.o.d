@@ -232,4 +232,7 @@ CMakeFiles/robot_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/robo
  /home/mario/master_ws/build/robot_interfaces/rosidl_generator_c/robot_interfaces/msg/detail/object_pose__type_support.h \
  /home/mario/master_ws/build/robot_interfaces/rosidl_generator_c/robot_interfaces/msg/rosidl_generator_c__visibility_control.h \
  /home/mario/master_ws/build/robot_interfaces/rosidl_generator_c/robot_interfaces/msg/detail/object_pose__struct.h \
- /home/mario/master_ws/build/robot_interfaces/rosidl_generator_c/robot_interfaces/msg/detail/object_pose__functions.h
+ /home/mario/master_ws/build/robot_interfaces/rosidl_generator_c/robot_interfaces/msg/detail/object_pose__functions.h \
+ /home/mario/master_ws/build/robot_interfaces/rosidl_generator_c/robot_interfaces/msg/detail/detach_msg__type_support.h \
+ /home/mario/master_ws/build/robot_interfaces/rosidl_generator_c/robot_interfaces/msg/detail/detach_msg__struct.h \
+ /home/mario/master_ws/build/robot_interfaces/rosidl_generator_c/robot_interfaces/msg/detail/detach_msg__functions.h

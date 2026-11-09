@@ -41,13 +41,14 @@ tf2
 robot_interfaces
 )
 
+
 add_executable(mtc_estun src/mtc_estun.cpp)
-ament_target_dependencies(mtc_estun moveit_task_constructor_core rclcpp)
+ament_target_dependencies(mtc_estun moveit_task_constructor_core rclcpp robot_interfaces)
 target_include_directories(mtc_estun PUBLIC
 $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
 $<INSTALL_INTERFACE:include>)
 
-target_link_libraries(obstacle_planner Boost::thread sdformat14::sdformat14)
+target_link_libraries(obstacle_planner Boost::thread sdformat14::sdformat14 )
 target_compile_features(mtc_estun PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
 
 install(TARGETS mtc_estun

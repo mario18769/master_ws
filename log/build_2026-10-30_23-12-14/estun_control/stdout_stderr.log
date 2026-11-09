@@ -1,0 +1,27 @@
+[ 33%] Built target cartesian_planner
+[ 66%] Built target obstacle_planner
+[ 83%] [32mBuilding CXX object CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o[0m
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:3[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:4[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kvoid MTCTaskNode::[01;32m[KgetObjects[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:110:86:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kstd::pair<const std::__cxx11::basic_string<char>, moveit_msgs::msg::CollisionObject_<std::allocator<void> > >[m[K’ to ‘[01m[Kconst std::vector<std::__cxx11::basic_string<char>, std::allocator<std::__cxx11::basic_string<char> > >&[m[K’
+  110 |     std::map<std::string, geometry_msgs::msg::Pose> object_pose = psi.getObjectPoses([01;31m[Kiterator[m[K);
+      |                                                                                      [01;31m[K^~~~~~~~[m[K
+      |                                                                                      [01;31m[K|[m[K
+      |                                                                                      [01;31m[Kstd::pair<const std::__cxx11::basic_string<char>, moveit_msgs::msg::CollisionObject_<std::allocator<void> > >[m[K
+In file included from [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:51[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.hpp:89:98:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kstd::map<std::__cxx11::basic_string<char>, geometry_msgs::msg::Pose_<std::allocator<void> > > moveit::planning_interface::PlanningSceneInterface::[01;32m[KgetObjectPoses[m[K(const std::vector<std::__cxx11::basic_string<char>, std::allocator<std::__cxx11::basic_string<char> > >&)[m[K’
+   89 |   std::map<std::string, geometry_msgs::msg::Pose> getObjectPoses([01;36m[Kconst std::vector<std::string>& object_ids[m[K);
+      |                                                                  [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:111:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass std::map<std::__cxx11::basic_string<char>, geometry_msgs::msg::Pose_<std::allocator<void> > >[m[K’ has no member named ‘[01m[Ksecond[m[K’
+  111 |     geometry_msgs::msg::Pose cp = object_pose.[01;31m[Ksecond[m[K
+      |                                               [01;31m[K^~~~~~[m[K
+gmake[2]: *** [CMakeFiles/mtc_estun.dir/build.make:76: CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o] Fehler 1
+gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/mtc_estun.dir/all] Fehler 2
+gmake: *** [Makefile:146: all] Fehler 2

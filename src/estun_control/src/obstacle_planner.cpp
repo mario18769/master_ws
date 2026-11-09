@@ -6,6 +6,7 @@
 #include "tf2_ros/transform_listener.h"
 #include "tf2_ros/buffer.h"
 #include "boost/thread.hpp"
+#include <iostream>
 
 #include <moveit_msgs/msg/attached_collision_object.hpp>
 #include <moveit_msgs/msg/collision_object.hpp>
@@ -149,16 +150,14 @@ void ObstaclePlanner::addProbekoerper(robot_interfaces::msg::ObjectPose msg){
 
     _move_group = new moveit::planning_interface::MoveGroupInterface(_node, "arm");
 
-    RCLCPP_INFO(this->get_logger(),"Probekoerper Message empfangen");
+    // RCLCPP_INFO(this->get_logger(),"Probekoerper Message empfangen");
     
     if (msg.object_type != "END"){
         
         msg_vector_new.push_back(msg);
 
-        RCLCPP_INFO(this->get_logger(),"Message_new_size: %i", msg_vector_new.size());
-
-        RCLCPP_INFO(this->get_logger(),"Message wird zu Msg.vector hinzugefuegt");
-
+        // RCLCPP_INFO(this->get_logger(),"Message_new_size: %i", msg_vector_new.size());
+        // RCLCPP_INFO(this->get_logger(),"Message wird zu Msg.vector hinzugefuegt");
     }
 
     else{
@@ -166,7 +165,7 @@ void ObstaclePlanner::addProbekoerper(robot_interfaces::msg::ObjectPose msg){
         std::vector<robot_interfaces::msg::ObjectPose> msg_vector_old(msg_vector_new);
         msg_vector_new.clear();
 
-        RCLCPP_INFO(this->get_logger(),"Message_old_size: %i", msg_vector_old.size());
+        // RCLCPP_INFO(this->get_logger(),"Message_old_size: %i", msg_vector_old.size());
 
         int i = 0;
 
@@ -176,13 +175,13 @@ void ObstaclePlanner::addProbekoerper(robot_interfaces::msg::ObjectPose msg){
 
             if (msg_component.object_type == "Cylinder"){
 
-                RCLCPP_INFO(this->get_logger(),"Cylinder wird verarbeitet");
+                // RCLCPP_INFO(this->get_logger(),"Cylinder wird verarbeitet");
 
                 moveit_msgs::msg::CollisionObject object;
                 object.header.frame_id = _move_group->getPlanningFrame();
                 object.id = "Cylinder_" + std::to_string(i);
 
-                RCLCPP_INFO(this->get_logger(),"TEST1");
+                // RCLCPP_INFO(this->get_logger(),"TEST1");
 
                 shape_msgs::msg::SolidPrimitive primitive;
                 primitive.type = primitive.CYLINDER;
@@ -192,7 +191,7 @@ void ObstaclePlanner::addProbekoerper(robot_interfaces::msg::ObjectPose msg){
 
                 geometry_msgs::msg::Pose cp;
                 
-                RCLCPP_INFO(this->get_logger(),"TEST2");
+                // RCLCPP_INFO(this->get_logger(),"TEST2");
 
                 tf2::Quaternion q;
 
@@ -223,7 +222,7 @@ void ObstaclePlanner::addProbekoerper(robot_interfaces::msg::ObjectPose msg){
                 // std::cout<< "QZ: "<< cp.orientation.z << std::endl;
                 // std::cout<< "QW: "<< cp.orientation.w << std::endl;
 
-                RCLCPP_INFO(this->get_logger(),"TEST3");
+                // RCLCPP_INFO(this->get_logger(),"TEST3");
 
                 object.primitives.push_back(primitive);
                 object.primitive_poses.push_back(cp);
@@ -238,21 +237,23 @@ void ObstaclePlanner::addProbekoerper(robot_interfaces::msg::ObjectPose msg){
 
                 if (planning_scene_interface.applyCollisionObject(object) == true){
 
-                    RCLCPP_INFO(this->get_logger(),"Cylinder succesfully added to planningscene");
+                    // RCLCPP_INFO(this->get_logger(),"Cylinder succesfully added to planningscene");
                 }
 
-                else{RCLCPP_INFO(this->get_logger(),"Cylinder NOT added to planningscene");}
+                else{ 
+                    // RCLCPP_INFO(this->get_logger(),"Cylinder NOT added to planningscene");
+                }
             }
 
             if (msg_component.object_type == "Cube"){
 
-                RCLCPP_INFO(this->get_logger(),"Cube wird verarbeitet");
+                // RCLCPP_INFO(this->get_logger(),"Cube wird verarbeitet");
 
                 moveit_msgs::msg::CollisionObject object;
                 object.header.frame_id = _move_group->getPlanningFrame();
                 object.id = "Cube_" + std::to_string(i);
 
-                RCLCPP_INFO(this->get_logger(),"TEST1");
+                // RCLCPP_INFO(this->get_logger(),"TEST1");
 
                 shape_msgs::msg::SolidPrimitive primitive;
                 primitive.type = primitive.BOX;
@@ -263,7 +264,7 @@ void ObstaclePlanner::addProbekoerper(robot_interfaces::msg::ObjectPose msg){
 
                 geometry_msgs::msg::Pose cp;
                 
-                RCLCPP_INFO(this->get_logger(),"TEST2");
+                // RCLCPP_INFO(this->get_logger(),"TEST2");
 
                 cp.position.x = msg_component.mid_x;
                 cp.position.y = msg_component.mid_y;
@@ -279,7 +280,7 @@ void ObstaclePlanner::addProbekoerper(robot_interfaces::msg::ObjectPose msg){
                 // std::cout<< "QZ: "<< cp.orientation.z << std::endl;
                 // std::cout<< "QW: "<< cp.orientation.w << std::endl;
 
-                RCLCPP_INFO(this->get_logger(),"TEST3");
+                // RCLCPP_INFO(this->get_logger(),"TEST3");
 
                 object.primitives.push_back(primitive);
                 object.primitive_poses.push_back(cp);
@@ -294,10 +295,12 @@ void ObstaclePlanner::addProbekoerper(robot_interfaces::msg::ObjectPose msg){
 
                 if (planning_scene_interface.applyCollisionObject(object) == true){
 
-                    RCLCPP_INFO(this->get_logger(),"Cube succesfully added to planningscene");
+                    // RCLCPP_INFO(this->get_logger(),"Cube succesfully added to planningscene");
                 }
 
-                else{RCLCPP_INFO(this->get_logger(),"Cube NOT added to planningscene");}
+                else{
+                    // RCLCPP_INFO(this->get_logger(),"Cube NOT added to planningscene");
+                }
             }
 
             i++;
@@ -343,7 +346,7 @@ void ObstaclePlanner::setup_world(){
 
     // _move_group->attachObject(grasping_object.id, "endeffector_1", connection_links);
     RCLCPP_INFO(this->get_logger(),"For-Schleife beginnt");
-    for (int i = 1 ; i < count_objects; i++){
+    for (int i = 0 ; i < count_objects; i++){
 
         //Objekt aus STL als Collisions-Objekt einlesen----------------------------------------------------------------------------------------------------------------------------------
         RCLCPP_INFO(this->get_logger(),"For-Schleife angekommen");
@@ -378,7 +381,7 @@ void ObstaclePlanner::setup_world(){
 
 
         geometry_msgs::msg::Pose test_pose;
-        quaternion.setEuler(pos[i][3],pos[i][4],pos[i][5]);
+        quaternion.setRPY(pos[i][3],pos[i][4],pos[i][5]);
 
         test_pose.position.x = pos[i][0];
         test_pose.position.y = pos[i][1];
@@ -456,8 +459,9 @@ void ObstaclePlanner::obstacle_parser(){
     while(loop_model){
 
         std::string modelName = modelElement->Get<std::string>("name");
+        
 
-        if(modelName =="Sensor" ||  modelName.starts_with("Probe")){
+        if(modelName.starts_with("Probe") || modelName == "ground_plane"){
 
             if(modelElement->GetNextElement("model") == nullptr){
 
@@ -475,13 +479,26 @@ void ObstaclePlanner::obstacle_parser(){
         else{
             
             model.push_back(modelName);
+            std::cout << "Model-Name: " << modelName << std::endl;
 
             //Link des Model finden
             sdf::ElementPtr linkElement = modelElement->GetElement("link");
             sdf::ElementPtr poseElement = modelElement->GetElement("pose");
             sdf::ElementPtr collisionElement= linkElement->GetElement("collision");
             sdf::ElementPtr geometryElement= collisionElement->GetElement("geometry");
-            sdf::ElementPtr meshElement= geometryElement->GetElement("mesh");
+
+            sdf::ElementPtr meshElement;
+
+            if(geometryElement->GetElement("mesh") == nullptr){
+
+                RCLCPP_INFO(this->get_logger(),"Model hat kein Mesh");
+                modelElement = modelElement->GetNextElement("model");
+                continue;
+            }
+
+            else { meshElement= geometryElement->GetElement("mesh");}
+
+            
             sdf::ElementPtr uriElement= meshElement->GetElement("uri");
             
             std::string uriString = uriElement->Get<std::string>();
@@ -508,7 +525,7 @@ void ObstaclePlanner::obstacle_parser(){
 
             pos.push_back(pose_vector);
 
-            RCLCPP_INFO(this->get_logger(),"Position: %f", pose_vector[1]);
+            RCLCPP_INFO(this->get_logger(),"Position: %f , %f , %f , %f , %f , %f", pose_vector[0], pose_vector[1], pose_vector[2] ,pose_vector[3], pose_vector[4], pose_vector[5]);
 
             if(modelElement->GetNextElement("model") != nullptr){
 

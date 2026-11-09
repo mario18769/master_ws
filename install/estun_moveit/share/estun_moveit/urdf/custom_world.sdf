@@ -31,22 +31,16 @@
       <render_engine>ogre2</render_engine>
     </plugin>
 
-    <model name="Sensor">
-      <!-- <frame name="Sensor_1" attached_to="world">
-        <pose>0 0 0 0 0 0</pose>
-      </frame> -->
-      <!-- <joint name="Sensor_joint" type="fixed">
-        <parent>world</parent>
-        <child>link_sensor</child>
-        <pose>0 0 0 0 0 0</pose>
-      </joint> -->
+    
 
-      <pose>-0.3 -0.05 2.1 0.0 0.785 -1.5707</pose>
+    <model name="Sensor">
+      <!-- <pose>-0.3 -0.3 2.500 1.5708 1.222 -1.5708</pose> -->
+      <pose>-0.4 -0.5 2.500 0.0 1.309 -1.5708</pose>
       <static>true</static> 
       <link name="link_sensor">
         <pose>0.0 0.0 0 0 0 0</pose>
         <inertial>
-          <mass>0.1</mass>
+          <mass>0.8</mass>
           <inertia>
             <ixx>0.000166667</ixx>
             <iyy>0.000166667</iyy>
@@ -55,17 +49,18 @@
         </inertial>
         <collision name="collision">
           <geometry>
-            <box>
-              <size>0.1 0.1 0.1</size>
-            </box>
+            <mesh><uri>file://home/mario/master_ws/install/estun_control/share/estun_control/meshes/Ensenso.stl </uri></mesh>
           </geometry>
         </collision>
         <visual name="visual">
           <geometry>
-            <box>
-              <size>0.1 0.1 0.1</size>
-            </box>
+            <mesh><uri>file://home/mario/master_ws/install/estun_control/share/estun_control/meshes/Ensenso.stl </uri></mesh>
           </geometry>
+          <material>
+          <ambient>0.02 0.15 0.02 1</ambient>
+          <diffuse>0.10 0.80 0.15 1</diffuse>
+          <specular>0.9 0.9 0.9 1</specular>
+        </material>
         </visual>
         <!-- <sensor name="rgbd_camera" type="rgbd_camera">
           <visualize>true</visualize>
@@ -89,19 +84,19 @@
         </sensor> -->
         <sensor name="depth_camera1" type="depth_camera">
           <update_rate>0.1</update_rate>
-          <pose>0.0 0.0 0 0 0 0</pose>
+          <pose>0.0 0.0 0.0 0 0 0.0</pose>
           <topic>rgbd_camera</topic>
           <enable_metrics>true</enable_metrics>
           <camera>
-            <horizontal_fov>1.047</horizontal_fov>
+            <horizontal_fov>0.698</horizontal_fov>
             <image>
-              <width>320</width>
-              <height>240</height>
+              <width>1236</width>
+              <height>1032</height>
               <format>R_FLOAT32</format>
             </image>
             <clip>
-              <near>0.3</near>
-              <far>10.0</far>
+              <near>1.417</near>
+              <far>3.5</far>
             </clip>
           </camera>
         </sensor>
@@ -163,8 +158,8 @@
     </model>
 
 
-  <model name="Palettenwagen">
-      <pose>-0.4 -1.2 0 0 0 1.5707</pose>
+  <!-- <model name="Palettenwagen">
+      <pose>-0.4 -1.0 0 0 0 0.0</pose>
       <static>true</static>
     <link name="link">
       <inertial>
@@ -195,7 +190,9 @@
         </material>
       </visual>
     </link>
-  </model>
+  </model> -->
+
+
 
   <!-- <model name="Druckpruefmaschine">
     <pose>-1.1 0.65 0 0 0 0</pose>
@@ -229,9 +226,9 @@
         </material>
       </visual>
     </link>
-  </model> -->
+  </model>
 
-  <!-- <model name="Container">
+  <model name="Container">
     <pose>-0.95 1.35 0 0 0 3.14</pose>
     <static>true</static>
     <link name="link">
@@ -297,9 +294,9 @@
         </material>
       </visual>
     </link>
-  </model> -->
+  </model>
 
-  <!-- <model name="Tisch">
+  <model name="Tisch">
     <pose>0.35 -0.95 0 0 0 1.5707</pose>
     <static>true</static>
     <link name="link">
@@ -331,9 +328,9 @@
         </material>
       </visual>
     </link>
-  </model> -->
+  </model>
 
-  <!-- <model name="Vermessungsstation">
+  <model name="Vermessungsstation">
     <pose>0.35 -0.95 0.8 0 0 0</pose>
     <static>true</static>
     <link name="link">
@@ -435,7 +432,7 @@
   </model> -->
 
   <!-- <model name="Probekoerper3">
-      <pose>-0.45 -0.8 0.794 0.0 0.0 0.0</pose>
+      <pose>-0.55 -0.8 0.794 0.0 0.0 0.0</pose>
       <static>true</static>
     <link name="link">
       <inertial>

@@ -1,0 +1,41 @@
+[ 33%] Built target cartesian_planner
+[ 83%] Built target obstacle_planner
+[ 83%] [32mBuilding CXX object CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o[0m
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:4[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:5[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kvoid MTCTaskNode::[01;32m[KgetObjects[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:148:28:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<MTCTaskNode::getObjects()::data>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  148 |     if (task == false && [01;35m[Kj < objects.size()[m[K){
+      |                          [01;35m[K~~^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:151:12:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<MTCTaskNode::getObjects()::data>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  151 |       if([01;35m[Kj >= objects.size()[m[K){
+      |          [01;35m[K~~^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:159:26:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<MTCTaskNode::getObjects()::data>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  159 |     if(task == true && [01;35m[Kj < objects.size()[m[K){
+      |                        [01;35m[K~~^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kmoveit::task_constructor::Task MTCTaskNode::[01;32m[KcreateTask[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:352:33:[m[K [01;31m[Kerror: [m[K‘[01m[KEigen::Isometry3d[m[K’ {aka ‘[01m[Kclass Eigen::Transform<double, 3, 1>[m[K’} has no member named ‘[01m[Korientation[m[K’; did you mean ‘[01m[Krotation[m[K’?
+  352 |           grasp_frame_transform.[01;31m[Korientation[m[K().x() = q.x();
+      |                                 [01;31m[K^~~~~~~~~~~[m[K
+      |                                 [32m[Krotation[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:353:33:[m[K [01;31m[Kerror: [m[K‘[01m[KEigen::Isometry3d[m[K’ {aka ‘[01m[Kclass Eigen::Transform<double, 3, 1>[m[K’} has no member named ‘[01m[Korientation[m[K’; did you mean ‘[01m[Krotation[m[K’?
+  353 |           grasp_frame_transform.[01;31m[Korientation[m[K().y() = q.y();
+      |                                 [01;31m[K^~~~~~~~~~~[m[K
+      |                                 [32m[Krotation[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:354:33:[m[K [01;31m[Kerror: [m[K‘[01m[KEigen::Isometry3d[m[K’ {aka ‘[01m[Kclass Eigen::Transform<double, 3, 1>[m[K’} has no member named ‘[01m[Korientation[m[K’; did you mean ‘[01m[Krotation[m[K’?
+  354 |           grasp_frame_transform.[01;31m[Korientation[m[K().z() = q.z();
+      |                                 [01;31m[K^~~~~~~~~~~[m[K
+      |                                 [32m[Krotation[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:355:33:[m[K [01;31m[Kerror: [m[K‘[01m[KEigen::Isometry3d[m[K’ {aka ‘[01m[Kclass Eigen::Transform<double, 3, 1>[m[K’} has no member named ‘[01m[Korientation[m[K’; did you mean ‘[01m[Krotation[m[K’?
+  355 |           grasp_frame_transform.[01;31m[Korientation[m[K().w() = q.w();
+      |                                 [01;31m[K^~~~~~~~~~~[m[K
+      |                                 [32m[Krotation[m[K
+gmake[2]: *** [CMakeFiles/mtc_estun.dir/build.make:76: CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o] Fehler 1
+gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/mtc_estun.dir/all] Fehler 2
+gmake: *** [Makefile:146: all] Fehler 2

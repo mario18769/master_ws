@@ -8,40 +8,62 @@ default_acceleration_scaling_factor: 0.1
 # Specific joint properties can be changed with the keys [max_position, min_position, max_velocity, max_acceleration]
 # Joint limits can be turned off with [has_velocity_limits, has_acceleration_limits]
 joint_limits:
-  Umdrehung 1:
+  joint_base_00:
     has_velocity_limits: true
-    max_velocity: 5.0
+    max_velocity: 3.001
     has_acceleration_limits: true
     max_acceleration: 0.5
-  Umdrehung 2:
+    min_position: -3.141
+    max_position: 3.141
+  joint_00_01:
     has_velocity_limits: true
-    max_velocity: 5.0
+    max_velocity: 2.076
     has_acceleration_limits: true
     max_acceleration: 0.5
-  Umdrehung 3:
+    min_position: -2.356
+    max_position: 1.570
+  joint_01_02:
     has_velocity_limits: true
-    max_velocity: 5.0
+    max_velocity: 3.595
     has_acceleration_limits: true
     max_acceleration: 0.5
-  Umdrehung 4:
+    min_position: -3.228
+    max_position: 1.396
+  joint_02_03:
     has_velocity_limits: true
-    max_velocity: 5.0
+    max_velocity: 4.450
     has_acceleration_limits: true
     max_acceleration: 0.5
-  Umdrehung 5:
+    min_position: -3.490
+    max_position: +3.490
+  joint_03_04:
     has_velocity_limits: true
-    max_velocity: 5.0
+    max_velocity: 5.759
     has_acceleration_limits: true
     max_acceleration: 0.5
-  Umdrehung 6:
+    min_position: -2.268
+    max_position: +2.268
+  joint_04_05:
     has_velocity_limits: true
-    max_velocity: 5.0
+    max_velocity: 7.103
     has_acceleration_limits: true
     max_acceleration: 0.5
-  hand_endeffector_1:
+    min_position: -6.283
+    max_position: +6.283
+
+  joint_gripper_base_finger_base_left:
     has_velocity_limits: true
-    max_velocity: 5.0
+    max_velocity: 7.103
     has_acceleration_limits: true
     max_acceleration: 0.5
+
+  joint_gripper_base_finger_base_right:
+    has_velocity_limits: true
+    max_velocity: 7.103
+    has_acceleration_limits: true
+    max_acceleration: 0.5
+
+
+
   
   

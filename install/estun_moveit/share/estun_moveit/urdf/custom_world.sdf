@@ -2,8 +2,6 @@
 
 <sdf version="1.9">
   <world name="empty">
-    <!-- <frame name="world_frame">
-    </frame> -->
 
     <physics name="1ms" type="ignored">
       <max_step_size>0.001</max_step_size>
@@ -12,6 +10,7 @@
     <plugin
       filename="gz-sim-physics-system"
       name="gz::sim::systems::Physics">
+      <!-- <engine>gz-physics-bullet-featherstone-plugin</engine> -->
     </plugin>
     <plugin
       filename="gz-sim-user-commands-system"
@@ -31,10 +30,8 @@
       <render_engine>ogre2</render_engine>
     </plugin>
 
-    
 
     <model name="Sensor">
-      <!-- <pose>-0.3 -0.3 2.500 1.5708 1.222 -1.5708</pose> -->
       <pose>-0.4 -0.5 2.500 0.0 1.309 -1.5708</pose>
       <static>true</static> 
       <link name="link_sensor">
@@ -158,14 +155,13 @@
     </model>
 
 
-  <!-- <model name="Palettenwagen">
+  <model name="Palettenwagen">
       <pose>-0.4 -1.0 0 0 0 0.0</pose>
       <static>true</static>
     <link name="link">
       <inertial>
         <mass>1.0</mass>
         <inertia> 
-          
           <ixx>0.083</ixx>       
           <ixy>0.0</ixy>         
           <ixz>0.0</ixz>         
@@ -190,18 +186,17 @@
         </material>
       </visual>
     </link>
-  </model> -->
+  </model>
 
 
 
-  <!-- <model name="Druckpruefmaschine">
+  <model name="Druckpruefmaschine">
     <pose>-1.1 0.65 0 0 0 0</pose>
     <static>true</static>
     <link name="link">
       <inertial>
         <mass>1.0</mass>
         <inertia> 
-         
           <ixx>0.083</ixx>       
           <ixy>0.0</ixy>        
           <ixz>0.0</ixz>        
@@ -235,7 +230,6 @@
       <inertial>
         <mass>1.0</mass>
         <inertia> 
-          
           <ixx>0.083</ixx>      
           <ixy>0.0</ixy>         
           <ixz>0.0</ixz>         
@@ -260,7 +254,7 @@
         </material>
       </visual>
     </link>
-  </model> -->
+  </model>
 
   <!-- <model name="Industriezaun">
     <pose>0 0 0 0 0 0</pose>
@@ -269,7 +263,6 @@
       <inertial>
         <mass>1.0</mass>
         <inertia> 
-          
           <ixx>0.083</ixx>       
           <ixy>0.0</ixy>         
           <ixz>0.0</ixz>         
@@ -294,10 +287,10 @@
         </material>
       </visual>
     </link>
-  </model>
+  </model> -->
 
   <model name="Tisch">
-    <pose>0.35 -0.95 0 0 0 1.5707</pose>
+    <pose>0.8 -0.95 0 0 0 1.5707</pose>
     <static>true</static>
     <link name="link">
       <inertial>
@@ -331,13 +324,12 @@
   </model>
 
   <model name="Vermessungsstation">
-    <pose>0.35 -0.95 0.8 0 0 0</pose>
+    <pose>0.8 -0.95 0.8 0 0 0</pose>
     <static>true</static>
     <link name="link">
       <inertial>
         <mass>1.0</mass>
         <inertia> 
-          
           <ixx>0.083</ixx>      
           <ixy>0.0</ixy>         
           <ixz>0.0</ixz>         
@@ -362,22 +354,21 @@
         </material>
       </visual>
     </link>
-  </model> -->
+  </model>
 
     <model name="Probekoerper1">
       <pose>-0.4 -0.8 0.794 0 0 0</pose>
-      <static>true</static>
+      <static>false</static>
     <link name="link">
       <inertial>
-        <mass>1.0</mass>
+        <mass>3.927</mass>
         <inertia> 
-          
-          <ixx>0.083</ixx>       
+          <ixx>0.0155</ixx>       
           <ixy>0.0</ixy>         
           <ixz>0.0</ixz>         
-          <iyy>0.083</iyy>       
+          <iyy>0.0155</iyy>       
           <iyz>0.0</iyz>         
-          <izz>0.083</izz>       
+          <izz>0.004909</izz>       
         </inertia>
       </inertial>
       <collision name="collision">
@@ -398,19 +389,19 @@
     </link>
   </model>
 
-  <!-- <model name="Probekoerper2">
+  <model name="Probekoerper2">
       <pose>-0.4 -1.1 0.844 0 1.5707 0.0</pose>
-      <static>true</static>
+      <static>false</static>
     <link name="link">
       <inertial>
-        <mass>1.0</mass>
+        <mass>3.927</mass>
         <inertia> 
-          <ixx>0.083</ixx>      
+          <ixx>0.0155</ixx>      
           <ixy>0.0</ixy>        
           <ixz>0.0</ixz>         
-          <iyy>0.083</iyy>       
+          <iyy>0.0155</iyy>       
           <iyz>0.0</iyz>         
-          <izz>0.083</izz>       
+          <izz>0.004909</izz>       
         </inertia>
       </inertial>
       <collision name="collision">
@@ -429,21 +420,21 @@
         </material>
       </visual>
     </link>
-  </model> -->
+  </model>
 
-  <!-- <model name="Probekoerper3">
+  <model name="Probekoerper3">
       <pose>-0.55 -0.8 0.794 0.0 0.0 0.0</pose>
-      <static>true</static>
+      <static>false</static>
     <link name="link">
       <inertial>
-        <mass>1.0</mass>
+        <mass>3.927</mass>
         <inertia> 
-          <ixx>0.083</ixx>      
+          <ixx>0.0155</ixx>      
           <ixy>0.0</ixy>        
           <ixz>0.0</ixz>         
-          <iyy>0.083</iyy>       
+          <iyy>0.0155</iyy>       
           <iyz>0.0</iyz>         
-          <izz>0.083</izz>       
+          <izz>0.004909</izz>       
         </inertia>
       </inertial>
       <collision name="collision">
@@ -462,22 +453,61 @@
         </material>
       </visual>
     </link>
-  </model> -->
+  </model>
+
+  <model name="Probekoerper6">
+    <pose>-0.25 -1.0 0.944 0.0 0.0 0.0</pose>
+    <static>false</static>
+    <link name="link">
+      <inertial>
+        <mass>8.437</mass>
+        <inertia> 
+          <ixx>0.00539</ixx>      
+          <ixy>0.0</ixy>        
+          <ixz>0.0</ixz>         
+          <iyy>0.00539</iyy>       
+          <iyz>0.0</iyz>         
+          <izz>0.00539</izz>       
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <cylinder>
+            <radius>0.075</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <cylinder>
+            <radius>0.075</radius>
+            <length>0.3</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.02 0.14 0.15 1</ambient>
+          <diffuse>0.10 0.80 0.80 1</diffuse>
+          <specular>0.9 0.9 0.9 1</specular>
+        </material>
+      </visual>
+    </link>
+  </model>
 
   <!-- Würfelproben-->
-  <!-- <model name="Probekoerper4">
+  <model name="Probekoerper4">
       <pose>-0.25 -0.8 0.844 0.0 0.0 0.0</pose>
-      <static>true</static>
+      <static>false</static>
     <link name="link">
       <inertial>
-        <mass>1.0</mass>
+        <mass>8.437</mass>
         <inertia> 
-          <ixx>0.083</ixx>      
+          <ixx>0.00539</ixx>      
           <ixy>0.0</ixy>        
           <ixz>0.0</ixz>         
-          <iyy>0.083</iyy>       
+          <iyy>0.00539</iyy>       
           <iyz>0.0</iyz>         
-          <izz>0.083</izz>       
+          <izz>0.00539</izz>       
         </inertia>
       </inertial>
       <collision name="collision">
@@ -500,21 +530,21 @@
         </material>
       </visual>
     </link>
-  </model> -->
+  </model>
 
-  <!-- <model name="Probekoerper5">
-      <pose>-0.1 -0.8 0.844 0.0 0.0 0.7854</pose>
-      <static>true</static>
+  <model name="Probekoerper5">
+      <pose>-0.05 -0.8 0.844 0.0 0.0 0.7854</pose>
+      <static>false</static>
     <link name="link">
       <inertial>
-        <mass>1.0</mass>
+        <mass>8.437</mass>
         <inertia> 
-          <ixx>0.083</ixx>      
+          <ixx>0.00539</ixx>      
           <ixy>0.0</ixy>        
           <ixz>0.0</ixz>         
-          <iyy>0.083</iyy>       
+          <iyy>0.00539</iyy>       
           <iyz>0.0</iyz>         
-          <izz>0.083</izz>       
+          <izz>0.00539</izz>       
         </inertia>
       </inertial>
       <collision name="collision">
@@ -537,32 +567,35 @@
         </material>
       </visual>
     </link>
-  </model> -->
+  </model>
 
-
-    <!-- <model name="test">
-      <pose> 0.1 -0.8 0.794 0.0 0.0 0.0</pose>
-      <static>true</static>
+  <model name="Probekoerper7">
+      <pose>-0.05 -1.0 0.869 0.0 0.0 0.7854</pose>
+      <static>false</static>
     <link name="link">
       <inertial>
-        <mass>1.0</mass>
+        <mass>8.437</mass>
         <inertia> 
-          <ixx>0.083</ixx>      
+          <ixx>0.00539</ixx>      
           <ixy>0.0</ixy>        
           <ixz>0.0</ixz>         
-          <iyy>0.083</iyy>       
+          <iyy>0.00539</iyy>       
           <iyz>0.0</iyz>         
-          <izz>0.083</izz>       
+          <izz>0.00539</izz>       
         </inertia>
       </inertial>
       <collision name="collision">
         <geometry>
-          <mesh><uri>file://home/mario/master_ws/install/estun_control/share/estun_control/meshes/Probekoerper.stl</uri></mesh>
+          <box>
+            <size>0.15 0.15 0.15</size>
+          </box>
         </geometry>
       </collision>
       <visual name="visual">
         <geometry>
-          <mesh><uri>file://home/mario/master_ws/install/estun_control/share/estun_control/meshes/Probekoerper.stl</uri></mesh>
+          <box>
+            <size>0.15 0.15 0.15</size>
+          </box>
         </geometry>
         <material>
           <ambient>0.02 0.14 0.15 1</ambient>
@@ -571,7 +604,44 @@
         </material>
       </visual>
     </link>
-  </model> -->
+  </model>
+
+  <model name="Probekoerper8">
+      <pose>0.1 -0.8 0.814 0.0 0.0 0.7854</pose>
+      <static>false</static>
+    <link name="link">
+      <inertial>
+        <mass>8.437</mass>
+        <inertia> 
+          <ixx>0.00539</ixx>      
+          <ixy>0.0</ixy>        
+          <ixz>0.0</ixz>         
+          <iyy>0.00539</iyy>       
+          <iyz>0.0</iyz>         
+          <izz>0.00539</izz>       
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.04 0.04 0.04</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.04 0.04 0.04</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.02 0.14 0.15 1</ambient>
+          <diffuse>0.10 0.80 0.80 1</diffuse>
+          <specular>0.9 0.9 0.9 1</specular>
+        </material>
+      </visual>
+    </link>
+  </model>
 
 
   </world>

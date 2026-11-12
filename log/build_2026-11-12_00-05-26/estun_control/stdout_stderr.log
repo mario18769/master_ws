@@ -1,0 +1,47 @@
+[ 33%] Built target cartesian_planner
+[ 66%] Built target obstacle_planner
+[ 83%] [32mBuilding CXX object CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o[0m
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:4[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:5[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kvoid MTCTaskNode::[01;32m[KgetObjects[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:273:28:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<MTCTaskNode::getObjects()::data>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  273 |     if (task == false && [01;35m[Kj < objects.size()[m[K){
+      |                          [01;35m[K~~^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:276:12:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<MTCTaskNode::getObjects()::data>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  276 |       if([01;35m[Kj >= objects.size()[m[K){
+      |          [01;35m[K~~^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:285:26:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<MTCTaskNode::getObjects()::data>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  285 |     if(task == true && [01;35m[Kj < objects.size()[m[K){
+      |                        [01;35m[K~~^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kbool MTCTaskNode::[01;32m[KdoTask[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:382:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoveit::task_constructor::SolutionBase::[01;32m[KSolutionBase[m[K(moveit::task_constructor::Stage*, double, std::string, std::string)[m[K’ is protected within this context
+  382 |   moveit::task_constructor::SolutionBase [01;31m[KBaseSolution[m[K;
+      |                                          [01;31m[K^~~~~~~~~~~~[m[K
+In file included from [01m[K/home/mario/master_ws/install/moveit_task_constructor_core/include/moveit/task_constructor/stage.h:45[m[K,
+                 from [01m[K/home/mario/master_ws/install/moveit_task_constructor_core/include/moveit/task_constructor/container.h:41[m[K,
+                 from [01m[K/home/mario/master_ws/install/moveit_task_constructor_core/include/moveit/task_constructor/task.h:42[m[K,
+                 from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:6[m[K:
+[01m[K/home/mario/master_ws/install/moveit_task_constructor_core/include/moveit/task_constructor/storage.h:331:9:[m[K [01;36m[Knote: [m[Kdeclared protected here
+  331 |         [01;36m[KSolutionBase[m[K(Stage* creator = nullptr, double cost = 0.0, std::string comment = "", std::string planner_id = "")
+      |         [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:382:42:[m[K [01;31m[Kerror: [m[Kcannot declare variable ‘[01m[KBaseSolution[m[K’ to be of abstract type ‘[01m[Kmoveit::task_constructor::SolutionBase[m[K’
+  382 |   moveit::task_constructor::SolutionBase [01;31m[KBaseSolution[m[K;
+      |                                          [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/install/moveit_task_constructor_core/include/moveit/task_constructor/storage.h:269:7:[m[K [01;36m[Knote: [m[K  because the following virtual functions are pure within ‘[01m[Kmoveit::task_constructor::SolutionBase[m[K’:
+  269 | class [01;36m[KSolutionBase[m[K
+      |       [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/install/moveit_task_constructor_core/include/moveit/task_constructor/storage.h:320:22:[m[K [01;36m[Knote: [m[K    ‘[01m[Kvirtual void moveit::task_constructor::SolutionBase::[01;32m[KappendTo[m[K(moveit_task_constructor_msgs::msg::Solution&, moveit::task_constructor::Introspection*) const[m[K’
+  320 |         virtual void [01;36m[KappendTo[m[K(moveit_task_constructor_msgs::msg::Solution& solution,
+      |                      [01;36m[K^~~~~~~~[m[K
+[01m[K/home/mario/master_ws/install/moveit_task_constructor_core/include/moveit/task_constructor/storage.h:325:24:[m[K [01;36m[Knote: [m[K    ‘[01m[Kvirtual double moveit::task_constructor::SolutionBase::[01;32m[KcomputeCost[m[K(const moveit::task_constructor::CostTerm&, std::string&) const[m[K’
+  325 |         virtual double [01;36m[KcomputeCost[m[K(const CostTerm& cost, std::string& comment) const = 0;
+      |                        [01;36m[K^~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/mtc_estun.dir/build.make:76: CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o] Fehler 1
+gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/mtc_estun.dir/all] Fehler 2
+gmake: *** [Makefile:146: all] Fehler 2

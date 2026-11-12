@@ -5,14 +5,13 @@
 
     <!-- Import Estun urdf file -->
     <xacro:include filename="$(find estun_er_hi_description)/urdf/estun_er_hi.xacro" />
+    <xacro:include filename="$(find estun_er_hi_description)/urdf/estun_er_hi.gazebo" />
+    <xacro:include filename="$(find estun_er_hi_description)/urdf/materials.xacro" />
 
     <!-- Import control_xacro -->
     <xacro:include filename="estun.ros2_control.xacro" />
 
-
     <xacro:estun_ros2_control name="GazeboSimSystem" initial_positions_file="$(arg initial_positions_file)"/>
-
-
 
 
 </robot>

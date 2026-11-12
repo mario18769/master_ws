@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
 <robot name="estun_er_hi" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-<xacro:include filename="$(find estun_er_hi_description)/urdf/materials.xacro" />
-<xacro:include filename="$(find estun_er_hi_description)/urdf/estun_er_hi.ros2control" />
-<xacro:include filename="$(find estun_er_hi_description)/urdf/estun_er_hi.gazebo" />
+<!-- <xacro:include filename="$(find estun_er_hi_description)/urdf/materials.xacro" /> -->
+<!-- <xacro:include filename="$(find estun_er_hi_description)/urdf/estun_er_hi.ros2control" /> -->
+<!-- <xacro:include filename="$(find estun_er_hi_description)/urdf/estun_er_hi.gazebo" /> -->
 
 <link name="world"/>
 <link name="base_link">
@@ -167,7 +167,7 @@
     <material name="silver"/>
   </visual>
   <collision>
-    <origin xyz="-1.540402 -0.01958 -1.569441" rpy="0 0 0"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
     <geometry>
       <mesh filename="file://$(find estun_er_hi_description)/meshes/base_plate.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -188,7 +188,7 @@
     <material name="silver"/>
   </visual>
   <collision>
-    <origin xyz="-1.540402 -0.01958 -1.569441" rpy="0 0 0"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
     <geometry>
       <mesh filename="file://$(find estun_er_hi_description)/meshes/gripper_base.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -209,7 +209,7 @@
     <material name="silver"/>
   </visual>
   <collision>
-    <origin xyz="-1.540402 -0.01958 -1.569441" rpy="0 0 0"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
     <geometry>
       <mesh filename="file://$(find estun_er_hi_description)/meshes/finger_base.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -230,7 +230,7 @@
     <material name="silver"/>
   </visual>
   <collision>
-    <origin xyz="-1.540402 -0.01958 -1.569441" rpy="0 0 0"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
     <geometry>
       <mesh filename="file://$(find estun_er_hi_description)/meshes/finger_base.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -251,7 +251,7 @@
     <material name="silver"/>
   </visual>
   <collision>
-    <origin xyz="-1.540402 -0.01958 -1.569441" rpy="0 0 0"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
     <geometry>
       <mesh filename="file://$(find estun_er_hi_description)/meshes/finger_tip.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -272,7 +272,7 @@
     <material name="silver"/>
   </visual>
   <collision>
-    <origin xyz="-1.540402 -0.01958 -1.569441" rpy="0 0 0"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
     <geometry>
       <mesh filename="file://$(find estun_er_hi_description)/meshes/finger_tip.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -353,11 +353,12 @@
 </joint>
 
 <joint name="joint_gripper_base_finger_base_left" type="prismatic">
+  
   <origin xyz="-0.021875 0.116 0.0135" rpy="-1.5708 -1.5708 0.0"/>
   <parent link="gripper_base"/>
   <child link="finger_base_left"/>
   <axis xyz="-1.0 0 0"/>
-  <limit effort="1000" velocity="1.0" lower="0" upper="0.06" />
+  <limit effort="1300" velocity="1.0" lower="0" upper="0.06" />
 </joint>
 
 <joint name="joint_gripper_base_finger_base_right" type="prismatic">
@@ -365,7 +366,7 @@
   <parent link="gripper_base"/>
   <child link="finger_base_right"/>
   <axis xyz="-1.0 0 0"/>
-  <limit effort="1000" velocity="1.0" lower="0.0" upper="0.06" />
+  <limit effort="1300" velocity="1.0" lower="0.0" upper="0.06" />
 </joint>
 
 <joint name="joint_finger_base_finger_tip_left" type="fixed">
@@ -381,7 +382,7 @@
 </joint>
 
 <joint name="joint_gripper_base_tcp" type="fixed">
-  <origin xyz="0.0 0.2 0.0" rpy="0.0 1.5708 3.142"/>
+  <origin xyz="0.0 0.1854 0.0" rpy="0.0 1.5708 3.142"/>
   <parent link="gripper_base"/>
   <child link="tcp"/>
 </joint>

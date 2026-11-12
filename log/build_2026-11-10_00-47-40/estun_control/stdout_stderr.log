@@ -1,0 +1,43 @@
+[ 33%] Built target cartesian_planner
+[ 66%] Built target mtc_estun
+[ 83%] [32mBuilding CXX object CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o[0m
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:1[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:51:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   51 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:2[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:[m[K In member function ‘[01m[Kvoid ObstaclePlanner::[01;32m[KaddProbekoerper[m[K(robot_interfaces::msg::ObjectPose)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:167:24:[m[K [01;31m[Kerror: [m[Kfound ‘[01m[K:[m[K’ in nested-name-specifier, expected ‘[01m[K::[m[K’
+  167 |         std::vector<std[01;31m[K:[m[Kstring> objects_delete;
+      |                        [01;31m[K^[m[K
+      |                        [32m[K::[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:169:27:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K&[m[K’ token
+  169 |         for (auto iterator[01;31m[K&[m[K : object_names){
+      |                           [01;31m[K^[m[K
+      |                           [32m[K;[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:169:29:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K:[m[K’ token
+  169 |         for (auto iterator& [01;31m[K:[m[K object_names){
+      |                             [01;31m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:169:28:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K:[m[K’ token
+  169 |         for (auto iterator&[01;31m[K [m[K[32m[K:[m[K object_names){
+      |                            [01;31m[K^[m[K[32m[K~[m[K
+      |                            [32m[K;[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:169:29:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K:[m[K’ token
+  169 |         for (auto iterator& [01;31m[K:[m[K object_names){
+      |                             [01;31m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:169:28:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K:[m[K’ token
+  169 |         for [34m[K([m[Kauto iterator&[01;31m[K [m[K[32m[K:[m[K object_names){
+      |             [34m[K~[m[K              [01;31m[K^[m[K[32m[K~[m[K
+      |                            [32m[K)[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:169:29:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K:[m[K’ token
+  169 |         for (auto iterator& [01;31m[K:[m[K object_names){
+      |                             [01;31m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:169:19:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kiterator[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  169 |         for (auto [01;35m[Kiterator[m[K& : object_names){
+      |                   [01;35m[K^~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/obstacle_planner.dir/build.make:76: CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o] Fehler 1
+gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/obstacle_planner.dir/all] Fehler 2
+gmake: *** [Makefile:146: all] Fehler 2

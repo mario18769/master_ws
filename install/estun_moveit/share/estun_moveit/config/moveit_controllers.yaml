@@ -1,5 +1,5 @@
 trajectory_execution:
-  allowed_execution_duration_scaling: 1.2
+  allowed_execution_duration_scaling: 1.0
   allowed_goal_duration_margin: 1.0
   allowed_start_tolerance: 0.05
   execution_duration_monitoring: true
@@ -30,4 +30,16 @@ moveit_simple_controller_manager:
     joints:
       - joint_gripper_base_finger_base_left
       - joint_gripper_base_finger_base_right
+
+  # hand_controller:
+  #   name: hand_controller
+  #   action_ns: gripper_cmd
+  #   type: ParallelGripperCommand
+  #   default: true
+  #   joints:
+  #     - joint_gripper_base_finger_base_left
+  #     - joint_gripper_base_finger_base_right
+  #   command_joint:
+  #     - joint_gripper_base_finger_base_left
+  #   parallel: true
 

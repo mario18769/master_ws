@@ -1,0 +1,513 @@
+[0.099s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.099s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x73f51f8bbd70>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x73f51f8660c0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x73f51f8660c0>>, mixin_verb=('build',))
+[0.128s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.128s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.128s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.128s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.128s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.128s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.128s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/mario/master_ws'
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_control) by extensions ['ignore', 'ignore_ament_install']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_control) by extension 'ignore'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_control) by extension 'ignore_ament_install'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_control) by extensions ['colcon_pkg']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_control) by extension 'colcon_pkg'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_control) by extensions ['colcon_meta']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_control) by extension 'colcon_meta'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_control) by extensions ['ros']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_control) by extension 'ros'
+[0.151s] DEBUG:colcon.colcon_core.package_identification:Package 'src/estun_control' with type 'ros.ament_cmake' and name 'estun_control'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_description) by extensions ['ignore', 'ignore_ament_install']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_description) by extension 'ignore'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_description) by extension 'ignore_ament_install'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_description) by extensions ['colcon_pkg']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_description) by extension 'colcon_pkg'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_description) by extensions ['colcon_meta']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_description) by extension 'colcon_meta'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_description) by extensions ['ros']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_description) by extension 'ros'
+[0.152s] DEBUG:colcon.colcon_core.package_identification:Package 'src/estun_description' with type 'ros.ament_python' and name 'estun_description'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_er_hi_description) by extensions ['ignore', 'ignore_ament_install']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_er_hi_description) by extension 'ignore'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_er_hi_description) by extension 'ignore_ament_install'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_er_hi_description) by extensions ['colcon_pkg']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_er_hi_description) by extension 'colcon_pkg'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_er_hi_description) by extensions ['colcon_meta']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_er_hi_description) by extension 'colcon_meta'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_er_hi_description) by extensions ['ros']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_er_hi_description) by extension 'ros'
+[0.152s] DEBUG:colcon.colcon_core.package_identification:Package 'src/estun_er_hi_description' with type 'ros.ament_python' and name 'estun_er_hi_description'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_moveit) by extensions ['ignore', 'ignore_ament_install']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_moveit) by extension 'ignore'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_moveit) by extension 'ignore_ament_install'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_moveit) by extensions ['colcon_pkg']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_moveit) by extension 'colcon_pkg'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_moveit) by extensions ['colcon_meta']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_moveit) by extension 'colcon_meta'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_moveit) by extensions ['ros']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/estun_moveit) by extension 'ros'
+[0.153s] DEBUG:colcon.colcon_core.package_identification:Package 'src/estun_moveit' with type 'ros.ament_cmake' and name 'estun_moveit'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor) by extensions ['ignore', 'ignore_ament_install']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor) by extension 'ignore'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor) by extension 'ignore_ament_install'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor) by extensions ['colcon_pkg']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor) by extension 'colcon_pkg'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor) by extensions ['colcon_meta']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor) by extension 'colcon_meta'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor) by extensions ['ros']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor) by extension 'ros'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor) by extensions ['cmake', 'python']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor) by extension 'cmake'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor) by extension 'python'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor) by extensions ['python_setup_py']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor) by extension 'python_setup_py'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/capabilities) by extensions ['ignore', 'ignore_ament_install']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/capabilities) by extension 'ignore'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/capabilities) by extension 'ignore_ament_install'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/capabilities) by extensions ['colcon_pkg']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/capabilities) by extension 'colcon_pkg'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/capabilities) by extensions ['colcon_meta']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/capabilities) by extension 'colcon_meta'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/capabilities) by extensions ['ros']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/capabilities) by extension 'ros'
+[0.155s] DEBUG:colcon.colcon_core.package_identification:Package 'src/moveit_task_constructor/capabilities' with type 'ros.ament_cmake' and name 'moveit_task_constructor_capabilities'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/core) by extensions ['ignore', 'ignore_ament_install']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/core) by extension 'ignore'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/core) by extension 'ignore_ament_install'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/core) by extensions ['colcon_pkg']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/core) by extension 'colcon_pkg'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/core) by extensions ['colcon_meta']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/core) by extension 'colcon_meta'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/core) by extensions ['ros']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/core) by extension 'ros'
+[0.156s] DEBUG:colcon.colcon_core.package_identification:Package 'src/moveit_task_constructor/core' with type 'ros.ament_cmake' and name 'moveit_task_constructor_core'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/demo) by extensions ['ignore', 'ignore_ament_install']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/demo) by extension 'ignore'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/demo) by extension 'ignore_ament_install'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/demo) by extensions ['colcon_pkg']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/demo) by extension 'colcon_pkg'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/demo) by extensions ['colcon_meta']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/demo) by extension 'colcon_meta'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/demo) by extensions ['ros']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/demo) by extension 'ros'
+[0.157s] DEBUG:colcon.colcon_core.package_identification:Package 'src/moveit_task_constructor/demo' with type 'ros.ament_cmake' and name 'moveit_task_constructor_demo'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/msgs) by extension 'ignore'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/msgs) by extension 'ignore_ament_install'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/msgs) by extensions ['colcon_pkg']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/msgs) by extension 'colcon_pkg'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/msgs) by extensions ['colcon_meta']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/msgs) by extension 'colcon_meta'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/msgs) by extensions ['ros']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/msgs) by extension 'ros'
+[0.158s] DEBUG:colcon.colcon_core.package_identification:Package 'src/moveit_task_constructor/msgs' with type 'ros.ament_cmake' and name 'moveit_task_constructor_msgs'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/rviz_marker_tools) by extensions ['ignore', 'ignore_ament_install']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/rviz_marker_tools) by extension 'ignore'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/rviz_marker_tools) by extension 'ignore_ament_install'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/rviz_marker_tools) by extensions ['colcon_pkg']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/rviz_marker_tools) by extension 'colcon_pkg'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/rviz_marker_tools) by extensions ['colcon_meta']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/rviz_marker_tools) by extension 'colcon_meta'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/rviz_marker_tools) by extensions ['ros']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/rviz_marker_tools) by extension 'ros'
+[0.159s] DEBUG:colcon.colcon_core.package_identification:Package 'src/moveit_task_constructor/rviz_marker_tools' with type 'ros.ament_cmake' and name 'rviz_marker_tools'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/visualization) by extensions ['ignore', 'ignore_ament_install']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/visualization) by extension 'ignore'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/visualization) by extension 'ignore_ament_install'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/visualization) by extensions ['colcon_pkg']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/visualization) by extension 'colcon_pkg'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/visualization) by extensions ['colcon_meta']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/visualization) by extension 'colcon_meta'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/visualization) by extensions ['ros']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/moveit_task_constructor/visualization) by extension 'ros'
+[0.160s] DEBUG:colcon.colcon_core.package_identification:Package 'src/moveit_task_constructor/visualization' with type 'ros.ament_cmake' and name 'moveit_task_constructor_visualization'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_interfaces) by extension 'ignore'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_interfaces) by extension 'ignore_ament_install'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_interfaces) by extensions ['colcon_pkg']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_interfaces) by extension 'colcon_pkg'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_interfaces) by extensions ['colcon_meta']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_interfaces) by extension 'colcon_meta'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_interfaces) by extensions ['ros']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_interfaces) by extension 'ros'
+[0.160s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robot_interfaces' with type 'ros.ament_cmake' and name 'robot_interfaces'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/roboticsgroup_gazebo_plugins) by extensions ['ignore', 'ignore_ament_install']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/roboticsgroup_gazebo_plugins) by extension 'ignore'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/roboticsgroup_gazebo_plugins) by extension 'ignore_ament_install'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/roboticsgroup_gazebo_plugins) by extensions ['colcon_pkg']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/roboticsgroup_gazebo_plugins) by extension 'colcon_pkg'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/roboticsgroup_gazebo_plugins) by extensions ['colcon_meta']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/roboticsgroup_gazebo_plugins) by extension 'colcon_meta'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/roboticsgroup_gazebo_plugins) by extensions ['ros']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/roboticsgroup_gazebo_plugins) by extension 'ros'
+[0.161s] DEBUG:colcon.colcon_core.package_identification:Package 'src/roboticsgroup_gazebo_plugins' with type 'ros.catkin' and name 'roboticsgroup_gazebo_plugins'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_control) by extensions ['ignore', 'ignore_ament_install']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_control) by extension 'ignore'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_control) by extension 'ignore_ament_install'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_control) by extensions ['colcon_pkg']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_control) by extension 'colcon_pkg'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_control) by extensions ['colcon_meta']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_control) by extension 'colcon_meta'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_control) by extensions ['ros']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_control) by extension 'ros'
+[0.162s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vision_control' with type 'ros.ament_cmake' and name 'vision_control'
+[0.162s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.162s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.162s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.162s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.162s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.178s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.178s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.180s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 14 installed packages in /home/mario/master_ws/install
+[0.183s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 542 installed packages in /opt/ros/jazzy
+[0.184s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.249s] Level 5:colcon.colcon_core.verb:set package 'estun_description' build argument 'cmake_args' from command line to 'None'
+[0.249s] Level 5:colcon.colcon_core.verb:set package 'estun_description' build argument 'cmake_target' from command line to 'None'
+[0.249s] Level 5:colcon.colcon_core.verb:set package 'estun_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.249s] Level 5:colcon.colcon_core.verb:set package 'estun_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.249s] Level 5:colcon.colcon_core.verb:set package 'estun_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.249s] Level 5:colcon.colcon_core.verb:set package 'estun_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.249s] Level 5:colcon.colcon_core.verb:set package 'estun_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.249s] Level 5:colcon.colcon_core.verb:set package 'estun_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.249s] Level 5:colcon.colcon_core.verb:set package 'estun_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.249s] DEBUG:colcon.colcon_core.verb:Building package 'estun_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mario/master_ws/build/estun_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mario/master_ws/install/estun_description', 'merge_install': False, 'path': '/home/mario/master_ws/src/estun_description', 'symlink_install': False, 'test_result_base': None}
+[0.250s] Level 5:colcon.colcon_core.verb:set package 'estun_er_hi_description' build argument 'cmake_args' from command line to 'None'
+[0.250s] Level 5:colcon.colcon_core.verb:set package 'estun_er_hi_description' build argument 'cmake_target' from command line to 'None'
+[0.250s] Level 5:colcon.colcon_core.verb:set package 'estun_er_hi_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.250s] Level 5:colcon.colcon_core.verb:set package 'estun_er_hi_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.250s] Level 5:colcon.colcon_core.verb:set package 'estun_er_hi_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.250s] Level 5:colcon.colcon_core.verb:set package 'estun_er_hi_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.250s] Level 5:colcon.colcon_core.verb:set package 'estun_er_hi_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.250s] Level 5:colcon.colcon_core.verb:set package 'estun_er_hi_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.250s] Level 5:colcon.colcon_core.verb:set package 'estun_er_hi_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.250s] DEBUG:colcon.colcon_core.verb:Building package 'estun_er_hi_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mario/master_ws/build/estun_er_hi_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mario/master_ws/install/estun_er_hi_description', 'merge_install': False, 'path': '/home/mario/master_ws/src/estun_er_hi_description', 'symlink_install': False, 'test_result_base': None}
+[0.250s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_msgs' build argument 'cmake_args' from command line to 'None'
+[0.250s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_msgs' build argument 'cmake_target' from command line to 'None'
+[0.250s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.250s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.250s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.250s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.250s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.250s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.250s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.250s] DEBUG:colcon.colcon_core.verb:Building package 'moveit_task_constructor_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mario/master_ws/build/moveit_task_constructor_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mario/master_ws/install/moveit_task_constructor_msgs', 'merge_install': False, 'path': '/home/mario/master_ws/src/moveit_task_constructor/msgs', 'symlink_install': False, 'test_result_base': None}
+[0.250s] Level 5:colcon.colcon_core.verb:set package 'robot_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.250s] Level 5:colcon.colcon_core.verb:set package 'robot_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.250s] Level 5:colcon.colcon_core.verb:set package 'robot_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.250s] Level 5:colcon.colcon_core.verb:set package 'robot_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.250s] Level 5:colcon.colcon_core.verb:set package 'robot_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.250s] Level 5:colcon.colcon_core.verb:set package 'robot_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.250s] Level 5:colcon.colcon_core.verb:set package 'robot_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.250s] Level 5:colcon.colcon_core.verb:set package 'robot_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.251s] Level 5:colcon.colcon_core.verb:set package 'robot_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.251s] DEBUG:colcon.colcon_core.verb:Building package 'robot_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mario/master_ws/build/robot_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mario/master_ws/install/robot_interfaces', 'merge_install': False, 'path': '/home/mario/master_ws/src/robot_interfaces', 'symlink_install': False, 'test_result_base': None}
+[0.251s] Level 5:colcon.colcon_core.verb:set package 'roboticsgroup_gazebo_plugins' build argument 'cmake_args' from command line to 'None'
+[0.251s] Level 5:colcon.colcon_core.verb:set package 'roboticsgroup_gazebo_plugins' build argument 'cmake_target' from command line to 'None'
+[0.251s] Level 5:colcon.colcon_core.verb:set package 'roboticsgroup_gazebo_plugins' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.251s] Level 5:colcon.colcon_core.verb:set package 'roboticsgroup_gazebo_plugins' build argument 'cmake_clean_cache' from command line to 'False'
+[0.251s] Level 5:colcon.colcon_core.verb:set package 'roboticsgroup_gazebo_plugins' build argument 'cmake_clean_first' from command line to 'False'
+[0.251s] Level 5:colcon.colcon_core.verb:set package 'roboticsgroup_gazebo_plugins' build argument 'cmake_force_configure' from command line to 'False'
+[0.251s] Level 5:colcon.colcon_core.verb:set package 'roboticsgroup_gazebo_plugins' build argument 'ament_cmake_args' from command line to 'None'
+[0.251s] Level 5:colcon.colcon_core.verb:set package 'roboticsgroup_gazebo_plugins' build argument 'catkin_cmake_args' from command line to 'None'
+[0.251s] Level 5:colcon.colcon_core.verb:set package 'roboticsgroup_gazebo_plugins' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.251s] DEBUG:colcon.colcon_core.verb:Building package 'roboticsgroup_gazebo_plugins' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mario/master_ws/build/roboticsgroup_gazebo_plugins', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mario/master_ws/install/roboticsgroup_gazebo_plugins', 'merge_install': False, 'path': '/home/mario/master_ws/src/roboticsgroup_gazebo_plugins', 'symlink_install': False, 'test_result_base': None}
+[0.251s] Level 5:colcon.colcon_core.verb:set package 'rviz_marker_tools' build argument 'cmake_args' from command line to 'None'
+[0.251s] Level 5:colcon.colcon_core.verb:set package 'rviz_marker_tools' build argument 'cmake_target' from command line to 'None'
+[0.251s] Level 5:colcon.colcon_core.verb:set package 'rviz_marker_tools' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.251s] Level 5:colcon.colcon_core.verb:set package 'rviz_marker_tools' build argument 'cmake_clean_cache' from command line to 'False'
+[0.251s] Level 5:colcon.colcon_core.verb:set package 'rviz_marker_tools' build argument 'cmake_clean_first' from command line to 'False'
+[0.251s] Level 5:colcon.colcon_core.verb:set package 'rviz_marker_tools' build argument 'cmake_force_configure' from command line to 'False'
+[0.251s] Level 5:colcon.colcon_core.verb:set package 'rviz_marker_tools' build argument 'ament_cmake_args' from command line to 'None'
+[0.251s] Level 5:colcon.colcon_core.verb:set package 'rviz_marker_tools' build argument 'catkin_cmake_args' from command line to 'None'
+[0.251s] Level 5:colcon.colcon_core.verb:set package 'rviz_marker_tools' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.251s] DEBUG:colcon.colcon_core.verb:Building package 'rviz_marker_tools' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mario/master_ws/build/rviz_marker_tools', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mario/master_ws/install/rviz_marker_tools', 'merge_install': False, 'path': '/home/mario/master_ws/src/moveit_task_constructor/rviz_marker_tools', 'symlink_install': False, 'test_result_base': None}
+[0.251s] Level 5:colcon.colcon_core.verb:set package 'estun_moveit' build argument 'cmake_args' from command line to 'None'
+[0.251s] Level 5:colcon.colcon_core.verb:set package 'estun_moveit' build argument 'cmake_target' from command line to 'None'
+[0.251s] Level 5:colcon.colcon_core.verb:set package 'estun_moveit' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.251s] Level 5:colcon.colcon_core.verb:set package 'estun_moveit' build argument 'cmake_clean_cache' from command line to 'False'
+[0.251s] Level 5:colcon.colcon_core.verb:set package 'estun_moveit' build argument 'cmake_clean_first' from command line to 'False'
+[0.251s] Level 5:colcon.colcon_core.verb:set package 'estun_moveit' build argument 'cmake_force_configure' from command line to 'False'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'estun_moveit' build argument 'ament_cmake_args' from command line to 'None'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'estun_moveit' build argument 'catkin_cmake_args' from command line to 'None'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'estun_moveit' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.252s] DEBUG:colcon.colcon_core.verb:Building package 'estun_moveit' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mario/master_ws/build/estun_moveit', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mario/master_ws/install/estun_moveit', 'merge_install': False, 'path': '/home/mario/master_ws/src/estun_moveit', 'symlink_install': False, 'test_result_base': None}
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_core' build argument 'cmake_args' from command line to 'None'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_core' build argument 'cmake_target' from command line to 'None'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_core' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_core' build argument 'cmake_clean_cache' from command line to 'False'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_core' build argument 'cmake_clean_first' from command line to 'False'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_core' build argument 'cmake_force_configure' from command line to 'False'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_core' build argument 'ament_cmake_args' from command line to 'None'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_core' build argument 'catkin_cmake_args' from command line to 'None'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_core' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.252s] DEBUG:colcon.colcon_core.verb:Building package 'moveit_task_constructor_core' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mario/master_ws/build/moveit_task_constructor_core', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mario/master_ws/install/moveit_task_constructor_core', 'merge_install': False, 'path': '/home/mario/master_ws/src/moveit_task_constructor/core', 'symlink_install': False, 'test_result_base': None}
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'vision_control' build argument 'cmake_args' from command line to 'None'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'vision_control' build argument 'cmake_target' from command line to 'None'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'vision_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'vision_control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'vision_control' build argument 'cmake_clean_first' from command line to 'False'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'vision_control' build argument 'cmake_force_configure' from command line to 'False'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'vision_control' build argument 'ament_cmake_args' from command line to 'None'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'vision_control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'vision_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.252s] DEBUG:colcon.colcon_core.verb:Building package 'vision_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mario/master_ws/build/vision_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mario/master_ws/install/vision_control', 'merge_install': False, 'path': '/home/mario/master_ws/src/vision_control', 'symlink_install': False, 'test_result_base': None}
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'estun_control' build argument 'cmake_args' from command line to 'None'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'estun_control' build argument 'cmake_target' from command line to 'None'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'estun_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'estun_control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'estun_control' build argument 'cmake_clean_first' from command line to 'False'
+[0.252s] Level 5:colcon.colcon_core.verb:set package 'estun_control' build argument 'cmake_force_configure' from command line to 'False'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'estun_control' build argument 'ament_cmake_args' from command line to 'None'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'estun_control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'estun_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.253s] DEBUG:colcon.colcon_core.verb:Building package 'estun_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mario/master_ws/build/estun_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mario/master_ws/install/estun_control', 'merge_install': False, 'path': '/home/mario/master_ws/src/estun_control', 'symlink_install': False, 'test_result_base': None}
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_capabilities' build argument 'cmake_args' from command line to 'None'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_capabilities' build argument 'cmake_target' from command line to 'None'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_capabilities' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_capabilities' build argument 'cmake_clean_cache' from command line to 'False'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_capabilities' build argument 'cmake_clean_first' from command line to 'False'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_capabilities' build argument 'cmake_force_configure' from command line to 'False'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_capabilities' build argument 'ament_cmake_args' from command line to 'None'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_capabilities' build argument 'catkin_cmake_args' from command line to 'None'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_capabilities' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.253s] DEBUG:colcon.colcon_core.verb:Building package 'moveit_task_constructor_capabilities' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mario/master_ws/build/moveit_task_constructor_capabilities', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mario/master_ws/install/moveit_task_constructor_capabilities', 'merge_install': False, 'path': '/home/mario/master_ws/src/moveit_task_constructor/capabilities', 'symlink_install': False, 'test_result_base': None}
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_visualization' build argument 'cmake_args' from command line to 'None'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_visualization' build argument 'cmake_target' from command line to 'None'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_visualization' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_visualization' build argument 'cmake_clean_cache' from command line to 'False'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_visualization' build argument 'cmake_clean_first' from command line to 'False'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_visualization' build argument 'cmake_force_configure' from command line to 'False'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_visualization' build argument 'ament_cmake_args' from command line to 'None'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_visualization' build argument 'catkin_cmake_args' from command line to 'None'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_visualization' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.253s] DEBUG:colcon.colcon_core.verb:Building package 'moveit_task_constructor_visualization' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mario/master_ws/build/moveit_task_constructor_visualization', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mario/master_ws/install/moveit_task_constructor_visualization', 'merge_install': False, 'path': '/home/mario/master_ws/src/moveit_task_constructor/visualization', 'symlink_install': False, 'test_result_base': None}
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_demo' build argument 'cmake_args' from command line to 'None'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_demo' build argument 'cmake_target' from command line to 'None'
+[0.253s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_demo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_demo' build argument 'cmake_clean_cache' from command line to 'False'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_demo' build argument 'cmake_clean_first' from command line to 'False'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_demo' build argument 'cmake_force_configure' from command line to 'False'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_demo' build argument 'ament_cmake_args' from command line to 'None'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_demo' build argument 'catkin_cmake_args' from command line to 'None'
+[0.254s] Level 5:colcon.colcon_core.verb:set package 'moveit_task_constructor_demo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.254s] DEBUG:colcon.colcon_core.verb:Building package 'moveit_task_constructor_demo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mario/master_ws/build/moveit_task_constructor_demo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mario/master_ws/install/moveit_task_constructor_demo', 'merge_install': False, 'path': '/home/mario/master_ws/src/moveit_task_constructor/demo', 'symlink_install': False, 'test_result_base': None}
+[0.254s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.254s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.255s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mario/master_ws/src/moveit_task_constructor/msgs' with build type 'ament_cmake'
+[0.255s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mario/master_ws/src/moveit_task_constructor/msgs'
+[0.257s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.257s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.257s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.261s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mario/master_ws/src/moveit_task_constructor/rviz_marker_tools' with build type 'ament_cmake'
+[0.262s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mario/master_ws/src/moveit_task_constructor/rviz_marker_tools'
+[0.262s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.262s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.266s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mario/master_ws/src/robot_interfaces' with build type 'ament_cmake'
+[0.266s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mario/master_ws/src/robot_interfaces'
+[0.266s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.266s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.270s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/mario/master_ws/src/estun_description' with build type 'ament_python'
+[0.270s] Level 1:colcon.colcon_core.shell:create_environment_hook('estun_description', 'ament_prefix_path')
+[0.270s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mario/master_ws/install/estun_description/share/estun_description/hook/ament_prefix_path.ps1'
+[0.270s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mario/master_ws/install/estun_description/share/estun_description/hook/ament_prefix_path.dsv'
+[0.271s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mario/master_ws/install/estun_description/share/estun_description/hook/ament_prefix_path.sh'
+[0.271s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.271s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.275s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/mario/master_ws/src/estun_er_hi_description' with build type 'ament_python'
+[0.275s] Level 1:colcon.colcon_core.shell:create_environment_hook('estun_er_hi_description', 'ament_prefix_path')
+[0.275s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mario/master_ws/install/estun_er_hi_description/share/estun_er_hi_description/hook/ament_prefix_path.ps1'
+[0.276s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mario/master_ws/install/estun_er_hi_description/share/estun_er_hi_description/hook/ament_prefix_path.dsv'
+[0.276s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mario/master_ws/install/estun_er_hi_description/share/estun_er_hi_description/hook/ament_prefix_path.sh'
+[0.276s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.276s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.280s] INFO:colcon.colcon_ros.task.catkin.build:Building ROS package in '/home/mario/master_ws/src/roboticsgroup_gazebo_plugins' with build type 'catkin'
+[0.280s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mario/master_ws/src/roboticsgroup_gazebo_plugins'
+[0.280s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.280s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.288s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mario/master_ws/build/moveit_task_constructor_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mario/master_ws/install/estun_er_hi_description:/home/mario/master_ws/install/estun_description:/home/mario/master_ws/install/ER20-2300-HI-FCE_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mario/master_ws/build/moveit_task_constructor_msgs -- -j12 -l12
+[0.291s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mario/master_ws/build/rviz_marker_tools': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mario/master_ws/install/estun_er_hi_description:/home/mario/master_ws/install/estun_description:/home/mario/master_ws/install/ER20-2300-HI-FCE_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mario/master_ws/build/rviz_marker_tools -- -j12 -l12
+[0.293s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mario/master_ws/build/robot_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mario/master_ws/install/estun_er_hi_description:/home/mario/master_ws/install/estun_description:/home/mario/master_ws/install/ER20-2300-HI-FCE_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mario/master_ws/build/robot_interfaces -- -j12 -l12
+[0.541s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/mario/master_ws/src/estun_description'
+[0.542s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.542s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.772s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/mario/master_ws/src/estun_er_hi_description'
+[0.772s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.772s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.783s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mario/master_ws/build/rviz_marker_tools' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mario/master_ws/install/estun_er_hi_description:/home/mario/master_ws/install/estun_description:/home/mario/master_ws/install/ER20-2300-HI-FCE_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mario/master_ws/build/rviz_marker_tools -- -j12 -l12
+[0.790s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mario/master_ws/build/rviz_marker_tools': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mario/master_ws/install/estun_er_hi_description:/home/mario/master_ws/install/estun_description:/home/mario/master_ws/install/ER20-2300-HI-FCE_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/mario/master_ws/build/rviz_marker_tools
+[0.790s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mario/master_ws/build/robot_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mario/master_ws/install/estun_er_hi_description:/home/mario/master_ws/install/estun_description:/home/mario/master_ws/install/ER20-2300-HI-FCE_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mario/master_ws/build/robot_interfaces -- -j12 -l12
+[0.791s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mario/master_ws/build/robot_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mario/master_ws/install/estun_er_hi_description:/home/mario/master_ws/install/estun_description:/home/mario/master_ws/install/ER20-2300-HI-FCE_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/mario/master_ws/build/robot_interfaces
+[0.793s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mario/master_ws/build/roboticsgroup_gazebo_plugins': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/mario/master_ws/src/roboticsgroup_gazebo_plugins -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/mario/master_ws/install/roboticsgroup_gazebo_plugins
+[0.798s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mario/master_ws/build/moveit_task_constructor_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mario/master_ws/install/estun_er_hi_description:/home/mario/master_ws/install/estun_description:/home/mario/master_ws/install/ER20-2300-HI-FCE_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mario/master_ws/build/moveit_task_constructor_msgs -- -j12 -l12
+[0.799s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mario/master_ws/build/moveit_task_constructor_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mario/master_ws/install/estun_er_hi_description:/home/mario/master_ws/install/estun_description:/home/mario/master_ws/install/ER20-2300-HI-FCE_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/mario/master_ws/build/moveit_task_constructor_msgs
+[0.804s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rviz_marker_tools)
+[0.810s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mario/master_ws/build/rviz_marker_tools' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mario/master_ws/install/estun_er_hi_description:/home/mario/master_ws/install/estun_description:/home/mario/master_ws/install/ER20-2300-HI-FCE_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/mario/master_ws/build/rviz_marker_tools
+[0.814s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/rviz_marker_tools' for CMake module files
+[0.815s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/rviz_marker_tools' for CMake config files
+[0.817s] Level 1:colcon.colcon_core.shell:create_environment_hook('rviz_marker_tools', 'cmake_prefix_path')
+[0.817s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mario/master_ws/install/rviz_marker_tools/share/rviz_marker_tools/hook/cmake_prefix_path.ps1'
+[0.818s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mario/master_ws/install/rviz_marker_tools/share/rviz_marker_tools/hook/cmake_prefix_path.dsv'
+[0.819s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mario/master_ws/install/rviz_marker_tools/share/rviz_marker_tools/hook/cmake_prefix_path.sh'
+[0.820s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/rviz_marker_tools/lib'
+[0.821s] Level 1:colcon.colcon_core.shell:create_environment_hook('rviz_marker_tools', 'ld_library_path_lib')
+[0.821s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mario/master_ws/install/rviz_marker_tools/share/rviz_marker_tools/hook/ld_library_path_lib.ps1'
+[0.822s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mario/master_ws/install/rviz_marker_tools/share/rviz_marker_tools/hook/ld_library_path_lib.dsv'
+[0.823s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mario/master_ws/install/rviz_marker_tools/share/rviz_marker_tools/hook/ld_library_path_lib.sh'
+[0.824s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/rviz_marker_tools/bin'
+[0.824s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/rviz_marker_tools/lib/pkgconfig/rviz_marker_tools.pc'
+[0.824s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/rviz_marker_tools/lib/python3.12/site-packages'
+[0.824s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/rviz_marker_tools/bin'
+[0.825s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/rviz_marker_tools/share/rviz_marker_tools/package.ps1'
+[0.826s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mario/master_ws/install/rviz_marker_tools/share/rviz_marker_tools/package.dsv'
+[0.827s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/rviz_marker_tools/share/rviz_marker_tools/package.sh'
+[0.828s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/rviz_marker_tools/share/rviz_marker_tools/package.bash'
+[0.829s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/rviz_marker_tools/share/rviz_marker_tools/package.zsh'
+[0.830s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mario/master_ws/install/rviz_marker_tools/share/colcon-core/packages/rviz_marker_tools)
+[0.830s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rviz_marker_tools)
+[0.831s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/rviz_marker_tools' for CMake module files
+[0.831s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/rviz_marker_tools' for CMake config files
+[0.832s] Level 1:colcon.colcon_core.shell:create_environment_hook('rviz_marker_tools', 'cmake_prefix_path')
+[0.833s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mario/master_ws/install/rviz_marker_tools/share/rviz_marker_tools/hook/cmake_prefix_path.ps1'
+[0.833s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mario/master_ws/install/rviz_marker_tools/share/rviz_marker_tools/hook/cmake_prefix_path.dsv'
+[0.834s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mario/master_ws/install/rviz_marker_tools/share/rviz_marker_tools/hook/cmake_prefix_path.sh'
+[0.834s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/rviz_marker_tools/lib'
+[0.835s] Level 1:colcon.colcon_core.shell:create_environment_hook('rviz_marker_tools', 'ld_library_path_lib')
+[0.835s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mario/master_ws/install/rviz_marker_tools/share/rviz_marker_tools/hook/ld_library_path_lib.ps1'
+[0.835s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mario/master_ws/install/rviz_marker_tools/share/rviz_marker_tools/hook/ld_library_path_lib.dsv'
+[0.836s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mario/master_ws/install/rviz_marker_tools/share/rviz_marker_tools/hook/ld_library_path_lib.sh'
+[0.836s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/rviz_marker_tools/bin'
+[0.837s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/rviz_marker_tools/lib/pkgconfig/rviz_marker_tools.pc'
+[0.837s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/rviz_marker_tools/lib/python3.12/site-packages'
+[0.837s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/rviz_marker_tools/bin'
+[0.837s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/rviz_marker_tools/share/rviz_marker_tools/package.ps1'
+[0.838s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mario/master_ws/install/rviz_marker_tools/share/rviz_marker_tools/package.dsv'
+[0.839s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/rviz_marker_tools/share/rviz_marker_tools/package.sh'
+[0.839s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/rviz_marker_tools/share/rviz_marker_tools/package.bash'
+[0.840s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/rviz_marker_tools/share/rviz_marker_tools/package.zsh'
+[0.841s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mario/master_ws/install/rviz_marker_tools/share/colcon-core/packages/rviz_marker_tools)
+[0.856s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_interfaces)
+[0.857s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/robot_interfaces' for CMake module files
+[0.858s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/robot_interfaces' for CMake config files
+[0.861s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_interfaces', 'cmake_prefix_path')
+[0.861s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mario/master_ws/install/robot_interfaces/share/robot_interfaces/hook/cmake_prefix_path.ps1'
+[0.862s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mario/master_ws/install/robot_interfaces/share/robot_interfaces/hook/cmake_prefix_path.dsv'
+[0.863s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mario/master_ws/install/robot_interfaces/share/robot_interfaces/hook/cmake_prefix_path.sh'
+[0.864s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/robot_interfaces/lib'
+[0.864s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_interfaces', 'ld_library_path_lib')
+[0.864s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mario/master_ws/install/robot_interfaces/share/robot_interfaces/hook/ld_library_path_lib.ps1'
+[0.865s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mario/master_ws/install/robot_interfaces/share/robot_interfaces/hook/ld_library_path_lib.dsv'
+[0.865s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mario/master_ws/install/robot_interfaces/share/robot_interfaces/hook/ld_library_path_lib.sh'
+[0.867s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/robot_interfaces/bin'
+[0.867s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/robot_interfaces/lib/pkgconfig/robot_interfaces.pc'
+[0.867s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/robot_interfaces/lib/python3.12/site-packages'
+[0.867s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_interfaces', 'pythonpath')
+[0.868s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mario/master_ws/install/robot_interfaces/share/robot_interfaces/hook/pythonpath.ps1'
+[0.869s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mario/master_ws/install/robot_interfaces/share/robot_interfaces/hook/pythonpath.dsv'
+[0.870s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mario/master_ws/install/robot_interfaces/share/robot_interfaces/hook/pythonpath.sh'
+[0.871s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/robot_interfaces/bin'
+[0.871s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/robot_interfaces/share/robot_interfaces/package.ps1'
+[0.872s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mario/master_ws/install/robot_interfaces/share/robot_interfaces/package.dsv'
+[0.873s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/robot_interfaces/share/robot_interfaces/package.sh'
+[0.874s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/robot_interfaces/share/robot_interfaces/package.bash'
+[0.875s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/robot_interfaces/share/robot_interfaces/package.zsh'
+[0.875s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mario/master_ws/install/robot_interfaces/share/colcon-core/packages/robot_interfaces)
+[0.876s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_interfaces)
+[0.876s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/robot_interfaces' for CMake module files
+[0.878s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/robot_interfaces' for CMake config files
+[0.880s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_interfaces', 'cmake_prefix_path')
+[0.880s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mario/master_ws/install/robot_interfaces/share/robot_interfaces/hook/cmake_prefix_path.ps1'
+[0.880s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mario/master_ws/install/robot_interfaces/share/robot_interfaces/hook/cmake_prefix_path.dsv'
+[0.881s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mario/master_ws/install/robot_interfaces/share/robot_interfaces/hook/cmake_prefix_path.sh'
+[0.882s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mario/master_ws/build/roboticsgroup_gazebo_plugins' returned '1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/mario/master_ws/src/roboticsgroup_gazebo_plugins -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/mario/master_ws/install/roboticsgroup_gazebo_plugins
+[0.882s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/robot_interfaces/lib'
+[0.882s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_interfaces', 'ld_library_path_lib')
+[0.882s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mario/master_ws/install/robot_interfaces/share/robot_interfaces/hook/ld_library_path_lib.ps1'
+[0.883s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mario/master_ws/install/robot_interfaces/share/robot_interfaces/hook/ld_library_path_lib.dsv'
+[0.884s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mario/master_ws/install/robot_interfaces/share/robot_interfaces/hook/ld_library_path_lib.sh'
+[0.884s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/robot_interfaces/bin'
+[0.884s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/robot_interfaces/lib/pkgconfig/robot_interfaces.pc'
+[0.885s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/robot_interfaces/lib/python3.12/site-packages'
+[0.885s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_interfaces', 'pythonpath')
+[0.885s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mario/master_ws/install/robot_interfaces/share/robot_interfaces/hook/pythonpath.ps1'
+[0.886s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mario/master_ws/install/robot_interfaces/share/robot_interfaces/hook/pythonpath.dsv'
+[0.886s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mario/master_ws/install/robot_interfaces/share/robot_interfaces/hook/pythonpath.sh'
+[0.888s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/robot_interfaces/bin'
+[0.888s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/robot_interfaces/share/robot_interfaces/package.ps1'
+[0.889s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mario/master_ws/install/robot_interfaces/share/robot_interfaces/package.dsv'
+[0.890s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/robot_interfaces/share/robot_interfaces/package.sh'
+[0.891s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/robot_interfaces/share/robot_interfaces/package.bash'
+[0.892s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/robot_interfaces/share/robot_interfaces/package.zsh'
+[0.893s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mario/master_ws/install/robot_interfaces/share/colcon-core/packages/robot_interfaces)
+[0.894s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mario/master_ws/src/vision_control' with build type 'ament_cmake'
+[0.894s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mario/master_ws/src/vision_control'
+[0.894s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.894s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.894s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mario/master_ws/build/robot_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mario/master_ws/install/estun_er_hi_description:/home/mario/master_ws/install/estun_description:/home/mario/master_ws/install/ER20-2300-HI-FCE_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/mario/master_ws/build/robot_interfaces
+[0.907s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(roboticsgroup_gazebo_plugins)
+[0.907s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/roboticsgroup_gazebo_plugins' for CMake module files
+[0.908s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/roboticsgroup_gazebo_plugins' for CMake config files
+[0.908s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/roboticsgroup_gazebo_plugins/bin'
+[0.908s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/roboticsgroup_gazebo_plugins/lib/pkgconfig/roboticsgroup_gazebo_plugins.pc'
+[0.908s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/roboticsgroup_gazebo_plugins/lib/python3.12/site-packages'
+[0.908s] Level 1:colcon.colcon_core.environment:checking '/home/mario/master_ws/install/roboticsgroup_gazebo_plugins/bin'
+[0.909s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/roboticsgroup_gazebo_plugins/share/roboticsgroup_gazebo_plugins/package.ps1'
+[0.909s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mario/master_ws/install/roboticsgroup_gazebo_plugins/share/roboticsgroup_gazebo_plugins/package.dsv'
+[0.909s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/roboticsgroup_gazebo_plugins/share/roboticsgroup_gazebo_plugins/package.sh'
+[0.909s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/roboticsgroup_gazebo_plugins/share/roboticsgroup_gazebo_plugins/package.bash'
+[0.910s] INFO:colcon.colcon_core.shell:Creating package script '/home/mario/master_ws/install/roboticsgroup_gazebo_plugins/share/roboticsgroup_gazebo_plugins/package.zsh'
+[0.910s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mario/master_ws/install/roboticsgroup_gazebo_plugins/share/colcon-core/packages/roboticsgroup_gazebo_plugins)
+[1.467s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.467s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.468s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '1'
+[1.468s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.476s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.477s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.477s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.493s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.493s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mario/master_ws/install/local_setup.ps1'
+[1.494s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/mario/master_ws/install/_local_setup_util_ps1.py'
+[1.496s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mario/master_ws/install/setup.ps1'
+[1.498s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mario/master_ws/install/local_setup.sh'
+[1.499s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/mario/master_ws/install/_local_setup_util_sh.py'
+[1.499s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mario/master_ws/install/setup.sh'
+[1.502s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mario/master_ws/install/local_setup.bash'
+[1.502s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mario/master_ws/install/setup.bash'
+[1.504s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mario/master_ws/install/local_setup.zsh'
+[1.505s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mario/master_ws/install/setup.zsh'

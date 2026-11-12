@@ -193,7 +193,6 @@ def generate_launch_description():
         output="screen",
     )
 
-   # {'config_file': os.path.join(get_package_share_directory('<my_gz_sim_pkg>'), 'config', 'ros_gz_bridge.yaml')},
 
     load_arm_controller = ExecuteProcess(
         cmd=['ros2', 'control', 'load_controller', '--set-state', 'active','arm_controller'],
@@ -253,8 +252,8 @@ def generate_launch_description():
 
 
         (static_tf),
-        #(gz_world),
-        (control_node),
+        (gz_world),
+        #(control_node),
               
         RegisterEventHandler(
             OnProcessStart(
@@ -282,67 +281,67 @@ def generate_launch_description():
                     
         
                   
-        # RegisterEventHandler(
-        #     OnProcessStart(
+        RegisterEventHandler(
+            OnProcessStart(
                 
-        #         target_action=robot_state_publisher_node,
-        #         on_start=[LogInfo(msg='Starte gz_spawn_entity \n'), gz_spawn_entity]
-        #     )
-        # ),           
+                target_action=robot_state_publisher_node,
+                on_start=[LogInfo(msg='Starte gz_spawn_entity \n'), gz_spawn_entity]
+            )
+        ),           
 
                         
         RegisterEventHandler(
             OnProcessStart(
                 
-                target_action=robot_state_publisher_node,
+                target_action=ros_gz_bridge,
                 on_start=[LogInfo(msg='Starte joint_state_broadcaster_controller \n'), load_arm_controller]
             )
         ),
 
         RegisterEventHandler(
-            OnExecutionComplete(
+            OnProcessStart(
                 
-                target_action=load_arm_controller,
-                on_completion=[LogInfo(msg='Starte joint_state_broadcaster_controller \n'), load_hand_controller]
+                target_action= ros_gz_bridge,
+                on_start=[LogInfo(msg='Starte joint_state_broadcaster_controller \n'), load_hand_controller]
             )
         ),             
         
 
   
-        # RegisterEventHandler(
-        #     OnExecutionComplete(
+        RegisterEventHandler(
+            OnExecutionComplete(
                 
-        #         target_action=load_hand_controller,
-        #         on_completion=[LogInfo(msg='Starte pcl_pose_estimation \n'), pose_estimation_node]
-        #     )
-        # ),       
+                target_action=load_hand_controller,
+                on_completion=[LogInfo(msg='Starte pcl_pose_estimation \n'), pose_estimation_node]
+            )
+        ),       
            
         
                             
         RegisterEventHandler(
             OnProcessStart(
                 
-                target_action=load_hand_controller,
+                target_action=pose_estimation_node,
                 #target_action=load_hand_controller,
                 on_start=[LogInfo(msg='starte move_group_node \n'), run_move_group_node]
             )
         ),
 
         RegisterEventHandler(
-            OnProcessStart(
+            OnExecutionComplete(
                 
                 target_action=load_hand_controller,
-                on_start=[LogInfo(msg='starte rviz2 \n'), rviz_node]
+                on_completion=[LogInfo(msg='starte rviz2 \n'), rviz_node]
             )
         ),
 
-        # RegisterEventHandler(
-        #     OnProcessStart(
+        RegisterEventHandler(
+            OnProcessStart(
                 
-        #         target_action=rviz_node,
-        #         on_start=[LogInfo(msg='starte robstacle_planner \n'), obstacle_planner_node]
-        #     )
-        # ),            
+                target_action=rviz_node,
+                on_start=[LogInfo(msg='starte robstacle_planner \n'), obstacle_planner_node]
+            )
+        ),            
         
 
         # RegisterEventHandler(

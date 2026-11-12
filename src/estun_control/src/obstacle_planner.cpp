@@ -66,6 +66,7 @@ class ObstaclePlanner : public rclcpp::Node {
 
         const std::string sdfPath = "/home/mario/master_ws/src/estun_moveit/urdf/custom_world.sdf";
         int count_objects = 0;
+        int run_count = 0;
 
 
 
@@ -148,6 +149,8 @@ void ObstaclePlanner::run() {
 
 void ObstaclePlanner::addProbekoerper(robot_interfaces::msg::ObjectPose msg){
 
+    if(run_count > 0){ return;}
+
     _move_group = new moveit::planning_interface::MoveGroupInterface(_node, "arm");
 
     // RCLCPP_INFO(this->get_logger(),"Probekoerper Message empfangen");
@@ -158,9 +161,35 @@ void ObstaclePlanner::addProbekoerper(robot_interfaces::msg::ObjectPose msg){
 
         // RCLCPP_INFO(this->get_logger(),"Message_new_size: %i", msg_vector_new.size());
         // RCLCPP_INFO(this->get_logger(),"Message wird zu Msg.vector hinzugefuegt");
+
+        
     }
 
     else{
+
+
+
+        std::vector<std::string> object_names = planning_scene_interface.getKnownObjectNames();
+
+        std::cout << "Anzahl Known Objects: " << object_names.size() << std::endl;
+
+        std::vector<std::string> objects_delete;
+
+        for (auto& iterator : object_names){
+            
+            std::cout << "Aktueller Name des Objekts: " << iterator << std::endl;
+
+            if (iterator.starts_with("Cube") || iterator.starts_with("Cylinder") ){
+
+                std::cout << "Removed Object: " << iterator << std::endl;
+
+                objects_delete.push_back(iterator);
+            }
+        }
+
+        planning_scene_interface.removeCollisionObjects(objects_delete);
+
+        
 
         std::vector<robot_interfaces::msg::ObjectPose> msg_vector_old(msg_vector_new);
         msg_vector_new.clear();
@@ -175,7 +204,7 @@ void ObstaclePlanner::addProbekoerper(robot_interfaces::msg::ObjectPose msg){
 
             if (msg_component.object_type == "Cylinder"){
 
-                // RCLCPP_INFO(this->get_logger(),"Cylinder wird verarbeitet");
+                RCLCPP_INFO(this->get_logger(),"Cylinder wird verarbeitet");
 
                 moveit_msgs::msg::CollisionObject object;
                 object.header.frame_id = _move_group->getPlanningFrame();
@@ -237,7 +266,7 @@ void ObstaclePlanner::addProbekoerper(robot_interfaces::msg::ObjectPose msg){
 
                 if (planning_scene_interface.applyCollisionObject(object) == true){
 
-                    // RCLCPP_INFO(this->get_logger(),"Cylinder succesfully added to planningscene");
+                    RCLCPP_INFO(this->get_logger(),"Cylinder succesfully added to planningscene");
                 }
 
                 else{ 
@@ -252,6 +281,8 @@ void ObstaclePlanner::addProbekoerper(robot_interfaces::msg::ObjectPose msg){
                 moveit_msgs::msg::CollisionObject object;
                 object.header.frame_id = _move_group->getPlanningFrame();
                 object.id = "Cube_" + std::to_string(i);
+
+                // std::cout << "Cube:: " << object.id << std::endl;
 
                 // RCLCPP_INFO(this->get_logger(),"TEST1");
 
@@ -295,7 +326,7 @@ void ObstaclePlanner::addProbekoerper(robot_interfaces::msg::ObjectPose msg){
 
                 if (planning_scene_interface.applyCollisionObject(object) == true){
 
-                    // RCLCPP_INFO(this->get_logger(),"Cube succesfully added to planningscene");
+                    RCLCPP_INFO(this->get_logger(),"Cube succesfully added to planningscene");
                 }
 
                 else{
@@ -304,8 +335,10 @@ void ObstaclePlanner::addProbekoerper(robot_interfaces::msg::ObjectPose msg){
             }
 
             i++;
-        }
+        } msg_vector_old.clear();
         i=0;
+
+        run_count = 1;
     }
 }
 
@@ -396,9 +429,8 @@ void ObstaclePlanner::setup_world(){
         test_object.meshes.push_back(test_mesh);
         test_object.mesh_poses.push_back(test_pose);
         
-        
+
         test_object.operation = test_object.ADD;
-        
         
         moveit_msgs::msg::ObjectColor object_color;
         object_color.id = test_object.id;

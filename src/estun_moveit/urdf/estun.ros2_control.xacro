@@ -61,21 +61,21 @@
                 <state_interface name="velocity"/>
             </joint>
             <joint name="joint_gripper_base_finger_base_left">
-
+                
                 <command_interface name="position"/>
-
-                <state_interface name="position"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['joint_gripper_base_finger_base_left']}</param>
+                </state_interface>
+                    
                 <state_interface name="velocity"/>
-
             </joint>
-
-            <!-- MIMIC-Joint für rechten Gripperfinger -->
             <joint name="joint_gripper_base_finger_base_right">
                 <command_interface name="position"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['joint_gripper_base_finger_base_right']}</param>
+                </state_interface>
 
-                <state_interface name="position"/>
                 <state_interface name="velocity"/>
-
             </joint>
 
         </ros2_control>

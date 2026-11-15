@@ -1,0 +1,123 @@
+-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found rclcpp: 28.1.22 (/opt/ros/jazzy/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found moveit: 2.12.4 (/opt/ros/jazzy/share/moveit/cmake)
+-- Found std_msgs: 5.3.8 (/opt/ros/jazzy/share/std_msgs/cmake)
+-- Found moveit_msgs: 2.6.0 (/opt/ros/jazzy/share/moveit_msgs/cmake)
+-- Found moveit_ros_planning_interface: 2.12.4 (/opt/ros/jazzy/share/moveit_ros_planning_interface/cmake)
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: date_time filesystem program_options system thread 
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+-- Found tcb_span: 1.3.2 (/opt/ros/jazzy/share/tcb_span/cmake)
+-- Found rclcpp_lifecycle: 28.1.22 (/opt/ros/jazzy/share/rclcpp_lifecycle/cmake)
+-- Found parameter_traits: 0.7.6 (/opt/ros/jazzy/share/parameter_traits/cmake)
+-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread chrono 
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: thread system filesystem regex date_time program_options 
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread 
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: thread 
+-- Looking for sdformat14 -- found version 14.9.0
+-- Searching for dependencies of sdformat14
+-- Checking for module 'tinyxml2'
+--   Found tinyxml2, version 10.0.0
+-- Looking for gz-math7 -- found version 7.7.0
+-- Searching for dependencies of gz-math7
+-- Looking for gz-utils2 -- found version 2.2.1
+-- Searching for dependencies of gz-utils2
+-- Looking for gz-utils2 -- found version 2.2.1
+-- Searching for dependencies of gz-utils2
+-- Searching for <gz-utils2> component [cli]
+-- Looking for gz-utils2-cli -- found version 2.2.1
+-- Searching for dependencies of gz-utils2-cli
+-- Found moveit_task_constructor_core: 0.2.0 (/home/mario/master_ws/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake)
+-- Found robot_interfaces: 0.0.0 (/home/mario/master_ws/install/robot_interfaces/share/robot_interfaces/cmake)
+-- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/mario/master_ws/src/estun_control/include>
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Configured 'flake8' exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done (1.9s)
+-- Generating done (0.1s)
+-- Build files have been written to: /home/mario/master_ws/build/estun_control
+[ 16%] [32mBuilding CXX object CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o[0m
+[ 50%] Built target cartesian_planner
+[ 66%] [32mBuilding CXX object CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o[0m
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:1[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:51:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   51 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:4[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:5[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:2[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In constructor ‘[01m[KMTCTaskNode::[01;32m[KMTCTaskNode[m[K(const rclcpp::NodeOptions&)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:186:14:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kiterator[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  186 |   for (auto& [01;35m[Kiterator[m[K : attach_topics){
+      |              [01;35m[K^~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kvoid MTCTaskNode::[01;32m[KgetObjects[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:396:28:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<MTCTaskNode::getObjects()::data>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  396 |     if (task == false && [01;35m[Kj < objects.size()[m[K){
+      |                          [01;35m[K~~^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:399:12:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<MTCTaskNode::getObjects()::data>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  399 |       if([01;35m[Kj >= objects.size()[m[K){
+      |          [01;35m[K~~^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:409:26:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<MTCTaskNode::getObjects()::data>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  409 |     if(task == true && [01;35m[Kj < objects.size()[m[K){
+      |                        [01;35m[K~~^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kint MTCTaskNode::[01;32m[KtestAttach[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:454:8:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kx_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  454 |   bool [01;35m[Kx_[m[K = false, y_ = false, z_ = false;
+      |        [01;35m[K^~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:454:20:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ky_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  454 |   bool x_ = false, [01;35m[Ky_[m[K = false, z_ = false;
+      |                    [01;35m[K^~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:454:32:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kz_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  454 |   bool x_ = false, y_ = false, [01;35m[Kz_[m[K = false;
+      |                                [01;35m[K^~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kmoveit::task_constructor::Task MTCTaskNode::[01;32m[KcreateGrabTask[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:894:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kattach_object_stage[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  894 |   mtc::Stage* [01;35m[Kattach_object_stage[m[K = nullptr;  // Forward attach_object_stage to place pose generator
+      |               [01;35m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:[m[K In member function ‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn ObstaclePlanner::[01;32m[Kon_configure[m[K(const rclcpp_lifecycle::State&)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:46:128:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprevious_state[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   46 |         rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_configure([01;35m[Kconst rclcpp_lifecycle::State & previous_state[m[K){
+      |                                                                                                [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:[m[K In member function ‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn ObstaclePlanner::[01;32m[Kon_activate[m[K(const rclcpp_lifecycle::State&)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:51:127:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprevious_state[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   51 |         rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_activate([01;35m[Kconst rclcpp_lifecycle::State & previous_state[m[K){
+      |                                                                                               [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:[m[K In member function ‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn ObstaclePlanner::[01;32m[Kon_deactivate[m[K(const rclcpp_lifecycle::State&)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:59:129:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprevious_state[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   59 |         rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_deactivate([01;35m[Kconst rclcpp_lifecycle::State & previous_state[m[K){
+      |                                                                                                 [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:[m[K In member function ‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn ObstaclePlanner::[01;32m[Kon_cleanup[m[K(const rclcpp_lifecycle::State&)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:65:126:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprevious_state[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   65 |         rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_cleanup([01;35m[Kconst rclcpp_lifecycle::State & previous_state[m[K){
+      |                                                                                              [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:[m[K In member function ‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn ObstaclePlanner::[01;32m[Kon_shutdown[m[K(const rclcpp_lifecycle::State&)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:72:128:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprevious_state[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   72 |          rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_shutdown([01;35m[Kconst rclcpp_lifecycle::State & previous_state[m[K){
+      |                                                                                                [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[ 83%] [32m[1mLinking CXX executable obstacle_planner[0m
+[ 83%] Built target obstacle_planner
+[100%] [32m[1mLinking CXX executable mtc_estun[0m
+[100%] Built target mtc_estun

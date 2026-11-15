@@ -58,6 +58,9 @@ struct ObjectPose_
       this->mid_x = 0.0;
       this->mid_y = 0.0;
       this->mid_z = 0.0;
+      this->roll = 0.0;
+      this->pitch = 0.0;
+      this->yaw = 0.0;
     }
   }
 
@@ -83,6 +86,9 @@ struct ObjectPose_
       this->mid_x = 0.0;
       this->mid_y = 0.0;
       this->mid_z = 0.0;
+      this->roll = 0.0;
+      this->pitch = 0.0;
+      this->yaw = 0.0;
     }
   }
 
@@ -135,6 +141,15 @@ struct ObjectPose_
   using _mid_z_type =
     double;
   _mid_z_type mid_z;
+  using _roll_type =
+    double;
+  _roll_type roll;
+  using _pitch_type =
+    double;
+  _pitch_type pitch;
+  using _yaw_type =
+    double;
+  _yaw_type yaw;
 
   // setters for named parameter idiom
   Type & set__object_type(
@@ -233,6 +248,24 @@ struct ObjectPose_
     this->mid_z = _arg;
     return *this;
   }
+  Type & set__roll(
+    const double & _arg)
+  {
+    this->roll = _arg;
+    return *this;
+  }
+  Type & set__pitch(
+    const double & _arg)
+  {
+    this->pitch = _arg;
+    return *this;
+  }
+  Type & set__yaw(
+    const double & _arg)
+  {
+    this->yaw = _arg;
+    return *this;
+  }
 
   // constant declarations
 
@@ -322,6 +355,15 @@ struct ObjectPose_
       return false;
     }
     if (this->mid_z != other.mid_z) {
+      return false;
+    }
+    if (this->roll != other.roll) {
+      return false;
+    }
+    if (this->pitch != other.pitch) {
+      return false;
+    }
+    if (this->yaw != other.yaw) {
       return false;
     }
     return true;

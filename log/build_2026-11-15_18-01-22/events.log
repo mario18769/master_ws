@@ -1,0 +1,370 @@
+[0.000000] (-) TimerEvent: {}
+[0.000430] (-) JobUnselected: {'identifier': 'estun_description'}
+[0.000490] (-) JobUnselected: {'identifier': 'estun_er_hi_description'}
+[0.000628] (-) JobUnselected: {'identifier': 'estun_moveit'}
+[0.000702] (-) JobUnselected: {'identifier': 'moveit_task_constructor_capabilities'}
+[0.000734] (-) JobUnselected: {'identifier': 'moveit_task_constructor_core'}
+[0.000810] (-) JobUnselected: {'identifier': 'moveit_task_constructor_demo'}
+[0.000830] (-) JobUnselected: {'identifier': 'moveit_task_constructor_msgs'}
+[0.000845] (-) JobUnselected: {'identifier': 'moveit_task_constructor_visualization'}
+[0.000863] (-) JobUnselected: {'identifier': 'pick_ik'}
+[0.000905] (-) JobUnselected: {'identifier': 'robot_interfaces'}
+[0.000966] (-) JobUnselected: {'identifier': 'rviz_marker_tools'}
+[0.000993] (-) JobUnselected: {'identifier': 'vision_control'}
+[0.001018] (estun_control) JobQueued: {'identifier': 'estun_control', 'dependencies': OrderedDict({'moveit_task_constructor_msgs': '/home/mario/master_ws/install/moveit_task_constructor_msgs', 'robot_interfaces': '/home/mario/master_ws/install/robot_interfaces', 'rviz_marker_tools': '/home/mario/master_ws/install/rviz_marker_tools', 'moveit_task_constructor_core': '/home/mario/master_ws/install/moveit_task_constructor_core'})}
+[0.001058] (estun_control) JobStarted: {'identifier': 'estun_control'}
+[0.020987] (estun_control) JobProgress: {'identifier': 'estun_control', 'progress': 'cmake'}
+[0.021739] (estun_control) JobProgress: {'identifier': 'estun_control', 'progress': 'build'}
+[0.022372] (estun_control) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/mario/master_ws/build/estun_control', '--', '-j12', '-l12'], 'cwd': '/home/mario/master_ws/build/estun_control', 'env': OrderedDict({'GZ_SIM_SYSTEM_PLUGIN_PATH': '/opt/ros/jazzy/lib', 'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'XDG_ACTIVATION_TOKEN': 'gnome-shell/Terminator/2906-3-mario-MS-7C37_TIME13339935', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'LANGUAGE': 'de_DE:en', 'USER': 'mario', 'LC_TIME': 'de_DE.UTF-8', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'x11', 'STM32CubeMX_PATH': '/home/mario/STM32CubeMX', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/mario/master_ws/install/moveit_task_constructor_core/lib:/home/mario/master_ws/install/rviz_marker_tools/lib:/home/mario/master_ws/install/robot_interfaces/lib:/home/mario/master_ws/install/moveit_task_constructor_msgs/lib:/home/mario/master_ws/install/moveit_task_constructor_demo/lib:/home/mario/master_ws/install/moveit_task_constructor_visualization/lib:/home/mario/master_ws/install/moveit_task_constructor_capabilities/lib:/home/mario/master_ws/install/pick_ik/lib:/home/mario/master_ws/install/linkattacher_msgs/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/mario', 'OLDPWD': '/home/mario', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/terminator.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'de_DE.UTF-8', 'MANAGERPID': '2529', 'SYSTEMD_EXEC_PID': '2906', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '21625', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/mario/master_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'mario', 'JOURNAL_STREAM': '10:23397', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'mario', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/home/mario/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/mario/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/mario-MS-7C37:@/tmp/.ICE-unix/2863,unix/mario-MS-7C37:/tmp/.ICE-unix/2863', 'INVOCATION_ID': '154ba07a04304eaf94e12ca136522cd9', 'PAPERSIZE': 'a4', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'de_DE.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'de_DE.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'de_DE.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/mario/master_ws/install/vision_control:/home/mario/master_ws/install/moveit_task_constructor_demo:/home/mario/master_ws/install/moveit_task_constructor_visualization:/home/mario/master_ws/install/moveit_task_constructor_capabilities:/home/mario/master_ws/install/estun_control:/home/mario/master_ws/install/moveit_task_constructor_core:/home/mario/master_ws/install/rviz_marker_tools:/home/mario/master_ws/install/robot_interfaces:/home/mario/master_ws/install/pick_ik:/home/mario/master_ws/install/moveit_task_constructor_msgs:/home/mario/master_ws/install/linkattacher_msgs:/home/mario/master_ws/install/estun_moveit:/home/mario/master_ws/install/estun_er_hi_description:/home/mario/master_ws/install/estun_description:/home/mario/master_ws/install/ER20-2300-HI-FCE_description:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LC_NAME': 'de_DE.UTF-8', 'TERMINATOR_UUID': 'urn:uuid:f52211b8-441e-4b2f-8d23-c24d35b57d35', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'de_DE.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'LC_IDENTIFICATION': 'de_DE.UTF-8', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/mario/master_ws/build/estun_control', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/home/mario/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/mario/master_ws/install/moveit_task_constructor_core/lib/python3.12/site-packages:/home/mario/master_ws/install/robot_interfaces/lib/python3.12/site-packages:/home/mario/master_ws/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:/home/mario/master_ws/install/linkattacher_msgs/lib/python3.12/site-packages:/home/mario/master_ws/install/estun_er_hi_description/lib/python3.12/site-packages:/home/mario/master_ws/install/estun_description/lib/python3.12/site-packages:/home/mario/master_ws/install/ER20-2300-HI-FCE_description/lib/python3.12/site-packages:/opt/ros/jazzy/opt/gz_sim_vendor/lib/python:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_transport_vendor/lib/python:/opt/ros/jazzy/opt/gz_msgs_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'LC_NUMERIC': 'en_US.UTF-8', 'LC_PAPER': 'de_DE.UTF-8', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/mario/master_ws/install/moveit_task_constructor_core:/home/mario/master_ws/install/rviz_marker_tools:/home/mario/master_ws/install/robot_interfaces:/home/mario/master_ws/install/moveit_task_constructor_msgs:/home/mario/master_ws/install/vision_control:/home/mario/master_ws/install/moveit_task_constructor_demo:/home/mario/master_ws/install/moveit_task_constructor_visualization:/home/mario/master_ws/install/moveit_task_constructor_capabilities:/home/mario/master_ws/install/estun_control:/home/mario/master_ws/install/pick_ik:/home/mario/master_ws/install/linkattacher_msgs:/home/mario/master_ws/install/estun_moveit:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/mario/master_ws/install/estun_er_hi_description:/home/mario/master_ws/install/estun_description:/home/mario/master_ws/install/ER20-2300-HI-FCE_description:/opt/ros/jazzy'}), 'shell': False}
+[0.099751] (-) TimerEvent: {}
+[0.102711] (estun_control) StdoutLine: {'line': b'[ 33%] Built target cartesian_planner\n'}
+[0.111535] (estun_control) StdoutLine: {'line': b'[ 66%] Built target obstacle_planner\n'}
+[0.126751] (estun_control) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o\x1b[0m\n'}
+[0.199840] (-) TimerEvent: {}
+[0.300087] (-) TimerEvent: {}
+[0.400345] (-) TimerEvent: {}
+[0.500619] (-) TimerEvent: {}
+[0.600931] (-) TimerEvent: {}
+[0.701269] (-) TimerEvent: {}
+[0.801515] (-) TimerEvent: {}
+[0.901764] (-) TimerEvent: {}
+[1.002009] (-) TimerEvent: {}
+[1.102267] (-) TimerEvent: {}
+[1.202565] (-) TimerEvent: {}
+[1.302857] (-) TimerEvent: {}
+[1.403153] (-) TimerEvent: {}
+[1.503430] (-) TimerEvent: {}
+[1.603722] (-) TimerEvent: {}
+[1.703966] (-) TimerEvent: {}
+[1.804257] (-) TimerEvent: {}
+[1.904565] (-) TimerEvent: {}
+[2.004848] (-) TimerEvent: {}
+[2.105119] (-) TimerEvent: {}
+[2.205528] (-) TimerEvent: {}
+[2.306398] (-) TimerEvent: {}
+[2.407192] (-) TimerEvent: {}
+[2.507464] (-) TimerEvent: {}
+[2.607718] (-) TimerEvent: {}
+[2.707968] (-) TimerEvent: {}
+[2.808217] (-) TimerEvent: {}
+[2.908463] (-) TimerEvent: {}
+[3.009444] (-) TimerEvent: {}
+[3.109718] (-) TimerEvent: {}
+[3.210013] (-) TimerEvent: {}
+[3.281824] (estun_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:4\x1b[m\x1b[K:\n'}
+[3.282012] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[K#pragma message: .h header is obsolete. Please use the .hpp header instead.\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.282080] (estun_control) StderrLine: {'line': b'   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."\x1b[01;36m\x1b[K)\x1b[m\x1b[K\n'}
+[3.282141] (estun_control) StderrLine: {'line': b'      |                                                                             \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[3.310108] (-) TimerEvent: {}
+[3.410360] (-) TimerEvent: {}
+[3.510615] (-) TimerEvent: {}
+[3.610888] (-) TimerEvent: {}
+[3.711217] (-) TimerEvent: {}
+[3.811495] (-) TimerEvent: {}
+[3.911735] (-) TimerEvent: {}
+[4.012099] (-) TimerEvent: {}
+[4.112364] (-) TimerEvent: {}
+[4.212632] (-) TimerEvent: {}
+[4.312873] (-) TimerEvent: {}
+[4.413469] (-) TimerEvent: {}
+[4.513772] (-) TimerEvent: {}
+[4.614049] (-) TimerEvent: {}
+[4.714304] (-) TimerEvent: {}
+[4.814565] (-) TimerEvent: {}
+[4.914851] (-) TimerEvent: {}
+[4.974160] (estun_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:5\x1b[m\x1b[K:\n'}
+[4.974403] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[K#pragma message: .h header is obsolete. Please use the .hpp header instead.\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.974522] (estun_control) StderrLine: {'line': b'   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."\x1b[01;36m\x1b[K)\x1b[m\x1b[K\n'}
+[4.974669] (estun_control) StderrLine: {'line': b'      |                                                                             \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[5.014953] (-) TimerEvent: {}
+[5.115214] (-) TimerEvent: {}
+[5.215481] (-) TimerEvent: {}
+[5.315737] (-) TimerEvent: {}
+[5.416007] (-) TimerEvent: {}
+[5.516258] (-) TimerEvent: {}
+[5.616523] (-) TimerEvent: {}
+[5.716748] (-) TimerEvent: {}
+[5.817031] (-) TimerEvent: {}
+[5.917279] (-) TimerEvent: {}
+[6.017558] (-) TimerEvent: {}
+[6.117792] (-) TimerEvent: {}
+[6.188172] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn MTCTaskNode::\x1b[01;32m\x1b[Kon_configure\x1b[m\x1b[K(const rclcpp_lifecycle::State&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.188371] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:131:124:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kprevious_state\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.188488] (estun_control) StderrLine: {'line': b'  131 |     rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_configure(\x1b[01;35m\x1b[Kconst rclcpp_lifecycle::State & previous_state\x1b[m\x1b[K){\n'}
+[6.188581] (estun_control) StderrLine: {'line': b'      |                                                                                            \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.191235] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn MTCTaskNode::\x1b[01;32m\x1b[Kon_activate\x1b[m\x1b[K(const rclcpp_lifecycle::State&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.191535] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:147:18:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kiterator\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.191637] (estun_control) StderrLine: {'line': b'  147 |       for (auto& \x1b[01;35m\x1b[Kiterator\x1b[m\x1b[K : attach_topics){\n'}
+[6.191749] (estun_control) StderrLine: {'line': b'      |                  \x1b[01;35m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[6.191833] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:136:123:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kprevious_state\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.191899] (estun_control) StderrLine: {'line': b'  136 |     rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_activate(\x1b[01;35m\x1b[Kconst rclcpp_lifecycle::State & previous_state\x1b[m\x1b[K){\n'}
+[6.191963] (estun_control) StderrLine: {'line': b'      |                                                                                           \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.192025] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn MTCTaskNode::\x1b[01;32m\x1b[Kon_deactivate\x1b[m\x1b[K(const rclcpp_lifecycle::State&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.192100] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:157:125:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kprevious_state\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.192176] (estun_control) StderrLine: {'line': b'  157 |     rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_deactivate(\x1b[01;35m\x1b[Kconst rclcpp_lifecycle::State & previous_state\x1b[m\x1b[K){\n'}
+[6.192276] (estun_control) StderrLine: {'line': b'      |                                                                                             \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.201190] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn MTCTaskNode::\x1b[01;32m\x1b[Kon_cleanup\x1b[m\x1b[K(const rclcpp_lifecycle::State&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.201412] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:164:7:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ksubscription_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Krmw_subscription_t\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.201560] (estun_control) StderrLine: {'line': b'  164 |       \x1b[01;31m\x1b[Ksubscription_\x1b[m\x1b[K.reset();\n'}
+[6.201678] (estun_control) StderrLine: {'line': b'      |       \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.201814] (estun_control) StderrLine: {'line': b'      |       \x1b[32m\x1b[Krmw_subscription_t\x1b[m\x1b[K\n'}
+[6.210802] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:165:7:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpose_publisher_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kcount_publishers\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.211047] (estun_control) StderrLine: {'line': b'  165 |       \x1b[01;31m\x1b[Kpose_publisher_\x1b[m\x1b[K.reset();\n'}
+[6.211145] (estun_control) StderrLine: {'line': b'      |       \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.211222] (estun_control) StderrLine: {'line': b'      |       \x1b[32m\x1b[Kcount_publishers\x1b[m\x1b[K\n'}
+[6.211300] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:162:122:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kprevious_state\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.211392] (estun_control) StderrLine: {'line': b'  162 |     rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_cleanup(\x1b[01;35m\x1b[Kconst rclcpp_lifecycle::State & previous_state\x1b[m\x1b[K){\n'}
+[6.211471] (estun_control) StderrLine: {'line': b'      |                                                                                          \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.217871] (-) TimerEvent: {}
+[6.220813] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn MTCTaskNode::\x1b[01;32m\x1b[Kon_shutdown\x1b[m\x1b[K(const rclcpp_lifecycle::State&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.221029] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:172:7:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ksubscription_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Krmw_subscription_t\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.221184] (estun_control) StderrLine: {'line': b'  172 |       \x1b[01;31m\x1b[Ksubscription_\x1b[m\x1b[K.reset();\n'}
+[6.221359] (estun_control) StderrLine: {'line': b'      |       \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.221507] (estun_control) StderrLine: {'line': b'      |       \x1b[32m\x1b[Krmw_subscription_t\x1b[m\x1b[K\n'}
+[6.230767] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:173:7:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpose_publisher_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kcount_publishers\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.231133] (estun_control) StderrLine: {'line': b'  173 |       \x1b[01;31m\x1b[Kpose_publisher_\x1b[m\x1b[K.reset();\n'}
+[6.231358] (estun_control) StderrLine: {'line': b'      |       \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.231593] (estun_control) StderrLine: {'line': b'      |       \x1b[32m\x1b[Kcount_publishers\x1b[m\x1b[K\n'}
+[6.231716] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:170:125:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kprevious_state\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.231856] (estun_control) StderrLine: {'line': b'  170 |       rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_shutdown(\x1b[01;35m\x1b[Kconst rclcpp_lifecycle::State & previous_state\x1b[m\x1b[K){\n'}
+[6.231973] (estun_control) StderrLine: {'line': b'      |                                                                                             \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.232090] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:\x1b[m\x1b[K At global scope:\n'}
+[6.232214] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:221:60:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KSharedPtr\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[Kclass rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[6.232383] (estun_control) StderrLine: {'line': b'  221 | rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::\x1b[01;31m\x1b[KSharedPtr\x1b[m\x1b[K MTCTaskNode::getNodeBaseInterface() //Getter Funktion um Node-Base Interface in node_ zu bekommen --> zugriff von au\xc3\x9ferhalb der klasse auf den node_\n'}
+[6.232538] (estun_control) StderrLine: {'line': b'      |                                                            \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[6.232695] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KMTCTaskNode::\x1b[01;32m\x1b[KMTCTaskNode\x1b[m\x1b[K(const rclcpp::NodeOptions&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.232973] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:226:141:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Krclcpp_lifecycle::LifecycleNode::LifecycleNode()\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.233429] (estun_control) StderrLine: {'line': b'  226 | MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions& options): node_{ std::make_shared<rclcpp_lifecycle::LifecycleNode>("mtc_node", options) \x1b[01;31m\x1b[K}\x1b[m\x1b[K{\n'}
+[6.233807] (estun_control) StderrLine: {'line': b'      |                                                                                                                                             \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.233969] (estun_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/jazzy/include/moveit_ros_planning/planning_pipeline_parameters.hpp:11\x1b[m\x1b[K,\n'}
+[6.234117] (estun_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/moveit_ros_planning/moveit/planning_pipeline/planning_pipeline.hpp:52\x1b[m\x1b[K,\n'}
+[6.234281] (estun_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/moveit_ros_planning/moveit/planning_pipeline_interfaces/planning_pipeline_interfaces.hpp:43\x1b[m\x1b[K,\n'}
+[6.234472] (estun_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mario/master_ws/install/moveit_task_constructor_core/include/moveit/task_constructor/solvers/pipeline_planner.h:42\x1b[m\x1b[K,\n'}
+[6.234647] (estun_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mario/master_ws/install/moveit_task_constructor_core/include/moveit/task_constructor/solvers.h:43\x1b[m\x1b[K,\n'}
+[6.234822] (estun_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:7\x1b[m\x1b[K:\n'}
+[6.235007] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp_lifecycle/rclcpp_lifecycle/lifecycle_node.hpp:151:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Krclcpp_lifecycle::LifecycleNode::\x1b[01;32m\x1b[KLifecycleNode\x1b[m\x1b[K(const std::string&, const std::string&, const rclcpp::NodeOptions&, bool)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.235182] (estun_control) StderrLine: {'line': b'  151 |   \x1b[01;36m\x1b[KLifecycleNode\x1b[m\x1b[K(\n'}
+[6.235368] (estun_control) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.235540] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp_lifecycle/rclcpp_lifecycle/lifecycle_node.hpp:151:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 4 arguments, 0 provided\n'}
+[6.235716] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp_lifecycle/rclcpp_lifecycle/lifecycle_node.hpp:138:12:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Krclcpp_lifecycle::LifecycleNode::\x1b[01;32m\x1b[KLifecycleNode\x1b[m\x1b[K(const std::string&, const rclcpp::NodeOptions&, bool)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.235893] (estun_control) StderrLine: {'line': b'  138 |   explicit \x1b[01;36m\x1b[KLifecycleNode\x1b[m\x1b[K(\n'}
+[6.236067] (estun_control) StderrLine: {'line': b'      |            \x1b[01;36m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.236241] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp_lifecycle/rclcpp_lifecycle/lifecycle_node.hpp:138:12:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 3 arguments, 0 provided\n'}
+[6.236433] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:226:63:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<rclcpp::Node>::shared_ptr(<brace-enclosed initializer list>)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.236612] (estun_control) StderrLine: {'line': b'  226 | MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions& options): \x1b[01;31m\x1b[Knode_{ std::make_shared<rclcpp_lifecycle::LifecycleNode>("mtc_node", options) }\x1b[m\x1b[K{\n'}
+[6.236789] (estun_control) StderrLine: {'line': b'      |                                                               \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.236964] (estun_control) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/13/memory:80\x1b[m\x1b[K,\n'}
+[6.237140] (estun_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:173\x1b[m\x1b[K,\n'}
+[6.237325] (estun_control) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1\x1b[m\x1b[K:\n'}
+[6.237500] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/shared_ptr.h:478:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Alloc, class _Init> std::shared_ptr<_Tp>::\x1b[01;32m\x1b[Kshared_ptr\x1b[m\x1b[K(const std::_Sp_counted_array_base<_Alloc>&, _Init) \x1b[35m\x1b[K[with _Init = _Alloc; _Tp = rclcpp::Node]\x1b[m\x1b[K\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.237678] (estun_control) StderrLine: {'line': b'  478 |         \x1b[01;36m\x1b[Kshared_ptr\x1b[m\x1b[K(const _Sp_counted_array_base<_Alloc>& __a,\n'}
+[6.237854] (estun_control) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.238028] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/shared_ptr.h:478:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[6.238204] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:226:63:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<rclcpp_lifecycle::LifecycleNode>\x1b[m\x1b[K\xe2\x80\x99 is not derived from \xe2\x80\x98\x1b[01m\x1b[Kconst std::_Sp_counted_array_base<_Alloc>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.238421] (estun_control) StderrLine: {'line': b'  226 | MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions& options): \x1b[01;36m\x1b[Knode_{ std::make_shared<rclcpp_lifecycle::LifecycleNode>("mtc_node", options) }\x1b[m\x1b[K{\n'}
+[6.238608] (estun_control) StderrLine: {'line': b'      |                                                               \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.238793] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/shared_ptr.h:463:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Alloc, class ... _Args> std::shared_ptr<_Tp>::\x1b[01;32m\x1b[Kshared_ptr\x1b[m\x1b[K(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) \x1b[35m\x1b[K[with _Args = _Alloc; _Tp = rclcpp::Node]\x1b[m\x1b[K\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.238947] (estun_control) StderrLine: {'line': b'  463 |         \x1b[01;36m\x1b[Kshared_ptr\x1b[m\x1b[K(_Sp_alloc_shared_tag<_Alloc> __tag, _Args&&... __args)\n'}
+[6.239094] (estun_control) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.239239] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/shared_ptr.h:463:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[6.239401] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:226:63:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<rclcpp_lifecycle::LifecycleNode>\x1b[m\x1b[K\xe2\x80\x99 is not derived from \xe2\x80\x98\x1b[01m\x1b[Kstd::_Sp_alloc_shared_tag<_Tp>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.239553] (estun_control) StderrLine: {'line': b'  226 | MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions& options): \x1b[01;36m\x1b[Knode_{ std::make_shared<rclcpp_lifecycle::LifecycleNode>("mtc_node", options) }\x1b[m\x1b[K{\n'}
+[6.239702] (estun_control) StderrLine: {'line': b'      |                                                               \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.239855] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/shared_ptr.h:395:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Yp, class _Del, class> std::shared_ptr<_Tp>::\x1b[01;32m\x1b[Kshared_ptr\x1b[m\x1b[K(std::unique_ptr<_Up, _Ep>&&) \x1b[35m\x1b[K[with _Del = _Yp; <template-parameter-2-3> = _Del; _Tp = rclcpp::Node]\x1b[m\x1b[K\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.240004] (estun_control) StderrLine: {'line': b'  395 |         \x1b[01;36m\x1b[Kshared_ptr\x1b[m\x1b[K(unique_ptr<_Yp, _Del>&& __r)\n'}
+[6.240149] (estun_control) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.240303] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/shared_ptr.h:395:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[6.240496] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:226:63:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<rclcpp_lifecycle::LifecycleNode>\x1b[m\x1b[K\xe2\x80\x99 is not derived from \xe2\x80\x98\x1b[01m\x1b[Kstd::unique_ptr<_Tp, _Dp>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.240667] (estun_control) StderrLine: {'line': b'  226 | MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions& options): \x1b[01;36m\x1b[Knode_{ std::make_shared<rclcpp_lifecycle::LifecycleNode>("mtc_node", options) }\x1b[m\x1b[K{\n'}
+[6.240836] (estun_control) StderrLine: {'line': b'      |                                                               \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.241032] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/shared_ptr.h:387:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Yp, class> std::shared_ptr<_Tp>::\x1b[01;32m\x1b[Kshared_ptr\x1b[m\x1b[K(std::auto_ptr<_Up>&&) \x1b[35m\x1b[K[with _Yp = _Tp1; _Tp = rclcpp::Node]\x1b[m\x1b[K\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.241221] (estun_control) StderrLine: {'line': b'  387 |         \x1b[01;36m\x1b[Kshared_ptr\x1b[m\x1b[K(auto_ptr<_Yp>&& __r);\n'}
+[6.241393] (estun_control) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.241570] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/shared_ptr.h:387:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[6.241756] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:226:63:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<rclcpp_lifecycle::LifecycleNode>\x1b[m\x1b[K\xe2\x80\x99 is not derived from \xe2\x80\x98\x1b[01m\x1b[Kstd::auto_ptr<_Up>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.241945] (estun_control) StderrLine: {'line': b'  226 | MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions& options): \x1b[01;36m\x1b[Knode_{ std::make_shared<rclcpp_lifecycle::LifecycleNode>("mtc_node", options) }\x1b[m\x1b[K{\n'}
+[6.242148] (estun_control) StderrLine: {'line': b'      |                                                               \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.242301] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/shared_ptr.h:380:18:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Yp, class> std::shared_ptr<_Tp>::\x1b[01;32m\x1b[Kshared_ptr\x1b[m\x1b[K(const std::weak_ptr<_Yp>&) \x1b[35m\x1b[K[with <template-parameter-2-2> = _Yp; _Tp = rclcpp::Node]\x1b[m\x1b[K\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.242456] (estun_control) StderrLine: {'line': b'  380 |         explicit \x1b[01;36m\x1b[Kshared_ptr\x1b[m\x1b[K(const weak_ptr<_Yp>& __r)\n'}
+[6.242575] (estun_control) StderrLine: {'line': b'      |                  \x1b[01;36m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.242722] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/shared_ptr.h:380:18:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[6.242901] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:226:63:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<rclcpp_lifecycle::LifecycleNode>\x1b[m\x1b[K\xe2\x80\x99 is not derived from \xe2\x80\x98\x1b[01m\x1b[Kconst std::weak_ptr<_Tp>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.243084] (estun_control) StderrLine: {'line': b'  226 | MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions& options): \x1b[01;36m\x1b[Knode_{ std::make_shared<rclcpp_lifecycle::LifecycleNode>("mtc_node", options) }\x1b[m\x1b[K{\n'}
+[6.243321] (estun_control) StderrLine: {'line': b'      |                                                               \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.243484] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/shared_ptr.h:368:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Yp, class> std::shared_ptr<_Tp>::\x1b[01;32m\x1b[Kshared_ptr\x1b[m\x1b[K(std::shared_ptr<_Yp>&&) \x1b[35m\x1b[K[with <template-parameter-2-2> = _Yp; _Tp = rclcpp::Node]\x1b[m\x1b[K\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.243631] (estun_control) StderrLine: {'line': b'  368 |         \x1b[01;36m\x1b[Kshared_ptr\x1b[m\x1b[K(shared_ptr<_Yp>&& __r) noexcept\n'}
+[6.243795] (estun_control) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.243931] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/shared_ptr.h:368:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[6.244065] (estun_control) StderrLine: {'line': b'/usr/include/c++/13/bits/shared_ptr.h: In substitution of \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Tp> template<class ... _Args> using std::shared_ptr<_Tp>::_Constructible = typename std::enable_if<std::is_constructible<std::__shared_ptr<_Tp>, _Args ...>::value>::type \x1b[35m\x1b[K[with _Args = {std::shared_ptr<rclcpp_lifecycle::LifecycleNode>}; _Tp = rclcpp::Node]\x1b[m\x1b[K\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.244236] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/shared_ptr.h:367:30:\x1b[m\x1b[K   required from here\n'}
+[6.244418] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/shared_ptr.h:178:15:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno type named \xe2\x80\x98\x1b[01m\x1b[Ktype\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[Kstruct std::enable_if<false, void>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.244598] (estun_control) StderrLine: {'line': b'  178 |         using \x1b[01;31m\x1b[K_Constructible\x1b[m\x1b[K = typename enable_if<\n'}
+[6.244736] (estun_control) StderrLine: {'line': b'      |               \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.244861] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/shared_ptr.h:351:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Yp, class> std::shared_ptr<_Tp>::\x1b[01;32m\x1b[Kshared_ptr\x1b[m\x1b[K(const std::shared_ptr<_Yp>&) \x1b[35m\x1b[K[with <template-parameter-2-2> = _Yp; _Tp = rclcpp::Node]\x1b[m\x1b[K\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.245002] (estun_control) StderrLine: {'line': b'  351 |         \x1b[01;36m\x1b[Kshared_ptr\x1b[m\x1b[K(const shared_ptr<_Yp>& __r) noexcept\n'}
+[6.245126] (estun_control) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.245269] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/shared_ptr.h:351:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[6.245407] (estun_control) StderrLine: {'line': b'/usr/include/c++/13/bits/shared_ptr.h: In substitution of \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Tp> template<class ... _Args> using std::shared_ptr<_Tp>::_Constructible = typename std::enable_if<std::is_constructible<std::__shared_ptr<_Tp>, _Args ...>::value>::type \x1b[35m\x1b[K[with _Args = {const std::shared_ptr<rclcpp_lifecycle::LifecycleNode>&}; _Tp = rclcpp::Node]\x1b[m\x1b[K\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.245558] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/shared_ptr.h:350:9:\x1b[m\x1b[K   required from here\n'}
+[6.245676] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/shared_ptr.h:178:15:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno type named \xe2\x80\x98\x1b[01m\x1b[Ktype\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[Kstruct std::enable_if<false, void>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.245825] (estun_control) StderrLine: {'line': b'  178 |         using \x1b[01;31m\x1b[K_Constructible\x1b[m\x1b[K = typename enable_if<\n'}
+[6.245981] (estun_control) StderrLine: {'line': b'      |               \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.246146] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/shared_ptr.h:339:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Yp> std::shared_ptr<_Tp>::\x1b[01;32m\x1b[Kshared_ptr\x1b[m\x1b[K(std::shared_ptr<_Yp>&&, element_type*) \x1b[35m\x1b[K[with _Tp = rclcpp::Node]\x1b[m\x1b[K\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.246280] (estun_control) StderrLine: {'line': b'  339 |         \x1b[01;36m\x1b[Kshared_ptr\x1b[m\x1b[K(shared_ptr<_Yp>&& __r, element_type* __p) noexcept\n'}
+[6.246420] (estun_control) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.246570] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/shared_ptr.h:339:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[6.246738] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:226:63:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 2 arguments, 1 provided\n'}
+[6.246904] (estun_control) StderrLine: {'line': b'  226 | MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions& options): \x1b[01;36m\x1b[Knode_{ std::make_shared<rclcpp_lifecycle::LifecycleNode>("mtc_node", options) }\x1b[m\x1b[K{\n'}
+[6.247053] (estun_control) StderrLine: {'line': b'      |                                                               \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.247177] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/shared_ptr.h:311:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Yp> std::shared_ptr<_Tp>::\x1b[01;32m\x1b[Kshared_ptr\x1b[m\x1b[K(const std::shared_ptr<_Yp>&, element_type*) \x1b[35m\x1b[K[with _Tp = rclcpp::Node]\x1b[m\x1b[K\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.247341] (estun_control) StderrLine: {'line': b'  311 |         \x1b[01;36m\x1b[Kshared_ptr\x1b[m\x1b[K(const shared_ptr<_Yp>& __r, element_type* __p) noexcept\n'}
+[6.247498] (estun_control) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.247663] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/shared_ptr.h:311:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[6.247825] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:226:63:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 2 arguments, 1 provided\n'}
+[6.247983] (estun_control) StderrLine: {'line': b'  226 | MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions& options): \x1b[01;36m\x1b[Knode_{ std::make_shared<rclcpp_lifecycle::LifecycleNode>("mtc_node", options) }\x1b[m\x1b[K{\n'}
+[6.248140] (estun_control) StderrLine: {'line': b'      |                                                               \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.248290] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/shared_ptr.h:287:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Deleter, class _Alloc> std::shared_ptr<_Tp>::\x1b[01;32m\x1b[Kshared_ptr\x1b[m\x1b[K(std::nullptr_t, _Deleter, _Alloc) \x1b[35m\x1b[K[with _Alloc = _Deleter; _Tp = rclcpp::Node]\x1b[m\x1b[K\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.248477] (estun_control) StderrLine: {'line': b'  287 |         \x1b[01;36m\x1b[Kshared_ptr\x1b[m\x1b[K(nullptr_t __p, _Deleter __d, _Alloc __a)\n'}
+[6.248647] (estun_control) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.248804] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/shared_ptr.h:287:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[6.248977] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:226:63:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 3 arguments, 1 provided\n'}
+[6.249159] (estun_control) StderrLine: {'line': b'  226 | MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions& options): \x1b[01;36m\x1b[Knode_{ std::make_shared<rclcpp_lifecycle::LifecycleNode>("mtc_node", options) }\x1b[m\x1b[K{\n'}
+[6.249380] (estun_control) StderrLine: {'line': b'      |                                                               \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.249610] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/shared_ptr.h:268:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Yp, class _Deleter, class _Alloc, class> std::shared_ptr<_Tp>::\x1b[01;32m\x1b[Kshared_ptr\x1b[m\x1b[K(_Yp*, _Deleter, _Alloc) \x1b[35m\x1b[K[with _Deleter = _Yp; _Alloc = _Deleter; <template-parameter-2-4> = _Alloc; _Tp = rclcpp::Node]\x1b[m\x1b[K\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.249830] (estun_control) StderrLine: {'line': b'  268 |         \x1b[01;36m\x1b[Kshared_ptr\x1b[m\x1b[K(_Yp* __p, _Deleter __d, _Alloc __a)\n'}
+[6.249984] (estun_control) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.250104] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/shared_ptr.h:268:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[6.250222] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:226:63:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[K_Yp*\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<rclcpp_lifecycle::LifecycleNode>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.250349] (estun_control) StderrLine: {'line': b'  226 | MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions& options): \x1b[01;36m\x1b[Knode_{ std::make_shared<rclcpp_lifecycle::LifecycleNode>("mtc_node", options) }\x1b[m\x1b[K{\n'}
+[6.250464] (estun_control) StderrLine: {'line': b'      |                                                               \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.250578] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/shared_ptr.h:248:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Deleter> std::shared_ptr<_Tp>::\x1b[01;32m\x1b[Kshared_ptr\x1b[m\x1b[K(std::nullptr_t, _Deleter) \x1b[35m\x1b[K[with _Tp = rclcpp::Node]\x1b[m\x1b[K\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.250710] (estun_control) StderrLine: {'line': b'  248 |         \x1b[01;36m\x1b[Kshared_ptr\x1b[m\x1b[K(nullptr_t __p, _Deleter __d)\n'}
+[6.250826] (estun_control) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.250938] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/shared_ptr.h:248:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[6.251062] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:226:63:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 2 arguments, 1 provided\n'}
+[6.251186] (estun_control) StderrLine: {'line': b'  226 | MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions& options): \x1b[01;36m\x1b[Knode_{ std::make_shared<rclcpp_lifecycle::LifecycleNode>("mtc_node", options) }\x1b[m\x1b[K{\n'}
+[6.251364] (estun_control) StderrLine: {'line': b'      |                                                               \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.251486] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/shared_ptr.h:231:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Yp, class _Deleter, class> std::shared_ptr<_Tp>::\x1b[01;32m\x1b[Kshared_ptr\x1b[m\x1b[K(_Yp*, _Deleter) \x1b[35m\x1b[K[with _Deleter = _Yp; <template-parameter-2-3> = _Deleter; _Tp = rclcpp::Node]\x1b[m\x1b[K\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.251621] (estun_control) StderrLine: {'line': b'  231 |         \x1b[01;36m\x1b[Kshared_ptr\x1b[m\x1b[K(_Yp* __p, _Deleter __d)\n'}
+[6.251764] (estun_control) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.251892] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/shared_ptr.h:231:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[6.252008] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:226:63:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[K_Yp*\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<rclcpp_lifecycle::LifecycleNode>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.252125] (estun_control) StderrLine: {'line': b'  226 | MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions& options): \x1b[01;36m\x1b[Knode_{ std::make_shared<rclcpp_lifecycle::LifecycleNode>("mtc_node", options) }\x1b[m\x1b[K{\n'}
+[6.252240] (estun_control) StderrLine: {'line': b'      |                                                               \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.252366] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/shared_ptr.h:214:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Yp, class> std::shared_ptr<_Tp>::\x1b[01;32m\x1b[Kshared_ptr\x1b[m\x1b[K(_Yp*) \x1b[35m\x1b[K[with <template-parameter-2-2> = _Yp; _Tp = rclcpp::Node]\x1b[m\x1b[K\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.252484] (estun_control) StderrLine: {'line': b'  214 |         \x1b[01;36m\x1b[Kshared_ptr\x1b[m\x1b[K(_Yp* __p) : __shared_ptr<_Tp>(__p) { }\n'}
+[6.252597] (estun_control) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.252722] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/shared_ptr.h:214:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[6.252877] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:226:63:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[K_Yp*\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<rclcpp_lifecycle::LifecycleNode>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.253029] (estun_control) StderrLine: {'line': b'  226 | MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions& options): \x1b[01;36m\x1b[Knode_{ std::make_shared<rclcpp_lifecycle::LifecycleNode>("mtc_node", options) }\x1b[m\x1b[K{\n'}
+[6.253175] (estun_control) StderrLine: {'line': b'      |                                                               \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.253391] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/shared_ptr.h:535:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<_Tp>::\x1b[01;32m\x1b[Kshared_ptr\x1b[m\x1b[K(const std::weak_ptr<_Tp>&, std::nothrow_t) \x1b[35m\x1b[K[with _Tp = rclcpp::Node]\x1b[m\x1b[K\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.253575] (estun_control) StderrLine: {'line': b'  535 |       \x1b[01;36m\x1b[Kshared_ptr\x1b[m\x1b[K(const weak_ptr<_Tp>& __r, std::nothrow_t) noexcept\n'}
+[6.253754] (estun_control) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.253943] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/shared_ptr.h:535:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 2 arguments, 1 provided\n'}
+[6.254017] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/shared_ptr.h:412:17:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kconstexpr std::shared_ptr<_Tp>::\x1b[01;32m\x1b[Kshared_ptr\x1b[m\x1b[K(std::nullptr_t) \x1b[35m\x1b[K[with _Tp = rclcpp::Node; std::nullptr_t = std::nullptr_t]\x1b[m\x1b[K\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.254086] (estun_control) StderrLine: {'line': b'  412 |       constexpr \x1b[01;36m\x1b[Kshared_ptr\x1b[m\x1b[K(nullptr_t) noexcept : shared_ptr() { }\n'}
+[6.254184] (estun_control) StderrLine: {'line': b'      |                 \x1b[01;36m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.254268] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/shared_ptr.h:412:28:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<rclcpp_lifecycle::LifecycleNode>\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kstd::nullptr_t\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.254342] (estun_control) StderrLine: {'line': b'  412 |       constexpr shared_ptr(\x1b[01;36m\x1b[Knullptr_t\x1b[m\x1b[K) noexcept : shared_ptr() { }\n'}
+[6.254408] (estun_control) StderrLine: {'line': b'      |                            \x1b[01;36m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[6.254467] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/shared_ptr.h:359:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<_Tp>::\x1b[01;32m\x1b[Kshared_ptr\x1b[m\x1b[K(std::shared_ptr<_Tp>&&) \x1b[35m\x1b[K[with _Tp = rclcpp::Node]\x1b[m\x1b[K\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.254542] (estun_control) StderrLine: {'line': b'  359 |       \x1b[01;36m\x1b[Kshared_ptr\x1b[m\x1b[K(shared_ptr&& __r) noexcept\n'}
+[6.254670] (estun_control) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.254743] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/shared_ptr.h:359:31:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<rclcpp_lifecycle::LifecycleNode>\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<rclcpp::Node>&&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.254821] (estun_control) StderrLine: {'line': b'  359 |       shared_ptr(\x1b[01;36m\x1b[Kshared_ptr&& __r\x1b[m\x1b[K) noexcept\n'}
+[6.254889] (estun_control) StderrLine: {'line': b'      |                  \x1b[01;36m\x1b[K~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[6.254956] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/shared_ptr.h:204:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<_Tp>::\x1b[01;32m\x1b[Kshared_ptr\x1b[m\x1b[K(const std::shared_ptr<_Tp>&) \x1b[35m\x1b[K[with _Tp = rclcpp::Node]\x1b[m\x1b[K\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.255016] (estun_control) StderrLine: {'line': b'  204 |       \x1b[01;36m\x1b[Kshared_ptr\x1b[m\x1b[K(const shared_ptr&) noexcept = default; ///< Copy constructor\n'}
+[6.255081] (estun_control) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.255157] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/shared_ptr.h:204:18:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<rclcpp_lifecycle::LifecycleNode>\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kconst std::shared_ptr<rclcpp::Node>&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.255237] (estun_control) StderrLine: {'line': b'  204 |       shared_ptr(\x1b[01;36m\x1b[Kconst shared_ptr&\x1b[m\x1b[K) noexcept = default; ///< Copy constructor\n'}
+[6.255296] (estun_control) StderrLine: {'line': b'      |                  \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.255371] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/shared_ptr.h:202:17:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kconstexpr std::shared_ptr<_Tp>::\x1b[01;32m\x1b[Kshared_ptr\x1b[m\x1b[K() \x1b[35m\x1b[K[with _Tp = rclcpp::Node]\x1b[m\x1b[K\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.255429] (estun_control) StderrLine: {'line': b'  202 |       constexpr \x1b[01;36m\x1b[Kshared_ptr\x1b[m\x1b[K() noexcept : __shared_ptr<_Tp>() { }\n'}
+[6.255486] (estun_control) StderrLine: {'line': b'      |                 \x1b[01;36m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.255554] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/13/bits/shared_ptr.h:202:17:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 0 arguments, 1 provided\n'}
+[6.255613] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MTCTaskNode::\x1b[01;32m\x1b[KgetObjects\x1b[m\x1b[K()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.255676] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:448:28:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<MTCTaskNode::getObjects()::data>::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare\x07-Wsign-compare\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.255746] (estun_control) StderrLine: {'line': b'  448 |     if (task == false && \x1b[01;35m\x1b[Kj < objects.size()\x1b[m\x1b[K){\n'}
+[6.255804] (estun_control) StderrLine: {'line': b'      |                          \x1b[01;35m\x1b[K~~^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.255862] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:451:12:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<MTCTaskNode::getObjects()::data>::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare\x07-Wsign-compare\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.255922] (estun_control) StderrLine: {'line': b'  451 |       if(\x1b[01;35m\x1b[Kj >= objects.size()\x1b[m\x1b[K){\n'}
+[6.255979] (estun_control) StderrLine: {'line': b'      |          \x1b[01;35m\x1b[K~~^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.256044] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:461:26:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<MTCTaskNode::getObjects()::data>::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare\x07-Wsign-compare\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.256124] (estun_control) StderrLine: {'line': b'  461 |     if(task == true && \x1b[01;35m\x1b[Kj < objects.size()\x1b[m\x1b[K){\n'}
+[6.256194] (estun_control) StderrLine: {'line': b'      |                        \x1b[01;35m\x1b[K~~^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.265798] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kint MTCTaskNode::\x1b[01;32m\x1b[KtestAttach\x1b[m\x1b[K()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.266049] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:506:8:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kx_\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.266210] (estun_control) StderrLine: {'line': b'  506 |   bool \x1b[01;35m\x1b[Kx_\x1b[m\x1b[K = false, y_ = false, z_ = false;\n'}
+[6.266364] (estun_control) StderrLine: {'line': b'      |        \x1b[01;35m\x1b[K^~\x1b[m\x1b[K\n'}
+[6.266484] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:506:20:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Ky_\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.266629] (estun_control) StderrLine: {'line': b'  506 |   bool x_ = false, \x1b[01;35m\x1b[Ky_\x1b[m\x1b[K = false, z_ = false;\n'}
+[6.266766] (estun_control) StderrLine: {'line': b'      |                    \x1b[01;35m\x1b[K^~\x1b[m\x1b[K\n'}
+[6.266883] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:506:32:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kz_\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.267021] (estun_control) StderrLine: {'line': b'  506 |   bool x_ = false, y_ = false, \x1b[01;35m\x1b[Kz_\x1b[m\x1b[K = false;\n'}
+[6.267138] (estun_control) StderrLine: {'line': b'      |                                \x1b[01;35m\x1b[K^~\x1b[m\x1b[K\n'}
+[6.317976] (-) TimerEvent: {}
+[6.345675] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kmoveit::task_constructor::Task MTCTaskNode::\x1b[01;32m\x1b[KcreateGrabTask\x1b[m\x1b[K()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.345880] (estun_control) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:946:15:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kattach_object_stage\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.345985] (estun_control) StderrLine: {'line': b'  946 |   mtc::Stage* \x1b[01;35m\x1b[Kattach_object_stage\x1b[m\x1b[K = nullptr;  // Forward attach_object_stage to place pose generator\n'}
+[6.346091] (estun_control) StderrLine: {'line': b'      |               \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.418074] (-) TimerEvent: {}
+[6.518338] (-) TimerEvent: {}
+[6.618596] (-) TimerEvent: {}
+[6.718854] (-) TimerEvent: {}
+[6.819102] (-) TimerEvent: {}
+[6.919366] (-) TimerEvent: {}
+[7.019647] (-) TimerEvent: {}
+[7.119903] (-) TimerEvent: {}
+[7.220139] (-) TimerEvent: {}
+[7.320373] (-) TimerEvent: {}
+[7.420682] (-) TimerEvent: {}
+[7.521012] (-) TimerEvent: {}
+[7.621324] (-) TimerEvent: {}
+[7.721625] (-) TimerEvent: {}
+[7.821922] (-) TimerEvent: {}
+[7.922202] (-) TimerEvent: {}
+[8.022453] (-) TimerEvent: {}
+[8.122743] (-) TimerEvent: {}
+[8.223036] (-) TimerEvent: {}
+[8.323312] (-) TimerEvent: {}
+[8.423572] (-) TimerEvent: {}
+[8.523894] (-) TimerEvent: {}
+[8.624162] (-) TimerEvent: {}
+[8.724356] (-) TimerEvent: {}
+[8.824580] (-) TimerEvent: {}
+[8.924828] (-) TimerEvent: {}
+[9.025112] (-) TimerEvent: {}
+[9.125373] (-) TimerEvent: {}
+[9.225647] (-) TimerEvent: {}
+[9.325878] (-) TimerEvent: {}
+[9.426106] (-) TimerEvent: {}
+[9.526346] (-) TimerEvent: {}
+[9.626599] (-) TimerEvent: {}
+[9.726905] (-) TimerEvent: {}
+[9.827204] (-) TimerEvent: {}
+[9.927490] (-) TimerEvent: {}
+[10.027852] (-) TimerEvent: {}
+[10.128119] (-) TimerEvent: {}
+[10.228466] (-) TimerEvent: {}
+[10.328826] (-) TimerEvent: {}
+[10.429171] (-) TimerEvent: {}
+[10.529480] (-) TimerEvent: {}
+[10.629793] (-) TimerEvent: {}
+[10.730096] (-) TimerEvent: {}
+[10.831137] (-) TimerEvent: {}
+[10.931371] (-) TimerEvent: {}
+[11.031622] (-) TimerEvent: {}
+[11.131871] (-) TimerEvent: {}
+[11.232745] (-) TimerEvent: {}
+[11.332985] (-) TimerEvent: {}
+[11.433266] (-) TimerEvent: {}
+[11.533507] (-) TimerEvent: {}
+[11.633734] (-) TimerEvent: {}
+[11.636807] (estun_control) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/mtc_estun.dir/build.make:76: CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o] Fehler 1\n'}
+[11.637514] (estun_control) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/mtc_estun.dir/all] Fehler 2\n'}
+[11.637956] (estun_control) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Fehler 2\n'}
+[11.641073] (estun_control) CommandEnded: {'returncode': 2}
+[11.650641] (estun_control) JobEnded: {'identifier': 'estun_control', 'rc': 2}
+[11.661101] (-) EventReactorShutdown: {}

@@ -105,6 +105,21 @@ pub struct ObjectPose {
     #[allow(missing_docs)]
     pub mid_z: f64,
 
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub roll: f64,
+
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub pitch: f64,
+
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub yaw: f64,
+
 }
 
 

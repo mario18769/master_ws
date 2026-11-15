@@ -22,6 +22,8 @@ find_package(Boost REQUIRED thread)
 find_package(sdformat14 REQUIRED)
 find_package(moveit_task_constructor_core REQUIRED)
 find_package(robot_interfaces REQUIRED)
+find_package(rclcpp_lifecycle REQUIRED)
+
 
 
 add_executable( cartesian_planner src/cartesian_planner.cpp ) 
@@ -39,11 +41,12 @@ geometry_msgs
 tf2_ros
 tf2
 robot_interfaces
+rclcpp_lifecycle
 )
 
 
 add_executable(mtc_estun src/mtc_estun.cpp)
-ament_target_dependencies(mtc_estun moveit_task_constructor_core rclcpp robot_interfaces)
+ament_target_dependencies(mtc_estun moveit_task_constructor_core rclcpp robot_interfaces rclcpp_lifecycle)
 target_include_directories(mtc_estun PUBLIC
 $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
 $<INSTALL_INTERFACE:include>)

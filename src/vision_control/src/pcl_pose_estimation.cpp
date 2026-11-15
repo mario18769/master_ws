@@ -34,8 +34,10 @@
 
 //Custom Interfaces
 #include "../robot_interfaces/robot_interfaces/msg/object_pose.hpp"
+
 #include <pcl/features/moment_of_inertia_estimation.h>
 #include <pcl/features/range_image_border_extractor.h>
+#include "rclcpp_lifecycle/lifecycle_node.hpp"
 
 typedef pcl::PointXYZ PointXYZ;
 typedef pcl::visualization::PointCloudColorHandlerCustom<PointXYZ> ColorHandlerT;
@@ -50,56 +52,79 @@ typedef pcl::FPFHEstimationOMP<PointClNormal,PointClNormal,FeatureT> FeatureEsti
 typedef pcl::visualization::PointCloudColorHandlerCustom<PointClNormal> ColorHandlerNormal;
 typedef pcl::PointCloud<FeatureT> FeatureCloudT;
 
-class PointCloudProcessor : public rclcpp::Node{
+class PointCloudProcessor : public rclcpp_lifecycle::LifecycleNode{
 
-    public:
-        PointCloudProcessor() : Node("pointcloud_processor")
-        {
-            // Subscribe to the point cloud data from RealSense
-            subscription_ = this->create_subscription<sensor_msgs::msg::PointCloud2>("/depthpoints", 10,
-                std::bind(&PointCloudProcessor::getPointCloud, this, std::placeholders::_1));
+  public:
+    PointCloudProcessor() : LifecycleNode("pointcloud_processor"){
 
-            pose_publisher_ = this->create_publisher<robot_interfaces::msg::ObjectPose>("/ObjectPose",10);
 
-            // // Publisher for the filtered and downsampled point cloud
-            // publisher_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("filtered_pointcloud", 10);
-        }
-        void generate_cylinder_master();
-        void processPointCloud();
-        std::vector<pcl::PointCloud<PointClNormal>::Ptr> clusterPointCloud();
-        void filterPointCloud();
-        void getPointCloud(sensor_msgs::msg::PointCloud2 msg);
-        std::vector<float> calculateCylinder(Eigen::Vector3f,Eigen::Vector3f,Eigen::Vector3f,float,Eigen::Vector3f);
-        std::vector<float> calculateCylinderEnd(pcl::PointCloud<PointClNormal>::Ptr,Eigen::Vector3f,Eigen::Vector3f);
-        std::vector<float> calculateCube(std::vector<Eigen::Vector4f>,std::shared_ptr<PointCloudN>);
-        std::vector<float> calculateCubeCenter(std::vector<Eigen::Vector4f>,std::shared_ptr<PointCloudN>);
-        void edgeDetection(std::shared_ptr<PointCloudN>);
+    }
+
+    rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_configure(const rclcpp_lifecycle::State & previous_state){
+      return rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn::SUCCESS;
+    }
+
+    rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_activate(const rclcpp_lifecycle::State & previous_state){
+
+      subscription_ = this->create_subscription<sensor_msgs::msg::PointCloud2>("/depthpoints", 10, std::bind(&PointCloudProcessor::getPointCloud, this, std::placeholders::_1));
+      pose_publisher_ = this->create_publisher<robot_interfaces::msg::ObjectPose>("/ObjectPose",10);
+
+      return rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn::SUCCESS;
+    }
+
+    rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_deactivate(const rclcpp_lifecycle::State & previous_state){
+
+      return rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn::SUCCESS;
+    }
+
+    rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_cleanup(const rclcpp_lifecycle::State & previous_state){
+
+      subscription_.reset();
+      pose_publisher_.reset();
+
+      return rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn::SUCCESS;
+    }
+
+      rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_shutdown(const rclcpp_lifecycle::State & previous_state){
+
+      subscription_.reset();
+      pose_publisher_.reset();
         
+      return rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn::SUCCESS;
+    }
 
-        rclcpp::Publisher<robot_interfaces::msg::ObjectPose>::SharedPtr pose_publisher_;
+    void generate_cylinder_master();
+    void processPointCloud();
+    std::vector<pcl::PointCloud<PointClNormal>::Ptr> clusterPointCloud();
+    void filterPointCloud();
+    void getPointCloud(sensor_msgs::msg::PointCloud2 msg);
+    std::vector<float> calculateCylinder(Eigen::Vector3f,Eigen::Vector3f,Eigen::Vector3f,float,Eigen::Vector3f);
+    std::vector<float> calculateCylinderEnd(pcl::PointCloud<PointClNormal>::Ptr,Eigen::Vector3f,Eigen::Vector3f);
+    std::vector<float> calculateCube(std::vector<Eigen::Vector4f>,std::shared_ptr<PointCloudN>);
+    std::vector<float> calculateCubeCenter(std::vector<Eigen::Vector4f>,std::shared_ptr<PointCloudN>);
+    void edgeDetection(std::shared_ptr<PointCloudN>);
+    
+  private:
 
-        
-    private:
+    pcl::PointCloud<PointClNormal>::Ptr output ;
+    pcl::PointCloud<PointClNormal>::Ptr cloud;
+    PointCloudN scene_cloud;
+    PointCloudN::Ptr scene = std::make_shared<PointCloudN>();
+    PointCloudN::Ptr scene_before_downsampling = std::make_shared<PointCloudN>();
+    rclcpp::Subscription<sensor_msgs::msg::PointCloud2>::SharedPtr subscription_;
+    rclcpp::Publisher<robot_interfaces::msg::ObjectPose>::SharedPtr pose_publisher_;
+    PointCloudN::Ptr scene_edgeDetection = std::make_shared<PointCloudN>();
+    
+    float cyl_radius;
+    float cyl_height = 0.200;
+    int pter =0;
 
-        pcl::PointCloud<PointClNormal>::Ptr output ;
-        pcl::PointCloud<PointClNormal>::Ptr cloud;
-        PointCloudN scene_cloud;
-        PointCloudN::Ptr scene = std::make_shared<PointCloudN>();
-        PointCloudN::Ptr scene_before_downsampling = std::make_shared<PointCloudN>();
-        rclcpp::Subscription<sensor_msgs::msg::PointCloud2>::SharedPtr subscription_;
-        PointCloudN::Ptr scene_edgeDetection = std::make_shared<PointCloudN>();
-        
-        float cyl_radius;
-        float cyl_height = 0.200;
-        int pter =0;
-
-        float list_cylinder_arten[2][4] = {
-          // min , max, soll-durchmesser, soll-länge
+    float list_cylinder_arten[2][4] = {
+      // min , max, soll-durchmesser, soll-länge
+      {0.073, 0.078, 0.075, 0.30},
+      {0.048, 0.052, 0.05, 0.20},
+    } ;
           
-          {0.073, 0.078, 0.075, 0.30},
-          {0.048, 0.052, 0.05, 0.20},
-        } ;
-           
 };
 
 void PointCloudProcessor::generate_cylinder_master(){
@@ -1360,14 +1385,20 @@ int main(int argc, char * argv[]) {
 
   rclcpp::init(argc, argv);
 
-  auto node_point_cloud_processor = std::make_shared<PointCloudProcessor>();
-  
-  node_point_cloud_processor->generate_cylinder_master();
-  
-  rclcpp::spin(node_point_cloud_processor);
+  rclcpp::executors::MultiThreadedExecutor executor;
 
-  //rclcpp::shutdown();
-  
+    auto node_point_cloud_processor = std::make_shared<PointCloudProcessor>();
 
+    auto spin_thread = std::make_unique<std::thread>([&executor, &node_point_cloud_processor]() {
+
+        executor.add_node(node_point_cloud_processor->get_node_base_interface());
+        executor.spin();
+        executor.remove_node(node_point_cloud_processor->get_node_base_interface());
+        
+    });
+
+    spin_thread->join();
+    rclcpp::shutdown();
+    
   return 0;
 }

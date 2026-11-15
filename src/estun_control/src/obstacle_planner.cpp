@@ -27,6 +27,7 @@
 #include <string.h>
 #include <rclcpp/rclcpp.hpp>
 #include <cmath>
+#include "rclcpp_lifecycle/lifecycle_node.hpp"
 
 #include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
 
@@ -34,31 +35,63 @@
 #include "../robot_interfaces/robot_interfaces/msg/object_pose.hpp"
 
 
-class ObstaclePlanner : public rclcpp::Node {
+class ObstaclePlanner : public rclcpp_lifecycle::LifecycleNode {
+//class ObstaclePlanner : public rclcpp::Node{
 
     public:
 
-        ObstaclePlanner() : Node("obstacle_planner"){ //Initialiserung: nach : kommt Initialisierungsliste
-
-        object_pose_sub_ = this->create_subscription<robot_interfaces::msg::ObjectPose>("/ObjectPose", 10, std::bind(&ObstaclePlanner::addProbekoerper, this, std::placeholders::_1));
+        //ObstaclePlanner() : Node("obstacle_planner"){ //Initialiserung: nach : kommt Initialisierungsliste
+        ObstaclePlanner() : LifecycleNode("obstacle_planner"){
 
         }
+
+        rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_configure(const rclcpp_lifecycle::State & previous_state){
+
+            return rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn::SUCCESS;
+        }
+
+        rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_activate(const rclcpp_lifecycle::State & previous_state){
+
+            //object_pose_sub_->on_activate();
+            run();
+            object_pose_sub_ = this->create_subscription<robot_interfaces::msg::ObjectPose>("/ObjectPose", 10, std::bind(&ObstaclePlanner::addProbekoerper, this, std::placeholders::_1));
+
+            return rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn::SUCCESS;
+        }
+
+        rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_deactivate(const rclcpp_lifecycle::State & previous_state){
+
+            //object_pose_sub_->on_deactivate();
+            return rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn::SUCCESS;
+        }
+
+        rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_cleanup(const rclcpp_lifecycle::State & previous_state){
+
+            object_pose_sub_.reset();
+
+            return rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn::SUCCESS;
+        }
+
+         rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_shutdown(const rclcpp_lifecycle::State & previous_state){
+
+            object_pose_sub_.reset();
+            
+            return rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn::SUCCESS;
+        }
+        
         void run();
         void plan();
         void setup_world();
         void obstacle_parser();
         void addProbekoerper(robot_interfaces::msg::ObjectPose msg);
-        
 
     private:
 
         rclcpp::Subscription<robot_interfaces::msg::ObjectPose>::SharedPtr object_pose_sub_;
         rclcpp::Node::SharedPtr _node;
+        std::vector<robot_interfaces::msg::ObjectPose> msg_vector_new;
         moveit::planning_interface::MoveGroupInterface *_move_group;
         moveit::planning_interface::PlanningSceneInterface planning_scene_interface;
-        std::vector<robot_interfaces::msg::ObjectPose> msg_vector_new;
-
-
         std::vector<std::string> model;
         std::vector<std::string> mesh;
         std::vector<std::vector<double>> pos;
@@ -67,12 +100,10 @@ class ObstaclePlanner : public rclcpp::Node {
         const std::string sdfPath = "/home/mario/master_ws/src/estun_moveit/urdf/custom_world.sdf";
         int count_objects = 0;
         int run_count = 0;
-
-
-
 };
 
 void ObstaclePlanner::plan(){
+
 
     bool tf_found = false;
     geometry_msgs::msg::TransformStamped t;
@@ -149,11 +180,10 @@ void ObstaclePlanner::run() {
 
 void ObstaclePlanner::addProbekoerper(robot_interfaces::msg::ObjectPose msg){
 
-    if(run_count > 0){ return;}
 
     _move_group = new moveit::planning_interface::MoveGroupInterface(_node, "arm");
 
-    // RCLCPP_INFO(this->get_logger(),"Probekoerper Message empfangen");
+    RCLCPP_INFO(this->get_logger(),"Probekoerper Message empfangen");
     
     if (msg.object_type != "END"){
         
@@ -166,8 +196,6 @@ void ObstaclePlanner::addProbekoerper(robot_interfaces::msg::ObjectPose msg){
     }
 
     else{
-
-
 
         std::vector<std::string> object_names = planning_scene_interface.getKnownObjectNames();
 
@@ -350,33 +378,6 @@ void ObstaclePlanner::setup_world(){
 
     RCLCPP_INFO(this->get_logger(),"SetupWorld wird gestartet");
 
-
-
-
-    // //Obstacle am Endeffektor des Roboters
-    // moveit_msgs::msg::CollisionObject grasping_object;
-    // grasping_object.id = "grasp";
-    // shape_msgs::msg::SolidPrimitive grasping_object_primitive;
-    // grasping_object_primitive.type = grasping_object_primitive.CYLINDER;
-    // grasping_object_primitive.dimensions.resize(2);
-    // grasping_object_primitive.dimensions[grasping_object_primitive.CYLINDER_HEIGHT] = 0.2;
-    // grasping_object_primitive.dimensions[grasping_object_primitive.CYLINDER_RADIUS] = 0.06;
-    // grasping_object.header.frame_id = _move_group->getEndEffectorLink();
-    // geometry_msgs::msg::Pose grab_pose;
-    // grab_pose.orientation.w = 1.0;
-    // grab_pose.orientation.x = 0;
-    // grab_pose.orientation.y = 1.0;
-    // grab_pose.orientation.z = 0;
-    // grab_pose.position.z = 0.0;
-    // grab_pose.position.x = -0.2;
-    // grasping_object.primitives.push_back(grasping_object_primitive);
-    // grasping_object.primitive_poses.push_back(grab_pose);
-    // grasping_object.operation = grasping_object.ADD;
-    // planning_scene_interface.applyCollisionObject(grasping_object);
-    // std::vector<std::string> connection_links;
-    
-    // connection_links.push_back ( "endeffector_1" );
-
     // _move_group->attachObject(grasping_object.id, "endeffector_1", connection_links);
     RCLCPP_INFO(this->get_logger(),"For-Schleife beginnt");
     for (int i = 0 ; i < count_objects; i++){
@@ -510,7 +511,7 @@ void ObstaclePlanner::obstacle_parser(){
 
         else{
             
-            model.push_back(modelName);
+            //model.push_back(modelName);
             std::cout << "Model-Name: " << modelName << std::endl;
 
             //Link des Model finden
@@ -540,7 +541,7 @@ void ObstaclePlanner::obstacle_parser(){
             uriString = uriString.substr(found + 6);
             uriString = "package://" + uriString;
 
-            mesh.push_back(uriString);
+            //mesh.push_back(uriString);
             RCLCPP_INFO(this->get_logger(),"String: %s", uriString.c_str());
 
             gz::math::Pose3d position= poseElement->Get<gz::math::Pose3d>();
@@ -556,6 +557,8 @@ void ObstaclePlanner::obstacle_parser(){
             };
 
             pos.push_back(pose_vector);
+            model.push_back(modelName);
+            mesh.push_back(uriString);
 
             RCLCPP_INFO(this->get_logger(),"Position: %f , %f , %f , %f , %f , %f", pose_vector[0], pose_vector[1], pose_vector[2] ,pose_vector[3], pose_vector[4], pose_vector[5]);
 
@@ -583,25 +586,16 @@ int main(int argc, char * argv[]) {
 
     auto node_obstacle_planner = std::make_shared<ObstaclePlanner>();
 
-    //rclcpp::executors::SingleThreadedExecutor executor;
-    //executor.add_node(node_obstacle_planner);
+    rclcpp::executors::MultiThreadedExecutor executor;
 
-    //std::thread spinner([&executor]() {executor.spin();});
+    auto spin_thread = std::make_unique<std::thread>([&executor, &node_obstacle_planner]() {
 
-    //node_obstacle_planner->obstacle_parser();
-    //node_obstacle_planner->setup_world();
+        executor.add_node(node_obstacle_planner->get_node_base_interface());
+        executor.spin();
+        executor.remove_node(node_obstacle_planner->get_node_base_interface());
+    });
 
-    // executor.cancel();
-    // spinner.join();
-
-    std::thread spinner(&ObstaclePlanner::run, node_obstacle_planner);
-
-    rclcpp::spin(node_obstacle_planner);
-        
-  
-  //executor.remove_node(node_obstacle_planner);
-
-    spinner.join();
+    spin_thread->join();
 
   rclcpp::shutdown();
   return 0;

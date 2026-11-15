@@ -41,6 +41,9 @@ robot_interfaces__msg__ObjectPose__init(robot_interfaces__msg__ObjectPose * msg)
   // mid_x
   // mid_y
   // mid_z
+  // roll
+  // pitch
+  // yaw
   return true;
 }
 
@@ -67,6 +70,9 @@ robot_interfaces__msg__ObjectPose__fini(robot_interfaces__msg__ObjectPose * msg)
   // mid_x
   // mid_y
   // mid_z
+  // roll
+  // pitch
+  // yaw
 }
 
 bool
@@ -141,6 +147,18 @@ robot_interfaces__msg__ObjectPose__are_equal(const robot_interfaces__msg__Object
   if (lhs->mid_z != rhs->mid_z) {
     return false;
   }
+  // roll
+  if (lhs->roll != rhs->roll) {
+    return false;
+  }
+  // pitch
+  if (lhs->pitch != rhs->pitch) {
+    return false;
+  }
+  // yaw
+  if (lhs->yaw != rhs->yaw) {
+    return false;
+  }
   return true;
 }
 
@@ -188,6 +206,12 @@ robot_interfaces__msg__ObjectPose__copy(
   output->mid_y = input->mid_y;
   // mid_z
   output->mid_z = input->mid_z;
+  // roll
+  output->roll = input->roll;
+  // pitch
+  output->pitch = input->pitch;
+  // yaw
+  output->yaw = input->yaw;
   return true;
 }
 

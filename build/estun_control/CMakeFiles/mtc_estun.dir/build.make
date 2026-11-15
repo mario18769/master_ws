@@ -172,8 +172,6 @@ mtc_estun: /usr/lib/x86_64-linux-gnu/liboctomath.so.1.9.7
 mtc_estun: /opt/ros/jazzy/lib/librandom_numbers.so
 mtc_estun: /opt/ros/jazzy/lib/libresource_retriever.so
 mtc_estun: /usr/lib/x86_64-linux-gnu/libboost_random.so.1.83.0
-mtc_estun: /opt/ros/jazzy/lib/librsl.so
-mtc_estun: /usr/lib/x86_64-linux-gnu/libfmt.so.9.1.0
 mtc_estun: /opt/ros/jazzy/lib/librclcpp_lifecycle.so
 mtc_estun: /opt/ros/jazzy/lib/librcl_lifecycle.so
 mtc_estun: /opt/ros/jazzy/lib/liblifecycle_msgs__rosidl_typesupport_fastrtps_c.so
@@ -184,6 +182,8 @@ mtc_estun: /opt/ros/jazzy/lib/liblifecycle_msgs__rosidl_typesupport_cpp.so
 mtc_estun: /opt/ros/jazzy/lib/liblifecycle_msgs__rosidl_generator_py.so
 mtc_estun: /opt/ros/jazzy/lib/liblifecycle_msgs__rosidl_typesupport_c.so
 mtc_estun: /opt/ros/jazzy/lib/liblifecycle_msgs__rosidl_generator_c.so
+mtc_estun: /opt/ros/jazzy/lib/librsl.so
+mtc_estun: /usr/lib/x86_64-linux-gnu/libfmt.so.9.1.0
 mtc_estun: /opt/ros/jazzy/lib/libsrdf_publisher_node.so
 mtc_estun: /opt/ros/jazzy/lib/libcomponent_manager.so
 mtc_estun: /opt/ros/jazzy/lib/libcomposition_interfaces__rosidl_typesupport_fastrtps_c.so

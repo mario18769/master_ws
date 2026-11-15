@@ -1,0 +1,50 @@
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:1[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:51:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   51 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:2[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:[m[K In lambda function:
+[01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:616:26:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Krclcpp::executors::SingleThreadedExecutor::add_node(std::shared_ptr<ObstaclePlanner>&)[m[K’
+  616 |         [01;31m[Kexecutor.add_node(node_obstacle_planner)[m[K;
+      |         [01;31m[K~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:176[m[K,
+                 from [01m[K/opt/ros/jazzy/include/tf2_ros/tf2_ros/buffer_interface.hpp:50[m[K,
+                 from [01m[K/opt/ros/jazzy/include/tf2_ros/tf2_ros/buffer.hpp:45[m[K,
+                 from [01m[K/opt/ros/jazzy/include/tf2_ros/tf2_ros/buffer.h:35[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.hpp:59[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:52[m[K:
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executor.hpp:200:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvirtual void rclcpp::Executor::[01;32m[Kadd_node[m[K(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr, bool)[m[K’
+  200 |   [01;36m[Kadd_node[m[K(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr node_ptr, bool notify = true);
+      |   [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executor.hpp:200:66:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kshared_ptr<[01;32m[KObstaclePlanner[m[K>[m[K’ to ‘[01m[Kshared_ptr<[01;32m[Krclcpp::node_interfaces::NodeBaseInterface[m[K>[m[K’
+  200 |   add_node([01;36m[Krclcpp::node_interfaces::NodeBaseInterface::SharedPtr node_ptr[m[K, bool notify = true);
+      |            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executor.hpp:208:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvirtual void rclcpp::Executor::[01;32m[Kadd_node[m[K(std::shared_ptr<rclcpp::Node>, bool)[m[K’
+  208 |   [01;36m[Kadd_node[m[K(std::shared_ptr<rclcpp::Node> node_ptr, bool notify = true);
+      |   [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executor.hpp:208:42:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kshared_ptr<[01;32m[KObstaclePlanner[m[K>[m[K’ to ‘[01m[Kshared_ptr<[01;32m[Krclcpp::Node[m[K>[m[K’
+  208 |   add_node([01;36m[Kstd::shared_ptr<rclcpp::Node> node_ptr[m[K, bool notify = true);
+      |            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:618:29:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Krclcpp::executors::SingleThreadedExecutor::remove_node(std::shared_ptr<ObstaclePlanner>&)[m[K’
+  618 |         [01;31m[Kexecutor.remove_node(node_obstacle_planner)[m[K;
+      |         [01;31m[K~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executor.hpp:228:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvirtual void rclcpp::Executor::[01;32m[Kremove_node[m[K(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr, bool)[m[K’
+  228 |   [01;36m[Kremove_node[m[K(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr node_ptr, bool notify = true);
+      |   [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executor.hpp:228:69:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kshared_ptr<[01;32m[KObstaclePlanner[m[K>[m[K’ to ‘[01m[Kshared_ptr<[01;32m[Krclcpp::node_interfaces::NodeBaseInterface[m[K>[m[K’
+  228 |   remove_node([01;36m[Krclcpp::node_interfaces::NodeBaseInterface::SharedPtr node_ptr[m[K, bool notify = true);
+      |               [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executor.hpp:236:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvirtual void rclcpp::Executor::[01;32m[Kremove_node[m[K(std::shared_ptr<rclcpp::Node>, bool)[m[K’
+  236 |   [01;36m[Kremove_node[m[K(std::shared_ptr<rclcpp::Node> node_ptr, bool notify = true);
+      |   [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executor.hpp:236:45:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kshared_ptr<[01;32m[KObstaclePlanner[m[K>[m[K’ to ‘[01m[Kshared_ptr<[01;32m[Krclcpp::Node[m[K>[m[K’
+  236 |   remove_node([01;36m[Kstd::shared_ptr<rclcpp::Node> node_ptr[m[K, bool notify = true);
+      |               [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/obstacle_planner.dir/build.make:76: CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o] Fehler 1
+gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/obstacle_planner.dir/all] Fehler 2
+gmake: *** [Makefile:146: all] Fehler 2

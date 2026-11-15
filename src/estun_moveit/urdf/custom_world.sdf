@@ -2,7 +2,6 @@
 
 <sdf version="1.9">
   <world name="empty">
-
     <physics name="1ms" type="ignored">
       <max_step_size>0.001</max_step_size>
       <real_time_factor>1.0</real_time_factor>
@@ -10,7 +9,16 @@
     <plugin
       filename="gz-sim-physics-system"
       name="gz::sim::systems::Physics">
-      <!-- <engine>gz-physics-bullet-featherstone-plugin</engine> -->
+      <!-- <engine>
+        <filename>
+          gz-physics-dartsim-plugin
+        </filename>
+      </engine>
+      <engine>
+        <filename>
+          gz-physics-bullet-featherstone-plugin
+        </filename>
+      </engine> -->
     </plugin>
     <plugin
       filename="gz-sim-user-commands-system"
@@ -29,8 +37,7 @@
       name="gz::sim::systems::Sensors">
       <render_engine>ogre2</render_engine>
     </plugin>
-
-
+    
     <model name="Sensor">
       <pose>-0.4 -0.5 2.500 0.0 1.309 -1.5708</pose>
       <static>true</static> 
@@ -307,7 +314,7 @@
       </inertial>
       <collision name="collision">
         <geometry>
-            <mesh><uri>file://home/mario/master_ws/install/estun_control/share/estun_control/meshes/Tisch.stl</uri></mesh>
+            <mesh><uri>file://home/mario/master_ws/install/estun_control/share/estun_control/meshes/CB_Vermessungsstation.stl</uri></mesh> 
           </geometry>
       </collision>
       <visual name="visual">
@@ -356,8 +363,12 @@
     </link>
   </model>
 
-    <model name="Probekoerper1">
-      <pose>-0.4 -0.8 0.794 0 0 0</pose>
+  <model name="Probekoerper1">
+    <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+      <publish_model_pose>true</publish_model_pose>
+      <update_frequency>10.0</update_frequency>
+    </plugin>
+      <pose>-0.9 -0.8 0.894 0.0 0.0 0.0</pose>
       <static>false</static>
     <link name="link">
       <inertial>
@@ -373,12 +384,18 @@
       </inertial>
       <collision name="collision">
         <geometry>
-          <mesh><uri>file://home/mario/master_ws/install/estun_control/share/estun_control/meshes/Probekoerper.stl</uri></mesh>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.2</length>
+          </cylinder>
         </geometry>
       </collision>
       <visual name="visual">
         <geometry>
-          <mesh><uri>file://home/mario/master_ws/install/estun_control/share/estun_control/meshes/Probekoerper.stl</uri></mesh>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.2</length>
+          </cylinder>
         </geometry>
         <material>
           <ambient>0.02 0.14 0.15 1</ambient>
@@ -390,7 +407,11 @@
   </model>
 
   <model name="Probekoerper2">
-      <pose>-0.4 -1.1 0.844 0 1.5707 0.0</pose>
+  <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+      <publish_model_pose>true</publish_model_pose>
+      <update_frequency>10.0</update_frequency>
+    </plugin>
+      <pose>-0.6 -1.1 0.844 0 1.5708 0.0</pose>
       <static>false</static>
     <link name="link">
       <inertial>
@@ -406,12 +427,18 @@
       </inertial>
       <collision name="collision">
         <geometry>
-          <mesh><uri>file://home/mario/master_ws/install/estun_control/share/estun_control/meshes/Probekoerper.stl</uri></mesh>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.2</length>
+          </cylinder>
         </geometry>
       </collision>
       <visual name="visual">
         <geometry>
-          <mesh><uri>file://home/mario/master_ws/install/estun_control/share/estun_control/meshes/Probekoerper.stl</uri></mesh>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.2</length>
+          </cylinder>
         </geometry>
         <material>
           <ambient>0.02 0.14 0.15 1</ambient>
@@ -423,7 +450,11 @@
   </model>
 
   <model name="Probekoerper3">
-      <pose>-0.55 -0.8 0.794 0.0 0.0 0.0</pose>
+  <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+      <publish_model_pose>true</publish_model_pose>
+      <update_frequency>10.0</update_frequency>
+    </plugin>
+      <pose>-0.55 -0.8 0.894 0.0 0.0 0.0</pose>
       <static>false</static>
     <link name="link">
       <inertial>
@@ -439,12 +470,18 @@
       </inertial>
       <collision name="collision">
         <geometry>
-          <mesh><uri>file://home/mario/master_ws/install/estun_control/share/estun_control/meshes/Probekoerper.stl</uri></mesh>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.2</length>
+          </cylinder>
         </geometry>
       </collision>
       <visual name="visual">
         <geometry>
-          <mesh><uri>file://home/mario/master_ws/install/estun_control/share/estun_control/meshes/Probekoerper.stl</uri></mesh>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.2</length>
+          </cylinder>
         </geometry>
         <material>
           <ambient>0.02 0.14 0.15 1</ambient>
@@ -456,6 +493,10 @@
   </model>
 
   <model name="Probekoerper6">
+  <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+      <publish_model_pose>true</publish_model_pose>
+      <update_frequency>10.0</update_frequency>
+    </plugin>
     <pose>-0.25 -1.0 0.944 0.0 0.0 0.0</pose>
     <static>false</static>
     <link name="link">
@@ -494,8 +535,12 @@
     </link>
   </model>
 
-  <!-- Würfelproben-->
+ 
   <model name="Probekoerper4">
+  <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+      <publish_model_pose>true</publish_model_pose>
+      <update_frequency>10.0</update_frequency>
+    </plugin>
       <pose>-0.25 -0.8 0.844 0.0 0.0 0.0</pose>
       <static>false</static>
     <link name="link">
@@ -533,9 +578,14 @@
   </model>
 
   <model name="Probekoerper5">
+  <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+      <publish_model_pose>true</publish_model_pose>
+      <update_frequency>10.0</update_frequency>
+    </plugin>
       <pose>-0.05 -0.8 0.844 0.0 0.0 0.7854</pose>
       <static>false</static>
     <link name="link">
+      
       <inertial>
         <mass>8.437</mass>
         <inertia> 
@@ -548,6 +598,20 @@
         </inertia>
       </inertial>
       <collision name="collision">
+        <surface>
+          <contact>
+              <ode>
+                <kp>1e15</kp>
+                <kd>1e13</kd>
+              </ode>
+            </contact>
+          <friction>
+            <ode>
+              <mu>1.0</mu>
+              <mu2>1.0</mu2>
+            </ode>
+          </friction>
+        </surface>
         <geometry>
           <box>
             <size>0.1 0.1 0.1</size>
@@ -570,6 +634,10 @@
   </model>
 
   <model name="Probekoerper7">
+  <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+      <publish_model_pose>true</publish_model_pose>
+      <update_frequency>10.0</update_frequency>
+    </plugin>
       <pose>-0.05 -1.0 0.869 0.0 0.0 0.7854</pose>
       <static>false</static>
     <link name="link">
@@ -607,6 +675,10 @@
   </model>
 
   <model name="Probekoerper8">
+  <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher">
+      <publish_model_pose>true</publish_model_pose>
+      <update_frequency>10.0</update_frequency>
+    </plugin>
       <pose>0.1 -0.8 0.814 0.0 0.0 0.7854</pose>
       <static>false</static>
     <link name="link">
@@ -642,7 +714,6 @@
       </visual>
     </link>
   </model>
-
 
   </world>
 </sdf>

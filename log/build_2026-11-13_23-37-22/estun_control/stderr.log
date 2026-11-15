@@ -1,0 +1,71 @@
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:4[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:5[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:76:72:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K>[m[K’ token
+   76 |   std::vector<rclcpp::Subscription<geometry_msgs::msg::Pose>::SharedPtr[01;31m[K>>[m[K Probe_pose_;
+      |                                                                        [01;31m[K^~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:97:38:[m[K [01;31m[Kerror: [m[Kexpected identifier before numeric constant
+   97 |   std::vector<pose_struct> pose_list([01;31m[K10[m[K);
+      |                                      [01;31m[K^~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:97:38:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before numeric constant
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In constructor ‘[01m[KMTCTaskNode::[01;32m[KMTCTaskNode[m[K(const rclcpp::NodeOptions&)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:140:5:[m[K [01;31m[Kerror: [m[K‘[01m[KProbe_pose[m[K’ was not declared in this scope; did you mean ‘[01m[KProbe1_pose[m[K’?
+  140 |     [01;31m[KProbe_pose[m[K= node_->create_subscription<geometry_msgs::msg::Pose>(iterator, 10, [node_, iterator] (geometry_msgs::msg::Pose msg) {
+      |     [01;31m[K^~~~~~~~~~[m[K
+      |     [32m[KProbe1_pose[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:140:85:[m[K [01;31m[Kerror: [m[Kcapture of non-variable ‘[01m[KMTCTaskNode::node_[m[K’
+  140 |     Probe_pose= node_->create_subscription<geometry_msgs::msg::Pose>(iterator, 10, [[01;31m[Knode_[m[K, iterator] (geometry_msgs::msg::Pose msg) {
+      |                                                                                     [01;31m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:83:27:[m[K [01;36m[Knote: [m[K‘[01m[Krclcpp::Node::SharedPtr MTCTaskNode::node_[m[K’ declared here
+   83 |   rclcpp::Node::SharedPtr [01;36m[Knode_[m[K;
+      |                           [01;36m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In lambda function:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:142:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kthis[m[K’ was not captured for this lambda function
+  142 |     [01;31m[Knode_[m[K->getProbePose(msg,topic)});
+      |     [01;31m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:142:5:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static data member ‘[01m[KMTCTaskNode::node_[m[K’
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:83:27:[m[K [01;36m[Knote: [m[Kdeclared here
+   83 |   rclcpp::Node::SharedPtr [01;36m[Knode_[m[K;
+      |                           [01;36m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:142:29:[m[K [01;31m[Kerror: [m[K‘[01m[Ktopic[m[K’ was not declared in this scope; did you mean ‘[01m[Ktopics[m[K’?
+  142 |     node_->getProbePose(msg,[01;31m[Ktopic[m[K)});
+      |                             [01;31m[K^~~~~[m[K
+      |                             [32m[Ktopics[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In constructor ‘[01m[KMTCTaskNode::[01;32m[KMTCTaskNode[m[K(const rclcpp::NodeOptions&)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:144:5:[m[K [01;31m[Kerror: [m[K‘[01m[KProbe_pose_[m[K’ was not declared in this scope; did you mean ‘[01m[KProbe1_pose[m[K’?
+  144 |     [01;31m[KProbe_pose_[m[K.push_back(Probe_pose);
+      |     [01;31m[K^~~~~~~~~~~[m[K
+      |     [32m[KProbe1_pose[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kvoid MTCTaskNode::[01;32m[KgetProbePose[m[K(geometry_msgs::msg::Pose, std::string)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:163:14:[m[K [01;31m[Kerror: [m[Kinvalid types ‘[01m[K<unresolved overloaded function type>[int][m[K’ for array subscript
+  163 |     pose_list[01;31m[K[[m[K0] = PoseProbe1;
+      |              [01;31m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:150:74:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktopic[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  150 | void MTCTaskNode::getProbePose(geometry_msgs::msg::Pose msg, [01;35m[Kstd::string topic[m[K){
+      |                                                              [01;35m[K~~~~~~~~~~~~^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kvoid MTCTaskNode::[01;32m[KgetObjects[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:370:28:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<MTCTaskNode::getObjects()::data>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  370 |     if (task == false && [01;35m[Kj < objects.size()[m[K){
+      |                          [01;35m[K~~^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:373:12:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<MTCTaskNode::getObjects()::data>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  373 |       if([01;35m[Kj >= objects.size()[m[K){
+      |          [01;35m[K~~^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:383:26:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<MTCTaskNode::getObjects()::data>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  383 |     if(task == true && [01;35m[Kj < objects.size()[m[K){
+      |                        [01;35m[K~~^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kmoveit::task_constructor::Task MTCTaskNode::[01;32m[KcreateGrabTask[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:791:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kattach_object_stage[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  791 |   mtc::Stage* [01;35m[Kattach_object_stage[m[K = nullptr;  // Forward attach_object_stage to place pose generator
+      |               [01;35m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kbool MTCTaskNode::[01;32m[KdoTask[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:550:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+  550 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+gmake[2]: *** [CMakeFiles/mtc_estun.dir/build.make:76: CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o] Fehler 1
+gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/mtc_estun.dir/all] Fehler 2
+gmake: *** [Makefile:146: all] Fehler 2

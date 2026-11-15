@@ -139,6 +139,21 @@ bool cdr_serialize_robot_interfaces__msg__ObjectPose(
     cdr << ros_message->mid_z;
   }
 
+  // Field name: roll
+  {
+    cdr << ros_message->roll;
+  }
+
+  // Field name: pitch
+  {
+    cdr << ros_message->pitch;
+  }
+
+  // Field name: yaw
+  {
+    cdr << ros_message->yaw;
+  }
+
   return true;
 }
 
@@ -236,6 +251,21 @@ bool cdr_deserialize_robot_interfaces__msg__ObjectPose(
   // Field name: mid_z
   {
     cdr >> ros_message->mid_z;
+  }
+
+  // Field name: roll
+  {
+    cdr >> ros_message->roll;
+  }
+
+  // Field name: pitch
+  {
+    cdr >> ros_message->pitch;
+  }
+
+  // Field name: yaw
+  {
+    cdr >> ros_message->yaw;
   }
 
   return true;
@@ -362,6 +392,27 @@ size_t get_serialized_size_robot_interfaces__msg__ObjectPose(
   // Field name: mid_z
   {
     size_t item_size = sizeof(ros_message->mid_z);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: roll
+  {
+    size_t item_size = sizeof(ros_message->roll);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: pitch
+  {
+    size_t item_size = sizeof(ros_message->pitch);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: yaw
+  {
+    size_t item_size = sizeof(ros_message->yaw);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -520,6 +571,30 @@ size_t max_serialized_size_robot_interfaces__msg__ObjectPose(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
+  // Field name: roll
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
+  // Field name: pitch
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
+  // Field name: yaw
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
 
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
@@ -529,7 +604,7 @@ size_t max_serialized_size_robot_interfaces__msg__ObjectPose(
     using DataType = robot_interfaces__msg__ObjectPose;
     is_plain =
       (
-      offsetof(DataType, mid_z) +
+      offsetof(DataType, yaw) +
       last_member_size
       ) == ret_val;
   }
@@ -628,6 +703,21 @@ bool cdr_serialize_key_robot_interfaces__msg__ObjectPose(
   // Field name: mid_z
   {
     cdr << ros_message->mid_z;
+  }
+
+  // Field name: roll
+  {
+    cdr << ros_message->roll;
+  }
+
+  // Field name: pitch
+  {
+    cdr << ros_message->pitch;
+  }
+
+  // Field name: yaw
+  {
+    cdr << ros_message->yaw;
   }
 
   return true;
@@ -754,6 +844,27 @@ size_t get_serialized_size_key_robot_interfaces__msg__ObjectPose(
   // Field name: mid_z
   {
     size_t item_size = sizeof(ros_message->mid_z);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: roll
+  {
+    size_t item_size = sizeof(ros_message->roll);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: pitch
+  {
+    size_t item_size = sizeof(ros_message->pitch);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: yaw
+  {
+    size_t item_size = sizeof(ros_message->yaw);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -910,6 +1021,30 @@ size_t max_serialized_size_key_robot_interfaces__msg__ObjectPose(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
+  // Field name: roll
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
+  // Field name: pitch
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
+  // Field name: yaw
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
     // All members are plain, and type is not empty.
@@ -918,7 +1053,7 @@ size_t max_serialized_size_key_robot_interfaces__msg__ObjectPose(
     using DataType = robot_interfaces__msg__ObjectPose;
     is_plain =
       (
-      offsetof(DataType, mid_z) +
+      offsetof(DataType, yaw) +
       last_member_size
       ) == ret_val;
   }

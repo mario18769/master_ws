@@ -168,6 +168,19 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
   /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/received_message_period.hpp \
   /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/topic_statistics_collector.hpp \
   /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/visibility_control.hpp \
+  /opt/ros/jazzy/include/lifecycle_msgs/lifecycle_msgs/msg/detail/state__struct.h \
+  /opt/ros/jazzy/include/lifecycle_msgs/lifecycle_msgs/msg/detail/transition__builder.hpp \
+  /opt/ros/jazzy/include/lifecycle_msgs/lifecycle_msgs/msg/detail/transition__struct.h \
+  /opt/ros/jazzy/include/lifecycle_msgs/lifecycle_msgs/msg/detail/transition__struct.hpp \
+  /opt/ros/jazzy/include/lifecycle_msgs/lifecycle_msgs/msg/detail/transition__traits.hpp \
+  /opt/ros/jazzy/include/lifecycle_msgs/lifecycle_msgs/msg/detail/transition__type_support.hpp \
+  /opt/ros/jazzy/include/lifecycle_msgs/lifecycle_msgs/msg/detail/transition_event__functions.h \
+  /opt/ros/jazzy/include/lifecycle_msgs/lifecycle_msgs/msg/detail/transition_event__struct.h \
+  /opt/ros/jazzy/include/lifecycle_msgs/lifecycle_msgs/msg/detail/transition_event__type_support.h \
+  /opt/ros/jazzy/include/lifecycle_msgs/lifecycle_msgs/msg/rosidl_generator_c__visibility_control.h \
+  /opt/ros/jazzy/include/lifecycle_msgs/lifecycle_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+  /opt/ros/jazzy/include/lifecycle_msgs/lifecycle_msgs/msg/transition.hpp \
+  /opt/ros/jazzy/include/lifecycle_msgs/lifecycle_msgs/msg/transition_event.h \
   /opt/ros/jazzy/include/moveit_core/moveit/exceptions/exceptions.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/kinematics_base/kinematics_base.hpp \
   /opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.hpp \
@@ -326,6 +339,7 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
   /opt/ros/jazzy/include/rcl/rcl/event_callback.h \
   /opt/ros/jazzy/include/rcl/rcl/graph.h \
   /opt/ros/jazzy/include/rcl/rcl/guard_condition.h \
+  /opt/ros/jazzy/include/rcl/rcl/init.h \
   /opt/ros/jazzy/include/rcl/rcl/init_options.h \
   /opt/ros/jazzy/include/rcl/rcl/log_level.h \
   /opt/ros/jazzy/include/rcl/rcl/logging_rosout.h \
@@ -334,6 +348,7 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
   /opt/ros/jazzy/include/rcl/rcl/node.h \
   /opt/ros/jazzy/include/rcl/rcl/node_options.h \
   /opt/ros/jazzy/include/rcl/rcl/publisher.h \
+  /opt/ros/jazzy/include/rcl/rcl/rcl.h \
   /opt/ros/jazzy/include/rcl/rcl/service.h \
   /opt/ros/jazzy/include/rcl/rcl/service_introspection.h \
   /opt/ros/jazzy/include/rcl/rcl/subscription.h \
@@ -418,6 +433,8 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
   /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/list_parameters.hpp \
   /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/set_parameters.hpp \
   /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/set_parameters_atomically.hpp \
+  /opt/ros/jazzy/include/rcl_lifecycle/rcl_lifecycle/data_types.h \
+  /opt/ros/jazzy/include/rcl_lifecycle/rcl_lifecycle/visibility_control.h \
   /opt/ros/jazzy/include/rcl_yaml_param_parser/rcl_yaml_param_parser/parser.h \
   /opt/ros/jazzy/include/rcl_yaml_param_parser/rcl_yaml_param_parser/types.h \
   /opt/ros/jazzy/include/rcl_yaml_param_parser/rcl_yaml_param_parser/visibility_control.h \
@@ -588,6 +605,14 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
   /opt/ros/jazzy/include/rclcpp_action/rclcpp_action/server_goal_handle.hpp \
   /opt/ros/jazzy/include/rclcpp_action/rclcpp_action/types.hpp \
   /opt/ros/jazzy/include/rclcpp_action/rclcpp_action/visibility_control.hpp \
+  /opt/ros/jazzy/include/rclcpp_lifecycle/rclcpp_lifecycle/lifecycle_node.hpp \
+  /opt/ros/jazzy/include/rclcpp_lifecycle/rclcpp_lifecycle/lifecycle_node_impl.hpp \
+  /opt/ros/jazzy/include/rclcpp_lifecycle/rclcpp_lifecycle/lifecycle_publisher.hpp \
+  /opt/ros/jazzy/include/rclcpp_lifecycle/rclcpp_lifecycle/managed_entity.hpp \
+  /opt/ros/jazzy/include/rclcpp_lifecycle/rclcpp_lifecycle/node_interfaces/lifecycle_node_interface.hpp \
+  /opt/ros/jazzy/include/rclcpp_lifecycle/rclcpp_lifecycle/state.hpp \
+  /opt/ros/jazzy/include/rclcpp_lifecycle/rclcpp_lifecycle/transition.hpp \
+  /opt/ros/jazzy/include/rclcpp_lifecycle/rclcpp_lifecycle/visibility_control.h \
   /opt/ros/jazzy/include/rcpputils/rcpputils/filesystem_helper.hpp \
   /opt/ros/jazzy/include/rcpputils/rcpputils/join.hpp \
   /opt/ros/jazzy/include/rcpputils/rcpputils/pointer_traits.hpp \
@@ -2708,8 +2733,6 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/13/include/mm_malloc.h:
-
 /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h:
 
 /usr/include/x86_64-linux-gnu/sys/ucontext.h:
@@ -2918,8 +2941,6 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /usr/include/features-time64.h:
 
-/usr/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h:
-
 /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h:
 
 /usr/include/eigen3/Eigen/src/plugins/IndexedViewMethods.h:
@@ -3114,19 +3135,29 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /usr/include/eigen3/Eigen/src/Core/Assign.h:
 
-/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/cartesian_trajectory__struct.hpp:
+/usr/include/eigen3/Eigen/src/Core/ArrayBase.h:
 
-/usr/include/boost/container_hash/is_unordered_range.hpp:
+/usr/include/eigen3/Eigen/src/Core/Array.h:
 
-/usr/include/boost/mp11/bind.hpp:
+/usr/include/eigen3/Eigen/src/Cholesky/LDLT.h:
 
-/usr/include/boost/container_hash/detail/hash_tuple_like.hpp:
+/usr/include/eigen3/Eigen/QR:
 
-/usr/include/boost/container_hash/detail/hash_range.hpp:
+/usr/include/eigen3/Eigen/LU:
 
-/usr/include/boost/config/user.hpp:
+/usr/include/eigen3/Eigen/Jacobi:
 
-/usr/include/boost/config/platform/linux.hpp:
+/usr/include/eigen3/Eigen/Householder:
+
+/usr/include/eigen3/Eigen/Cholesky:
+
+/usr/include/c++/13/vector:
+
+/usr/include/c++/13/variant:
+
+/usr/include/c++/13/unordered_map:
+
+/usr/include/c++/13/typeindex:
 
 /usr/include/boost/config/abi_prefix.hpp:
 
@@ -3139,8 +3170,6 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 /usr/include/boost/variant/detail/has_result_type.hpp:
 
 /usr/include/c++/13/mutex:
-
-/usr/include/boost/config/no_tr1/memory.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp:
 
@@ -3208,6 +3237,8 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /usr/include/boost/numeric/conversion/detail/preprocessed/numeric_cast_traits_common.hpp:
 
+/opt/ros/jazzy/include/lifecycle_msgs/lifecycle_msgs/msg/detail/transition__type_support.hpp:
+
 /usr/include/locale.h:
 
 /usr/include/boost/type_traits/is_volatile.hpp:
@@ -3264,8 +3295,6 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /usr/include/boost/variant/detail/make_variant_list.hpp:
 
-/usr/include/boost/atomic/detail/classify.hpp:
-
 /usr/include/boost/atomic/detail/type_traits/integral_constant.hpp:
 
 /opt/ros/jazzy/include/shape_msgs/shape_msgs/msg/detail/mesh_triangle__traits.hpp:
@@ -3281,8 +3310,6 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/vector3__type_support.hpp:
 
 /usr/include/boost/atomic/detail/bitwise_fp_cast.hpp:
-
-/usr/include/boost/atomic/detail/atomic_ref_impl.hpp:
 
 /usr/include/boost/atomic/detail/atomic_impl.hpp:
 
@@ -3308,6 +3335,8 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/point_stamped__traits.hpp:
 
+/opt/ros/jazzy/include/rclcpp_lifecycle/rclcpp_lifecycle/managed_entity.hpp:
+
 /usr/include/asm-generic/errno.h:
 
 /usr/include/boost/thread/recursive_mutex.hpp:
@@ -3319,8 +3348,6 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 /opt/ros/jazzy/opt/sdformat_vendor/include/gz/sdformat14/sdf/parser.hh:
 
 /usr/include/boost/thread/csbl/tuple.hpp:
-
-/opt/ros/jazzy/opt/sdformat_vendor/include/gz/sdformat14/sdf/Types.hh:
 
 /usr/include/boost/atomic/detail/fp_operations.hpp:
 
@@ -3374,8 +3401,6 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /usr/include/boost/date_time/posix_time/posix_time_duration.hpp:
 
-/usr/include/c++/13/bits/refwrap.h:
-
 /opt/ros/jazzy/include/rmw/rmw/names_and_types.h:
 
 /opt/ros/jazzy/opt/sdformat_vendor/include/gz/sdformat14/sdf/InterfaceJoint.hh:
@@ -3405,8 +3430,6 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/describe_parameters__builder.hpp:
 
 /opt/ros/jazzy/opt/sdformat_vendor/include/gz/sdformat14/sdf/Box.hh:
-
-/opt/ros/jazzy/opt/sdformat_vendor/include/gz/sdformat14/sdf/Atmosphere.hh:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/float.h:
 
@@ -3467,6 +3490,8 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 /opt/ros/jazzy/opt/gz_math_vendor/include/gz/math7/gz/math/detail/Capsule.hh:
 
 /opt/ros/jazzy/opt/gz_math_vendor/include/gz/math7/gz/math/Capsule.hh:
+
+/opt/ros/jazzy/include/lifecycle_msgs/lifecycle_msgs/msg/detail/transition__traits.hpp:
 
 /opt/ros/jazzy/include/visualization_msgs/visualization_msgs/msg/marker_array.hpp:
 
@@ -3618,6 +3643,10 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /usr/include/boost/predef/hardware/simd.h:
 
+/usr/include/c++/13/unordered_set:
+
+/usr/include/boost/system/detail/append_int.hpp:
+
 /usr/include/c++/13/bits/codecvt.h:
 
 /opt/ros/jazzy/include/tf2/tf2/LinearMath/MinMax.hpp:
@@ -3714,10 +3743,6 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/individual_type_description__struct.h:
 
-/usr/include/asm-generic/types.h:
-
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/field__struct.h:
-
 /usr/include/boost/type_traits/remove_const.hpp:
 
 /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/message_type_support_struct.h:
@@ -3741,6 +3766,10 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 /opt/ros/jazzy/include/rosidl_dynamic_typesupport/rosidl_dynamic_typesupport/api/dynamic_data.h:
 
 /usr/include/boost/thread/detail/thread.hpp:
+
+/usr/include/eigen3/Eigen/Geometry:
+
+/opt/ros/jazzy/opt/sdformat_vendor/include/gz/sdformat14/sdf/Material.hh:
 
 /usr/include/boost/type_traits/copy_cv.hpp:
 
@@ -3766,6 +3795,10 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /usr/include/boost/thread/lock_guard.hpp:
 
+/usr/include/c++/13/type_traits:
+
+/opt/ros/jazzy/include/rmw/rmw/subscription_content_filter_options.h:
+
 /opt/ros/jazzy/include/rclcpp/rclcpp/node_impl.hpp:
 
 /opt/ros/jazzy/include/rosidl_runtime_cpp/rosidl_runtime_cpp/service_type_support_decl.hpp:
@@ -3775,10 +3808,6 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 /usr/include/boost/mp11/detail/mp_append.hpp:
 
 /usr/include/boost/type_traits/type_identity.hpp:
-
-/usr/include/boost/bind/bind_mf_cc.hpp:
-
-/usr/include/c++/13/bits/memory_resource.h:
 
 /usr/include/boost/system/detail/system_category.hpp:
 
@@ -3809,6 +3838,8 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 /opt/ros/jazzy/include/rmw/rmw/events_statuses/requested_deadline_missed.h:
 
 /opt/ros/jazzy/include/rmw/rmw/events_statuses/offered_deadline_missed.h:
+
+/usr/include/boost/config/platform/linux.hpp:
 
 /usr/include/boost/predef/os/bsd/free.h:
 
@@ -3864,6 +3895,10 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /usr/include/boost/predef/compiler/intel.h:
 
+/usr/include/boost/bind/bind_mf_cc.hpp:
+
+/usr/include/c++/13/bits/memory_resource.h:
+
 /opt/ros/jazzy/include/rcutils/rcutils/logging.h:
 
 /usr/include/boost/atomic/detail/gcc_atomic_memory_order_utils.hpp:
@@ -3883,6 +3918,24 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 /opt/ros/jazzy/include/rmw/rmw/qos_string_conversions.h:
 
 /usr/include/boost/type_index/stl_type_index.hpp:
+
+/usr/include/eigen3/Eigen/SVD:
+
+/opt/ros/jazzy/include/rclcpp_lifecycle/rclcpp_lifecycle/transition.hpp:
+
+/usr/include/c++/13/bits/refwrap.h:
+
+/opt/ros/jazzy/include/rclcpp_lifecycle/rclcpp_lifecycle/node_interfaces/lifecycle_node_interface.hpp:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.hpp:
+
+/opt/ros/jazzy/include/rclcpp_lifecycle/rclcpp_lifecycle/lifecycle_publisher.hpp:
+
+/opt/ros/jazzy/include/rclcpp_lifecycle/rclcpp_lifecycle/lifecycle_node.hpp:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h:
+
+/opt/ros/jazzy/include/action_msgs/action_msgs/msg/detail/goal_status_array__type_support.h:
 
 /usr/include/boost/mpl/size_t_fwd.hpp:
 
@@ -3924,6 +3977,8 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /usr/include/boost/thread/executor.hpp:
 
+/opt/ros/jazzy/include/rclcpp_lifecycle/rclcpp_lifecycle/lifecycle_node_impl.hpp:
+
 /usr/include/eigen3/Eigen/src/Core/Ref.h:
 
 /opt/ros/jazzy/include/rclcpp_action/rclcpp_action/types.hpp:
@@ -3937,12 +3992,6 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 /opt/ros/jazzy/include/srdfdom/srdfdom/model.h:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/wait_set_policies/detail/storage_policy_common.hpp:
-
-/usr/include/boost/container_hash/is_contiguous_range.hpp:
-
-/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/workspace_parameters__struct.hpp:
-
-/usr/include/c++/13/bits/hashtable.h:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/wait_set.hpp:
 
@@ -4008,61 +4057,63 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /usr/include/c++/13/csignal:
 
-/usr/include/wchar.h:
+/opt/ros/jazzy/include/rclcpp/rclcpp/publisher_options.hpp:
 
-/opt/ros/jazzy/opt/sdformat_vendor/include/gz/sdformat14/sdf/NavSat.hh:
+/opt/ros/jazzy/include/rclcpp/rclcpp/context.hpp:
 
-/usr/include/boost/predef/architecture/mips.h:
+/usr/include/boost/mpl/aux_/config/ctps.hpp:
 
-/opt/ros/jazzy/include/rclcpp_action/rclcpp_action/server.hpp:
+/usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h:
 
-/usr/include/boost/system/is_error_condition_enum.hpp:
+/usr/include/eigen3/Eigen/src/StlSupport/StdVector.h:
 
-/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/move_it_error_codes__struct.hpp:
+/opt/ros/jazzy/include/type_description_interfaces/type_description_interfaces/msg/detail/type_source__struct.h:
 
-/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/set_parameters_result.hpp:
+/opt/ros/jazzy/include/rclcpp/rclcpp/publisher_factory.hpp:
 
-/usr/include/boost/function/detail/epilogue.hpp:
+/opt/ros/jazzy/include/rclcpp/rclcpp/publisher_base.hpp:
 
-/usr/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h:
+/opt/ros/jazzy/include/rclcpp/rclcpp/publisher.hpp:
 
-/usr/include/boost/mpl/next.hpp:
+/opt/ros/jazzy/opt/gz_math_vendor/include/gz/math7/gz/math/detail/WetVolume.hh:
 
-/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/move_it_error_codes__builder.hpp:
+/usr/include/eigen3/Eigen/src/Core/MathFunctionsImpl.h:
 
-/usr/include/c++/13/concepts:
+/opt/ros/jazzy/include/rclcpp/rclcpp/parameter_value.hpp:
 
-/usr/include/c++/13/bits/unique_lock.h:
+/usr/include/boost/random/normal_distribution.hpp:
 
-/opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/time.hpp:
+/opt/ros/jazzy/include/rclcpp/rclcpp/parameter_service.hpp:
 
-/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/link_scale__traits.hpp:
+/opt/ros/jazzy/include/rclcpp/rclcpp/parameter_map.hpp:
 
-/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/link_scale__struct.hpp:
+/usr/include/c++/13/bits/stl_algo.h:
 
-/usr/include/c++/13/bits/align.h:
+/opt/ros/jazzy/include/rclcpp/rclcpp/node_options.hpp:
 
-/usr/include/boost/config/detail/select_compiler_config.hpp:
-
-/opt/ros/jazzy/opt/sdformat_vendor/include/gz/sdformat14/sdf/Exception.hh:
-
-/opt/ros/jazzy/opt/sdformat_vendor/include/gz/sdformat14/sdf/Material.hh:
-
-/usr/include/eigen3/Eigen/Geometry:
-
-/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/joint_limits__struct.hpp:
-
-/usr/include/boost/blank_fwd.hpp:
-
-/usr/include/boost/mpl/aux_/advance_backward.hpp:
-
-/opt/ros/jazzy/include/action_msgs/action_msgs/msg/goal_info.hpp:
+/opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_type_descriptions_interface.hpp:
 
 /opt/ros/jazzy/opt/sdformat_vendor/include/gz/sdformat14/sdf/InterfaceElements.hh:
 
 /opt/ros/jazzy/include/urdfdom_headers/urdf_model/utils.h:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/detail/rmw_implementation_specific_subscription_payload.hpp:
+
+/usr/include/boost/mpl/aux_/include_preprocessed.hpp:
+
+/usr/include/boost/mpl/aux_/adl_barrier.hpp:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_timers_interface_traits.hpp:
+
+/usr/include/c++/13/bits/stl_pair.h:
+
+/usr/include/boost/config/detail/select_compiler_config.hpp:
+
+/opt/ros/jazzy/opt/sdformat_vendor/include/gz/sdformat14/sdf/Exception.hh:
+
+/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/joint_limits__struct.hpp:
+
+/opt/ros/jazzy/include/action_msgs/action_msgs/msg/goal_info.hpp:
 
 /usr/include/boost/bind/storage.hpp:
 
@@ -4079,28 +4130,6 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 /usr/include/eigen3/Eigen/src/Core/DiagonalMatrix.h:
 
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/grasp__type_support.hpp:
-
-/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/allowed_collision_matrix__traits.hpp:
-
-/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/motion_plan_request__type_support.hpp:
-
-/usr/include/boost/mpl/aux_/preprocessed/gcc/full_lambda.hpp:
-
-/opt/ros/jazzy/include/action_msgs/action_msgs/msg/rosidl_generator_cpp__visibility_control.hpp:
-
-/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp:
-
-/usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h:
-
-/opt/ros/jazzy/opt/gz_math_vendor/include/gz/math7/gz/math/Pose3.hh:
-
-/opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/rosidl_generator_cpp__visibility_control.hpp:
-
-/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/joint_limits__type_support.hpp:
-
-/usr/include/eigen3/Eigen/src/SVD/BDCSVD.h:
-
-/usr/include/boost/mpl/list/aux_/pop_front.hpp:
 
 /usr/include/boost/atomic/detail/type_traits/is_enum.hpp:
 
@@ -4146,17 +4175,23 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /usr/include/boost/atomic/detail/header.hpp:
 
+/opt/ros/jazzy/include/lifecycle_msgs/lifecycle_msgs/msg/detail/transition_event__functions.h:
+
 /usr/include/boost/preprocessor/comparison/not_equal.hpp:
 
 /usr/include/asm-generic/errno-base.h:
 
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/attached_collision_object__struct.hpp:
 
+/opt/ros/jazzy/include/rcl/rcl/init.h:
+
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/display_trajectory.hpp:
 
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/attached_collision_object__builder.hpp:
 
 /usr/include/boost/preprocessor/detail/limits/auto_rec_256.hpp:
+
+/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/allowed_collision_matrix__traits.hpp:
 
 /usr/include/boost/atomic/detail/float_sizes.hpp:
 
@@ -4187,8 +4222,6 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/motion_plan_request__struct.hpp:
 
 /usr/include/boost/date_time/posix_time/posix_time_config.hpp:
-
-/usr/include/boost/container_hash/detail/hash_mix.hpp:
 
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/gripper_translation__struct.hpp:
 
@@ -4232,10 +4265,6 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /opt/ros/jazzy/opt/gz_utils_vendor/include/gz/utils2/gz/utils/SuppressWarning.hh:
 
-/usr/include/boost/container_hash/detail/mulx.hpp:
-
-/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/cartesian_trajectory__traits.hpp:
-
 /usr/include/eigen3/Eigen/src/Geometry/AngleAxis.h:
 
 /usr/include/boost/mpl/aux_/preprocessor/def_params_tail.hpp:
@@ -4251,6 +4280,10 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 /opt/ros/jazzy/include/rclcpp/rclcpp/loaned_message.hpp:
 
 /opt/ros/jazzy/include/rmw/rmw/events_statuses/message_lost.h:
+
+/usr/include/c++/13/utility:
+
+/usr/include/c++/13/bits/std_abs.h:
 
 /opt/ros/jazzy/include/shape_msgs/shape_msgs/msg/detail/plane__builder.hpp:
 
@@ -4276,6 +4309,10 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /usr/include/boost/mpl/void.hpp:
 
+/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/set_parameters_result.hpp:
+
+/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/move_it_error_codes__struct.hpp:
+
 /opt/ros/jazzy/opt/gz_utils_vendor/include/gz/utils2/gz/utils/ImplPtr.hh:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/experimental/buffers/buffer_implementation_base.hpp:
@@ -4283,6 +4320,50 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 /opt/ros/jazzy/include/tracetools/tracetools/utils.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/dynamic_typesupport/dynamic_serialization_support.hpp:
+
+/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/robot_state__struct.hpp:
+
+/opt/ros/jazzy/include/lifecycle_msgs/lifecycle_msgs/msg/detail/transition_event__type_support.h:
+
+/usr/include/boost/system/detail/config.hpp:
+
+/opt/ros/jazzy/opt/sdformat_vendor/include/gz/sdformat14/sdf/Types.hh:
+
+/usr/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h:
+
+/opt/ros/jazzy/include/lifecycle_msgs/lifecycle_msgs/msg/detail/transition__struct.hpp:
+
+/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/workspace_parameters__traits.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/sigaction.h:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/message_memory_strategy.hpp:
+
+/usr/include/boost/thread/exceptional_ptr.hpp:
+
+/usr/include/asm-generic/types.h:
+
+/opt/ros/jazzy/include/lifecycle_msgs/lifecycle_msgs/msg/detail/transition__struct.h:
+
+/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/planner_interface_description__builder.hpp:
+
+/usr/include/boost/static_assert.hpp:
+
+/usr/include/boost/mp11/detail/mp_value.hpp:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose__builder.hpp:
+
+/opt/ros/jazzy/opt/gz_math_vendor/include/gz/math7/gz/math/Matrix3.hh:
+
+/usr/include/boost/exception/diagnostic_information.hpp:
+
+/usr/include/boost/atomic/detail/core_arch_ops_gcc_x86.hpp:
+
+/usr/include/boost/mpl/distance.hpp:
+
+/usr/include/boost/predef/os/unix.h:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/intra_process_setting.hpp:
 
 /usr/include/boost/atomic/detail/type_traits/is_iec559.hpp:
 
@@ -4296,43 +4377,15 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /opt/ros/jazzy/include/action_msgs/action_msgs/srv/cancel_goal.hpp:
 
-/usr/include/eigen3/Eigen/src/Core/util/BlasUtil.h:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/time.hpp:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/memory_strategies.hpp:
-
-/opt/ros/jazzy/include/statistics_msgs/statistics_msgs/msg/metrics_message.hpp:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/experimental/create_intra_process_buffer.hpp:
-
-/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/velocity_stamped__builder.hpp:
-
-/usr/include/boost/mpl/aux_/iter_push_front.hpp:
-
-/usr/include/boost/thread/detail/atomic_undef_macros.hpp:
-
 /usr/include/boost/mpl/aux_/config/has_xxx.hpp:
 
 /opt/ros/jazzy/include/tf2/tf2/buffer_core.hpp:
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/transform_stamped.hpp:
 
-/opt/ros/jazzy/include/rclcpp/rclcpp/publisher.hpp:
-
-/opt/ros/jazzy/opt/gz_math_vendor/include/gz/math7/gz/math/detail/WetVolume.hh:
-
-/usr/include/boost/config/detail/suffix.hpp:
-
-/usr/include/boost/iterator/iterator_facade.hpp:
-
 /usr/include/boost/move/utility.hpp:
 
 /usr/include/boost/mpl/list/aux_/front.hpp:
-
-/usr/include/boost/container_hash/hash_fwd.hpp:
-
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/type_source__struct.h:
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/polygon_stamped.hpp:
 
@@ -4354,6 +4407,8 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/wrench_stamped__type_support.hpp:
 
+/opt/ros/jazzy/include/rcl_lifecycle/rcl_lifecycle/data_types.h:
+
 /opt/ros/jazzy/include/shape_msgs/shape_msgs/msg/detail/solid_primitive__traits.hpp:
 
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/cartesian_point__struct.hpp:
@@ -4368,10 +4423,6 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/parameter_value.hpp:
 
-/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/joint_limits__traits.hpp:
-
-/usr/include/boost/iterator/detail/facade_iterator_category.hpp:
-
 /opt/ros/jazzy/include/rclcpp/rclcpp/executors/executor_notify_waitable.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
@@ -4385,6 +4436,16 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 /usr/include/boost/thread/shared_lock_guard.hpp:
 
 /usr/include/boost/thread/futures/future_error.hpp:
+
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/field__struct.h:
+
+/opt/ros/jazzy/include/rcl/rcl/rcl.h:
+
+/usr/include/boost/type_traits/enable_if.hpp:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__traits.hpp:
+
+/usr/include/boost/mpl/void_fwd.hpp:
 
 /opt/ros/jazzy/include/action_msgs/action_msgs/msg/rosidl_generator_c__visibility_control.h:
 
@@ -4402,6 +4463,8 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/transform_stamped__type_support.hpp:
 
+/usr/include/boost/atomic/detail/atomic_ref_impl.hpp:
+
 /usr/include/boost/atomic/detail/link.hpp:
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/twist.hpp:
@@ -4410,25 +4473,11 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /opt/ros/jazzy/include/action_msgs/action_msgs/msg/detail/goal_info__struct.hpp:
 
-/opt/ros/jazzy/include/rclcpp/rclcpp/publisher_base.hpp:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/publisher_options.hpp:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/context.hpp:
-
-/usr/include/boost/mpl/aux_/config/ctps.hpp:
-
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/set_parameters_result__builder.hpp:
 
 /opt/ros/jazzy/opt/gz_math_vendor/include/gz/math7/gz/math/detail/Ellipsoid.hh:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/any_executable.hpp:
-
-/usr/include/c++/13/variant:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/executors.hpp:
-
-/opt/ros/jazzy/include/action_msgs/action_msgs/msg/detail/goal_status__struct.hpp:
 
 /opt/ros/jazzy/include/rmw/rmw/visibility_control.h:
 
@@ -4470,6 +4519,12 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose_with_covariance_stamped__builder.hpp:
 
+/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/workspace_parameters__struct.hpp:
+
+/usr/include/boost/container_hash/is_contiguous_range.hpp:
+
+/usr/include/c++/13/bits/hashtable.h:
+
 /opt/ros/jazzy/opt/gz_math_vendor/include/gz/math7/gz/math/Ellipsoid.hh:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/get_message_type_support_handle.hpp:
@@ -4494,11 +4549,21 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/pose.hpp:
 
+/usr/include/c++/13/typeinfo:
+
+/usr/include/boost/mpl/pair.hpp:
+
 /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/guard_condition.hpp:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/contexts/default_context.hpp:
+
+/opt/ros/jazzy/include/action_msgs/action_msgs/msg/detail/goal_info__builder.hpp:
+
+/usr/include/boost/preprocessor/list/adt.hpp:
 
 /opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/detail/multi_dof_joint_state__struct.hpp:
 
@@ -4570,6 +4635,8 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /usr/include/boost/smart_ptr/detail/yield_k.hpp:
 
+/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/move_it_error_codes__builder.hpp:
+
 /usr/include/eigen3/Eigen/src/Core/util/IndexedViewHelper.h:
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/vector3.hpp:
@@ -4579,10 +4646,6 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 /opt/ros/jazzy/include/tf2_ros/tf2_ros/visibility_control.hpp:
 
 /usr/include/boost/thread/lock_options.hpp:
-
-/usr/include/boost/container_hash/hash.hpp:
-
-/usr/include/boost/predef/architecture/sparc.h:
 
 /opt/ros/jazzy/include/tf2_msgs/tf2_msgs/msg/detail/tf_message__builder.hpp:
 
@@ -4636,6 +4699,10 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /usr/include/boost/atomic/detail/capabilities.hpp:
 
+/opt/ros/jazzy/include/action_msgs/action_msgs/msg/detail/goal_status__struct.hpp:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/executors.hpp:
+
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameters__traits.hpp:
 
 /usr/include/boost/preprocessor/punctuation/comma.hpp:
@@ -4653,10 +4720,6 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 /usr/include/boost/predef/detail/test.h:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/experimental/executors/events_executor/simple_events_queue.hpp:
-
-/usr/include/boost/mpl/list/aux_/begin_end.hpp:
-
-/usr/include/boost/container_hash/is_described_class.hpp:
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/transform_stamped__builder.hpp:
 
@@ -4696,17 +4759,19 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/action/detail/execute_trajectory__builder.hpp:
 
+/opt/ros/jazzy/opt/sdformat_vendor/include/gz/sdformat14/sdf/Atmosphere.hh:
+
+/usr/include/boost/blank_fwd.hpp:
+
+/usr/include/boost/mpl/aux_/advance_backward.hpp:
+
+/opt/ros/jazzy/include/lifecycle_msgs/lifecycle_msgs/msg/transition.hpp:
+
 /usr/include/asm-generic/posix_types.h:
 
 /opt/ros/jazzy/opt/gz_math_vendor/include/gz/math7/gz/math/Material.hh:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_clock_interface_traits.hpp:
-
-/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/set_parameters_result__traits.hpp:
-
-/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/point32__traits.hpp:
-
-/usr/include/boost/preprocessor/list/detail/limits/fold_left_256.hpp:
 
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/action/detail/execute_trajectory__struct.hpp:
 
@@ -4718,13 +4783,13 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /usr/include/boost/preprocessor/iteration/detail/bounds/lower1.hpp:
 
-/usr/include/boost/config/requires_threads.hpp:
-
 /opt/ros/jazzy/include/rcl/rcl/service.h:
 
 /opt/ros/jazzy/include/action_msgs/action_msgs/msg/detail/goal_status__builder.hpp:
 
-/usr/include/c++/13/bits/stl_pair.h:
+/usr/include/boost/atomic/detail/atomic_flag_impl.hpp:
+
+/opt/ros/jazzy/include/action_msgs/action_msgs/msg/detail/goal_status_array__functions.h:
 
 /opt/ros/jazzy/opt/sdformat_vendor/include/gz/sdformat14/sdf/InstallationDirectories.hh:
 
@@ -4744,6 +4809,8 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /usr/include/c++/13/ext/alloc_traits.h:
 
+/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/cartesian_trajectory__struct.hpp:
+
 /usr/include/boost/date_time/period.hpp:
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/velocity_stamped.hpp:
@@ -4755,6 +4822,20 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 /opt/ros/jazzy/include/rmw/rmw/publisher_options.h:
 
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/object_color__builder.hpp:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/mm_malloc.h:
+
+/opt/ros/jazzy/include/lifecycle_msgs/lifecycle_msgs/msg/detail/transition_event__struct.h:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/exceptions.hpp:
+
+/usr/include/boost/mpl/list/aux_/preprocessed/plain/list20.hpp:
+
+/usr/include/boost/preprocessor/comparison/equal.hpp:
+
+/opt/ros/jazzy/include/rcutils/rcutils/error_handling.h:
+
+/usr/include/c++/13/bits/uniform_int_dist.h:
 
 /usr/include/eigen3/Eigen/src/Core/products/TriangularSolverVector.h:
 
@@ -4782,10 +4863,6 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /opt/ros/jazzy/include/action_msgs/action_msgs/msg/detail/goal_status__struct.h:
 
-/usr/include/boost/config/no_tr1/functional.hpp:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/allocator/allocator_common.hpp:
-
 /opt/ros/jazzy/include/rosidl_dynamic_typesupport/rosidl_dynamic_typesupport/visibility_control.h:
 
 /usr/include/boost/predef/library/c/_prefix.h:
@@ -4810,7 +4887,39 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/move_it_error_codes.hpp:
 
+/opt/ros/jazzy/include/action_msgs/action_msgs/msg/rosidl_generator_cpp__visibility_control.hpp:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp:
+
+/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/motion_plan_request__type_support.hpp:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/full_lambda.hpp:
+
+/usr/include/eigen3/Eigen/src/Core/util/BlasUtil.h:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/time.hpp:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/experimental/create_intra_process_buffer.hpp:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/velocity_stamped__builder.hpp:
+
+/usr/include/boost/mpl/aux_/iter_push_front.hpp:
+
+/usr/include/boost/thread/detail/atomic_undef_macros.hpp:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/memory_strategies.hpp:
+
+/usr/include/boost/iterator/detail/facade_iterator_category.hpp:
+
+/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/joint_limits__traits.hpp:
+
+/opt/ros/jazzy/include/statistics_msgs/statistics_msgs/msg/metrics_message.hpp:
+
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/grasp__traits.hpp:
+
+/usr/include/boost/atomic/detail/classify.hpp:
+
+/opt/ros/jazzy/include/lifecycle_msgs/lifecycle_msgs/msg/rosidl_generator_c__visibility_control.h:
 
 /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/constants.hpp:
 
@@ -4876,17 +4985,11 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /opt/ros/jazzy/include/action_msgs/action_msgs/msg/detail/goal_status_array__struct.hpp:
 
-/usr/include/boost/config/stdlib/libstdcpp3.hpp:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_time_source_interface.hpp:
-
 /usr/include/boost/function/function_template.hpp:
 
 /usr/include/boost/type_traits/is_reference.hpp:
 
-/usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h:
-
-/opt/ros/jazzy/include/action_msgs/action_msgs/msg/detail/goal_status_array__type_support.h:
+/opt/ros/jazzy/include/rclcpp_lifecycle/rclcpp_lifecycle/visibility_control.h:
 
 /opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__builder.hpp:
 
@@ -4910,21 +5013,11 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /usr/include/boost/type_traits/integral_constant.hpp:
 
-/opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/get_node_base_interface.hpp:
+/opt/ros/jazzy/include/lifecycle_msgs/lifecycle_msgs/msg/detail/state__struct.h:
 
-/usr/include/boost/optional/optional.hpp:
-
-/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/quaternion_stamped__traits.hpp:
-
-/usr/include/c++/13/bits/stl_deque.h:
+/usr/include/boost/make_shared.hpp:
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/point.hpp:
-
-/usr/include/eigen3/Eigen/src/Core/MathFunctionsImpl.h:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/parameter_value.hpp:
-
-/usr/include/boost/random/normal_distribution.hpp:
 
 /usr/include/boost/atomic/detail/bitwise_cast.hpp:
 
@@ -4942,13 +5035,15 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /opt/ros/jazzy/include/trajectory_msgs/trajectory_msgs/msg/detail/multi_dof_joint_trajectory_point__traits.hpp:
 
-/usr/include/boost/type_traits/has_nothrow_constructor.hpp:
-
-/opt/ros/jazzy/include/type_description_interfaces/type_description_interfaces/msg/detail/field_type__struct.h:
-
 /usr/include/boost/mpl/aux_/front_impl.hpp:
 
 /usr/include/boost/mpl/prior.hpp:
+
+/usr/include/eigen3/Eigen/Core:
+
+/usr/include/boost/mpl/aux_/config/msvc_typename.hpp:
+
+/opt/ros/jazzy/include/action_msgs/action_msgs/msg/goal_status_array.hpp:
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/polygon_stamped__traits.hpp:
 
@@ -5026,17 +5121,11 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__type_support.hpp:
 
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/string.h:
+/usr/include/boost/config/no_tr1/cmath.hpp:
 
-/usr/include/c++/13/semaphore:
+/opt/ros/jazzy/include/action_msgs/action_msgs/srv/detail/cancel_goal__type_support.hpp:
 
-/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/parameter_type.hpp:
-
-/usr/include/boost/predef/hardware/simd/x86_amd/versions.h:
-
-/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/move_it_error_codes__traits.hpp:
-
-/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.hpp:
+/opt/ros/jazzy/include/rclcpp/rclcpp/dynamic_typesupport/dynamic_message.hpp:
 
 /opt/ros/jazzy/opt/sdformat_vendor/include/gz/sdformat14/sdf/Heightmap.hh:
 
@@ -5051,10 +5140,6 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 /opt/ros/jazzy/opt/gz_utils_vendor/include/gz/utils2/gz/utils/detail/Export.hh:
 
 /usr/include/boost/numeric/conversion/converter.hpp:
-
-/usr/include/boost/iterator/detail/config_def.hpp:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/wait_result_kind.hpp:
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/vector3__builder.hpp:
 
@@ -5074,14 +5159,6 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/create_generic_subscription.hpp:
 
-/opt/ros/jazzy/opt/sdformat_vendor/include/gz/sdformat14/sdf/Link.hh:
-
-/usr/include/eigen3/Eigen/QR:
-
-/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/motion_plan_request__builder.hpp:
-
-/usr/include/boost/thread/csbl/memory/allocator_traits.hpp:
-
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/accel__traits.hpp:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/set_parameters_result__struct.hpp:
@@ -5089,30 +5166,6 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__type_support.hpp:
 
 /opt/ros/jazzy/include/moveit_core/moveit/utils/logger.hpp:
-
-/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/planner_interface_description__builder.hpp:
-
-/usr/include/boost/static_assert.hpp:
-
-/usr/include/boost/mp11/detail/mp_value.hpp:
-
-/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose__builder.hpp:
-
-/opt/ros/jazzy/opt/gz_math_vendor/include/gz/math7/gz/math/Matrix3.hh:
-
-/usr/include/boost/exception/diagnostic_information.hpp:
-
-/usr/include/boost/atomic/detail/core_arch_ops_gcc_x86.hpp:
-
-/usr/include/boost/mpl/distance.hpp:
-
-/opt/ros/jazzy/include/action_msgs/action_msgs/msg/detail/goal_status_array__functions.h:
-
-/usr/include/boost/atomic/detail/atomic_flag_impl.hpp:
-
-/usr/include/boost/predef/os/unix.h:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/intra_process_setting.hpp:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter__type_support.hpp:
 
@@ -5156,15 +5209,105 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /opt/ros/jazzy/include/tf2_msgs/tf2_msgs/msg/detail/tf_message__type_support.hpp:
 
+/opt/ros/jazzy/include/rclcpp/rclcpp/wait_set_policies/detail/write_preferring_read_write_lock.hpp:
+
+/usr/include/boost/io/ios_state.hpp:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/vector3_stamped__struct.hpp:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/dynamic_typesupport/dynamic_message_type.hpp:
+
+/opt/ros/jazzy/include/trajectory_msgs/trajectory_msgs/msg/detail/joint_trajectory__type_support.hpp:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_timers_interface.hpp:
+
+/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameter_types__struct.hpp:
+
+/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/action/detail/move_group__builder.hpp:
+
+/opt/ros/jazzy/include/action_msgs/action_msgs/msg/goal_status.hpp:
+
+/usr/include/boost/detail/workaround.hpp:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h:
+
+/opt/ros/jazzy/opt/gz_math_vendor/include/gz/math7/gz/math/Pose3.hh:
+
+/opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/rosidl_generator_cpp__visibility_control.hpp:
+
+/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/joint_limits__type_support.hpp:
+
+/usr/include/eigen3/Eigen/src/SVD/BDCSVD.h:
+
+/usr/include/boost/mpl/list/aux_/pop_front.hpp:
+
+/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/link_scale__struct.hpp:
+
+/usr/include/c++/13/bits/align.h:
+
+/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/link_scale__traits.hpp:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/point32__traits.hpp:
+
+/usr/include/boost/preprocessor/list/detail/limits/fold_left_256.hpp:
+
+/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/set_parameters_result__traits.hpp:
+
+/opt/ros/jazzy/opt/sdformat_vendor/include/gz/sdformat14/sdf/Link.hh:
+
+/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/motion_plan_request__builder.hpp:
+
+/usr/include/boost/iterator/iterator_categories.hpp:
+
+/opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__type_support.hpp:
+
+/usr/include/boost/thread/csbl/memory/allocator_traits.hpp:
+
+/usr/include/c++/13/concepts:
+
+/usr/include/c++/13/bits/unique_lock.h:
+
+/opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/time.hpp:
+
+/usr/include/boost/function/detail/epilogue.hpp:
+
+/usr/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h:
+
+/usr/include/boost/mpl/next.hpp:
+
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/string.h:
+
+/usr/include/c++/13/semaphore:
+
+/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/parameter_type.hpp:
+
+/usr/include/boost/predef/hardware/simd/x86_amd/versions.h:
+
+/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/move_it_error_codes__traits.hpp:
+
+/usr/include/wchar.h:
+
+/opt/ros/jazzy/opt/sdformat_vendor/include/gz/sdformat14/sdf/NavSat.hh:
+
+/usr/include/boost/predef/architecture/mips.h:
+
+/opt/ros/jazzy/include/rclcpp_action/rclcpp_action/server.hpp:
+
+/usr/include/boost/system/is_error_condition_enum.hpp:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/quaternion_stamped__traits.hpp:
+
+/usr/include/c++/13/bits/stl_deque.h:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/get_node_base_interface.hpp:
+
+/usr/include/boost/optional/optional.hpp:
+
 /opt/ros/jazzy/include/visualization_msgs/visualization_msgs/msg/detail/uv_coordinate__struct.hpp:
 
 /opt/ros/jazzy/include/rmw/rmw/security_options.h:
 
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/object_color__struct.hpp:
-
-/usr/include/boost/mpl/aux_/include_preprocessed.hpp:
-
-/usr/include/boost/mpl/aux_/adl_barrier.hpp:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/set_parameters__traits.hpp:
 
@@ -5244,8 +5387,6 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /usr/include/boost/mp11/detail/mp_list.hpp:
 
-/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/robot_state__struct.hpp:
-
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/robot_trajectory__builder.hpp:
 
 /usr/include/c++/13/bits/exception_defines.h:
@@ -5254,15 +5395,9 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/trajectory_constraints__struct.hpp:
 
+/opt/ros/jazzy/include/lifecycle_msgs/lifecycle_msgs/msg/rosidl_generator_cpp__visibility_control.hpp:
+
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/trajectory_constraints__traits.hpp:
-
-/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/workspace_parameters__traits.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/sigaction.h:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/message_memory_strategy.hpp:
-
-/usr/include/boost/thread/exceptional_ptr.hpp:
 
 /opt/ros/jazzy/opt/sdformat_vendor/include/gz/sdformat14/sdf/Polyline.hh:
 
@@ -5304,8 +5439,6 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /usr/include/c++/13/ext/atomicity.h:
 
-/usr/include/eigen3/Eigen/src/Core/ArrayBase.h:
-
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/robot_trajectory.hpp:
 
 /usr/include/boost/thread/lock_types.hpp:
@@ -5344,6 +5477,12 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/planner_interface_description__struct.hpp:
 
+/usr/include/eigen3/Eigen/StdVector:
+
+/opt/ros/jazzy/include/object_recognition_msgs/object_recognition_msgs/msg/detail/object_type__traits.hpp:
+
+/opt/ros/jazzy/include/rcl/rcl/visibility_control.h:
+
 /usr/include/boost/atomic/detail/fp_operations_fwd.hpp:
 
 /usr/include/c++/13/bits/stl_heap.h:
@@ -5353,6 +5492,12 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/allowed_collision_entry__traits.hpp:
 
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/grasp__builder.hpp:
+
+/usr/include/ctype.h:
+
+/opt/ros/jazzy/include/trajectory_msgs/trajectory_msgs/msg/rosidl_generator_cpp__visibility_control.hpp:
+
+/opt/ros/jazzy/include/rcl_action/rcl_action/goal_handle.h:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/detail/resolve_intra_process_buffer_type.hpp:
 
@@ -5400,12 +5545,6 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /opt/ros/jazzy/include/tf2_msgs/tf2_msgs/srv/detail/frame_graph__struct.hpp:
 
-/opt/ros/jazzy/include/action_msgs/action_msgs/msg/detail/goal_info__builder.hpp:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/contexts/default_context.hpp:
-
-/usr/include/boost/preprocessor/list/adt.hpp:
-
 /opt/ros/jazzy/include/rcl_action/rcl_action/visibility_control.h:
 
 /usr/include/boost/thread/csbl/memory/scoped_allocator.hpp:
@@ -5426,27 +5565,15 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/list_parameters_result.hpp:
 
+/opt/ros/jazzy/include/rclcpp_lifecycle/rclcpp_lifecycle/state.hpp:
+
 /usr/include/boost/random/uniform_int_distribution.hpp:
 
 /usr/include/boost/thread/futures/future_status.hpp:
 
-/opt/ros/jazzy/include/rclcpp/rclcpp/dynamic_typesupport/dynamic_message_type.hpp:
+/opt/ros/jazzy/include/rclcpp/rclcpp/parameter_event_handler.hpp:
 
-/opt/ros/jazzy/include/trajectory_msgs/trajectory_msgs/msg/detail/joint_trajectory__type_support.hpp:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_timers_interface.hpp:
-
-/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameter_types__struct.hpp:
-
-/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/action/detail/move_group__builder.hpp:
-
-/opt/ros/jazzy/include/action_msgs/action_msgs/msg/goal_status.hpp:
-
-/usr/include/boost/detail/workaround.hpp:
-
-/opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__type_support.hpp:
-
-/usr/include/boost/iterator/iterator_categories.hpp:
+/opt/ros/jazzy/include/rcl/rcl/error_handling.h:
 
 /usr/include/c++/13/system_error:
 
@@ -5502,6 +5629,12 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_type__traits.hpp:
 
+/usr/include/eigen3/Eigen/src/Core/ArrayWrapper.h:
+
+/opt/ros/jazzy/include/rclcpp_action/rclcpp_action/rclcpp_action.hpp:
+
+/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/position_constraint__traits.hpp:
+
 /usr/include/c++/13/cstdint:
 
 /usr/include/c++/13/bits/nested_exception.h:
@@ -5513,6 +5646,8 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 /opt/ros/jazzy/include/shape_msgs/shape_msgs/msg/detail/mesh__builder.hpp:
 
 /opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__struct.hpp:
+
+/opt/ros/jazzy/include/rcl_lifecycle/rcl_lifecycle/visibility_control.h:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_value__traits.hpp:
 
@@ -5530,12 +5665,6 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /opt/ros/jazzy/include/urdfdom_headers/urdf_model/joint.h:
 
-/usr/include/boost/config/no_tr1/cmath.hpp:
-
-/opt/ros/jazzy/include/action_msgs/action_msgs/srv/detail/cancel_goal__type_support.hpp:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/dynamic_typesupport/dynamic_message.hpp:
-
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/describe_parameters.hpp:
 
 /usr/include/boost/smart_ptr/make_shared_array.hpp:
@@ -5546,15 +5675,13 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /usr/include/boost/core/no_exceptions_support.hpp:
 
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/type_source__struct.h:
+
+/usr/include/boost/container_hash/hash_fwd.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/math-vector.h:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/describe_parameters__traits.hpp:
-
-/usr/include/boost/container_hash/detail/requires_cxx11.hpp:
-
-/opt/ros/jazzy/include/action_msgs/action_msgs/srv/cancel_goal.h:
-
-/opt/ros/jazzy/opt/gz_utils_vendor/include/gz/utils2/gz/utils/detail/ImplPtr.hh:
 
 /usr/include/boost/chrono/ceil.hpp:
 
@@ -5578,9 +5705,9 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/future_return_code.hpp:
 
-/usr/include/boost/container_hash/is_tuple_like.hpp:
-
 /usr/include/boost/mpl/aux_/config/dependent_nttp.hpp:
+
+/opt/ros/jazzy/include/lifecycle_msgs/lifecycle_msgs/msg/detail/transition__builder.hpp:
 
 /opt/ros/jazzy/include/trajectory_msgs/trajectory_msgs/msg/joint_trajectory.hpp:
 
@@ -5712,6 +5839,12 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__traits.hpp:
 
+/usr/include/x86_64-linux-gnu/asm/types.h:
+
+/usr/include/c++/13/version:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/topic_statistics_state.hpp:
+
 /opt/ros/jazzy/include/rclcpp/rclcpp/copy_all_parameter_values.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/create_generic_publisher.hpp:
@@ -5739,10 +5872,6 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 /usr/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h:
 
 /usr/include/boost/config/compiler/gcc.hpp:
-
-/usr/include/boost/container_hash/is_range.hpp:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/detail/qos_parameters.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/detail/subscription_callback_type_helper.hpp:
 
@@ -5820,14 +5949,6 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /usr/include/boost/type_traits/same_traits.hpp:
 
-/opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_timers_interface_traits.hpp:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/wait_set_policies/detail/write_preferring_read_write_lock.hpp:
-
-/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/vector3_stamped__struct.hpp:
-
-/usr/include/boost/io/ios_state.hpp:
-
 /opt/ros/jazzy/opt/sdformat_vendor/include/gz/sdformat14/sdf/Console.hh:
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/point32__struct.hpp:
@@ -5835,8 +5956,6 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 /usr/include/boost/predef/platform/mingw.h:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/generic_client.hpp:
-
-/usr/include/eigen3/Eigen/Householder:
 
 /opt/ros/jazzy/opt/gz_math_vendor/include/gz/math7/gz/math/Sphere.hh:
 
@@ -5896,33 +6015,65 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /usr/include/boost/mpl/aux_/config/integral.hpp:
 
-/opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_type_descriptions_interface.hpp:
+/usr/include/boost/iterator/iterator_facade.hpp:
 
-/opt/ros/jazzy/include/rclcpp/rclcpp/node_options.hpp:
+/usr/include/boost/config/detail/suffix.hpp:
 
-/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__traits.hpp:
+/opt/ros/jazzy/include/rclcpp/rclcpp/allocator/allocator_common.hpp:
 
-/usr/include/boost/mpl/void_fwd.hpp:
+/usr/include/boost/config/no_tr1/functional.hpp:
 
-/opt/ros/jazzy/include/rcl/rcl/error_handling.h:
+/usr/include/boost/config/no_tr1/memory.hpp:
 
-/opt/ros/jazzy/include/rclcpp/rclcpp/parameter_event_handler.hpp:
+/opt/ros/jazzy/include/type_description_interfaces/type_description_interfaces/msg/detail/field_type__struct.h:
 
-/usr/include/boost/type_traits/enable_if.hpp:
+/usr/include/boost/type_traits/has_nothrow_constructor.hpp:
 
-/opt/ros/jazzy/include/rclcpp/rclcpp/parameter_map.hpp:
+/usr/include/boost/config/requires_threads.hpp:
 
-/usr/include/c++/13/bits/stl_algo.h:
+/opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_time_source_interface.hpp:
 
-/opt/ros/jazzy/include/rclcpp/rclcpp/parameter_service.hpp:
+/usr/include/boost/config/stdlib/libstdcpp3.hpp:
 
-/usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h:
+/usr/include/boost/config/user.hpp:
 
-/usr/include/eigen3/Eigen/src/StlSupport/StdVector.h:
+/opt/ros/jazzy/include/rclcpp/rclcpp/wait_result_kind.hpp:
 
-/opt/ros/jazzy/include/type_description_interfaces/type_description_interfaces/msg/detail/type_source__struct.h:
+/usr/include/boost/iterator/detail/config_def.hpp:
 
-/opt/ros/jazzy/include/rclcpp/rclcpp/publisher_factory.hpp:
+/usr/include/boost/container_hash/detail/hash_mix.hpp:
+
+/usr/include/boost/container_hash/detail/hash_range.hpp:
+
+/usr/include/boost/container_hash/detail/hash_tuple_like.hpp:
+
+/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/cartesian_trajectory__traits.hpp:
+
+/usr/include/boost/container_hash/detail/mulx.hpp:
+
+/opt/ros/jazzy/include/action_msgs/action_msgs/srv/cancel_goal.h:
+
+/opt/ros/jazzy/opt/gz_utils_vendor/include/gz/utils2/gz/utils/detail/ImplPtr.hh:
+
+/usr/include/boost/container_hash/detail/requires_cxx11.hpp:
+
+/usr/include/boost/mp11/bind.hpp:
+
+/usr/include/boost/container_hash/hash.hpp:
+
+/usr/include/boost/predef/architecture/sparc.h:
+
+/usr/include/boost/mpl/list/aux_/begin_end.hpp:
+
+/usr/include/boost/container_hash/is_described_class.hpp:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/detail/qos_parameters.hpp:
+
+/usr/include/boost/container_hash/is_range.hpp:
+
+/usr/include/boost/container_hash/is_tuple_like.hpp:
+
+/usr/include/boost/container_hash/is_unordered_range.hpp:
 
 /usr/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h:
 
@@ -6068,8 +6219,6 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /usr/include/boost/date_time/gregorian/greg_duration.hpp:
 
-/usr/include/c++/13/vector:
-
 /usr/include/boost/date_time/gregorian/greg_weekday.hpp:
 
 /usr/include/boost/variant/recursive_variant.hpp:
@@ -6137,10 +6286,6 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 /usr/include/boost/date_time/time_resolution_traits.hpp:
 
 /usr/include/boost/date_time/time_system_split.hpp:
-
-/usr/include/c++/13/bits/std_abs.h:
-
-/usr/include/c++/13/utility:
 
 /usr/include/boost/type_traits/cv_traits.hpp:
 
@@ -6220,6 +6365,10 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /usr/include/c++/13/bits/basic_string.h:
 
+/usr/include/boost/type_traits/detail/yes_no_type.hpp:
+
+/usr/include/boost/function/function_base.hpp:
+
 /usr/include/c++/13/charconv:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/subscription_wait_set_mask.hpp:
@@ -6287,8 +6436,6 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 /usr/include/boost/iterator/reverse_iterator.hpp:
 
 /usr/include/boost/limits.hpp:
-
-/usr/include/boost/make_shared.hpp:
 
 /usr/include/boost/memory_order.hpp:
 
@@ -6486,10 +6633,6 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /usr/include/boost/mpl/aux_/full_lambda.hpp:
 
-/usr/include/boost/system/detail/append_int.hpp:
-
-/usr/include/c++/13/unordered_set:
-
 /usr/include/boost/mpl/aux_/has_begin.hpp:
 
 /usr/include/boost/preprocessor/arithmetic/detail/is_maximum_number.hpp:
@@ -6577,12 +6720,6 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 /usr/include/boost/mpl/aux_/preprocessed/gcc/equal_to.hpp:
 
 /usr/include/boost/mpl/aux_/preprocessed/gcc/fold_impl.hpp:
-
-/opt/ros/jazzy/include/rclcpp_action/rclcpp_action/rclcpp_action.hpp:
-
-/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/position_constraint__traits.hpp:
-
-/usr/include/eigen3/Eigen/src/Core/ArrayWrapper.h:
 
 /usr/include/boost/mpl/aux_/preprocessed/gcc/iter_fold_impl.hpp:
 
@@ -6750,20 +6887,6 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /usr/include/boost/mpl/list/aux_/iterator.hpp:
 
-/opt/ros/jazzy/include/rclcpp/rclcpp/exceptions.hpp:
-
-/usr/include/boost/mpl/list/aux_/preprocessed/plain/list20.hpp:
-
-/usr/include/boost/preprocessor/comparison/equal.hpp:
-
-/usr/include/boost/function/function_base.hpp:
-
-/usr/include/boost/type_traits/detail/yes_no_type.hpp:
-
-/opt/ros/jazzy/include/rcutils/rcutils/error_handling.h:
-
-/usr/include/c++/13/bits/uniform_int_dist.h:
-
 /usr/include/boost/core/yield_primitives.hpp:
 
 /usr/include/boost/mpl/list/aux_/push_back.hpp:
@@ -6924,17 +7047,13 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /usr/include/boost/preprocessor/identity.hpp:
 
-/opt/ros/jazzy/include/object_recognition_msgs/object_recognition_msgs/msg/detail/object_type__traits.hpp:
-
-/opt/ros/jazzy/include/rcl/rcl/visibility_control.h:
-
-/usr/include/eigen3/Eigen/StdVector:
-
 /usr/include/boost/optional/detail/optional_config.hpp:
 
 /opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/allowed_collision_matrix__struct.hpp:
 
 /usr/include/boost/smart_ptr/make_shared.hpp:
+
+/opt/ros/jazzy/include/lifecycle_msgs/lifecycle_msgs/msg/transition_event.h:
 
 /usr/include/c++/13/new:
 
@@ -7214,9 +7333,9 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /usr/include/boost/preprocessor/array/data.hpp:
 
-/usr/include/boost/integer.hpp:
-
 /usr/include/eigen3/Eigen/src/Core/ArithmeticSequence.h:
+
+/usr/include/boost/integer.hpp:
 
 /usr/include/boost/thread/pthread/recursive_mutex.hpp:
 
@@ -7243,8 +7362,6 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 /usr/include/boost/preprocessor/control/detail/while.hpp:
 
 /usr/include/boost/preprocessor/control/expr_iif.hpp:
-
-/usr/include/eigen3/Eigen/Cholesky:
 
 /usr/include/boost/preprocessor/control/iif.hpp:
 
@@ -7468,8 +7585,6 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /usr/include/boost/system/detail/system_category_message.hpp:
 
-/usr/include/boost/system/detail/config.hpp:
-
 /usr/include/boost/system/detail/enable_if.hpp:
 
 /usr/include/boost/system/detail/errc.hpp:
@@ -7557,10 +7672,6 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 /usr/include/boost/thread/detail/variadic_header.hpp:
 
 /usr/include/boost/thread/exceptions.hpp:
-
-/opt/ros/jazzy/include/rmw/rmw/subscription_content_filter_options.h:
-
-/usr/include/c++/13/type_traits:
 
 /usr/include/boost/thread/future.hpp:
 
@@ -7802,9 +7913,9 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 
 /usr/include/c++/13/bits/allocator.h:
 
-/usr/include/boost/config/pragma_message.hpp:
-
 /usr/include/boost/atomic/detail/type_traits/has_unique_object_representations.hpp:
+
+/usr/include/boost/config/pragma_message.hpp:
 
 /usr/include/c++/13/bits/atomic_base.h:
 
@@ -8057,39 +8168,3 @@ CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o: /home/mario/master_w
 /usr/include/c++/13/tr1/modified_bessel_func.tcc:
 
 /usr/include/c++/13/tr1/special_function_util.h:
-
-/usr/include/c++/13/typeindex:
-
-/usr/include/boost/mpl/pair.hpp:
-
-/usr/include/c++/13/typeinfo:
-
-/usr/include/c++/13/unordered_map:
-
-/usr/include/x86_64-linux-gnu/asm/types.h:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/topic_statistics_state.hpp:
-
-/usr/include/c++/13/version:
-
-/opt/ros/jazzy/include/trajectory_msgs/trajectory_msgs/msg/rosidl_generator_cpp__visibility_control.hpp:
-
-/opt/ros/jazzy/include/rcl_action/rcl_action/goal_handle.h:
-
-/usr/include/ctype.h:
-
-/usr/include/boost/mpl/aux_/config/msvc_typename.hpp:
-
-/opt/ros/jazzy/include/action_msgs/action_msgs/msg/goal_status_array.hpp:
-
-/usr/include/eigen3/Eigen/Core:
-
-/usr/include/eigen3/Eigen/Jacobi:
-
-/usr/include/eigen3/Eigen/LU:
-
-/usr/include/eigen3/Eigen/SVD:
-
-/usr/include/eigen3/Eigen/src/Cholesky/LDLT.h:
-
-/usr/include/eigen3/Eigen/src/Core/Array.h:

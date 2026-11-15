@@ -1,0 +1,49 @@
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:4[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:5[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In constructor ‘[01m[KMTCPubSub::[01;32m[KMTCPubSub[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:37:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kattach_pub_[m[K’ was not declared in this scope
+   37 |     [01;31m[Kattach_pub_[m[K.resize(8);
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:38:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kdetach_pub_[m[K’ was not declared in this scope
+   38 |     [01;31m[Kdetach_pub_[m[K.resize(8);
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:47:69:[m[K [01;31m[Kerror: [m[K‘[01m[Kattach_topics[m[K’ was not declared in this scope
+   47 |       attach_pub_[i] = this->create_publisher<std_msgs::msg::Empty>([01;31m[Kattach_topics[m[K[i],10);
+      |                                                                     [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:48:69:[m[K [01;31m[Kerror: [m[K‘[01m[Kdetach_topics[m[K’ was not declared in this scope
+   48 |       detach_pub_[i] = this->create_publisher<std_msgs::msg::Empty>([01;31m[Kdetach_topics[m[K[i],10);
+      |                                                                     [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In constructor ‘[01m[KMTCTaskNode::[01;32m[KMTCTaskNode[m[K(const rclcpp::NodeOptions&)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:175:14:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kiterator[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  175 |   for (auto& [01;35m[Kiterator[m[K : attach_topics){
+      |              [01;35m[K^~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kvoid MTCTaskNode::[01;32m[KgetObjects[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:387:28:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<MTCTaskNode::getObjects()::data>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  387 |     if (task == false && [01;35m[Kj < objects.size()[m[K){
+      |                          [01;35m[K~~^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:390:12:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<MTCTaskNode::getObjects()::data>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  390 |       if([01;35m[Kj >= objects.size()[m[K){
+      |          [01;35m[K~~^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:400:26:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<MTCTaskNode::getObjects()::data>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  400 |     if(task == true && [01;35m[Kj < objects.size()[m[K){
+      |                        [01;35m[K~~^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kbool MTCTaskNode::[01;32m[KdoTask[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:443:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kdetach_pub_[m[K’ was not declared in this scope
+  443 |   [01;31m[Kdetach_pub_[m[K[1]->publish(empty_msg);
+      |   [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:492:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kattach_pub_[m[K’ was not declared in this scope
+  492 |   [01;31m[Kattach_pub_[m[K[4]->publish(empty_msg);
+      |   [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kmoveit::task_constructor::Task MTCTaskNode::[01;32m[KcreateGrabTask[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:800:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kattach_object_stage[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  800 |   mtc::Stage* [01;35m[Kattach_object_stage[m[K = nullptr;  // Forward attach_object_stage to place pose generator
+      |               [01;35m[K^~~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/mtc_estun.dir/build.make:76: CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o] Fehler 1
+gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/mtc_estun.dir/all] Fehler 2
+gmake: *** [Makefile:146: all] Fehler 2

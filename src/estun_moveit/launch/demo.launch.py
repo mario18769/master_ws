@@ -13,6 +13,7 @@ import launch_ros.actions
 from controller_manager.launch_utils import generate_controllers_spawner_launch_description
 import os
 from launch_ros.parameter_descriptions import ParameterFile
+from launch_ros.actions import LifecycleNode
 
 from launch import LaunchDescription
 from launch.actions import (
@@ -142,7 +143,7 @@ def generate_launch_description():
         package='ros_gz_sim',
         executable='create',
         output='screen',
-        arguments=['-topic', 'robot_description','-name', 'cart', '-allow_renaming', 'true'],
+        arguments=['-topic', 'robot_description','-name', 'estun_er_hi', '-allow_renaming', 'true'],
     )
 
     gz_world = IncludeLaunchDescription(
@@ -151,13 +152,6 @@ def generate_launch_description():
     )
 
     # Static TF
-    static_tf_2 = Node(
-        package="tf2_ros",
-        executable="static_transform_publisher",
-        name="static_transform_publisher",
-        output="log",
-        arguments=["--frame-id", "world", "--child-frame-id", "base_link"],
-    )
 
     static_tf = Node(
         package="tf2_ros",
@@ -165,26 +159,12 @@ def generate_launch_description():
         name="static_transform_publisher",
         output="log",
         arguments=["--x", "-0.4", "--y", "-0.5", "--z", "2.500", "--roll", "0.0", "--pitch", "1.309", "--yaw", "-1.5708 ", "--frame-id", "world", "--child-frame-id", "Sensor/link_sensor/depth_camera1"],
-
     )
-
-   
 
     load_joint_state_broadcaster = ExecuteProcess(
         cmd=['ros2', 'control', 'load_controller', '--set-state', 'active','joint_state_broadcaster'],
         output='screen'
     )
-
-    gz_bridge = Node(
-        package="ros_gz_bridge",
-        executable="parameter_bridge",
-        
-        parameters=[{"qos_overrides./tf_static.publisher.durability": "transient_local"}],
-        output="screen",
-    )
-    
-    # config_gz_ros_bridge = os.path.join(get_package_share_directory('estun_moveit'), 'config', 'ros_gz_bridge.yaml')
-    # bridge_config = {'config_file': config_gz_ros_bridge}
 
     ros_gz_bridge = Node(
         package="ros_gz_bridge",
@@ -192,7 +172,6 @@ def generate_launch_description():
         parameters=[{'config_file': os.path.join(get_package_share_directory('estun_moveit'), 'config', 'ros_gz_bridge.yaml')},{"qos_overrides./tf_static.publisher.durability": "transient_local"},],
         output="screen",
     )
-
 
     load_arm_controller = ExecuteProcess(
         cmd=['ros2', 'control', 'load_controller', '--set-state', 'active','arm_controller'],
@@ -216,12 +195,14 @@ def generate_launch_description():
     )
 
     pose_estimation_node = Node(
+
         package="vision_control",
         executable="pcl_pose_estimation",
         output="screen",
     )
 
     mtc_node = Node(
+
         package="estun_control",
         executable="mtc_estun",
         output="screen",
@@ -235,6 +216,7 @@ def generate_launch_description():
         ],
     )
 
+    #für Mock-Hardware-System ohne Gazebo
     control_node = Node(
         package="controller_manager",
         executable="ros2_control_node",
@@ -245,69 +227,70 @@ def generate_launch_description():
         ),
     ],
         output="both",
-        #remappings=[("~/robot_description", "/robot_description"),],
+        remappings=[("~/robot_description", "/robot_description"),],
     )
 
     return LaunchDescription([
 
-
-        (static_tf),
         (gz_world),
-        #(control_node),
-              
+        (robot_state_publisher_node),
+
         RegisterEventHandler(
-            OnProcessStart(
+            OnProcessIO(
                 
-                target_action=static_tf,
-                on_start=[LogInfo(msg='Starte ros_gz_bridge \n'), ros_gz_bridge]
+                target_action=robot_state_publisher_node,
+                on_stderr=lambda event: [LogInfo(msg='Robot initialized'.format(event.text.decode().strip())), ros_gz_bridge]
             )
         ), 
 
         RegisterEventHandler(
-            OnProcessStart(
-                
-                target_action=ros_gz_bridge,
-                on_start=[LogInfo(msg='Starte joint_state_broadcaster_controller \n'), load_joint_state_broadcaster]
-            )
-        ),
-
-        RegisterEventHandler(
-            OnProcessStart(
-                
-                target_action= ros_gz_bridge,
-                on_start=[LogInfo(msg='starting robot_state_publisher \n'), robot_state_publisher_node]
-            )
-        ),   
-                    
-        
-                  
-        RegisterEventHandler(
-            OnProcessStart(
+            OnProcessIO(
                 
                 target_action=robot_state_publisher_node,
-                on_start=[LogInfo(msg='Starte gz_spawn_entity \n'), gz_spawn_entity]
-            )
-        ),           
-
-                        
-        RegisterEventHandler(
-            OnProcessStart(
-                
-                target_action=ros_gz_bridge,
-                on_start=[LogInfo(msg='Starte joint_state_broadcaster_controller \n'), load_arm_controller]
+                on_stderr=lambda event: [LogInfo(msg='Creating GZ->ROS Bridge: [/clock (gz.msgs.Clock) -> /clock (rosgraph_msgs/msg/Clock)] (Lazy 0)'.format(event.text.decode().strip())), gz_spawn_entity]
             )
         ),
 
         RegisterEventHandler(
-            OnProcessStart(
+            OnExecutionComplete(
                 
-                target_action= ros_gz_bridge,
-                on_start=[LogInfo(msg='Starte joint_state_broadcaster_controller \n'), load_hand_controller]
+                target_action=gz_spawn_entity,
+                on_completion=[LogInfo(msg='Starte JSB \n'), load_joint_state_broadcaster]
             )
-        ),             
-        
+        ), 
 
-  
+        RegisterEventHandler(
+            OnExecutionComplete(
+                
+                target_action=load_joint_state_broadcaster,
+                on_completion=[LogInfo(msg='Starte Arm Controller \n'), load_arm_controller]
+            )
+        ),
+
+        RegisterEventHandler(
+            OnExecutionComplete(
+                
+                target_action=load_joint_state_broadcaster,
+                on_completion=[LogInfo(msg='Starte Hand Controller \n'), load_hand_controller]
+            )
+        ),
+
+        RegisterEventHandler(
+            OnExecutionComplete(
+                
+                target_action=load_hand_controller,
+                on_completion=[LogInfo(msg='Starte Move_group \n'), run_move_group_node]
+            )
+        ),
+
+        RegisterEventHandler(
+            OnExecutionComplete(
+                
+                target_action=load_hand_controller,
+                on_completion=[LogInfo(msg='Starte Static TF \n'), static_tf]
+            )
+        ),           
+        
         RegisterEventHandler(
             OnExecutionComplete(
                 
@@ -315,40 +298,29 @@ def generate_launch_description():
                 on_completion=[LogInfo(msg='Starte pcl_pose_estimation \n'), pose_estimation_node]
             )
         ),       
-           
-        
-                            
+
         RegisterEventHandler(
             OnProcessStart(
                 
                 target_action=pose_estimation_node,
-                #target_action=load_hand_controller,
-                on_start=[LogInfo(msg='starte move_group_node \n'), run_move_group_node]
+                on_start=[obstacle_planner_node]
             )
-        ),
+        ),            
+        
 
-        RegisterEventHandler(
-            OnExecutionComplete(
+         RegisterEventHandler(
+            OnProcessStart(
                 
-                target_action=load_hand_controller,
-                on_completion=[LogInfo(msg='starte rviz2 \n'), rviz_node]
+                target_action=obstacle_planner_node,
+                on_start=[mtc_node]
             )
         ),
 
         RegisterEventHandler(
             OnProcessStart(
                 
-                target_action=rviz_node,
-                on_start=[LogInfo(msg='starte robstacle_planner \n'), obstacle_planner_node]
+                target_action=mtc_node,
+                on_start=[rviz_node]
             )
-        ),            
-        
-
-        # RegisterEventHandler(
-        #     OnProcessStart(
-                
-        #         target_action= obstacle_planner_node,
-        #         on_start=[LogInfo(msg='starte mtc_node'), mtc_node]
-        #     )
-        # ),       
+        ),         
     ])

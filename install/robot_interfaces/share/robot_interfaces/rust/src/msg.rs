@@ -91,6 +91,21 @@ pub struct ObjectPose {
     #[allow(missing_docs)]
     pub mid_z: f64,
 
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub roll: f64,
+
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub pitch: f64,
+
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub yaw: f64,
+
 }
 
 
@@ -123,6 +138,9 @@ impl rosidl_runtime_rs::Message for ObjectPose {
         mid_x: msg.mid_x,
         mid_y: msg.mid_y,
         mid_z: msg.mid_z,
+        roll: msg.roll,
+        pitch: msg.pitch,
+        yaw: msg.yaw,
       }),
       std::borrow::Cow::Borrowed(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
         object_type: msg.object_type.as_str().into(),
@@ -141,6 +159,9 @@ impl rosidl_runtime_rs::Message for ObjectPose {
       mid_x: msg.mid_x,
       mid_y: msg.mid_y,
       mid_z: msg.mid_z,
+      roll: msg.roll,
+      pitch: msg.pitch,
+      yaw: msg.yaw,
       })
     }
   }
@@ -163,6 +184,9 @@ impl rosidl_runtime_rs::Message for ObjectPose {
       mid_x: msg.mid_x,
       mid_y: msg.mid_y,
       mid_z: msg.mid_z,
+      roll: msg.roll,
+      pitch: msg.pitch,
+      yaw: msg.yaw,
     }
   }
 }

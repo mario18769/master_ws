@@ -569,3 +569,43 @@ events:
         
       exitCode: 0
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "/home/mario/master_ws/build/pick_ik/_deps/catch2-src/CMake/CatchMiscFunctions.cmake:12 (check_cxx_compiler_flag)"
+      - "/home/mario/master_ws/build/pick_ik/_deps/catch2-src/CMake/CatchMiscFunctions.cmake:118 (add_cxx_flag_if_supported_to_targets)"
+      - "/home/mario/master_ws/build/pick_ik/_deps/catch2-src/src/CMakeLists.txt:337 (add_build_reproducibility_settings)"
+    checks:
+      - "Performing Test HAVE_FLAG__ffile_prefix_map__home_mario_master_ws_build_pick_ik__deps_catch2_src__"
+    directories:
+      source: "/home/mario/master_ws/build/pick_ik/CMakeFiles/CMakeScratch/TryCompile-ilh90v"
+      binary: "/home/mario/master_ws/build/pick_ik/CMakeFiles/CMakeScratch/TryCompile-ilh90v"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/opt/ros/jazzy/share/tinyxml2_vendor/cmake/Modules;/opt/ros/jazzy/share/eigen3_cmake_module/cmake/Modules;/opt/ros/jazzy/share/fastrtps_cmake_module/cmake/Modules;/home/mario/master_ws/src/pick_ik/cmake;/home/mario/master_ws/build/pick_ik/_deps/catch2-src/extras;/home/mario/master_ws/build/pick_ik/_deps/catch2-src/CMake"
+    buildResult:
+      variable: "HAVE_FLAG__ffile_prefix_map__home_mario_master_ws_build_pick_ik__deps_catch2_src__"
+      cached: true
+      stdout: |
+        Change Dir: '/home/mario/master_ws/build/pick_ik/CMakeFiles/CMakeScratch/TryCompile-ilh90v'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_118ac/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_118ac.dir/build.make CMakeFiles/cmTC_118ac.dir/build
+        gmake[1]: Entering directory '/home/mario/master_ws/build/pick_ik/CMakeFiles/CMakeScratch/TryCompile-ilh90v'
+        Building CXX object CMakeFiles/cmTC_118ac.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_FLAG__ffile_prefix_map__home_mario_master_ws_build_pick_ik__deps_catch2_src__  -ffile-prefix-map=/home/mario/master_ws/build/pick_ik/_deps/catch2-src/= -o CMakeFiles/cmTC_118ac.dir/src.cxx.o -c /home/mario/master_ws/build/pick_ik/CMakeFiles/CMakeScratch/TryCompile-ilh90v/src.cxx
+        Linking CXX executable cmTC_118ac
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_118ac.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_118ac.dir/src.cxx.o -o cmTC_118ac 
+        gmake[1]: Leaving directory '/home/mario/master_ws/build/pick_ik/CMakeFiles/CMakeScratch/TryCompile-ilh90v'
+        
+      exitCode: 0
+...

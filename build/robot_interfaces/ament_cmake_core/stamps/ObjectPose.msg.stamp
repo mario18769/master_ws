@@ -20,3 +20,6 @@ float64 mid_x
 float64 mid_y
 float64 mid_z
 
+float64 roll
+float64 pitch
+float64 yaw

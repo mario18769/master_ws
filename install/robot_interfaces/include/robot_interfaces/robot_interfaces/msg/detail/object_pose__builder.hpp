@@ -24,16 +24,64 @@ namespace msg
 namespace builder
 {
 
+class Init_ObjectPose_yaw
+{
+public:
+  explicit Init_ObjectPose_yaw(::robot_interfaces::msg::ObjectPose & msg)
+  : msg_(msg)
+  {}
+  ::robot_interfaces::msg::ObjectPose yaw(::robot_interfaces::msg::ObjectPose::_yaw_type arg)
+  {
+    msg_.yaw = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::robot_interfaces::msg::ObjectPose msg_;
+};
+
+class Init_ObjectPose_pitch
+{
+public:
+  explicit Init_ObjectPose_pitch(::robot_interfaces::msg::ObjectPose & msg)
+  : msg_(msg)
+  {}
+  Init_ObjectPose_yaw pitch(::robot_interfaces::msg::ObjectPose::_pitch_type arg)
+  {
+    msg_.pitch = std::move(arg);
+    return Init_ObjectPose_yaw(msg_);
+  }
+
+private:
+  ::robot_interfaces::msg::ObjectPose msg_;
+};
+
+class Init_ObjectPose_roll
+{
+public:
+  explicit Init_ObjectPose_roll(::robot_interfaces::msg::ObjectPose & msg)
+  : msg_(msg)
+  {}
+  Init_ObjectPose_pitch roll(::robot_interfaces::msg::ObjectPose::_roll_type arg)
+  {
+    msg_.roll = std::move(arg);
+    return Init_ObjectPose_pitch(msg_);
+  }
+
+private:
+  ::robot_interfaces::msg::ObjectPose msg_;
+};
+
 class Init_ObjectPose_mid_z
 {
 public:
   explicit Init_ObjectPose_mid_z(::robot_interfaces::msg::ObjectPose & msg)
   : msg_(msg)
   {}
-  ::robot_interfaces::msg::ObjectPose mid_z(::robot_interfaces::msg::ObjectPose::_mid_z_type arg)
+  Init_ObjectPose_roll mid_z(::robot_interfaces::msg::ObjectPose::_mid_z_type arg)
   {
     msg_.mid_z = std::move(arg);
-    return std::move(msg_);
+    return Init_ObjectPose_roll(msg_);
   }
 
 private:

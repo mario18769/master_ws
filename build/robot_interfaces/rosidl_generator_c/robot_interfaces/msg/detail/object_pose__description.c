@@ -11,10 +11,10 @@ robot_interfaces__msg__ObjectPose__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x8d, 0x45, 0x47, 0x5f, 0xff, 0x7e, 0x03, 0x15,
-      0x1b, 0xa8, 0x19, 0x87, 0x6a, 0x65, 0xcf, 0x6b,
-      0xb9, 0x8d, 0xab, 0x2b, 0xe8, 0xb6, 0x27, 0x7c,
-      0x7f, 0x95, 0xba, 0xb3, 0xc3, 0xfb, 0xfe, 0x1f,
+      0x22, 0xff, 0x3f, 0x26, 0xe0, 0x08, 0x1f, 0x72,
+      0xf9, 0x0a, 0x85, 0x08, 0xc7, 0x1f, 0xff, 0xeb,
+      0x2d, 0x52, 0x23, 0x19, 0xe7, 0xdc, 0x7f, 0x2f,
+      0xcb, 0x1b, 0xa0, 0x70, 0xd0, 0x16, 0x8c, 0x5c,
     }};
   return &hash;
 }
@@ -47,6 +47,9 @@ static char robot_interfaces__msg__ObjectPose__FIELD_NAME__length[] = "length";
 static char robot_interfaces__msg__ObjectPose__FIELD_NAME__mid_x[] = "mid_x";
 static char robot_interfaces__msg__ObjectPose__FIELD_NAME__mid_y[] = "mid_y";
 static char robot_interfaces__msg__ObjectPose__FIELD_NAME__mid_z[] = "mid_z";
+static char robot_interfaces__msg__ObjectPose__FIELD_NAME__roll[] = "roll";
+static char robot_interfaces__msg__ObjectPose__FIELD_NAME__pitch[] = "pitch";
+static char robot_interfaces__msg__ObjectPose__FIELD_NAME__yaw[] = "yaw";
 
 static rosidl_runtime_c__type_description__Field robot_interfaces__msg__ObjectPose__FIELDS[] = {
   {
@@ -209,6 +212,36 @@ static rosidl_runtime_c__type_description__Field robot_interfaces__msg__ObjectPo
     },
     {NULL, 0, 0},
   },
+  {
+    {robot_interfaces__msg__ObjectPose__FIELD_NAME__roll, 4, 4},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_DOUBLE,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {robot_interfaces__msg__ObjectPose__FIELD_NAME__pitch, 5, 5},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_DOUBLE,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {robot_interfaces__msg__ObjectPose__FIELD_NAME__yaw, 3, 3},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_DOUBLE,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
 };
 
 const rosidl_runtime_c__type_description__TypeDescription *
@@ -220,7 +253,7 @@ robot_interfaces__msg__ObjectPose__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {robot_interfaces__msg__ObjectPose__TYPE_NAME, 31, 31},
-      {robot_interfaces__msg__ObjectPose__FIELDS, 16, 16},
+      {robot_interfaces__msg__ObjectPose__FIELDS, 19, 19},
     },
     {NULL, 0, 0},
   };
@@ -252,7 +285,10 @@ static char toplevel_type_raw_source[] =
   "float64 mid_x\n"
   "float64 mid_y\n"
   "float64 mid_z\n"
-  "";
+  "\n"
+  "float64 roll\n"
+  "float64 pitch\n"
+  "float64 yaw";
 
 static char msg_encoding[] = "msg";
 
@@ -266,7 +302,7 @@ robot_interfaces__msg__ObjectPose__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {robot_interfaces__msg__ObjectPose__TYPE_NAME, 31, 31},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 244, 244},
+    {toplevel_type_raw_source, 283, 283},
   };
   return &source;
 }

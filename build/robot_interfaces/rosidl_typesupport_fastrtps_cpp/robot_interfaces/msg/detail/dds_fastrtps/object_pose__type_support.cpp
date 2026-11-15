@@ -84,6 +84,15 @@ cdr_serialize(
   // Member: mid_z
   cdr << ros_message.mid_z;
 
+  // Member: roll
+  cdr << ros_message.roll;
+
+  // Member: pitch
+  cdr << ros_message.pitch;
+
+  // Member: yaw
+  cdr << ros_message.yaw;
+
   return true;
 }
 
@@ -140,6 +149,15 @@ cdr_deserialize(
 
   // Member: mid_z
   cdr >> ros_message.mid_z;
+
+  // Member: roll
+  cdr >> ros_message.roll;
+
+  // Member: pitch
+  cdr >> ros_message.pitch;
+
+  // Member: yaw
+  cdr >> ros_message.yaw;
 
   return true;
 }  // NOLINT(readability/fn_size)
@@ -264,6 +282,27 @@ get_serialized_size(
   // Member: mid_z
   {
     size_t item_size = sizeof(ros_message.mid_z);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: roll
+  {
+    size_t item_size = sizeof(ros_message.roll);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: pitch
+  {
+    size_t item_size = sizeof(ros_message.pitch);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: yaw
+  {
+    size_t item_size = sizeof(ros_message.yaw);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -407,6 +446,27 @@ max_serialized_size_ObjectPose(
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
+  // Member: roll
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+  // Member: pitch
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+  // Member: yaw
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
 
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
@@ -416,7 +476,7 @@ max_serialized_size_ObjectPose(
     using DataType = robot_interfaces::msg::ObjectPose;
     is_plain =
       (
-      offsetof(DataType, mid_z) +
+      offsetof(DataType, yaw) +
       last_member_size
       ) == ret_val;
   }
@@ -477,6 +537,15 @@ cdr_serialize_key(
 
   // Member: mid_z
   cdr << ros_message.mid_z;
+
+  // Member: roll
+  cdr << ros_message.roll;
+
+  // Member: pitch
+  cdr << ros_message.pitch;
+
+  // Member: yaw
+  cdr << ros_message.yaw;
 
   return true;
 }
@@ -600,6 +669,27 @@ get_serialized_size_key(
   // Member: mid_z
   {
     size_t item_size = sizeof(ros_message.mid_z);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: roll
+  {
+    size_t item_size = sizeof(ros_message.roll);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: pitch
+  {
+    size_t item_size = sizeof(ros_message.pitch);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Member: yaw
+  {
+    size_t item_size = sizeof(ros_message.yaw);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -758,6 +848,30 @@ max_serialized_size_key_ObjectPose(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
+  // Member: roll
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
+  // Member: pitch
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
+  // Member: yaw
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
     // All members are plain, and type is not empty.
@@ -766,7 +880,7 @@ max_serialized_size_key_ObjectPose(
     using DataType = robot_interfaces::msg::ObjectPose;
     is_plain =
       (
-      offsetof(DataType, mid_z) +
+      offsetof(DataType, yaw) +
       last_member_size
       ) == ret_val;
   }

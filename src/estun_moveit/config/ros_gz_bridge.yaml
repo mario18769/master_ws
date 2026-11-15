@@ -12,8 +12,6 @@
   lazy: true
   direction: GZ_TO_ROS
 
-
-
 - ros_topic_name: "/depthpoints"
   gz_topic_name: "/rgbd_camera/points"
   ros_type_name: "sensor_msgs/msg/PointCloud2"
@@ -34,3 +32,163 @@
   gz_type_name: "gz.msgs.Empty"
   lazy: true
   direction: ROS_TO_GZ
+
+- ros_topic_name: "/Probekoerper2/attach"
+  gz_topic_name: "/Probekoerper2/attach"
+  ros_type_name: "std_msgs/msg/Empty"
+  gz_type_name: "gz.msgs.Empty"
+  lazy: true
+  direction: ROS_TO_GZ
+
+- ros_topic_name: "/Probekoerper2/detach"
+  gz_topic_name: "/Probekoerper2/detach"
+  ros_type_name: "std_msgs/msg/Empty"
+  gz_type_name: "gz.msgs.Empty"
+  lazy: true
+  direction: ROS_TO_GZ
+
+- ros_topic_name: "/Probekoerper3/attach"
+  gz_topic_name: "/Probekoerper3/attach"
+  ros_type_name: "std_msgs/msg/Empty"
+  gz_type_name: "gz.msgs.Empty"
+  lazy: true
+  direction: ROS_TO_GZ
+
+- ros_topic_name: "/Probekoerper3/detach"
+  gz_topic_name: "/Probekoerper3/detach"
+  ros_type_name: "std_msgs/msg/Empty"
+  gz_type_name: "gz.msgs.Empty"
+  lazy: true
+  direction: ROS_TO_GZ
+
+- ros_topic_name: "/Probekoerper4/attach"
+  gz_topic_name: "/Probekoerper4/attach"
+  ros_type_name: "std_msgs/msg/Empty"
+  gz_type_name: "gz.msgs.Empty"
+  lazy: true
+  direction: ROS_TO_GZ
+
+- ros_topic_name: "/Probekoerper4/detach"
+  gz_topic_name: "/Probekoerper4/detach"
+  ros_type_name: "std_msgs/msg/Empty"
+  gz_type_name: "gz.msgs.Empty"
+  lazy: true
+  direction: ROS_TO_GZ
+
+- ros_topic_name: "/Probekoerper5/attach"
+  gz_topic_name: "/Probekoerper5/attach"
+  ros_type_name: "std_msgs/msg/Empty"
+  gz_type_name: "gz.msgs.Empty"
+  lazy: true
+  direction: ROS_TO_GZ
+
+- ros_topic_name: "/Probekoerper5/detach"
+  gz_topic_name: "/Probekoerper5/detach"
+  ros_type_name: "std_msgs/msg/Empty"
+  gz_type_name: "gz.msgs.Empty"
+  lazy: true
+  direction: ROS_TO_GZ
+
+- ros_topic_name: "/Probekoerper6/attach"
+  gz_topic_name: "/Probekoerper6/attach"
+  ros_type_name: "std_msgs/msg/Empty"
+  gz_type_name: "gz.msgs.Empty"
+  lazy: true
+  direction: ROS_TO_GZ
+
+- ros_topic_name: "/Probekoerper6/detach"
+  gz_topic_name: "/Probekoerper6/detach"
+  ros_type_name: "std_msgs/msg/Empty"
+  gz_type_name: "gz.msgs.Empty"
+  lazy: true
+  direction: ROS_TO_GZ
+
+- ros_topic_name: "/Probekoerper7/attach"
+  gz_topic_name: "/Probekoerper7/attach"
+  ros_type_name: "std_msgs/msg/Empty"
+  gz_type_name: "gz.msgs.Empty"
+  lazy: true
+  direction: ROS_TO_GZ
+
+- ros_topic_name: "/Probekoerper7/detach"
+  gz_topic_name: "/Probekoerper7/detach"
+  ros_type_name: "std_msgs/msg/Empty"
+  gz_type_name: "gz.msgs.Empty"
+  lazy: true
+  direction: ROS_TO_GZ
+
+- ros_topic_name: "/Probekoerper8/detach"
+  gz_topic_name: "/Probekoerper8/detach"
+  ros_type_name: "std_msgs/msg/Empty"
+  gz_type_name: "gz.msgs.Empty"
+  lazy: true
+  direction: ROS_TO_GZ
+
+- ros_topic_name: "/Probekoerper8/attach"
+  gz_topic_name: "/Probekoerper8/attach"
+  ros_type_name: "std_msgs/msg/Empty"
+  gz_type_name: "gz.msgs.Empty"
+  lazy: true
+  direction: ROS_TO_GZ
+
+
+- ros_topic_name: "/Probekoerper1/pose"
+  gz_topic_name: "/model/Probekoerper1/pose"
+  ros_type_name: "geometry_msgs/msg/Pose"
+  gz_type_name: "gz.msgs.Pose"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/Probekoerper2/pose"
+  gz_topic_name: "/model/Probekoerper2/pose"
+  ros_type_name: "geometry_msgs/msg/Pose"
+  gz_type_name: "gz.msgs.Pose"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/Probekoerper3/pose"
+  gz_topic_name: "/model/Probekoerper3/pose"
+  ros_type_name: "geometry_msgs/msg/Pose"
+  gz_type_name: "gz.msgs.Pose"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/Probekoerper4/pose"
+  gz_topic_name: "/model/Probekoerper4/pose"
+  ros_type_name: "geometry_msgs/msg/Pose"
+  gz_type_name: "gz.msgs.Pose"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/Probekoerper5/pose"
+  gz_topic_name: "/model/Probekoerper5/pose"
+  ros_type_name: "geometry_msgs/msg/Pose"
+  gz_type_name: "gz.msgs.Pose"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/Probekoerper6/pose"
+  gz_topic_name: "/model/Probekoerper6/pose"
+  ros_type_name: "geometry_msgs/msg/Pose"
+  gz_type_name: "gz.msgs.Pose"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/Probekoerper7/pose"
+  gz_topic_name: "/model/Probekoerper7/pose"
+  ros_type_name: "geometry_msgs/msg/Pose"
+  gz_type_name: "gz.msgs.Pose"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/Probekoerper8/pose"
+  gz_topic_name: "/model/Probekoerper8/pose"
+  ros_type_name: "geometry_msgs/msg/Pose"
+  gz_type_name: "gz.msgs.Pose"
+  lazy: true
+  direction: GZ_TO_ROS
+
+
+
+
+  

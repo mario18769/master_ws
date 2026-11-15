@@ -42,6 +42,9 @@ typedef struct robot_interfaces__msg__ObjectPose
   double mid_x;
   double mid_y;
   double mid_z;
+  double roll;
+  double pitch;
+  double yaw;
 } robot_interfaces__msg__ObjectPose;
 
 // Struct for a sequence of robot_interfaces__msg__ObjectPose.

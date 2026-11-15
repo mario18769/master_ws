@@ -1,0 +1,139 @@
+[ 33%] Built target cartesian_planner
+[ 66%] Built target obstacle_planner
+[ 83%] [32mBuilding CXX object CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o[0m
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:4[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:5[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kvoid MTCTaskNode::[01;32m[KgetObjects[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:360:28:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<MTCTaskNode::getObjects()::data>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  360 |     if (task == false && [01;35m[Kj < objects.size()[m[K){
+      |                          [01;35m[K~~^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:363:12:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<MTCTaskNode::getObjects()::data>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  363 |       if([01;35m[Kj >= objects.size()[m[K){
+      |          [01;35m[K~~^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:373:26:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<MTCTaskNode::getObjects()::data>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  373 |     if(task == true && [01;35m[Kj < objects.size()[m[K){
+      |                        [01;35m[K~~^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kmoveit::task_constructor::Task MTCTaskNode::[01;32m[KcreateGrabTask[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:781:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kattach_object_stage[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  781 |   mtc::Stage* [01;35m[Kattach_object_stage[m[K = nullptr;  // Forward attach_object_stage to place pose generator
+      |               [01;35m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K At global scope:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1073:86:[m[K [01;31m[Kerror: [m[Kexpected identifier before numeric constant
+ 1073 |   std::vector<rclcpp::Subscription<geometry_msgs::msg::Pose>::SharedPtr> Probe_pose_([01;31m[K8[m[K);
+      |                                                                                      [01;31m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1073:86:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before numeric constant
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1090:86:[m[K [01;31m[Kerror: [m[Kexpected identifier before numeric constant
+ 1090 |   std::vector<rclcpp::Subscription<geometry_msgs::msg::Pose>::SharedPtr> Probe_pose_([01;31m[K8[m[K);
+      |                                                                                      [01;31m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1090:86:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before numeric constant
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1090:74:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd::vector<std::shared_ptr<rclcpp::Subscription<geometry_msgs::msg::Pose_<std::allocator<void> > > > > MTCPubSub::[01;32m[KProbe_pose_[m[K(int)[m[K’ cannot be overloaded with ‘[01m[Kstd::vector<std::shared_ptr<rclcpp::Subscription<geometry_msgs::msg::Pose_<std::allocator<void> > > > > MTCPubSub::[01;32m[KProbe_pose_[m[K(int)[m[K’
+ 1090 |   std::vector<rclcpp::Subscription<geometry_msgs::msg::Pose>::SharedPtr> [01;31m[KProbe_pose_[m[K(8);
+      |                                                                          [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1073:74:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kstd::vector<std::shared_ptr<rclcpp::Subscription<geometry_msgs::msg::Pose_<std::allocator<void> > > > > MTCPubSub::[01;32m[KProbe_pose_[m[K(int)[m[K’
+ 1073 |   std::vector<rclcpp::Subscription<geometry_msgs::msg::Pose>::SharedPtr> [01;36m[KProbe_pose_[m[K(8);
+      |                                                                          [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In constructor ‘[01m[KMTCPubSub::[01;32m[KMTCPubSub[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1061:18:[m[K [01;31m[Kerror: [m[Kinvalid types ‘[01m[K<unresolved overloaded function type>[int][m[K’ for array subscript
+ 1061 |       Probe_pose_[01;31m[K[[m[Ki] = this->create_subscription<geometry_msgs::msg::Pose>(iterator, 10, [this, iterator](geometry_msgs::msg::Pose msg) {
+      |                  [01;31m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In lambda function:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1063:48:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kmsg[m[K’
+ 1063 |       this->ProbePose(geometry_msgs::msg::Pose [01;31m[Kmsg[m[K, std::string iterator)});
+      |                                                [01;31m[K^~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1063:65:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kiterator[m[K’
+ 1063 |       this->ProbePose(geometry_msgs::msg::Pose msg, std::string [01;31m[Kiterator[m[K)});
+      |                                                                 [01;31m[K^~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1061:132:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+ 1061 |       Probe_pose_[i] = this->create_subscription<geometry_msgs::msg::Pose>(iterator, 10, [this, iterator]([01;35m[Kgeometry_msgs::msg::Pose msg[m[K) {
+      |                                                                                                           [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kvoid MTCPubSub::[01;32m[KProbePose[m[K(geometry_msgs::msg::Pose, std::string)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1104:12:[m[K [01;31m[Kerror: [m[Kswitch quantity not an integer
+ 1104 |     switch([01;31m[Ktopic[m[K){
+      |            [01;31m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1106:20:[m[K [01;31m[Kerror: [m[Kuse of ‘[01m[Kthis[m[K’ in a constant expression
+ 1106 |       case topics[1[01;31m[K][m[K:
+      |                    [01;31m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1112:20:[m[K [01;31m[Kerror: [m[Kuse of ‘[01m[Kthis[m[K’ in a constant expression
+ 1112 |       case topics[2[01;31m[K][m[K:
+      |                    [01;31m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1118:20:[m[K [01;31m[Kerror: [m[Kuse of ‘[01m[Kthis[m[K’ in a constant expression
+ 1118 |       case topics[3[01;31m[K][m[K:
+      |                    [01;31m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1124:20:[m[K [01;31m[Kerror: [m[Kuse of ‘[01m[Kthis[m[K’ in a constant expression
+ 1124 |       case topics[4[01;31m[K][m[K:
+      |                    [01;31m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1130:20:[m[K [01;31m[Kerror: [m[Kuse of ‘[01m[Kthis[m[K’ in a constant expression
+ 1130 |       case topics[5[01;31m[K][m[K:
+      |                    [01;31m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1136:20:[m[K [01;31m[Kerror: [m[Kuse of ‘[01m[Kthis[m[K’ in a constant expression
+ 1136 |       case topics[6[01;31m[K][m[K:
+      |                    [01;31m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1142:20:[m[K [01;31m[Kerror: [m[Kuse of ‘[01m[Kthis[m[K’ in a constant expression
+ 1142 |       case topics[7[01;31m[K][m[K:
+      |                    [01;31m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1148:20:[m[K [01;31m[Kerror: [m[Kuse of ‘[01m[Kthis[m[K’ in a constant expression
+ 1148 |       case topics[8[01;31m[K][m[K:
+      |                    [01;31m[K^[m[K
+In file included from [01m[K/usr/include/c++/13/bits/stl_tempbuf.h:61[m[K,
+                 from [01m[K/usr/include/c++/13/memory:66[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:173[m[K,
+                 from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1[m[K:
+/usr/include/c++/13/bits/stl_construct.h: In instantiation of ‘[01m[Kconstexpr void std::[01;32m[K_Construct[m[K(_Tp*, _Args&& ...) [35m[K[with _Tp = MTCPubSub; _Args = {const char (&)[15]}][m[K[m[K’:
+[01m[K/usr/include/c++/13/bits/alloc_traits.h:661:19:[m[K   required from ‘[01m[Kstatic constexpr void std::allocator_traits<std::allocator<void> >::[01;32m[Kconstruct[m[K(allocator_type&, _Up*, _Args&& ...) [35m[K[with _Up = MTCPubSub; _Args = {const char (&)[15]}; allocator_type = std::allocator<void>][m[K[m[K’
+[01m[K/usr/include/c++/13/bits/shared_ptr_base.h:604:39:[m[K   required from ‘[01m[Kstd::_Sp_counted_ptr_inplace<_Tp, _Alloc, _Lp>::[01;32m[K_Sp_counted_ptr_inplace[m[K(_Alloc, _Args&& ...) [35m[K[with _Args = {const char (&)[15]}; _Tp = MTCPubSub; _Alloc = std::allocator<void>; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic][m[K[m[K’
+[01m[K/usr/include/c++/13/bits/shared_ptr_base.h:971:16:[m[K   required from ‘[01m[Kstd::__shared_count<_Lp>::[01;32m[K__shared_count[m[K(_Tp*&, std::_Sp_alloc_shared_tag<_Alloc>, _Args&& ...) [35m[K[with _Tp = MTCPubSub; _Alloc = std::allocator<void>; _Args = {const char (&)[15]}; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic][m[K[m[K’
+[01m[K/usr/include/c++/13/bits/shared_ptr_base.h:1712:14:[m[K   required from ‘[01m[Kstd::__shared_ptr<_Tp, _Lp>::[01;32m[K__shared_ptr[m[K(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [35m[K[with _Alloc = std::allocator<void>; _Args = {const char (&)[15]}; _Tp = MTCPubSub; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic][m[K[m[K’
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:464:59:[m[K   required from ‘[01m[Kstd::shared_ptr<_Tp>::[01;32m[Kshared_ptr[m[K(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [35m[K[with _Alloc = std::allocator<void>; _Args = {const char (&)[15]}; _Tp = MTCPubSub][m[K[m[K’
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1009:14:[m[K   required from ‘[01m[Kstd::shared_ptr<std::_NonArray<_Tp> > std::[01;32m[Kmake_shared[m[K(_Args&& ...) [35m[K[with _Tp = MTCPubSub; _Args = {const char (&)[15]}; _NonArray<_Tp> = MTCPubSub][m[K[m[K’
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1180:56:[m[K   required from here
+[01m[K/usr/include/c++/13/bits/stl_construct.h:115:28:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kconstruct_at(MTCPubSub*&, const char [15])[m[K’
+  115 |           [01;31m[Kstd::construct_at(__p, std::forward<_Args>(__args)...)[m[K;
+      |           [01;31m[K~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/stl_construct.h:94:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Args> constexpr decltype (::new(void*(0)) _Tp) std::[01;32m[Kconstruct_at[m[K(_Tp*, _Args&& ...)[m[K’
+   94 |     [01;36m[Kconstruct_at[m[K(_Tp* __location, _Args&&... __args)
+      |     [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/stl_construct.h:94:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+/usr/include/c++/13/bits/stl_construct.h: In substitution of ‘[01m[Ktemplate<class _Tp, class ... _Args> constexpr decltype (::new(void*(0)) _Tp) std::[01;32m[Kconstruct_at[m[K(_Tp*, _Args&& ...) [35m[K[with _Tp = MTCPubSub; _Args = {const char (&)[15]}][m[K[m[K’:
+[01m[K/usr/include/c++/13/bits/stl_construct.h:115:21:[m[K   required from ‘[01m[Kconstexpr void std::[01;32m[K_Construct[m[K(_Tp*, _Args&& ...) [35m[K[with _Tp = MTCPubSub; _Args = {const char (&)[15]}][m[K[m[K’
+[01m[K/usr/include/c++/13/bits/alloc_traits.h:661:19:[m[K   required from ‘[01m[Kstatic constexpr void std::allocator_traits<std::allocator<void> >::[01;32m[Kconstruct[m[K(allocator_type&, _Up*, _Args&& ...) [35m[K[with _Up = MTCPubSub; _Args = {const char (&)[15]}; allocator_type = std::allocator<void>][m[K[m[K’
+[01m[K/usr/include/c++/13/bits/shared_ptr_base.h:604:39:[m[K   required from ‘[01m[Kstd::_Sp_counted_ptr_inplace<_Tp, _Alloc, _Lp>::[01;32m[K_Sp_counted_ptr_inplace[m[K(_Alloc, _Args&& ...) [35m[K[with _Args = {const char (&)[15]}; _Tp = MTCPubSub; _Alloc = std::allocator<void>; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic][m[K[m[K’
+[01m[K/usr/include/c++/13/bits/shared_ptr_base.h:971:16:[m[K   required from ‘[01m[Kstd::__shared_count<_Lp>::[01;32m[K__shared_count[m[K(_Tp*&, std::_Sp_alloc_shared_tag<_Alloc>, _Args&& ...) [35m[K[with _Tp = MTCPubSub; _Alloc = std::allocator<void>; _Args = {const char (&)[15]}; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic][m[K[m[K’
+[01m[K/usr/include/c++/13/bits/shared_ptr_base.h:1712:14:[m[K   required from ‘[01m[Kstd::__shared_ptr<_Tp, _Lp>::[01;32m[K__shared_ptr[m[K(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [35m[K[with _Alloc = std::allocator<void>; _Args = {const char (&)[15]}; _Tp = MTCPubSub; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic][m[K[m[K’
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:464:59:[m[K   required from ‘[01m[Kstd::shared_ptr<_Tp>::[01;32m[Kshared_ptr[m[K(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [35m[K[with _Alloc = std::allocator<void>; _Args = {const char (&)[15]}; _Tp = MTCPubSub][m[K[m[K’
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1009:14:[m[K   required from ‘[01m[Kstd::shared_ptr<std::_NonArray<_Tp> > std::[01;32m[Kmake_shared[m[K(_Args&& ...) [35m[K[with _Tp = MTCPubSub; _Args = {const char (&)[15]}; _NonArray<_Tp> = MTCPubSub][m[K[m[K’
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1180:56:[m[K   required from here
+[01m[K/usr/include/c++/13/bits/stl_construct.h:96:17:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KMTCPubSub::MTCPubSub(const char [15])[m[K’
+   96 |     -> decltype([01;31m[K::new((void*)0) _Tp(std::declval<_Args>()...)[m[K)
+      |                 [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1056:11:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KMTCPubSub::[01;32m[KMTCPubSub[m[K()[m[K’
+ 1056 |   public: [01;36m[KMTCPubSub[m[K() : Node("MTCPubSub_Node") {
+      |           [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1056:11:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 1 provided
+/usr/include/c++/13/bits/stl_construct.h: In instantiation of ‘[01m[Kconstexpr void std::[01;32m[K_Construct[m[K(_Tp*, _Args&& ...) [35m[K[with _Tp = MTCPubSub; _Args = {const char (&)[15]}][m[K[m[K’:
+[01m[K/usr/include/c++/13/bits/alloc_traits.h:661:19:[m[K   required from ‘[01m[Kstatic constexpr void std::allocator_traits<std::allocator<void> >::[01;32m[Kconstruct[m[K(allocator_type&, _Up*, _Args&& ...) [35m[K[with _Up = MTCPubSub; _Args = {const char (&)[15]}; allocator_type = std::allocator<void>][m[K[m[K’
+[01m[K/usr/include/c++/13/bits/shared_ptr_base.h:604:39:[m[K   required from ‘[01m[Kstd::_Sp_counted_ptr_inplace<_Tp, _Alloc, _Lp>::[01;32m[K_Sp_counted_ptr_inplace[m[K(_Alloc, _Args&& ...) [35m[K[with _Args = {const char (&)[15]}; _Tp = MTCPubSub; _Alloc = std::allocator<void>; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic][m[K[m[K’
+[01m[K/usr/include/c++/13/bits/shared_ptr_base.h:971:16:[m[K   required from ‘[01m[Kstd::__shared_count<_Lp>::[01;32m[K__shared_count[m[K(_Tp*&, std::_Sp_alloc_shared_tag<_Alloc>, _Args&& ...) [35m[K[with _Tp = MTCPubSub; _Alloc = std::allocator<void>; _Args = {const char (&)[15]}; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic][m[K[m[K’
+[01m[K/usr/include/c++/13/bits/shared_ptr_base.h:1712:14:[m[K   required from ‘[01m[Kstd::__shared_ptr<_Tp, _Lp>::[01;32m[K__shared_ptr[m[K(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [35m[K[with _Alloc = std::allocator<void>; _Args = {const char (&)[15]}; _Tp = MTCPubSub; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic][m[K[m[K’
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:464:59:[m[K   required from ‘[01m[Kstd::shared_ptr<_Tp>::[01;32m[Kshared_ptr[m[K(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [35m[K[with _Alloc = std::allocator<void>; _Args = {const char (&)[15]}; _Tp = MTCPubSub][m[K[m[K’
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1009:14:[m[K   required from ‘[01m[Kstd::shared_ptr<std::_NonArray<_Tp> > std::[01;32m[Kmake_shared[m[K(_Args&& ...) [35m[K[with _Tp = MTCPubSub; _Args = {const char (&)[15]}; _NonArray<_Tp> = MTCPubSub][m[K[m[K’
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1180:56:[m[K   required from here
+[01m[K/usr/include/c++/13/bits/stl_construct.h:119:7:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KMTCPubSub::MTCPubSub(const char [15])[m[K’
+  119 |       [01;31m[K::new((void*)__p) _Tp(std::forward<_Args>(__args)...)[m[K;
+      |       [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1056:11:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KMTCPubSub::[01;32m[KMTCPubSub[m[K()[m[K’
+ 1056 |   public: [01;36m[KMTCPubSub[m[K() : Node("MTCPubSub_Node") {
+      |           [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1056:11:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 1 provided
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kbool MTCTaskNode::[01;32m[KdoTask[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:540:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+  540 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+gmake[2]: *** [CMakeFiles/mtc_estun.dir/build.make:76: CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o] Fehler 1
+gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/mtc_estun.dir/all] Fehler 2
+gmake: *** [Makefile:146: all] Fehler 2

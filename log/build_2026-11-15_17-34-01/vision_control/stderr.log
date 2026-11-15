@@ -1,0 +1,81 @@
+[33mCMake Warning (dev) at /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindFLANN.cmake:45 (find_package):
+  Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT
+  variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+
+  CMake variable FLANN_ROOT is set to:
+
+    /usr
+
+  For compatibility, find_package is ignoring the variable, but code in a
+  .cmake module might still use it.
+Call Stack (most recent call first):
+  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:261 (find_package)
+  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:306 (find_flann)
+  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:570 (find_external_library)
+  /opt/ros/jazzy/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /opt/ros/jazzy/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)
+  /opt/ros/jazzy/share/pcl_ros/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /opt/ros/jazzy/share/pcl_ros/cmake/pcl_rosConfig.cmake:41 (include)
+  CMakeLists.txt:14 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In constructor ‘[01m[KPointCloudProcessor::[01;32m[KPointCloudProcessor[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:58:29:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[KPointCloudProcessor[m[K’ does not have any field named ‘[01m[KNode[m[K’
+   58 |     PointCloudProcessor() : [01;31m[KNode[m[K("pointcloud_processor"){}
+      |                             [01;31m[K^~~~[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:58:56:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Krclcpp_lifecycle::LifecycleNode::LifecycleNode()[m[K’
+   58 |     PointCloudProcessor() : Node("pointcloud_processor"[01;31m[K)[m[K{}
+      |                                                        [01;31m[K^[m[K
+In file included from [01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:40[m[K:
+[01m[K/opt/ros/jazzy/include/rclcpp_lifecycle/rclcpp_lifecycle/lifecycle_node.hpp:151:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp_lifecycle::LifecycleNode::[01;32m[KLifecycleNode[m[K(const std::string&, const std::string&, const rclcpp::NodeOptions&, bool)[m[K’
+  151 |   [01;36m[KLifecycleNode[m[K(
+      |   [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/include/rclcpp_lifecycle/rclcpp_lifecycle/lifecycle_node.hpp:151:3:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 0 provided
+[01m[K/opt/ros/jazzy/include/rclcpp_lifecycle/rclcpp_lifecycle/lifecycle_node.hpp:138:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp_lifecycle::LifecycleNode::[01;32m[KLifecycleNode[m[K(const std::string&, const rclcpp::NodeOptions&, bool)[m[K’
+  138 |   explicit [01;36m[KLifecycleNode[m[K(
+      |            [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/include/rclcpp_lifecycle/rclcpp_lifecycle/lifecycle_node.hpp:138:12:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 0 provided
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn PointCloudProcessor::[01;32m[Kon_configure[m[K(const rclcpp_lifecycle::State&)[m[K’:
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:60:124:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprevious_state[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   60 |     rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_configure([01;35m[Kconst rclcpp_lifecycle::State & previous_state[m[K){
+      |                                                                                            [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn PointCloudProcessor::[01;32m[Kon_activate[m[K(const rclcpp_lifecycle::State&)[m[K’:
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:65:123:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprevious_state[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   65 |     rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_activate([01;35m[Kconst rclcpp_lifecycle::State & previous_state[m[K){
+      |                                                                                           [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn PointCloudProcessor::[01;32m[Kon_deactivate[m[K(const rclcpp_lifecycle::State&)[m[K’:
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:73:125:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprevious_state[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   73 |     rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_deactivate([01;35m[Kconst rclcpp_lifecycle::State & previous_state[m[K){
+      |                                                                                             [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn PointCloudProcessor::[01;32m[Kon_cleanup[m[K(const rclcpp_lifecycle::State&)[m[K’:
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:78:122:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprevious_state[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   78 |     rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_cleanup([01;35m[Kconst rclcpp_lifecycle::State & previous_state[m[K){
+      |                                                                                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn PointCloudProcessor::[01;32m[Kon_shutdown[m[K(const rclcpp_lifecycle::State&)[m[K’:
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:86:125:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprevious_state[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   86 |       rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_shutdown([01;35m[Kconst rclcpp_lifecycle::State & previous_state[m[K){
+      |                                                                                             [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kvoid PointCloudProcessor::[01;32m[Kgenerate_cylinder_master[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:153:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcurrent_height[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  153 |       float [01;35m[Kcurrent_height[m[K = j * spacing_z;
+      |             [01;35m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kvoid PointCloudProcessor::[01;32m[KprocessPointCloud[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:421:22:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::size_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  421 |     for (; [01;35m[Krow_count < rows[m[K; row_count++){
+      |            [01;35m[K~~~~~~~~~~^~~~~~[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kstd::vector<float> PointCloudProcessor::[01;32m[KcalculateCylinderEnd[m[K(std::shared_ptr<pcl::PointCloud<pcl::PointNormal> >, Eigen::Vector3f, Eigen::Vector3f)[m[K’:
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:933:143:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kzylaxispoint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  933 | std::vector<float> PointCloudProcessor::calculateCylinderEnd(std::shared_ptr<PointCloudN> cyl_cloud, Eigen::Vector3f zylaxis, [01;35m[KEigen::Vector3f zylaxispoint[m[K){
+      |                                                                                                                               [01;35m[K~~~~~~~~~~~~~~~~^~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kvoid PointCloudProcessor::[01;32m[KedgeDetection[m[K(std::shared_ptr<pcl::PointCloud<pcl::PointNormal> >)[m[K’:
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:1028:8:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KsetUnseenToMaxRange[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+ 1028 |   bool [01;35m[KsetUnseenToMaxRange[m[K = false;
+      |        [01;35m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:[m[K In member function ‘[01m[Kstd::vector<float> PointCloudProcessor::[01;32m[KcalculateCubeCenter[m[K(std::vector<Eigen::Matrix<float, 4, 1> >, std::shared_ptr<pcl::PointCloud<pcl::PointNormal> >)[m[K’:
+[01m[K/home/mario/master_ws/src/vision_control/src/pcl_pose_estimation.cpp:1257:8:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kintersects_plane_plane[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+ 1257 |   bool [01;35m[Kintersects_plane_plane[m[K = pcl::threePlanesIntersection(cube_planes_double[0],cube_planes_double[1],cube_planes_double[2],eckpunkt,0.002);
+      |        [01;35m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/pcl_pose_estimation.dir/build.make:76: CMakeFiles/pcl_pose_estimation.dir/src/pcl_pose_estimation.cpp.o] Fehler 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pcl_pose_estimation.dir/all] Fehler 2
+gmake: *** [Makefile:146: all] Fehler 2

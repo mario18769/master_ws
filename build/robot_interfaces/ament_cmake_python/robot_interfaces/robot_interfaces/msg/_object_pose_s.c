@@ -203,6 +203,33 @@ bool robot_interfaces__msg__object_pose__convert_from_py(PyObject * _pymsg, void
     ros_message->mid_z = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
+  {  // roll
+    PyObject * field = PyObject_GetAttrString(_pymsg, "roll");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->roll = PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
+  {  // pitch
+    PyObject * field = PyObject_GetAttrString(_pymsg, "pitch");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->pitch = PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
+  {  // yaw
+    PyObject * field = PyObject_GetAttrString(_pymsg, "yaw");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->yaw = PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -401,6 +428,39 @@ PyObject * robot_interfaces__msg__object_pose__convert_to_py(void * raw_ros_mess
     field = PyFloat_FromDouble(ros_message->mid_z);
     {
       int rc = PyObject_SetAttrString(_pymessage, "mid_z", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // roll
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->roll);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "roll", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // pitch
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->pitch);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "pitch", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // yaw
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->yaw);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "yaw", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

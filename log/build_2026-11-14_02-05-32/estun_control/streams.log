@@ -1,0 +1,91 @@
+[0.021s] Invoking command in '/home/mario/master_ws/build/estun_control': CMAKE_PREFIX_PATH=/home/mario/master_ws/install/moveit_task_constructor_core:/home/mario/master_ws/install/rviz_marker_tools:/home/mario/master_ws/install/robot_interfaces:/home/mario/master_ws/install/moveit_task_constructor_msgs:/home/mario/master_ws/install/vision_control:/home/mario/master_ws/install/moveit_task_constructor_demo:/home/mario/master_ws/install/moveit_task_constructor_visualization:/home/mario/master_ws/install/moveit_task_constructor_capabilities:/home/mario/master_ws/install/estun_control:/home/mario/master_ws/install/pick_ik:/home/mario/master_ws/install/estun_moveit:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/mario/master_ws/install/estun_er_hi_description:/home/mario/master_ws/install/estun_description:/home/mario/master_ws/install/ER20-2300-HI-FCE_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/mario/master_ws/install/moveit_task_constructor_core/lib:/home/mario/master_ws/install/rviz_marker_tools/lib:/home/mario/master_ws/install/robot_interfaces/lib:/home/mario/master_ws/install/moveit_task_constructor_msgs/lib:/home/mario/master_ws/install/moveit_task_constructor_demo/lib:/home/mario/master_ws/install/moveit_task_constructor_visualization/lib:/home/mario/master_ws/install/moveit_task_constructor_capabilities/lib:/home/mario/master_ws/install/pick_ik/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib /usr/bin/cmake --build /home/mario/master_ws/build/estun_control -- -j12 -l12
+[0.093s] [ 33%] Built target cartesian_planner
+[0.099s] [ 66%] Built target obstacle_planner
+[0.107s] [ 83%] [32mBuilding CXX object CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o[0m
+[2.848s] In file included from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:4[m[K:
+[2.848s] [01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+[2.848s]    50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+[2.848s]       |                                                                             [01;36m[K^[m[K
+[4.278s] In file included from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:5[m[K:
+[4.278s] [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+[4.278s]    50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+[4.278s]       |                                                                             [01;36m[K^[m[K
+[5.335s] [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kvoid MTCTaskNode::[01;32m[KgetObjects[m[K()[m[K’:
+[5.336s] [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:360:28:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<MTCTaskNode::getObjects()::data>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[5.336s]   360 |     if (task == false && [01;35m[Kj < objects.size()[m[K){
+[5.336s]       |                          [01;35m[K~~^~~~~~~~~~~~~~~~[m[K
+[5.336s] [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:363:12:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<MTCTaskNode::getObjects()::data>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[5.336s]   363 |       if([01;35m[Kj >= objects.size()[m[K){
+[5.337s]       |          [01;35m[K~~^~~~~~~~~~~~~~~~~[m[K
+[5.337s] [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:373:26:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<MTCTaskNode::getObjects()::data>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[5.337s]   373 |     if(task == true && [01;35m[Kj < objects.size()[m[K){
+[5.337s]       |                        [01;35m[K~~^~~~~~~~~~~~~~~~[m[K
+[5.410s] [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kmoveit::task_constructor::Task MTCTaskNode::[01;32m[KcreateGrabTask[m[K()[m[K’:
+[5.410s] [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:781:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kattach_object_stage[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[5.410s]   781 |   mtc::Stage* [01;35m[Kattach_object_stage[m[K = nullptr;  // Forward attach_object_stage to place pose generator
+[5.411s]       |               [01;35m[K^~~~~~~~~~~~~~~~~~~[m[K
+[5.411s] In file included from [01m[K/usr/include/c++/13/vector:66[m[K,
+[5.412s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/copy_all_parameter_values.hpp:19[m[K,
+[5.412s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:175[m[K,
+[5.412s]                  from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1[m[K:
+[5.412s] /usr/include/c++/13/bits/stl_vector.h: In instantiation of ‘[01m[Kclass std::vector<const std::__cxx11::basic_string<char> >[m[K’:
+[5.412s] [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1073:119:[m[K   required from here
+[5.413s] [01m[K/usr/include/c++/13/bits/stl_vector.h:440:66:[m[K [01;31m[Kerror: [m[Kstatic assertion failed: std::vector must have a non-const, non-volatile value_type
+[5.413s]   440 |       static_assert(is_same<typename remove_cv<_Tp>::type, _Tp>::[01;31m[Kvalue[m[K,
+[5.413s]       |                                                                  [01;31m[K^~~~~[m[K
+[5.413s] [01m[K/usr/include/c++/13/bits/stl_vector.h:440:66:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::integral_constant<bool, false>::value[m[K’ evaluates to false
+[5.413s] [01m[K/usr/include/c++/13/bits/stl_vector.h:443:64:[m[K [01;31m[Kerror: [m[Kstatic assertion failed: std::vector must have the same value_type as its allocator
+[5.414s]   443 |       static_assert(is_same<typename _Alloc::value_type, _Tp>::[01;31m[Kvalue[m[K,
+[5.414s]       |                                                                [01;31m[K^~~~~[m[K
+[5.414s] [01m[K/usr/include/c++/13/bits/stl_vector.h:443:64:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::integral_constant<bool, false>::value[m[K’ evaluates to false
+[5.423s] [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In constructor ‘[01m[KMTCPubSub::[01;32m[KMTCPubSub[m[K()[m[K’:
+[5.423s] [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1058:5:[m[K [01;31m[Kerror: [m[K‘[01m[KProbe_pose[m[K’ was not declared in this scope; did you mean ‘[01m[KProbe_pose_[m[K’?
+[5.423s]  1058 |     [01;31m[KProbe_pose[m[K.resize(8);
+[5.423s]       |     [01;31m[K^~~~~~~~~~[m[K
+[5.424s]       |     [32m[KProbe_pose_[m[K
+[5.424s] [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In lambda function:
+[5.424s] [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1065:48:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kmsg[m[K’
+[5.424s]  1065 |       this->ProbePose(geometry_msgs::msg::Pose [01;31m[Kmsg[m[K, std::string iterator)});
+[5.424s]       |                                                [01;31m[K^~~[m[K
+[5.425s] [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1065:65:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kiterator[m[K’
+[5.425s]  1065 |       this->ProbePose(geometry_msgs::msg::Pose msg, std::string [01;31m[Kiterator[m[K)});
+[5.425s]       |                                                                 [01;31m[K^~~~~~~~[m[K
+[5.425s] [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1063:132:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[5.425s]  1063 |       Probe_pose_[i] = this->create_subscription<geometry_msgs::msg::Pose>(iterator, 10, [this, iterator]([01;35m[Kgeometry_msgs::msg::Pose msg[m[K) {
+[5.426s]       |                                                                                                           [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[5.426s] [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kvoid MTCPubSub::[01;32m[KProbePose[m[K(geometry_msgs::msg::Pose, std::string)[m[K’:
+[5.426s] [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1104:12:[m[K [01;31m[Kerror: [m[Kswitch quantity not an integer
+[5.426s]  1104 |     switch([01;31m[Ktopic[m[K){
+[5.426s]       |            [01;31m[K^~~~~[m[K
+[5.427s] [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1106:20:[m[K [01;31m[Kerror: [m[Kuse of ‘[01m[Kthis[m[K’ in a constant expression
+[5.427s]  1106 |       case topics[1[01;31m[K][m[K:
+[5.427s]       |                    [01;31m[K^[m[K
+[5.427s] [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1112:20:[m[K [01;31m[Kerror: [m[Kuse of ‘[01m[Kthis[m[K’ in a constant expression
+[5.427s]  1112 |       case topics[2[01;31m[K][m[K:
+[5.427s]       |                    [01;31m[K^[m[K
+[5.428s] [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1118:20:[m[K [01;31m[Kerror: [m[Kuse of ‘[01m[Kthis[m[K’ in a constant expression
+[5.428s]  1118 |       case topics[3[01;31m[K][m[K:
+[5.428s]       |                    [01;31m[K^[m[K
+[5.428s] [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1124:20:[m[K [01;31m[Kerror: [m[Kuse of ‘[01m[Kthis[m[K’ in a constant expression
+[5.428s]  1124 |       case topics[4[01;31m[K][m[K:
+[5.428s]       |                    [01;31m[K^[m[K
+[5.429s] [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1130:20:[m[K [01;31m[Kerror: [m[Kuse of ‘[01m[Kthis[m[K’ in a constant expression
+[5.429s]  1130 |       case topics[5[01;31m[K][m[K:
+[5.429s]       |                    [01;31m[K^[m[K
+[5.429s] [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1136:20:[m[K [01;31m[Kerror: [m[Kuse of ‘[01m[Kthis[m[K’ in a constant expression
+[5.429s]  1136 |       case topics[6[01;31m[K][m[K:
+[5.430s]       |                    [01;31m[K^[m[K
+[5.430s] [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1142:20:[m[K [01;31m[Kerror: [m[Kuse of ‘[01m[Kthis[m[K’ in a constant expression
+[5.430s]  1142 |       case topics[7[01;31m[K][m[K:
+[5.430s]       |                    [01;31m[K^[m[K
+[5.430s] [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1148:20:[m[K [01;31m[Kerror: [m[Kuse of ‘[01m[Kthis[m[K’ in a constant expression
+[5.430s]  1148 |       case topics[8[01;31m[K][m[K:
+[5.430s]       |                    [01;31m[K^[m[K
+[9.532s] [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kbool MTCTaskNode::[01;32m[KdoTask[m[K()[m[K’:
+[9.533s] [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:540:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+[9.533s]   540 | [01;35m[K}[m[K
+[9.533s]       | [01;35m[K^[m[K
+[9.858s] gmake[2]: *** [CMakeFiles/mtc_estun.dir/build.make:76: CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o] Fehler 1
+[9.858s] gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/mtc_estun.dir/all] Fehler 2
+[9.859s] gmake: *** [Makefile:146: all] Fehler 2
+[9.863s] Invoked command in '/home/mario/master_ws/build/estun_control' returned '2': CMAKE_PREFIX_PATH=/home/mario/master_ws/install/moveit_task_constructor_core:/home/mario/master_ws/install/rviz_marker_tools:/home/mario/master_ws/install/robot_interfaces:/home/mario/master_ws/install/moveit_task_constructor_msgs:/home/mario/master_ws/install/vision_control:/home/mario/master_ws/install/moveit_task_constructor_demo:/home/mario/master_ws/install/moveit_task_constructor_visualization:/home/mario/master_ws/install/moveit_task_constructor_capabilities:/home/mario/master_ws/install/estun_control:/home/mario/master_ws/install/pick_ik:/home/mario/master_ws/install/estun_moveit:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/mario/master_ws/install/estun_er_hi_description:/home/mario/master_ws/install/estun_description:/home/mario/master_ws/install/ER20-2300-HI-FCE_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/mario/master_ws/install/moveit_task_constructor_core/lib:/home/mario/master_ws/install/rviz_marker_tools/lib:/home/mario/master_ws/install/robot_interfaces/lib:/home/mario/master_ws/install/moveit_task_constructor_msgs/lib:/home/mario/master_ws/install/moveit_task_constructor_demo/lib:/home/mario/master_ws/install/moveit_task_constructor_visualization/lib:/home/mario/master_ws/install/moveit_task_constructor_capabilities/lib:/home/mario/master_ws/install/pick_ik/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib /usr/bin/cmake --build /home/mario/master_ws/build/estun_control -- -j12 -l12

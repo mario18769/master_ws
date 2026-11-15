@@ -12,7 +12,8 @@ controller_manager:
     hand_controller:
       type: joint_trajectory_controller/JointTrajectoryController
 
-      
+    # hand_controller:
+    #   type: parallel_gripper_action_controller/GripperActionController      
 
 hand_controller:
   ros__parameters:
@@ -24,15 +25,37 @@ hand_controller:
     state_interfaces:
       - position
       - velocity
+    constraints:
+      goal_time: 10.0
+      stopped_velocity_tolerance: 0.005
+      joint_gripper_base_finger_base_left: {trajectory: 0.0, goal: 0.06}
+      joint_gripper_base_finger_base_right: {trajectory: 0.0, goal: 0.06}
+    # gains:
+    #   gains.joint_gripper_base_finger_base_left.p: 0.4
+    #   gains.joint_gripper_base_finger_base_left.i: 0.4
+    #   gains.joint_gripper_base_finger_base_left.d: 0.4
 
-    # allow_nonzero_velocity_at_trajectory_end: true
-    # action_monitor_rate: 20.0
-    # allow_stalling: true
-    # goal_tolerance: 0.01
-    # max_effort_interface: joint_gripper_base_finger_base_left/effort
-    # max_effort: 1300.0
-    # stall_timeout: 0.05
-    # stall_velocity_threshold: 0.001
+    #   gains.joint_gripper_base_finger_base_right.p: 0.4
+    #   gains.joint_gripper_base_finger_base_right.i: 0.4
+    #   gains.joint_gripper_base_finger_base_right.d: 0.4
+
+# hand_controller:
+#   ros__parameters:
+#     # command_interfaces:
+#     #   - position
+#     #   - effort
+#     # state_interfaces:
+#     #   - position
+#     #   - velocity
+    
+#     joint: joint_gripper_base_finger_base_right
+#     action_monitor_rate: 100.0
+#     allow_stalling: true
+#     goal_tolerance: 0.01
+#     max_effort_interface: joint_gripper_base_finger_base_right/effort
+#     max_effort: 1300.0
+#     stall_timeout: 0.0
+#     stall_velocity_threshold: 0.001 
 
 
 arm_controller:
@@ -83,21 +106,3 @@ arm_controller:
       # joint_04_05:
       #   trajectory: 0.05
       #   goal: 0.05
-
-    # gains:
-    # __map_joints:
-    #   p: {
-    #     type: double,
-    #     default_value: 0.2,
-    #     description: "Proportional gain :math:`k_p` for PID"
-    #   }
-    #   i: {
-    #     type: double,
-    #     default_value: 0.1,
-    #     description: "Integral gain :math:`k_i` for PID"
-    #   }
-    #   d: {
-    #     type: double,
-    #     default_value: 0.1,
-    #     description: "Derivative gain :math:`k_d` for PID"
-    #   }

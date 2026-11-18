@@ -71,6 +71,8 @@ def generate_launch_description():
         .robot_description_semantic(file_path="urdf/estun.srdf")
         .planning_pipelines(pipelines=["ompl", "pilz_industrial_motion_planner"],default_planning_pipeline="ompl",)
         .trajectory_execution(file_path="config/moveit_controllers.yaml")
+        .moveit_cpp(file_path="config/moveit_config.yaml")
+
         .to_moveit_configs()
     )
 
@@ -78,6 +80,7 @@ def generate_launch_description():
         package='moveit_ros_move_group',
         executable='move_group',
         output='screen',
+        arguments=["--ros-args", "--log-level", "ERROR"],
         parameters=[moveit_config.to_dict(),{"use_sim_time": True}, {"capabilities": "move_group/ExecuteTaskSolutionCapability"}],
     )
 
@@ -158,7 +161,9 @@ def generate_launch_description():
         executable="static_transform_publisher",
         name="static_transform_publisher",
         output="log",
-        arguments=["--x", "-0.4", "--y", "-0.5", "--z", "2.500", "--roll", "0.0", "--pitch", "1.309", "--yaw", "-1.5708 ", "--frame-id", "world", "--child-frame-id", "Sensor/link_sensor/depth_camera1"],
+        arguments=["--x", "-0.4", "--y", "-0.1", "--z", "2.300", "--roll", "0.0", "--pitch", "1.091", "--yaw", "-1.5708 ", "--frame-id", "world", "--child-frame-id", "Sensor/link_sensor/depth_camera1"],
+
+        
     )
 
     load_joint_state_broadcaster = ExecuteProcess(
@@ -199,6 +204,15 @@ def generate_launch_description():
         package="vision_control",
         executable="pcl_pose_estimation",
         output="screen",
+        parameters=[{"use_sim_time": True},],
+    )
+
+    master_node = Node(
+    
+        package="estun_control",
+        executable="master_node",
+        output="screen",
+        parameters=[{"use_sim_time": True},],
     )
 
     mtc_node = Node(
@@ -206,6 +220,8 @@ def generate_launch_description():
         package="estun_control",
         executable="mtc_estun",
         output="screen",
+        arguments=["--ros-args", "--log-level", "ERROR"],
+        # prefix=['taskset -c 0-3'],
         parameters=[
             {"use_sim_time": True},
             moveit_config.robot_description,
@@ -297,7 +313,15 @@ def generate_launch_description():
                 target_action=load_hand_controller,
                 on_completion=[LogInfo(msg='Starte pcl_pose_estimation \n'), pose_estimation_node]
             )
-        ),       
+        ),
+
+        RegisterEventHandler(
+            OnExecutionComplete(
+                
+                target_action=load_hand_controller,
+                on_completion=[LogInfo(msg='Starte master_node \n'), master_node]
+            )
+        ),        
 
         RegisterEventHandler(
             OnProcessStart(

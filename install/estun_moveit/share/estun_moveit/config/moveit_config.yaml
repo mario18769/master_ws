@@ -1,0 +1,13 @@
+planning_scene_monitor_options:
+  robot_description_planning:
+    default_robot_padding: 0.05  # Abstand in Metern (hier: 5 cm)
+
+
+ompl_rrt_star:
+  plan_request_params:
+    planning_attempts: 2
+    planning_pipeline: ompl_rrt_star # Different OMPL pipeline name!
+    planner_id: "PRMkConfigDefault"
+    max_velocity_scaling_factor: 0.3
+    max_acceleration_scaling_factor: 0.3
+    planning_time: 10.0

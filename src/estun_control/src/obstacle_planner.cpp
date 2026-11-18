@@ -54,7 +54,7 @@ class ObstaclePlanner : public rclcpp_lifecycle::LifecycleNode {
 
             //object_pose_sub_->on_activate();
             run();
-            object_pose_sub_ = this->create_subscription<robot_interfaces::msg::ObjectPose>("/ObjectPose", 10, std::bind(&ObstaclePlanner::addProbekoerper, this, std::placeholders::_1));
+            object_pose_sub_ = this->create_subscription<robot_interfaces::msg::ObjectPose>("/ObjectPose", rclcpp::QoS(1).durability_volatile().best_effort(), std::bind(&ObstaclePlanner::addProbekoerper, this, std::placeholders::_1));
 
             return rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn::SUCCESS;
         }
@@ -90,8 +90,6 @@ class ObstaclePlanner : public rclcpp_lifecycle::LifecycleNode {
         rclcpp::Subscription<robot_interfaces::msg::ObjectPose>::SharedPtr object_pose_sub_;
         rclcpp::Node::SharedPtr _node;
         std::vector<robot_interfaces::msg::ObjectPose> msg_vector_new;
-        moveit::planning_interface::MoveGroupInterface *_move_group;
-        moveit::planning_interface::PlanningSceneInterface planning_scene_interface;
         std::vector<std::string> model;
         std::vector<std::string> mesh;
         std::vector<std::vector<double>> pos;
@@ -101,7 +99,7 @@ class ObstaclePlanner : public rclcpp_lifecycle::LifecycleNode {
         int count_objects = 0;
         int run_count = 0;
 };
-
+/*
 void ObstaclePlanner::plan(){
 
 
@@ -122,7 +120,7 @@ void ObstaclePlanner::plan(){
     setup_world();
     
 
-    RCLCPP_INFO(this->get_logger(),"Setup-World is done");
+    //RCLCPP_INFO(this->get_logger(),"Setup-World is done");
 
     sleep(3);
     //Transformation 
@@ -131,7 +129,7 @@ void ObstaclePlanner::plan(){
             t = tf_buffer->lookupTransform(fromFrameRel, toFrameRel, tf2::TimePointZero); //TimePointZero --> aktuellste Transformation zurückgeben
             tf_found = true;
         } catch (const tf2::TransformException & ex) {
-            RCLCPP_INFO(this->get_logger(), "Could not transform %s to %s: %s Try again",toFrameRel.c_str(), fromFrameRel.c_str(), ex.what());
+            //RCLCPP_INFO(this->get_logger(), "Could not transform %s to %s: %s Try again",toFrameRel.c_str(), fromFrameRel.c_str(), ex.what());
             sleep(1);
         }
     }
@@ -153,7 +151,7 @@ void ObstaclePlanner::plan(){
 
     bool success_plan = (_move_group->plan(my_plan) == moveit::core::MoveItErrorCode::SUCCESS);
 
-    RCLCPP_INFO(this->get_logger(),"Plan status: %i", success_plan);
+    //RCLCPP_INFO(this->get_logger(),"Plan status: %i", success_plan);
 
     // bool success_move = ( _move_group->move() == moveit::core::MoveItErrorCode::SUCCESS);
         
@@ -161,9 +159,9 @@ void ObstaclePlanner::plan(){
 
     auto execute_result = _move_group->execute(my_plan);
 
-    RCLCPP_INFO(this->get_logger(),"Execute result: %d",execute_result.val);
+    //RCLCPP_INFO(this->get_logger(),"Execute result: %d",execute_result.val);
 }
-
+*/
 void ObstaclePlanner::run() {
 
     auto node = rclcpp::Node::make_shared("Obstacle_parser");
@@ -175,11 +173,13 @@ void ObstaclePlanner::run() {
     // rclcpp::spin(node);
 
 
-    RCLCPP_INFO(this->get_logger(),"Node Run completed");
+    //RCLCPP_INFO(this->get_logger(),"Node Run completed");
 }
 
 void ObstaclePlanner::addProbekoerper(robot_interfaces::msg::ObjectPose msg){
 
+    moveit::planning_interface::MoveGroupInterface *_move_group;
+    moveit::planning_interface::PlanningSceneInterface planning_scene_interface;
 
     _move_group = new moveit::planning_interface::MoveGroupInterface(_node, "arm");
 
@@ -199,17 +199,17 @@ void ObstaclePlanner::addProbekoerper(robot_interfaces::msg::ObjectPose msg){
 
         std::vector<std::string> object_names = planning_scene_interface.getKnownObjectNames();
 
-        std::cout << "Anzahl Known Objects: " << object_names.size() << std::endl;
+        //std::cout << "Anzahl Known Objects: " << object_names.size() << std::endl;
 
         std::vector<std::string> objects_delete;
 
         for (auto& iterator : object_names){
             
-            std::cout << "Aktueller Name des Objekts: " << iterator << std::endl;
+            //std::cout << "Aktueller Name des Objekts: " << iterator << std::endl;
 
             if (iterator.starts_with("Cube") || iterator.starts_with("Cylinder") ){
 
-                std::cout << "Removed Object: " << iterator << std::endl;
+                //std::cout << "Removed Object: " << iterator << std::endl;
 
                 objects_delete.push_back(iterator);
             }
@@ -228,11 +228,11 @@ void ObstaclePlanner::addProbekoerper(robot_interfaces::msg::ObjectPose msg){
 
         for (auto& msg_component : msg_vector_old){
 
-            std::cout<< "String: "<< msg_component.object_type << std::endl;
+            // std::cout<< "String: "<< msg_component.object_type << std::endl;
 
             if (msg_component.object_type == "Cylinder"){
 
-                RCLCPP_INFO(this->get_logger(),"Cylinder wird verarbeitet");
+                //RCLCPP_INFO(this->get_logger(),"Cylinder wird verarbeitet");
 
                 moveit_msgs::msg::CollisionObject object;
                 object.header.frame_id = _move_group->getPlanningFrame();
@@ -294,7 +294,7 @@ void ObstaclePlanner::addProbekoerper(robot_interfaces::msg::ObjectPose msg){
 
                 if (planning_scene_interface.applyCollisionObject(object) == true){
 
-                    RCLCPP_INFO(this->get_logger(),"Cylinder succesfully added to planningscene");
+                    //RCLCPP_INFO(this->get_logger(),"Cylinder succesfully added to planningscene");
                 }
 
                 else{ 
@@ -354,7 +354,7 @@ void ObstaclePlanner::addProbekoerper(robot_interfaces::msg::ObjectPose msg){
 
                 if (planning_scene_interface.applyCollisionObject(object) == true){
 
-                    RCLCPP_INFO(this->get_logger(),"Cube succesfully added to planningscene");
+                    //RCLCPP_INFO(this->get_logger(),"Cube succesfully added to planningscene");
                 }
 
                 else{
@@ -372,28 +372,27 @@ void ObstaclePlanner::addProbekoerper(robot_interfaces::msg::ObjectPose msg){
 
 void ObstaclePlanner::setup_world(){
 
+    moveit::planning_interface::MoveGroupInterface *_move_group;
+    moveit::planning_interface::PlanningSceneInterface planning_scene_interface;
+
     RCLCPP_INFO(this->get_logger(),"SetupWorld wird gestartet");
 
     _move_group = new moveit::planning_interface::MoveGroupInterface(_node, "arm");
 
-    RCLCPP_INFO(this->get_logger(),"SetupWorld wird gestartet");
-
-    // _move_group->attachObject(grasping_object.id, "endeffector_1", connection_links);
-    RCLCPP_INFO(this->get_logger(),"For-Schleife beginnt");
     for (int i = 0 ; i < count_objects; i++){
 
         //Objekt aus STL als Collisions-Objekt einlesen----------------------------------------------------------------------------------------------------------------------------------
-        RCLCPP_INFO(this->get_logger(),"For-Schleife angekommen");
+        //RCLCPP_INFO(this->get_logger(),"For-Schleife angekommen");
         moveit_msgs::msg::CollisionObject test_object; //Collisions Objekt wird angelegt
         test_object.header.frame_id = _move_group->getPlanningFrame();
 
         test_object.id = model[i];
 
-        RCLCPP_INFO(this->get_logger(),"TEST-Mesh");
+        //RCLCPP_INFO(this->get_logger(),"TEST-Mesh");
 
         std::string test = mesh.at(i);
         
-        RCLCPP_INFO(this->get_logger(),"Mesh-String: %s", test.c_str() );
+        //RCLCPP_INFO(this->get_logger(),"Mesh-String: %s", test.c_str() );
         
         shapes::Mesh* m = shapes::createMeshFromResource(mesh[i]);
 
@@ -402,12 +401,12 @@ void ObstaclePlanner::setup_world(){
         
         if(shapes::constructMsgFromShape(m,test_mesh_msg)== false){
 
-            RCLCPP_INFO(this->get_logger(),"Could not generate Mesh vom STL");
+           // RCLCPP_INFO(this->get_logger(),"Could not generate Mesh vom STL");
 
         }
         
         else{
-            RCLCPP_INFO(this->get_logger(),"Mesh gerneration succesful");
+            //RCLCPP_INFO(this->get_logger(),"Mesh gerneration succesful");
         }
         //Mesh wird aus STL erzeugt und in MSG geschrieben
         test_mesh = boost::get<shape_msgs::msg::Mesh>(test_mesh_msg); //zur Laufzeit wird geprüft/extrahiert, dass im variant ein Mesh steckt --> test_mesh bekommt den konkreten Typ
@@ -442,12 +441,12 @@ void ObstaclePlanner::setup_world(){
 
         if(planning_scene_interface.applyCollisionObject(test_object) == false){
 
-            RCLCPP_INFO(this->get_logger(),"Could not add Mesh to planningscene");
+            //RCLCPP_INFO(this->get_logger(),"Could not add Mesh to planningscene");
 
         }
         
         else{
-            RCLCPP_INFO(this->get_logger(),"Mesh succesfully added to planningscene");
+            //RCLCPP_INFO(this->get_logger(),"Mesh succesfully added to planningscene");
         }
 
         std::vector<moveit_msgs::msg::CollisionObject> collision_objects;  
@@ -467,23 +466,25 @@ void ObstaclePlanner::obstacle_parser(){
 
     if(!sdf::readFile(sdfPath, sdfElement)){
 
-        RCLCPP_INFO(this->get_logger(),"Pfad nicht korrekt oder keine valide SDF-File: %s", sdfPath.c_str());
+        //RCLCPP_INFO(this->get_logger(),"Pfad nicht korrekt oder keine valide SDF-File: %s", sdfPath.c_str());
         return;
     }
 
-    else{RCLCPP_INFO(this->get_logger(),"SUCCESS parsing SDF");}
+    else{
+        //RCLCPP_INFO(this->get_logger(),"SUCCESS parsing SDF");
+    }
 
     const sdf::ElementPtr rootElement = sdfElement->Root(); //get one Element above the world element
 
     if(!rootElement->HasElement("world")){
 
-        RCLCPP_INFO(this->get_logger(),"Given path is not a model SDF File");
+        //RCLCPP_INFO(this->get_logger(),"Given path is not a model SDF File");
 
     }
 
     const sdf::ElementPtr worldElement = rootElement->GetElement("world");
     const std::string worldName = worldElement->Get<std::string>("name");
-    RCLCPP_INFO(this->get_logger(),"Found: %s model", worldName.c_str());
+    //RCLCPP_INFO(this->get_logger(),"Found: %s model", worldName.c_str());
 
     sdf::ElementPtr modelElement = worldElement->GetElement("model");
 
@@ -504,7 +505,7 @@ void ObstaclePlanner::obstacle_parser(){
             else{
 
                 modelElement = modelElement->GetNextElement("model");
-                RCLCPP_INFO(this->get_logger(),"Model wird übersprungen");
+                //RCLCPP_INFO(this->get_logger(),"Model wird übersprungen");
                 modelName = modelElement->Get<std::string>("name");
             } 
         }
@@ -524,7 +525,7 @@ void ObstaclePlanner::obstacle_parser(){
 
             if(geometryElement->GetElement("mesh") == nullptr){
 
-                RCLCPP_INFO(this->get_logger(),"Model hat kein Mesh");
+                //RCLCPP_INFO(this->get_logger(),"Model hat kein Mesh");
                 modelElement = modelElement->GetNextElement("model");
                 continue;
             }
@@ -542,7 +543,7 @@ void ObstaclePlanner::obstacle_parser(){
             uriString = "package://" + uriString;
 
             //mesh.push_back(uriString);
-            RCLCPP_INFO(this->get_logger(),"String: %s", uriString.c_str());
+            //RCLCPP_INFO(this->get_logger(),"String: %s", uriString.c_str());
 
             gz::math::Pose3d position= poseElement->Get<gz::math::Pose3d>();
             
@@ -560,13 +561,14 @@ void ObstaclePlanner::obstacle_parser(){
             model.push_back(modelName);
             mesh.push_back(uriString);
 
-            RCLCPP_INFO(this->get_logger(),"Position: %f , %f , %f , %f , %f , %f", pose_vector[0], pose_vector[1], pose_vector[2] ,pose_vector[3], pose_vector[4], pose_vector[5]);
+            //RCLCPP_INFO(this->get_logger(),"Position: %f , %f , %f , %f , %f , %f", pose_vector[0], pose_vector[1], pose_vector[2] ,pose_vector[3], pose_vector[4], pose_vector[5]);
 
             if(modelElement->GetNextElement("model") != nullptr){
 
                 modelElement = modelElement->GetNextElement("model");
             
-                RCLCPP_INFO(this->get_logger(),"NextModel"); }
+                //RCLCPP_INFO(this->get_logger(),"NextModel");
+            }
 
             else{loop_model = false;}
         }
@@ -586,7 +588,7 @@ int main(int argc, char * argv[]) {
 
     auto node_obstacle_planner = std::make_shared<ObstaclePlanner>();
 
-    rclcpp::executors::MultiThreadedExecutor executor;
+    rclcpp::executors::SingleThreadedExecutor executor;
 
     auto spin_thread = std::make_unique<std::thread>([&executor, &node_obstacle_planner]() {
 

@@ -1,5 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/robot_interfaces__cpp"
+  "rosidl_generator_cpp/robot_interfaces/action/detail/mtc_action__builder.hpp"
+  "rosidl_generator_cpp/robot_interfaces/action/detail/mtc_action__struct.hpp"
+  "rosidl_generator_cpp/robot_interfaces/action/detail/mtc_action__traits.hpp"
+  "rosidl_generator_cpp/robot_interfaces/action/detail/mtc_action__type_support.hpp"
+  "rosidl_generator_cpp/robot_interfaces/action/mtc_action.hpp"
   "rosidl_generator_cpp/robot_interfaces/msg/detach_msg.hpp"
   "rosidl_generator_cpp/robot_interfaces/msg/detail/detach_msg__builder.hpp"
   "rosidl_generator_cpp/robot_interfaces/msg/detail/detach_msg__struct.hpp"

@@ -1,0 +1,72 @@
+[ 33%] Built target mtc_estun
+[ 50%] [32mBuilding CXX object CMakeFiles/master_node.dir/src/master_node.cpp.o[0m
+[ 83%] Built target obstacle_planner
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:1[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:51:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   51 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:2[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:[m[K In member function ‘[01m[Kbool MasterNode::[01;32m[KLcMtcRequest[m[K(int)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kservice_node_change[m[K’ was not declared in this scope; did you mean ‘[01m[Kservice_node[m[K’?
+   77 |     client_lc_state_mtc_change = [01;31m[Kservice_node_change[m[K->create_client<lifecycle_msgs::srv::ChangeState>("/MTCPubSub_Node/change_state");
+      |                                  [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+      |                                  [32m[Kservice_node[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:101:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+   77 |     client_lc_state_mtc_change = service_node_change->create_client<lifecycle_msgs::srv::ChangeState[01;31m[K>[m[K("/MTCPubSub_Node/change_state");
+      |                                                                                                     [01;31m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:88:13:[m[K [01;31m[Kerror: [m[Kreturn-statement with no value, in function returning ‘[01m[Kbool[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+   88 |             [01;31m[Kreturn[m[K ;
+      |             [01;31m[K^~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:111:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kstate[m[K’ was not declared in this scope; did you mean ‘[01m[K_xstate[m[K’?
+  111 |         request_change->transition.id = [01;31m[Kstate[m[K;
+      |                                         [01;31m[K^~~~~[m[K
+      |                                         [32m[K_xstate[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:117:17:[m[K [01;31m[Kerror: [m[Kreturn-statement with no value, in function returning ‘[01m[Kbool[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  117 |                 [01;31m[Kreturn[m[K ;
+      |                 [01;31m[K^~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:122:83:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Krclcpp::Client<lifecycle_msgs::srv::GetState>::async_send_request(std::shared_ptr<lifecycle_msgs::srv::ChangeState_Request_<std::allocator<void> > >&)[m[K’
+  122 |         auto future_result_change = [01;31m[Kclient_lc_state_mtc_change->async_send_request(request_change)[m[K;
+      |                                     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node.hpp:40[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/kinematics_base/kinematics_base.hpp:43[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_model/joint_model_group.hpp:42[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_model/robot_model.hpp:45[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_state/robot_state.hpp:40[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.hpp:41[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:52[m[K:
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/client.hpp:672:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class CallbackT, typename std::enable_if<rclcpp::function_traits::same_arguments<CallbackT, std::function<void(std::shared_future<std::shared_ptr<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> > > >)> >::value, void>::type* <anonymous> > rclcpp::Client<ServiceT>::SharedFutureAndRequestId rclcpp::Client<ServiceT>::[01;32m[Kasync_send_request[m[K(SharedRequest, CallbackT&&) [35m[K[with typename std::enable_if<rclcpp::function_traits::same_arguments<CallbackT, std::function<void(std::shared_future<typename ServiceT::Response::SharedPtr>)> >::value>::type* <anonymous> = CallbackT; ServiceT = lifecycle_msgs::srv::GetState][m[K[m[K’
+  672 |   [01;36m[Kasync_send_request[m[K(SharedRequest request, CallbackT && cb)
+      |   [01;36m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/client.hpp:672:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:122:83:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+  122 |         auto future_result_change = [01;36m[Kclient_lc_state_mtc_change->async_send_request(request_change)[m[K;
+      |                                     [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/client.hpp:703:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class CallbackT, typename std::enable_if<rclcpp::function_traits::same_arguments<CallbackT, std::function<void(std::shared_future<std::pair<std::shared_ptr<lifecycle_msgs::srv::GetState_Request_<std::allocator<void> > >, std::shared_ptr<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> > > > >)> >::value, void>::type* <anonymous> > rclcpp::Client<ServiceT>::SharedFutureWithRequestAndRequestId rclcpp::Client<ServiceT>::[01;32m[Kasync_send_request[m[K(SharedRequest, CallbackT&&) [35m[K[with typename std::enable_if<rclcpp::function_traits::same_arguments<CallbackT, std::function<void(std::shared_future<std::pair<typename ServiceT::Request::SharedPtr, typename ServiceT::Response::SharedPtr> >)> >::value>::type* <anonymous> = CallbackT; ServiceT = lifecycle_msgs::srv::GetState][m[K[m[K’
+  703 |   [01;36m[Kasync_send_request[m[K(SharedRequest request, CallbackT && cb)
+      |   [01;36m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/client.hpp:703:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:122:83:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+  122 |         auto future_result_change = [01;36m[Kclient_lc_state_mtc_change->async_send_request(request_change)[m[K;
+      |                                     [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/client.hpp:637:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Client<ServiceT>::FutureAndRequestId rclcpp::Client<ServiceT>::[01;32m[Kasync_send_request[m[K(SharedRequest) [35m[K[with ServiceT = lifecycle_msgs::srv::GetState; SharedRequest = std::shared_ptr<lifecycle_msgs::srv::GetState_Request_<std::allocator<void> > >][m[K[m[K’
+  637 |   [01;36m[Kasync_send_request[m[K(SharedRequest request)
+      |   [01;36m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/client.hpp:637:36:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kshared_ptr<[01;32m[Klifecycle_msgs::srv::ChangeState_Request_<std::allocator<void> >[m[K>[m[K’ to ‘[01m[Kshared_ptr<[01;32m[Klifecycle_msgs::srv::GetState_Request_<std::allocator<void> >[m[K>[m[K’
+  637 |   async_send_request([01;36m[KSharedRequest request[m[K)
+      |                      [01;36m[K~~~~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:131:25:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+  131 |             fail_count++
+      |                         [01;31m[K^[m[K
+      |                         [32m[K;[m[K
+  132 |         [32m[K}[m[K
+      |         [32m[K~[m[K                
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:67:35:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmtc_state[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   67 | bool MasterNode::LcMtcRequest([01;35m[Kint mtc_state[m[K){
+      |                               [01;35m[K~~~~^~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/master_node.dir/build.make:76: CMakeFiles/master_node.dir/src/master_node.cpp.o] Fehler 1
+gmake[1]: *** [CMakeFiles/Makefile2:141: CMakeFiles/master_node.dir/all] Fehler 2
+gmake: *** [Makefile:146: all] Fehler 2

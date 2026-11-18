@@ -23,30 +23,53 @@ find_package(sdformat14 REQUIRED)
 find_package(moveit_task_constructor_core REQUIRED)
 find_package(robot_interfaces REQUIRED)
 find_package(rclcpp_lifecycle REQUIRED)
+find_package(rclcpp_action REQUIRED)
+find_package(lifecycle_msgs REQUIRED)
+find_package(std_srvs REQUIRED)
 
 
 
-add_executable( cartesian_planner src/cartesian_planner.cpp ) 
-ament_target_dependencies(cartesian_planner rclcpp std_msgs moveit_ros_planning_interface)
+
+add_executable( master_node src/master_node.cpp ) 
+ament_target_dependencies(
+  master_node 
+  rclcpp 
+  std_msgs 
+  rclcpp_lifecycle
+  moveit_ros_planning_interface
+  rclcpp_action
+  robot_interfaces
+  lifecycle_msgs
+  std_srvs
+)
 
 add_executable( obstacle_planner src/obstacle_planner.cpp ) 
-ament_target_dependencies(obstacle_planner 
-rclcpp 
-std_msgs 
-moveit_ros_planning_interface
-moveit_msgs
-moveit
-geometric_shapes
-geometry_msgs
-tf2_ros
-tf2
-robot_interfaces
-rclcpp_lifecycle
+ament_target_dependencies(
+  obstacle_planner 
+  rclcpp 
+  std_msgs 
+  moveit_ros_planning_interface
+  moveit_msgs
+  moveit
+  geometric_shapes
+  geometry_msgs
+  tf2_ros
+  tf2
+  robot_interfaces
+  rclcpp_lifecycle
 )
 
 
 add_executable(mtc_estun src/mtc_estun.cpp)
-ament_target_dependencies(mtc_estun moveit_task_constructor_core rclcpp robot_interfaces rclcpp_lifecycle)
+ament_target_dependencies(
+  mtc_estun 
+  moveit_task_constructor_core 
+  rclcpp 
+  robot_interfaces 
+  rclcpp_lifecycle
+  rclcpp_action
+)
+
 target_include_directories(mtc_estun PUBLIC
 $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
 $<INSTALL_INTERFACE:include>)
@@ -65,7 +88,7 @@ install(DIRECTORY meshes
   DESTINATION share/${PROJECT_NAME}
 )
 
-install(TARGETS cartesian_planner
+install(TARGETS master_node
   RUNTIME DESTINATION lib/${PROJECT_NAME}
 )
 

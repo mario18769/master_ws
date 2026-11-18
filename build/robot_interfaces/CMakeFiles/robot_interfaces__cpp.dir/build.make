@@ -76,6 +76,11 @@ CMakeFiles/robot_interfaces__cpp: rosidl_generator_cpp/robot_interfaces/msg/deta
 CMakeFiles/robot_interfaces__cpp: rosidl_generator_cpp/robot_interfaces/msg/detail/detach_msg__struct.hpp
 CMakeFiles/robot_interfaces__cpp: rosidl_generator_cpp/robot_interfaces/msg/detail/detach_msg__traits.hpp
 CMakeFiles/robot_interfaces__cpp: rosidl_generator_cpp/robot_interfaces/msg/detail/detach_msg__type_support.hpp
+CMakeFiles/robot_interfaces__cpp: rosidl_generator_cpp/robot_interfaces/action/mtc_action.hpp
+CMakeFiles/robot_interfaces__cpp: rosidl_generator_cpp/robot_interfaces/action/detail/mtc_action__builder.hpp
+CMakeFiles/robot_interfaces__cpp: rosidl_generator_cpp/robot_interfaces/action/detail/mtc_action__struct.hpp
+CMakeFiles/robot_interfaces__cpp: rosidl_generator_cpp/robot_interfaces/action/detail/mtc_action__traits.hpp
+CMakeFiles/robot_interfaces__cpp: rosidl_generator_cpp/robot_interfaces/action/detail/mtc_action__type_support.hpp
 CMakeFiles/robot_interfaces__cpp: rosidl_generator_cpp/robot_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
 
 rosidl_generator_cpp/robot_interfaces/msg/object_pose.hpp: /opt/ros/jazzy/lib/rosidl_generator_cpp/rosidl_generator_cpp
@@ -99,6 +104,15 @@ rosidl_generator_cpp/robot_interfaces/msg/object_pose.hpp: /opt/ros/jazzy/share/
 rosidl_generator_cpp/robot_interfaces/msg/object_pose.hpp: /opt/ros/jazzy/share/rosidl_generator_cpp/resource/srv__type_support.hpp.em
 rosidl_generator_cpp/robot_interfaces/msg/object_pose.hpp: rosidl_adapter/robot_interfaces/msg/ObjectPose.idl
 rosidl_generator_cpp/robot_interfaces/msg/object_pose.hpp: rosidl_adapter/robot_interfaces/msg/DetachMsg.idl
+rosidl_generator_cpp/robot_interfaces/msg/object_pose.hpp: rosidl_adapter/robot_interfaces/action/MtcAction.idl
+rosidl_generator_cpp/robot_interfaces/msg/object_pose.hpp: /opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl
+rosidl_generator_cpp/robot_interfaces/msg/object_pose.hpp: /opt/ros/jazzy/share/builtin_interfaces/msg/Duration.idl
+rosidl_generator_cpp/robot_interfaces/msg/object_pose.hpp: /opt/ros/jazzy/share/builtin_interfaces/msg/Time.idl
+rosidl_generator_cpp/robot_interfaces/msg/object_pose.hpp: /opt/ros/jazzy/share/action_msgs/msg/GoalInfo.idl
+rosidl_generator_cpp/robot_interfaces/msg/object_pose.hpp: /opt/ros/jazzy/share/action_msgs/msg/GoalStatus.idl
+rosidl_generator_cpp/robot_interfaces/msg/object_pose.hpp: /opt/ros/jazzy/share/action_msgs/msg/GoalStatusArray.idl
+rosidl_generator_cpp/robot_interfaces/msg/object_pose.hpp: /opt/ros/jazzy/share/action_msgs/srv/CancelGoal.idl
+rosidl_generator_cpp/robot_interfaces/msg/object_pose.hpp: /opt/ros/jazzy/share/unique_identifier_msgs/msg/UUID.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/mario/master_ws/build/robot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
 	/usr/bin/python3 /opt/ros/jazzy/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/mario/master_ws/build/robot_interfaces/rosidl_generator_cpp__arguments.json
 
@@ -129,10 +143,30 @@ rosidl_generator_cpp/robot_interfaces/msg/detail/detach_msg__traits.hpp: rosidl_
 rosidl_generator_cpp/robot_interfaces/msg/detail/detach_msg__type_support.hpp: rosidl_generator_cpp/robot_interfaces/msg/object_pose.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/robot_interfaces/msg/detail/detach_msg__type_support.hpp
 
+rosidl_generator_cpp/robot_interfaces/action/mtc_action.hpp: rosidl_generator_cpp/robot_interfaces/msg/object_pose.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/robot_interfaces/action/mtc_action.hpp
+
+rosidl_generator_cpp/robot_interfaces/action/detail/mtc_action__builder.hpp: rosidl_generator_cpp/robot_interfaces/msg/object_pose.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/robot_interfaces/action/detail/mtc_action__builder.hpp
+
+rosidl_generator_cpp/robot_interfaces/action/detail/mtc_action__struct.hpp: rosidl_generator_cpp/robot_interfaces/msg/object_pose.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/robot_interfaces/action/detail/mtc_action__struct.hpp
+
+rosidl_generator_cpp/robot_interfaces/action/detail/mtc_action__traits.hpp: rosidl_generator_cpp/robot_interfaces/msg/object_pose.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/robot_interfaces/action/detail/mtc_action__traits.hpp
+
+rosidl_generator_cpp/robot_interfaces/action/detail/mtc_action__type_support.hpp: rosidl_generator_cpp/robot_interfaces/msg/object_pose.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/robot_interfaces/action/detail/mtc_action__type_support.hpp
+
 rosidl_generator_cpp/robot_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp: rosidl_generator_cpp/robot_interfaces/msg/object_pose.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/robot_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
 
 robot_interfaces__cpp: CMakeFiles/robot_interfaces__cpp
+robot_interfaces__cpp: rosidl_generator_cpp/robot_interfaces/action/detail/mtc_action__builder.hpp
+robot_interfaces__cpp: rosidl_generator_cpp/robot_interfaces/action/detail/mtc_action__struct.hpp
+robot_interfaces__cpp: rosidl_generator_cpp/robot_interfaces/action/detail/mtc_action__traits.hpp
+robot_interfaces__cpp: rosidl_generator_cpp/robot_interfaces/action/detail/mtc_action__type_support.hpp
+robot_interfaces__cpp: rosidl_generator_cpp/robot_interfaces/action/mtc_action.hpp
 robot_interfaces__cpp: rosidl_generator_cpp/robot_interfaces/msg/detach_msg.hpp
 robot_interfaces__cpp: rosidl_generator_cpp/robot_interfaces/msg/detail/detach_msg__builder.hpp
 robot_interfaces__cpp: rosidl_generator_cpp/robot_interfaces/msg/detail/detach_msg__struct.hpp

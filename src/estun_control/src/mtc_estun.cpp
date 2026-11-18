@@ -28,25 +28,20 @@
 #include "tf2_ros/transform_listener.h"
 #include "tf2_ros/buffer.h"
 #include "rclcpp_lifecycle/lifecycle_node.hpp"
+#include "rclcpp_action/rclcpp_action.hpp"
+#include "../robot_interfaces/robot_interfaces/action/mtc_action.hpp"
+#include "../robot_interfaces/robot_interfaces/msg/object_pose.hpp"
 
 
 static const rclcpp::Logger LOGGER = rclcpp::get_logger("mtc_estun");
 namespace mtc = moveit::task_constructor;
 
-struct pose_struct{
-
-  std::string name = "empty";
-
-  float x = 0.0;
-  float y = 0.0;
-  float z = 0.0;
-};
-
-std::vector<pose_struct> probe_pose_vec;
-
 class MTCTaskNode
 {
   public:
+
+    using MtcAction = robot_interfaces::action::MtcAction;
+    using GoalHandle = rclcpp_action::ServerGoalHandle<MtcAction>;
 
     MTCTaskNode(const rclcpp::NodeOptions& options);
 
@@ -54,31 +49,45 @@ class MTCTaskNode
 
     bool doTask();
     void setupPlanningScene();
-    void getObjects();
+    void getObjects(const std::shared_ptr<GoalHandle>);
     int testAttach();
+    bool doHome();
+    void execute(const std::shared_ptr<GoalHandle>);
+    void ProbePose(geometry_msgs::msg::Pose, std::string);
 
   private:
 
   friend class MTCPubSub;
 
-   std::shared_ptr<tf2_ros::TransformListener> tf_listener_{nullptr};
+    std::shared_ptr<tf2_ros::TransformListener> tf_listener_{nullptr};
     std::unique_ptr<tf2_ros::Buffer> tf_buffer_;
     geometry_msgs::msg::TransformStamped tf_msg;
     std::string target_frame_;
+    std::vector<robot_interfaces::msg::ObjectPose> msg_vector_new;
+
+    rclcpp::Subscription<robot_interfaces::msg::ObjectPose>::SharedPtr object_pose_sub_;
 
     std::vector<rclcpp::Publisher<std_msgs::msg::Empty>::SharedPtr> attach_pub_;
     std::vector<rclcpp::Publisher<std_msgs::msg::Empty>::SharedPtr> detach_pub_;
 
     std::vector<std::string> attach_topics ={"/Probekoerper1/attach","/Probekoerper2/attach","/Probekoerper3/attach","/Probekoerper4/attach",
-      "/Probekoerper5/attach","/Probekoerper6/attach","/Probekoerper7/attach","/Probekoerper8/attach"};
+    "/Probekoerper5/attach","/Probekoerper6/attach","/Probekoerper7/attach","/Probekoerper8/attach"};
 
     std::vector<std::string> detach_topics = {"/Probekoerper1/detach","/Probekoerper2/detach","/Probekoerper3/detach","/Probekoerper4/detach",
-      "/Probekoerper5/detach","/Probekoerper6/detach","/Probekoerper7/detach","/Probekoerper8/detach"};
+    "/Probekoerper5/detach","/Probekoerper6/detach","/Probekoerper7/detach","/Probekoerper8/detach"};
+    
+    std::vector<std::string> pose_topics = {"/Probekoerper1/pose", "Probekoerper2/pose", "/Probekoerper3/pose", "/Probekoerper4/pose", 
+    "/Probekoerper5/pose","/Probekoerper6/pose", "/Probekoerper7/pose","/Probekoerper8/pose"};
+
+    std::vector<rclcpp::Subscription<geometry_msgs::msg::Pose>::SharedPtr> Probe_pose_;
+    
 
   
   // Compose an MTC task from a series of stages.
   mtc::Task createGrabTask();
   mtc::Task createTranslateTask_1();
+  mtc::Task createHomeTask();
+  
   
   mtc::Task task_;
   rclcpp::Node::SharedPtr node_;
@@ -86,16 +95,17 @@ class MTCTaskNode
   std::string lastactiveObject = "empty";
   mtc::Stage* current_state_ptr = nullptr;
   std_msgs::msg::Empty empty_msg;
+  rclcpp_action::Server<robot_interfaces::action::MtcAction>::SharedPtr server_mtc;
 
   struct pose_struct{
 
-    std::string name = "leer";
+    std::string name = "empty";
     float x = 0.0;
     float y = 0.0;
     float z = 0.0;
-
   };
-  // std::vector<pose_struct> pose_list(10);
+
+  std::vector<pose_struct> probe_pose_vec;
 
   bool end_task = false;
 };
@@ -122,6 +132,72 @@ MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions& options): node_{ std::make_s
     detach_pub_[i] = node_->create_publisher<std_msgs::msg::Empty>(detach_topics[i],10);
     i++;
   }
+
+  Probe_pose_.resize(8);
+
+  int j = 0;
+  for (auto& iterator : pose_topics){
+
+    Probe_pose_[j] = node_->create_subscription<geometry_msgs::msg::Pose>(iterator, 10, [this, iterator](geometry_msgs::msg::Pose msg) {
+      this->ProbePose(msg, iterator);
+    });
+
+    j++;
+  }
+
+  auto handle_goal = [this](const rclcpp_action::GoalUUID & uuid, std::shared_ptr<const MtcAction::Goal> goal){
+
+    (void)uuid;
+    return rclcpp_action::GoalResponse::ACCEPT_AND_EXECUTE;
+  };
+
+  auto handle_cancel = [this](const std::shared_ptr<GoalHandle> goal_handle){
+
+    (void)goal_handle;
+    return rclcpp_action::CancelResponse::ACCEPT;
+  };
+
+  auto handle_accepted = [this](const std::shared_ptr<GoalHandle> goal_handle){
+    // this needs to return quickly to avoid blocking the executor,
+    // so we declare a lambda function to be called inside a new thread
+    auto execute_in_thread = [this, goal_handle](){return this->getObjects(goal_handle);};
+    std::thread{execute_in_thread}.detach();
+  };
+
+  server_mtc = rclcpp_action::create_server<MtcAction>(node_,"MtcAction",handle_goal,handle_cancel,handle_accepted);
+
+}
+
+void MTCTaskNode::execute(const std::shared_ptr<GoalHandle> goal_handle) {
+    
+  // rclcpp::Rate loop_rate(1);
+  // const auto goal = goal_handle->get_goal();
+
+  // auto feedback = std::make_shared<MtcAction::Feedback>();
+  // auto & sequence = feedback->partial_sequence;
+  // auto result = std::make_shared<MtcAction::Result>();
+
+  // for (int i = 1; (i < goal->order) && rclcpp::ok(); ++i) {
+  //   // Check if there is a cancel request
+  //   if (goal_handle->is_canceling()) {
+  //     result->sequence = sequence;
+  //     goal_handle->canceled(result);
+
+  //     return;
+  //   }
+
+  //   // Publish feedback
+  //   goal_handle->publish_feedback(feedback);
+
+  //   loop_rate.sleep();
+  // }
+
+  // // Check if goal is done
+  // if (rclcpp::ok()) {
+  //   result->sequence = sequence;
+  //   goal_handle->succeed(result);
+
+  // }
 }
 
 void MTCTaskNode::setupPlanningScene(){
@@ -269,13 +345,28 @@ void MTCTaskNode::setupPlanningScene(){
   }
 }
 
-void MTCTaskNode::getObjects(){
+void MTCTaskNode::getObjects(const std::shared_ptr<GoalHandle> goal_handle){
 
-  std::cout << "TEST_1"<< std::endl;
+  // std::cout << "Aufruf über Action erfolgreich"<< std::endl;
+
+  // auto feedback = std::make_shared<MtcAction::Feedback>();
+
+  // feedback->object_count_feedback = 1;
+
+  // goal_handle->publish_feedback(feedback);
+
+  // auto result = std::make_shared<MtcAction::Result>();
+
+  // result->object_count_result = 2;
+
+  // goal_handle->succeed(result);
+
+  // return;
+
   int i = 0;
   moveit::planning_interface::PlanningSceneInterface psi;
   std::map<std::string, moveit_msgs::msg::CollisionObject> object_list = psi.getObjects();
-  std::cout << "Object-Count: "<< object_list.size() <<  std::endl;
+  // std::cout << "Object-Count: "<< object_list.size() <<  std::endl;
   std::vector<std::string> object_ids;
 
   struct data{
@@ -290,7 +381,7 @@ void MTCTaskNode::getObjects(){
   }
 
   std::map<std::string, geometry_msgs::msg::Pose> object_pose = psi.getObjectPoses(object_ids);
-  std::cout << "Map-Size: "<< object_pose.size() <<  std::endl;
+  // std::cout << "Map-Size: "<< object_pose.size() <<  std::endl;
 
   for(auto& iterator : object_pose){
 
@@ -308,73 +399,72 @@ void MTCTaskNode::getObjects(){
     else{i++;}
   }
 
-  std::cout << "Sortieren"<< std::endl;
+  //Feedback für Action Client MasterNode
+  auto feedback = std::make_shared<MtcAction::Feedback>();
+
+  feedback->object_count_feedback = objects.size();
+
+  goal_handle->publish_feedback(feedback);
+
+  // std::cout << "Sortieren"<< std::endl;
   sort(objects.begin(), objects.end(),[](struct data a, struct data b){return a.distance < b.distance;} );
 
- std::cout << "Starte Task"<< std::endl;
+  //  std::cout << "Starte Task"<< std::endl;
 
- int j = 0;
- int count_while = 0;
- activeObject = objects[j].name;
+  int j = 0;
 
- //bool task = doTask();
+  activeObject = objects[j].name;
 
-  while(objects.size() >= 1){
-    bool task = doTask();
-    
+  bool task = doTask();
 
-    if (task == false && j < objects.size()){
-      std::cout << "Objekt: " << j << " konnte nicht gegriffen werden, gehe zum nächsten Objekt über"<< std::endl;
-      j++;
-      if(j >= objects.size()){
+  while (task == false && j < objects.size()){
+    // std::cout << "Objekt: " << j << " konnte nicht gegriffen werden, gehe zum nächsten Objekt über"<< std::endl;
+    j++;
+    if(j >= objects.size()){
 
-        std::cout << "Liste abarbeiten nicht möglich"<< std::endl;
-        std::cout << "Object-Size: "<< objects.size() << std::endl;
-        break;
-      }
-      lastactiveObject = activeObject;
-      activeObject = objects[j].name;
+      break;
     }
+    lastactiveObject = activeObject;
+    activeObject = objects[j].name;
+
+    task = doTask();
 
     if(task == true && j < objects.size()){
 
-      std::cout << "Objekt: " <<j<< " erfolgreich gegriffen"<< std::endl;
+      // std::cout << "Objekt: " <<j<< " erfolgreich gegriffen"<< std::endl;
       std::vector<std::string> removeObjects;
       removeObjects.push_back(activeObject);
       psi.removeCollisionObjects(removeObjects);
       objects.erase(objects.begin()+j);
       sort(objects.begin(), objects.end(),[](struct data a, struct data b){return a.distance < b.distance;} );
       j = 0;
-      
       activeObject = objects[j].name;
     }
-
-    count_while++;
   }
-  std::cout << "Ende Abarbeitung der Objekliste"<< std::endl;
-  std::cout << "Anzahl übriger Elemente: "<< objects.size() <<std::endl;
 
+  //Feedback für Action Client MasterNode
+  auto result = std::make_shared<MtcAction::Result>();
 
-  end_task = true;
-  // doTask();
+  result->object_count_result = objects.size();
+  result->success = task;
 
-  object_pose = psi.getObjectPoses(object_ids);
-  std::cout << "Map-Size: "<< object_pose.size() <<  std::endl;
+  goal_handle->succeed(result);
 
-  std::cout << "Object Position X: " << object_pose["Cylinder_0"].position.x <<std::endl;
-  std::cout << "Object Position Y: " << object_pose["Cylinder_0"].position.y <<std::endl;
-  std::cout << "Object Position Z: " << object_pose["Cylinder_0"].position.z <<std::endl;
+  //object_pose = psi.getObjectPoses(object_ids);
+  // std::cout << "Map-Size: "<< object_pose.size() <<  std::endl;
 
-  std::cout << "Object Orientation X: " << object_pose["Cylinder_0"].orientation.x <<std::endl;
-  std::cout << "Object Orientation Y: " << object_pose["Cylinder_0"].orientation.y <<std::endl;
-  std::cout << "Object Orientation Z: " << object_pose["Cylinder_0"].orientation.z <<std::endl;
-  std::cout << "Object Orientation W: " << object_pose["Cylinder_0"].orientation.w <<std::endl;
+  // std::cout << "Object Position X: " << object_pose["Cylinder_0"].position.x <<std::endl;
+  // std::cout << "Object Position Y: " << object_pose["Cylinder_0"].position.y <<std::endl;
+  // std::cout << "Object Position Z: " << object_pose["Cylinder_0"].position.z <<std::endl;
+  // std::cout << "Object Orientation X: " << object_pose["Cylinder_0"].orientation.x <<std::endl;
+  // std::cout << "Object Orientation Y: " << object_pose["Cylinder_0"].orientation.y <<std::endl;
+  // std::cout << "Object Orientation Z: " << object_pose["Cylinder_0"].orientation.z <<std::endl;
+  // std::cout << "Object Orientation W: " << object_pose["Cylinder_0"].orientation.w <<std::endl;
 
-  
-  for(auto& iterator : objects){
+  // for(auto& iterator : objects){
 
-    std::cout << iterator.name << " - " << iterator.distance << std::endl;
-  }
+  //   std::cout << iterator.name << " - " << iterator.distance << std::endl;
+  // }
 }
 
 int MTCTaskNode::testAttach(){
@@ -393,36 +483,36 @@ int MTCTaskNode::testAttach(){
   tcp_y = tf_msg.transform.translation.y;
   tcp_z = tf_msg.transform.translation.z;
 
-  std::cout<< "TCP_X: " << tcp_x << std::endl;
-  std::cout<< "TCP_Y: " << tcp_y << std::endl;
-  std::cout<< "TCP_Z: " << tcp_z << std::endl;
+  // std::cout<< "TCP_X: " << tcp_x << std::endl;
+  // std::cout<< "TCP_Y: " << tcp_y << std::endl;
+  // std::cout<< "TCP_Z: " << tcp_z << std::endl;
 
-  std::cout<< "Vector-Size: " << probe_pose_vec.size() << std::endl;
-  std::cout<< "Vector-First Element-Name: " << probe_pose_vec[0].name << std::endl;
-  std::cout<< "Vector-Element-X: " << probe_pose_vec[0].x << std::endl;
+  // std::cout<< "Vector-Size: " << probe_pose_vec.size() << std::endl;
+  // std::cout<< "Vector-First Element-Name: " << probe_pose_vec[0].name << std::endl;
+  // std::cout<< "Vector-Element-X: " << probe_pose_vec[0].x << std::endl;
 
   for (auto& iterator : probe_pose_vec ){
 
-    std::cout<< "Iteration-Counter: " << i << std::endl;
+    // std::cout<< "Iteration-Counter: " << i << std::endl;
 
     if (tcp_x <= (iterator.x + threshold) && tcp_x >= (iterator.x - threshold)){
 
-      std::cout<< "OK_X: " << std::endl;
+      // std::cout<< "OK_X: " << std::endl;
 
       if (tcp_y <= (iterator.y + threshold) && tcp_y >= (iterator.y - threshold)){
 
-        std::cout<< "OK_Y: " << std::endl;
+        // std::cout<< "OK_Y: " << std::endl;
 
         if (tcp_z <= (iterator.z + threshold) && tcp_z >= (iterator.z - threshold)){
 
-          std::cout<< "OK_Z: " << std::endl;
+          // std::cout<< "OK_Z: " << std::endl;
 
           // std::string search = "/";
 
           //   std::size_t found = iterator.name.find(search);
           //   name = iterator.name.substr(1 + found);
 
-          std::cout<< "ITERATOR: " << i << std::endl;
+          // std::cout<< "ITERATOR: " << i << std::endl;
 
           return i;
         }
@@ -442,7 +532,53 @@ int MTCTaskNode::testAttach(){
   return i;
 }
 
+bool MTCTaskNode::doHome(){
+
+    //Home Position Anfahren -----------------------------------------------------------------------------
+    try
+  {
+    RCLCPP_INFO_STREAM(LOGGER, "try to create Home");
+    task_ = createHomeTask();
+  }
+  catch (mtc::InitStageException& e)
+  {
+    RCLCPP_ERROR_STREAM(LOGGER, e);
+    return false;
+  }
+  try
+  { RCLCPP_INFO_STREAM(LOGGER, "Task Create Home war erfolgreich, probiere nun task.init");
+    task_.init();
+  }
+  catch (mtc::InitStageException& e)
+  {
+    RCLCPP_ERROR_STREAM(LOGGER, "Fehler bei Initialisierung");
+    RCLCPP_ERROR_STREAM(LOGGER, e);
+    return false;
+  }
+  if (!task_.plan(5))
+  {
+    RCLCPP_ERROR_STREAM(LOGGER, "Task planning failed");
+    return false;
+  }
+  task_.introspection().publishSolution(*task_.solutions().front());
+
+  auto result = task_.execute(*task_.solutions().front());  
+    
+  if (result.val != moveit_msgs::msg::MoveItErrorCodes::SUCCESS)
+  {
+    RCLCPP_ERROR_STREAM(LOGGER, "Task execution failed");
+    return false;
+  }
+  else{RCLCPP_INFO_STREAM(LOGGER, "Task execution HomeTask succeded");
+    return true;
+  }
+
+  //------------------------------------------------------------------------------------------------------------------------------------------
+
+}
+
 bool MTCTaskNode::doTask(){
+
 
   detach_pub_[0]->publish(empty_msg);
   detach_pub_[1]->publish(empty_msg);
@@ -501,7 +637,6 @@ bool MTCTaskNode::doTask(){
     attach_pub_[probekoerper_number]->publish(empty_msg);
 
     RCLCPP_INFO_STREAM(LOGGER, "Attached succesfully");
-
   }
 
   else { 
@@ -545,7 +680,8 @@ bool MTCTaskNode::doTask(){
     return false;
   }
   else{RCLCPP_INFO_STREAM(LOGGER, "Task execution GrabTask succeded");
-  return true;
+    detach_pub_[probekoerper_number]->publish(empty_msg);
+    return true;
   }
 
   detach_pub_[probekoerper_number]->publish(empty_msg);
@@ -583,6 +719,7 @@ bool MTCTaskNode::doTask(){
 
 mtc::Task MTCTaskNode::createTranslateTask_1(){
 
+
   RCLCPP_INFO_STREAM(LOGGER, "CREATE TASK TranslateTask_1 STARTED");
   moveit::task_constructor::Task task;
   task.stages()->setName("demo task");
@@ -607,10 +744,15 @@ mtc::Task MTCTaskNode::createTranslateTask_1(){
   }
 
   auto sampling_planner = std::make_shared<mtc::solvers::PipelinePlanner>(node_);
+  sampling_planner->setPlannerId("ompl","RRTConnectkConfigDefault");
+  sampling_planner->setMaxVelocityScalingFactor(0.5);
+  sampling_planner->setMaxAccelerationScalingFactor(0.5);
+
   auto interpolation_planner = std::make_shared<mtc::solvers::JointInterpolationPlanner>();
   auto cartesian_planner = std::make_shared<mtc::solvers::CartesianPath>(); //Kartesian-Planner mit Spezifikationen wird Initialisiert
-  cartesian_planner->setMaxVelocityScalingFactor(1.0);
-  cartesian_planner->setMaxAccelerationScalingFactor(1.0);
+  
+  cartesian_planner->setMaxVelocityScalingFactor(0.5);
+  cartesian_planner->setMaxAccelerationScalingFactor(0.5);
   cartesian_planner->setStepSize(.01);
 
   { //Collision zwischen Greifer und Object erlauben durch Modifizierung der Planning-Scene
@@ -631,7 +773,6 @@ mtc::Task MTCTaskNode::createTranslateTask_1(){
     stage->attachObject(activeObject, hand_frame); //eigentlich hand_frame
     //attach_object_stage = stage.get();
     //place->insert(std::move(stage));
-    RCLCPP_INFO_STREAM(LOGGER, "Vierte Substage");
     task.add(std::move(stage));
   }
 
@@ -664,7 +805,7 @@ mtc::Task MTCTaskNode::createTranslateTask_1(){
     //Connect Stage = Connect--------------------------------------------------------------------------------------------------------
     auto stage_move_to_pick = std::make_unique<mtc::stages::Connect>("move to place",
     mtc::stages::Connect::GroupPlannerVector{ { arm_group_name, sampling_planner } }); //Vektor besteht aus Planning Group und dem Planner
-    stage_move_to_pick->setTimeout(5.0);
+    stage_move_to_pick->setTimeout(10.0);
     //stage_move_to_pick->properties().configureInitFrom(mtc::Stage::PARENT);
     stage_move_to_pick->properties().configureInitFrom(mtc::Stage::PARENT, { "eef", "group", "ik_frame" });
     task.add(std::move(stage_move_to_pick));
@@ -744,8 +885,6 @@ mtc::Task MTCTaskNode::createTranslateTask_1(){
       auto stage = std::make_unique<mtc::stages::ModifyPlanningScene>("detach object");
       stage->detachObject(activeObject, hand_frame); 
       place->insert(std::move(stage));
-
-      RCLCPP_INFO_STREAM(LOGGER, "Dritte Place-Substage");
     }
 
     task.add(std::move(place));
@@ -760,8 +899,7 @@ mtc::Task MTCTaskNode::createGrabTask(){
   float offset_x = 0.0;
   float offset_y = 0.0;
   float offset_z = 0.0;
-  
-  RCLCPP_INFO_STREAM(LOGGER, "CREATE GrabTASK STARTED");
+
   moveit::task_constructor::Task task;
   task.stages()->setName("demo task");
   task.loadRobotModel(node_);
@@ -771,23 +909,29 @@ mtc::Task MTCTaskNode::createGrabTask(){
   const auto& hand_frame = "tcp"; //Link an Endeffectorgruppe als Bezug
   const auto& eef_name = "end_eff"; //Name des Endeffektors
 
+  std::string approach_frame = hand_frame;
+
   // Set task properties
   task.setProperty("group", arm_group_name);
   task.setProperty("eef", eef_name);
   task.setProperty("ik_frame", hand_frame);
 
   //Generator Stage = CurrentState-----------------------------------------------------------------------------------------------------------------
-    // Forward current_state on to grasp pose generator
+  // Forward current_state on to grasp pose generator
   auto stage_state_current = std::make_unique<mtc::stages::CurrentState>("current"); //Speichert aktuelle Position des Roboters in einer CurrentStage
   current_state_ptr = stage_state_current.get(); //Erzeugt einen Raw-pointer auf Objekt--> dieser beinträchtigt Eigentumsverwaltung des Smart-Pointers nicht, ermöglicht aber lese und schreibzugriff
   task.add(std::move(stage_state_current)); //Objekt wird an task übergeben --> nun ist task Eigentümer des Objekts auf das der Smartpointer gezeigt hat
 
   auto sampling_planner = std::make_shared<mtc::solvers::PipelinePlanner>(node_);
+  sampling_planner->setPlannerId("ompl","RRTConnectkConfigDefault");
+  sampling_planner->setMaxVelocityScalingFactor(0.5);
+  sampling_planner->setMaxAccelerationScalingFactor(0.5);
+
   auto interpolation_planner = std::make_shared<mtc::solvers::JointInterpolationPlanner>();
 
   auto cartesian_planner = std::make_shared<mtc::solvers::CartesianPath>(); //Kartesian-Planner mit Spezifikationen wird Initialisiert
-  cartesian_planner->setMaxVelocityScalingFactor(1.0);
-  cartesian_planner->setMaxAccelerationScalingFactor(1.0);
+  cartesian_planner->setMaxVelocityScalingFactor(0.5);
+  cartesian_planner->setMaxAccelerationScalingFactor(0.5);
   cartesian_planner->setStepSize(.01);
  
   { 
@@ -821,7 +965,7 @@ mtc::Task MTCTaskNode::createGrabTask(){
   //Connect Stage = Connect--------------------------------------------------------------------------------------------------------
   auto stage_move_to_pick = std::make_unique<mtc::stages::Connect>("move to pick",
   mtc::stages::Connect::GroupPlannerVector{ { arm_group_name, sampling_planner } }); //Vektor besteht aus Planning Group und dem Planner
-  stage_move_to_pick->setTimeout(5.0);
+  stage_move_to_pick->setTimeout(10.0);
   stage_move_to_pick->properties().configureInitFrom(mtc::Stage::PARENT);
   task.add(std::move(stage_move_to_pick));
 
@@ -834,14 +978,7 @@ mtc::Task MTCTaskNode::createGrabTask(){
     task.properties().exposeTo(grasp->properties(), { "eef", "group", "ik_frame" }); //task-properties vom parent-task einlesen
     grasp->properties().configureInitFrom(mtc::Stage::PARENT,{ "eef", "group", "ik_frame" }); // task-properties werden initialisiert
 
-    // { //Propagator-Stage
-    //   auto stage = std::make_unique<mtc::stages::MoveTo>("close hand", interpolation_planner);
-    //   stage->setGroup(hand_group_name);
-    //   stage->setGoal("open"); //position close aus SRDF
-    //   grasp->insert(std::move(stage));
-    // }
-
-    if(activeObject.starts_with("Cylinder")){  float offset_z = -0.03;}
+    if(activeObject.starts_with("Cylinder")){ offset_z = 0.03;}
 
     //Substage: Propagator-Stage = MoveRelative
     {
@@ -852,9 +989,11 @@ mtc::Task MTCTaskNode::createGrabTask(){
       stage->properties().configureInitFrom(mtc::Stage::PARENT, { "group" });
       stage->setMinMaxDistance(0.1, 0.3);
 
+      //if(activeObject.starts_with("Cube")){ approach_frame = "world";}
+
       // Set hand forward direction
       geometry_msgs::msg::Vector3Stamped vec;
-      vec.header.frame_id = hand_frame; //hand_frame als relativer Frame zu dem Bewegung ausgeführt wird
+      vec.header.frame_id = approach_frame; //hand_frame als relativer Frame zu dem Bewegung ausgeführt wird
       vec.vector.y = -1.0;
       //vec.vector.x = 1.0;
       // vec.vector.z = -1.0;
@@ -863,7 +1002,8 @@ mtc::Task MTCTaskNode::createGrabTask(){
     }
 
     //Substage: Connector-Stage = GenerateGraspPose
-    {   
+    { 
+      float roll = 0.0, pitch= 0.0, yaw=0.0 , anglediff = M_PI/12;
       Eigen::Vector3d axis = {0.0, 0.0, 1.0}; //Rotationsachse um das Objekt
       // Sample grasp pose
       auto stage = std::make_unique<mtc::stages::GenerateGraspPose>("generate grasp pose");
@@ -873,14 +1013,21 @@ mtc::Task MTCTaskNode::createGrabTask(){
       stage->setPreGraspPose("open");
       stage->setGraspPose("closed");
       stage->setRotationAxis(axis);
+
+      if(activeObject.starts_with("Cube")){
+        roll = -M_PI/2;
+        anglediff = M_PI/2;
+      }
+
       stage->setObject(activeObject);
-      stage->setAngleDelta(M_PI /12); //Winkeldifferenz für Lösungen der Greifposition
+      stage->setAngleDelta(anglediff); //Winkeldifferenz für Lösungen der Greifposition
       stage->setMonitoredStage(current_state_ptr);  // Hook into current state --> Grasp-Object Pose und Shape werden an IK-Solver weitergereicht
 
       Eigen::Isometry3d grasp_frame_transform = Eigen::Isometry3d::Identity();
-      Eigen::Quaterniond q = Eigen::AngleAxisd(0, Eigen::Vector3d::UnitX()) *
-      Eigen::AngleAxisd(0, Eigen::Vector3d::UnitY()) *
-      Eigen::AngleAxisd(0, Eigen::Vector3d::UnitZ());
+      Eigen::Quaterniond q = 
+      Eigen::AngleAxisd(roll, Eigen::Vector3d::UnitX()) *
+      Eigen::AngleAxisd(pitch, Eigen::Vector3d::UnitY()) *
+      Eigen::AngleAxisd(yaw, Eigen::Vector3d::UnitZ());
       grasp_frame_transform.linear() = q.matrix();
 
       std::cout << q.matrix() << std::endl;
@@ -913,264 +1060,36 @@ mtc::Task MTCTaskNode::createGrabTask(){
     // }
 
     task.add(std::move(grasp));
-    RCLCPP_INFO_STREAM(LOGGER, "GRASP-Task abgeschlossen");
   }
   
-      //---------------------------------------------------------------------------------------------------------------------------
-
-      // { //Connector-Stage zwischen Grasp-Task und Place-Task
-      //     auto stage_move_to_place = std::make_unique<mtc::stages::Connect>("move to place", mtc::stages::Connect::GroupPlannerVector{ { arm_group_name, sampling_planner }});
-      //     stage_move_to_place->setTimeout(5.0);
-      //     stage_move_to_place->properties().configureInitFrom(mtc::Stage::PARENT);
-      //     task.add(std::move(stage_move_to_place));
-
-      //     RCLCPP_INFO_STREAM(LOGGER, "Connector-Stage zwischen Grasp und Place");
-      // }
-
-      // //Serieller Container für Place-Task
-      // {
-      //     auto place = std::make_unique<mtc::SerialContainer>("place object");
-      //     task.properties().exposeTo(place->properties(), { "eef", "group", "ik_frame" });
-      //     place->properties().configureInitFrom(mtc::Stage::PARENT,{ "eef", "group", "ik_frame" });
-
-      //     { //Substages im Seriellen Conatiner
-      //       //hier wird Pose im gegensatz zum Grasp-Task über setPose erzeugt
-
-      //       {
-      //         auto stage = std::make_unique<mtc::stages::MoveRelative>("approach object pose", cartesian_planner);
-      //         stage->properties().set("marker_ns", "approach_object"); //Property MarkerNs ist teil von Stages
-      //         stage->properties().set("link", hand_frame);
-      //         stage->setMarkerNS("approach_object_pose");
-      //         stage->properties().configureInitFrom(mtc::Stage::PARENT, { "group" });
-      //         stage->setMinMaxDistance(0.2, 0.5);
-
-      //         // Set hand forward direction
-      //         geometry_msgs::msg::Vector3Stamped vec;
-      //         vec.header.frame_id = "world"; //hand_frame als relativer Frame zu dem Bewegung ausgeführt wird
-      //         //vec.vector.y = -1.0;
-      //         //vec.vector.x = 1.0;
-      //         vec.vector.z = -1.0;
-      //         stage->setDirection(vec); //Gibt Bewegungsrichtung an
-      //         place->insert(std::move(stage));
-      //       }
-            
-      //       // // Sample place pose
-      //       // auto stage = std::make_unique<mtc::stages::GeneratePlacePose>("generate place pose");
-      //       // stage->properties().configureInitFrom(mtc::Stage::PARENT);
-      //       // stage->properties().set("marker_ns", "place_pose");
-      //       // stage->setObject(activeObject);
-
-      //       // geometry_msgs::msg::PoseStamped pose_stamped;
-      //       // geometry_msgs::msg::Pose pose;
-
-      //       // float roll_ = 0.0;
-      //       // float pitch_ = 0.0;
-      //       // float yaw_ = 0.0;
-
-      //       // tf2::Quaternion q1;
-      //       // q1.setRPY(roll_, pitch_, yaw_);
-      //       // pose.orientation.x = q1[0];
-      //       // pose.orientation.y = q1[1];
-      //       // pose.orientation.z = q1[2];
-      //       // pose.orientation.w = q1[3];
-
-      //       // pose.position.x = 1.0;
-      //       // pose.position.y = 1.0;
-      //       // pose.position.z = 0.5;
-
-      //       // pose_stamped.header.frame_id = "world";
-      //       // pose_stamped.pose = pose;
-      //       // stage->setPose(pose_stamped);
-
-      //       auto stage = std::make_unique<mtc::stages::GeneratePose>("generate pose placing");
-      //         stage->properties().configureInitFrom(mtc::Stage::PARENT);
-      //         stage->properties().set("marker_ns", "place_pose");
-      //         stage->setMonitoredStage(current_state_ptr); 
-
-      //           geometry_msgs::msg::PoseStamped pose_stamped;
-      //             geometry_msgs::msg::Pose pose;
-
-      //             float roll_ = 0.0;
-      //             float pitch_ = 0.0;
-      //             float yaw_ = 0.0;
-
-      //             tf2::Quaternion q1;
-      //             q1.setRPY(roll_, pitch_, yaw_);
-      //             pose.orientation.x = q1[0];
-      //             pose.orientation.y = q1[1];
-      //             pose.orientation.z = q1[2];
-      //             pose.orientation.w = q1[3];
-
-      //             pose.position.x = 1.0;
-      //             pose.position.y = 1.0;
-      //             pose.position.z = 1.0;
-
-      //             pose_stamped.header.frame_id = "world";
-      //             pose_stamped.pose = pose;
-      //             stage->setPose(pose_stamped);
-
-      //       stage->setMonitoredStage(attach_object_stage);  //Raw-Pointer aus Grasp-Task wird MonitoredStage übergeben
-      //       //damit ist die Lage des Objekts im Greifer positioniert ist
-
-      //       Eigen::Isometry3d place_frame_transform;
-      //       Eigen::Quaterniond q = Eigen::AngleAxisd(0, Eigen::Vector3d::UnitX()) *
-      //       Eigen::AngleAxisd(0, Eigen::Vector3d::UnitY()) *
-      //       Eigen::AngleAxisd(0, Eigen::Vector3d::UnitZ());
-      //       place_frame_transform.linear() = q.matrix();
-      //       place_frame_transform.translation().x() = 0.0;
-
-      //       // Compute IK
-      //       auto wrapper = std::make_unique<mtc::stages::ComputeIK>("place pose IK", std::move(stage));
-      //       wrapper->setMaxIKSolutions(10);
-      //       wrapper->setMinSolutionDistance(0.1);
-      //       wrapper->setIKFrame(place_frame_transform, hand_frame);
-      //       wrapper->properties().configureInitFrom(mtc::Stage::PARENT, { "eef", "group" });
-      //       wrapper->properties().configureInitFrom(mtc::Stage::INTERFACE, { "target_pose" });
-      //       place->insert(std::move(wrapper));
-      //       RCLCPP_INFO_STREAM(LOGGER, "Erste Place-Substage");
-      //     }
-
-      //     {
-      //         auto stage = std::make_unique<mtc::stages::MoveTo>("open hand", interpolation_planner);
-      //         stage->setGroup(hand_group_name);
-      //         stage->setGoal("open");
-      //         place->insert(std::move(stage));
-      //     }
-
-      //     { //Kollisionen werden nach Ablegen des Objekts wieder erlaubt
-      //         auto stage = std::make_unique<mtc::stages::ModifyPlanningScene>("forbid collision (hand,object)");
-      //         stage->allowCollisions(activeObject, task.getRobotModel()
-      //             ->getJointModelGroup(hand_group_name)
-      //             ->getLinkModelNamesWithCollisionGeometry(), false);
-      //         place->insert(std::move(stage));
-
-      //         RCLCPP_INFO_STREAM(LOGGER, "Zweite Place-Substage");
-      //     }
-
-      //     { //Grasp-Objekt wird vom Greifer detached
-      //         auto stage = std::make_unique<mtc::stages::ModifyPlanningScene>("detach object");
-      //         stage->detachObject(activeObject, hand_frame); 
-      //         place->insert(std::move(stage));
-
-      //         RCLCPP_INFO_STREAM(LOGGER, "Dritte Place-Substage");
-      //     }
-
-      //     { //Freifahren des Roboters
-      //         auto stage = std::make_unique<mtc::stages::MoveRelative>("retreat", cartesian_planner);
-      //         stage->properties().configureInitFrom(mtc::Stage::PARENT, { "group" });
-      //         stage->setMinMaxDistance(0.1, 0.5);
-      //         stage->setIKFrame(hand_frame);
-      //         stage->properties().set("marker_ns", "retreat");
-
-      //         // Set retreat direction
-      //         geometry_msgs::msg::Vector3Stamped vec;
-      //         vec.header.frame_id = hand_frame;
-      //         vec.vector.y = 1.0;
-      //         stage->setDirection(vec);
-      //         place->insert(std::move(stage));
-
-      //         RCLCPP_INFO_STREAM(LOGGER, "Vierte Place-Substage");
-      //     }
-
-      //   task.add(std::move(place)); 
-
-      //   RCLCPP_INFO_STREAM(LOGGER, "Place-Task abgeshlossen");
-        
-      // }
-    
-
-    
-
-      // {//Home Positon wird angefahren
-      //   auto stage = std::make_unique<mtc::stages::MoveTo>("return home", sampling_planner);
-      //   stage->properties().configureInitFrom(mtc::Stage::PARENT, { "group" });
-      //   stage->setGoal("home");
-      //   task.add(std::move(stage));
-      // }
-      
-    
-
   //Alle Stages werden in Task gespeichert
   return task;
 }
 
+mtc::Task MTCTaskNode::createHomeTask(){
 
-class MTCPubSub : public rclcpp_lifecycle::LifecycleNode {
+  moveit::task_constructor::Task task;
+  task.stages()->setName("demo task");
+  task.loadRobotModel(node_);
 
-  public: MTCPubSub(MTCTaskNode& MTCfriend) : LifecycleNode("MTCPubSub_Node"), MTCfriend_(MTCfriend) {}
+  auto sampling_planner = std::make_shared<mtc::solvers::PipelinePlanner>(node_);
+  sampling_planner->setPlannerId("ompl","RRTConnectkConfigDefault");
+  sampling_planner->setMaxVelocityScalingFactor(0.3);
+  sampling_planner->setMaxAccelerationScalingFactor(0.3);
 
-  rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_configure(const rclcpp_lifecycle::State & previous_state){
-
-   
-    return rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn::SUCCESS;
+  {//Home Positon wird angefahren
+    auto stage = std::make_unique<mtc::stages::MoveTo>("return home", sampling_planner);
+    stage->properties().configureInitFrom(mtc::Stage::PARENT, { "group" });
+    stage->setGoal("home");
+    task.add(std::move(stage));
   }
-
-  rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_activate(const rclcpp_lifecycle::State & previous_state){
-
-     Probe_pose_.resize(8);
-
-    int i = 0;
-    for (auto& iterator : topics){
-
-      Probe_pose_[i] = this->create_subscription<geometry_msgs::msg::Pose>(iterator, 10, [this, iterator](geometry_msgs::msg::Pose msg) {
-        this->ProbePose(msg, iterator);
-      });
-
-      i++;
-    }
-
-    return rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn::SUCCESS;
-  }
-
-  rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_deactivate(const rclcpp_lifecycle::State & previous_state){
-
-    MTCfriend_.getObjects();
-    return rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn::SUCCESS;
-  }
-
-  rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_cleanup(const rclcpp_lifecycle::State & previous_state){
-
-    int i = 0;
-    for (auto& iterator : topics){
-
-      Probe_pose_[i].reset();
-      i++;
-    }
-
-    return rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn::SUCCESS;
-  }
-
-    rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_shutdown(const rclcpp_lifecycle::State & previous_state){
-
-      int i = 0;
-      for (auto& iterator : topics){
-
-      Probe_pose_[i].reset();
-      i++;
-    }
-      
-    return rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn::SUCCESS;
-  }
-
-  protected:
-
-  private:
-
-  MTCTaskNode& MTCfriend_;
-
-
-  std::vector<std::string> topics = {"/Probekoerper1/pose", "Probekoerper2/pose", "/Probekoerper3/pose", "/Probekoerper4/pose", 
-      "/Probekoerper5/pose","/Probekoerper6/pose", "/Probekoerper7/pose","/Probekoerper8/pose"};
-
-  std::vector<rclcpp::Subscription<geometry_msgs::msg::Pose>::SharedPtr> Probe_pose_;
-
+  return task;
   
-  void ProbePose(geometry_msgs::msg::Pose, std::string);
-};
+}
 
-void MTCPubSub::ProbePose(geometry_msgs::msg::Pose msg, std::string topic){
+void MTCTaskNode::ProbePose(geometry_msgs::msg::Pose msg, std::string topic){
 
-  probe_pose_vec.resize(8);
+  probe_pose_vec.resize(8); //Anzahl der Topics bzw. Anzahl der Körper die in Gazebo Pose unter einem Topic veröffentlichen
 
   int i = 0;
 
@@ -1178,14 +1097,14 @@ void MTCPubSub::ProbePose(geometry_msgs::msg::Pose msg, std::string topic){
 
   else{
 
-    if(topic == topics[0]){ i = 0;}
-    else if(topic == topics[1]){ i = 1;}
-    else if(topic == topics[2]){ i = 2;}
-    else if(topic == topics[3]){ i = 3;}
-    else if(topic == topics[4]){ i = 4;}
-    else if(topic == topics[5]){ i = 5;}
-    else if(topic == topics[6]){ i = 6;}
-    else if(topic == topics[7]){ i = 7;}
+    if(topic == pose_topics[0]){ i = 0;}
+    else if(topic == pose_topics[1]){ i = 1;}
+    else if(topic == pose_topics[2]){ i = 2;}
+    else if(topic == pose_topics[3]){ i = 3;}
+    else if(topic == pose_topics[4]){ i = 4;}
+    else if(topic == pose_topics[5]){ i = 5;}
+    else if(topic == pose_topics[6]){ i = 6;}
+    else if(topic == pose_topics[7]){ i = 7;}
 
     pose_struct PoseProbe;
 
@@ -1195,9 +1114,6 @@ void MTCPubSub::ProbePose(geometry_msgs::msg::Pose msg, std::string topic){
     PoseProbe.z = msg.position.z;
 
     probe_pose_vec[i] = PoseProbe;
-
-    
-
     //std::cout<< "Posen-Name: " << PoseProbe.name << " / X: " << PoseProbe.x << " / Y: " << PoseProbe.y << " / Z: " << PoseProbe.z << std::endl;
   }
 }
@@ -1208,28 +1124,80 @@ int main(int argc, char** argv){
 
     rclcpp::executors::MultiThreadedExecutor executor;
 
-    //auto node = std::make_shared<rclcpp::Node>("MTC_Sub_Pub_Node");
-
     rclcpp::NodeOptions options;
     options.automatically_declare_parameters_from_overrides(true);
 
     auto mtc_task_node = std::make_shared<MTCTaskNode>(options);
-    auto mtc_pub_sub_node = std::make_shared<MTCPubSub>(*mtc_task_node);
 
-    auto spin_thread = std::make_unique<std::thread>([&executor, &mtc_task_node, &mtc_pub_sub_node]() {
-        executor.add_node(mtc_task_node->getNodeBaseInterface());
-        executor.add_node(mtc_pub_sub_node->get_node_base_interface());
-        executor.spin();
-        executor.remove_node(mtc_task_node->getNodeBaseInterface());
-        executor.remove_node(mtc_pub_sub_node->get_node_base_interface());
-        
+    auto spin_thread = std::make_unique<std::thread>([&executor, &mtc_task_node]() {
+      executor.add_node(mtc_task_node->getNodeBaseInterface());
+      executor.spin();
+      executor.remove_node(mtc_task_node->getNodeBaseInterface());
     });
 
-    //mtc_task_node->setupPlanningScene();
-    //mtc_task_node->doTask();
-    //mtc_task_node->getObjects();
     spin_thread->join();
     rclcpp::shutdown();
     return 0;
 }
+
+// class MTCPubSub : public rclcpp_lifecycle::LifecycleNode {
+
+//   public: MTCPubSub(MTCTaskNode& MTCfriend) : LifecycleNode("MTCPubSub_Node"), MTCfriend_(MTCfriend) {}
+
+//   rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_configure(const rclcpp_lifecycle::State & previous_state){
+
+
+//     return rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn::SUCCESS;
+//   }
+
+//   rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_activate(const rclcpp_lifecycle::State & previous_state){
+
+//      //MTCfriend_.getObjects();
+
+//     return rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn::SUCCESS;
+//   }
+
+//   rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_deactivate(const rclcpp_lifecycle::State & previous_state){
+
+    
+//     return rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn::SUCCESS;
+//   }
+
+//   rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_cleanup(const rclcpp_lifecycle::State & previous_state){
+
+//     int i = 0;
+//     for (auto& iterator : topics){
+
+//       Probe_pose_[i].reset();
+//       i++;
+//     }
+
+//     return rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn::SUCCESS;
+//   }
+
+//     rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_shutdown(const rclcpp_lifecycle::State & previous_state){
+
+//       int i = 0;
+//       for (auto& iterator : topics){
+
+//       Probe_pose_[i].reset();
+//       i++;
+//     }
+      
+//     return rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn::SUCCESS;
+//   }
+
+//   protected:
+
+//   private:
+
+//   MTCTaskNode& MTCfriend_;
+
+
+  
+
+  
+//   void ProbePose(geometry_msgs::msg::Pose, std::string);
+// };
+
 

@@ -68,6 +68,12 @@ include CMakeFiles/robot_interfaces.dir/progress.make
 
 CMakeFiles/robot_interfaces: /home/mario/master_ws/src/robot_interfaces/msg/ObjectPose.msg
 CMakeFiles/robot_interfaces: /home/mario/master_ws/src/robot_interfaces/msg/DetachMsg.msg
+CMakeFiles/robot_interfaces: /home/mario/master_ws/src/robot_interfaces/action/MtcAction.action
+CMakeFiles/robot_interfaces: /opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl
+CMakeFiles/robot_interfaces: /opt/ros/jazzy/share/action_msgs/msg/GoalInfo.idl
+CMakeFiles/robot_interfaces: /opt/ros/jazzy/share/action_msgs/msg/GoalStatus.idl
+CMakeFiles/robot_interfaces: /opt/ros/jazzy/share/action_msgs/msg/GoalStatusArray.idl
+CMakeFiles/robot_interfaces: /opt/ros/jazzy/share/action_msgs/srv/CancelGoal.idl
 
 robot_interfaces: CMakeFiles/robot_interfaces
 robot_interfaces: CMakeFiles/robot_interfaces.dir/build.make

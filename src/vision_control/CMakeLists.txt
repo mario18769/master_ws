@@ -14,9 +14,10 @@ find_package(rclcpp REQUIRED)
 find_package(pcl_ros REQUIRED)
 find_package(robot_interfaces REQUIRED)
 find_package(rclcpp_lifecycle REQUIRED)
+find_package(rclcpp_action REQUIRED)
 
 add_executable(pcl_pose_estimation src/pcl_pose_estimation.cpp)
-ament_target_dependencies(pcl_pose_estimation rclcpp rclcpp_lifecycle pcl_ros robot_interfaces)
+ament_target_dependencies(pcl_pose_estimation rclcpp rclcpp_lifecycle pcl_ros robot_interfaces rclcpp_action)
 
 
 target_link_libraries(pcl_pose_estimation ${PCL_LIBRARIES})

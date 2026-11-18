@@ -1,0 +1,537 @@
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:1[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:51:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   51 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:4[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:5[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:2[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:[m[K In constructor ‘[01m[KMasterNode::[01;32m[KMasterNode[m[K(const rclcpp::NodeOptions&)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:45:77:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kcreate_client<lifecycle_msgs::srv::GetState>(rclcpp::Node::SharedPtr&, const char [28])[m[K’
+   45 |     client_lc_state_mtc = node_>[01;31m[Kcreate_client<lifecycle_msgs::srv::GetState>(node_,"/obstacle_planner/get_state")[m[K;
+      |                                 [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node_impl.hpp:38[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node.hpp:1663[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/kinematics_base/kinematics_base.hpp:43[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_model/joint_model_group.hpp:42[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_model/robot_model.hpp:45[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_state/robot_state.hpp:40[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.hpp:41[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:52[m[K:
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/create_client.hpp:43:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class ServiceT> typename rclcpp::Client<ServiceT>::SharedPtr rclcpp::[01;32m[Kcreate_client[m[K(std::shared_ptr<node_interfaces::NodeBaseInterface>, std::shared_ptr<node_interfaces::NodeGraphInterface>, std::shared_ptr<node_interfaces::NodeServicesInterface>, const std::string&, const QoS&, CallbackGroup::SharedPtr)[m[K’
+   43 | [01;36m[Kcreate_client[m[K(
+      | [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/create_client.hpp:43:1:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 2 provided
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/create_client.hpp:62:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class ServiceT> typename rclcpp::Client<ServiceT>::SharedPtr rclcpp::[01;32m[Kcreate_client[m[K(std::shared_ptr<node_interfaces::NodeBaseInterface>, std::shared_ptr<node_interfaces::NodeGraphInterface>, std::shared_ptr<node_interfaces::NodeServicesInterface>, const std::string&, const rmw_qos_profile_t&, CallbackGroup::SharedPtr)[m[K’
+   62 | [01;36m[Kcreate_client[m[K(
+      | [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/create_client.hpp:62:1:[m[K [01;36m[Knote: [m[K  candidate expects 6 arguments, 2 provided
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:[m[K In member function ‘[01m[Kvoid MasterNode::[01;32m[KLcMtcRequest[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:44:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator<<[m[K’ (operand types are ‘[01m[Kstd::basic_ostream<char>[m[K’ and ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’})
+   77 |         [32m[Kstd::cout << "MTC Current State: "[m[K [01;31m[K<<[m[K [34m[Kfuture_result.get()->current_state[m[K;
+      |         [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K [01;31m[K^~[m[K [34m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                   [32m[K|[m[K                                                [34m[K|[m[K
+      |                   [32m[Kstd::basic_ostream<char>[m[K                         [34m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type {aka lifecycle_msgs::msg::State_<std::allocator<void> >}[m[K
+In file included from [01m[K/usr/include/c++/13/bits/unique_ptr.h:42[m[K,
+                 from [01m[K/usr/include/c++/13/memory:78[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/macros/declare_ptr.hpp:37[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/macros/class_forward.hpp:39[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.hpp:40[m[K:
+[01m[K/usr/include/c++/13/ostream:110:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::[01;32m[Koperator<<[m[K(__ostream_type& (*)(__ostream_type&)) [35m[K[with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>][m[K[m[K’
+  110 |       [01;36m[Koperator[m[K<<(__ostream_type& (*__pf)(__ostream_type&))
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:110:36:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’} to ‘[01m[Kstd::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&)[m[K’ {aka ‘[01m[Kstd::basic_ostream<char>& (*)(std::basic_ostream<char>&)[m[K’}
+  110 |       operator<<([01;36m[K__ostream_type& (*__pf)(__ostream_type&)[m[K)
+      |                  [01;36m[K~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:119:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::[01;32m[Koperator<<[m[K(__ios_type& (*)(__ios_type&)) [35m[K[with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>; __ios_type = std::basic_ios<char>][m[K[m[K’
+  119 |       [01;36m[Koperator[m[K<<(__ios_type& (*__pf)(__ios_type&))
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:119:32:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’} to ‘[01m[Kstd::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&)[m[K’ {aka ‘[01m[Kstd::basic_ios<char>& (*)(std::basic_ios<char>&)[m[K’}
+  119 |       operator<<([01;36m[K__ios_type& (*__pf)(__ios_type&)[m[K)
+      |                  [01;36m[K~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:129:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::[01;32m[Koperator<<[m[K(std::ios_base& (*)(std::ios_base&)) [35m[K[with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>][m[K[m[K’
+  129 |       [01;36m[Koperator[m[K<<(ios_base& (*__pf) (ios_base&))
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:129:30:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’} to ‘[01m[Kstd::ios_base& (*)(std::ios_base&)[m[K’
+  129 |       operator<<([01;36m[Kios_base& (*__pf) (ios_base&)[m[K)
+      |                  [01;36m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:168:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::[01;32m[Koperator<<[m[K(long int) [35m[K[with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>][m[K[m[K’
+  168 |       [01;36m[Koperator[m[K<<(long __n)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:168:23:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’} to ‘[01m[Klong int[m[K’
+  168 |       operator<<([01;36m[Klong __n[m[K)
+      |                  [01;36m[K~~~~~^~~[m[K
+[01m[K/usr/include/c++/13/ostream:172:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::[01;32m[Koperator<<[m[K(long unsigned int) [35m[K[with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>][m[K[m[K’
+  172 |       [01;36m[Koperator[m[K<<(unsigned long __n)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:172:32:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’} to ‘[01m[Klong unsigned int[m[K’
+  172 |       operator<<([01;36m[Kunsigned long __n[m[K)
+      |                  [01;36m[K~~~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/13/ostream:176:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::[01;32m[Koperator<<[m[K(bool) [35m[K[with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>][m[K[m[K’
+  176 |       [01;36m[Koperator[m[K<<(bool __n)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:176:23:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’} to ‘[01m[Kbool[m[K’
+  176 |       operator<<([01;36m[Kbool __n[m[K)
+      |                  [01;36m[K~~~~~^~~[m[K
+In file included from [01m[K/usr/include/c++/13/ostream:880[m[K:
+[01m[K/usr/include/c++/13/bits/ostream.tcc:96:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::[01;32m[Koperator<<[m[K(short int) [35m[K[with _CharT = char; _Traits = std::char_traits<char>][m[K[m[K’
+   96 |     [01;36m[Kbasic_ostream<_CharT, _Traits>[m[K::
+      |     [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/ostream.tcc:97:22:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’} to ‘[01m[Kshort int[m[K’
+   97 |     operator<<([01;36m[Kshort __n[m[K)
+      |                [01;36m[K~~~~~~^~~[m[K
+[01m[K/usr/include/c++/13/ostream:183:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::[01;32m[Koperator<<[m[K(short unsigned int) [35m[K[with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>][m[K[m[K’
+  183 |       [01;36m[Koperator[m[K<<(unsigned short __n)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:183:33:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’} to ‘[01m[Kshort unsigned int[m[K’
+  183 |       operator<<([01;36m[Kunsigned short __n[m[K)
+      |                  [01;36m[K~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/13/bits/ostream.tcc:110:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::[01;32m[Koperator<<[m[K(int) [35m[K[with _CharT = char; _Traits = std::char_traits<char>][m[K[m[K’
+  110 |     [01;36m[Kbasic_ostream<_CharT, _Traits>[m[K::
+      |     [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/ostream.tcc:111:20:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’} to ‘[01m[Kint[m[K’
+  111 |     operator<<([01;36m[Kint __n[m[K)
+      |                [01;36m[K~~~~^~~[m[K
+[01m[K/usr/include/c++/13/ostream:194:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::[01;32m[Koperator<<[m[K(unsigned int) [35m[K[with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>][m[K[m[K’
+  194 |       [01;36m[Koperator[m[K<<(unsigned int __n)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:194:31:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’} to ‘[01m[Kunsigned int[m[K’
+  194 |       operator<<([01;36m[Kunsigned int __n[m[K)
+      |                  [01;36m[K~~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/13/ostream:203:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::[01;32m[Koperator<<[m[K(long long int) [35m[K[with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>][m[K[m[K’
+  203 |       [01;36m[Koperator[m[K<<(long long __n)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:203:28:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’} to ‘[01m[Klong long int[m[K’
+  203 |       operator<<([01;36m[Klong long __n[m[K)
+      |                  [01;36m[K~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/13/ostream:207:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::[01;32m[Koperator<<[m[K(long long unsigned int) [35m[K[with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>][m[K[m[K’
+  207 |       [01;36m[Koperator[m[K<<(unsigned long long __n)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:207:37:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’} to ‘[01m[Klong long unsigned int[m[K’
+  207 |       operator<<([01;36m[Kunsigned long long __n[m[K)
+      |                  [01;36m[K~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/13/ostream:222:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::[01;32m[Koperator<<[m[K(double) [35m[K[with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>][m[K[m[K’
+  222 |       [01;36m[Koperator[m[K<<(double __f)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:222:25:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’} to ‘[01m[Kdouble[m[K’
+  222 |       operator<<([01;36m[Kdouble __f[m[K)
+      |                  [01;36m[K~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/13/ostream:226:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::[01;32m[Koperator<<[m[K(float) [35m[K[with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>][m[K[m[K’
+  226 |       [01;36m[Koperator[m[K<<(float __f)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:226:24:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’} to ‘[01m[Kfloat[m[K’
+  226 |       operator<<([01;36m[Kfloat __f[m[K)
+      |                  [01;36m[K~~~~~~^~~[m[K
+[01m[K/usr/include/c++/13/ostream:234:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::[01;32m[Koperator<<[m[K(long double) [35m[K[with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>][m[K[m[K’
+  234 |       [01;36m[Koperator[m[K<<(long double __f)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:234:30:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’} to ‘[01m[Klong double[m[K’
+  234 |       operator<<([01;36m[Klong double __f[m[K)
+      |                  [01;36m[K~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/13/ostream:292:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::[01;32m[Koperator<<[m[K(const void*) [35m[K[with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>][m[K[m[K’
+  292 |       [01;36m[Koperator[m[K<<(const void* __p)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:292:30:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’} to ‘[01m[Kconst void*[m[K’
+  292 |       operator<<([01;36m[Kconst void* __p[m[K)
+      |                  [01;36m[K~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/13/ostream:297:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::[01;32m[Koperator<<[m[K(std::nullptr_t) [35m[K[with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>; std::nullptr_t = std::nullptr_t][m[K[m[K’
+  297 |       [01;36m[Koperator[m[K<<(nullptr_t)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:297:18:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’} to ‘[01m[Kstd::nullptr_t[m[K’
+  297 |       operator<<([01;36m[Knullptr_t[m[K)
+      |                  [01;36m[K^~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/ostream.tcc:124:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::[01;32m[Koperator<<[m[K(__streambuf_type*) [35m[K[with _CharT = char; _Traits = std::char_traits<char>; __streambuf_type = std::basic_streambuf<char>][m[K[m[K’
+  124 |     [01;36m[Kbasic_ostream<_CharT, _Traits>[m[K::
+      |     [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/ostream.tcc:125:34:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’} to ‘[01m[Kstd::basic_ostream<char>::__streambuf_type*[m[K’ {aka ‘[01m[Kstd::basic_streambuf<char>*[m[K’}
+  125 |     operator<<([01;36m[K__streambuf_type* __sbin[m[K)
+      |                [01;36m[K~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+In file included from [01m[K/usr/include/c++/13/bits/basic_string.h:47[m[K,
+                 from [01m[K/usr/include/c++/13/string:54[m[K,
+                 from [01m[K/usr/include/c++/13/bits/locale_classes.h:40[m[K,
+                 from [01m[K/usr/include/c++/13/bits/ios_base.h:41[m[K,
+                 from [01m[K/usr/include/c++/13/ios:44[m[K,
+                 from [01m[K/usr/include/c++/13/ostream:40[m[K:
+[01m[K/usr/include/c++/13/string_view:761:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, basic_string_view<_CharT, _Traits>)[m[K’
+  761 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/string_view:761:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:68:[m[K [01;36m[Knote: [m[K  ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’ is not derived from ‘[01m[Kstd::basic_string_view<_CharT, _Traits>[m[K’
+   77 |         std::cout << "MTC Current State: " << future_result.get()->[01;36m[Kcurrent_state[m[K;
+      |                                                                    [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/basic_string.h:4032:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, const __cxx11::basic_string<_CharT, _Traits, _Allocator>&)[m[K’
+ 4032 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/basic_string.h:4032:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:68:[m[K [01;36m[Knote: [m[K  ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’} is not derived from ‘[01m[Kconst std::__cxx11::basic_string<_CharT, _Traits, _Allocator>[m[K’
+   77 |         std::cout << "MTC Current State: " << future_result.get()->[01;36m[Kcurrent_state[m[K;
+      |                                                                    [01;36m[K^~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/13/bits/memory_resource.h:38[m[K,
+                 from [01m[K/usr/include/c++/13/string:58[m[K:
+[01m[K/usr/include/c++/13/cstddef:124:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IntegerType> constexpr std::__byte_op_t<_IntegerType> std::[01;32m[Koperator<<[m[K(byte, _IntegerType)[m[K’
+  124 |     [01;36m[Koperator[m[K<<(byte __b, _IntegerType __shift) noexcept
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/cstddef:124:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:19:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kstd::operator<< <char_traits<char> >(std::cout, ((const char*)"MTC Current State: "))[m[K’ (type ‘[01m[Kstd::basic_ostream<char>[m[K’) to type ‘[01m[Kstd::byte[m[K’
+   77 |         [01;36m[Kstd::cout << "MTC Current State: "[m[K << future_result.get()->current_state;
+      |         [01;36m[K~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/13/bits/ios_base.h:46[m[K:
+[01m[K/usr/include/c++/13/system_error:339:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, const error_code&)[m[K’
+  339 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, const error_code& __e)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/system_error:339:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:68:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>*)(& rclcpp::detail::FutureAndRequestId<FutureT>::get() [with FutureT = std::future<std::shared_ptr<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> > > >]()))->std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>::operator->()->lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::current_state[m[K’ (type ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’}) to type ‘[01m[Kconst std::error_code&[m[K’
+   77 |         std::cout << "MTC Current State: " << [01;36m[Kfuture_result.get()->current_state[m[K;
+      |                                               [01;36m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:554:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, _CharT)[m[K’
+  554 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:554:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:68:[m[K [01;36m[Knote: [m[K  deduced conflicting types for parameter ‘[01m[K_CharT[m[K’ (‘[01m[Kchar[m[K’ and ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’)
+   77 |         std::cout << "MTC Current State: " << future_result.get()->[01;36m[Kcurrent_state[m[K;
+      |                                                                    [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:564:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, char)[m[K’
+  564 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:564:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:68:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>*)(& rclcpp::detail::FutureAndRequestId<FutureT>::get() [with FutureT = std::future<std::shared_ptr<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> > > >]()))->std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>::operator->()->lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::current_state[m[K’ (type ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’}) to type ‘[01m[Kchar[m[K’
+   77 |         std::cout << "MTC Current State: " << [01;36m[Kfuture_result.get()->current_state[m[K;
+      |                                               [01;36m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:570:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<char, _Traits>&, char)[m[K’
+  570 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, char __c)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:570:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:68:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>*)(& rclcpp::detail::FutureAndRequestId<FutureT>::get() [with FutureT = std::future<std::shared_ptr<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> > > >]()))->std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>::operator->()->lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::current_state[m[K’ (type ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’}) to type ‘[01m[Kchar[m[K’
+   77 |         std::cout << "MTC Current State: " << [01;36m[Kfuture_result.get()->current_state[m[K;
+      |                                               [01;36m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:581:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<char, _Traits>&, signed char)[m[K’
+  581 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, signed char __c)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:581:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:68:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>*)(& rclcpp::detail::FutureAndRequestId<FutureT>::get() [with FutureT = std::future<std::shared_ptr<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> > > >]()))->std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>::operator->()->lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::current_state[m[K’ (type ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’}) to type ‘[01m[Ksigned char[m[K’
+   77 |         std::cout << "MTC Current State: " << [01;36m[Kfuture_result.get()->current_state[m[K;
+      |                                               [01;36m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:586:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<char, _Traits>&, unsigned char)[m[K’
+  586 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:586:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:68:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>*)(& rclcpp::detail::FutureAndRequestId<FutureT>::get() [with FutureT = std::future<std::shared_ptr<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> > > >]()))->std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>::operator->()->lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::current_state[m[K’ (type ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’}) to type ‘[01m[Kunsigned char[m[K’
+   77 |         std::cout << "MTC Current State: " << [01;36m[Kfuture_result.get()->current_state[m[K;
+      |                                               [01;36m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:595:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<char, _Traits>&, wchar_t)[m[K’ (deleted)
+  595 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>&, wchar_t) = delete;
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:595:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:68:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>*)(& rclcpp::detail::FutureAndRequestId<FutureT>::get() [with FutureT = std::future<std::shared_ptr<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> > > >]()))->std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>::operator->()->lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::current_state[m[K’ (type ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’}) to type ‘[01m[Kwchar_t[m[K’
+   77 |         std::cout << "MTC Current State: " << [01;36m[Kfuture_result.get()->current_state[m[K;
+      |                                               [01;36m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:600:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<char, _Traits>&, char8_t)[m[K’ (deleted)
+  600 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>&, char8_t) = delete;
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:600:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:68:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>*)(& rclcpp::detail::FutureAndRequestId<FutureT>::get() [with FutureT = std::future<std::shared_ptr<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> > > >]()))->std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>::operator->()->lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::current_state[m[K’ (type ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’}) to type ‘[01m[Kchar8_t[m[K’
+   77 |         std::cout << "MTC Current State: " << [01;36m[Kfuture_result.get()->current_state[m[K;
+      |                                               [01;36m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:605:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<char, _Traits>&, char16_t)[m[K’ (deleted)
+  605 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>&, char16_t) = delete;
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:605:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:68:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>*)(& rclcpp::detail::FutureAndRequestId<FutureT>::get() [with FutureT = std::future<std::shared_ptr<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> > > >]()))->std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>::operator->()->lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::current_state[m[K’ (type ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’}) to type ‘[01m[Kchar16_t[m[K’
+   77 |         std::cout << "MTC Current State: " << [01;36m[Kfuture_result.get()->current_state[m[K;
+      |                                               [01;36m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:609:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<char, _Traits>&, char32_t)[m[K’ (deleted)
+  609 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>&, char32_t) = delete;
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:609:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:68:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>*)(& rclcpp::detail::FutureAndRequestId<FutureT>::get() [with FutureT = std::future<std::shared_ptr<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> > > >]()))->std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>::operator->()->lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::current_state[m[K’ (type ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’}) to type ‘[01m[Kchar32_t[m[K’
+   77 |         std::cout << "MTC Current State: " << [01;36m[Kfuture_result.get()->current_state[m[K;
+      |                                               [01;36m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:615:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<wchar_t, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<wchar_t, _Traits>&, char8_t)[m[K’ (deleted)
+  615 |     [01;36m[Koperator[m[K<<(basic_ostream<wchar_t, _Traits>&, char8_t) = delete;
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:615:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:68:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kwchar_t[m[K’ and ‘[01m[Kchar[m[K’
+   77 |         std::cout << "MTC Current State: " << future_result.get()->[01;36m[Kcurrent_state[m[K;
+      |                                                                    [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:620:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<wchar_t, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<wchar_t, _Traits>&, char16_t)[m[K’ (deleted)
+  620 |     [01;36m[Koperator[m[K<<(basic_ostream<wchar_t, _Traits>&, char16_t) = delete;
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:620:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:68:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kwchar_t[m[K’ and ‘[01m[Kchar[m[K’
+   77 |         std::cout << "MTC Current State: " << future_result.get()->[01;36m[Kcurrent_state[m[K;
+      |                                                                    [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:624:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<wchar_t, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<wchar_t, _Traits>&, char32_t)[m[K’ (deleted)
+  624 |     [01;36m[Koperator[m[K<<(basic_ostream<wchar_t, _Traits>&, char32_t) = delete;
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:624:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:68:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kwchar_t[m[K’ and ‘[01m[Kchar[m[K’
+   77 |         std::cout << "MTC Current State: " << future_result.get()->[01;36m[Kcurrent_state[m[K;
+      |                                                                    [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:645:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, const _CharT*)[m[K’
+  645 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:645:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:68:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst _CharT*[m[K’ and ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’
+   77 |         std::cout << "MTC Current State: " << future_result.get()->[01;36m[Kcurrent_state[m[K;
+      |                                                                    [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/ostream.tcc:307:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, const char*)[m[K’
+  307 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/ostream.tcc:307:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:68:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>*)(& rclcpp::detail::FutureAndRequestId<FutureT>::get() [with FutureT = std::future<std::shared_ptr<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> > > >]()))->std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>::operator->()->lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::current_state[m[K’ (type ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’}) to type ‘[01m[Kconst char*[m[K’
+   77 |         std::cout << "MTC Current State: " << [01;36m[Kfuture_result.get()->current_state[m[K;
+      |                                               [01;36m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:662:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<char, _Traits>&, const char*)[m[K’
+  662 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, const char* __s)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:662:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:68:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>*)(& rclcpp::detail::FutureAndRequestId<FutureT>::get() [with FutureT = std::future<std::shared_ptr<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> > > >]()))->std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>::operator->()->lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::current_state[m[K’ (type ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’}) to type ‘[01m[Kconst char*[m[K’
+   77 |         std::cout << "MTC Current State: " << [01;36m[Kfuture_result.get()->current_state[m[K;
+      |                                               [01;36m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:675:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<char, _Traits>&, const signed char*)[m[K’
+  675 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:675:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:68:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>*)(& rclcpp::detail::FutureAndRequestId<FutureT>::get() [with FutureT = std::future<std::shared_ptr<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> > > >]()))->std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>::operator->()->lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::current_state[m[K’ (type ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’}) to type ‘[01m[Kconst signed char*[m[K’
+   77 |         std::cout << "MTC Current State: " << [01;36m[Kfuture_result.get()->current_state[m[K;
+      |                                               [01;36m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:680:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<char, _Traits>&, const unsigned char*)[m[K’
+  680 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:680:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:68:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>*)(& rclcpp::detail::FutureAndRequestId<FutureT>::get() [with FutureT = std::future<std::shared_ptr<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> > > >]()))->std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>::operator->()->lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::current_state[m[K’ (type ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’}) to type ‘[01m[Kconst unsigned char*[m[K’
+   77 |         std::cout << "MTC Current State: " << [01;36m[Kfuture_result.get()->current_state[m[K;
+      |                                               [01;36m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:689:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<char, _Traits>&, const wchar_t*)[m[K’ (deleted)
+  689 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>&, const wchar_t*) = delete;
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:689:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:68:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>*)(& rclcpp::detail::FutureAndRequestId<FutureT>::get() [with FutureT = std::future<std::shared_ptr<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> > > >]()))->std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>::operator->()->lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::current_state[m[K’ (type ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’}) to type ‘[01m[Kconst wchar_t*[m[K’
+   77 |         std::cout << "MTC Current State: " << [01;36m[Kfuture_result.get()->current_state[m[K;
+      |                                               [01;36m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:694:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<char, _Traits>&, const char8_t*)[m[K’ (deleted)
+  694 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>&, const char8_t*) = delete;
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:694:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:68:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>*)(& rclcpp::detail::FutureAndRequestId<FutureT>::get() [with FutureT = std::future<std::shared_ptr<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> > > >]()))->std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>::operator->()->lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::current_state[m[K’ (type ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’}) to type ‘[01m[Kconst char8_t*[m[K’
+   77 |         std::cout << "MTC Current State: " << [01;36m[Kfuture_result.get()->current_state[m[K;
+      |                                               [01;36m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:699:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<char, _Traits>&, const char16_t*)[m[K’ (deleted)
+  699 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>&, const char16_t*) = delete;
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:699:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:68:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>*)(& rclcpp::detail::FutureAndRequestId<FutureT>::get() [with FutureT = std::future<std::shared_ptr<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> > > >]()))->std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>::operator->()->lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::current_state[m[K’ (type ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’}) to type ‘[01m[Kconst char16_t*[m[K’
+   77 |         std::cout << "MTC Current State: " << [01;36m[Kfuture_result.get()->current_state[m[K;
+      |                                               [01;36m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:703:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<char, _Traits>&, const char32_t*)[m[K’ (deleted)
+  703 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>&, const char32_t*) = delete;
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:703:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:68:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>*)(& rclcpp::detail::FutureAndRequestId<FutureT>::get() [with FutureT = std::future<std::shared_ptr<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> > > >]()))->std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>::operator->()->lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::current_state[m[K’ (type ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’}) to type ‘[01m[Kconst char32_t*[m[K’
+   77 |         std::cout << "MTC Current State: " << [01;36m[Kfuture_result.get()->current_state[m[K;
+      |                                               [01;36m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:709:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<wchar_t, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<wchar_t, _Traits>&, const char8_t*)[m[K’ (deleted)
+  709 |     [01;36m[Koperator[m[K<<(basic_ostream<wchar_t, _Traits>&, const char8_t*) = delete;
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:709:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:68:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kwchar_t[m[K’ and ‘[01m[Kchar[m[K’
+   77 |         std::cout << "MTC Current State: " << future_result.get()->[01;36m[Kcurrent_state[m[K;
+      |                                                                    [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:714:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<wchar_t, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<wchar_t, _Traits>&, const char16_t*)[m[K’ (deleted)
+  714 |     [01;36m[Koperator[m[K<<(basic_ostream<wchar_t, _Traits>&, const char16_t*) = delete;
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:714:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:68:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kwchar_t[m[K’ and ‘[01m[Kchar[m[K’
+   77 |         std::cout << "MTC Current State: " << future_result.get()->[01;36m[Kcurrent_state[m[K;
+      |                                                                    [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:718:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<wchar_t, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<wchar_t, _Traits>&, const char32_t*)[m[K’ (deleted)
+  718 |     [01;36m[Koperator[m[K<<(basic_ostream<wchar_t, _Traits>&, const char32_t*) = delete;
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:718:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:68:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kwchar_t[m[K’ and ‘[01m[Kchar[m[K’
+   77 |         std::cout << "MTC Current State: " << future_result.get()->[01;36m[Kcurrent_state[m[K;
+      |                                                                    [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:801:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Ostream, class _Tp> _Ostream&& std::[01;32m[Koperator<<[m[K(_Ostream&&, const _Tp&)[m[K’
+  801 |     [01;36m[Koperator[m[K<<(_Ostream&& __os, const _Tp& __x)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/ostream:801:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+/usr/include/c++/13/ostream: In substitution of ‘[01m[Ktemplate<class _Ostream, class _Tp> _Ostream&& std::[01;32m[Koperator<<[m[K(_Ostream&&, const _Tp&) [35m[K[with _Ostream = std::basic_ostream<char>&; _Tp = lifecycle_msgs::msg::State_<std::allocator<void> >][m[K[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:68:[m[K   required from here
+[01m[K/usr/include/c++/13/ostream:801:5:[m[K [01;31m[Kerror: [m[Ktemplate constraint failure for ‘[01m[Ktemplate<class _Os, class _Tp>  requires (__derived_from_ios_base<_Os>) && requires(_Os& __os, const _Tp& __t) {__os << __t;} using std::__rvalue_stream_insertion_t = _Os&&[m[K’
+[01m[K/usr/include/c++/13/ostream:801:5:[m[K [01;36m[Knote: [m[Kconstraints not satisfied
+/usr/include/c++/13/ostream: In substitution of ‘[01m[Ktemplate<class _Os, class _Tp>  requires (__derived_from_ios_base<_Os>) && requires(_Os& __os, const _Tp& __t) {__os << __t;} using std::__rvalue_stream_insertion_t = _Os&& [35m[K[with _Os = std::basic_ostream<char>&; _Tp = lifecycle_msgs::msg::State_<std::allocator<void> >][m[K[m[K’:
+[01m[K/usr/include/c++/13/ostream:801:5:[m[K   required by substitution of ‘[01m[Ktemplate<class _Ostream, class _Tp> _Ostream&& std::[01;32m[Koperator<<[m[K(_Ostream&&, const _Tp&) [35m[K[with _Ostream = std::basic_ostream<char>&; _Tp = lifecycle_msgs::msg::State_<std::allocator<void> >][m[K[m[K’
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:68:[m[K   required from here
+[01m[K/usr/include/c++/13/ostream:768:13:[m[K   required for the satisfaction of ‘[01m[K__derived_from_ios_base<_Os>[m[K’ [with _Os = std::basic_ostream<char, std::char_traits<char> >&]
+[01m[K/usr/include/c++/13/ostream:768:39:[m[K [01;36m[Knote: [m[Kthe expression ‘[01m[Kis_class_v<_Tp> [with _Tp = std::basic_ostream<char, std::char_traits<char> >&][m[K’ evaluated to ‘[01m[Kfalse[m[K’
+  768 |     concept __derived_from_ios_base = [01;36m[Kis_class_v<_Tp>[m[K
+      |                                       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/unique_ptr.h:1142:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits, class _Tp, class _Dp> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, const unique_ptr<_Up, _Ep>&) requires requires{std::operator<<::__os << std::operator<<::__p->get();}[m[K’
+ 1142 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/unique_ptr.h:1142:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:68:[m[K [01;36m[Knote: [m[K  ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’} is not derived from ‘[01m[Kconst std::unique_ptr<_Up, _Ep>[m[K’
+   77 |         std::cout << "MTC Current State: " << future_result.get()->[01;36m[Kcurrent_state[m[K;
+      |                                                                    [01;36m[K^~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/13/memory:80[m[K:
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:70:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Ch, class _Tr, class _Tp, __gnu_cxx::_Lock_policy _Lp> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, const __shared_ptr<_Tp, _Lp>&)[m[K’
+   70 |     [01;36m[Koperator[m[K<<(std::basic_ostream<_Ch, _Tr>& __os,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:70:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:68:[m[K [01;36m[Knote: [m[K  ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’} is not derived from ‘[01m[Kconst std::__shared_ptr<_Tp, _Lp>[m[K’
+   77 |         std::cout << "MTC Current State: " << future_result.get()->[01;36m[Kcurrent_state[m[K;
+      |                                                                    [01;36m[K^~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/jazzy/include/rosidl_runtime_cpp/rosidl_runtime_cpp/traits.hpp:20[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/joint_limits__traits.hpp:18[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/joint_limits.hpp:9[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_model/joint_model.hpp:44[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_model/joint_model_group.hpp:40[m[K:
+[01m[K/usr/include/c++/13/iomanip:81:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, _Resetiosflags)[m[K’
+   81 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Resetiosflags __f)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/iomanip:81:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:68:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>*)(& rclcpp::detail::FutureAndRequestId<FutureT>::get() [with FutureT = std::future<std::shared_ptr<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> > > >]()))->std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>::operator->()->lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::current_state[m[K’ (type ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’}) to type ‘[01m[Kstd::_Resetiosflags[m[K’
+   77 |         std::cout << "MTC Current State: " << [01;36m[Kfuture_result.get()->current_state[m[K;
+      |                                               [01;36m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/iomanip:111:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, _Setiosflags)[m[K’
+  111 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Setiosflags __f)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/iomanip:111:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:68:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>*)(& rclcpp::detail::FutureAndRequestId<FutureT>::get() [with FutureT = std::future<std::shared_ptr<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> > > >]()))->std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>::operator->()->lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::current_state[m[K’ (type ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’}) to type ‘[01m[Kstd::_Setiosflags[m[K’
+   77 |         std::cout << "MTC Current State: " << [01;36m[Kfuture_result.get()->current_state[m[K;
+      |                                               [01;36m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/iomanip:145:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, _Setbase)[m[K’
+  145 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Setbase __f)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/iomanip:145:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:68:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>*)(& rclcpp::detail::FutureAndRequestId<FutureT>::get() [with FutureT = std::future<std::shared_ptr<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> > > >]()))->std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>::operator->()->lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::current_state[m[K’ (type ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’}) to type ‘[01m[Kstd::_Setbase[m[K’
+   77 |         std::cout << "MTC Current State: " << [01;36m[Kfuture_result.get()->current_state[m[K;
+      |                                               [01;36m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/iomanip:180:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, _Setfill<_CharT>)[m[K’
+  180 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Setfill<_CharT> __f)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/iomanip:180:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:68:[m[K [01;36m[Knote: [m[K  ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’ is not derived from ‘[01m[Kstd::_Setfill<_CharT>[m[K’
+   77 |         std::cout << "MTC Current State: " << future_result.get()->[01;36m[Kcurrent_state[m[K;
+      |                                                                    [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/iomanip:210:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, _Setprecision)[m[K’
+  210 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Setprecision __f)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/iomanip:210:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:68:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>*)(& rclcpp::detail::FutureAndRequestId<FutureT>::get() [with FutureT = std::future<std::shared_ptr<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> > > >]()))->std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>::operator->()->lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::current_state[m[K’ (type ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’}) to type ‘[01m[Kstd::_Setprecision[m[K’
+   77 |         std::cout << "MTC Current State: " << [01;36m[Kfuture_result.get()->current_state[m[K;
+      |                                               [01;36m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/iomanip:240:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, _Setw)[m[K’
+  240 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Setw __f)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/iomanip:240:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:68:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>*)(& rclcpp::detail::FutureAndRequestId<FutureT>::get() [with FutureT = std::future<std::shared_ptr<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> > > >]()))->std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>::operator->()->lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::current_state[m[K’ (type ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’}) to type ‘[01m[Kstd::_Setw[m[K’
+   77 |         std::cout << "MTC Current State: " << [01;36m[Kfuture_result.get()->current_state[m[K;
+      |                                               [01;36m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/iomanip:313:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits, class _MoneyT> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, _Put_money<_MoneyT>)[m[K’
+  313 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Put_money<_MoneyT> __f)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/iomanip:313:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:68:[m[K [01;36m[Knote: [m[K  ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’ is not derived from ‘[01m[Kstd::_Put_money<_MoneyT>[m[K’
+   77 |         std::cout << "MTC Current State: " << future_result.get()->[01;36m[Kcurrent_state[m[K;
+      |                                                                    [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/iomanip:365:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, _Put_time<_CharT>)[m[K’
+  365 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Put_time<_CharT> __f)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/iomanip:365:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:68:[m[K [01;36m[Knote: [m[K  ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’ is not derived from ‘[01m[Kstd::_Put_time<_CharT>[m[K’
+   77 |         std::cout << "MTC Current State: " << future_result.get()->[01;36m[Kcurrent_state[m[K;
+      |                                                                    [01;36m[K^~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Geometry:11[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_model/joint_model.hpp:46[m[K:
+[01m[K/usr/include/c++/13/complex:558:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, const complex<_Tp>&)[m[K’
+  558 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, const complex<_Tp>& __x)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/complex:558:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:68:[m[K [01;36m[Knote: [m[K  ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’} is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+   77 |         std::cout << "MTC Current State: " << future_result.get()->[01;36m[Kcurrent_state[m[K;
+      |                                                                    [01;36m[K^~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/timer.hpp:24[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/callback_group.hpp:30[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node.hpp:40[m[K:
+[01m[K/usr/include/c++/13/thread:97:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::[01;32m[Koperator<<[m[K(basic_ostream<_CharT, _Traits>&, thread::id)[m[K’
+   97 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __out, thread::id __id)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/thread:97:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:77:68:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>*)(& rclcpp::detail::FutureAndRequestId<FutureT>::get() [with FutureT = std::future<std::shared_ptr<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> > > >]()))->std::__shared_ptr_access<lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >, __gnu_cxx::_S_atomic, false, false>::operator->()->lifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::current_state[m[K’ (type ‘[01m[Klifecycle_msgs::srv::GetState_Response_<std::allocator<void> >::_current_state_type[m[K’ {aka ‘[01m[Klifecycle_msgs::msg::State_<std::allocator<void> >[m[K’}) to type ‘[01m[Kstd::thread::id[m[K’
+   77 |         std::cout << "MTC Current State: " << [01;36m[Kfuture_result.get()->current_state[m[K;
+      |                                               [01;36m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In constructor ‘[01m[KMTCTaskNode::[01;32m[KMTCTaskNode[m[K(const rclcpp::NodeOptions&)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:141:14:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kiterator[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  141 |   for (auto& [01;35m[Kiterator[m[K : attach_topics){
+      |              [01;35m[K^~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kvoid MTCTaskNode::[01;32m[Kexecute[m[K(std::shared_ptr<rclcpp_action::ServerGoalHandle<robot_interfaces::action::MtcAction> >)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:176:61:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kgoal_handle[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  176 | void MTCTaskNode::execute([01;35m[Kconst std::shared_ptr<GoalHandle> goal_handle[m[K) {
+      |                           [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kvoid MTCTaskNode::[01;32m[KgetObjects[m[K(std::shared_ptr<rclcpp_action::ServerGoalHandle<robot_interfaces::action::MtcAction> >)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:412:29:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<MTCTaskNode::getObjects(std::shared_ptr<rclcpp_action::ServerGoalHandle<robot_interfaces::action::MtcAction> >)::data>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  412 |   while (task == false && [01;35m[Kj < objects.size()[m[K){
+      |                           [01;35m[K~~^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:415:10:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<MTCTaskNode::getObjects(std::shared_ptr<rclcpp_action::ServerGoalHandle<robot_interfaces::action::MtcAction> >)::data>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  415 |     if([01;35m[Kj >= objects.size()[m[K){
+      |        [01;35m[K~~^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:424:26:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<MTCTaskNode::getObjects(std::shared_ptr<rclcpp_action::ServerGoalHandle<robot_interfaces::action::MtcAction> >)::data>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  424 |     if(task == true && [01;35m[Kj < objects.size()[m[K){
+      |                        [01;35m[K~~^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:353:64:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kgoal_handle[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  353 | void MTCTaskNode::getObjects([01;35m[Kconst std::shared_ptr<GoalHandle> goal_handle[m[K){
+      |                              [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kint MTCTaskNode::[01;32m[KtestAttach[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:466:8:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kx_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  466 |   bool [01;35m[Kx_[m[K = false, y_ = false, z_ = false;
+      |        [01;35m[K^~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:466:20:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ky_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  466 |   bool x_ = false, [01;35m[Ky_[m[K = false, z_ = false;
+      |                    [01;35m[K^~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:466:32:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kz_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  466 |   bool x_ = false, y_ = false, [01;35m[Kz_[m[K = false;
+      |                                [01;35m[K^~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kmoveit::task_constructor::Task MTCTaskNode::[01;32m[KcreateGrabTask[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:965:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kattach_object_stage[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  965 |   mtc::Stage* [01;35m[Kattach_object_stage[m[K = nullptr;  // Forward attach_object_stage to place pose generator
+      |               [01;35m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn MTCPubSub::[01;32m[Kon_configure[m[K(const rclcpp_lifecycle::State&)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1087:122:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprevious_state[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+ 1087 |   rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_configure([01;35m[Kconst rclcpp_lifecycle::State & previous_state[m[K){
+      |                                                                                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn MTCPubSub::[01;32m[Kon_activate[m[K(const rclcpp_lifecycle::State&)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1103:121:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprevious_state[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+ 1103 |   rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_activate([01;35m[Kconst rclcpp_lifecycle::State & previous_state[m[K){
+      |                                                                                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn MTCPubSub::[01;32m[Kon_deactivate[m[K(const rclcpp_lifecycle::State&)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1110:123:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprevious_state[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+ 1110 |   rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_deactivate([01;35m[Kconst rclcpp_lifecycle::State & previous_state[m[K){
+      |                                                                                           [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn MTCPubSub::[01;32m[Kon_cleanup[m[K(const rclcpp_lifecycle::State&)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1119:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kiterator[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+ 1119 |     for (auto& [01;35m[Kiterator[m[K : topics){
+      |                [01;35m[K^~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1116:120:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprevious_state[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+ 1116 |   rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_cleanup([01;35m[Kconst rclcpp_lifecycle::State & previous_state[m[K){
+      |                                                                                        [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn MTCPubSub::[01;32m[Kon_shutdown[m[K(const rclcpp_lifecycle::State&)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1131:18:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kiterator[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+ 1131 |       for (auto& [01;35m[Kiterator[m[K : topics){
+      |                  [01;35m[K^~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1128:123:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprevious_state[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+ 1128 |     rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_shutdown([01;35m[Kconst rclcpp_lifecycle::State & previous_state[m[K){
+      |                                                                                           [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/master_node.dir/build.make:76: CMakeFiles/master_node.dir/src/master_node.cpp.o] Fehler 1
+gmake[1]: *** [CMakeFiles/Makefile2:141: CMakeFiles/master_node.dir/all] Fehler 2
+gmake[1]: *** Warte auf noch nicht beendete Prozesse...
+gmake: *** [Makefile:146: all] Fehler 2

@@ -198,17 +198,17 @@ estun_control_uninstall/fast:
 .PHONY : estun_control_uninstall/fast
 
 #=============================================================================
-# Target rules for targets named cartesian_planner
+# Target rules for targets named master_node
 
 # Build rule for target.
-cartesian_planner: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cartesian_planner
-.PHONY : cartesian_planner
+master_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 master_node
+.PHONY : master_node
 
 # fast build rule for target.
-cartesian_planner/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cartesian_planner.dir/build.make CMakeFiles/cartesian_planner.dir/build
-.PHONY : cartesian_planner/fast
+master_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/master_node.dir/build.make CMakeFiles/master_node.dir/build
+.PHONY : master_node/fast
 
 #=============================================================================
 # Target rules for targets named obstacle_planner
@@ -236,29 +236,29 @@ mtc_estun/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mtc_estun.dir/build.make CMakeFiles/mtc_estun.dir/build
 .PHONY : mtc_estun/fast
 
-src/cartesian_planner.o: src/cartesian_planner.cpp.o
-.PHONY : src/cartesian_planner.o
+src/master_node.o: src/master_node.cpp.o
+.PHONY : src/master_node.o
 
 # target to build an object file
-src/cartesian_planner.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cartesian_planner.dir/build.make CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.o
-.PHONY : src/cartesian_planner.cpp.o
+src/master_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/master_node.dir/build.make CMakeFiles/master_node.dir/src/master_node.cpp.o
+.PHONY : src/master_node.cpp.o
 
-src/cartesian_planner.i: src/cartesian_planner.cpp.i
-.PHONY : src/cartesian_planner.i
+src/master_node.i: src/master_node.cpp.i
+.PHONY : src/master_node.i
 
 # target to preprocess a source file
-src/cartesian_planner.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cartesian_planner.dir/build.make CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.i
-.PHONY : src/cartesian_planner.cpp.i
+src/master_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/master_node.dir/build.make CMakeFiles/master_node.dir/src/master_node.cpp.i
+.PHONY : src/master_node.cpp.i
 
-src/cartesian_planner.s: src/cartesian_planner.cpp.s
-.PHONY : src/cartesian_planner.s
+src/master_node.s: src/master_node.cpp.s
+.PHONY : src/master_node.s
 
 # target to generate assembly for a file
-src/cartesian_planner.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cartesian_planner.dir/build.make CMakeFiles/cartesian_planner.dir/src/cartesian_planner.cpp.s
-.PHONY : src/cartesian_planner.cpp.s
+src/master_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/master_node.dir/build.make CMakeFiles/master_node.dir/src/master_node.cpp.s
+.PHONY : src/master_node.cpp.s
 
 src/mtc_estun.o: src/mtc_estun.cpp.o
 .PHONY : src/mtc_estun.o
@@ -323,12 +323,12 @@ help:
 	@echo "... test"
 	@echo "... estun_control_uninstall"
 	@echo "... uninstall"
-	@echo "... cartesian_planner"
+	@echo "... master_node"
 	@echo "... mtc_estun"
 	@echo "... obstacle_planner"
-	@echo "... src/cartesian_planner.o"
-	@echo "... src/cartesian_planner.i"
-	@echo "... src/cartesian_planner.s"
+	@echo "... src/master_node.o"
+	@echo "... src/master_node.i"
+	@echo "... src/master_node.s"
 	@echo "... src/mtc_estun.o"
 	@echo "... src/mtc_estun.i"
 	@echo "... src/mtc_estun.s"

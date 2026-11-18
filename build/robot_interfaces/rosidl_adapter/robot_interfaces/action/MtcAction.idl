@@ -1,0 +1,26 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from robot_interfaces/action/MtcAction.action
+// generated code does not contain a copyright notice
+
+
+module robot_interfaces {
+  module action {
+    @verbatim (language="comment", text=
+      "Goal")
+    struct MtcAction_Goal {
+      string action;
+    };
+    @verbatim (language="comment", text=
+      "Result")
+    struct MtcAction_Result {
+      int8 object_count_result;
+
+      boolean success;
+    };
+    @verbatim (language="comment", text=
+      "Feedback")
+    struct MtcAction_Feedback {
+      int8 object_count_feedback;
+    };
+  };
+};

@@ -1,0 +1,42 @@
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:1[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:51:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   51 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:2[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:[m[K In member function ‘[01m[Kvoid MasterNode::[01;32m[KLcMtcRequest[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:75:25:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator!=[m[K’ (operand types are ‘[01m[Krclcpp::Client<lifecycle_msgs::srv::GetState>::FutureAndRequestId[m[K’ and ‘[01m[Krclcpp::FutureReturnCode[m[K’)
+   75 |     while([32m[Kfuture_result[m[K [01;31m[K!=[m[K [34m[Krclcpp::FutureReturnCode::SUCCESS[m[K){
+      |           [32m[K~~~~~~~~~~~~~[m[K [01;31m[K^~[m[K [34m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |           [32m[K|[m[K                                          [34m[K|[m[K
+      |           [32m[K|[m[K                                          [34m[Krclcpp::FutureReturnCode[m[K
+      |           [32m[Krclcpp::Client<lifecycle_msgs::srv::GetState>::FutureAndRequestId[m[K
+In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp:33[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/client.hpp:45[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node.hpp:40[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/kinematics_base/kinematics_base.hpp:43[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_model/joint_model_group.hpp:42[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_model/robot_model.hpp:45[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_state/robot_state.hpp:40[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.hpp:41[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:52[m[K:
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/qos.hpp:295:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool rclcpp::[01;32m[Koperator!=[m[K(const QoS&, const QoS&)[m[K’
+  295 | bool [01;36m[Koperator[m[K!=(const QoS & left, const QoS & right);
+      |      [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/qos.hpp:295:29:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Krclcpp::Client<lifecycle_msgs::srv::GetState>::FutureAndRequestId[m[K’ to ‘[01m[Kconst rclcpp::QoS&[m[K’
+  295 | bool operator!=([01;36m[Kconst QoS & left[m[K, const QoS & right);
+      |                 [01;36m[K~~~~~~~~~~~~^~~~[m[K
+In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/publisher_base.hpp:34[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/callback_group.hpp:27[m[K:
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/network_flow_endpoint.hpp:95:15:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool rclcpp::[01;32m[Koperator!=[m[K(const NetworkFlowEndpoint&, const NetworkFlowEndpoint&)[m[K’
+   95 |   friend bool [01;36m[Krclcpp[m[K::operator!=(
+      |               [01;36m[K^~~~~~[m[K
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/network_flow_endpoint.hpp:38:45:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Krclcpp::Client<lifecycle_msgs::srv::GetState>::FutureAndRequestId[m[K’ to ‘[01m[Kconst rclcpp::NetworkFlowEndpoint&[m[K’
+   38 | bool operator!=([01;36m[Kconst NetworkFlowEndpoint & left[m[K, const NetworkFlowEndpoint & right);
+      |                 [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+gmake[2]: *** [CMakeFiles/master_node.dir/build.make:76: CMakeFiles/master_node.dir/src/master_node.cpp.o] Fehler 1
+gmake[1]: *** [CMakeFiles/Makefile2:141: CMakeFiles/master_node.dir/all] Fehler 2
+gmake: *** [Makefile:146: all] Fehler 2

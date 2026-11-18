@@ -1,0 +1,534 @@
+-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found rclcpp: 28.1.22 (/opt/ros/jazzy/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found moveit: 2.12.4 (/opt/ros/jazzy/share/moveit/cmake)
+-- Found std_msgs: 5.3.8 (/opt/ros/jazzy/share/std_msgs/cmake)
+-- Found moveit_msgs: 2.6.0 (/opt/ros/jazzy/share/moveit_msgs/cmake)
+-- Found moveit_ros_planning_interface: 2.12.4 (/opt/ros/jazzy/share/moveit_ros_planning_interface/cmake)
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: date_time filesystem program_options system thread 
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+-- Found tcb_span: 1.3.2 (/opt/ros/jazzy/share/tcb_span/cmake)
+-- Found rclcpp_lifecycle: 28.1.22 (/opt/ros/jazzy/share/rclcpp_lifecycle/cmake)
+-- Found parameter_traits: 0.7.6 (/opt/ros/jazzy/share/parameter_traits/cmake)
+-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread chrono 
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: thread system filesystem regex date_time program_options 
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread 
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: thread 
+-- Looking for sdformat14 -- found version 14.9.0
+-- Searching for dependencies of sdformat14
+-- Checking for module 'tinyxml2'
+--   Found tinyxml2, version 10.0.0
+-- Looking for gz-math7 -- found version 7.7.0
+-- Searching for dependencies of gz-math7
+-- Looking for gz-utils2 -- found version 2.2.1
+-- Searching for dependencies of gz-utils2
+-- Looking for gz-utils2 -- found version 2.2.1
+-- Searching for dependencies of gz-utils2
+-- Searching for <gz-utils2> component [cli]
+-- Looking for gz-utils2-cli -- found version 2.2.1
+-- Searching for dependencies of gz-utils2-cli
+-- Found moveit_task_constructor_core: 0.2.0 (/home/mario/master_ws/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake)
+-- Found robot_interfaces: 0.0.0 (/home/mario/master_ws/install/robot_interfaces/share/robot_interfaces/cmake)
+-- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/mario/master_ws/src/estun_control/include>
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Configured 'flake8' exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done (1.4s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/mario/master_ws/build/estun_control
+[ 16%] [32mBuilding CXX object CMakeFiles/master_node.dir/src/master_node.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/obstacle_planner.dir/src/obstacle_planner.cpp.o[0m
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:1[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:51:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   51 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:1[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:51:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   51 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:4[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:2[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:5[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:27:9:[m[K [01;31m[Kerror: [m[K‘[01m[Krclcpp_action[m[K’ does not name a type
+   27 |         [01;31m[Krclcpp_action[m[K<MtcAction>::SharedPtr client_mtc;
+      |         [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:[m[K In constructor ‘[01m[KMasterNode::[01;32m[KMasterNode[m[K(const rclcpp::NodeOptions&)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:38:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kclient_mtc[m[K’ was not declared in this scope
+   38 |     [01;31m[Kclient_mtc[m[K = node_->create_client<MtcAction>("MtcAction",rclcpp::QoS(1).durability_volatile().reliable());
+      |     [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:38:39:[m[K [01;31m[Kerror: [m[K‘[01m[KMtcAction[m[K’ was not declared in this scope; did you mean ‘[01m[Krobot_interfaces::action::MtcAction[m[K’?
+   38 |     client_mtc = node_->create_client<[01;31m[KMtcAction[m[K>("MtcAction",rclcpp::QoS(1).durability_volatile().reliable());
+      |                                       [01;31m[K^~~~~~~~~[m[K
+      |                                       [32m[Krobot_interfaces::action::MtcAction[m[K
+In file included from [01m[K/home/mario/master_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/action/mtc_action.hpp:7[m[K,
+                 from [01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:8[m[K:
+[01m[K/home/mario/master_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/action/detail/mtc_action__struct.hpp:1327:26:[m[K [01;36m[Knote: [m[K‘[01m[Krobot_interfaces::action::MtcAction[m[K’ declared here
+ 1327 | typedef struct MtcAction [01;36m[KMtcAction[m[K;
+      |                          [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:38:49:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Krclcpp::Node::create_client<<expression error> >(const char [10], rclcpp::QoS&)[m[K’
+   38 |     client_mtc = [01;31m[Knode_->create_client<MtcAction>("MtcAction",rclcpp::QoS(1).durability_volatile().reliable())[m[K;
+      |                  [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/kinematics_base/kinematics_base.hpp:43[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_model/joint_model_group.hpp:42[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_model/robot_model.hpp:45[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_state/robot_state.hpp:40[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.hpp:41[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:52[m[K:
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node.hpp:271:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class ServiceT> typename rclcpp::Client<ServiceT>::SharedPtr rclcpp::Node::[01;32m[Kcreate_client[m[K(const std::string&, const rmw_qos_profile_t&, rclcpp::CallbackGroup::SharedPtr)[m[K’
+  271 |   [01;36m[Kcreate_client[m[K(
+      |   [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node.hpp:271:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:38:49:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   38 |     client_mtc = [01;31m[Knode_->create_client<MtcAction>("MtcAction",rclcpp::QoS(1).durability_volatile().reliable())[m[K;
+      |                  [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node.hpp:285:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class ServiceT> typename rclcpp::Client<ServiceT>::SharedPtr rclcpp::Node::[01;32m[Kcreate_client[m[K(const std::string&, const rclcpp::QoS&, rclcpp::CallbackGroup::SharedPtr)[m[K’
+  285 |   [01;36m[Kcreate_client[m[K(
+      |   [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node.hpp:285:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:38:49:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   38 |     client_mtc = [01;31m[Knode_->create_client<MtcAction>("MtcAction",rclcpp::QoS(1).durability_volatile().reliable())[m[K;
+      |                  [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:40:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kclient_lc_state_mtc[m[K’ was not declared in this scope
+   40 |     [01;31m[Kclient_lc_state_mtc[m[K = node_>create_service<lifecycle_msgs::srv::GetState>("/obstacle_planner/get_state");
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:40:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kcreate_service[m[K’ was not declared in this scope; did you mean ‘[01m[Krclcpp::create_service[m[K’?
+   40 |     client_lc_state_mtc = node_>[01;31m[Kcreate_service<lifecycle_msgs::srv::GetState>[m[K("/obstacle_planner/get_state");
+      |                                 [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                 [32m[Krclcpp::create_service[m[K
+In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node_impl.hpp:42[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node.hpp:1663[m[K:
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/create_service.hpp:60:1:[m[K [01;36m[Knote: [m[K‘[01m[Krclcpp::create_service[m[K’ declared here
+   60 | [01;36m[Kcreate_service[m[K(
+      | [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:[m[K At global scope:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:51:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid MasterNode::[01;32m[KLcMtcRequest[m[K()[m[K’
+   51 | void [01;31m[KMasterNode[m[K::LcMtcRequest(){
+      |      [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:51:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid MasterNode::[01;32m[KLcMtcRequest[m[K()[m[K’
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:14:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass MasterNode[m[K’ defined here
+   14 | class [01;36m[KMasterNode[m[K {
+      |       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:[m[K In function ‘[01m[Kint[01;32m[K main[m[K(int, char**)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:97:5:[m[K [01;31m[Kerror: [m[K‘[01m[KLcMtcRequest[m[K’ was not declared in this scope
+   97 |     [01;31m[KLcMtcRequest[m[K();
+      |     [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:54:56:[m[K [01;31m[Kerror: [m[K‘[01m[KMtcAction[m[K’ was not declared in this scope; did you mean ‘[01m[Krobot_interfaces::action::MtcAction[m[K’?
+   54 |     using GoalHandle = rclcpp_action::ServerGoalHandle<[01;31m[KMtcAction[m[K>;
+      |                                                        [01;31m[K^~~~~~~~~[m[K
+      |                                                        [32m[Krobot_interfaces::action::MtcAction[m[K
+In file included from [01m[K/home/mario/master_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/action/mtc_action.hpp:7[m[K,
+                 from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:32[m[K:
+[01m[K/home/mario/master_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/action/detail/mtc_action__struct.hpp:1327:26:[m[K [01;36m[Knote: [m[K‘[01m[Krobot_interfaces::action::MtcAction[m[K’ declared here
+ 1327 | typedef struct MtcAction [01;36m[KMtcAction[m[K;
+      |                          [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:54:65:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   54 |     using GoalHandle = rclcpp_action::ServerGoalHandle<MtcAction[01;31m[K>[m[K;
+      |                                                                 [01;31m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:54:39:[m[K [01;31m[Kerror: [m[K‘[01m[K<expression error>[m[K’ in namespace ‘[01m[Krclcpp_action[m[K’ does not name a type
+   54 |     using GoalHandle = rclcpp_action::[01;31m[KServerGoalHandle<MtcAction>[m[K;
+      |                                       [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:62:43:[m[K [01;31m[Kerror: [m[K‘[01m[KGoalHandle[m[K’ was not declared in this scope
+   62 |     void getObjects(const std::shared_ptr<[01;31m[KGoalHandle[m[K>);
+      |                                           [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:62:53:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   62 |     void getObjects(const std::shared_ptr<GoalHandle[01;31m[K>[m[K);
+      |                                                     [01;31m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:62:32:[m[K [01;31m[Kerror: [m[K‘[01m[K<expression error>[m[K’ in namespace ‘[01m[Kstd[m[K’ does not name a type
+   62 |     void getObjects(const std::[01;31m[Kshared_ptr<GoalHandle>[m[K);
+      |                                [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:65:40:[m[K [01;31m[Kerror: [m[K‘[01m[KGoalHandle[m[K’ was not declared in this scope
+   65 |     void execute(const std::shared_ptr<[01;31m[KGoalHandle[m[K>);
+      |                                        [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:65:50:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   65 |     void execute(const std::shared_ptr<GoalHandle[01;31m[K>[m[K);
+      |                                                  [01;31m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:65:29:[m[K [01;31m[Kerror: [m[K‘[01m[K<expression error>[m[K’ in namespace ‘[01m[Kstd[m[K’ does not name a type
+   65 |     void execute(const std::[01;31m[Kshared_ptr<GoalHandle>[m[K);
+      |                             [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:2[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:103:3:[m[K [01;31m[Kerror: [m[K‘[01m[Krclcpp_action[m[K’ does not name a type
+  103 |   [01;31m[Krclcpp_action[m[K<MtcAction>::SharedPtr server_mtc;
+      |   [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In constructor ‘[01m[KMTCTaskNode::[01;32m[KMTCTaskNode[m[K(const rclcpp::NodeOptions&)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:125:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kserver_mtc[m[K’ was not declared in this scope
+  125 |   [01;31m[Kserver_mtc[m[K = node_->create_server<MtcAction>("MtcAction",rclcpp::QoS(1).durability_volatile().reliable(),handle_goal,handle_cancel,handle_accepted);
+      |   [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:125:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing std::__shared_ptr_access<rclcpp::Node, __gnu_cxx::_S_atomic, false, false>::element_type = class rclcpp::Node[m[K’ {aka ‘[01m[Kclass rclcpp::Node[m[K’} has no member named ‘[01m[Kcreate_server[m[K’; did you mean ‘[01m[Kcreate_service[m[K’?
+  125 |   server_mtc = node_->[01;31m[Kcreate_server[m[K<MtcAction>("MtcAction",rclcpp::QoS(1).durability_volatile().reliable(),handle_goal,handle_cancel,handle_accepted);
+      |                       [01;31m[K^~~~~~~~~~~~~[m[K
+      |                       [32m[Kcreate_service[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:125:37:[m[K [01;31m[Kerror: [m[K‘[01m[KMtcAction[m[K’ was not declared in this scope; did you mean ‘[01m[Krobot_interfaces::action::MtcAction[m[K’?
+  125 |   server_mtc = node_->create_server<[01;31m[KMtcAction[m[K>("MtcAction",rclcpp::QoS(1).durability_volatile().reliable(),handle_goal,handle_cancel,handle_accepted);
+      |                                     [01;31m[K^~~~~~~~~[m[K
+      |                                     [32m[Krobot_interfaces::action::MtcAction[m[K
+[01m[K/home/mario/master_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/action/detail/mtc_action__struct.hpp:1327:26:[m[K [01;36m[Knote: [m[K‘[01m[Krobot_interfaces::action::MtcAction[m[K’ declared here
+ 1327 | typedef struct MtcAction [01;36m[KMtcAction[m[K;
+      |                          [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:125:48:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+  125 |   server_mtc = node_->create_server<MtcAction>([01;35m[K"MtcAction"[m[K,rclcpp::QoS(1).durability_volatile().reliable(),handle_goal,handle_cancel,handle_accepted);
+      |                                                [01;35m[K^~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:125:108:[m[K [01;31m[Kerror: [m[K‘[01m[Khandle_goal[m[K’ was not declared in this scope
+  125 |   server_mtc = node_->create_server<MtcAction>("MtcAction",rclcpp::QoS(1).durability_volatile().reliable(),[01;31m[Khandle_goal[m[K,handle_cancel,handle_accepted);
+      |                                                                                                            [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:125:120:[m[K [01;31m[Kerror: [m[K‘[01m[Khandle_cancel[m[K’ was not declared in this scope
+  125 |   server_mtc = node_->create_server<MtcAction>("MtcAction",rclcpp::QoS(1).durability_volatile().reliable(),handle_goal,[01;31m[Khandle_cancel[m[K,handle_accepted);
+      |                                                                                                                        [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:125:134:[m[K [01;31m[Kerror: [m[K‘[01m[Khandle_accepted[m[K’ was not declared in this scope
+  125 |   server_mtc = node_->create_server<MtcAction>("MtcAction",rclcpp::QoS(1).durability_volatile().reliable(),handle_goal,handle_cancel,[01;31m[Khandle_accepted[m[K);
+      |                                                                                                                                      [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:138:14:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kiterator[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  138 |   for (auto& [01;35m[Kiterator[m[K : attach_topics){
+      |              [01;35m[K^~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:145:23:[m[K [01;31m[Kerror: [m[Kcapture of non-variable ‘[01m[KMTCTaskNode::node_[m[K’
+  145 |   auto handle_goal = [[01;31m[Knode_[m[K](const rclcpp_action::GoalUUID & uuid, std::shared_ptr<const MtcAction::Goal> goal){
+      |                       [01;31m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:98:27:[m[K [01;36m[Knote: [m[K‘[01m[Krclcpp::Node::SharedPtr MTCTaskNode::node_[m[K’ declared here
+   98 |   rclcpp::Node::SharedPtr [01;36m[Knode_[m[K;
+      |                           [01;36m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:145:99:[m[K [01;31m[Kerror: [m[KISO C++ forbids declaration of ‘[01m[Ktype name[m[K’ with no type [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  145 |   auto handle_goal = [node_](const rclcpp_action::GoalUUID & uuid, std::shared_ptr<const MtcAction[01;31m[K::[m[KGoal> goal){
+      |                                                                                                   [01;31m[K^~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:145:105:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  145 |   auto handle_goal = [node_](const rclcpp_action::GoalUUID & uuid, std::shared_ptr<const MtcAction::Goal[01;31m[K>[m[K goal){
+      |                                                                                                         [01;31m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:145:68:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd::goal[m[K’ has not been declared
+  145 |   auto handle_goal = [node_](const rclcpp_action::GoalUUID & uuid, [01;31m[Kstd[m[K::shared_ptr<const MtcAction::Goal> goal){
+      |                                                                    [01;31m[K^~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:151:25:[m[K [01;31m[Kerror: [m[Kcapture of non-variable ‘[01m[KMTCTaskNode::node_[m[K’
+  151 |   auto handle_cancel = [[01;31m[Knode_[m[K](const std::shared_ptr<GoalHandle> goal_handle){
+      |                         [01;31m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:98:27:[m[K [01;36m[Knote: [m[K‘[01m[Krclcpp::Node::SharedPtr MTCTaskNode::node_[m[K’ declared here
+   98 |   rclcpp::Node::SharedPtr [01;36m[Knode_[m[K;
+      |                           [01;36m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:151:54:[m[K [01;31m[Kerror: [m[K‘[01m[KGoalHandle[m[K’ was not declared in this scope
+  151 |   auto handle_cancel = [node_](const std::shared_ptr<[01;31m[KGoalHandle[m[K> goal_handle){
+      |                                                      [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:151:64:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  151 |   auto handle_cancel = [node_](const std::shared_ptr<GoalHandle[01;31m[K>[m[K goal_handle){
+      |                                                                [01;31m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:151:43:[m[K [01;31m[Kerror: [m[K‘[01m[K<expression error>[m[K’ in namespace ‘[01m[Kstd[m[K’ does not name a type
+  151 |   auto handle_cancel = [node_](const std::[01;31m[Kshared_ptr<GoalHandle>[m[K goal_handle){
+      |                                           [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:155:4:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K;[m[K’ token
+  155 |   }[01;31m[K;[m[K
+      |    [01;31m[K^[m[K
+      |    [32m[K)[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:151:31:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+  151 |   auto handle_cancel = [node_][01;36m[K([m[Kconst std::shared_ptr<GoalHandle> goal_handle){
+      |                               [01;36m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In lambda function:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:155:4:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ before ‘[01m[K;[m[K’ token
+  155 |   }[01;31m[K;[m[K
+      |    [01;31m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In constructor ‘[01m[KMTCTaskNode::[01;32m[KMTCTaskNode[m[K(const rclcpp::NodeOptions&)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:157:27:[m[K [01;31m[Kerror: [m[Kcapture of non-variable ‘[01m[KMTCTaskNode::node_[m[K’
+  157 |   auto handle_accepted = [[01;31m[Knode_[m[K](const std::shared_ptr<GoalHandle> goal_handle){
+      |                           [01;31m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:98:27:[m[K [01;36m[Knote: [m[K‘[01m[Krclcpp::Node::SharedPtr MTCTaskNode::node_[m[K’ declared here
+   98 |   rclcpp::Node::SharedPtr [01;36m[Knode_[m[K;
+      |                           [01;36m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:157:56:[m[K [01;31m[Kerror: [m[K‘[01m[KGoalHandle[m[K’ was not declared in this scope
+  157 |   auto handle_accepted = [node_](const std::shared_ptr<[01;31m[KGoalHandle[m[K> goal_handle){
+      |                                                        [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:157:66:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  157 |   auto handle_accepted = [node_](const std::shared_ptr<GoalHandle[01;31m[K>[m[K goal_handle){
+      |                                                                  [01;31m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:157:45:[m[K [01;31m[Kerror: [m[K‘[01m[K<expression error>[m[K’ in namespace ‘[01m[Kstd[m[K’ does not name a type
+  157 |   auto handle_accepted = [node_](const std::[01;31m[Kshared_ptr<GoalHandle>[m[K goal_handle){
+      |                                             [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:162:4:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K;[m[K’ token
+  162 |   }[01;31m[K;[m[K
+      |    [01;31m[K^[m[K
+      |    [32m[K)[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:157:33:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+  157 |   auto handle_accepted = [node_][01;36m[K([m[Kconst std::shared_ptr<GoalHandle> goal_handle){
+      |                                 [01;36m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In lambda function:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:162:4:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ before ‘[01m[K;[m[K’ token
+  162 |   }[01;31m[K;[m[K
+      |    [01;31m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K At global scope:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:171:49:[m[K [01;31m[Kerror: [m[K‘[01m[KGoalHandle[m[K’ was not declared in this scope
+  171 | void MTCTaskNode::execute(const std::shared_ptr<[01;31m[KGoalHandle[m[K> goal_handle) {
+      |                                                 [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:171:59:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  171 | void MTCTaskNode::execute(const std::shared_ptr<GoalHandle[01;31m[K>[m[K goal_handle) {
+      |                                                           [01;31m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kvoid MTCTaskNode::[01;32m[Kexecute[m[K(int)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:174:32:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+  174 |   const auto goal = goal_handle[01;31m[K->[m[Kget_goal();
+      |                                [01;31m[K^~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:176:36:[m[K [01;31m[Kerror: [m[K‘[01m[KMtcAction[m[K’ was not declared in this scope; did you mean ‘[01m[Krobot_interfaces::action::MtcAction[m[K’?
+  176 |   auto feedback = std::make_shared<[01;31m[KMtcAction[m[K::Feedback>();
+      |                                    [01;31m[K^~~~~~~~~[m[K
+      |                                    [32m[Krobot_interfaces::action::MtcAction[m[K
+[01m[K/home/mario/master_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/action/detail/mtc_action__struct.hpp:1327:26:[m[K [01;36m[Knote: [m[K‘[01m[Krobot_interfaces::action::MtcAction[m[K’ declared here
+ 1327 | typedef struct MtcAction [01;36m[KMtcAction[m[K;
+      |                          [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:176:24:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+  176 |   auto feedback = std::[01;31m[Kmake_shared<MtcAction::Feedback>[m[K();
+      |                        [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:176:56:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmake_shared<<expression error> >()[m[K’
+  176 |   auto feedback = [01;31m[Kstd::make_shared<MtcAction::Feedback>()[m[K;
+      |                   [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+In file included from [01m[K/usr/include/c++/13/memory:80[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:173[m[K,
+                 from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1[m[K:
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1005:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Args> std::shared_ptr<std::_NonArray<_Tp> > std::[01;32m[Kmake_shared[m[K(_Args&& ...)[m[K’
+ 1005 |     [01;36m[Kmake_shared[m[K(_Args&&... __args)
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1005:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:176:56:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  176 |   auto feedback = [01;31m[Kstd::make_shared<MtcAction::Feedback>()[m[K;
+      |                   [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1037:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> std::shared_ptr<std::_UnboundedArray<_Tp> > std::[01;32m[Kmake_shared[m[K(size_t)[m[K’
+ 1037 |     [01;36m[Kmake_shared[m[K(size_t __n)
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1037:5:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1053:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> std::shared_ptr<std::_UnboundedArray<_Tp> > std::[01;32m[Kmake_shared[m[K(size_t, remove_extent_t<_Iter>&)[m[K’
+ 1053 |     [01;36m[Kmake_shared[m[K(size_t __n, const remove_extent_t<_Tp>& __u)
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1053:5:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 0 provided
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1080:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> std::shared_ptr<std::_BoundedArray<_Tp> > std::[01;32m[Kmake_shared[m[K()[m[K’
+ 1080 |     [01;36m[Kmake_shared[m[K()
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1080:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:176:56:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  176 |   auto feedback = [01;31m[Kstd::make_shared<MtcAction::Feedback>()[m[K;
+      |                   [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1095:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> std::shared_ptr<std::_BoundedArray<_Tp> > std::[01;32m[Kmake_shared[m[K(remove_extent_t<_Iter>&)[m[K’
+ 1095 |     [01;36m[Kmake_shared[m[K(const remove_extent_t<_Tp>& __u)
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1095:5:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:178:22:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+  178 |   auto result = std::[01;31m[Kmake_shared<MtcAction::Result>[m[K();
+      |                      [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:178:52:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmake_shared<MtcAction>()[m[K’
+  178 |   auto result = [01;31m[Kstd::make_shared<MtcAction::Result>()[m[K;
+      |                 [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1005:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Args> std::shared_ptr<std::_NonArray<_Tp> > std::[01;32m[Kmake_shared[m[K(_Args&& ...)[m[K’
+ 1005 |     [01;36m[Kmake_shared[m[K(_Args&&... __args)
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1005:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1037:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> std::shared_ptr<std::_UnboundedArray<_Tp> > std::[01;32m[Kmake_shared[m[K(size_t)[m[K’
+ 1037 |     [01;36m[Kmake_shared[m[K(size_t __n)
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1037:5:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1053:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> std::shared_ptr<std::_UnboundedArray<_Tp> > std::[01;32m[Kmake_shared[m[K(size_t, remove_extent_t<_Iter>&)[m[K’
+ 1053 |     [01;36m[Kmake_shared[m[K(size_t __n, const remove_extent_t<_Tp>& __u)
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1053:5:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 0 provided
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1080:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> std::shared_ptr<std::_BoundedArray<_Tp> > std::[01;32m[Kmake_shared[m[K()[m[K’
+ 1080 |     [01;36m[Kmake_shared[m[K()
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1080:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1095:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> std::shared_ptr<std::_BoundedArray<_Tp> > std::[01;32m[Kmake_shared[m[K(remove_extent_t<_Iter>&)[m[K’
+ 1095 |     [01;36m[Kmake_shared[m[K(const remove_extent_t<_Tp>& __u)
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1095:5:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:182:20:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+  182 |     if (goal_handle[01;31m[K->[m[Kis_canceling()) {
+      |                    [01;31m[K^~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:184:18:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+  184 |       goal_handle[01;31m[K->[m[Kcanceled(result);
+      |                  [01;31m[K^~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:190:16:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+  190 |     goal_handle[01;31m[K->[m[Kpublish_feedback(feedback);
+      |                [01;31m[K^~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:198:16:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+  198 |     goal_handle[01;31m[K->[m[Ksucceed(result);
+      |                [01;31m[K^~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K At global scope:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:348:52:[m[K [01;31m[Kerror: [m[K‘[01m[KGoalHandle[m[K’ was not declared in this scope
+  348 | void MTCTaskNode::getObjects(const std::shared_ptr<[01;31m[KGoalHandle[m[K> goal_handle){
+      |                                                    [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:348:62:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  348 | void MTCTaskNode::getObjects(const std::shared_ptr<GoalHandle[01;31m[K>[m[K goal_handle){
+      |                                                              [01;31m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kvoid MTCTaskNode::[01;32m[KgetObjects[m[K(int)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:390:36:[m[K [01;31m[Kerror: [m[K‘[01m[KMtcAction[m[K’ was not declared in this scope; did you mean ‘[01m[Krobot_interfaces::action::MtcAction[m[K’?
+  390 |   auto feedback = std::make_shared<[01;31m[KMtcAction[m[K::Feedback>();
+      |                                    [01;31m[K^~~~~~~~~[m[K
+      |                                    [32m[Krobot_interfaces::action::MtcAction[m[K
+[01m[K/home/mario/master_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/action/detail/mtc_action__struct.hpp:1327:26:[m[K [01;36m[Knote: [m[K‘[01m[Krobot_interfaces::action::MtcAction[m[K’ declared here
+ 1327 | typedef struct MtcAction [01;36m[KMtcAction[m[K;
+      |                          [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:390:24:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+  390 |   auto feedback = std::[01;31m[Kmake_shared<MtcAction::Feedback>[m[K();
+      |                        [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:390:56:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmake_shared<<expression error> >()[m[K’
+  390 |   auto feedback = [01;31m[Kstd::make_shared<MtcAction::Feedback>()[m[K;
+      |                   [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1005:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Args> std::shared_ptr<std::_NonArray<_Tp> > std::[01;32m[Kmake_shared[m[K(_Args&& ...)[m[K’
+ 1005 |     [01;36m[Kmake_shared[m[K(_Args&&... __args)
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1005:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:390:56:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  390 |   auto feedback = [01;31m[Kstd::make_shared<MtcAction::Feedback>()[m[K;
+      |                   [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1037:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> std::shared_ptr<std::_UnboundedArray<_Tp> > std::[01;32m[Kmake_shared[m[K(size_t)[m[K’
+ 1037 |     [01;36m[Kmake_shared[m[K(size_t __n)
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1037:5:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1053:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> std::shared_ptr<std::_UnboundedArray<_Tp> > std::[01;32m[Kmake_shared[m[K(size_t, remove_extent_t<_Iter>&)[m[K’
+ 1053 |     [01;36m[Kmake_shared[m[K(size_t __n, const remove_extent_t<_Tp>& __u)
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1053:5:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 0 provided
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1080:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> std::shared_ptr<std::_BoundedArray<_Tp> > std::[01;32m[Kmake_shared[m[K()[m[K’
+ 1080 |     [01;36m[Kmake_shared[m[K()
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1080:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:390:56:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  390 |   auto feedback = [01;31m[Kstd::make_shared<MtcAction::Feedback>()[m[K;
+      |                   [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1095:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> std::shared_ptr<std::_BoundedArray<_Tp> > std::[01;32m[Kmake_shared[m[K(remove_extent_t<_Iter>&)[m[K’
+ 1095 |     [01;36m[Kmake_shared[m[K(const remove_extent_t<_Tp>& __u)
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1095:5:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:394:14:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+  394 |   goal_handle[01;31m[K->[m[Kpublish_feedback(feedback);
+      |              [01;31m[K^~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:407:29:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<MTCTaskNode::getObjects(int)::data>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  407 |   while (task == false && [01;35m[Kj < objects.size()[m[K){
+      |                           [01;35m[K~~^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:410:10:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<MTCTaskNode::getObjects(int)::data>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  410 |     if([01;35m[Kj >= objects.size()[m[K){
+      |        [01;35m[K~~^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:419:26:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<MTCTaskNode::getObjects(int)::data>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  419 |     if(task == true && [01;35m[Kj < objects.size()[m[K){
+      |                        [01;35m[K~~^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:433:22:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+  433 |   auto result = std::[01;31m[Kmake_shared<MtcAction::Result>[m[K();
+      |                      [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:433:52:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmake_shared<MtcAction>()[m[K’
+  433 |   auto result = [01;31m[Kstd::make_shared<MtcAction::Result>()[m[K;
+      |                 [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1005:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Args> std::shared_ptr<std::_NonArray<_Tp> > std::[01;32m[Kmake_shared[m[K(_Args&& ...)[m[K’
+ 1005 |     [01;36m[Kmake_shared[m[K(_Args&&... __args)
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1005:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1037:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> std::shared_ptr<std::_UnboundedArray<_Tp> > std::[01;32m[Kmake_shared[m[K(size_t)[m[K’
+ 1037 |     [01;36m[Kmake_shared[m[K(size_t __n)
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1037:5:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1053:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> std::shared_ptr<std::_UnboundedArray<_Tp> > std::[01;32m[Kmake_shared[m[K(size_t, remove_extent_t<_Iter>&)[m[K’
+ 1053 |     [01;36m[Kmake_shared[m[K(size_t __n, const remove_extent_t<_Tp>& __u)
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1053:5:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 0 provided
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1080:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> std::shared_ptr<std::_BoundedArray<_Tp> > std::[01;32m[Kmake_shared[m[K()[m[K’
+ 1080 |     [01;36m[Kmake_shared[m[K()
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1080:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1095:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> std::shared_ptr<std::_BoundedArray<_Tp> > std::[01;32m[Kmake_shared[m[K(remove_extent_t<_Iter>&)[m[K’
+ 1095 |     [01;36m[Kmake_shared[m[K(const remove_extent_t<_Tp>& __u)
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/shared_ptr.h:1095:5:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:437:14:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+  437 |   goal_handle[01;31m[K->[m[Ksucceed(result);
+      |              [01;31m[K^~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kint MTCTaskNode::[01;32m[KtestAttach[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:461:8:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kx_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  461 |   bool [01;35m[Kx_[m[K = false, y_ = false, z_ = false;
+      |        [01;35m[K^~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:461:20:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ky_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  461 |   bool x_ = false, [01;35m[Ky_[m[K = false, z_ = false;
+      |                    [01;35m[K^~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:461:32:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kz_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  461 |   bool x_ = false, y_ = false, [01;35m[Kz_[m[K = false;
+      |                                [01;35m[K^~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kmoveit::task_constructor::Task MTCTaskNode::[01;32m[KcreateGrabTask[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:960:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kattach_object_stage[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  960 |   mtc::Stage* [01;35m[Kattach_object_stage[m[K = nullptr;  // Forward attach_object_stage to place pose generator
+      |               [01;35m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn MTCPubSub::[01;32m[Kon_configure[m[K(const rclcpp_lifecycle::State&)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1082:122:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprevious_state[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+ 1082 |   rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_configure([01;35m[Kconst rclcpp_lifecycle::State & previous_state[m[K){
+      |                                                                                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn MTCPubSub::[01;32m[Kon_activate[m[K(const rclcpp_lifecycle::State&)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1100:27:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KMTCTaskNode::getObjects()[m[K’
+ 1100 |      [01;31m[KMTCfriend_.getObjects()[m[K;
+      |      [01;31m[K~~~~~~~~~~~~~~~~~~~~~^~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:348:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid MTCTaskNode::[01;32m[KgetObjects[m[K(int)[m[K’
+  348 | void [01;36m[KMTCTaskNode[m[K::getObjects(const std::shared_ptr<GoalHandle> goal_handle){
+      |      [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:348:6:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1098:121:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprevious_state[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+ 1098 |   rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_activate([01;35m[Kconst rclcpp_lifecycle::State & previous_state[m[K){
+      |                                                                                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn MTCPubSub::[01;32m[Kon_deactivate[m[K(const rclcpp_lifecycle::State&)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1105:123:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprevious_state[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+ 1105 |   rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_deactivate([01;35m[Kconst rclcpp_lifecycle::State & previous_state[m[K){
+      |                                                                                           [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn MTCPubSub::[01;32m[Kon_cleanup[m[K(const rclcpp_lifecycle::State&)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1114:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kiterator[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+ 1114 |     for (auto& [01;35m[Kiterator[m[K : topics){
+      |                [01;35m[K^~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1111:120:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprevious_state[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+ 1111 |   rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_cleanup([01;35m[Kconst rclcpp_lifecycle::State & previous_state[m[K){
+      |                                                                                        [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn MTCPubSub::[01;32m[Kon_shutdown[m[K(const rclcpp_lifecycle::State&)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1126:18:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kiterator[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+ 1126 |       for (auto& [01;35m[Kiterator[m[K : topics){
+      |                  [01;35m[K^~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1123:123:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprevious_state[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+ 1123 |     rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_shutdown([01;35m[Kconst rclcpp_lifecycle::State & previous_state[m[K){
+      |                                                                                           [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/master_node.dir/build.make:76: CMakeFiles/master_node.dir/src/master_node.cpp.o] Fehler 1
+gmake[1]: *** [CMakeFiles/Makefile2:141: CMakeFiles/master_node.dir/all] Fehler 2
+gmake[1]: *** Warte auf noch nicht beendete Prozesse...
+[01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:[m[K In member function ‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn ObstaclePlanner::[01;32m[Kon_configure[m[K(const rclcpp_lifecycle::State&)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:48:128:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprevious_state[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   48 |         rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_configure([01;35m[Kconst rclcpp_lifecycle::State & previous_state[m[K){
+      |                                                                                                [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:[m[K In member function ‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn ObstaclePlanner::[01;32m[Kon_activate[m[K(const rclcpp_lifecycle::State&)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:53:127:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprevious_state[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   53 |         rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_activate([01;35m[Kconst rclcpp_lifecycle::State & previous_state[m[K){
+      |                                                                                               [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:[m[K In member function ‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn ObstaclePlanner::[01;32m[Kon_deactivate[m[K(const rclcpp_lifecycle::State&)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:62:129:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprevious_state[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   62 |         rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_deactivate([01;35m[Kconst rclcpp_lifecycle::State & previous_state[m[K){
+      |                                                                                                 [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:[m[K In member function ‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn ObstaclePlanner::[01;32m[Kon_cleanup[m[K(const rclcpp_lifecycle::State&)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:68:126:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprevious_state[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   68 |         rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_cleanup([01;35m[Kconst rclcpp_lifecycle::State & previous_state[m[K){
+      |                                                                                              [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:[m[K In member function ‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn ObstaclePlanner::[01;32m[Kon_shutdown[m[K(const rclcpp_lifecycle::State&)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:75:128:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprevious_state[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   75 |          rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_shutdown([01;35m[Kconst rclcpp_lifecycle::State & previous_state[m[K){
+      |                                                                                                [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:[m[K In member function ‘[01m[Kvoid ObstaclePlanner::[01;32m[Kplan[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/obstacle_planner.cpp:154:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ksuccess_plan[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  154 |     bool [01;35m[Ksuccess_plan[m[K = (_move_group->plan(my_plan) == moveit::core::MoveItErrorCode::SUCCESS);
+      |          [01;35m[K^~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/mtc_estun.dir/build.make:76: CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o] Fehler 1
+gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/mtc_estun.dir/all] Fehler 2
+[ 66%] [32m[1mLinking CXX executable obstacle_planner[0m
+[ 66%] Built target obstacle_planner
+gmake: *** [Makefile:146: all] Fehler 2

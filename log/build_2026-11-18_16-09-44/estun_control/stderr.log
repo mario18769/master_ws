@@ -1,0 +1,342 @@
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:1[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:51:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   51 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:4[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:5[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:2[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In constructor ‘[01m[KMTCTaskNode::[01;32m[KMTCTaskNode[m[K(const rclcpp::NodeOptions&)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:141:14:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kiterator[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  141 |   for (auto& [01;35m[Kiterator[m[K : attach_topics){
+      |              [01;35m[K^~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In lambda function:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:148:102:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kgoal[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  148 |   auto handle_goal = [](const rclcpp_action::GoalUUID & uuid, [01;35m[Kstd::shared_ptr<const MtcAction::Goal> goal[m[K){
+      |                                                               [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In constructor ‘[01m[KMTCTaskNode::[01;32m[KMTCTaskNode[m[K(const rclcpp::NodeOptions&)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:160:27:[m[K [01;31m[Kerror: [m[Kcapture of non-variable ‘[01m[KMTCTaskNode::node_[m[K’
+  160 |   auto handle_accepted = [[01;31m[Knode_[m[K](const std::shared_ptr<GoalHandle> goal_handle){
+      |                           [01;31m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:101:27:[m[K [01;36m[Knote: [m[K‘[01m[Krclcpp::Node::SharedPtr MTCTaskNode::node_[m[K’ declared here
+  101 |   rclcpp::Node::SharedPtr [01;36m[Knode_[m[K;
+      |                           [01;36m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In lambda function:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:163:31:[m[K [01;31m[Kerror: [m[Kcapture of non-variable ‘[01m[KMTCTaskNode::node_[m[K’
+  163 |     auto execute_in_thread = [[01;31m[Knode_[m[K, goal_handle](){return node_->getObjects(goal_handle);};
+      |                               [01;31m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:101:27:[m[K [01;36m[Knote: [m[K‘[01m[Krclcpp::Node::SharedPtr MTCTaskNode::node_[m[K’ declared here
+  101 |   rclcpp::Node::SharedPtr [01;36m[Knode_[m[K;
+      |                           [01;36m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In lambda function:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:163:60:[m[K [01;31m[Kerror: [m[K‘[01m[Kthis[m[K’ was not captured for this lambda function
+  163 |     auto execute_in_thread = [node_, goal_handle](){return [01;31m[Knode_[m[K->getObjects(goal_handle);};
+      |                                                            [01;31m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:163:60:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static data member ‘[01m[KMTCTaskNode::node_[m[K’
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:101:27:[m[K [01;36m[Knote: [m[Kdeclared here
+  101 |   rclcpp::Node::SharedPtr [01;36m[Knode_[m[K;
+      |                           [01;36m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In constructor ‘[01m[KMTCTaskNode::[01;32m[KMTCTaskNode[m[K(const rclcpp::NodeOptions&)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:169:18:[m[K [01;31m[Kerror: [m[Kcapture of non-variable ‘[01m[KMTCTaskNode::node_[m[K’
+  169 |   auto cb_pose= [[01;31m[Knode_[m[K, robot_interfaces::msg::ObjectPose msg](){
+      |                  [01;31m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:101:27:[m[K [01;36m[Knote: [m[K‘[01m[Krclcpp::Node::SharedPtr MTCTaskNode::node_[m[K’ declared here
+  101 |   rclcpp::Node::SharedPtr [01;36m[Knode_[m[K;
+      |                           [01;36m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:169:25:[m[K [01;31m[Kerror: [m[Kcapture of non-variable ‘[01m[Krobot_interfaces[m[K’
+  169 |   auto cb_pose= [node_, [01;31m[Krobot_interfaces[m[K::msg::ObjectPose msg](){
+      |                         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/mario/master_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detach_msg.hpp:7[m[K,
+                 from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:24[m[K:
+[01m[K/home/mario/master_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/detach_msg__struct.hpp:28:11:[m[K [01;36m[Knote: [m[K‘[01m[Knamespace robot_interfaces { }[m[K’ declared here
+   28 | namespace [01;36m[Krobot_interfaces[m[K
+      |           [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:169:41:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ before ‘[01m[K::[m[K’ token
+  169 |   auto cb_pose= [node_, robot_interfaces[01;31m[K:[m[K[32m[K:[m[Kmsg::ObjectPose msg](){
+      |                                         [01;31m[K^[m[K[32m[K~[m[K
+      |                                         [32m[K,[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:169:41:[m[K [01;31m[Kerror: [m[Kexpected identifier before ‘[01m[K::[m[K’ token
+  169 |   auto cb_pose= [node_, robot_interfaces[01;31m[K::[m[Kmsg::ObjectPose msg](){
+      |                                         [01;31m[K^~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In lambda function:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:171:31:[m[K [01;31m[Kerror: [m[Kcapture of non-variable ‘[01m[KMTCTaskNode::node_[m[K’
+  171 |     auto execute_in_thread = [[01;31m[Knode_[m[K, robot_interfaces::msg::ObjectPose msg](){return node_->getObjectsPoses(msg);};
+      |                               [01;31m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:101:27:[m[K [01;36m[Knote: [m[K‘[01m[Krclcpp::Node::SharedPtr MTCTaskNode::node_[m[K’ declared here
+  101 |   rclcpp::Node::SharedPtr [01;36m[Knode_[m[K;
+      |                           [01;36m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:171:38:[m[K [01;31m[Kerror: [m[Kcapture of non-variable ‘[01m[Krobot_interfaces[m[K’
+  171 |     auto execute_in_thread = [node_, [01;31m[Krobot_interfaces[m[K::msg::ObjectPose msg](){return node_->getObjectsPoses(msg);};
+      |                                      [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/detach_msg__struct.hpp:28:11:[m[K [01;36m[Knote: [m[K‘[01m[Knamespace robot_interfaces { }[m[K’ declared here
+   28 | namespace [01;36m[Krobot_interfaces[m[K
+      |           [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:171:54:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ before ‘[01m[K::[m[K’ token
+  171 |     auto execute_in_thread = [node_, robot_interfaces[01;31m[K:[m[K[32m[K:[m[Kmsg::ObjectPose msg](){return node_->getObjectsPoses(msg);};
+      |                                                      [01;31m[K^[m[K[32m[K~[m[K
+      |                                                      [32m[K,[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:171:54:[m[K [01;31m[Kerror: [m[Kexpected identifier before ‘[01m[K::[m[K’ token
+  171 |     auto execute_in_thread = [node_, robot_interfaces[01;31m[K::[m[Kmsg::ObjectPose msg](){return node_->getObjectsPoses(msg);};
+      |                                                      [01;31m[K^~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In lambda function:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:171:86:[m[K [01;31m[Kerror: [m[K‘[01m[Kthis[m[K’ was not captured for this lambda function
+  171 |     auto execute_in_thread = [node_, robot_interfaces::msg::ObjectPose msg](){return [01;31m[Knode_[m[K->getObjectsPoses(msg);};
+      |                                                                                      [01;31m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:171:86:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static data member ‘[01m[KMTCTaskNode::node_[m[K’
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:101:27:[m[K [01;36m[Knote: [m[Kdeclared here
+  101 |   rclcpp::Node::SharedPtr [01;36m[Knode_[m[K;
+      |                           [01;36m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:171:109:[m[K [01;31m[Kerror: [m[K‘[01m[Kmsg[m[K’ was not declared in this scope
+  171 |     auto execute_in_thread = [node_, robot_interfaces::msg::ObjectPose msg](){return node_->getObjectsPoses([01;31m[Kmsg[m[K);};
+      |                                                                                                             [01;31m[K^~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:171:109:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+In file included from [01m[K/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/list_parameters__struct.hpp:157[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/list_parameters.hpp:7[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/copy_all_parameter_values.hpp:21[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:175[m[K,
+                 from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1[m[K:
+[01m[K/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/list_parameters_result__struct.hpp:31:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Krcl_interfaces::msg[m[K’
+   31 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/jazzy/include/service_msgs/service_msgs/msg/detail/service_event_info__struct.hpp:24[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/list_parameters__struct.hpp:268[m[K:
+[01m[K/opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.hpp:31:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kbuiltin_interfaces::msg[m[K’
+   31 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+[01m[K/opt/ros/jazzy/include/service_msgs/service_msgs/msg/detail/service_event_info__struct.hpp:35:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kservice_msgs::msg[m[K’
+   35 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/jazzy/include/statistics_msgs/statistics_msgs/msg/detail/metrics_message__struct.hpp:27[m[K,
+                 from [01m[K/opt/ros/jazzy/include/statistics_msgs/statistics_msgs/msg/metrics_message.hpp:7[m[K,
+                 from [01m[K/opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/collector/generate_statistics_message.hpp:21[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:23[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/subscription.hpp:50[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/any_executable.hpp:25[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executor_options.hpp:22[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executor.hpp:38[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:176[m[K:
+[01m[K/opt/ros/jazzy/include/statistics_msgs/statistics_msgs/msg/detail/statistic_data_point__struct.hpp:31:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstatistics_msgs::msg[m[K’
+   31 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/joint_limits.hpp:7[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_model/joint_model.hpp:44[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_model/joint_model_group.hpp:40[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_model/robot_model.hpp:45[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.hpp:39[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:51[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/joint_limits__struct.hpp:31:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kmoveit_msgs::msg[m[K’
+   31 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose__struct.hpp:24[m[K,
+                 from [01m[K/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/pose.hpp:7[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/kinematics_base/kinematics_base.hpp:39[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_model/joint_model_group.hpp:42[m[K:
+[01m[K/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.hpp:31:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kgeometry_msgs::msg[m[K’
+   31 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/transform_stamped__struct.hpp:24[m[K,
+                 from [01m[K/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/transform_stamped.hpp:7[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/transforms/transforms.hpp:39[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_state/attached_body.hpp:40[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_state/robot_state.hpp:41[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.hpp:40[m[K:
+[01m[K/opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__struct.hpp:35:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd_msgs::msg[m[K’
+   35 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/jazzy/include/trajectory_msgs/trajectory_msgs/msg/detail/joint_trajectory__struct.hpp:26[m[K,
+                 from [01m[K/opt/ros/jazzy/include/trajectory_msgs/trajectory_msgs/msg/joint_trajectory.hpp:7[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_state/attached_body.hpp:43[m[K:
+[01m[K/opt/ros/jazzy/include/trajectory_msgs/trajectory_msgs/msg/detail/joint_trajectory_point__struct.hpp:35:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Ktrajectory_msgs::msg[m[K’
+   35 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/joint_state.hpp:7[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_state/robot_state.hpp:43[m[K:
+[01m[K/opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__struct.hpp:35:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksensor_msgs::msg[m[K’
+   35 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/jazzy/include/visualization_msgs/visualization_msgs/msg/detail/marker__struct.hpp:39[m[K,
+                 from [01m[K/opt/ros/jazzy/include/visualization_msgs/visualization_msgs/msg/detail/marker_array__struct.hpp:24[m[K,
+                 from [01m[K/opt/ros/jazzy/include/visualization_msgs/visualization_msgs/msg/marker_array.hpp:7[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_state/robot_state.hpp:44[m[K:
+[01m[K/opt/ros/jazzy/include/visualization_msgs/visualization_msgs/msg/detail/uv_coordinate__struct.hpp:31:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kvisualization_msgs::msg[m[K’
+   31 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/bounding_volume__struct.hpp:24[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/position_constraint__struct.hpp:28[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/constraints__struct.hpp:26[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/constraints.hpp:7[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/kinematic_constraints/kinematic_constraint.hpp:46[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.hpp:45[m[K:
+[01m[K/opt/ros/jazzy/include/shape_msgs/shape_msgs/msg/detail/solid_primitive__struct.hpp:35:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kshape_msgs::msg[m[K’
+   35 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/collision_object__struct.hpp:32[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/attached_collision_object__struct.hpp:24[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/robot_state__struct.hpp:28[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/robot_state.hpp:7[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_trajectory/robot_trajectory.hpp:42[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.hpp:47[m[K:
+[01m[K/opt/ros/jazzy/include/object_recognition_msgs/object_recognition_msgs/msg/detail/object_type__struct.hpp:31:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kobject_recognition_msgs::msg[m[K’
+   31 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/jazzy/include/octomap_msgs/octomap_msgs/msg/detail/octomap_with_pose__struct.hpp:28[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/planning_scene_world__struct.hpp:26[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/detail/planning_scene__struct.hpp:36[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_msgs/moveit_msgs/msg/planning_scene.hpp:7[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.hpp:49[m[K:
+[01m[K/opt/ros/jazzy/include/octomap_msgs/octomap_msgs/msg/detail/octomap__struct.hpp:35:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Koctomap_msgs::msg[m[K’
+   35 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/home/mario/master_ws/install/moveit_task_constructor_msgs/include/moveit_task_constructor_msgs/moveit_task_constructor_msgs/msg/trajectory_execution_info.hpp:7[m[K,
+                 from [01m[K/home/mario/master_ws/install/moveit_task_constructor_core/include/moveit/task_constructor/trajectory_execution_info.h:39[m[K,
+                 from [01m[K/home/mario/master_ws/install/moveit_task_constructor_core/include/moveit/task_constructor/stage.h:42[m[K,
+                 from [01m[K/home/mario/master_ws/install/moveit_task_constructor_core/include/moveit/task_constructor/container.h:41[m[K,
+                 from [01m[K/home/mario/master_ws/install/moveit_task_constructor_core/include/moveit/task_constructor/task.h:42[m[K,
+                 from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:6[m[K:
+[01m[K/home/mario/master_ws/install/moveit_task_constructor_msgs/include/moveit_task_constructor_msgs/moveit_task_constructor_msgs/msg/detail/trajectory_execution_info__struct.hpp:31:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kmoveit_task_constructor_msgs::msg[m[K’
+   31 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/home/mario/master_ws/install/moveit_task_constructor_msgs/include/moveit_task_constructor_msgs/moveit_task_constructor_msgs/action/detail/execute_task_solution__struct.hpp:374[m[K,
+                 from [01m[K/home/mario/master_ws/install/moveit_task_constructor_msgs/include/moveit_task_constructor_msgs/moveit_task_constructor_msgs/action/execute_task_solution.hpp:7[m[K,
+                 from [01m[K/home/mario/master_ws/install/moveit_task_constructor_core/include/moveit/task_constructor/task.h:46[m[K:
+[01m[K/opt/ros/jazzy/include/unique_identifier_msgs/unique_identifier_msgs/msg/detail/uuid__struct.hpp:31:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kunique_identifier_msgs::msg[m[K’
+   31 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/jazzy/include/action_msgs/action_msgs/srv/detail/cancel_goal__struct.hpp:24[m[K,
+                 from [01m[K/opt/ros/jazzy/include/action_msgs/action_msgs/srv/cancel_goal.hpp:7[m[K,
+                 from [01m[K/home/mario/master_ws/install/moveit_task_constructor_msgs/include/moveit_task_constructor_msgs/moveit_task_constructor_msgs/action/detail/execute_task_solution__struct.hpp:1307[m[K:
+[01m[K/opt/ros/jazzy/include/action_msgs/action_msgs/msg/detail/goal_info__struct.hpp:37:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kaction_msgs::msg[m[K’
+   37 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/jazzy/include/lifecycle_msgs/lifecycle_msgs/msg/transition.hpp:7[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp_lifecycle/rclcpp_lifecycle/node_interfaces/lifecycle_node_interface.hpp:18[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp_lifecycle/rclcpp_lifecycle/lifecycle_node.hpp:89[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_ros_planning/planning_pipeline_parameters.hpp:11[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_ros_planning/moveit/planning_pipeline/planning_pipeline.hpp:52[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_ros_planning/moveit/planning_pipeline_interfaces/planning_pipeline_interfaces.hpp:43[m[K,
+                 from [01m[K/home/mario/master_ws/install/moveit_task_constructor_core/include/moveit/task_constructor/solvers/pipeline_planner.h:42[m[K,
+                 from [01m[K/home/mario/master_ws/install/moveit_task_constructor_core/include/moveit/task_constructor/solvers.h:43[m[K,
+                 from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:7[m[K:
+[01m[K/opt/ros/jazzy/include/lifecycle_msgs/lifecycle_msgs/msg/detail/transition__struct.hpp:31:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Klifecycle_msgs::msg[m[K’
+   31 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/jazzy/include/tf2_msgs/tf2_msgs/msg/tf_message.hpp:7[m[K,
+                 from [01m[K/opt/ros/jazzy/include/tf2_ros/tf2_ros/transform_listener.hpp:46[m[K,
+                 from [01m[K/opt/ros/jazzy/include/tf2_ros/tf2_ros/transform_listener.h:35[m[K,
+                 from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:9[m[K:
+[01m[K/opt/ros/jazzy/include/tf2_msgs/tf2_msgs/msg/detail/tf_message__struct.hpp:35:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Ktf2_msgs::msg[m[K’
+   35 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+[01m[K/home/mario/master_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/detach_msg__struct.hpp:31:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Krobot_interfaces::msg[m[K’
+   31 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kvoid MTCTaskNode::[01;32m[Kexecute[m[K(std::shared_ptr<rclcpp_action::ServerGoalHandle<robot_interfaces::action::MtcAction> >)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:176:61:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kgoal_handle[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  176 | void MTCTaskNode::execute([01;35m[Kconst std::shared_ptr<GoalHandle> goal_handle[m[K) {
+      |                           [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kvoid MTCTaskNode::[01;32m[KgetObjects[m[K(std::shared_ptr<rclcpp_action::ServerGoalHandle<robot_interfaces::action::MtcAction> >)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:412:29:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<MTCTaskNode::getObjects(std::shared_ptr<rclcpp_action::ServerGoalHandle<robot_interfaces::action::MtcAction> >)::data>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  412 |   while (task == false && [01;35m[Kj < objects.size()[m[K){
+      |                           [01;35m[K~~^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:415:10:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<MTCTaskNode::getObjects(std::shared_ptr<rclcpp_action::ServerGoalHandle<robot_interfaces::action::MtcAction> >)::data>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  415 |     if([01;35m[Kj >= objects.size()[m[K){
+      |        [01;35m[K~~^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:424:26:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<MTCTaskNode::getObjects(std::shared_ptr<rclcpp_action::ServerGoalHandle<robot_interfaces::action::MtcAction> >)::data>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  424 |     if(task == true && [01;35m[Kj < objects.size()[m[K){
+      |                        [01;35m[K~~^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:353:64:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kgoal_handle[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  353 | void MTCTaskNode::getObjects([01;35m[Kconst std::shared_ptr<GoalHandle> goal_handle[m[K){
+      |                              [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kint MTCTaskNode::[01;32m[KtestAttach[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:466:8:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kx_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  466 |   bool [01;35m[Kx_[m[K = false, y_ = false, z_ = false;
+      |        [01;35m[K^~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:466:20:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ky_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  466 |   bool x_ = false, [01;35m[Ky_[m[K = false, z_ = false;
+      |                    [01;35m[K^~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:466:32:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kz_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  466 |   bool x_ = false, y_ = false, [01;35m[Kz_[m[K = false;
+      |                                [01;35m[K^~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kmoveit::task_constructor::Task MTCTaskNode::[01;32m[KcreateGrabTask[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:965:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kattach_object_stage[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  965 |   mtc::Stage* [01;35m[Kattach_object_stage[m[K = nullptr;  // Forward attach_object_stage to place pose generator
+      |               [01;35m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn MTCPubSub::[01;32m[Kon_configure[m[K(const rclcpp_lifecycle::State&)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1087:122:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprevious_state[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+ 1087 |   rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_configure([01;35m[Kconst rclcpp_lifecycle::State & previous_state[m[K){
+      |                                                                                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn MTCPubSub::[01;32m[Kon_activate[m[K(const rclcpp_lifecycle::State&)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1103:121:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprevious_state[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+ 1103 |   rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_activate([01;35m[Kconst rclcpp_lifecycle::State & previous_state[m[K){
+      |                                                                                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn MTCPubSub::[01;32m[Kon_deactivate[m[K(const rclcpp_lifecycle::State&)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1110:123:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprevious_state[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+ 1110 |   rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_deactivate([01;35m[Kconst rclcpp_lifecycle::State & previous_state[m[K){
+      |                                                                                           [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn MTCPubSub::[01;32m[Kon_cleanup[m[K(const rclcpp_lifecycle::State&)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1119:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kiterator[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+ 1119 |     for (auto& [01;35m[Kiterator[m[K : topics){
+      |                [01;35m[K^~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1116:120:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprevious_state[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+ 1116 |   rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_cleanup([01;35m[Kconst rclcpp_lifecycle::State & previous_state[m[K){
+      |                                                                                        [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn MTCPubSub::[01;32m[Kon_shutdown[m[K(const rclcpp_lifecycle::State&)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1131:18:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kiterator[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+ 1131 |       for (auto& [01;35m[Kiterator[m[K : topics){
+      |                  [01;35m[K^~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:1128:123:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kprevious_state[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+ 1128 |     rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn on_shutdown([01;35m[Kconst rclcpp_lifecycle::State & previous_state[m[K){
+      |                                                                                           [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/13/stop_token:37[m[K,
+                 from [01m[K/usr/include/c++/13/condition_variable:49[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/context.hpp:18[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/utilities.hpp:24[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/logging.hpp:25[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/copy_all_parameter_values.hpp:27[m[K:
+/usr/include/c++/13/bits/std_thread.h: In instantiation of ‘[01m[Kstd::thread::[01;32m[Kthread[m[K(_Callable&&, _Args&& ...) [35m[K[with _Callable = MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions&)::<lambda(std::shared_ptr<rclcpp_action::ServerGoalHandle<robot_interfaces::action::MtcAction> >)>::<lambda()>&; _Args = {}; <template-parameter-1-3> = void][m[K[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:164:34:[m[K   required from here
+[01m[K/usr/include/c++/13/bits/std_thread.h:157:72:[m[K [01;31m[Kerror: [m[Kstatic assertion failed: std::thread arguments must be invocable after conversion to rvalues
+  157 |                                       typename decay<_Args>::type...>::[01;31m[Kvalue[m[K,
+      |                                                                        [01;31m[K^~~~~[m[K
+[01m[K/usr/include/c++/13/bits/std_thread.h:157:72:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::integral_constant<bool, false>::value[m[K’ evaluates to false
+/usr/include/c++/13/bits/std_thread.h: In instantiation of ‘[01m[Kstruct std::thread::_Invoker<std::tuple<MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions&)::<lambda(std::shared_ptr<rclcpp_action::ServerGoalHandle<robot_interfaces::action::MtcAction> >)>::<lambda()> > >[m[K’:
+[01m[K/usr/include/c++/13/bits/std_thread.h:236:13:[m[K   required from ‘[01m[Kstruct std::thread::_State_impl<std::thread::_Invoker<std::tuple<MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions&)::<lambda(std::shared_ptr<rclcpp_action::ServerGoalHandle<robot_interfaces::action::MtcAction> >)>::<lambda()> > > >[m[K’
+[01m[K/usr/include/c++/13/bits/std_thread.h:164:29:[m[K   required from ‘[01m[Kstd::thread::[01;32m[Kthread[m[K(_Callable&&, _Args&& ...) [35m[K[with _Callable = MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions&)::<lambda(std::shared_ptr<rclcpp_action::ServerGoalHandle<robot_interfaces::action::MtcAction> >)>::<lambda()>&; _Args = {}; <template-parameter-1-3> = void][m[K[m[K’
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:164:34:[m[K   required from here
+[01m[K/usr/include/c++/13/bits/std_thread.h:291:11:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kstruct std::thread::_Invoker<std::tuple<MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions&)::<lambda(std::shared_ptr<rclcpp_action::ServerGoalHandle<robot_interfaces::action::MtcAction> >)>::<lambda()> > >::__result<std::tuple<MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions&)::<lambda(std::shared_ptr<rclcpp_action::ServerGoalHandle<robot_interfaces::action::MtcAction> >)>::<lambda()> > >[m[K’
+  291 |           [01;31m[K_M_invoke[m[K(_Index_tuple<_Ind...>)
+      |           [01;31m[K^~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/std_thread.h:295:9:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kstruct std::thread::_Invoker<std::tuple<MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions&)::<lambda(std::shared_ptr<rclcpp_action::ServerGoalHandle<robot_interfaces::action::MtcAction> >)>::<lambda()> > >::__result<std::tuple<MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions&)::<lambda(std::shared_ptr<rclcpp_action::ServerGoalHandle<robot_interfaces::action::MtcAction> >)>::<lambda()> > >[m[K’
+  295 |         [01;31m[Koperator[m[K()()
+      |         [01;31m[K^~~~~~~~[m[K
+/usr/include/c++/13/bits/std_thread.h: In instantiation of ‘[01m[Kstd::thread::[01;32m[Kthread[m[K(_Callable&&, _Args&& ...) [35m[K[with _Callable = MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions&)::<lambda()>::<lambda()>&; _Args = {}; <template-parameter-1-3> = void][m[K[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:172:34:[m[K   required from here
+[01m[K/usr/include/c++/13/bits/std_thread.h:157:72:[m[K [01;31m[Kerror: [m[Kstatic assertion failed: std::thread arguments must be invocable after conversion to rvalues
+  157 |                                       typename decay<_Args>::type...>::[01;31m[Kvalue[m[K,
+      |                                                                        [01;31m[K^~~~~[m[K
+[01m[K/usr/include/c++/13/bits/std_thread.h:157:72:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::integral_constant<bool, false>::value[m[K’ evaluates to false
+/usr/include/c++/13/bits/std_thread.h: In instantiation of ‘[01m[Kstruct std::thread::_Invoker<std::tuple<MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions&)::<lambda()>::<lambda()> > >[m[K’:
+[01m[K/usr/include/c++/13/bits/std_thread.h:236:13:[m[K   required from ‘[01m[Kstruct std::thread::_State_impl<std::thread::_Invoker<std::tuple<MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions&)::<lambda()>::<lambda()> > > >[m[K’
+[01m[K/usr/include/c++/13/bits/std_thread.h:164:29:[m[K   required from ‘[01m[Kstd::thread::[01;32m[Kthread[m[K(_Callable&&, _Args&& ...) [35m[K[with _Callable = MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions&)::<lambda()>::<lambda()>&; _Args = {}; <template-parameter-1-3> = void][m[K[m[K’
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:172:34:[m[K   required from here
+[01m[K/usr/include/c++/13/bits/std_thread.h:291:11:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kstruct std::thread::_Invoker<std::tuple<MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions&)::<lambda()>::<lambda()> > >::__result<std::tuple<MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions&)::<lambda()>::<lambda()> > >[m[K’
+  291 |           [01;31m[K_M_invoke[m[K(_Index_tuple<_Ind...>)
+      |           [01;31m[K^~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/std_thread.h:295:9:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kstruct std::thread::_Invoker<std::tuple<MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions&)::<lambda()>::<lambda()> > >::__result<std::tuple<MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions&)::<lambda()>::<lambda()> > >[m[K’
+  295 |         [01;31m[Koperator[m[K()()
+      |         [01;31m[K^~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/mtc_estun.dir/build.make:76: CMakeFiles/mtc_estun.dir/src/mtc_estun.cpp.o] Fehler 1
+gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/mtc_estun.dir/all] Fehler 2
+gmake: *** [Makefile:146: all] Fehler 2

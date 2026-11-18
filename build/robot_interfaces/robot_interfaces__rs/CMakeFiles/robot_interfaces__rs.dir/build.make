@@ -87,6 +87,15 @@ rosidl_generator_rs/robot_interfaces/rust/src/lib.rs: /opt/ros/jazzy/share/rosid
 rosidl_generator_rs/robot_interfaces/rust/src/lib.rs: /opt/ros/jazzy/share/rosidl_generator_rs/resource/templates/srv_rmw.rs.em
 rosidl_generator_rs/robot_interfaces/rust/src/lib.rs: rosidl_adapter/robot_interfaces/msg/ObjectPose.idl
 rosidl_generator_rs/robot_interfaces/rust/src/lib.rs: rosidl_adapter/robot_interfaces/msg/DetachMsg.idl
+rosidl_generator_rs/robot_interfaces/rust/src/lib.rs: rosidl_adapter/robot_interfaces/action/MtcAction.idl
+rosidl_generator_rs/robot_interfaces/rust/src/lib.rs: /opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl
+rosidl_generator_rs/robot_interfaces/rust/src/lib.rs: /opt/ros/jazzy/share/builtin_interfaces/msg/Duration.idl
+rosidl_generator_rs/robot_interfaces/rust/src/lib.rs: /opt/ros/jazzy/share/builtin_interfaces/msg/Time.idl
+rosidl_generator_rs/robot_interfaces/rust/src/lib.rs: /opt/ros/jazzy/share/action_msgs/msg/GoalInfo.idl
+rosidl_generator_rs/robot_interfaces/rust/src/lib.rs: /opt/ros/jazzy/share/action_msgs/msg/GoalStatus.idl
+rosidl_generator_rs/robot_interfaces/rust/src/lib.rs: /opt/ros/jazzy/share/action_msgs/msg/GoalStatusArray.idl
+rosidl_generator_rs/robot_interfaces/rust/src/lib.rs: /opt/ros/jazzy/share/action_msgs/srv/CancelGoal.idl
+rosidl_generator_rs/robot_interfaces/rust/src/lib.rs: /opt/ros/jazzy/share/unique_identifier_msgs/msg/UUID.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/mario/master_ws/build/robot_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Rust code for ROS interfaces"
 	cd /home/mario/master_ws/build/robot_interfaces/robot_interfaces__rs && /usr/bin/python3 /opt/ros/jazzy/share/rosidl_generator_rs/cmake/../../../lib/rosidl_generator_rs/rosidl_generator_rs --generator-arguments-file /home/mario/master_ws/build/robot_interfaces/rosidl_generator_rs__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
 

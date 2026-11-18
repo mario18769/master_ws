@@ -1,0 +1,188 @@
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:1[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:51:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   51 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:4[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_core/moveit/planning_scene/planning_scene.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:2[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+In file included from [01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:5[m[K:
+[01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/planning_scene_interface/planning_scene_interface.h:50:77:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: .h header is obsolete. Please use the .hpp header instead.[m[K’
+   50 | #pragma message(".h header is obsolete. Please use the .hpp header instead."[01;36m[K)[m[K
+      |                                                                             [01;36m[K^[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:[m[K In member function ‘[01m[Kvoid MasterNode::[01;32m[KsendMtcGoal[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:97:49:[m[K [01;31m[Kerror: [m[Kcapture of non-variable ‘[01m[KMasterNode::node_[m[K’
+   97 |     send_goal_options.goal_response_callback = [[01;31m[Knode_[m[K](const GoalHandleMtcAction::SharedPtr & goal_handle){
+      |                                                 [01;31m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:35:33:[m[K [01;36m[Knote: [m[K‘[01m[Krclcpp::Node::SharedPtr MasterNode::node_[m[K’ declared here
+   35 |         rclcpp::Node::SharedPtr [01;36m[Knode_[m[K;
+      |                                 [01;36m[K^~~~~[m[K
+In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/kinematics_base/kinematics_base.hpp:42[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_model/joint_model_group.hpp:42[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_model/robot_model.hpp:45[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_core/moveit/robot_state/robot_state.hpp:40[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.hpp:41[m[K,
+                 from [01m[K/opt/ros/jazzy/include/moveit_ros_planning_interface/moveit/move_group_interface/move_group_interface.h:52[m[K:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:[m[K In lambda function:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:100:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kthis[m[K’ was not captured for this lambda function
+  100 |         RCLCPP_ERROR([01;31m[Knode_[m[K->get_logger(), "Goal was rejected by server");
+      |                      [01;31m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:100:22:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static data member ‘[01m[KMasterNode::node_[m[K’
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:35:33:[m[K [01;36m[Knote: [m[Kdeclared here
+   35 |         rclcpp::Node::SharedPtr [01;36m[Knode_[m[K;
+      |                                 [01;36m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:100:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kthis[m[K’ was not captured for this lambda function
+  100 |         RCLCPP_ERROR([01;31m[Knode_[m[K->get_logger(), "Goal was rejected by server");
+      |                      [01;31m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:100:22:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static data member ‘[01m[KMasterNode::node_[m[K’
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:35:33:[m[K [01;36m[Knote: [m[Kdeclared here
+   35 |         rclcpp::Node::SharedPtr [01;36m[Knode_[m[K;
+      |                                 [01;36m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:103:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kthis[m[K’ was not captured for this lambda function
+  103 |         RCLCPP_INFO([01;31m[Knode_[m[K->get_logger(), "Goal accepted by server, waiting for result");
+      |                     [01;31m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:103:21:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static data member ‘[01m[KMasterNode::node_[m[K’
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:35:33:[m[K [01;36m[Knote: [m[Kdeclared here
+   35 |         rclcpp::Node::SharedPtr [01;36m[Knode_[m[K;
+      |                                 [01;36m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:103:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kthis[m[K’ was not captured for this lambda function
+  103 |         RCLCPP_INFO([01;31m[Knode_[m[K->get_logger(), "Goal accepted by server, waiting for result");
+      |                     [01;31m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:103:21:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static data member ‘[01m[KMasterNode::node_[m[K’
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:35:33:[m[K [01;36m[Knote: [m[Kdeclared here
+   35 |         rclcpp::Node::SharedPtr [01;36m[Knode_[m[K;
+      |                                 [01;36m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:[m[K In member function ‘[01m[Kvoid MasterNode::[01;32m[KsendMtcGoal[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:107:44:[m[K [01;31m[Kerror: [m[Kcapture of non-variable ‘[01m[KMasterNode::node_[m[K’
+  107 |     send_goal_options.feedback_callback = [[01;31m[Knode_[m[K](GoalHandleMtcAction::SharedPtr,const std::shared_ptr<const MtcAction::Feedback> feedback){
+      |                                            [01;31m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:35:33:[m[K [01;36m[Knote: [m[K‘[01m[Krclcpp::Node::SharedPtr MasterNode::node_[m[K’ declared here
+   35 |         rclcpp::Node::SharedPtr [01;36m[Knode_[m[K;
+      |                                 [01;36m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:[m[K In lambda function:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:108:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kthis[m[K’ was not captured for this lambda function
+  108 |       RCLCPP_INFO([01;31m[Knode_[m[K->get_logger(), "Feedback: ", feedback->object_count_feedback);
+      |                   [01;31m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:108:19:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static data member ‘[01m[KMasterNode::node_[m[K’
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:35:33:[m[K [01;36m[Knote: [m[Kdeclared here
+   35 |         rclcpp::Node::SharedPtr [01;36m[Knode_[m[K;
+      |                                 [01;36m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:108:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kthis[m[K’ was not captured for this lambda function
+  108 |       RCLCPP_INFO([01;31m[Knode_[m[K->get_logger(), "Feedback: ", feedback->object_count_feedback);
+      |                   [01;31m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:108:19:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static data member ‘[01m[KMasterNode::node_[m[K’
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:35:33:[m[K [01;36m[Knote: [m[Kdeclared here
+   35 |         rclcpp::Node::SharedPtr [01;36m[Knode_[m[K;
+      |                                 [01;36m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:[m[K In member function ‘[01m[Kvoid MasterNode::[01;32m[KsendMtcGoal[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:112:42:[m[K [01;31m[Kerror: [m[Kcapture of non-variable ‘[01m[KMasterNode::node_[m[K’
+  112 |     send_goal_options.result_callback = [[01;31m[Knode_[m[K](const GoalHandleMtcAction::WrappedResult & result)
+      |                                          [01;31m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:35:33:[m[K [01;36m[Knote: [m[K‘[01m[Krclcpp::Node::SharedPtr MasterNode::node_[m[K’ declared here
+   35 |         rclcpp::Node::SharedPtr [01;36m[Knode_[m[K;
+      |                                 [01;36m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:[m[K In lambda function:
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:116:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kthis[m[K’ was not captured for this lambda function
+  116 |             RCLCPP_ERROR([01;31m[Knode_[m[K->get_logger(), "Goal successful");
+      |                          [01;31m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:116:26:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static data member ‘[01m[KMasterNode::node_[m[K’
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:35:33:[m[K [01;36m[Knote: [m[Kdeclared here
+   35 |         rclcpp::Node::SharedPtr [01;36m[Knode_[m[K;
+      |                                 [01;36m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:116:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kthis[m[K’ was not captured for this lambda function
+  116 |             RCLCPP_ERROR([01;31m[Knode_[m[K->get_logger(), "Goal successful");
+      |                          [01;31m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:116:26:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static data member ‘[01m[KMasterNode::node_[m[K’
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:35:33:[m[K [01;36m[Knote: [m[Kdeclared here
+   35 |         rclcpp::Node::SharedPtr [01;36m[Knode_[m[K;
+      |                                 [01;36m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:117:25:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K<<[m[K’ token
+  117 |             std::cout<< [01;31m[K<<[m[K std::endl;
+      |                         [01;31m[K^~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:120:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kthis[m[K’ was not captured for this lambda function
+  120 |           RCLCPP_ERROR([01;31m[Knode_[m[K->get_logger(), "Goal was aborted");
+      |                        [01;31m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:120:24:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static data member ‘[01m[KMasterNode::node_[m[K’
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:35:33:[m[K [01;36m[Knote: [m[Kdeclared here
+   35 |         rclcpp::Node::SharedPtr [01;36m[Knode_[m[K;
+      |                                 [01;36m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:120:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kthis[m[K’ was not captured for this lambda function
+  120 |           RCLCPP_ERROR([01;31m[Knode_[m[K->get_logger(), "Goal was aborted");
+      |                        [01;31m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:120:24:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static data member ‘[01m[KMasterNode::node_[m[K’
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:35:33:[m[K [01;36m[Knote: [m[Kdeclared here
+   35 |         rclcpp::Node::SharedPtr [01;36m[Knode_[m[K;
+      |                                 [01;36m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:123:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kthis[m[K’ was not captured for this lambda function
+  123 |           RCLCPP_ERROR([01;31m[Knode_[m[K->get_logger(), "Goal was canceled");
+      |                        [01;31m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:123:24:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static data member ‘[01m[KMasterNode::node_[m[K’
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:35:33:[m[K [01;36m[Knote: [m[Kdeclared here
+   35 |         rclcpp::Node::SharedPtr [01;36m[Knode_[m[K;
+      |                                 [01;36m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:123:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kthis[m[K’ was not captured for this lambda function
+  123 |           RCLCPP_ERROR([01;31m[Knode_[m[K->get_logger(), "Goal was canceled");
+      |                        [01;31m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:123:24:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static data member ‘[01m[KMasterNode::node_[m[K’
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:35:33:[m[K [01;36m[Knote: [m[Kdeclared here
+   35 |         rclcpp::Node::SharedPtr [01;36m[Knode_[m[K;
+      |                                 [01;36m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:126:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kthis[m[K’ was not captured for this lambda function
+  126 |           RCLCPP_ERROR([01;31m[Knode_[m[K->get_logger(), "Unknown result code");
+      |                        [01;31m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:126:24:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static data member ‘[01m[KMasterNode::node_[m[K’
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:35:33:[m[K [01;36m[Knote: [m[Kdeclared here
+   35 |         rclcpp::Node::SharedPtr [01;36m[Knode_[m[K;
+      |                                 [01;36m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:126:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kthis[m[K’ was not captured for this lambda function
+  126 |           RCLCPP_ERROR([01;31m[Knode_[m[K->get_logger(), "Unknown result code");
+      |                        [01;31m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:126:24:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static data member ‘[01m[KMasterNode::node_[m[K’
+[01m[K/home/mario/master_ws/src/estun_control/src/master_node.cpp:35:33:[m[K [01;36m[Knote: [m[Kdeclared here
+   35 |         rclcpp::Node::SharedPtr [01;36m[Knode_[m[K;
+      |                                 [01;36m[K^~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In constructor ‘[01m[KMTCTaskNode::[01;32m[KMTCTaskNode[m[K(const rclcpp::NodeOptions&)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:129:14:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kiterator[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  129 |   for (auto& [01;35m[Kiterator[m[K : attach_topics){
+      |              [01;35m[K^~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In lambda function:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:148:106:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kgoal[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  148 |   auto handle_goal = [this](const rclcpp_action::GoalUUID & uuid, [01;35m[Kstd::shared_ptr<const MtcAction::Goal> goal[m[K){
+      |                                                                   [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kvoid MTCTaskNode::[01;32m[Kexecute[m[K(std::shared_ptr<rclcpp_action::ServerGoalHandle<robot_interfaces::action::MtcAction> >)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:171:61:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kgoal_handle[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  171 | void MTCTaskNode::execute([01;35m[Kconst std::shared_ptr<GoalHandle> goal_handle[m[K) {
+      |                           [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kvoid MTCTaskNode::[01;32m[KgetObjects[m[K(std::shared_ptr<rclcpp_action::ServerGoalHandle<robot_interfaces::action::MtcAction> >)[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:414:29:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<MTCTaskNode::getObjects(std::shared_ptr<rclcpp_action::ServerGoalHandle<robot_interfaces::action::MtcAction> >)::data>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  414 |   while (task == false && [01;35m[Kj < objects.size()[m[K){
+      |                           [01;35m[K~~^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:417:10:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<MTCTaskNode::getObjects(std::shared_ptr<rclcpp_action::ServerGoalHandle<robot_interfaces::action::MtcAction> >)::data>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  417 |     if([01;35m[Kj >= objects.size()[m[K){
+      |        [01;35m[K~~^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:426:26:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<MTCTaskNode::getObjects(std::shared_ptr<rclcpp_action::ServerGoalHandle<robot_interfaces::action::MtcAction> >)::data>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  426 |     if(task == true && [01;35m[Kj < objects.size()[m[K){
+      |                        [01;35m[K~~^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kint MTCTaskNode::[01;32m[KtestAttach[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:467:8:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kx_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  467 |   bool [01;35m[Kx_[m[K = false, y_ = false, z_ = false;
+      |        [01;35m[K^~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:467:20:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ky_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  467 |   bool x_ = false, [01;35m[Ky_[m[K = false, z_ = false;
+      |                    [01;35m[K^~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:467:32:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kz_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  467 |   bool x_ = false, y_ = false, [01;35m[Kz_[m[K = false;
+      |                                [01;35m[K^~[m[K
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:[m[K In member function ‘[01m[Kmoveit::task_constructor::Task MTCTaskNode::[01;32m[KcreateGrabTask[m[K()[m[K’:
+[01m[K/home/mario/master_ws/src/estun_control/src/mtc_estun.cpp:965:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kattach_object_stage[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  965 |   mtc::Stage* [01;35m[Kattach_object_stage[m[K = nullptr;  // Forward attach_object_stage to place pose generator
+      |               [01;35m[K^~~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/master_node.dir/build.make:76: CMakeFiles/master_node.dir/src/master_node.cpp.o] Fehler 1
+gmake[1]: *** [CMakeFiles/Makefile2:141: CMakeFiles/master_node.dir/all] Fehler 2
+gmake[1]: *** Warte auf noch nicht beendete Prozesse...
+gmake: *** [Makefile:146: all] Fehler 2

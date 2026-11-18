@@ -17,6 +17,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
 
   "msg/ObjectPose.msg"
   "msg/DetachMsg.msg"
+  "action/MtcAction.action"
 )
 
 ament_export_dependencies(rosidl_default_runtime)

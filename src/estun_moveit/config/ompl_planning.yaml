@@ -1,0 +1,38 @@
+planning_plugins:
+  - ompl_interface/OMPLPlanner
+
+request_adapters:
+  - default_planning_request_adapters/ResolveConstraintFrames
+  - default_planning_request_adapters/ValidateWorkspaceBounds
+  - default_planning_request_adapters/CheckStartStateBounds
+  - default_planning_request_adapters/CheckStartStateCollision
+  #- default_planning_request_adapters/AddRuckigTrajectorySmoothing
+response_adapters:
+  - default_planning_response_adapters/AddTimeOptimalParameterization
+  - default_planning_response_adapters/ValidateSolution
+  - default_planning_response_adapters/DisplayMotionPath
+
+planner_configs:
+
+  RRTstarkConfigDefault:
+    type: geometric::RRTstar
+    range: 0.0  # Max motion added to tree. ==> maxDistance_ default: 0.0, if 0.0, set on setup()
+    optimization_objective: MaximizeMinClearanceObjective
+    goal_bias: 0.05
+    
+    #MaximizeMinClearanceObjective #-> maximux distance zwischen den Obstacles
+    #PathLengthOptimizationObjective
+
+  RRTConnectkConfigDefault:
+    type: geometric::RRTConnect
+    range: 0.0  # Max motion added to tree. ==> maxDistance_ default: 0.0, if 0.0, set on setup()
+
+arm:
+  planner_configs:
+    - RRTstarkConfigDefault
+    - RRTConnectkConfigDefault
+
+hand:
+  planner_configs:
+    - RRTstarkConfigDefault
+    - RRTConnectkConfigDefault

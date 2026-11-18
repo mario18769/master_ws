@@ -235,4 +235,10 @@ CMakeFiles/robot_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generato
  /home/mario/master_ws/build/robot_interfaces/rosidl_generator_c/robot_interfaces/msg/detail/object_pose__functions.h \
  /home/mario/master_ws/build/robot_interfaces/rosidl_generator_c/robot_interfaces/msg/detail/detach_msg__type_support.h \
  /home/mario/master_ws/build/robot_interfaces/rosidl_generator_c/robot_interfaces/msg/detail/detach_msg__struct.h \
- /home/mario/master_ws/build/robot_interfaces/rosidl_generator_c/robot_interfaces/msg/detail/detach_msg__functions.h
+ /home/mario/master_ws/build/robot_interfaces/rosidl_generator_c/robot_interfaces/msg/detail/detach_msg__functions.h \
+ /home/mario/master_ws/build/robot_interfaces/rosidl_generator_c/robot_interfaces/action/detail/mtc_action__type_support.h \
+ /home/mario/master_ws/build/robot_interfaces/rosidl_generator_c/robot_interfaces/action/detail/mtc_action__struct.h \
+ /opt/ros/jazzy/include/unique_identifier_msgs/unique_identifier_msgs/msg/detail/uuid__struct.h \
+ /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h \
+ /opt/ros/jazzy/include/service_msgs/service_msgs/msg/detail/service_event_info__struct.h \
+ /home/mario/master_ws/build/robot_interfaces/rosidl_generator_c/robot_interfaces/action/detail/mtc_action__functions.h

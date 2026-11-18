@@ -6,8 +6,8 @@
 
 #include "robot_interfaces/msg/detail/detach_msg__struct.h"
 #include "robot_interfaces/msg/detail/detach_msg__functions.h"
-#include "rosidl_typesupport_interface/macros.h"
 #include "robot_interfaces/msg/detail/detach_msg__type_support.h"
+#include "rosidl_typesupport_interface/macros.h"
 
 #ifdef __cplusplus
 extern "C"
